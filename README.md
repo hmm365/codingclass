@@ -1,6 +1,7 @@
 # codingclass
 
 ## 자바스크립트   
+##index   
 https://hmm365.github.io/codingclass/javascript/index.html   
 ##데이터 데이터 저장하기   
 https://hmm365.github.io/codingclass/javascript/javascript01.html   
@@ -68,7 +69,7 @@ https://hmm365.github.io/codingclass/javascript/effect/mouseEffect06.html
 ##게임 이펙트   
 https://hmm365.github.io/codingclass/javascript/effect/gameEffect01.html   
 
-##페럴럭스 이펙트
+##페럴럭스 이펙트   
 https://hmm365.github.io/codingclass/javascript/effect/parallaxEffect01.html   
 https://hmm365.github.io/codingclass/javascript/effect/parallaxEffect02.html   
 https://hmm365.github.io/codingclass/javascript/effect/parallaxEffect03.html   
@@ -77,7 +78,7 @@ https://hmm365.github.io/codingclass/javascript/effect/parallaxEffect05.html
 https://hmm365.github.io/codingclass/javascript/effect/parallaxEffect06.html   
 https://hmm365.github.io/codingclass/javascript/effect/parallaxEffect07.html   
 
-##슬라이드 이펙트
+##슬라이드 이펙트   
 https://hmm365.github.io/codingclass/javascript/effect/sliderEffect01.html   
 https://hmm365.github.io/codingclass/javascript/effect/sliderEffect02.html   
 https://hmm365.github.io/codingclass/javascript/effect/sliderEffect03.html   
