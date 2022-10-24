@@ -42,13 +42,13 @@ https://hmm365.github.io/codingclass/site/site2/index.html
 
 ## 이펙트   
 ##검색 이펙트   
-https://hmm365.github.io/codingclass/javascript/effect/sliderEffect01.html   
-https://hmm365.github.io/codingclass/javascript/effect/sliderEffect02.html   
-https://hmm365.github.io/codingclass/javascript/effect/sliderEffect03.html   
-https://hmm365.github.io/codingclass/javascript/effect/sliderEffect04.html   
-https://hmm365.github.io/codingclass/javascript/effect/sliderEffect05.html   
-https://hmm365.github.io/codingclass/javascript/effect/sliderEffect06.html   
-https://hmm365.github.io/codingclass/javascript/effect/sliderEffect07.html   
+https://hmm365.github.io/codingclass/javascript/effect/searchEffect01.html   
+https://hmm365.github.io/codingclass/javascript/effect/searchEffect02.html   
+https://hmm365.github.io/codingclass/javascript/effect/searchEffect03.html   
+https://hmm365.github.io/codingclass/javascript/effect/searchEffect04.html   
+https://hmm365.github.io/codingclass/javascript/effect/searchEffect05.html   
+https://hmm365.github.io/codingclass/javascript/effect/searchEffect06.html   
+https://hmm365.github.io/codingclass/javascript/effect/searchEffect07.html   
 
 ##퀴즈 이펙트   
 https://hmm365.github.io/codingclass/javascript/effect/quizEffect01.html   
