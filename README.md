@@ -30,15 +30,16 @@ https://hmm365.github.io/codingclass/javascript/javascript12.html
 ## HTML   
 https://hmm365.github.io/codingclass/html/index.html   
 
-##CSS페이지   
+## CSS페이지   
 https://hmm365.github.io/codingclass/css/index.html   
 
-##사이트 제작하기 1   
+## 사이트 제작하기 1   
 https://hmm365.github.io/codingclass/site/site1/index2.html   
 
-##사이트 제작하기 2   
+## 사이트 제작하기 2   
 https://hmm365.github.io/codingclass/site/site2/index.html   
 
+## 이펙트   
 ##검색 이펙트   
 https://hmm365.github.io/codingclass/javascript/effect/sliderEffect01.html   
 https://hmm365.github.io/codingclass/javascript/effect/sliderEffect02.html   
