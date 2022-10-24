@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트</title>
+    <link rel="stylesheet" href="../assets/css/quiz.css">
+    <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/Cafe24Dangdanghae/Cafe24Dangdanghae.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../javascript01.html">Quiz</a><em>주관식 유형</em></h1>
+        <nav>
+            <ul>
+                <li><a href="quizEffect01.html">1</a></li>
+                <li><a href="quizEffect02.html">2</a></li>
+                <li><a href="quizEffect03.html">3</a></li>
+                <li><a href="quizEffect04.html">4</a></li>
+                <li class="active"><a href="quizEffect05.html">5</a></li>
+                <li><a href="quizEffect06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="quiz__wrap">
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+        //문제정보
+        const quizInfo = [
+        {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 6,
+                answerAsk: "서로 다른 색끼리의 영향으로 인하여 밝은 색은 더 밝게 어두운 색은 더 어둡게 보이는 대비는?",
+                answerChoice: {
+                    1 : "색상대비",
+                    2 : "명도대비",
+                    3 : "채도대비",
+                    4 : "계시대비",
+                },
+                answerResult: "2",
+                answerEx: "어둡고 밝다라는 언급은 명도를 의심하셔야 됩니다.",
+            },
+            // 06
+            
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 7,
+                answerAsk: "디자인 원리 중 율동(Rhythm)에 해당하지 않는 것은?",
+                answerChoice: {
+                    1 : "비례",
+                    2 : "반복",
+                    3 : "강조",
+                    4 : "점이",
+                },
+                answerResult: "1",
+                answerEx: "율동의 효과는 강한 힘과 약한 힘이 '규칙적'으로 생겨나는 '움직임' 입니다. 비례랑은 상관없습니다.",
+            },
+            // 07
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 8,
+                answerAsk: "어둠이 시작될 때 물체의 상이 흐리게 나타나는 현상과 가장 관계가 깊은 것은?",
+                answerChoice: {
+                    1 : "색순응",
+                    2 : "푸르킨예 현상",
+                    3 : "박명시",
+                    4 : "조건등색",
+                },
+                answerResult: "3",
+                answerEx: "명순응은 어두운 -> 밝은곳 갈 때 눈의 적응 암순응은 밝은 -> 어두운 곳 갈 때 눈의 적응입니다. 박명시란 그 중간에 눈의 적응입니다. 그 상태에선 물체가 흐리게 보여요",
+            },
+            // 08
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 9,
+                answerAsk: "색채조화의 공통원리에 관한 설명으로 틀린 것은?",
+                answerChoice: {
+                    1 : "질서의 원리는 효과적인 반응을 일으키는 질서 있는 계획에 따라 선택된 색채들에서 생긴다.",
+                    2 : "비모호성의 원리는 두 색 이상의 배색에 있어서 모호함이 없는 명료한 배색에서만 얻어진다.",
+                    3 : "동류의 원리는 가장 가까운 색채끼리의 배색은 보는 사람에게 친근감을 주며 조화를 느끼게 한다.",
+                    4 : "친근성의 원리는 배색된 색채들이 서로 공통되는 상태와 속성을 가질 때 그 색채는 조화된다.",
+                },
+                answerResult: "4",
+                answerEx: "친근성이란 관찰자에게 친숙해있는 배색이 잘 조화를 이룬다.",
+            },
+            // 09
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 10,
+                answerAsk: "모든 사물은 구, 원기둥 및 원뿔 형태와 같은 기하학적 형태로 구성되어 있다고 주장한 사람은?",
+                answerChoice: {
+                    1 : "파파넥",
+                    2 : "고흐",
+                    3 : "세잔",
+                    4 : "오장팡",
+                },
+                answerResult: "3",
+                answerEx: "세잔이 그랬습니다. 세잔은 큐비즘(입체파) 대표적인 인물이죠",
+            },
+            // 10
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 11,
+                answerAsk: "스파트(spot) 광고에 대한 설명이 옳은 것은?",
+                answerChoice: {
+                    1 : "전국 방송망으로 방송국에서 전국에 실시하는 광고",
+                    2 : "일정시간을 정해 30초 CM 10개를 계속 방송하는 형태",
+                    3 : "지역 방송국에 제한되어 방송하는 것",
+                    4 : "프로그램과 프로그램 사이에 광고를 삽입하는 것",
+                },
+                answerResult: "4",
+                answerEx: "기억해주세요 spot 광고란 '라디오나 텔레비전 방송에서, 프로그램 사이 또는 프로그램 진행 중에 아주 짧게 나가는 광고' 입니다.",
+            },
+            // 11
+            
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 12,
+                answerAsk: "빨간색이 가장 선명하고 뚜렷해 보일 수 있는 배경색으로 적합한 것은?",
+                answerChoice: {
+                    1 : "주황",
+                    2 : "노랑",
+                    3 : "회색",
+                    4 : "보라",
+                },
+                answerResult: "3",
+                answerEx: "이거 제가 주관식문제에도 냈던 문제인데 틀리신분 없으시죠?",
+            },
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 14,
+                answerAsk: "색의 온도감에 대한 설명으로 틀린 것은?",
+                answerChoice: {
+                    1 : "색을 통해 따뜻함, 차가움, 중간의 온도 등을 느낄 수 있는 것을 말한다.",
+                    2 : "색상은 느껴지는 감각에 따라 난색, 한색, 중성색으로 나뉜다.",
+                    3 : "난색에는 빨간색과 노란색, 한색에는 녹색과 파란색 등이 있다.",
+                    4 : "중성색에는 연두색, 자주색 등이 있다.",
+                },
+                answerResult: "3",
+                answerEx: "녹색은 중성색 계열입니다.",
+            },
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 16,
+                answerAsk: "연두, 녹색, 보라, 자주 등은 때로는 차갑게도 때로는 따뜻하게도 느껴질 수 있다. 이러한 색들을 무슨 색이라 하는가?",
+                answerChoice: {
+                    1 : "무채색",
+                    2 : "중성색",
+                    3 : "유채색",
+                    4 : "순색",
+                },
+                answerResult: "2",
+                answerEx: "아까 연두, 녹색이 중성색이라고 언급드렸죠?.",
+            },
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 19,
+                answerAsk: "신문광고의 구성요소 중 조형적 요소가 아닌 것은?",
+                answerChoice: {
+                    1 : "헤드라인",
+                    2 : "일러스트레이션",
+                    3 : "심볼 마크",
+                    4 : "보더 라인",
+                },
+                answerResult: "1",
+                answerEx: "?",
+            },
+
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 29,
+                answerAsk: "웹 브라우저의 주소창에 URL을 잘못 입력한 것은?",
+                answerChoice: {
+                    1 : "http://www.abc.or.kr",
+                    2 : "webamil://abc123@abc.co.kr",
+                    3 : "ftp://ftp.abc.com",
+                    4 : "file:///c:\abc.hwp",
+                },
+                answerResult: "2",
+                answerEx: "스펠링이 이상하죠? webamil 이게 뭔지 저도 모르겠습니다.",
+            },
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 30,
+                answerAsk: "가인터넷에서 사용되는 서비스 중 파일 전송 프로토콜로서 원격 호스트에 대해 파일을 송수신하는 것은?나다",
+                answerChoice: {
+                    1 : "PPP(Point to Point Protocol)",
+                    2 : "FTP(File Transfer Protocol)",
+                    3 : "DNS(Domain Name System)",
+                    4 : "MIME(Multipurpose Internet Mail Extensions)",
+                },
+                answerResult: "2",
+                answerEx: "영어를 해석하면 답이 나옵니다. 파일을 전송하는 프로토콜이요.",
+            },
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 33,
+                answerAsk: "인터넷의 시조이며, 미 국방성이 군사목적으로 UCLA, 스탠포드 대학 등이 보유한 컴퓨터 네트워크로 연결한 것은 무엇일까?",
+                answerChoice: {
+                    1 : "USENET",
+                    2 : "FTP",
+                    3 : "WAIS",
+                    4 : "ARPANET",
+                },
+                answerResult: "4",
+                answerEx: "인터넷의 시조 = 알파넷.",
+            },
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 34,
+                answerAsk: "다음과 관련 있는 TCP/IP 프로토콜 계층으로 옳은 것은? SMTP, FTP, Telnet, HTTP",
+                answerChoice: {
+                    1 : "물리 계층",
+                    2 : "네트워크 계층",
+                    3 : "전송 계층",
+                    4 : "응용 계층",
+                },
+                answerResult: "4",
+                answerEx: "여러가지 프로토콜들이 나오면 응용계층을 생각해주세요.",
+            },
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 42,
+                answerAsk: "웹사이트 제작 단계 중 사이트의 목적과 사용자 분석에 따라 사이트의 디자인 방향을 설정하는 단계는?",
+                answerChoice: {
+                    1 : "스케줄 작성",
+                    2 : "콘셉트 도출",
+                    3 : "스타일링",
+                    4 : "평가",
+                },
+                answerResult: "2",
+                answerEx: "디자인의 방향을 잡는것은 디자인의 콘셉트를 도출해서 계획하는 것 이겠죠.",
+            },
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 44,
+                answerAsk: "웹 페이지 저작에 필요한 S/W 중 웹에디터가 아닌 것은?",
+                answerChoice: {
+                    1 : "Internet Space Builder",
+                    2 : "EditPlus",
+                    3 : "Hotdog Professional",
+                    4 : "Dramweaver",
+                },
+                answerResult: "1",
+                answerEx: "Internet Space Builder은 3D 기술을 제작하는 쪽이라고 하네요.",
+            },
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 46,
+                answerAsk: "애니메이션 기법에 대한 설명이 틀린 것은?",
+                answerChoice: {
+                    1 : "플립북 애니메이션은 프레임의 모든 그림을 그려서 저장하므로 제작 시간이 많이 소요된다.",
+                    2 : "셀 애니메이션은 하나의 배경과 여러 개의 전경을 제작 후 합성하여 하나의 프레임을 만든다.",
+                    3 : "컴퓨터를 이용한 키 프레임 애니메이션은 선형보간법으로 중간 프레임을 자동 생성할 수 있다.",
+                    4 : "모핑 애니메이션은 전통적인 애니메이션 기법으로 용량이 작아 인터넷 환경에 적합하다.",
+                },
+                answerResult: "4",
+                answerEx: "모핑은 영화나 뮤직비디오에서 많이 사용합니다.",
+            },
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 48,
+                answerAsk: "컴퓨터 그래픽스의 단위 중 1인치당 몇 개의 픽셀이 들어가 있는지를 표현하는 것은?",
+                answerChoice: {
+                    1 : "LPI",
+                    2 : "EPI",
+                    3 : "PPI",
+                    4 : "DPI",
+                },
+                answerResult: "3",
+                answerEx: "PPI = pixel per inch",
+            },
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 52,
+                answerAsk: "웹디자인 프로세스에 대한 설명으로 틀린 것은?",
+                answerChoice: {
+                    1 : "프로젝트 기획 - 목표설정, 시장조사, 개발전략수립",
+                    2 : "웹 사이트 기획 - 사이트 콘셉트 정의, 자료수집. 분석",
+                    3 : "웹 사이트 디자인 - 콘텐츠 제작 및 배치",
+                    4 : "웹 사이트 구축 - 테스트 및 디버깅",
+                },
+                answerResult: "4",
+                answerEx: "테스트 및 디버깅 단계는 다 개발하고 유지보수 단계에서 실행하는 것 입니다.",
+            },
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 56,
+                answerAsk: `
+                다음이 설명하는 파일 포맷은?
+                <br>- 인터레이싱(Interlacing) 이미지 기능 제공 
+                <br>- 트루 컬러 지원
+                <br>- 비손실 압축 사용 
+                <br>- 감마교정 기능 
+                <br>- 원하는 색상 밝기의 형태로 이미지를 보정할 수 있음
+                `,
+                answerChoice: {
+                    1 : "*.PICT",
+                    2 : "*.PNG",
+                    3 : "*.TIFF",
+                    4 : "*.AI",
+                },
+                answerResult: "2",
+                answerEx: "트루 컬러를 지원하는 것과 비손실 압축이라는 키워드로 답을 찾아내면 될 것 같습니다.",
+            },
+            {
+                answerType: "웹디자인 기능사 2013년 01회",
+                answerNum: 57,
+                answerAsk: "다음 중 연관성 있는 여러 가지 이미지를 조합하여 하나의 새로운 이미지를 제작하는 방법은?",
+                answerChoice: {
+                    1 : "화상 처리(Image Processing)",
+                    2 : "디지털 페인팅(Digital Painting)",
+                    3 : "포토 콜라주(Photo Collage)",
+                    4 : "전자출판(DTP)",
+                },
+                answerResult: "3",
+                answerEx: "포토 콜라주는 포토몽타주라고 불리는 사진 콜라주 작업은 여러 장의 사진을 자르고 결합하여 하나의 새로운 이미지를 만드는 다양한 유형의 이미지 편집 작업입니다 ",
+            },
+            { //03
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "3. ",
+                answerAsk : "회색 바탕 위의 흰색 보다 검정 바탕 위의 흰색이 더 밝게 보이는 대비 효과를 무엇이라고 하는가?",
+                answerChoice : {
+                    1: "색상대비",
+                    2: "명도대비",
+                    3: "보색대비",
+                    4: "한난대비"
+                },
+                answerResult : "2" ,
+                answerEx : "색상의 밝기는 명도로 조절할 수 있기 때문에 명도가 나뉠때 밝기의 대비가 커집니다 따라서 명도대비 입니다."
+            }, 
+            { //05
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "5. ",
+                answerAsk : "색의 활용 효과에 대한 설명으로 틀린 것은?",
+                answerChoice : {
+                    1: "밝은 바탕에 어두운 색 글자보다 어두운 바탕에 밝은 색글자가 더 굵고 커 보인다",
+                    2: "같은 크기의 노란색 공과 파란색 공을 비교하면 노란색공이 더 가볍게 느껴진다",
+                    3: "천장을 좀 더 높게 보이게 하려면 벽면과 동일계열의 고명도 색을 천장에 칠한다.",
+                    4: "상의를 하의보다 더 어두운 색상으로 하면 키가 더 커 보인다"
+                },
+                answerResult : "4" ,
+                answerEx : "하의를 밝은 색으로 하면 더 짧아 보이기 때문에 상의를 밝은색 하의를 어두운 색으로 하면 하체가 더 길어보인다."
+            },
+            { //06
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "6. ",
+                answerAsk : "자연적 또는 인공적 모양 중에서 ( A )은/는 외관으로 나타나는 윤곽을 나타내지만, ( B )은/는 좀 더 넓은 의미의 일반적인 ( A )와/과 모양을 나타내며, 눈으로 파악한 대상물의 기본적 특성을 제시한다. 괄호 안에 들어갈 알맞은 용어는?",
+                answerChoice : {
+                    1: "A : 점, B : 형",
+                    2: "A : 선, B : 형태",
+                    3: "A : 형, B : 면",
+                    4: "A : 형, B : 형태"
+                },
+                answerResult : "4" ,
+                answerEx : "형은 2차원적인 표현이고, 형태는 3차원적인 표현이다. 따라서 형은 나타나기는 하지만 눈으로 파악할 수 있는건 형태이다."
+            },
+            { //07
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "7. ",
+                answerAsk : "바우하우스의 설립자이며, 근대 건축과 디자인 운동의 대표적지도자는?",
+                answerChoice : {
+                    1: "모리스(MORRIS. WILLIAM)",
+                    2: "그리피우스(GROPIUS. WALTER)",
+                    3: "로위(ROWEY. RAYMOND)",
+                    4: "팹스너(PEVSNER. NIKOLAUS)"
+                },
+                answerResult : "2" ,
+                answerEx : "발터 그로피우스는 바우하우스를 설립하였고 바우하우스는 현대식 건축과 디자인에 큰 영향을 주게 되었습니다. 또한 이어지는 예술, 건축, 그래픽 디자인, 실내 디자인, 공업 디자인, 타이포그래피의 발전에 깊은 영향을 주었습니다."
+            },
+            { //09
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "9. ",
+                answerAsk : "색의 혼합에서 TV의 컬러 이미지는 어떤 방식으로 표현되는가?",
+                answerChoice : {
+                    1: "회전혼합",
+                    2: "병치가산혼합",
+                    3: "중간혼합",
+                    4: "감산병치혼합"
+                },
+                answerResult : "2" ,
+                answerEx : "병치혼합은 일종의 가법혼색으로 조밀하게 병치된 색이 착시현상으로 인해 마치 혼색된 것으로 보이는 것입니다. 따라서 삼원색은 빨강 파랑 초록으로 조밀하게 조합하여 컬러 이미지를 표현하기 적합해 TV등 디지털에 사용하기 알맞습니다."
+            },
+            { //13
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "13. ",
+                answerAsk : "먼셀 표색계의 채도에 대한 설명으로 가장 옳은 것은?",
+                answerChoice : {
+                    1: "채도는 색의 밝고 어두운 정도를 말하며 검정을 0 으로하고 흰색으로 10 으로 한다.",
+                    2: "여러 유채색을 정원 모양으로 배열하여 표현한 것을 채도라 한다",
+                    3: "채도는 1에서 14 단계로 표기하며 채도가 높을수록 선명하다",
+                    4: "5R4/12에서 5는 채도를 의미한다."
+                },
+                answerResult : "3" ,
+                answerEx : "색의 밝고 어두운 정도는 명도이며, 채도는 색의 강렬함을 표현하고 있기 때문에 높을 수록 선명합니다."
+            },
+            { //18
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "18. ",
+                answerAsk : "그래픽의 표현 요소 중 회화나 사진을 비롯하여 도형, 도표등 문자 이외의 시각화된 것을 의미하는 것은?",
+                answerChoice : {
+                    1: "일러스트레이션",
+                    2: "포스터",
+                    3: "신문광고",
+                    4: "표지"
+                },
+                answerResult : "1" ,
+                answerEx : "표지나 포스터는 글자를 시각화 하는 것이며, 신문광고는 보통 문서의 내용만 담기 때문에 일러스트레이션이 제일 적합합니다."
+            },
+            { //20
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "20. ",
+                answerAsk : "책을 열심히 보다가 시선을 돌리면 검정색 활자가 흰색 활자로 나타나는 현상은?",
+                answerChoice : {
+                    1: "부의 잔상",
+                    2: "정의 잔상",
+                    3: "동화 현상",
+                    4: "매스 효과"
+                },
+                answerResult : "1" ,
+                answerEx : "원래의 색과 반대로 보이는 잔상이 생기는 것 입니다."
+            },
+            { //22
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "22. ",
+                answerAsk : "다음 중 HTML에 대한 설명으로 틀린 것은?",
+                answerChoice : {
+                    1: "HTML은 대소문자를 구분한다.",
+                    2: "ASCII 문자로 되어 있는 일반 Text 형태이다",
+                    3: "HTML로 제작된 페이지는 웹브라우저에서 해석되어 실행된다.",
+                    4: "HTML의 문서는 태그(tag)로 구성되어 있다"
+                },
+                answerResult : "1" ,
+                answerEx : "대-소문자를 구분하는 것은 자바스크립트 입니다."
+            },
+            { //24
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "24. ",
+                answerAsk : "OSI 7 계층 중 프로세스 간의 대화 제어 및 동기점을 이용한 효율적인 데이터 복구를 제공하는 계층은?",
+                answerChoice : {
+                    1: "세션 계층",
+                    2: "네트워크 계층",
+                    3: "물리 계층",
+                    4: "전송 계층"
+                },
+                answerResult : "1" ,
+                answerEx : "네트워크 계층은 별개의 네트워크 간에 데이터 패킷을 주고 받음으로써 이러한 연결이 만들어지는 인터넷 통신 프로세스의 일부이며, 물리 계층은 컴퓨터 네트워킹의 OSI 7계층 모델에서 가장 낮은 첫 번째 계층이고, 전송 계층은 계층 구조의 네트워크 구성요소와 프로토콜 내에서 송신자와 수신자를 연결하는 통신 서비스를 제공을 뜻합니다."
+            },
+            { //29
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "29. ",
+                answerAsk : "다음 중 URL 형식에서 :// 앞에 오는 것은?",
+                answerChoice : {
+                    1: "프로토콜",
+                    2: "IP 주소",
+                    3: "접속 포트번호",
+                    4: "디렉터리명"
+                },
+                answerResult : "1" ,
+                answerEx : "프로토콜은 컴퓨터 내부에서, 또는 컴퓨터 사이에서 데이터의 교환 방식을 정의하는 규칙 체계입니다. 그리고 기기 간 통신은 교환되는 데이터의 형식에 대해 상호 합의를 요구합니다"
+            },
+            { //34
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "34. ",
+                answerAsk : "자바스크립트에서 일정한 시간마다 브라우저 상태를 파악하거나 동작을 수행하는데 사용되는 함수는?",
+                answerChoice : {
+                    1: "window.setInterval()",
+                    2: "window.setTimer()",
+                    3: "window.timer()",
+                    4: "window.setTime()"
+                },
+                answerResult : "1" ,
+                answerEx : "setTimeout()을 이용해 일정 시간이 지난 후에 함수를 실행하는 방법, setInterval()을 이용해 일정 시간 간격을 두고 함수를 실행하는 방법입니다."
+            },
+            { //35
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "35. ",
+                answerAsk : "교육기관을 의미하는 인터넷 도메인으로 틀린 것은?",
+                answerChoice : {
+                    1: "hs",
+                    2: "edu",
+                    3: "ac",
+                    4: "or"
+                },
+                answerResult : "4" ,
+                answerEx : "hs - highschool 고등학교, edu - education 교육, ac - academy 학교, or - organizacion 기관 입니다."
+            },
+            { //36
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "36. ",
+                answerAsk : "웹 검색엔진의 유형에 해당하지 않는 것은?",
+                answerChoice : {
+                    1: "웹 인덱스 방식",
+                    2: "파일별 검색 방식",
+                    3: "웹 디렉터리 방식 ",
+                    4: "통합형 검색 방식"
+                },
+                answerResult : "2" ,
+                answerEx : "웹인덱스 방식 : 키워드 방식 , 웹디렉토리 방식 : 주제별(대분류-중분류-소분류)방식, 통합형 방식 : 메타 방식 입니다. "
+            },
+            { //44
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "44. ",
+                answerAsk : "웹 사이트에 등재할 이미지의 크기가 클 경우 크기를 조정하기 위한 가장 올바른 방법은?",
+                answerChoice : {
+                    1: "웹에서 소스 수정으로 사이즈를 조정한다.",
+                    2: "드림위버에서 이미지 크기를 줄인다",
+                    3: "포토샵의 이미지 사이즈에서 픽셀 수를 줄인다",
+                    4: "나모 웹 에디터에서 웹용으로 저장할 때 Quality를 낮춘다."
+                },
+                answerResult : "3" ,
+                answerEx : "웹으로 사이즈를 조정하면 원하는 곳을 골라서 줄일 수 없으며, 드림 위버는 어도비에서 나온 웹 개발 시스템입니다. 또한 Quality는 투명도를 조절하는 코드입니다."
+            },
+            { //45
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "45. ",
+                answerAsk : "컴퓨터 그래픽스 시스템의 입력 장치로 틀린 것은?",
+                answerChoice : {
+                    1: "디지타이저(Digitizer)",
+                    2: "타블릿(Tablet)",
+                    3: "스캐너(Scanner)",
+                    4: "플로터(Plotter)"
+                },
+                answerResult : "4" ,
+                answerEx : "플로터(Plotter)는 인쇄장치 출력장치에 해당합니다."
+            },
+            { //48
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "48. ",
+                answerAsk : "선(Line)만으로 입체를 생성하며, 처리속도가 빠르지만 무게감, 부피, 실체감을 느낄 수 없는 3차원 모델링 방법은?",
+                answerChoice : {
+                    1: "와이어 프레임 모델(Wire-frame model)",
+                    2: "서페이스 모델(Surface model)",
+                    3: "솔리드 모델(Solid model)",
+                    4: "파라메트릭 모델(Parametric model)"
+                },
+                answerResult : "1" ,
+                answerEx : "와이어 프레임은 선으로만 3D모델링을 할 수 있습니다. 모델 작성이 쉽고, 처리 속도가 빠르며, 3면 투시도 작성이 유리하지만 물리적 성질을 계산 할 수 없고, 숨은선 제거가 어려움의 등의 장점과 단점이 있습니다."
+            },
+            { //50
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "50. ",
+                answerAsk : "1. 점묘법과 같이 제한된 수의 색상들을 사용하여 다양한 색상을 시각적으로 섞어서 만드는 것이다. 2. 예를 들어 노란색과 빨간색을 섞어서 기술적으로 잘 배치하면 주황색과 같이 보이도록 할 수 있다. 등의 특징을 가진 것은?",
+                answerChoice : {
+                    1: "Halftone",
+                    2: "Gradation",
+                    3: "Pixe",
+                    4: "Dithering"
+                },
+                answerResult : "4" ,
+                answerEx : "제한된 수의 색상을 사용하여 다양한 색을 시각적으로 혼합해 만드는 것은 Dithering을 의미합니다"
+            },
+            { //52
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "52. ",
+                answerAsk : "1. 1997년 미국 매크로 미디어사가 웹에서 애니메이션을 실현해 줄 수 있는 쇽웨이브라는 기술을 개발하였다. 2. 스트리밍 방식을 지원하므로 인터넷 홈페이지용으로 적합하다. 3. 웹용 쇽웨이브 파일뿐만 아니라 애니메이션 GIF, 무비파일(MOV), 자체실행파일(EXE) 및 연속(sequence) 파일 등으로 만들 수 있다.",
+                answerChoice : {
+                    1: "이미지",
+                    2: "클레이",
+                    3: "애니메이션",
+                    4: "플래시"
+                },
+                answerResult : "2" ,
+                answerEx : "Shockwave 플랫폼에서 만든 멀티미디어 및 비디오 게임을 웹 페이지에서 볼 수 있는 단종된 프리웨어 소프트웨어 플러그인입니다."
+            },
+            { //55
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "55. ",
+                answerAsk : "일반적으로 Photoshop에서 검정색과 흰색의 이미지로 구성되어 선택된 영역이 합성되지 않도록 마스크 역할을 하는 메뉴는?",
+                answerChoice : {
+                    1: "조정 레이어(Adjustment Layer)",
+                    2: "알파채널(Alpha Channel)",
+                    3: "Z 버퍼(Z-buffer)",
+                    4: "히스토리(History)"
+                },
+                answerResult : "2" ,
+                answerEx : "알파채널은 α 채널과 이미지 처리 분야에 있고, 각 화소에 대해 색상 표현의 데이터로부터 분리한 보조 데이터를 일컫습니다. 보통 화상 마스크, 복구 화상 합성 등에 쓰입니다."
+            },
+            { //56
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "56. ",
+                answerAsk : "대상물의 위치 이동으로 움직임을 표현하는 것으로 종이 등에 특정한 형태를 그리고 잘라낸 후 각각의 종이들을 한 장면씩 움직여 가며 촬영하는 애니메이션 기법은?",
+                answerChoice : {
+                    1: "컷 아웃 애니메이션",
+                    2: "셀 애니메이션",
+                    3: "투광 애니메이션",
+                    4: "스톰모션 애니메이션"
+                },
+                answerResult : "1" ,
+                answerEx : "셀 애니메이션은 그림을 한장씩 직접 그려 만드는 것이며, 투광 애니메이션은 그림자로 애니메이션을 표현하며, 스톰 모션은 프레임 마다 조금씩 움직여 만들어 나가는 애니메이션이다"
+            },
+            { //57
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "57. ",
+                answerAsk : ". 다음 중 웹폰트(MWF)에 대한 설명으로 틀린 것은?",
+                answerChoice : {
+                    1: "웹폰트는 작은 사이즈의 글자를 사용 한 경우에는 깨끗하게 보여 가독성이 높다",
+                    2: "웹폰트를 사용해서 사이트를 만든 경우 해당 폰트가 컴퓨터에 설치되어 있지 않으면 굴림체로 대체되어 보인다.",
+                    3: "문법에 맞지 않는 한글이나 한자의 경우에는 표현이 불가능한 경우도 있다",
+                    4: "방문자의 컴퓨터에 해당 폰트가 설치되어 있지 않아도 작업된 웹폰트를 볼 수 있다."
+                },
+                answerResult : "2" ,
+                answerEx : "웹 폰트는 웹에 저장되어 있기 때문에 따로 설치 하지 않아도 똑같은 폰트로 볼 수 있습니다."
+            },
+            { //58
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "58. ",
+                answerAsk : "다음 파일 포맷 중 벡터 그래픽 파일 포맷이 아닌 것은?",
+                answerChoice : {
+                    1: "EPS",
+                    2: "PCX",
+                    3: "WMF",
+                    4: "AI"
+                },
+                answerResult : "2" ,
+                answerEx : "벡터 그래픽 파일 포맷에는 AI, EPS, CDR, WMF 등이 있습니다. PCX는 레스터 방식의 파일 포맷입니다"
+            },
+            { //59
+                answerType : "웹 디자인 기능사 2014년 5회",
+                answerNum : "59. ",
+                answerAsk : "1. 웹사이트의 정보를 한눈에 검색하기 위한 시각적인 콘텐츠 모형을 말한다. 2. 일반적으로 테이블 형태로 되어 있으며, 계층형을 가지고 있는 것이 보통이다. 3. 그 종류에는 조직표 모형, 입체모형 등이 있다",
+                answerChoice : {
+                    1: "스토리보드(Story Board)",
+                    2: "사이트 맵(Site Map)",
+                    3: "레이아웃(Layout)",
+                    4: "내비게이션(Navigation)"
+                },
+                answerResult : "2" ,
+                answerEx : "사이트 맵은 웹사이트의 전체 구조를 한 눈에 알아볼수 있도록 계층형 구조로 만든 것으로 지도와 같은 역할을 합니다"
+            },
+            {
+                    answerType: "웹디자인기능사 2010년 04회",
+                    answerNum: "4",
+                    answerAsk: "병원 수술실의 색채계획으로 가장 적당한 배색은?",
+                    answerChoice: {
+                        1: "갈색계열",
+                        2: "무채색계열",
+                        3: "녹색계열",
+                        4: "보라색계열"
+                    },
+                    answerResult: "3",
+                    answerEx: "병원 수술실의 색채계획으로 가장 적당한 배색은 '녹색계열'입니다."
+                },
+                {
+                    answerType: "웹디자인기능사 2010년 04회",
+                    answerNum: "5",
+                    answerAsk: "색입체를 단순화한 각 부분의 명칭이 맞는 것은? (단, A는 입체의 상하, /B는 입체의 가로방향, C는 입체의 둘레를 의미한다.)",
+                    answerChoice: {
+                        1: "A-색상, B-채도, C-명도",
+                        2: "A-채도, B-명도, C-색상",
+                        3: "A-명도, B-색상, C-채도",
+                        4: "A-명도, B-채도, C-색상"
+                    },
+                    answerResult: "4",
+                    answerEx: "입체의 상하(A)는 명도, 입체의 가로방향(B)는 채도, 입체의 둘레(C)는 색상입니다."
+                },
+                {
+                    answerType: "웹디자인기능사 2010년 04회",
+                    answerNum: "7",
+                    answerAsk: "디자인 원리 중 균형(balance)에 해당하지 않는 것은?",
+                    answerChoice: {
+                        1: "대칭",
+                        2: "비례",
+                        3: "율동",
+                        4: "주도와 종속"
+                    },
+                    answerResult: "3",
+                    answerEx: "디자인의 기본 원리에는 통일, 강조, 균형, 반복, 비례, 반복, 변화, 조화, 대비, 율동, 리듬, 대칭, 스케일 등이 있고, 균형에 해당하는 것은 대칭(완전한 대칭), 비대칭(숨겨진 균형), 방사형 균형(중심에서 밖으로 퍼짐)이 있습니다."
+                },
+                {
+                    answerType: "웹디자인기능사 2010년 04회",
+                    answerNum: "19",
+                    answerAsk: "다음 그림에서 나타나는 착시 현상은? 뮐러 리어 Müller-Lyer 착시의 예로 안쪽으로 모아진 화살표(←→)와 반대로 바깥으로 벌어진 화살표 그림",
+                    answerChoice: {
+                        1: "방향의 착시",
+                        2: "대비의 착시",
+                        3: "분할의 착시",
+                        4: "길이의 착시"
+                    },
+                    answerResult: "4",
+                    answerEx: "길이의 착시란 같은 길이지만 조건에 따라 길이가 다르게 보이는 현상을 말합니다."
+                },
+                {
+                    answerType: "웹디자인기능사 2010년 04회",
+                    answerNum: "21",
+                    answerAsk: "인터넷 검색엔진에 속하지 않는 것은?",
+                    answerChoice: {
+                        1: "오페라(Opera)",
+                        2: "심마니(Simmani)",
+                        3: "알타비스타(Altavista)",
+                        4: "구글(Google)"
+                    },
+                    answerResult: "1",
+                    answerEx: "오페라(Opera)는 웹 브라우저 입니다."
+                },
+                {
+                    answerType: "웹디자인기능사 2010년 04회",
+                    answerNum: "37",
+                    answerAsk: "VRML(Virtual Reality Modeling Language)에 대한 설명으로 틀린 것은?",
+                    answerChoice: {
+                        1: "VRML은 그래픽 기능뿐만 아니라 텍스트, 이미지, 애니메이션, 사운드 등 각종 멀티미디어 데이터를 2차원적 공간에 통합하여 서로상호작용 할 수 있다.",
+                        2: "VRML 은 상당한 인력과 고급 컴퓨터를 이용한 오랜 시간의 그래픽 렌더링이 필요한 프로그램 언어이다.",
+                        3: "VRML은 웹 상에 가상공간을 구축할 수 있게 함으로써 원격지의 사용자와 함께 가상공간을 공유할 수 있다.",
+                        4: "VRML은 HTML과의 결합뿐만 아니라, 기존의 실시간 멀티미디어 전송 기술과 자바 등의 새로운 언어 체계도 수용 할 수 있다."
+                    },
+                    answerResult: "1",
+                    answerEx: "VRML은 3차원 인터렉티브 벡터 그래픽을 표현하는 표준 파일 형식으로, 월드 와이드 웹을 염두에 두고 만들어 졌습니다. 현재는 X3D로 대체되었습니다."
+                },
+                {
+                    answerType: "웹디자인기능사 2010년 04회",
+                    answerNum: "40",
+                    answerAsk: "동적 HTML에 대한 설명을 틀린 것은?",
+                    answerChoice: {
+                        1: "홈페이지를 다이나믹하게 구성하기 위한 기법이다.",
+                        2: "기존 HTML에 정적인 화면을 만들어 주는 HTML이다.",
+                        3: "기존의 HTML문서에 CSS 기능을 첨가하였다.",
+                        4: "기존의 HTML문서에 문서객체모델(DOM) 기능을 첨가하였다."
+                    },
+                    answerResult: "2",
+                    answerEx: "기존 HTML이 정적인 화면을 만들어 주는 것으로 동적 HTML은 CSS 기능을 첨가한 것입니다."
+                },
+                {
+                    answerType: "웹디자인기능사 2010년 04회",
+                    answerNum: "50",
+                    answerAsk: "명령어를 일일이 입력하는 번거로움을 없애주며, 사용자들로 하여금 아이콘을 선택하여 원하는 프로그램을 실행할 수 있게 사용되는 컴퓨터 조작기법이 아닌 것은?",
+                    answerChoice: {
+                        1: "드래깅",
+                        2: "포인팅",
+                        3: "클릭킹",
+                        4: "더블 클릭킹"
+                    },
+                    answerResult: "1",
+                    answerEx: "드래깅이란 그래픽 사용자 인터페이스를 제공하는 컴퓨터의 화면상에 있는 아이콘이나 기타의 이미지 등을 움직이는 것과 관련되는 용어이며, 마우스가 움직이고 있는 동안 마우스 단추를 누르는 동작을 가리키는데 사용되기도 합니다."
+                },
+                {
+                    answerType: "웹디자인기능사 2010년 04회",
+                    answerNum: "53",
+                    answerAsk: "동영상 관련 포맷 방식이 아닌 것은?",
+                    answerChoice: {
+                        1: "*.wav",
+                        2: "*.asf",
+                        3: "*.avi",
+                        4: "*.rm"
+                    },
+                    answerResult: "1",
+                    answerEx: "*.wav는 비압축 오디오 포맷입니다."
+                },
+                {
+                    answerType: "웹디자인기능사 2010년 04회",
+                    answerNum: "58",
+                    answerAsk: "랜덤 스캔 방식의 화면표시 장치의 특징으로 틀린 것은?",
+                    answerChoice: {
+                        1: "그래픽스 명령어를 반복 실행하여 화면에 디스플레이 한다.",
+                        2: "화상을 이루고 있는 선분을 따라 전자빔을 쏘아 그린다.",
+                        3: "프레임 버퍼의 크기가 클수록 고화질의 디스플레이가 가능하다.",
+                        4: "앨리어싱이 발생하지 않으므로 안티앨리어싱 처리가 불필요하다."
+                    },
+                    answerResult: "3",
+                    answerEx: "랜덤스캔은 화면의 임의의 점에서 임의의 점까지에 이르는 직선상으로만 전자빔을 움직이는 방식으로 시작점부터 끝점까지 선을 긋는 것이기 때문에 벡터 스캔이라고도 합니다. 하지만 프레임 버퍼는 화면에 나타날 영상 정보를 일시적으로 저장하는 기억 장치로 면 각 점의 온(on)/오프(off)나 색깔을 비트맵으로 기억하고 있습니다."
+                },
+
+
+        ];
+
+        //선택자
+        const quizWrap = document.querySelector(".quiz__wrap");
+
+        function updateQuiz() {
+            const exam = [];
+            quizInfo.forEach((question, number) => {
+                exam.push(`
+                    <div class="quiz">
+                        <sapn class="quiz__type">${question.answerType}</sapn>
+                        <h2 class="quiz__question">
+                            <span class="number">${question.answerNum} .</span>
+                            <div class="ask">${question.answerAsk}</div>
+                        </h2>
+                        <div class="quiz__view">
+                            <div class="true">정답입니다!</div>
+                            <div class="false">틀렸습니다!</div>
+                            <div class="dog">
+                                <div class="head">
+                                    <div class="ears"></div>
+                                    <div class="face"></div>
+                                    <div class="eyes">
+                                        <div class="teardrop"></div>
+                                    </div>
+                                    <div class="nose"></div>
+                                    <div class="mouth">
+                                        <div class="tongue"></div>
+                                    </div>
+                                    <div class="chin"></div>
+                                </div>
+                                <div class="body">
+                                    <div class="tail"></div>
+                                    <div class="legs"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quiz__answer">
+                            <div class="quiz__selects">
+                                <label for="select1${number}">
+                                    <input type="radio" id="select1${number}" class="select" name="select${number}" value="1"> <!-- name은 ipunt만가능 -->
+                                    <span class="choice">${question.answerChoice[1]}</span>
+                                </label>
+                                <label for="select2${number}">
+                                    <input type="radio" id="select2${number}" class="select" name="select${number}" value="2"> <!-- name은 ipunt만가능 -->
+                                    <span class="choice">${question.answerChoice[2]}</span>
+                                </label>
+                                <label for="select3${number}">
+                                    <input type="radio" id="select3${number}" class="select" name="select${number}" value="3"> <!-- name은 ipunt만가능 -->
+                                    <span class="choice">${question.answerChoice[3]}</span>
+                                </label>
+                                <label for="select4${number}">
+                                    <input type="radio" id="select4${number}" class="select" name="select${number}" value="4"> <!-- name은 ipunt만가능 -->
+                                    <span class="choice">${question.answerChoice[4]}</span>
+                                </label>          
+                            </div>
+                        </div>
+                    </div>
+                `)
+            });
+            exam.push(`
+                <div class="quiz__confirm">
+                    <button class="check">정답 확인하기</button>
+                    <div class="ex"></div> 
+                </div>
+            `)
+            quizWrap.innerHTML = exam.join('');
+        }
+        updateQuiz();
+
+        //정답확인
+        function answerQuiz() {
+            const quizSelects = document.querySelectorAll(".quiz__selects");    //보기
+            const quizView = document.querySelectorAll(".quiz__view");          //강아지
+            //사용자가 체크한 라디오 박스  == 문제 정답
+            quizInfo.forEach((question, number) => {
+                const quizSelectsWrap = quizSelects[number];                    //전체 보기 박스
+                const userSelector = `input[name=select${number}]:checked`;         //사용자가 클린한 라디오 박스
+                const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value
+                const quizView = document.querySelectorAll(".quiz__view");
+                console.log(quizSelects)
+                if (userAnswer == question.answerResult) {
+                    console.log("정답")
+                    quizView[number].classList.add("like");
+                } else {
+                    console.log("오답")
+                    quizView[number].classList.add("dislike");
+                    const div = document.createElement("div");
+                    quizSelectsWrap.appendChild(div).innerHTML = `<p class="result">${question.answerEx}</p>`;
+                }
+            });
+        }
+        document.querySelector(".quiz__confirm .check").addEventListener("click", answerQuiz);
+    </script>
+</body>
+
+</html>

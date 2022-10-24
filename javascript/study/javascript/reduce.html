@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>repeat</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">reduce() / reduceRight()</h2>
+                <p class="t_desc2">
+                    reduce() 매서드는 메서드는 배열의 각 요소에 대해 주어진 reducer 함수를 실행하고, 하나의 결과값을 반환합니다. <br />
+                    reduceRight() 매서드는 메서드는 배열의 각 요소에 대해 주어진 reducer 함수를 실행하고, 하나의 결과값을 반환합니다.
+                </p>
+                <div class="t_table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col style="width: 32%" />
+                            <col style="width: 32%" />
+                            <col style="width: 32%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="smple07_N1"></td>
+                                <td class="smple07_Q1"></td>
+                                <td class="smple07_M1"></td>
+                                <td class="smple07_P1"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple07_N2"></td>
+                                <td class="smple07_Q2"></td>
+                                <td class="smple07_M2"></td>
+                                <td class="smple07_P2"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple07_N3"></td>
+                                <td class="smple07_Q3"></td>
+                                <td class="smple07_M3"></td>
+                                <td class="smple07_P3"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple07_N4"></td>
+                                <td class="smple07_Q4"></td>
+                                <td class="smple07_M4"></td>
+                                <td class="smple07_P4"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple07_N5"></td>
+                                <td class="smple07_Q5"></td>
+                                <td class="smple07_M5"></td>
+                                <td class="smple07_P5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="t_code">
+                    <pre><code class="language-js">//01
+const arrNum1 = [100, 200, 300, 400, 500];
+const arrReduce1 = arrNum1.reduce((element) => element);
+
+//02
+const arrNum2 = [100, 200, 300, 400, 500];
+const arrReduce2 = arrNum1.reduce((p, c) => p + c);
+
+//03
+const arrNum3 = [100, 200, 300, 400, 500];
+let sum = 0;
+for (let i = 0; i &lt arrNum2.length; i++) sum += arrNum3[i];
+    
+//04 
+const arrNum4 = [
+    [100, 200],
+    [300, 400],
+];
+const arrReduce4 = arrNum4.reduce((p, c) => p.concat(c));
+    
+//05
+const arrNum5 = ["javascript", "react", "vue"];
+const arrReduce5 = arrNum5.reduceRight((p, c) => p + c);
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script>
+            {
+                const arrNum1 = [100, 200, 300, 400, 500];
+                const arrReduce1 = arrNum1.reduce((element) => element);
+
+                document.querySelector(".smple07_N1").innerHTML = "1";
+                document.querySelector(".smple07_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple07_M1").innerHTML = "arrNum1.reduce((element) => element)";
+                document.querySelector(".smple07_P1").innerHTML = arrReduce1;
+
+                const arrNum2 = [100, 200, 300, 400, 500];
+                const arrReduce2 = arrNum1.reduce((p, c) => p + c);
+
+                document.querySelector(".smple07_N2").innerHTML = "2";
+                document.querySelector(".smple07_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple07_M2").innerHTML = "arrNum1.reduce((p, c) => p + c)";
+                document.querySelector(".smple07_P2").innerHTML = arrReduce2;
+
+                const arrNum3 = [100, 200, 300, 400, 500];
+                let sum = 0;
+                let sum2 = 0;
+                for (let i = 0; i < arrNum2.length; i++) sum += arrNum3[i];
+
+                document.querySelector(".smple07_N3").innerHTML = "3";
+                document.querySelector(".smple07_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple07_M3").innerHTML = "for()";
+                document.querySelector(".smple07_P3").innerHTML = sum;
+
+                const arrNum4 = [
+                    [100, 200],
+                    [300, 400],
+                ];
+                const arrReduce4 = arrNum4.reduce((p, c) => p.concat(c));
+                document.querySelector(".smple07_N4").innerHTML = "4";
+                document.querySelector(".smple07_Q4").innerHTML = "[100, 200], 300, 400]";
+                document.querySelector(".smple07_M4").innerHTML = "reduce((p, c) => p.concat(c)";
+                document.querySelector(".smple07_P4").innerHTML = arrReduce4;
+
+                const arrNum5 = ["javascript", "react", "vue"];
+                const arrReduce5 = arrNum5.reduceRight((p, c) => p + c);
+                document.querySelector(".smple07_N5").innerHTML = "5";
+                document.querySelector(".smple07_Q5").innerHTML = "[javascript, react, vue]";
+                document.querySelector(".smple07_M5").innerHTML = "arrNum4.reduceRight((p, c) => p + c)";
+                document.querySelector(".smple07_P5").innerHTML = arrReduce5;
+            }
+        </script>
+    </body>
+</html>

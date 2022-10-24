@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textType</title>
+</head>
+<style>
+    /* fonts */
+    @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+    .gmarketSans {
+        font-family: 'NexonLv1Gothic';
+        font-weight: 400;
+    }
+
+    /* reset */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 h6 {
+        font-weight: normal;
+    }
+
+    /* Common */
+    .container {
+        width: 1160px;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
+    .section {
+        padding: 120px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .tit_inner {
+        width: 25%;
+    }
+
+    .tag {
+        display: inline-block;
+        font-size: 18px;
+        padding: 2px 30px;
+        border-radius: 20px;
+        background-color: #ff6767;
+        color: #fff;
+        margin-bottom: 10px;
+        line-height: 1;
+    }
+
+    .tit_inner>h2 {
+        font-size: 50px;
+        line-height: 1;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .tit__desc {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .text__inner {
+        width: 66.6666666667%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .text__card {
+        width: 48%;
+    }
+
+    .text__card:hover {
+        background-color: #f5f5f5;
+    }
+
+    .text__card:nth-child(1),
+    .text__card:nth-child(2) {
+        margin-bottom: 50px;
+    }
+
+    .text__icon img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+
+    .text__tit {
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
+    .text__desc {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+</style>
+
+<body>
+    <section id="textType" class="text__wrap gmarketSans section container">
+        <div class="tit_inner">
+            <p class="tag">Animal</p>
+            <h2>귀여운<br> 동물들 설명</h2>
+            <p class="tit__desc">여러분은 귀여운 동물들의 설명을 지금 이기회에 볼 수있습니다 여러분 어서 빨리 보세요!</p>
+        </div>
+        <div class="text__inner">
+            <article class="text__card">
+                <a href="#" class="text__icon">
+                    <img src="img/tTicon_01.svg" alt="아이콘1">
+                </a>
+                <h3 class="text__tit">우르르쾅쾅 곰</h3>
+                <p class="text__desc">곰은 엄청 강해요 강해서 엄청 위험해요 그러니 도망가는걸 추천해요 하지만 곰은 귀여워서 봐줄거에요</p>
+            </article>
+            <article class="text__card">
+                <a href="#" class="text__icon">
+                    <img src="img/tTicon_02.svg" alt="아이콘2">
+                </a>
+                <h3 class="text__tit">빛보다 빠른 치타</h3>
+                <p class="text__desc">치타는 너무 빨라서 자동차를 이겨요 그러니 치타하고 달리기 할 생각은 하면안되는게 좋아요</p>
+            </article>
+            <article class="text__card">
+                <a href="#" class="text__icon">
+                    <img src="img/tTicon_03.svg" alt="아이콘3">
+                </a>
+                <h3 class="text__tit">의자왕 사자</h3>
+                <p class="text__desc">사자는 여자친구가 많아서 부러워요 그냥 많이 부럽워서 저는 울지않아요 사자는 의자왕 이에요</p>
+            </article>
+            <article class="text__card">
+                <a href="#" class="text__icon">
+                    <img src="img/tTicon_04.svg" alt="아이콘4">
+                </a>
+                <h3 class="text__tit">귀여운 고양이</h3>
+                <p class="text__desc">고양이는 귀여우니 무슨짓을해도 귀여워요 그러니 고양이는 최강입니다. 이제 뭘쓸지 너무 힘드네요.</p>
+                <a href="#" class="test__more">더보기</a>
+            </article>
+    </section>
+
+</body>
+
+</html>

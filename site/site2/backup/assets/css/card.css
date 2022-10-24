@@ -1,0 +1,84 @@
+.card__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card__inner .card {
+    width: 24%;
+}
+
+.card__inner .card:first-child {
+    margin-bottom: 50px;
+}
+
+.card__inner .card img {
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.card__inner .card__body {
+    position: relative;
+}
+.card__inner .card .tit {
+    font-size: 28px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card__inner .card .desc {
+    font-size: 18px;
+    font-weight: 300;
+    color: #666;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.card__inner .card .more {
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 3%;
+    background-image: url(../img/arrow.svg);
+}
+@media (max-width: 1250px) {
+    .card__inner .card {
+        width: 48%;
+    }
+    .card__inner .card:nth-child(3n) {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 800px) {
+    .card__inner .card .tit {
+        font-size: 24px;
+    }
+    .card__inner .card .desc {
+        font-size: 16px;
+    }
+    .card__inner .card .more {
+        top: 1.5%;
+    }
+}
+@media (max-width: 500px) {
+    .card__inner {
+        justify-content: center;
+    }
+    .card__inner .card {
+        width: 80%;
+    }
+    .card__inner .card:first-child,
+    .card__inner .card {
+        margin-bottom: 20px;
+    }
+    .card__inner .card:last-child {
+        margin-bottom: 0;
+    }
+}

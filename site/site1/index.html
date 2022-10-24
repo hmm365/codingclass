@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>사이트 만들기1</title>
+        <!-- SEO -->
+        <meta name="author" content="이중호" />
+        <meta name="Description" content="사이트만들기 튜토리얼" />
+        <meta name="keywords" content="사이트, 만들기, 튜토리얼" />
+        <meta name="robots" content="all" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/css1/fonts.css" />
+        <link rel="stylesheet" href="assets/css1/reset.css" />
+        <link rel="stylesheet" href="assets/css1/common.css" />
+        <link rel="stylesheet" href="assets/css1/card.css" />
+        <link rel="stylesheet" href="assets/css1/banner.css" />
+        <link rel="stylesheet" href="assets/css1/image.css" />
+        <link rel="stylesheet" href="assets/css1/text.css" />
+        <link rel="stylesheet" href="assets/css1/header.css" />
+        <link rel="stylesheet" href="assets/css1/imgText.css" />
+        <link rel="stylesheet" href="assets/css1/footer.css" />
+        <link rel="stylesheet" href="assets/css1/slider.css" />
+    </head>
+
+    <body>
+        <div id="skip">
+            <a href="#headerType">헤더 영역 바로가기</a>
+            <a href="#sliderType">슬라이드 영역 바로가기</a>
+            <a href="#imgType">이미지 영역 바로가기</a>
+            <a href="#imgTextType">이미지/텍스트 영역 바로가기</a>
+            <a href="#cardType">카드 영역 바로가기</a>
+            <a href="#bannerType">배너 영역 바로가기</a>
+            <a href="#textType">텍스트 영역 바로가기</a>
+            <a href="#footerType">푸터 영역 바로가기</a>
+        </div>
+
+        <header id="headerType" class="header__wrap nexon">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <a href="#">Syumay <em>site</em></a>
+                </div>
+                <div class="dropdown">
+                    <input id="header__btn" type="checkbox" />
+                    <label for="header__btn" class="check__btn">
+                        <span class="ir">메뉴</span>
+                    </label>
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a href="#imgType">이미지 영역</a></li>
+                            <li><a href="#imgTextType">이미지 텍스트 영역</a></li>
+                            <li><a href="#cardType">카드 영역</a></li>
+                            <li><a href="#bannerType">배너 영역</a></li>
+                            <li><a href="#textType">텍스트 영역</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header_member">
+                    <a href="#">로그인</a>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <main id="main">
+            <section id="sliderType" class="slider__wrap">
+                <h2 class="blind">슬라이드영역</h2>
+                <div class="slider__inner">
+                    <div class="slider">
+                        <div class="slider__img">
+                            <div class="desc">
+                                <span>night skys</span>
+                                <h3>별빛 하늘</h3>
+                                <p>
+                                    밤의 별빛들을 보면 차분해 지는 느낌이 들어요.<br />
+                                    여러분의 밤하늘을 찍어주세요.
+                                </p>
+                                <div class="btn">
+                                    <a href="#">자세히 보기</a>
+                                    <a href="#" class="black">사이트 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__arrow">
+                            <a href="#" class="left"><span class="ir">이전 이미지</span></a>
+                            <a href="#" class="right"><span class="ir">다음 이미지</span></a>
+                        </div>
+                        <div class="slider__dot">
+                            <a href="#" class="dot active"><span class="ir">1</span></a>
+                            <a href="#" class="dot"><span class="ir">2</span></a>
+                            <a href="#" class="dot"><span class="ir">3</span></a>
+                            <a href="#" class="play"><span class="ir">플레이</span></a>
+                            <a href="#" class="stop"><span class="ir">정지</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- //slider -->
+
+            <section id="imgType" class="parallax img__wrap nexon section">
+                <h2>밤 풍경</h2>
+                <p>밤의 별빛들을 보면 차분해 지는 느낌이 들어요.</p>
+                <div class="image__inner container">
+                    <article class="image img1">
+                        <div class="image__box">
+                            <h3 class="image__tit">밤 하늘</h3>
+                            <p class="image__desc">아름다운 밤 풍경을 보며 차분한 차 한잔을 하는것도 좋을것 같습니다. 혹은 명상을 하는게 어떠신가요?</p>
+                            <a class="image__btn" href="/">자세히보기</a>
+                        </div>
+                    </article>
+                    <article class="image img2">
+                        <div class="image__box">
+                            <h3 class="image__tit">오로라</h3>
+                            <p class="image__desc">주로 지구의 북극권, 남극권 지역에서 관측할 수 있는 천문현상. 초고층 대기 중에 형형색색의 발광(發光)이 나타나며, 이 때문에 번역할 경우 '극광'이라고도 부릅니다.</p>
+                            <a class="image__btn brown" href="/">자세히보기</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- //image -->
+
+            <section id="imgTextType" class="parallax imgText__wrap nexon section">
+                <h2 class="blind">보름달</h2>
+                <div class="imgText__inner container">
+                    <div class="imgText__txt">
+                        <span>나만 보고싶은</span>
+                        <h3>밝디 밝고 밝은 보름달</h3>
+                        <p>달이 태양빛을 완전히 받아 앞면의 모든 모습이 드러나게 되는 현상입니다.</p>
+                        <ul>
+                            <li><a href="/">초승달</a></li>
+                            <li><a href="/">반달</a></li>
+                            <li><a href="/">상현망</a></li>
+                            <li><a href="/">보름달</a></li>
+                            <li><a href="/">하현망</a></li>
+                            <li><a href="/">그믐달</a></li>
+                        </ul>
+                    </div>
+                    <div class="imgText__img img1">
+                        <a href="/">보름달 사이트</a>
+                    </div>
+                    <div class="imgText__img img2">
+                        <a href="/" class="blue">초승달 사이트</a>
+                    </div>
+                </div>
+            </section>
+            <!-- //imgText -->
+
+            <section id="cardType" class="parallax card__wrap nexon section">
+                <h2>밤하늘 과 관련된 시</h2>
+                <p>밤하늘 또는 야천(夜天)은 밤에 보이는 하늘을 이르는 말입니다.</p>
+                <div class="card__inner container">
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="assets/img/card_bg01.jpg" alt="고양이 사진1" />
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="tit">저녁 에</h3>
+                            <p class="desc">
+                                저렇게 많은 별 중에서<br />
+                                별 하나가 나를 내려다본다<br />
+                                이렇게 많은 사람 중에서<br />
+                                그 별 하나를 쳐다본다
+                            </p>
+                            <a class="btn" href="/">
+                                더 자세히 보기
+                                <span aria-hidden="true">
+                                    <svg width="81" height="8" viewBox="0 0 81 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M80.3536 4.35355C80.5488 4.15829 80.5488 3.84171 80.3536 3.64645L77.1716 0.464466C76.9763 0.269204 76.6597 0.269204 76.4645 0.464466C76.2692 0.659728 76.2692 0.976311 76.4645 1.17157L79.2929 4L76.4645 6.82843C76.2692 7.02369 76.2692 7.34027 76.4645 7.53553C76.6597 7.7308 76.9763 7.7308 77.1716 7.53553L80.3536 4.35355ZM0 4.5H80V3.5H0V4.5Z"
+                                            fill="#B5B5B5"
+                                        />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="assets/img/card_bg02.jpg" alt="고양이 사진2" />
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="tit">어떤 마을</h3>
+                            <p class="desc">
+                                ​​저렇게 많은 중에서<br />
+                                별 하나가 나를 내려다본다.<br />
+                                이렇게 많은 사람 중에서<br />
+                                그 별 하나를 쳐다본다.<br />
+                                ​​밤이 깊을수록 별은<br />
+                                밝음 속에 사라지고<br />
+                                나는 어둠 속에 사라진다.<br />
+                                ​​이렇게 정다운<br />
+                                너 하나 나 하나는<br />
+                                어디서 무엇이 되어 다시 만나랴.
+                            </p>
+                            <a class="btn" href="/">
+                                더 자세히 보기
+                                <span aria-hidden="true">
+                                    <svg width="81" height="8" viewBox="0 0 81 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M80.3536 4.35355C80.5488 4.15829 80.5488 3.84171 80.3536 3.64645L77.1716 0.464466C76.9763 0.269204 76.6597 0.269204 76.4645 0.464466C76.2692 0.659728 76.2692 0.976311 76.4645 1.17157L79.2929 4L76.4645 6.82843C76.2692 7.02369 76.2692 7.34027 76.4645 7.53553C76.6597 7.7308 76.9763 7.7308 77.1716 7.53553L80.3536 4.35355ZM0 4.5H80V3.5H0V4.5Z"
+                                            fill="#B5B5B5"
+                                        />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="assets/img/card_bg03.jpg" alt="고양이 사진3" />
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="tit">별</h3>
+                            <p class="desc">
+                                어느날 거리엘 나갔다 비를 만나 지나치던 한 처마 아래 들어섰으려니 내 곁에도 역시 나와 한 가지로 멀구러미 하늘을 쳐다보고 비를 긋고 섰는 사나이가 있어, 그의 모습을 보아하니 문득 그 별이 생각났다. 밤마다 뜨락에 내려 우러러 보노라면 만천의 별들 가운데서도 가장 나의 별
+                                가차이 나도 모를, 항상 그늘 많은 별 하나-. 영원히 건널 수 없는 심연에 나누어져 말없이 서로 바라보고 지낼 수 밖에 없는 먼 먼 그 별, 그리고 나의 별!
+                            </p>
+                            <a class="btn" href="/">
+                                더 자세히 보기
+                                <span>
+                                    <svg width="81" height="8" viewBox="0 0 81 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M80.3536 4.35355C80.5488 4.15829 80.5488 3.84171 80.3536 3.64645L77.1716 0.464466C76.9763 0.269204 76.6597 0.269204 76.4645 0.464466C76.2692 0.659728 76.2692 0.976311 76.4645 1.17157L79.2929 4L76.4645 6.82843C76.2692 7.02369 76.2692 7.34027 76.4645 7.53553C76.6597 7.7308 76.9763 7.7308 77.1716 7.53553L80.3536 4.35355ZM0 4.5H80V3.5H0V4.5Z"
+                                            fill="B5B5B5"
+                                        />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- //card -->
+
+            <section id="bannerType" class="parallax banner__wrap nexon">
+                <h2 class="blind">은하수</h2>
+                <div class="banner__inner">
+                    <h3 class="title">은하수</h3>
+                    <p class="desc">
+                        지구(태양계)에서 관측하는 우리 은하의 단면의 모습이다.
+                        <a href="syumay.tistory.com" title="새로운페이지열림" target="_blank">syumay.tistory.com</a>
+                    </p>
+                    <span class="small">밤 하늘의 별</span>
+                </div>
+            </section>
+            <!-- //banner -->
+
+            <section id="textType" class="parallax text__wrap nexon section">
+                <span>한편의 시</span>
+                <h2 class="mb70">밤하늘과 별과 밤에 관한 시</h2>
+                <div class="text__inner container">
+                    <div class="text t1">
+                        <h3 class="text__title">새벽 지친 별</h3>
+                        <p class="text__desc">
+                            밤이면 고총 아래 고개 숙이고<br />
+                            낮이면 하늘 보고 웃음 좀 웃고<br />
+                            너른들 쓸쓸하여 외론 할미꽃<br />
+                            아무도 몰래 지는 새벽 지친 별
+                        </p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t2">
+                        <h3 class="text__title">유리창1</h3>
+                        <p class="text__desc">
+                            유리에 차고 슬픈 것이 어린거린다.<br />
+                            열없이 붙어 서서 입김을 흐리우니<br />
+                            길들은 양 언 날개를 파다거린다.
+                        </p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t3">
+                        <h3 class="text__title">별</h3>
+                        <p class="text__desc">
+                            즐거운 날 밤에는 한 개도 없더니<br />
+                            한 개도 없더니 마음 슬픈 밤에는 하늘 가득 별이다.<br />
+                            수만 개일까 수십만 갤까 울고 싶은 밤에는 가슴에도 별이다. 온 세상이 별이다.
+                        </p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t4">
+                        <h3 class="text__title">별 하나</h3>
+                        <p class="text__desc">
+                            별을 보았다.<br />
+                            깊은밤 혼자 바라보는 별 하나.<br />
+                            저 별은 하늘아이들이 사는집의 쬐그만 초인종. 문득 가득히 누르고 싶다.
+                        </p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t5">
+                        <h3 class="text__title">서시</h3>
+                        <p class="text__desc">
+                            죽는 날까지 하늘을 우러러 한 점 부끄럼이 없기를,<br />
+                            잎새에 이는 바람에도 나는 괴로워했다.<br />
+                            별을 노래하는 마음으로 모든 죽어가는 것을 사랑해야지 그리고 나한테 주어진 길을 걸어가야겠다.<br />
+                            오늘 밤에도 별이 바람에 스치운다.
+                        </p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t6">
+                        <h3 class="text__title">별 헤는 밤</h3>
+                        <p class="text__desc">
+                            별 하나에 추억과<br />
+                            별 하나에 사랑과<br />
+                            별 하나에 쓸쓸함과<br />
+                            별 하나에 동경과<br />
+                            별 하나에 시와<br />
+                            별 하나에 어머니, 어머니.
+                        </p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                </div>
+            </section>
+            <!-- //text -->
+        </main>
+        <!-- main -->
+
+        <footer id="footerType" class="footer__wrap nexon section">
+            <h2 class="blind">푸터 영역</h2>
+            <div class="footer__inner container">
+                <div class="footer__menu">
+                    <div>
+                        <h3>사이트</h3>
+                        <ul>
+                            <li><a href="/">웹표준 사이트</a></li>
+                            <li><a href="/">반응형 사이트</a></li>
+                            <li><a href="/">페럴럭스 사이트</a></li>
+                            <li><a href="/">포트폴리오 사이트</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>헤더 영역</h3>
+                        <ul>
+                            <li><a href="/">메뉴 유형01</a></li>
+                            <li><a href="/">메뉴 유형02</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>슬라이드 영역</h3>
+                        <ul>
+                            <li><a href="/">슬라이드 유형01</a></li>
+                            <li><a href="/">슬라이드 유형02</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>이미지 영역</h3>
+                        <ul>
+                            <li><a href="/">이미지 유형01</a></li>
+                            <li><a href="/">이미지 유형02</a></li>
+                            <li><a href="/">이미지/텍스트 유형01</a></li>
+                            <li><a href="/">이미지/텍스트 유형02</a></li>
+                            <li><a href="/">텍스트 유형01</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>컨텐츠 영역</h3>
+                        <ul>
+                            <li><a href="/">카드 유형01</a></li>
+                            <li><a href="/">카드 유형02</a></li>
+                            <li><a href="/">카드 유형03</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>푸터 영역</h3>
+                        <ul>
+                            <li><a href="/">푸터 메뉴 유형01</a></li>
+                            <li><a href="/">푸터 컨텍트 유형02</a></li>
+                            <li><a href="/">푸터 이메일 유형03</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__right">
+                2022 Syumay. Portfolio is Power<br />
+                All rights reserved.
+            </div>
+        </footer>
+        <!-- //footer -->
+        <script>
+            const parallax = document.querySelectorAll(".parallax");
+            window.addEventListener("scroll", () => {
+                let scrollTop = document.documentElement.scrollTop || window.pageYOffset || window.scrollY;
+
+                // nav
+                parallax.forEach((e, i) => {
+                    if (scrollTop >= document.getElementById(e.getAttribute("id")).offsetTop - 400) {
+                        document.querySelectorAll(".header__menu li").forEach((li) => {
+                            li.classList.remove("active");
+                        });
+                        document.querySelector(".header__menu li:nth-child(" + (i + 1) + ")").classList.add("active");
+                    }
+                });
+            });
+
+            // 스크롤 이동
+            document.querySelectorAll(".header__menu li a").forEach((li) => {
+                li.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    document.querySelector(li.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        </script>
+    </body>
+</html>

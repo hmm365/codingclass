@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gsap</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+
+<body>
+    <main id="main">
+        <div class="document">
+            <h3 class="t_tit2">class관련 메서드</h3>
+            <p class="t_desc">요소에 class 속성을 추가합니다.
+            </p>
+            <table class="t_table">
+                <colgroup>
+                    <col style="width: 30%">
+                    <col style="width: 70%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>실행 분류</th>
+                        <th>형식</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">추가</td>
+                        <td>$("div").addClass(클래스명);</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">콜백 함수</td>
+                        <td>$("div").addClass(function)index, className){<br>
+                            //index는 각 div 요소의 0, 1, 2 //className은 각 div의<br>
+                            class 속성 return class 속성 // 각 div에 class 속성을 추가합니다.)}<Br>
+                            ..... &lt;div&gt;내용1&lt;/div&gt;<br>
+                            &lt;div&gt;내용2&lt;/div&gt; &lt;div&gt;내용3&lt;/div&gt;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="t_tit2">예시</h3>
+            <div class="t_iframe">
+                <iframe height="450" style="width: 100%;" scrolling="no" title="jquery13"
+                    src="https://codepen.io/hmm365/embed/QWrwKoy?default-tab=js%2Cresult&theme-id=dark" frameborder="no"
+                    loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/hmm365/pen/QWrwKoy">
+                        jquery13</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+            </div>
+            <hr>
+            <h3 class="t_tit2">removeclass()관련 메서드</h3>
+            <p class="t_desc">요소에 class 속성을 제거합니다.</p>
+            <table class="t_table">
+                <colgroup>
+                    <col style="width: 30%">
+                    <col style="width: 70%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>실행 분류</th>
+                        <th>형식</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">추가</td>
+                        <td>$("div").removeClass(클래스명);</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">콜백 함수</td>
+                        <td>$("div").removeClass(function)index, className){<br>
+                            //index는 각 div 요소의 0, 1, 2 //className은 각 div의 class 속성 <br>
+                            m1, m2, m3 return class 속성 // 각 div에 class 속성을 제거합니다. )}<br>
+                            &lt;div class="m1&gt;내용1&lt;/div&gt;<br>
+                            &lt;div class="m2&gt;내용2&lt;/div&gt;<br>
+                            &lt;div class="m3&gt;내용3&lt;/div&gt;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="t_tit2">예시</h3>
+            <div class="t_iframe">
+                <iframe height="450" style="width: 100%;" scrolling="no" title="Untitled"
+                    src="https://codepen.io/hmm365/embed/NWMPRQG?default-tab=js%2Cresult&theme-id=dark" frameborder="no"
+                    loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/hmm365/pen/NWMPRQG">
+                        Untitled</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+            </div>
+            <hr>
+            <h3 class="t_tit2">hasclass()관련 메서드</h3>
+            <p class="t_desc">if문의 조건식으로 사용됩니다. 선택한 요소 클래스가 있으면 true, 없으면 false를 반환합니다.</p>
+            <h3 class="t_tit2">예시</h3>
+            <div class="t_iframe">
+                <iframe height="450" style="width: 100%;" scrolling="no" title="jquery16" src="https://codepen.io/hmm365/embed/dyePOPQ?default-tab=js%2Cresult&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/hmm365/pen/dyePOPQ">
+                    jquery16</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

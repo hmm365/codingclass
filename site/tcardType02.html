@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드타입</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+<body>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">사이트 유형 | 카드유형2</h2>
+            <p class="t_desc2">
+                모바일 사용자가 폭발적으로 증가하면서 반응형 디자인이 어쩌면 필수적으로 적용되고 있는 지금,<br>
+                카드형 디자인은 웹과 모바일 모두 화면크기에 맞게 최적화되는 모듈식 UI패턴입니다.<br>
+                ir은 img태그의 alt를 대신하여 백그라운드 이미지 사용하기위해씁니다.
+            </p>
+            <div class="t_iframe" style="min-height: 450px;">
+                <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FnC55COSY17n7hkrGFcVc4I%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D72%253A17" allowfullscreen></iframe>
+            </div>
+            
+            <hr>
+
+            <h3 class="t_tit2">1.HTML 코드</h3>
+            <div class="t_code">
+                <div class="t_result">
+                    <details>
+                        <summary>코드 보기</summary>
+<pre><code class="language-html">&lt;section id="cardType" class="card__wrap gmarket section gray"&gt;
+    &lt;h2&gt;강아지 사진&lt;/h2&gt;
+    &lt;p&gt;여러분은 귀여운 강아지 사진을 보실수 있는 기회가 생겼습니다.&lt;br&gt;
+        엄청 귀여운 강아지를 보실수 있어서 기분이 좋을거에요!🐶&lt;/p&gt;
+    &lt;div class="card__inner container"&gt;
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/card_bg02_01.jpg" alt="강아지 사진1"&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;달리는 강아지&lt;/h3&gt;
+                &lt;p class="desc"&gt;강아지는 너무귀엽습니다 그렇기 저는 강아지가 너무좋아서 강아지 사진을 가지고왔습니다. 엄청 귀엽지않나요? 많이 보세요!!&lt;/p&gt;
+                &lt;a href="#" class="more"&gt;
+                    &lt;span class="ir"&gt;더보기&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/card_bg02_02.jpg" alt="강아지 사진1"&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;달리는 강아지&lt;/h3&gt;
+                &lt;p class="desc"&gt;강아지는 너무귀엽습니다 그렇기 저는 강아지가 너무좋아서 강아지 사진을 가지고왔습니다. 엄청 귀엽지않나요? 많이 보세요!!&lt;/p&gt;
+                &lt;a href="#" class="more"&gt;
+                    &lt;span class="ir"&gt;더보기&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/card_bg02_03.jpg" alt="강아지 사진1"&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;달리는 강아지&lt;/h3&gt;
+                &lt;p class="desc"&gt;강아지는 너무귀엽습니다 그렇기 저는 강아지가 너무좋아서 강아지 사진을 가지고왔습니다. 엄청 귀엽지않나요? 많이 보세요!!&lt;/p&gt;
+                &lt;a href="#" class="more"&gt;
+                    &lt;span class="ir"&gt;더보기&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/card_bg02_04.jpg" alt="강아지 사진1"&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;달리는 강아지&lt;/h3&gt;
+                &lt;p class="desc"&gt;강아지는 너무귀엽습니다 그렇기 저는 강아지가 너무좋아서 강아지 사진을 가지고왔습니다. 엄청 귀엽지않나요? 많이 보세요!!&lt;/p&gt;
+                &lt;a href="#" class="more"&gt;
+                    &lt;span class="ir"&gt;더보기&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/card_bg02_05.jpg" alt="강아지 사진1"&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;달리는 강아지&lt;/h3&gt;
+                &lt;p class="desc"&gt;강아지는 너무귀엽습니다 그렇기 저는 강아지가 너무좋아서 강아지 사진을 가지고왔습니다. 엄청 귀엽지않나요? 많이 보세요!!&lt;/p&gt;
+                &lt;a href="#" class="more"&gt;
+                    &lt;span class="ir"&gt;더보기&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/card_bg02_06.jpg" alt="강아지 사진1"&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;달리는 강아지&lt;/h3&gt;
+                &lt;p class="desc"&gt;강아지는 너무귀엽습니다 그렇기 저는 강아지가 너무좋아서 강아지 사진을 가지고왔습니다. 엄청 귀엽지않나요? 많이 보세요!!&lt;/p&gt;
+                &lt;a href="#" class="more"&gt;
+                    &lt;span class="ir"&gt;더보기&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/card_bg02_07.jpg" alt="강아지 사진1"&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;달리는 강아지&lt;/h3&gt;
+                &lt;p class="desc"&gt;강아지는 너무귀엽습니다 그렇기 저는 강아지가 너무좋아서 강아지 사진을 가지고왔습니다. 엄청 귀엽지않나요? 많이 보세요!!&lt;/p&gt;
+                &lt;a href="#" class="more"&gt;
+                    &lt;span class="ir"&gt;더보기&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/card_bg02_08.jpg" alt="강아지 사진1"&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;달리는 강아지&lt;/h3&gt;
+                &lt;p class="desc"&gt;강아지는 너무귀엽습니다 그렇기 저는 강아지가 너무좋아서 강아지 사진을 가지고왔습니다. 엄청 귀엽지않나요? 많이 보세요!!&lt;/p&gt;
+                &lt;a href="#" class="more"&gt;
+                    &lt;span class="ir"&gt;더보기&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+                    </details>
+                </div>
+            </div>
+
+            <hr>
+
+            <h3 class="t_tit2">2.CSS 코드</h3>
+            <div class="t_code">    
+                <div class="t_result">
+                    <details open>
+                        <summary>코드 보기</summary>
+<pre><code class="language-css">/* fonts */
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+.gmarket {
+    font-family: 'GmarketSans';
+    font-weight: 400;
+}
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+h1,
+h2,
+h3,
+h4,
+h5 h6 {
+    font-weight: normal;
+}
+/* Common */
+.container {
+    width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.section {
+    padding: 120px 0;
+}
+.section&gt;h2 {
+    font-size: 50px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section&gt;p {
+    font-size: 22px;
+    line-height: 1.4;
+    text-align: center;
+    font-weight: 300;
+    color: #666;
+    margin-bottom: 70px;
+}
+.gray {
+    background-color: #f5f5f5;
+}
+/* ir 효과(이미지 대체효과) */
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    /* text-indent: -99999px; */
+    top: -1000em;
+    left: 0;
+}
+/* cardType */
+.card__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card__inner .card {
+    width: 24%;
+    position: relative;
+}
+.card__inner .card:first-child {
+    margin-bottom: 50px;
+}
+.card__inner .card img {
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.card__inner .card .tit {
+    font-size: 28px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.card__inner .card .desc {
+    font-size: 18px;
+    font-weight: 300;
+    color: #666;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+.card__inner .card .more {
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 231px;
+    background-image: url(img/arrow.svg);
+}
+</code></pre>
+                    </details>
+                </div>
+            </div>
+
+            <hr>
+
+            <h3 class="t_tit2">완성본</h3>
+            <div class="t_iframe" style="min-height: 820px;">
+                <iframe src="https://hmm365.github.io/coding2/site/cardType/cardType02.html" allowfullscreen></iframe>
+            </div>
+            <div class="t_link">
+                <a href="https://hmm365.github.io/coding2/site/cardType/cardType02.html">원본 사이트 보기</a>
+                <a href="https://github.com/hmm365/coding2/blob/main/site/cardType/cardType02.html">원본 소스 보기</a>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+    <script>
+
+    </script>
+</body>
+</html>
+  

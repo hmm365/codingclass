@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css애니</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+<body>
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit2">애니메이션2</h2>
+            <p class="t_desc2">
+                원 두개가 회전하는 애니메이션을 구현했습니다.
+            </p>
+
+            <hr>
+            <h3 class="t_tit2">HTML코드</h3>
+            <div class="t_code">
+<pre><code class="language-html">&lt;div class="loading"&gt;
+  &lt;span class="circle1"&gt;&lt;/span&gt;
+  &lt;span class="circle2"&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <hr>
+            <h3 class="t_tit2">css코드</h3>
+            <div class="t_code">
+<pre><code class="language-css">body {
+  overflow: hidden;
+  height: 100vh;
+  background-image: linear-gradient(-60deg, #FF5858 0%, #f09880 100%);
+}
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 150px;
+  animation: load 1s ease 100;
+}
+.loading .circle1 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+}
+.loading .circle2 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  margin-top: 110px;
+}
+@keyframes load {
+  0% {transform: translate(-50%, -50%) rotate(0deg)}
+  100% {transform: translate(-50%, -50%) rotate(360deg)}
+}
+</code></pre>
+            </div>
+
+            <div class="t_iframe">
+              <iframe height="300" title="cssani2" src="https://codepen.io/hmm365/embed/poLXqze?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/hmm365/pen/poLXqze">
+                cssani2</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+              </iframe>
+            </div>
+
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+</body>
+</html>

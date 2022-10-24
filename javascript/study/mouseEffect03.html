@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바스크립트 이펙트</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">마우스 이펙트3</h2>
+                <p class="t_desc2">이번 마우스이펙트는 마우스가 움직일때 원본 이미지가 보인는것입니다. background-attachment: fixed; 로 고정을 시킨후 e.pageX - circle.width / 2, 으로 동그란 원이 가운데로 가게했습니다.</p>
+                <h2 class="t_tit2">JS 설명</h2>
+                <p class="t_desc2">gsap를 써서 마우스커서가 움직이게 작동했습니다.</p>
+                <div class="t_code">
+                    <div class="t_result">
+                        <details>
+                            <summary>코드 보기</summary>
+                            <pre><code class="language-js">window.addEventListener("mousemove", (e) => {
+    gsap.to(cursor, {
+        duration: 0.6,
+        left: e.pageX - circle.width / 2,
+        top: e.pageY - circle.height / 2,
+    });
+});
+</code></pre>
+                        </details>
+                    </div>
+                </div>
+                <div class="t_iframe" style="min-height: 450px">
+                    <iframe src="https://hmm365.github.io/coding2/javascript/effect/mouseEffect03.html"></iframe>
+                </div>
+                <div class="t_link">
+                    <a href="https://github.com/hmm365/coding2/blob/main/javascript/effect/mouseEffect03.html">원본 소스 보기</a>
+                    <a href="https://hmm365.github.io/coding2/javascript/effect/mouseEffect03.html">원본 사이트 보기</a>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script></script>
+    </body>
+</html>

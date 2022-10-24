@@ -1,0 +1,612 @@
+/* 웹폰트 */
+@import url("https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css");
+
+/* 리셋 */
+/* 여백 초기화 */
+* {
+    font-family: "NexonLv1Gothic";
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 링크 초기화 */
+a {
+    text-decoration: none;
+    color: #9d9d9d;
+}
+
+/* 목록 초기화 */
+li {
+    list-style: none;
+}
+/* 제목 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: normal;
+}
+/* 모든 페이지 레이아웃 */
+body {
+    padding: 40px;
+    background: #030a1a;
+}
+#header {
+    border-bottom: 1px dashed #666;
+    padding-bottom: 40px;
+}
+
+#main {
+    border-bottom: 1px dashed #666;
+    padding: 40px 0;
+}
+
+#footer {
+    border-bottom: 1px dashed #666;
+    padding: 40px 0;
+    text-align: center;
+}
+#footer a:hover {
+    text-decoration: underline;
+}
+
+/* header 영역 */
+
+#header {
+    text-align: center;
+}
+#header h1 {
+    font-size: 100px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#header h1 a {
+    font-size: 70px;
+    color: #9d9d9d;
+}
+
+.header_nav ul li {
+    display: inline;
+}
+
+.header_nav ul li.active a {
+    background-color: #5553b6;
+    color: #9d9d9d;
+}
+.header_nav ul li a {
+    display: inline-block;
+    border: 1px solid #5553b6;
+    padding: 8px 25px;
+    margin-bottom: 7px;
+    border-radius: 20px;
+}
+.header_nav ul.effect li a {
+    margin-top: 10px;
+    border-radius: 0;
+}
+.header_nav ul li a:hover {
+    background-color: #5553b6;
+    color: #9d9d9d;
+}
+.header_nav .study {
+    margin-top: 10px;
+}
+.header_nav .study li a {
+    border-radius: 50px;
+    padding: 6px 30px;
+    background-color: #5553b6;
+    color: #9d9d9d;
+}
+.header_nav .study li a:hover {
+    background-color: #5553b6;
+    color: #9d9d9d;
+}
+.header_nav .effect ul {
+    margin-top: 10px;
+}
+.header_nav .effect li a {
+    border-radius: 40px;
+}
+
+/* intro_menu */
+.intro_menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* transform: translate(50%, 0); */
+    backdrop-filter: blur(10px);
+    background-color: rgba(42, 55, 88, 0.3);
+    padding: 3vw;
+    border-radius: 1vw;
+    font-size: 1vw;
+    text-align: center;
+}
+.intro_menu h2 {
+    font-size: 24px;
+}
+.intro_menu li {
+    font-size: 20px;
+    color: #9d9d9d;
+}
+.intro_menu li a {
+    color: #be5ca9;
+    font-size: 20px;
+}
+
+.intro_menu li a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+    .intro_menu {
+        width: 90%;
+        padding: 14px;
+    }
+    .intro_menu li {
+        font-size: 16px;
+    }
+    .intro_menu li a {
+        font-size: 16px;
+    }
+}
+
+/* main sample 영역 */
+.main_sample {
+    margin-top: 40px;
+    border-top: 1px dashed #666;
+    padding-top: 40px;
+}
+
+.main_sample h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #9d9d9d;
+}
+.main_sample p {
+    margin-bottom: 10px;
+    color: #757575;
+}
+
+.main_sample .result {
+    margin-bottom: 80px;
+    background-color: #2a3758;
+    padding: 10px;
+    border-radius: 5px;
+    color: #be5ca9;
+}
+
+/* sample */
+.sample {
+    margin-bottom: 80px;
+}
+.sample .table table {
+    margin-bottom: 10px;
+}
+.sample .table table {
+    width: 100%;
+    border: 1px solid #2a3758;
+    color: #9d9d9d;
+}
+.sample .table table tr th {
+    font-weight: normal;
+    background-color: #2a3758;
+    padding: 3px;
+}
+.sample .table table tr td {
+    border: 1px solid #2a3758;
+    text-align: center;
+    padding: 6px;
+}
+.sample .table.table_left table tr td {
+    text-align: left;
+}
+.sample .table.table_left .ce {
+    text-align: center;
+}
+.sample .table table tr td[Class*="_P"] {
+    /*속성 선택자*/
+    color: #030a1a;
+}
+.sample .table table tr td[Class*="_P"]:hover {
+    /*속성 선택자*/
+    color: #fff;
+    cursor: help;
+}
+.sample .box {
+    background-color: #2a3758;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #757575;
+}
+.sample .blue {
+    background-color: #102149;
+    padding: 10px 20px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 0;
+}
+.sample .view {
+    border: 1px solid #2a3758;
+    padding: 30px 20px 20px 20px;
+    background-color: #2a3758;
+}
+
+.sample .sbox {
+    width: 400px;
+    height: 200px;
+    background-color: #102149;
+    border: 1px solid #2a3758;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    text-align: center;
+    color: #9d9d9d;
+}
+.sample .sbox::after {
+    content: "";
+    width: 480px;
+    height: 280px;
+    border: 1px dashed #2a3758;
+    position: absolute;
+    left: -21px;
+    top: -21px;
+}
+.sample .sbox::before {
+    content: "";
+    width: 398px;
+    height: 198px;
+    border: 1px dashed #2a3758;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.sample .sResult {
+    text-align: center;
+    padding-top: 10px;
+}
+.sample .button {
+    border: 1px solid #2a3758;
+    border-top: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.sample .button a {
+    border: 1px solid #2a3758;
+    color: #9d9d9d;
+    border-radius: 40px;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 5px;
+}
+/* container */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.main_menu {
+    margin-top: 50px;
+}
+@media (max-width: 800px) {
+    .sample .table {
+        overflow-x: auto;
+    }
+    .sample .t_box table {
+        width: 780px;
+    }
+    .sample .table table tr td[Class*="_P"] {
+        /*속성 선택자*/
+        color: #000;
+    }
+}
+/* Tistroy 용 문서 */
+
+.document i {
+    position: relative;
+    font-style: normal;
+}
+.document hr {
+    border: 0;
+    border-top: 1px dashed #666;
+    margin-top: 45px;
+}
+.document i::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 10px;
+    left: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background-color: #0242f136;
+}
+.document .t_tit {
+    font-size: 30px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+    font-weight: 400;
+    color: #9d9d9d;
+}
+.document .t_tit2 {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    color: #9d9d9d;
+}
+.document .t_tit3 {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    color: #9d9d9d;
+}
+.document .t_desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #757575;
+    margin-bottom: 10px !important;
+}
+.document .t_desc2 {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #757575;
+    margin-bottom: 10px !important;
+    padding: 15px 20px !important;
+    border-left: 4px solid #0243f1;
+    background-color: #2a3758;
+}
+.document .t_box {
+    padding: 20px !important;
+    background-color: #2a3758;
+    margin-bottom: 10px;
+    color: #757575;
+    border-radius: 5px;
+}
+.document .t_table {
+    border: 1px solid #2a3758;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+.document .t_table tr th {
+    background-color: #2a3758;
+}
+.document .t_table tr th,
+.document .t_table tr td {
+    border: 1px solid #666;
+    font-weight: normal;
+    padding: 8px 10px;
+    color: #757575;
+}
+.document .t_table .ce {
+    text-align: center;
+}
+.document .t_table tr td[Class*="_P"] {
+    /*속성 선택자*/
+    color: #757575;
+}
+.document .t_table tr td[Class*="_P"]:hover {
+    /*속성 선택자*/
+    color: #030a1a;
+    cursor: help;
+}
+
+.document .t_result {
+    margin-bottom: 40px;
+}
+
+.document .t_iframe {
+    position: relative;
+    padding-top: 56%;
+    width: 100%;
+    height: 0;
+}
+
+.document .t_iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.document .t_link a {
+    display: block;
+    width: 200px;
+    background: #2a3758;
+    margin: 40px auto;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s;
+}
+.document .t_link a:hover {
+    background-color: #102149;
+}
+
+.document .t_blue {
+    background-color: #102149;
+    padding: 10px 20px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 0;
+}
+.document .t_view {
+    border: 1px solid #2a3758;
+    padding: 30px 20px 20px 20px;
+    background-color: #2a3758;
+}
+
+.document .t_sbox {
+    width: 400px;
+    height: 200px;
+    background-color: #102149;
+    border: 1px solid #2a3758;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    text-align: center;
+    color: #9d9d9d;
+}
+.document .t_sbox::after {
+    content: "";
+    width: 480px;
+    height: 280px;
+    border: 1px dashed #102149;
+    position: absolute;
+    left: -21px;
+    top: -21px;
+}
+.document .t_sbox::before {
+    content: "";
+    width: 398px;
+    height: 198px;
+    border: 1px dashed #2a3758;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.document .t_sResult {
+    text-align: center;
+    padding-top: 10px;
+}
+.document .t_button {
+    border: 1px solid #2a3758;
+    border-top: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.document .t_button a {
+    border: 1px solid #2a3758;
+    color: #9d9d9d;
+    border-radius: 40px;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 5px;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    body {
+        padding: 20px;
+    }
+}
+
+/* pre */
+.t_code pre code.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 20px;
+    font-family: "NexonLv1Gothic";
+    line-height: 1.6;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.t_code code.hljs {
+    padding: 3px 5px;
+}
+.t_code .hljs {
+    color: #e9e9f4;
+    background: #282936;
+}
+.t_code .hljs ::selection,
+.t_code .hljs::selection {
+    background-color: #4d4f68;
+    color: #e9e9f4;
+}
+.t_code .hljs-comment {
+    color: #626483;
+}
+.t_code .hljs-tag {
+    color: #62d6e8;
+}
+.t_code .hljs-operator,
+.t_code .hljs-punctuation,
+.t_code .hljs-subst {
+    color: #e9e9f4;
+}
+.t_code .hljs-operator {
+    opacity: 0.7;
+}
+.t_code .hljs-bullet,
+.t_code .hljs-deletion,
+.t_code .hljs-name,
+.t_code .hljs-selector-tag,
+.t_code .hljs-template-variable,
+.t_code .hljs-variable {
+    color: #ea51b2;
+}
+.t_code .hljs-attr,
+.t_code .hljs-link,
+.t_code .hljs-literal,
+.t_code .hljs-number,
+.t_code .hljs-symbol,
+.t_code .hljs-variable.constant_ {
+    color: #b45bcf;
+}
+.t_code .hljs-class .hljs-title,
+.t_code .hljs-title,
+.t_code .hljs-title.class_ {
+    color: #00f769;
+}
+.t_code .hljs-strong {
+    font-weight: 700;
+    color: #00f769;
+}
+.t_code .hljs-addition,
+.t_code .hljs-code,
+.t_code .hljs-string,
+.t_code .hljs-title.class_.inherited__ {
+    color: #ebff87;
+}
+.t_code .hljs-built_in,
+.t_code .hljs-doctag,
+.t_code .hljs-keyword.hljs-atrule,
+.t_code .hljs-quote,
+.t_code .hljs-regexp {
+    color: #a1efe4;
+}
+.t_code .hljs-attribute,
+.t_code .hljs-function .hljs-title,
+.t_code .hljs-section,
+.t_code .hljs-title.function_,
+.t_code .ruby .hljs-property {
+    color: #62d6e8;
+}
+.t_code .diff .hljs-meta,
+.t_code .hljs-keyword,
+.t_code .hljs-template-tag,
+.t_code .hljs-type {
+    color: #b45bcf;
+}
+.t_code .hljs-emphasis {
+    color: #b45bcf;
+    font-style: italic;
+}
+.t_code .hljs-meta,
+.t_code .hljs-meta .hljs-keyword,
+.t_code .hljs-meta .hljs-string {
+    color: #00f769;
+}
+.t_code .hljs-meta .hljs-keyword,
+.t_code .hljs-meta-keyword {
+    font-weight: 700;
+}

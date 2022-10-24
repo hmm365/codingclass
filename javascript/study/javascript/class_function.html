@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>spread operator</title>
+        <link rel="stylesheet" href="../../assets/css/style.css" />
+        <link rel="stylesheet" href="../../assets/css/dracula.css" />
+        <script src="../../assets/js/highlight.min.js"></script>
+    </head>
+
+    <body>
+        <!-- //header -->
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">클래스</h2>
+                <p class="t_desc2">
+                    클래스는 객체 지향 프로그래밍에서 특정 객체를 생성하기 위해 변수와 메소드를 정의하는 일종의 틀로,<br />
+                    객체를 정의하기 위한 상태(멤버 변수)와 메서드(함수)로 구성됩니다.
+                </p>
+                <hr />
+                <h2 class="t_tit2">기본문법</h2>
+                <p class="t_box">
+                    class MyClass {<br />
+                    // 여러 메서드를 정의할 수 있음<br />
+                    constructor() { ... }<br />
+                    method1() { ... }<br />
+                    method2() { ... }<br />
+                    method3() { ... }<br />
+                    ...<br />
+                    }
+                </p>
+                <h3 class="t_tit2">클래스 사용 예제</h3>
+                <div class="t_code">
+                    <pre><code class="language-js">class study {
+    constructor(num, name, job) {
+        this.num = num;
+        this.name = name;
+        this.job = job;
+    }
+    result() {
+        console.log(this.num + "이름 : " + this.name + "직업 : " + this.numjob);
+    }
+}
+const info1 = new study("1", "중호", "개발자");
+const info2 = new study("2", "호중", "퍼블리셔");
+info1.result();
+info2.result();
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result01"></div>
+                        </details>
+                    </div>
+                </div>
+
+                <h2 class="t_tit2">클래스 상속</h2>
+                <p class="t_desc2">
+                    클래스 상속을 사용하면 클래스를 다른 클래스로 확장할 수 있습니다.<br />
+                    기존에 존재하던 기능을 토대로 새로운 기능을 만들 수 있죠.<br />
+                    extends 키워드 는 기존 부모의 클래스를 상속받는 키워드이며,<br />
+                    super 키워드는 이럴때 사용합니다.<br />
+                    super.method(...)는 부모 클래스에 정의된 메서드, method를 호출합니다.<br />
+                    super(...)는 부모 생성자를 호출하는데, 자식 생성자 내부에서만 사용 할 수 있습니다.
+                </p>
+                <!-- //result01 -->
+                <h3 class="t_tit2">클래스 상속 사용 예제</h3>
+                <div class="t_code">
+                    <pre><code class="language-js">class study {
+    constructor(num, name, job) {
+        this.num = num;
+        this.name = name;
+        this.job = job;
+    }
+    result() {
+        console.log(this.num + " 이름 : " + this.name + " 직업 : " + this.job + "<br>");
+    }
+}
+class study2 extends study {
+    constructor(num, name, job, age) {
+        super(num, name, job, age);
+        this.age = age;
+    }
+    result2() {
+        console.log(this.num + " 이름 : " + this.name + " 직업 : " + this.job + " 나이 : " + this.age + "<br>");
+    }
+}
+const info1 = new study("1", "중호", "개발자");
+const info2 = new study2("2", "호중", "퍼블리셔", "26");
+info1.result();
+info2.result();
+info2.result2();
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result02"></div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //result02 -->
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+
+        <script>
+            //29 클래스 함수
+            {
+                let result = document.querySelector(".result01");
+                class study {
+                    constructor(num, name, job) {
+                        this.num = num;
+                        this.name = name;
+                        this.job = job;
+                    }
+                    result() {
+                        result.innerHTML += this.num + " 이름 : " + this.name + " 직업 : " + this.job + "<br>";
+                    }
+                }
+                const info1 = new study("1", "중호", "개발자");
+                const info2 = new study("2", "호중", "퍼블리셔");
+                info1.result();
+                info2.result();
+            }
+            //30 클래스 상속
+            {
+                let result = document.querySelector(".result02");
+                class study {
+                    constructor(num, name, job) {
+                        this.num = num;
+                        this.name = name;
+                        this.job = job;
+                    }
+                    result() {
+                        result.innerHTML += this.num + " 이름 : " + this.name + " 직업 : " + this.job + "<br>";
+                    }
+                }
+                class study2 extends study {
+                    constructor(num, name, job, age) {
+                        super(num, name, job, age);
+                        this.age = age;
+                    }
+                    result2() {
+                        result.innerHTML += this.num + " 이름 : " + this.name + " 직업 : " + this.job + " 나이 : " + this.age + "<br>";
+                    }
+                }
+                const info1 = new study("1", "중호", "개발자");
+                const info2 = new study2("2", "호중", "퍼블리셔", "26");
+                info1.result();
+                info2.result();
+                info2.result2();
+            }
+        </script>
+    </body>
+</html>

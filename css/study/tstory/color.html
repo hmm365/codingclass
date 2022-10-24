@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>join() | pop() | push</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+
+<body>
+
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">색상 표현 방법</h2>
+            <p class="t_desc2">
+                CSS에서 색을 표현하는 방법에는 다음과 같이 세 가지 방법이 있습니다.</p>
+
+            <p class="t_box">
+                1. 색상 이름으로 표현<br>
+
+                2. RGB 색상값으로 표현 <br>
+
+                3. 16진수 색상값으로 표현<br>
+            </p>
+
+            <hr>
+
+            <h2 class="t_tit2">색상 이름으로 표현</h2>
+            <p class="t_desc2">
+                색상 이름으로 표현이 가능하다.
+                W3C에서 정의한 16개의 HTML4 표준 색상 이름은 다음과 같습니다.</p>
+            <table class="t_table">
+                <thead>
+                </thead><tbody>
+                    <tr>
+                        <td>aqua</td>
+                        <td>black</td>
+                        <td>blue</td>
+                        <td>fuchsia</td>
+                    </tr>
+                    <tr>
+                        <td>gray</td>
+                        <td>green</td>
+                        <td>lime</td>
+                        <td>maroon</td>
+                    </tr>
+                    <tr>
+                        <td>navy</td>
+                        <td>olive</td>
+                        <td>purple</td>
+                        <td>red</td>
+                    </tr>
+                    <tr>
+                        <td>silver</td>
+                        <td>teal</td>
+                        <td>white</td>
+                        <td>yellow</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+
+            <h2 class="t_tit2">RGB 색상값으로 표현</h2>
+            <p class="t_desc2">
+                모니터나 스크린은 빨간색(Red), 녹색(Green), 파란색(Blue)을 혼합하여 색을 표현합니다.
+                따라서 HTML에서도 이 세 가지 색을 가지고 색을 표현하는 RGB 색상을 사용합니다.
+
+                RGB 색상의 기본색(Red, Green, Blue)은 각각 0부터 255까지의 범위를 가집니다.
+</p>
+<div class="t_code">
+<pre><code class="language-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-class">.blue</span> { <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">255</span>); }
+    <span class="hljs-selector-class">.green</span> { <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">0</span>,<span class="hljs-number">128</span>,<span class="hljs-number">0</span>); }
+    <span class="hljs-selector-class">.silver</span> { <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">192</span>,<span class="hljs-number">192</span>,<span class="hljs-number">192</span>); }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+</div>
+
+
+
+        <h2 class="t_tit2">16진수 색상값으로 표현</h2>
+        <p class="t_desc2">
+            16진수 색상값은 RGB 색상값을 각각 16진수로 변환한 것입니다. 
+            따라서 RGB 색상의 기본색(Red, Green, Blue)은 각각 00부터 FF까지의 범위를 가집니다.
+            예를 들면, 녹색을 나타내는 RGB 색상값 rgb(0,255,0)은 16진수 색상값으로는 #00FF00이 됩니다.
+        </p>
+<div class="t_code">
+<pre><code class="language-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-class">.blue</span> { <span class="hljs-attribute">color</span>: <span class="hljs-number">#0000FF</span>; }
+    <span class="hljs-selector-class">.green</span> { <span class="hljs-attribute">color</span>: <span class="hljs-number">#008000</span>; }
+    <span class="hljs-selector-class">.silver</span> { <span class="hljs-attribute">color</span>: <span class="hljs-number">#C0C0C0</span>; }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+</div>
+
+
+    <h2 class="t_tit2">RGB 색상값으로 표현</h2>
+    <p class="t_desc2">
+        모니터나 스크린은 빨간색(Red), 녹색(Green), 파란색(Blue)을 혼합하여 색을 표현합니다.
+        따라서 HTML에서도 이 세 가지 색을 가지고 색을 표현하는 RGB 색상을 사용합니다.
+
+        RGB 색상의 기본색(Red, Green, Blue)은 각각 0부터 255까지의 범위를 가집니다.
+</p>
+<div class="t_code">
+<pre><code class="language-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-class">.blue</span> { <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">255</span>); }
+    <span class="hljs-selector-class">.green</span> { <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">0</span>,<span class="hljs-number">128</span>,<span class="hljs-number">0</span>); }
+    <span class="hljs-selector-class">.silver</span> { <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">192</span>,<span class="hljs-number">192</span>,<span class="hljs-number">192</span>); }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+</div>
+
+
+
+<h2 class="t_tit2">RGBA 색상값으로 표현</h2>
+<p class="t_desc2">
+    RGBA 색상값은 RGB 색상값에 알파 채널 값을 더한 색상값입니다.
+
+    알파 채널(alpha channel)이란 색상의 투명도를 나타내는 채널입니다. 
+    알파 채널 값은 완전한 투명 상태인 0.0부터 투명도가 전혀 없는 1.0 사이의 값을 가집니다.
+</p>
+<div class="t_code">
+<pre><code class="language-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-id">#header_01</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>,<span class="hljs-number">255</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);}
+    <span class="hljs-selector-id">#header_02</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>,<span class="hljs-number">255</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.2</span>);}
+    <span class="hljs-selector-id">#header_03</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>,<span class="hljs-number">255</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.4</span>);}
+    <span class="hljs-selector-id">#header_04</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>,<span class="hljs-number">255</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.6</span>);}
+    <span class="hljs-selector-id">#header_05</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>,<span class="hljs-number">255</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.8</span>);}
+    <span class="hljs-selector-id">#header_06</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>,<span class="hljs-number">255</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>);}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+</div>
+
+
+<h2 class="t_tit2">HSL 색상값으로 표현</h2>
+<p class="t_desc2">
+    HSL 색상값은 빛의 삼원색으로 색을 표현하는 RGB 색상값과는 달리 색상, 채도, 명도를 사용해서 색을 표현합니다.
+    HSL 색상값에서 HSL은 각각 색상(Hue), 채도(Saturation), 명도(Lightness)를 의미합니다.
+    
+    색상은 0부터 360 사이의 값을 가지며, 색상환(color wheel)의 각도를 나타냅니다.
+    색상 값이 0 또는 360이면 빨간색(red)이 되며, 120이면 녹색(green), 240이면 파란색(blue)이 됩니다.
+</p>
+<div class="t_code">
+<pre><code class="language-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-id">#header_01</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">50%</span>);}
+    <span class="hljs-selector-id">#header_02</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">90</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">50%</span>);}
+    <span class="hljs-selector-id">#header_03</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">180</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">50%</span>);}
+    <span class="hljs-selector-id">#header_04</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">270</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">50%</span>);}
+    <span class="hljs-selector-id">#header_05</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">360</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">50%</span>);}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+</div>
+
+<p class="t_desc">
+    채도는 0%부터 100% 사이의 값을 가지며, 색상의 연하고 짙은 정도를 나타냅니다.
+    채도 값이 0%면 회색이 되고, 100%면 원래 색상이 됩니다.
+</p>
+<div class="t_code">
+<pre><code class="language-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-id">#header_01</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0%</span>, <span class="hljs-number">50%</span>);}
+    <span class="hljs-selector-id">#header_02</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0</span>, <span class="hljs-number">20%</span>, <span class="hljs-number">50%</span>);}
+    <span class="hljs-selector-id">#header_03</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0</span>, <span class="hljs-number">40%</span>, <span class="hljs-number">50%</span>);}
+    <span class="hljs-selector-id">#header_04</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0</span>, <span class="hljs-number">60%</span>, <span class="hljs-number">50%</span>);}
+    <span class="hljs-selector-id">#header_05</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0</span>, <span class="hljs-number">80%</span>, <span class="hljs-number">50%</span>);}
+    <span class="hljs-selector-id">#header_06</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">50%</span>);}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+</div>
+
+<p class="t_desc">
+    명도는 0%부터 100% 사이의 값을 가지며, 색상의 밝고 어두운 정도를 나타냅니다.
+    명도 값이 0%면 검정색이 되고, 50%면 원래 색상, 100%면 흰색이 됩니다.
+</p>
+<div class="t_code">
+<pre><code class="language-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-id">#header_01</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">0%</span>);}
+    <span class="hljs-selector-id">#header_02</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">20%</span>);}
+    <span class="hljs-selector-id">#header_03</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">40%</span>);}
+    <span class="hljs-selector-id">#header_04</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">50%</span>);}
+    <span class="hljs-selector-id">#header_05</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">60%</span>);}
+    <span class="hljs-selector-id">#header_06</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">80%</span>);}
+    <span class="hljs-selector-id">#header_07</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">100%</span>);}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+</div>
+
+
+<h2 class="t_tit2">HSLA 색상값으로 표현</h2>
+<p class="t_desc2">
+    HSLA 색상값은 HSL 색상값에 알파 채널 값을 더한 색상값입니다.
+</p>
+<div class="t_code">
+<pre><code class="language-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-id">#header_01</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">0</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">50%</span>);}
+    <span class="hljs-selector-id">#header_02</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">90</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">50%</span>);}
+    <span class="hljs-selector-id">#header_03</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">180</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">50%</span>);}
+    <span class="hljs-selector-id">#header_04</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">270</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">50%</span>);}
+    <span class="hljs-selector-id">#header_05</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(<span class="hljs-number">360</span>, <span class="hljs-number">100%</span>, <span class="hljs-number">50%</span>);}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+</div>
+
+<h2 class="t_tit2">opacity 속성</h2>
+<p class="t_desc2">
+    opacity 속성은 색상에 대한 투명도를 설정해 줍니다. 
+    opacity 속성값은 완전한 투명 상태인 0.0부터 투명도가 전혀 없는 1.0 사이의 값을 가집니다.
+</p>
+<div class="t_code">
+<pre><code class="language-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-id">#header_01</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">0</span>,<span class="hljs-number">255</span>,<span class="hljs-number">0</span>); <span class="hljs-attribute">opacity</span>:<span class="hljs-number">0</span>}
+    <span class="hljs-selector-id">#header_02</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">0</span>,<span class="hljs-number">255</span>,<span class="hljs-number">0</span>); <span class="hljs-attribute">opacity</span>:<span class="hljs-number">0.2</span>}
+    <span class="hljs-selector-id">#header_03</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">0</span>,<span class="hljs-number">255</span>,<span class="hljs-number">0</span>); <span class="hljs-attribute">opacity</span>:<span class="hljs-number">0.4</span>}
+    <span class="hljs-selector-id">#header_04</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">0</span>,<span class="hljs-number">255</span>,<span class="hljs-number">0</span>); <span class="hljs-attribute">opacity</span>:<span class="hljs-number">0.6</span>}
+    <span class="hljs-selector-id">#header_05</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">0</span>,<span class="hljs-number">255</span>,<span class="hljs-number">0</span>); <span class="hljs-attribute">opacity</span>:<span class="hljs-number">0.8</span>}
+    <span class="hljs-selector-id">#header_06</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">0</span>,<span class="hljs-number">255</span>,<span class="hljs-number">0</span>); <span class="hljs-attribute">opacity</span>:<span class="hljs-number">1</span>}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+</div>
+
+<h2 class="t_tit2">opacity 속성과 알파 채널과의 차이점</h2>
+<p class="t_desc2">
+    위에서 살펴본 opacity 속성과 알파 채널 모두 투명도를 조절한다는 공통점을 가지고 있습니다.
+    opacity 속성은 투명도를 설정했을 때 설정한 요소의 모든 자식(child) 요소까지 전부 같은 투명도로 설정합니다.
+    하지만 알파 채널은 투명도를 설정한 요소에만 투명도를 설정하는 차이점이 존재합니다.
+
+    다음 예제는 opacity 속성과 알파 채널과의 차이점을 보여주는 예제입니다.
+</p>
+<div class="t_code">
+<pre><code class="language-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-id">#para_01</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">255</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>); <span class="hljs-attribute">opacity</span>:<span class="hljs-number">0</span>}
+    <span class="hljs-selector-id">#para_06</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">255</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>); <span class="hljs-attribute">opacity</span>:<span class="hljs-number">1</span>}
+    <span class="hljs-selector-id">#para_07</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">255</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);}
+    <span class="hljs-selector-id">#para_12</span> {<span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">255</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>);}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+</div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

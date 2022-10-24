@@ -1,0 +1,107 @@
+#card {
+    h2 {
+        display: inline-block;
+        font-size: 1rem;
+        border: 1px solid $black;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+        margin-top: 50px;
+    }
+}
+
+.card__inner {
+    @include flex_sb;
+    @include border_bottom;
+    padding-bottom: 70px;
+    align-items: flex-start;
+    &.horizon {
+        .card {
+            width: 100%;
+            display: flex;
+            margin-bottom: 20px;
+            justify-content: space-between;
+            img {
+                border-radius: 0px;
+            }
+            h3 {
+                margin-top: 0;
+            }
+            figure {
+                width: 30%;
+            }
+            > div {
+                width: 67%;
+            }
+        }
+    }
+    .card {
+        width: 24%;
+        min-height: 400px;
+        position: relative;
+
+        figure {
+            position: relative;
+            overflow: hidden;
+
+            img {
+                filter: saturate(0%);
+                transition: all 0.3s;
+
+                &:hover {
+                    filter: saturate(100%);
+                }
+            }
+            .go {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: $black;
+                text-align: center;
+                line-height: 31px;
+                transform: translateX(100px) rotate(760deg);
+                opacity: 0;
+                transition: all 0.6s ease;
+            }
+
+            &:hover .go {
+                opacity: 1;
+                transform: translateX(0) rotate(0);
+            }
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            line-height: 1.5;
+            margin-top: 0.3em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-bottom: 5px;
+        }
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.5;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            margin-bottom: 10px;
+        }
+        .cate {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            background: #f5f5f5;
+            font-size: 14px;
+            border-radius: 30px;
+            padding: 10px;
+            z-index: 30;
+        }
+    }
+}

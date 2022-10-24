@@ -1,0 +1,336 @@
+@import url("https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css");
+
+.nexon {
+  font-family: "NexonLv1Gothic";
+  font-weight: 400;
+}
+
+/* 여백 초기화 */
+body,
+div,
+dl,
+dd,
+dt,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+fieldset,
+form,
+legend,
+p,
+blockquote,
+th,
+td,
+input,
+button,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+/* 시멘틱 태그 초기화 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 폰트 초기화 */
+body,
+button,
+input,
+select,
+table,
+textarea {
+  color: #000;
+  font-family: "NexonLv1Gothic", "AppleSDGothicNeo-Regular", "Malgun Gothic", "맑은 고딕", dotum, 돋움;
+}
+
+/* 링크 초기화 */
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* 목록 초기화 */
+li,
+ol,
+ul {
+  list-style: none;
+}
+
+/* 제목 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+/* 폰트 스타일 초기화 */
+em,
+address {
+  font-style: normal;
+}
+
+/* 이미지 초기화 */
+img {
+  width: 100%;
+  vertical-align: top;
+}
+
+/* 보더 초기화 */
+img,
+fieldset,
+button {
+  border: 0;
+}
+
+/* 클리어 픽스 */
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  display: block;
+  line-height: 0;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* 블라인드 효과 */
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* 이미지 대체(ir) 효과 */
+.ir {
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999;
+}
+
+#skip {
+  position: relative;
+  z-index: 100000;
+}
+#skip a {
+  background: #000;
+  color: #fff;
+  position: absolute;
+  padding: 20px 40px;
+  left: -400px;
+  top: 5px;
+}
+#skip a:active,
+#skip a:focus {
+  left: 5px;
+}
+
+.container {
+  width: 1160px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 120px 0;
+}
+
+.section > h2 {
+  font-size: 50px;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.section > span {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: underline;
+  text-underline-position: under;
+  margin-bottom: 20px;
+}
+.section > p {
+  font-size: 22px;
+  line-height: 1;
+  text-align: center;
+  font-weight: 300;
+  color: #666;
+  margin-bottom: 70px;
+}
+/* 폰트 */
+.nexon {
+  font-family: "NexonLv1Gothic";
+  font-weight: 400;
+}
+
+/* 배경 */
+.gray {
+  background-color: #f5f5f5;
+}
+
+/* 간격 셋팅 */
+.mb0 {
+  margin-bottom: 0 !important;
+}
+.mb10 {
+  margin-bottom: 10px !important;
+}
+.mb20 {
+  margin-bottom: 20px !important;
+}
+.mb30 {
+  margin-bottom: 30px !important;
+}
+.mb40 {
+  margin-bottom: 40px !important;
+}
+.mb50 {
+  margin-bottom: 50px !important;
+}
+.mb60 {
+  margin-bottom: 60px !important;
+}
+.mb70 {
+  margin-bottom: 70px !important;
+}
+
+.mt0 {
+  margin-top: 0 !important;
+}
+.mt10 {
+  margin-top: 10px !important;
+}
+.mt20 {
+  margin-top: 20px !important;
+}
+.mt30 {
+  margin-top: 30px !important;
+}
+.mt40 {
+  margin-top: 40px !important;
+}
+.mt50 {
+  margin-top: 50px !important;
+}
+.mt60 {
+  margin-top: 60px !important;
+}
+.mt70 {
+  margin-top: 70px !important;
+}
+
+.slider {
+  position: relative;
+}
+.slider__img {
+  background: url(../img/slider_bg01.jpg) no-repeat center / cover;
+}
+.slider__img .desc {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+.slider__img .desc span {
+  font-size: 16px;
+  background-color: #b5b5b5;
+  padding: 1px 14px 0 14px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.slider__img .desc h3 {
+  font-size: 110px;
+  font-weight: 300;
+  line-height: 1;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  margin-left: -8px;
+}
+.slider__img .desc p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #b5b5b5;
+  line-height: 1.35;
+  margin-bottom: 130px;
+}
+.slider__img .desc .btn a {
+  font-size: 16px;
+  background-color: #fff;
+  padding: 11px 50px;
+  display: inline-block;
+}
+.slider__img .desc .btn a.black {
+  background: #030a1a;
+  color: #fff;
+}
+.slider__arrow a {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 56px;
+  transform: translateY(-50%);
+  background-image: url(../img/slider_icon.svg);
+}
+.slider__arrow a.left {
+  left: 20px;
+}
+.slider__arrow a.right {
+  right: 20px;
+  background-position: -40px 0;
+}
+.slider__dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 25px;
+}
+.slider__dot a {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/slider_icon.svg);
+  background-position: -20px -70px;
+}
+
+.slider__dot a.active {
+  background-position: 0 -70px;
+}
+.slider__dot a.play {
+  background-position: -40px -70px;
+}
+.slider__dot a.stop {
+  background-position: -60px -70px;
+}

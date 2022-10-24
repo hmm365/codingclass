@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>spread operator</title>
+        <link rel="stylesheet" href="../../assets/css/style.css" />
+        <link rel="stylesheet" href="../../assets/css/dracula.css" />
+        <script src="../../assets/js/highlight.min.js"></script>
+    </head>
+
+    <body>
+        <!-- //header -->
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">콜백함수 및 재귀함수</h2>
+                <h3 title="t_tit3">콜백함수</h3>
+                <p class="t_desc2">
+                    다른 함수가 실행을 끝낸 뒤 실행되는 callback되는 함수 를 말합니다.<br />
+                    그리고, 함수를 만들때, parameter 를 함수로 받아서 쓸 수 있는데 그 함수는 callback입니다.
+                </p>
+                <hr />
+                <h3 title="t_tit3">재귀함수</h3>
+                <p class="t_desc2">
+                    함수가 자신을 다시 호출하는 구조로 만들어진 함수입니다.<br />
+                    재귀함수는 종료조건이 있어야 하며, 종료조건을 설정해주지 않으면 무한 반복을 하게됨니다.<br />
+                    재귀함수로 작성이 되는 코드는 반복문으로도 작성할 수 있습니다.
+                </p>
+
+                <h3 class="t_tit2">콜백함수 예제</h3>
+                <div class="t_code">
+                    <pre><code class="language-js">function func() {
+    console.log("콘솔이 실행되었습니다.1");
+}
+function callback(str) {
+    console.log("콘솔이 실행되었습니다.2");
+    str();
+}
+callback(func);
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result01"></div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //result01 -->
+
+                <h3 class="t_tit2">콜백함수 반복문 예제</h3>
+                <div class="t_code">
+                    <pre><code class="language-js">function callback(num) {
+    console.log("hi");
+    for (let i = 1; i &lt;= 10; i++) {
+        num(i);
+    }
+    console.log("hi");
+}
+callback(func);
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result02"></div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //result02 -->
+
+                <h3 class="t_tit2">콜백함수 비동기/동기 예제</h3>
+                <p class="t_desc2">
+                    동기방식은 순차적으로 동작하는 방식 요청을 보낸 후 해당 응답을 받아야 다음 동작을 실행하며 이 동작이 끝날때까지 다음 동작은 대기상태입니다.<br />
+                    비동기방식은 순차적으로 진행하지 않는 방식 요청을 보내고 응답에 관계없이 바로 다음 동작을 실행합니다.
+                </p>
+                <div class="t_code">
+                    <pre><code class="language-js">function funcA(callback) {
+    setTimeout(() =&gt; {
+        console.log("funcA가 실행되었습니다.");
+        callback();
+    }, 1000);
+}
+function funcB(callback) {
+    setTimeout(() =&gt; {
+        console.log("funcB가 실행되었습니다.");
+        callback();
+    }, 1000);
+}
+function funcC(callback) {
+    setTimeout(() =&gt; {
+        console.log("funcC가 실행되었습니다.");
+        callback();
+    }, 1000);
+}
+function funcD() {
+    setTimeout(() =&gt; {
+        console.log("funcD가 실행되었습니다.");
+    }, 1000);
+}
+funcA(function () {
+    funcB(function () {
+        funcC(function () {
+            funcD();
+        });
+    });
+});
+</code></pre>
+                    <div class="t_result sample03">
+                        <details>
+                            <summary class="result03__close">결과 확인하기</summary>
+                            <div class="result03"></div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //result03 -->
+                <h3 class="t_tit2">재귀함수 예제</h3>
+                <p class="t_desc2">
+                    함수가 자신을 다시 호출하는 구조로 만들어진 함수입니다.<br />
+                    재귀함수는 종료조건이 있어야 하며, 종료조건을 설정해주지 않으면 무한 반복을 하게됩니다.<br />
+                    재귀함수로 작성이 되는 코드는 반복문으로도 작성할 수 있습니다.
+                </p>
+                <div class="t_code">
+                    <pre><code class="language-js">function func(num) {
+    if (num &lt;= 1) {
+        console.log("함수가 실행되었습니다. " + num);
+    } else {
+        console.log("함수가 실행되었습니다. " + num);
+        func(num - 1);
+    }
+}
+func(10);
+
+//애니메이션
+function animation() {
+    console.log("함수가 실행되었습니다.");
+    requestAnimationFrame(animation); //1초에 60번 실행
+}
+// animation();
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result04"></div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //result04 -->
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <style>
+            table {
+                border: 1px solid #cdcdcd;
+                border-collapse: collapse;
+            }
+
+            td {
+                border: 1px solid #cdcdcd;
+                padding: 3px;
+            }
+        </style>
+
+        <script>
+            //23 재귀 함수
+            //재귀함수 : 동시에 여러개 실행
+            {
+                let result = document.querySelector(".result04");
+
+                //반복적으로
+                function func(num) {
+                    if (num <= 1) {
+                        result.innerHTML += "함수가 실행되었습니다. " + num + "<br>";
+                    } else {
+                        result.innerHTML += "함수가 실행되었습니다. " + num + "<br>";
+                        func(num - 1);
+                    }
+                }
+                func(10);
+
+                //애니메이션
+                function animation() {
+                    console.log("함수가 실행되었습니다.");
+                    requestAnimationFrame(animation); //1초에 60번 실행
+                }
+                // animation();
+            }
+            //24 콜백 함수
+            //콜백함수 : 첫번째 함수가 실행 -> 두번째 함수가 실행
+            {
+                let result = document.querySelector(".result01");
+
+                function func() {
+                    result.innerHTML += "함수가 실행되었습니다. " + 2 + "<br>";
+                }
+                function callback(str) {
+                    result.innerHTML += "함수가 실행되었습니다. " + 1 + "<br>";
+                    str();
+                }
+                callback(func);
+            }
+            //25 콜백함수 : 반복문
+            {
+                let result = document.querySelector(".result02");
+
+                function func(i) {
+                    result.innerHTML += i + "<br>";
+                }
+                function callback(num) {
+                    result.innerHTML += "hi" + "<br>";
+                    for (let i = 1; i <= 10; i++) {
+                        num(i);
+                    }
+                    result.innerHTML += "hi" + "<br>";
+                }
+                callback(func);
+            }
+            //26 콜백함수 : 동기/비동기
+            {
+                let result = document.querySelector(".result03");
+
+                // function funcA() {
+                //     setTimeout(() => {
+                //         console.log("funcA가 실행되었습니다.");
+                //     }, 1000);
+                // }
+                // function funcB() {
+                //     console.log("funcB가 실행되었습니다.");
+                // }
+                // funcA();
+                // funcB();
+
+                // function funcA(callback) {
+                //     setTimeout(() => {
+                //         console.log("funcA가 실행되었습니다.");
+                //         callback();
+                //     }, 1000);
+                // }
+                // function funcB() {
+                //     console.log("funcB가 실행되었습니다.");
+                // }
+                // funcA(function () {
+                //     funcB();
+                // });
+                let timer;
+                function funcA(callback) {
+                    timer = setTimeout(() => {
+                        result.innerHTML += "funcA가 실행되었습니다." + "<br>";
+                        callback();
+                    }, 1000);
+                }
+                function funcB(callback) {
+                    timer = setTimeout(() => {
+                        result.innerHTML += "funcB가 실행되었습니다." + "<br>";
+                        callback();
+                    }, 1000);
+                }
+                function funcC(callback) {
+                    timer = setTimeout(() => {
+                        result.innerHTML += "funcC가 실행되었습니다." + "<br>";
+                        callback();
+                    }, 1000);
+                }
+                function funcD() {
+                    timer = setTimeout(() => {
+                        result.innerHTML += "funcD가 실행되었습니다." + "<br>";
+                    }, 1000);
+                }
+                sOpen = document.querySelector(".sample03 summary");
+
+                console.log(sOpen.classList.contains("result03__close"));
+                sOpen.addEventListener("click", () => {
+                    if (sOpen.classList.contains("result03__open")) {
+                        sOpen.classList.add("result03__close");
+                        sOpen.classList.remove("result03__open");
+                        clearTimeout(timer);
+                        result.innerHTML = "";
+                    } else if (sOpen.classList.contains("result03__close")) {
+                        funcA(function () {
+                            funcB(function () {
+                                funcC(function () {
+                                    funcD();
+                                });
+                            });
+                        });
+                        sOpen.classList.remove("result03__close");
+                        sOpen.classList.add("result03__open");
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>

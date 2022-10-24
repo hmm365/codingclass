@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>repeat</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">Array.from()</h2>
+                <p class="t_desc2">Array.from() 메서드는 유사 배열 객체(array-like object)나 반복 가능한 객체(iterable object)를 얕게 복사해 새로운Array 객체를 만듭니다.</p>
+                <div class="t_table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col style="width: 32%" />
+                            <col style="width: 32%" />
+                            <col style="width: 32%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="smple14_N1"></td>
+                                <td class="smple14_Q1"></td>
+                                <td class="smple14_M1"></td>
+                                <td class="smple14_P1"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple14_N2"></td>
+                                <td class="smple14_Q2"></td>
+                                <td class="smple14_M2"></td>
+                                <td class="smple14_P2"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple14_N3"></td>
+                                <td class="smple14_Q3"></td>
+                                <td class="smple14_M3"></td>
+                                <td class="smple14_P3"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="t_code">
+                    <pre><code class="language-js">//01
+const text1 = "javascript";
+const result1 = Array.from(text1);
+
+//02
+const text2 = "javascript";
+const result2 = Array.from(text2, (el) => el + "10");
+
+//03
+const text3 = "javascript";
+const result3 = [...text3].map((el) => el);
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script>
+            {
+                const text1 = "javascript";
+                const result1 = Array.from(text1);
+
+                document.querySelector(".smple14_N1").innerHTML = "1";
+                document.querySelector(".smple14_Q1").innerHTML = "'javascript'";
+                document.querySelector(".smple14_M1").innerHTML = "Array.from(text)";
+                document.querySelector(".smple14_P1").innerHTML = `[${result1}]`;
+
+                const text2 = "javascript";
+                const result2 = Array.from(text2, (el) => el + "10");
+
+                document.querySelector(".smple14_N2").innerHTML = "1";
+                document.querySelector(".smple14_Q2").innerHTML = "'javascript'";
+                document.querySelector(".smple14_M2").innerHTML = "Array.from(text2, (el) => el + '10')";
+                document.querySelector(".smple14_P2").innerHTML = `[${result2}]`;
+
+                const text3 = "javascript";
+                const result3 = [...text3].map((el) => el);
+
+                document.querySelector(".smple14_N3").innerHTML = "3";
+                document.querySelector(".smple14_Q3").innerHTML = "'javascript'";
+                document.querySelector(".smple14_M3").innerHTML = "[...text3].map((el) => el)";
+                document.querySelector(".smple14_P3").innerHTML = `[${result3}]`;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="Ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>데이터 이펙트</title>
+        <link rel="stylesheet" href="../assets/css/data.css" />
+        <link rel="stylesheet" href="../assets/css/prism.css" />
+        <link href="https://webfontworld.github.io/tmon/Tmon.css" rel="stylesheet" />
+        <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <header id="header">
+            <h1>Search</h1>
+            <nav>
+                <ul>
+                    <li class="active"><a href="dataEffect01.html">1</a></li>
+                    <li><a href="dataEffect02.html">2</a></li>
+                    <li><a href="dataEffect03.html">3</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header -->
+
+        <main id="main">
+            <div class="container">
+                <h2>1부터 100까지 출력하기</h2>
+                <div class="test_box">
+                    <h3 class="title">01. 다음의 결괏값을 작성하시오.</h3>
+                    <div class="code">
+                        <pre><code class="line-numbers language-js">function cookingMama(){
+    let cook = ['당근','소세지','삼겹살','계란후라이']
+    for(sel=0; sel &lt; cook.length; sel++){
+        if(cook[sel]!=='당근'){
+            let i = '오늘 저녁은'+cook[sel];
+            console.log(i);
+        }
+    }
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과보기</summary>
+                            <div class="sample01_result"></div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script src="../assets/js/prism.js"></script>
+        <script>
+            {
+                function cookingMama() {
+                    let cook = ["당근", "소세지", "삼겹살", "계란후라이"];
+                    for (sel = 0; sel < cook.length; sel++) {
+                        if (cook[sel] !== "당근") {
+                            let i = "오늘 저녁은" + cook[sel];
+                            result.textContent += i + " ";
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

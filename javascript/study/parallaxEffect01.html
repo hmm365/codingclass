@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바스크립 이펙트</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">페럴럭스 이펙트</h2>
+                <p class="t_desc2">
+                    offsettop 와 scrollTop을 이용하여 메뉴 선택창이 해당 메뉴에 진입되었을때 색이 바뀌는 효과를 만들어 보았습니다.<br />
+                    하지만 이런경우는 대부분 과부화를 일으키기 때문에 조심히 사용하는게 좋을것 같습니다.
+                </p>
+                <div class="t_iframe" style="min-height: 450px">
+                    <iframe src="https://syumay.netlify.app/javascript/effect/parallaxeffect01"></iframe>
+                </div>
+                <div class="t_link">
+                    <a href="https://github.com/hmm365/coding2/blob/main/javascript/effect/parallaxEffect01.html">원본 소스 보기</a>
+                    <a href="https://syumay.netlify.app/javascript/effect/parallaxeffect01">원본 사이트 보기</a>
+                </div>
+                <hr />
+                <p class="t_desc2">scroll관련 코드들 간단요약</p>
+                <div class="t_iframe" style="min-height: 450px">
+                    <iframe height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FNSZKFrQ1FX4IhITn0GKl91%2Foffset%3Fnode-id%3D3%253A4" allowfullscreen></iframe>
+                </div>
+                <p class="t_box">먼저 scrollTop 에 조건을 걸어 모든 웹브라우저에 스크롤값을 구합니다.</p>
+                <div class="t_code">
+                    <pre><code class="language-js">let scrollTop = document.documentElement.scrollTop || window.pageYOffset || window.scrollY;
+scroll.innerText = Math.round(scrollTop);
+</code></pre>
+                </div>
+                <p class="t_box">
+                    이제 각 section 에 있는 아이디값을 찾아 이전에 구한 scrollTop 와 세션에있는 offsetTop 값을 비교해<br />
+                    nav에있는 li 요소에 클래스를 추가 해줍니다.
+                </p>
+                <div class="t_code">
+                    <pre><code class="language-js">const contentItem = document.querySelectorAll(".content__item");
+contentItem.forEach((el, i) =&gt; {
+  if (scrollTop &gt;= document.getElementById(el.getAttribute("id")).offsetTop - 2) {
+    document.querySelectorAll("#parallax__nav li").forEach((li) =&gt {
+      li.classList.remove("active");
+    });
+    document.querySelector("#parallax__nav li:nth-child(" + (i + 1) + ")").classList.add("active");
+  }
+</code></pre>
+                </div>
+                <p class="t_box">마지막으로 메뉴 탭을 클릭할때 이동하는 효과를 주기위해 scrollIntoView({ behavior: "smooth" } 작성했습니다.</p>
+                <div class="t_code">
+                    <pre><code class="language-js">document.querySelectorAll("#parallax__nav li a").forEach((li) =&gt {
+  li.addEventListener("click", (e) =&gt; {
+    e.preventDefault();
+    document.querySelector(li.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+  });
+});
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script></script>
+    </body>
+</html>

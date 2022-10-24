@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바스크립 이펙트</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">페럴럭스 이펙트5</h2>
+                <p class="t_box">이번 페럴럭스 이펙트는 스크롤시 텍스트 애니메이션 효과가 나옵니다.</p>
+                <iframe height="400" style="width: 100%" src="https://syumay.netlify.app/javascript/effect/parallaxeffect05"></iframe>
+                <div class="t_link">
+                    <a href="https://github.com/hmm365/coding2/blob/main/javascript/effect/parallaxEffect05.html">원본 소스 보기</a>
+                    <a href="https://syumay.netlify.app/javascript/effect/parallaxeffect05">원본 사이트 보기</a>
+                </div>
+                <hr />
+                <h2 class="t_ti2">js 코드 설명</h2>
+
+                <p class="t_desc2">
+                    이질감을위해 offset1 변수를 만들어 현제 보이는 스크롤 탑 값과 각 요소의 offsetTop 값을 뺀 오차만큼<br />
+                    translateY 를 주어서 스크롤이 내려갈때마다 살짝 움직이는 이질감 효과를 만들었습니다.<br />
+                    조금더 자연스러운 효과를위해 gsap를 사용하여 훨씬 자연스럽게 했습니다.
+                </p>
+                <div class="t_code">
+                    <pre><code class="language-js">function scroll() {
+   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+   document.querySelector("#parallax__info span").innerText = Math.ceil(scrollTop);
+    
+   document.querySelectorAll(".content__item").forEach((item) => {
+       const target1 = item.querySelector(".content__item__img");
+       const target2 = item.querySelector(".content__item__desc");
+       const target3 = item.querySelector(".content__item__num");
+
+       let offset1 = (scrollTop - item.offsetTop) * 0.1;
+       let offset2 = (scrollTop - item.offsetTop) * 0.05;
+
+       // target1.style.transform = `translateY(${offset1}px)`;
+       // target2.style.transform = `translateY(${offset2}px)`;
+       // target3.style.transform = `translateY(${offset1}px)`;
+       
+       gsap.to(target1, { duration: 0.3, y: offset1, ease: "power4.out" });
+       gsap.to(target2, { duration: 0.2, y: offset2 });
+       gsap.to(target3, { duration: 0.2, y: offset2, ease: "expo.out" });
+   });
+   requestAnimationFrame(scroll);
+
+scroll();
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script></script>
+    </body>
+</html>

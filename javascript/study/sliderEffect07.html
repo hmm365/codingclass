@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바스크립트 이펙트</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <!-- //header -->
+        <main id="main">
+            <div class="document">
+                <div class="t_iframe" style="min-height: 450px">
+                    <iframe src="https://hmm365.github.io/coding2/javascript/effect/sliderEffect07.html"></iframe>
+                </div>
+                <h2 class="t_tit">이미지 버튼클릭으로 움직이기</h2>
+                <p class="t_desc2">버튼, 닷메뉴, 무한, 플레이 버튼, 정지 버튼, 자동 플레이.</p>
+
+                <h2 class="t_tit2">JS 설명</h2>
+                <p class="t_desc2">
+                    그동안 배웠던 슬라이더 이펙트를 최대한 활용한것입니다.<br />
+                    따로 설명은 없습니다.
+                </p>
+                <div class="t_code">
+                    <div class="t_result">
+                        <details>
+                            <summary>코드 보기</summary>
+                            <pre><code class="language-js">const sliderWrap = document.querySelector(".slider__wrap");
+const sliderImg = document.querySelector(".slider__img"); //보여지는영역
+const sliderInner = document.querySelector(".slider__inner"); //움직이는 영역
+const slider = document.querySelectorAll(".slider"); //각각 이미지
+const sliderDot = document.querySelector(".slider__dot"); //닷
+
+const sliderBtn = document.querySelector(".slider__btn"); //각각 이미지
+const sliderBtnPrev = document.querySelector(".slider__btn .prev"); //왼쪽 버튼
+const sliderBtnNext = document.querySelector(".slider__btn .next"); //오른쪽 버튼
+
+let currentIndex = 0; //현재 이미지
+let sliderLength = slider.length; //슬라이더 갯수
+let sliderWidth = slider[0].offsetWidth; //이미지 가로값
+let sliderFirst = slider[0]; //첫번째 이미지
+let sliderLast = slider[slider.length - 1]; //마지막이미지
+let cloneFirst = sliderFirst.cloneNode(true); //첫번째 이미지복사
+let cloneLast = sliderLast.cloneNode(true); //마지막 이미지 복사
+let dotIndex = "";
+let interval = 3000;
+let sliderTimer = "";
+
+function imgClone() {
+    sliderInner.appendChild(cloneFirst);
+    sliderInner.insertBefore(cloneLast, sliderFirst);
+}
+function createDot() {
+    //이미지 갯수 만큼 닷메뉴
+    for (i = 0; i &lt; sliderLength; i++) {
+        dotIndex += `&lt;a href='#'' class='dot'>이미지${i}&lt;/a>`;
+    }
+    // slider.forEach((e, i) => {
+    //     dotIndex += `&lt;a href='#'' class='dot'>이미지${i + 1}&lt;/a>`;
+    // });
+    dotIndex += "&lt;a href='#' id='playStop' class='stop'>&lt;a>";
+    // dotIndex += "&lt;a href='#' class='stop'>&lt;a>";
+
+    sliderDot.innerHTML = dotIndex;
+    sliderDot.firstElementChild.classList.add("active");
+}
+
+function init() {
+    imgClone(); //이미지 복사
+    createDot(); //닷버튼 생성
+    autoPlay(); //자동 재생
+}
+init();
+let sliderBtnPlay = document.querySelector(".slider__dot #playStop"); //플레이 버튼
+
+// console.log(sliderBtnPlay);
+
+function autoPlay() {
+    sliderTimer = setInterval(() => {
+        let intervalNum = currentIndex + 1;
+        gotoSlider(intervalNum);
+    }, interval);
+}
+function stopPlay() {
+    clearInterval(sliderTimer);
+}
+function checkIndex() {
+    sliderInner.classList.remove("transition");
+    if (currentIndex == sliderLength) {
+        sliderInner.style.left = -(1 * sliderWidth) + "px";
+        currentIndex = 0;
+    }
+    if (currentIndex == -1) {
+        sliderInner.style.left = -(sliderLength * sliderWidth) + "px";
+        currentIndex = sliderLength - 1;
+    }
+}
+function gotoSlider(index) {
+    stopPlay();
+    sliderInner.classList.add("transition");
+    let posInitial = sliderInner.offsetLeft; //-800
+    sliderInner.style.left = -sliderWidth * (index + 1) + "px";
+
+    // console.log(index);
+    currentIndex = index;
+    dotActive();
+
+    if (!sliderBtnPlay.classList.contains("stop")) {
+        stopPlay();
+    } else {
+        autoPlay();
+    }
+}
+//닷 엑티브
+function dotActive() {
+    // console.log(currentIndex);
+    document.querySelectorAll(".dot").forEach((e, i) => {
+        e.classList.remove("active");
+    });
+    // console.log(currentIndex % sliderLength);
+    if (currentIndex % sliderLength == -1) {
+        sliderDot.children[sliderLength - 1].classList.add("active");
+    } else {
+        sliderDot.children[currentIndex % sliderLength].classList.add("active");
+    }
+}
+
+sliderBtnPrev.addEventListener("click", () => {
+    let prevIndex = currentIndex - 1;
+    gotoSlider(prevIndex);
+});
+sliderBtnNext.addEventListener("click", () => {
+    let nextIndex = currentIndex + 1;
+    gotoSlider(nextIndex);
+});
+
+sliderBtnPlay.addEventListener("click", () => {
+    if (sliderBtnPlay.classList.contains("play")) {
+        autoPlay();
+        sliderBtnPlay.classList.add("stop");
+        sliderBtnPlay.classList.remove("play");
+    } else if (sliderBtnPlay.classList.contains("stop")) {
+        stopPlay();
+        sliderBtnPlay.classList.add("play");
+        sliderBtnPlay.classList.remove("stop");
+    }
+});
+
+//닷버튼 클릭했을때
+document.querySelectorAll(".slider__dot .dot").forEach((e, i) => {
+    e.addEventListener("click", () => {
+        gotoSlider(i);
+    });
+});
+
+sliderInner.addEventListener("mouseenter", stopPlay);
+
+sliderInner.addEventListener("mouseleave", () => {
+    if (!sliderBtnPlay.classList.contains("stop")) {
+        stopPlay();
+    } else {
+        autoPlay();
+    }
+});
+sliderInner.addEventListener("transitionend", checkIndex);
+</code></pre>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="t_link">
+                    <a href="https://github.com/hmm365/coding2/blob/main/javascript/effect/sliderEffect07.html">원본 소스 보기</a>
+                    <a href="https://hmm365.github.io/coding2/javascript/effect/sliderEffect07.html">원본 사이트 보기</a>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+    </body>
+</html>

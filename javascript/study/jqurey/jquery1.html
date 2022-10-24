@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>gsap</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h3 class="t_tit2">기본 선택자</h3>
+                <p class="t_desc">JQuery는 html 요소와 관련된 기능구현이 많아 그만큼 CSS와 매우 밀접한 관계가 있습니다.</p>
+                <table class="t_table">
+                    <colgroup>
+                        <col style="width: 30%" />
+                        <col style="width: 30%" />
+                        <col style="width: 40%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>선택자 종류</th>
+                            <th colspan="2">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ce">태그 선택자</td>
+                            <td class="ce">$("p")</td>
+                            <td>p 요소를 선택 합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">id 선택자</td>
+                            <td class="ce">$("#gnb")</td>
+                            <td>#gnb 요소를 선택 합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">class 선택자</td>
+                            <td class="ce">$(".gnb")</td>
+                            <td>.gnb 요소를 선택 합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">자식 선택자</td>
+                            <td class="ce">$("#gnb > ul > li")</td>
+                            <td>#gnb 요소의 자식 요소의 자식 요소 li를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">하위 선택자</td>
+                            <td class="ce">$("#gnb ul")</td>
+                            <td>#gnb 요소의 하위에있는 모든 ul 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">인접 선택자</td>
+                            <td class="ce">$("#gnb + #logo")</td>
+                            <td>#gnb 다음에 오는 #logo 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">형제 선택자</td>
+                            <td class="ce">$("#gnb ~ #logo")</td>
+                            <td>#gnb 의 형제 요소인 #logo 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">종속 선택자</td>
+                            <td class="ce">$("div.util")</td>
+                            <td>div 요소 중 class가 util인 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">그룹 선택자</td>
+                            <td class="ce">$(".left, .right, #banner")</td>
+                            <td>.left, .right, #banner 요소들를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">전체 선택자</td>
+                            <td class="ce">$("*")</td>
+                            <td>모든 요소들를 선택합니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr />
+                <h3 class="t_tit2">예시</h3>
+                <div class="t_iframe">
+                    <iframe height="450" style="width: 100%" scrolling="no" title="jquery1" src="https://codepen.io/hmm365/embed/QWmeMVg?default-tab=js%2Cresult&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/hmm365/pen/QWmeMVg"> jquery1</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>) on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script></script>
+    </body>
+</html>

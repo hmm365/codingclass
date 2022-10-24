@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바스크립트 데이터타입</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">검색 이펙트</h2>
+                <p class="t_desc2">이번 이펙트는 각 css 제목과 설명을 배열안에있는 객체로 저장하여 출력했습니다.</p>
+                <div class="t_iframe" style="min-height: 450px">
+                    <iframe src="https://hmm365.github.io/coding2/javascript/effect/searchEffect04.html"></iframe>
+                </div>
+
+                <h3 class="t_tit2">JS코드</h3>
+                <p class="t_desc2">keyup 을 통한 searchBox.value 를 가져와서 cssProperty 에있는 name 객체와 일치하면 출력이 되게했습니다.</p>
+                <div class="t_code">
+                    <div class="t_result">
+                        <details open>
+                            <summary>코드 보기</summary>
+                            <pre><code class="language-js">//출력하기
+cssProperty.map((e, i) => {
+    searchList.innerHTML += `<span>${e.name}</span>`;
+    searchNum.textContent = document.querySelectorAll(".search__list span").length;
+});
+//입력하기
+searchBox.addEventListener("keyup", (e) => {
+    let searchWord = searchBox.value;
+    findProperty(searchWord);
+});
+
+document.querySelectorAll(".search__list span").forEach((el) => {
+    el.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector("#header").scrollIntoView({ behavior: "smooth" });
+        findProperty(el.innerText);
+    });
+});
+//속성 찾기
+function findProperty(searchData) {
+    const targetData = cssProperty.find((data) => data.name === searchData);
+    if (targetData == null) {
+        searchDesc.textContent = "해당 속성은 존재하지 않습니다. 다시 검색해 주세요.";
+        return;
+    }
+    searchDesc.textContent = `${targetData.name} 속성은 ${targetData.desc}`;
+}
+</code></pre>
+                        </details>
+                    </div>
+                </div>
+                <div class="t_link">
+                    <a href="https://hmm365.github.io/coding2/javascript/effect/searchEffect04.html">원본 사이트 보기</a>
+                    <a href="https://github.com/hmm365/coding2/blob/main/javascript/effect/searchEffect04.html">원본 소스 보기</a>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 유형01</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        .gmarket {
+            font-family: 'GmarketSans';
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            width: 100%;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4 ,h5 h6 {
+            font-weight: normal;
+        }
+
+        /* Common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section > h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section > p {
+            font-size: 22px;
+            line-height: 1;
+            text-align: center;
+            font-weight: 300;
+            color: #666;
+            margin-bottom: 70px;
+        }
+
+        /* cardType */
+        .card__inner {
+            display: flex;
+            flex-direction: column;
+        }
+        .card__inner .card__container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        .card__inner .card__container:nth-last-child(1){
+            margin-bottom: 0;
+        }
+        .card {
+            width: 25%;
+            margin-right: 20px;
+        }
+        .card:nth-last-child(1){
+            margin: 0;
+        }
+        .card__header {
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        .card .card__header img {
+            border-radius: 10px;
+        }
+        .card__body {
+
+        }
+        .card__body .tit {
+            font-size: 24px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .card__body .desc {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #666;
+            font-weight: 300;
+        }
+        .card__body .btn {
+            position: absolute;
+            right: 0;
+            background-color: #6F4747;
+            border-radius: 5px;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            line-height: 26px; 
+        }
+    </style>
+</head>
+<body>
+    <section id="cardType" class="card__wrap gmarket section">
+        <h2>강아지 사진</h2>
+        <p>여러분은 귀여운 강아지 사진을 보실수 있는 기회가 생겼습니다.<br>
+            엄청 귀여운 강아지를 보실수 있어서 기분이 좋을거에요!🐶</p>
+        <div class="card__inner container">
+            <div class="card__container">
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="img/card_bg02_01.jpg" alt="고양이 사진1">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="tit">달리는 강아지
+                            <a class="btn" href="#" title="자세히보기">
+                                <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.7071 8.70711C13.0976 8.31658 13.0976 7.68342 12.7071 7.29289L6.34315 0.928932C5.95262 0.538408 5.31946 0.538408 4.92893 0.928932C4.53841 1.31946 4.53841 1.95262 4.92893 2.34315L10.5858 8L4.92893 13.6569C4.53841 14.0474 4.53841 14.6805 4.92893 15.0711C5.31946 15.4616 5.95262 15.4616 6.34315 15.0711L12.7071 8.70711ZM0 9H12V7H0V9Z" fill="white"/>
+                                </svg>
+                            </a>
+                        </h3>                  
+                        <p class="desc">강아지는 너무귀엽습니다 그렇기 저는 강아지가 너무좋아서 강아지 사진을 가지고왔습니다.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="img/card_bg02_02.jpg" alt="고양이 사진1">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="tit">달리는 강아지
+                            <a class="btn" href="#" title="자세히보기">
+                                <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.7071 8.70711C13.0976 8.31658 13.0976 7.68342 12.7071 7.29289L6.34315 0.928932C5.95262 0.538408 5.31946 0.538408 4.92893 0.928932C4.53841 1.31946 4.53841 1.95262 4.92893 2.34315L10.5858 8L4.92893 13.6569C4.53841 14.0474 4.53841 14.6805 4.92893 15.0711C5.31946 15.4616 5.95262 15.4616 6.34315 15.0711L12.7071 8.70711ZM0 9H12V7H0V9Z" fill="white"/>
+                                </svg>
+                            </a>
+                        </h3>                  
+                        <p class="desc">강아지는 너무귀엽습니다 그렇기 저는 강아지가 너무좋아서 강아지 사진을 가지고왔습니다.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="img/card_bg02_03.jpg" alt="고양이 사진1">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="tit">달리는 강아지
+                            <a class="btn" href="#" title="자세히보기">
+                                <span aria-hidden="true">
+                                    <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.7071 8.70711C13.0976 8.31658 13.0976 7.68342 12.7071 7.29289L6.34315 0.928932C5.95262 0.538408 5.31946 0.538408 4.92893 0.928932C4.53841 1.31946 4.53841 1.95262 4.92893 2.34315L10.5858 8L4.92893 13.6569C4.53841 14.0474 4.53841 14.6805 4.92893 15.0711C5.31946 15.4616 5.95262 15.4616 6.34315 15.0711L12.7071 8.70711ZM0 9H12V7H0V9Z" fill="white"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </h3>                  
+                        <p class="desc">강아지는 너무귀엽습니다 그렇기 저는 강아지가 너무좋아서 강아지 사진을 가지고왔습니다.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="img/card_bg02_04.jpg" alt="고양이 사진1">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="tit">달리는 강아지
+                            <a class="btn" href="#" title="자세히보기">
+                                <span aria-hidden="true">
+                                    <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.7071 8.70711C13.0976 8.31658 13.0976 7.68342 12.7071 7.29289L6.34315 0.928932C5.95262 0.538408 5.31946 0.538408 4.92893 0.928932C4.53841 1.31946 4.53841 1.95262 4.92893 2.34315L10.5858 8L4.92893 13.6569C4.53841 14.0474 4.53841 14.6805 4.92893 15.0711C5.31946 15.4616 5.95262 15.4616 6.34315 15.0711L12.7071 8.70711ZM0 9H12V7H0V9Z" fill="white"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </h3>                  
+                        <p class="desc">강아지는 너무귀엽습니다 그렇기 저는 강아지가 너무좋아서 강아지 사진을 가지고왔습니다.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="card__container">
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="img/card_bg02_05.jpg" alt="고양이 사진1">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="tit">달리는 강아지
+                            <a class="btn" href="#" title="자세히보기">
+                                <span aria-hidden="true">
+                                    <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.7071 8.70711C13.0976 8.31658 13.0976 7.68342 12.7071 7.29289L6.34315 0.928932C5.95262 0.538408 5.31946 0.538408 4.92893 0.928932C4.53841 1.31946 4.53841 1.95262 4.92893 2.34315L10.5858 8L4.92893 13.6569C4.53841 14.0474 4.53841 14.6805 4.92893 15.0711C5.31946 15.4616 5.95262 15.4616 6.34315 15.0711L12.7071 8.70711ZM0 9H12V7H0V9Z" fill="white"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </h3>                  
+                        <p class="desc">강아지는 너무귀엽습니다 그렇기 저는 강아지가 너무좋아서 강아지 사진을 가지고왔습니다.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="img/card_bg02_06.jpg" alt="고양이 사진1">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="tit">달리는 강아지
+                            <a class="btn" href="#" title="자세히보기">
+                                <span aria-hidden="true">
+                                    <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.7071 8.70711C13.0976 8.31658 13.0976 7.68342 12.7071 7.29289L6.34315 0.928932C5.95262 0.538408 5.31946 0.538408 4.92893 0.928932C4.53841 1.31946 4.53841 1.95262 4.92893 2.34315L10.5858 8L4.92893 13.6569C4.53841 14.0474 4.53841 14.6805 4.92893 15.0711C5.31946 15.4616 5.95262 15.4616 6.34315 15.0711L12.7071 8.70711ZM0 9H12V7H0V9Z" fill="white"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </h3>                  
+                        <p class="desc">강아지는 너무귀엽습니다 그렇기 저는 강아지가 너무좋아서 강아지 사진을 가지고왔습니다.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="img/card_bg02_07.jpg" alt="고양이 사진1">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="tit">달리는 강아지
+                            <a class="btn" href="#" title="자세히보기">
+                                <span aria-hidden="true">
+                                    <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.7071 8.70711C13.0976 8.31658 13.0976 7.68342 12.7071 7.29289L6.34315 0.928932C5.95262 0.538408 5.31946 0.538408 4.92893 0.928932C4.53841 1.31946 4.53841 1.95262 4.92893 2.34315L10.5858 8L4.92893 13.6569C4.53841 14.0474 4.53841 14.6805 4.92893 15.0711C5.31946 15.4616 5.95262 15.4616 6.34315 15.0711L12.7071 8.70711ZM0 9H12V7H0V9Z" fill="white"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </h3>                  
+                        <p class="desc">강아지는 너무귀엽습니다 그렇기 저는 강아지가 너무좋아서 강아지 사진을 가지고왔습니다.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="img/card_bg02_08.jpg" alt="고양이 사진1">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="tit">달리는 강아지
+                            <a class="btn" href="#" title="자세히보기">
+                                <span aria-hidden="true">
+                                    <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.7071 8.70711C13.0976 8.31658 13.0976 7.68342 12.7071 7.29289L6.34315 0.928932C5.95262 0.538408 5.31946 0.538408 4.92893 0.928932C4.53841 1.31946 4.53841 1.95262 4.92893 2.34315L10.5858 8L4.92893 13.6569C4.53841 14.0474 4.53841 14.6805 4.92893 15.0711C5.31946 15.4616 5.95262 15.4616 6.34315 15.0711L12.7071 8.70711ZM0 9H12V7H0V9Z" fill="white"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </h3>                  
+                        <p class="desc">강아지는 너무귀엽습니다 그렇기 저는 강아지가 너무좋아서 강아지 사진을 가지고왔습니다.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

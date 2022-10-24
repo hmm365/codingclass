@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트</title>
+    <link rel="stylesheet" href="../assets/css/quiz.css">
+    <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/Cafe24Dangdanghae/Cafe24Dangdanghae.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/modal.css">
+    <link rel="stylesheet" href="../assets/css/arta.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../javascript01.html">Quiz</a><em>주관식 유형</em></h1>
+        <nav>
+            <ul>
+                <li><a href="quizEffect01.html">1</a></li>
+                <li><a href="quizEffect02.html">2</a></li>
+                <li><a href="quizEffect03.html">3</a></li>
+                <li class="active"><a href="quizEffect04.html">4</a></li>
+                <li><a href="quizEffect05.html">5</a></li>
+                <li><a href="quizEffect06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="quiz__wrap">
+            <div class="quiz">
+                <sapn class="quiz__type"></sapn>
+                <h2 class="quiz__question">
+                    <span class="number"></span>
+                    <div class="ask">
+                    </div>
+                </h2>
+                <div class="quiz__view">
+                    <div class="true">정답입니다!</div>
+                    <div class="false">틀렸습니다!</div>
+                    <div class="dog">
+                        <div class="head">
+                            <div class="ears"></div>
+                            <div class="face"></div>
+                            <div class="eyes">
+                                <div class="teardrop"></div>
+                            </div>
+                            <div class="nose"></div>
+                            <div class="mouth">
+                                <div class="tongue"></div>
+                            </div>
+                            <div class="chin"></div>
+                        </div>
+                        <div class="body">
+                            <div class="tail"></div>
+                            <div class="legs"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz__answer">
+                    <div class="quiz__selects">
+                        <label for="select1">
+                            <input type="radio" id="select1" class="select" name="select" value="1"> <!-- name은 ipunt만가능 -->
+                            <span class="choice"></span>
+                        </label>
+                        <label for="select2">
+                            <input type="radio" id="select2" class="select" name="select" value="2"> <!-- name은 ipunt만가능 -->
+                            <span class="choice"></span>
+                        </label>
+                        <label for="select3">
+                            <input type="radio" id="select3" class="select" name="select" value="3"> <!-- name은 ipunt만가능 -->
+                            <span class="choice"></span>
+                        </label>
+                        <label for="select4">
+                            <input type="radio" id="select4" class="select" name="select" value="4"> <!-- name은 ipunt만가능 -->
+                            <span class="choice"></span>
+                        </label>          
+                    </div>
+                    <button class="confirm">정답 확인하기</button>
+                    <div class="result"></div> 
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <div class="modal__wrap">
+            <div class="modal__btn">소스보기</div>
+            <div class="modal__cont">
+                <div class="modal__box">
+                    <div class="tab__title">
+                        <span class="dot" aria-label="true"></span>
+                        <div class="tabs">
+                            <div class="active">
+                                <span class="favicon" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                        <path
+                                            d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="orange"></path>
+                                        <path
+                                            d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="yellow"></path>
+                                    </svg>
+                                </span>
+                                <em>Javascript</em>
+                                <span class="close" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="favicon" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                        <path
+                                            d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="orange"></path>
+                                        <path
+                                            d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="yellow"></path>
+                                    </svg>
+                                </span>
+                                <em>HTML</em>
+                                <span class="close" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="favicon" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                        <path
+                                            d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="orange"></path>
+                                        <path
+                                            d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="yellow"></path>
+                                    </svg>
+                                </span>
+                                <em>CSS</em>
+                                <span class="close" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+
+                        </div>
+                        <span class="plus" aria-label="true">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                focusable="false">
+                                <path d="M2.5 8H13.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M8 2.5V13.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="cont">
+                        <div class="active">
+<pre><code class="language-js">//선택자
+const quizType = document.querySelector(".quiz__type");                 //퀴즈 종류
+const quizNum = document.querySelector(".quiz__question .number");      //퀴즈 번호
+const quizAsk = document.querySelector(".quiz__question .ask");         //퀴즈 질문
+const quizConfirm = document.querySelector(".quiz__answer .confirm");   //퀴즈 확인 버튼
+const quizInput = document.querySelector(".quiz__answer .input")        //사용자 정답
+const quizResult = document.querySelector(".quiz__answer .result");     //퀴즈 결과
+const quizView = document.querySelector(".quiz__view");                 //강아지
+const quizSelects = document.querySelector(".quiz__selects");           //객관식 보기
+const quizChoice = quizSelects.querySelectorAll(".choice");             //객관식 보기
+const quizSelect = quizSelects.querySelectorAll(".select");             //객관식 보기
+//문제 정보
+const quizInfo = [
+    {
+        answerType: "웹디자인기능사 기출문제 2014년 07월 20일(4회)",
+        answerNum: 1,
+        answerAsk: "다음 중 디자인의 조건에 해당하지 않는 것은?",
+        answerChoice: ["합목적성", "심미성", "경제성", "유통성"],
+        answerResult : "4",
+        answerEx : "유통성",
+    }
+];
+//문제출력 함수
+function updateQuiz() {
+//문제 출력
+quizType.textContent =  quizInfo[0].answerType;
+quizNum.textContent = quizInfo[0].answerNum + ". "
+quizAsk.textContent =  quizInfo[0].answerAsk;
+quizResult.textContent = quizInfo[0].answerEx;
+quizInfo[0].answerChoice.forEach((_, i) =&gt; {
+    quizChoice[i].textContent = quizInfo[0].answerChoice[i];
+});
+//정답 숨기기
+quizResult.style.display = "none";
+}
+updateQuiz();
+//정답확인
+function answerQuiz() {
+    //사용자가 선택한 정답 == 문제 정답
+    //사용자가 클릭한 iuput --&gt; checked
+    for (let i = 0; i &lt; quizInfo[0].answerChoice.length; i++) {
+        if(quizSelect[i].checked == true) {
+            if(quizSelect[i].value === quizInfo[0].answerResult) {
+                quizView.classList.add("like");
+                quizConfirm.style.display = "none";
+            } else {
+                quizView.classList.add("dislike");
+                quizConfirm.style.display = "none";
+                quizResult.style.display = "block";
+                quizSelect[Number(quizInfo[0].answerResult) - 1].checked = true;
+                break;
+            }
+        }
+    }
+}
+quizConfirm.addEventListener("click", () =&gt; answerQuiz());
+</code></pre>
+                        </div>
+                        <div>
+<pre><code class="language-html">&lt;div class="quiz__wrap"&gt;
+    &lt;div class="quiz"&gt;
+        &lt;sapn class="quiz__type"&gt;&lt;/sapn&gt;
+        &lt;h2 class="quiz__question"&gt;
+            &lt;span class="number"&gt;&lt;/span&gt;
+            &lt;div class="ask"&gt;
+            &lt;/div&gt;
+        &lt;/h2&gt;
+        &lt;div class="quiz__view"&gt;
+            &lt;div class="true"&gt;정답입니다!&lt;/div&gt;
+            &lt;div class="false"&gt;틀렸습니다!&lt;/div&gt;
+            &lt;div class="dog"&gt;
+                &lt;div class="head"&gt;
+                    &lt;div class="ears"&gt;&lt;/div&gt;
+                    &lt;div class="face"&gt;&lt;/div&gt;
+                    &lt;div class="eyes"&gt;
+                        &lt;div class="teardrop"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="nose"&gt;&lt;/div&gt;
+                    &lt;div class="mouth"&gt;
+                        &lt;div class="tongue"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="chin"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="body"&gt;
+                    &lt;div class="tail"&gt;&lt;/div&gt;
+                    &lt;div class="legs"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="quiz__answer"&gt;
+            &lt;div class="quiz__selects"&gt;
+                &lt;label for="select1"&gt;
+                    &lt;input type="radio" id="select1" class="select" name="select" value="1"&gt; &lt;!-- name은 ipunt만가능 --&gt;
+                    &lt;span class="choice"&gt;&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;label for="select2"&gt;
+                    &lt;input type="radio" id="select2" class="select" name="select" value="2"&gt; &lt;!-- name은 ipunt만가능 --&gt;
+                    &lt;span class="choice"&gt;&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;label for="select3"&gt;
+                    &lt;input type="radio" id="select3" class="select" name="select" value="3"&gt; &lt;!-- name은 ipunt만가능 --&gt;
+                    &lt;span class="choice"&gt;&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;label for="select4"&gt;
+                    &lt;input type="radio" id="select4" class="select" name="select" value="4"&gt; &lt;!-- name은 ipunt만가능 --&gt;
+                    &lt;span class="choice"&gt;&lt;/span&gt;
+                &lt;/label&gt;          
+            &lt;/div&gt;
+            &lt;button class="confirm"&gt;정답 확인하기&lt;/button&gt;
+            &lt;div class="result"&gt;&lt;/div&gt; 
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                        </div>
+                        <div>
+<pre><code class="language-css">.quiz__wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.quiz {
+    max-width: 500px;
+    width: 100%;
+    background-color: #fff;
+    border: 8px ridge #cacaca;
+    margin: 10px;
+}
+
+.quiz__type {
+    background-color: #b7c3d8;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    border: 3px ridge #cacaca;
+    color: #3b3b3b;
+    font-family: "DungGeunMo";
+    padding: 4px;
+}
+
+.quiz__question {
+    border-top: 6px ridge #cacaca;
+    border-bottom: 6px ridge #cacaca;
+    padding: 20px;
+    font-family: "Cafe24Dangdanghae";
+    line-height: 1.3;
+}
+
+.quiz__question .number {
+    color: #dc496f;
+}
+
+.quiz__question .ask {
+    display: inline;
+    color: var(--black);
+}
+
+.quiz__answer {
+    border-top: 6px ridge #cacaca;
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+.quiz__answer .input {
+    border: 6px ridge #cacaca;
+    width: 100%;
+    font-size: 22px;
+    padding: 13px 20px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    font-family: "Cafe24Dangdanghae";
+    box-sizing: border-box;
+}
+
+.quiz__answer .confirm {
+    border: 6px ridge #cacaca;
+    width: 100%;
+    font-size: 22px;
+    padding: 13px 20px;
+    background-color: #b7c3d8;
+    font-family: "Cafe24Dangdanghae";
+    cursor: pointer;
+}
+.confirm {
+    width: 100px;
+    text-align: center;
+}
+
+.quiz__confirm {
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: "Cafe24Danggdanghae";
+}
+.quiz__confirm .check {
+    font-size: 22px;
+    line-height: 1.3;
+    padding: 13px 60px;
+    border: 6px ridge #cacaca;
+    margin: 40px 0;
+    transition: background 0.3s;
+}
+.quiz__confirm .check:hover {
+    background-color: #f7a92be4;
+}
+.quiz__confirm .ex {
+    width: 400px;
+    overflow-wrap: break-word;
+    display: none;
+    font-size: 20px;
+    line-height: 1.3;
+    padding: 13px 60px;
+    border: 6px ridge #cacaca;
+    font-family: "Cafe24Danggdanghae";
+    margin: 40px 0;
+    background-color: #f7a92be4;
+}
+
+.quiz__answer .result {
+    width: 100%;
+    font-size: 22px;
+    padding: 13px 20px;
+    line-height: 1.3;
+    border: 6px ridge #cacaca;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: "Cafe24Dangdanghae";
+}
+
+.quiz__selects {
+    max-width: 5px 0;;
+    
+}
+.quiz__selects label{
+    display: flex;
+}
+
+.quiz__selects label input {
+    position: absolute;
+    left: -9999px;
+}
+.quiz__selects label span, .choice__result{
+    font-size: 20px;
+    line-height: 1.3;
+    font-family: "Cafe24Dangdanghae";
+    padding: 10px 30px 10px 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+}
+.choice__result {
+    overflow-wrap: break-word;
+    width: 100%;
+    display: inline-block;
+}
+
+
+.quiz__selects label span::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-shrink: 0;
+    box-shadow: inset 0px 0px 0px 3px #62261E;
+    transition:  all 0.25s;
+    margin-right: 15px;
+}
+.quiz__selects label input:checked + span{
+    background-color: #62261e58;
+}
+.quiz__selects label input:checked + span::before {
+    content: '';
+    box-shadow: inset 0px 0px 0px 15px #62261E;
+}
+
+.quiz__view {
+    background-color: #f5f5f5;
+    position: relative;
+    overflow: hidden;
+}
+.quiz__view .true {
+    width: 120px;
+    height: 120px;
+    background-color: #a74d38;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 120px;
+    position: absolute;
+    left: 70%;
+    top: 100px;
+    color: #fff;
+    opacity: 0;
+    font-family: "Cafe24Dangdanghae";
+}
+.quiz__view .false {
+    width: 120px;
+    height: 120px;
+    background-color: #4f5983;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 120px;
+    position: absolute;
+    right: 70%;
+    top: 100px;
+    color: #fff;
+    opacity: 0;
+    font-family: "Cafe24Dangdanghae";
+}
+.quiz__view.like .true {
+    opacity: 1;
+    animation: wobble 0.6s; /* 좌우로 흔들리는 애니메이션 */
+}
+.quiz__view.dislike .false {
+    opacity: 1;
+    animation: wobble 0.6s;
+}
+@keyframes wobble {
+    0%   {transform: translatex(0) rotate(0deg);}
+    15%  {transform: translatex(-25%) rotate(-5deg);}
+    30%  {transform: translatex(20%) rotate(3deg);}
+    45%  {transform: translatex(-15%) rotate(-2deg);}
+    60%  {transform: translatex(10%) rotate(1deg);}
+    75%  {transform: translatex(-5%) rotate(-1deg);}
+    100% {transform: translatex(0) rotate(0deg);}
+}
+</code></pre>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="modal__close">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- //footer -->
+    <script src="../assets/js/modal.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    <script>
+        //선택자
+        const quizType = document.querySelector(".quiz__type");                 //퀴즈 종류
+        const quizNum = document.querySelector(".quiz__question .number");      //퀴즈 번호
+        const quizAsk = document.querySelector(".quiz__question .ask");         //퀴즈 질문
+        const quizConfirm = document.querySelector(".quiz__answer .confirm");   //퀴즈 확인 버튼
+        const quizInput = document.querySelector(".quiz__answer .input")        //사용자 정답
+        const quizResult = document.querySelector(".quiz__answer .result");     //퀴즈 결과
+        const quizView = document.querySelector(".quiz__view");                 //강아지
+        const quizSelects = document.querySelector(".quiz__selects");           //객관식 보기
+        const quizChoice = quizSelects.querySelectorAll(".choice");             //객관식 보기
+        const quizSelect = quizSelects.querySelectorAll(".select");             //객관식 보기
+        //문제 정보
+        const quizInfo = [
+            {
+                answerType: "웹디자인기능사 기출문제 2014년 07월 20일(4회)",
+                answerNum: 1,
+                answerAsk: "다음 중 디자인의 조건에 해당하지 않는 것은?",
+                answerChoice: ["합목적성", "심미성", "경제성", "유통성"],
+                answerResult : "4",
+                answerEx : "유통성",
+            }
+        ];
+        //문제출력 함수
+        function updateQuiz() {
+        //문제 출력
+        quizType.textContent =  quizInfo[0].answerType;
+        quizNum.textContent = quizInfo[0].answerNum + ". "
+        quizAsk.textContent =  quizInfo[0].answerAsk;
+        quizResult.textContent = quizInfo[0].answerEx;
+
+        quizInfo[0].answerChoice.forEach((_, i) => {
+            quizChoice[i].textContent = quizInfo[0].answerChoice[i];
+        });
+        //정답 숨기기
+        quizResult.style.display = "none";
+        }
+        updateQuiz();
+        //정답확인
+        function answerQuiz() {
+            //사용자가 선택한 정답 == 문제 정답
+            //사용자가 클릭한 iuput --> checked
+            for (let i = 0; i < quizInfo[0].answerChoice.length; i++) {
+                if(quizSelect[i].checked == true) {
+                    if(quizSelect[i].value === quizInfo[0].answerResult) {
+                        quizView.classList.add("like");
+                        quizConfirm.style.display = "none";
+                    } else {
+                        quizView.classList.add("dislike");
+                        quizConfirm.style.display = "none";
+                        quizResult.style.display = "block";
+                        quizSelect[Number(quizInfo[0].answerResult) - 1].checked = true;
+                        break;
+                    }
+                }
+            }
+        }
+
+        quizConfirm.addEventListener("click", () => answerQuiz());
+    </script>
+</body>
+</html>

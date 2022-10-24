@@ -1,0 +1,424 @@
+/* font */
+@import url("https://webfontworld.github.io/hallym/HallymMjo.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "HallymMjo";
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: "NexonLv1Gothic";
+    font-weight: 300;
+}
+
+body.img01 {
+    background: #000 url(../img/effect_bg01@2x.jpg) no-repeat center / cover;
+}
+
+body.img02 {
+    background: #000 url(../img/effect_bg02@2x.jpg) no-repeat center / cover;
+}
+
+body.img03 {
+    background: #000 url(../img/effect_bg03@2x.jpg) no-repeat center / cover;
+}
+
+body.img04 {
+    background: #000 url(../img/effect_bg04@2x.jpg) no-repeat center / cover;
+}
+
+body.img05 {
+    background: #000 url(../img/effect_bg05@2x.jpg) no-repeat center / cover;
+}
+
+body.img06 {
+    background: #000 url(../img/effect_bg06@2x.jpg) no-repeat center / cover;
+}
+
+body.img07 {
+    background: #000 url(../img/effect_bg07@2x.jpg) no-repeat center / cover;
+}
+
+body.img08 {
+    background: #000 url(../img/effect_bg08@2x.jpg) no-repeat center / cover;
+}
+
+body.img09 {
+    background: #000 url(../img/effect_bg09@2x.jpg) no-repeat center / cover;
+}
+
+body.img10 {
+    background: #000 url(../img/effect_bg10@2x.jpg) no-repeat center / cover;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+a {
+    color: #232323;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* layout */
+#header {
+    z-index: 2000;
+}
+#main {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+}
+#footer {
+    position: relative;
+    z-index: 3000;
+}
+
+/* header */
+#header {
+    color: #fff;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#header h1 {
+}
+#header h1 a {
+    display: inline-block;
+    font-weight: 300;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ffff;
+    color: #fff;
+}
+
+#header p {
+    margin-bottom: 10px;
+}
+
+#header ul {
+}
+
+#header li {
+    display: inline-block;
+}
+
+#header li a {
+    background-color: #666;
+    border: 1px solid #232323;
+    border-radius: 50%;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+}
+#header li.active a {
+    background-color: #fff;
+    color: #232323;
+}
+
+/* footer */
+#footer {
+}
+
+#footer .source {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    border: 1px solid #232323;
+    background-color: #cdcdcd;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+/* modal__wrap */
+.modal__wrap {
+}
+.modal__btn {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 10px 20px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3, color 0.3s;
+}
+.modal__btn:hover {
+    background-color: #fff;
+    color: #232323;
+}
+
+.modal__cont {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+}
+
+.modal__box {
+    width: 70%;
+    height: 70vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 20px -5px hsl(180deg 2% 10%);
+    transform: scale(0);
+}
+.modal__box .tab__title {
+    padding-inline: 1rem;
+    cursor: grab;
+    background-color: hsl(180 2% 10%);
+    display: flex;
+    align-items: center;
+    color: #fff;
+    height: 50px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.modal__box .tab__title .dot {
+    width: 15px;
+    height: 15px;
+    background-color: #f4be50;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.modal__box .tab__title .dot::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #61c454;
+    border-radius: 50%;
+}
+.modal__box .tab__title .dot::after {
+    content: "";
+    position: absolute;
+    right: 25px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #ec695e;
+    border-radius: 50%;
+}
+.modal__box .tab__title .plus {
+    background-color: hsl(22, 7%, 29%);
+    padding: 0.5rem 0.5rem 0.35rem 0.5rem;
+    border-radius: 50%;
+}
+
+.modal__box .tab__title .tabs {
+    display: flex;
+    margin-left: 50px;
+    cursor: pointer;
+}
+.modal__box .tab__title .tabs > div {
+    color: hsl(39 33% 66%);
+    background-color: hsl(22, 7%, 29%);
+    padding: 0.35rem 0.8rem 0.25rem 0.8rem;
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0.4rem;
+    text-transform: uppercase;
+}
+.modal__box .tab__title .tabs > div.active {
+    background-color: hsl(22, 7%, 20%);
+}
+.modal__box .tab__title .tabs > div em {
+    font-style: normal;
+}
+.modal__box .tab__title .tabs > div .favicon {
+    margin-right: 0.4rem;
+    margin-top: 0.2rem;
+}
+.modal__box .tab__title .tabs > div .close {
+    padding: 0.35rem 0rem 0.25rem 0rem;
+    margin-left: 3rem;
+}
+.modal__box .cont {
+    height: 100%;
+    background-color: hsl(20 3% 19%);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    overflow-y: auto;
+}
+.modal__box .cont > div.active {
+    display: block;
+    height: 100%;
+}
+.modal__box .cont > div {
+    display: none;
+}
+
+.modal__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: hsl(22, 7%, 29%);
+    padding: 1rem 1rem 0.8rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 7px -5px hsl(180deg 2% 10%);
+    cursor: pointer;
+    transition: all 0.3s;
+    opacity: 0;
+}
+.modal__close:hover {
+    background-color: hsl(22, 7%, 39%);
+}
+.modal__close svg {
+    color: #fff;
+}
+
+/* 요소를 안보이게 하는 방법
+1. display: none; (애니메이션x 영역x)
+2. opacity: 0; (애니메이션O, 영역O)
+3. visibility: hidden; (애니메이션X, 영역X)
+4. width: 0; height: 0; (애니메이션X, 영역X) : blind 
+5. transform: scale(0); (애니메이션O, 영역X)*/
+
+/* modal animation */
+.modal__cont.show {
+    animation: foldOut 1s ease forwards;
+}
+.modal__cont.show .modal__box {
+    animation: zoomOut 0.5s 1s ease forwards;
+}
+.modal__cont.show .modal__close {
+    animation: closeOut 0.5s 1.5s ease forwards;
+}
+
+.modal__cont.show.hide {
+    animation: foldIn 1s 1s ease backwards;
+}
+.modal__cont.show.hide .modal__box {
+    animation: zoomIn 0.5s 0.5s ease backwards;
+}
+.modal__cont.show.hide .modal__close {
+    animation: closeIn 0.5s ease forwards;
+}
+
+@keyframes foldOut {
+    0% {
+        transform: scaleX(0.001) scaleY(0);
+    }
+    50% {
+        transform: scaleX(0.001) scaleY(1);
+    }
+    100% {
+        transform: scaleX(1) scaleY(1);
+    }
+}
+@keyframes foldIn {
+    0% {
+        transform: scaleX(1) scaleY(1);
+    }
+    50% {
+        transform: scaleX(0.001) scaleY(1);
+    }
+    100% {
+        transform: scaleX(0.001) scaleY(0);
+    }
+}
+@keyframes zoomOut {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+@keyframes closeOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes closeIn {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1100px) {
+    .modal__box .tab__title {
+        overflow: hidden;
+    }
+    .modal__box .tab__title .dot {
+        display: none;
+    }
+    .modal__box .tab__title .tabs {
+        margin-left: 0;
+    }
+    .modal__box .tab__title .tabs > div .close {
+        display: none;
+    }
+}
+@media (max-width: 800px) {
+    #header {
+        width: 100%;
+        text-align: center;
+    }
+    #header h1 {
+        line-height: 1.4;
+    }
+    .modal__box {
+        width: 80%;
+    }
+}

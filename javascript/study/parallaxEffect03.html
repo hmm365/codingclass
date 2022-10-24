@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바스크립 이펙트</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">페럴럭스 이펙트3</h2>
+                <p class="t_desc2">이번 페럴럭스 이펙트는 사이드 메뉴의 버튼을 클릭하면 해당하는 섹션으로 이동하며, 해당하는 섹션의 위치에 도달하면 버튼의 모양이 바뀜니다.</p>
+                <iframe height="400" style="width: 100%" src="https://syumay.netlify.app/javascript/effect/parallaxeffect03"></iframe>
+                <div class="t_link">
+                    <a href="https://github.com/hmm365/coding2/blob/main/javascript/effect/parallaxEffect03.html">원본 소스 보기</a>
+                    <a href="https://syumay.netlify.app/javascript/effect/parallaxeffect03">원본 사이트 보기</a>
+                </div>
+                <hr />
+                <h2 class="t_ti2">js코드 설명</h2>
+                <p class="t_desc2">scrollProgress 함수를 만들어 setInterval 로 과부화를 방지후 스크롤을 위로 올리면 메뉴가 나오게 했습니다.</p>
+                <div class="t_code">
+                    <pre><code class="language-js">function scrollProgress() {
+    nowScroll = true;
+    setInterval(() =&gt; {
+        if (nowScroll) {
+            nowScroll = false;
+            hasScroll();
+        }
+    }, 300);
+}
+function hasScroll() {
+    let scrollTop = document.documentElement.scrollTop || window.pageYOffset || window.scrollY;
+    if (scrollTop &lt; lastScroll) {
+        document.querySelector("#parallax__nav").classList.add("show");
+    } else {
+        document.querySelector("#parallax__nav").classList.remove("show");
+    }
+    lastScroll = scrollTop;
+}
+window.addEventListener("scroll", scrollProgress);
+</code></pre>
+                </div>
+                <p class="t_desc2">body 부분이 끝지점일때 맨위로 올라가는 버튼을 보여주게합니다.</p>
+                <div class="t_code">
+                    <pre><code class="language-js">if (scrollTop >= document.body.scrollHeight - window.innerHeight - 10) {
+    document.querySelector("#parallax__top").classList.add("show");
+} else {
+    document.querySelector("#parallax__top").classList.remove("show");
+}
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script></script>
+    </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 레퍼런스 북</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- 구글아이콘 -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <span>이름 : 이중호</span>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <header class="main_header">
+            <h2>HTML <em>레퍼런스 북</em></h2>
+        </header>
+        <nav class="main_menu">
+            <ul>
+                <li><a href="alphabet.html">알파벳</a></li>
+                <li class="active"><a href="basic.html">기초 문법</a></li>
+                <li><a href="inline_block.html">블록구조/인라인구조</a></li>
+                <li><a href="web.html">웹표준/웹접근성/웹호환성</a></li>
+                <li><a href="semantic.html">시멘틱 태그</a></li>
+                <li><a href="seo.html">검색엔진시스템(SEO)</a></li>
+            </ul>
+            <ul>
+                <li><a href="layout01.html">레이아웃01</a></li>
+                <li><a href="layout02.html">레이아웃02</a></li>
+                <li><a href="layout03.html">레이아웃03</a></li>
+                <li><a href="layout04.html">레이아웃04</a></li>
+                <li><a href="layout05.html">레이아웃05</a></li>
+            </ul>
+        </nav>
+        <div class="document">
+            <h2 class="t_tit2">HTML 기본 문서</h2>
+            <p class="t_box">
+                html 요소는 &lt;head&gt;, &lt;body&gt;
+                요소로 구성되어있으며, &lt;head&gt; 요소 안에는 &lt;meta&gt;, &lt;title&gt;, &lt;link&gt;, &lt;style&gt;,
+                &lt;script&gt; 등의 요소들이 올수 있습니다.
+            </p>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>요소명</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center">&lt;meta&gt;</td>
+                        <td>HTML 문서의 설명, 키워드, 문서의 작성자 등을 지정합니다 </td>
+                    </tr>
+                    <tr>
+                        <td class="center">&lt;title&gt;</td>
+                        <td>HTML 문서의 제목을 지정합니다. </td>
+                    </tr>
+                    <tr>
+                        <td class="center">&lt;link&gt;</td>
+                        <td>외부의 CSS 파일을 HTML 문서에 연결할 때 사용합니다. </td>
+                    </tr>
+                    <tr>
+                        <td class="center">&lt;style&gt;</td>
+                        <td>HTML 문서 내에서 스타일(CS5)을 정의합니다. </td>
+                    </tr>
+                    <tr>
+                        <td class="center">&lt;script&gt;</td>
+                        <td>자바스크립트를 HTML 문서 내부에서 정의하거나 외부에서 자바스크립트 파일을 불러올 때 사용합니다.. </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h2 class="t_tit2">속성</h2>
+            <p class="t_desc2">&lt;html lang="ko"&gt;나 &lt;meta charset="UTF-8&gt; 처럼 태그 내부에 부가적인 설정값을 선언하는 것을 속성(attribute)라고 합니다.<br>
+                lang 속성은 HTML 문서에서 사용하는 언어를 말하며 스크린 리더 에서 언서 설정에 따라 다르게 읽어 주기 때문에 HTML 문서에서 꼭 정의해야 하는 속성입니다.<br>
+                &lt;meta&gt; 태그의 charset 속성의 UTF-8을 '문자 인코딩(charset)' 방식이라고 합니다. HTML의 문자 인코딩 방식으로 주소 사용되고 있습니다
+            </p>
+            <P class="t_box">
+                &lt;meta name = "vieport"/&gt;
+            </P>
+            <p class="t_desc">vieport 라고 하면 문서를 조절해 주는 속성이다.</p>
+        </div>
+    </main>
+
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+</body>
+
+</html>

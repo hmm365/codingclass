@@ -1,0 +1,104 @@
+#banner h2 {
+  @include blind;
+}
+
+.banner__inner {
+  @include flex_sb;
+  @include border_bottom;
+  padding: 60px 0;
+
+  .img {
+    width: 30%;
+    border-radius: 50%;
+    overflow: hidden;
+    filter: saturate(0%);
+    transition: all 1s;
+  }
+
+  .desc {
+    width: 65%;
+    font-size: 1.7rem;
+    font-weight: 300;
+    line-height: 1.5;
+    word-break: keep-all;
+
+    em {
+      color: $font-em;
+      position: relative;
+      transition: color 0.3s;
+
+      &::before {
+        content: "";
+        width: 0%;
+        height: 100%;
+        background: $bg-em;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: all 0.6s;
+      }
+    }
+  }
+
+  &:hover .img {
+    filter: saturate(100%);
+  }
+
+  &:hover .desc em {
+    color: $black;
+  }
+
+  &:hover .desc em::before {
+    width: 100%;
+  }
+}
+
+// 배너스타일2 - 회원가입 페이지
+.banner__inner2 {
+  @include border_bottom;
+  padding: 60px 0;
+  text-align: center;
+
+  .img {
+    width: 25%;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: all 1s;
+    margin-bottom: 2rem;
+  }
+
+  .desc {
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.5;
+    word-break: keep-all;
+
+    em {
+      color: $font-em;
+      position: relative;
+      transition: color 0.3s;
+
+      &::before {
+        content: "";
+        width: 0%;
+        height: 100%;
+        background: $bg-em;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: all 0.6s;
+      }
+    }
+  }
+
+  &:hover .desc em {
+    color: $black;
+  }
+
+  &:hover .desc em::before {
+    width: 100%;
+  }
+}

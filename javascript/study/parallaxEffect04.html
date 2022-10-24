@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바스크립 이펙트</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">페럴럭스 이펙트4</h2>
+                <p class="t_desc2">이번 페럴럭스 이펙트는 사이드 메뉴의 버튼을 클릭하면 해당하는 섹션으로 이동하며, 해당하는 섹션의 위치에 도달하면 버튼의 모양이 바뀜니다.</p>
+                <iframe height="400" style="width: 100%" src="https://syumay.netlify.app/javascript/effect/parallaxeffect04"></iframe>
+                <div class="t_link">
+                    <a href="https://github.com/hmm365/coding2/blob/main/javascript/effect/parallaxEffect04.html">원본 소스 보기</a>
+                    <a href="https://syumay.netlify.app/javascript/effect/parallaxeffect04">원본 사이트 보기</a>
+                </div>
+                <hr />
+                <h2 class="t_ti2">js 코드 설명</h2>
+
+                <p class="t_desc2">
+                    requestAnimationFrame을 이용하여 리소스의 과부화를 방지합니다. <br />
+                    requestAnimationFrame 브라우저에게 수행하기를 원하는 애니메이션을 알리고 다음 리페인트가 진행되기 전에 해당 애니메이션을 업데이트하는 함수를 호출하게 합니다. 이 메소드는 리페인트 이전에 실행할 콜백을 인자로 받습니다.<br />
+                    또한 css 에서 show 를 이용한 애니메이션 처리를 하여 동적인 사이트가 되었습니다.
+                </p>
+                <div class="t_code">
+                    <pre><code class="language-js">let con = 0;
+// window.addEventListener("scroll", scrollProgress);
+                        
+function scroll() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.screenY;
+    document.querySelectorAll(".content__item").forEach((item) => {
+        if (scrollTop > item.offsetTop - window.innerHeight) {
+            item.classList.add("show");
+        }
+    });
+    requestAnimationFrame(scroll);
+}
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script></script>
+    </body>
+</html>

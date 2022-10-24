@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 쿼리(media query)</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+<body>
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">미디어 쿼리(media query)</h2>
+            <p class="t_desc2">
+                뷰포트의 해상도에 따라 CSS를 분기시키는 미디어쿼리는 반응형 프로젝트에서 반드시 필요한 기법
+            </p>
+
+            <hr>
+
+            <h3 class="t_tit">
+                &lt;link ~ media=""&gt;
+            </h3>
+            <p class="t_box">
+                &lt;link rel="stylesheet" type="text/css" media="all and (min-width: 1000px)" href="style_pc.css"&gt;
+            </p>
+            <p class="t_desc">
+                최소 가로폭이 1000px, 즉 1000px 보다 넓은 해상도일 때에 style_pc.css를 연결한다는 뜻입니다.<br>
+                태블릿이나 모바일 기기마다 가로폭이 다른데, 크롬 브라우저에서 개발자 도구를 열고 Toggle device Toolbar를 누르면 기기마다의 해상도도 확인할 수 있고 기기 모델도 추가할 수 있습니다.<br>
+                또한 다음 트로이 (http://troy.labs.daum.net/)에서는 기기별 해상도를 제공하고 실제 작동 화면을 확인할 수 있는 VIEW를 제공합니다.<br>
+            </p>
+            <hr>
+
+            <table class="t_table" style="margin-top: 10px !important;">
+                <thead>
+                    <tr>
+                        <th>모바일 기기</th>
+                        <th>가로</th>
+                        <th>세로</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">iPhone X</td>
+                        <td class="ce">375</td>
+                        <td class="ce">812</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">iPhone 6,7,8</td>
+                        <td class="ce">375</td>
+                        <td class="ce">667</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">iPhone 6,7,8 plus</td>
+                        <td class="ce">414</td>
+                        <td class="ce">736</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">iPhone 5</td>
+                        <td class="ce">320</td>
+                        <td class="ce">568</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">Galaxy S5, S8</td>
+                        <td class="ce">360</td>
+                        <td class="ce">640</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">Galaxy Note8</td>
+                        <td class="ce">360</td>
+                        <td class="ce">640</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">iPad Pro</td>
+                        <td class="ce">1024</td>
+                        <td class="ce">1366</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">.<br>.<br>.</td>
+                        <td class="ce">.<br>.<br>.</td>
+                        <td class="ce">.<br>.<br>.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr>
+
+
+            <h3 class="t_tit2">@media</h2>
+            <p class="t_desc2">
+                처음 로딩할 때 성능이 저하되지 않도록 CSS 파일을 하나로 만들어서 CSS 내부에서 조건에 따라 분기시키는 것이 일반적인 형태의 반응형웹 CSS입니다.
+            <p class="t_box">
+                @media all and (min-width: 1000px) { <br> 
+                    /* all은 Media Type을 나타냅니다. and 전, 후에 띄어 씁니다. */<br>
+                    모든 기기에서 해상도가 최소 1000px 인 경우 적용할 속성들<br>
+                }
+            </p>
+            <p class="t_box">
+                body { color : red; }<br>
+                @media only screen and (max-width: 768px) {<br>
+                    body { color : blue; }<br>
+                }
+            <p class="t_desc">
+                화면이 768px보다 작아 졌을 때는 파란색 그외에는 빨간색으로 글씨색을 변경합니다.
+            </p>
+            <p class="t_box">
+                body { color : red; }<br>
+                @media only screen and (min-width: 768px) {<br>
+                    body { color : blue; }<br>
+                }
+            <p class="t_desc">
+                화면이 768px보다 커 졌을 때는 파란색 그외에는 빨간색으로 글씨색을 변경합니다.
+            </p>
+            <p class="t_box">
+                @media only screen and (orientation: portrait) {<br>
+                    body { background : skyblue; }<br>
+                }
+            <p class="t_desc">
+                모바일 기기의 세로가 가로보다 긴 세로방향이 되면 배경색을 하늘색으로 지정합니다.
+            </p>
+            <p class="t_box">
+                @media screen and (max-width: 900px) and (min-width: 600px), (min-width: 1100px) {<br>
+                    body { color : red; }<br>
+                }
+            <p class="t_desc">
+               가로가 600px에서 900px 사이일 때, 그리고 1100px 이상일 때에만 글자색을 빨간색으로 지정합니다.
+            </p>
+            <hr>
+            <h3 class="t_tit">예제</h3>
+            <p class="t_desc">
+                768px, 1024px, 1280px 로 해서 모바일과 태블릿, PC의 경계를 설정한 레이아웃 입니다.
+            </p>
+            <div class="t_iframe">
+                <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKARS9cIeTtuG0CCrXbv81M%2FUntitled%3Fnode-id%3D4%253A2" allowfullscreen></iframe>
+            </div>
+            <div class="t_code">    
+                <div class="t_result">
+                    <details>
+                        <summary>코드 보기</summary>
+<pre><code class="language-css">h1,
+h2,
+ul,
+li,
+p,
+div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style-type: none;
+}
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+a {
+    line-height: 1.5;
+    color: #333;
+}
+body {
+    background: #f1f1f1;
+    font-size: 13px;
+}
+header {
+    background: coral;
+}
+h1 {
+    font-size: 25px;
+    color: #cc0;
+    padding: 10px;
+    color: #fff;
+}
+.lnb li {
+    margin: 10px;
+    padding: 10px;
+    background: lightgreen;
+}
+.content {
+    padding: 20px;
+}
+h2 {
+    font-size: 20px;
+}
+.ext {
+    margin: 10px;
+    padding: 20px;
+    background: lightgreen;
+}
+footer {
+    padding: 10px;
+    background: #aaa;
+}
+@media all and (min-width:768px) and (max-width:1024px) {
+    .lnb {
+        float: left;
+        width: 25%;
+    }
+    .content {
+        float: left;
+        width: 75%;
+    }
+    .aside {
+        clear: both;
+    }
+}
+@media all and (min-width:1025px) {
+    .wrap {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    .lnb {
+        float: left;
+        width: 20%;
+    }
+    .content {
+        float: left;
+        width: 50%;
+    }
+    .aside {
+        float: right;
+        width: 30%;
+    }
+}
+</code></pre>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;div class="wrap"&gt;
+        &lt;header&gt;
+            &lt;h1&gt;Musee d'Orsay&lt;/h1&gt;
+        &lt;/header&gt;
+        &lt;div id="container" class="clear"&gt;
+            &lt;div class="lnb"&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;작가의 작품&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;작가의 시대&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;작가의 일생&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class="content"&gt;
+                &lt;h2&gt;PICTURES&lt;/h2&gt;
+                &lt;p&gt;&lt;a href="#"&gt;피리부는 소년&lt;/a&gt; &lt;br&gt;&lt;a href="#"&gt;고흐의 방&lt;/a&gt;&lt;br&gt;&lt;a href="#"&gt;황색 그리스도가 있는 화가의 자화상&lt;/a&gt;&lt;br&gt;&lt;a
+                        href="#"&gt;오페라좌의 관현악단&lt;/a&gt;&lt;br&gt;&lt;a href="#"&gt;만종&lt;/a&gt;&lt;br&gt;&lt;a href="#"&gt;제비꽃 장식을 단 베르트모리조&lt;/a&gt;&lt;br&gt;&lt;a
+                        href="#"&gt;피리부는 소년&lt;/a&gt; &lt;br&gt;&lt;a href="#"&gt;고흐의 방&lt;/a&gt;&lt;br&gt;&lt;a href="#"&gt;황색 그리스도가 있는 화가의 자화상&lt;/a&gt;&lt;br&gt;&lt;a
+                        href="#"&gt;오페라좌의 관현악단&lt;/a&gt;&lt;br&gt;&lt;a href="#"&gt;만종&lt;/a&gt;&lt;br&gt;&lt;a href="#"&gt;제비꽃 장식을 단 베르트모리조&lt;/a&gt;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="aside"&gt;
+                &lt;ul class="ext"&gt;
+                    &lt;li&gt;
+                        &lt;h2&gt;Workshop Go&lt;/h2&gt;&lt;a href="#"&gt;Life drawing workshop&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;h2&gt;Summer Exhibition&lt;/h2&gt;&lt;a href="#"&gt;A-level Summer Exibition Online 2010&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;h2&gt;RA Collection&lt;/h2&gt;&lt;a href="#"&gt;RA Collections&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;footer&gt;
+            &lt;p&gt;©2018 Les Amis du Musee d'Orsay. All rights reserved.&lt;/p&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+    
+</code></pre>
+<div class="t_iframe">
+    <iframe src="https://hmm365.github.io/coding2/css/css_media.html" allowfullscreen></iframe>
+</div>
+<div class="t_link">
+    <a href="https://hmm365.github.io/coding2/css/css_media.html">원본 사이트 보기</a>
+    <a href="https://github.com/hmm365/coding2/blob/main/css/css_media.html">원본 소스 보기</a>
+</div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+</body>
+</html>

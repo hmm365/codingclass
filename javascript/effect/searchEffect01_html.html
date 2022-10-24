@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="Ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 이펙트</title>
+
+    <link rel="stylesheet" href="../assets/css/search.css">
+
+    <link href="https://webfontworld.github.io/tmon/Tmon.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/modal.css">
+    <link rel="stylesheet" href="../assets/css/arta.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <h1>Search</h1>
+        <nav>
+            <ul>
+                <li class="active"><a href="searchEffect01.html">1</a>
+                    <ul class="sub">
+                        <li class="active"><a href="searchEffect01_html.html">HTML</a></li>
+                        <li><a href="searchEffect01_css.html">CSS</a></li>
+                        <li><a href="searchEffect01_javascript.html">JAVASCRIPT</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="searchEffect02.html">2</a></li>
+                <li><a href="searchEffect03.html">3</a></li>
+                <li><a href="searchEffect04.html">4</a></li>
+                <li><a href="searchEffect05.html">5</a></li>
+                <li><a href="searchEffect06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="search__wrap">
+            <span>indexOf()를 이용하여 HTML 태그 검색하기</span>
+            <h1>HTML 태그 검색하기</h1>
+            <div class="search__box">
+                <label for="search">검색하기</label>
+                <input type="text" id="search" placeholder="html 태그를 입력해주세요">
+            </div>
+            <div class="search__info">
+                전체 속성 갯수 : <span class="num">0</span>
+            </div>
+            <div class="search__list">
+                <div class="css">
+                    <ul>
+                        <li data-name="a"><strong>a</strong> : a 태그는 다른 페이지 이동을 설정합니다.</li>
+                        <li data-name="abbr"><strong>abbr</strong> : abbr 태그는 줄임말이나 머리글자를 표현하는 사용합니다.</li>
+                        <li data-name="acronym"><strong>acronym</strong> : acronym 태그는 준말 또는 머리글자를 나타냅니다.</li>
+                        <li data-name="address"><strong>address</strong> : address 태그는 가까운 HTML 요소의 사람, 단체, 조직 등에 대한 연락처
+                            정보를 나타냅니다.</li>
+                        <li data-name="applet"><strong>applet</strong> : applet 태그는 자바 애플릿을 보이게 하는 곳에 쓰입니다.</li>
+                        <li data-name="area"><strong>area</strong> : area 태그는 이미지의 핫스팟 영역을 정의하고 하이퍼링크 (en-US)를 추가할 수
+                            있습니다. map 요소 안에서만 사용할 수 있습니다</li>
+                        <li data-name="article"><strong>article</strong> : article 태그는 문서, 페이지, 애플리케이션, 또는 사이트 안에서 독립적으로
+                            구분해 배포하거나 재사용할 수 있는 구획을 나타냅니다.</li>
+                        <li data-name="aside"><strong>aside</strong> : aside 태그는 문서의 주요 내용과 간접적으로만 연관된 부분을 나타냅니다. 주로
+                            사이드바 혹은 콜아웃 박스로 표현합니다</li>
+                        <li data-name="audio"><strong>audio</strong> : audio 태그는 문서에 소리 콘텐츠를 포함할 때 사용합니다. src 특성 또는
+                            (en-US) 요소를 사용해 한 개 이상의 오디오 소스를 지정할 수 있으며, 다수를 지정한 경우 가장 적절한 소스를 브라우저가 고릅니다.</li>
+                        <li data-name="b"><strong>b</strong> : b 태그는 자의 주의를 요소의 콘텐츠로 끌기 위한 용도로 사용합니다. 그 외의 다른 특별한 중요도는
+                            주어지지 않습니다.</li>
+                        <li data-name="base"><strong>base</strong> : base 태그는 문서 안의 모든 상대 URL이 사용할 기준 URL을 지정합니다. 문서에는
+                            하나의 요소만 존재할 수 있습니다.</li>
+                        <li data-name="bdi"><strong>bdi</strong> : bdi 태그는 BDI는 Bi-Directional Isolation을 의미하며, 주위의
+                            텍스트들과는 다른 방향으로 써지는 텍스트 영역을 정의할 때 사용합니다.</li>
+                        <li data-name="bdo"><strong>bdo</strong> : bdo 태그의 BDO는 Bi-Directional Override를 의미하며, 자식 요소의
+                            텍스트 방향성(text directionality)을 정의할 때 사용합니다.</li>
+                        <li data-name="bgsound"><strong>bgsound</strong> : bgsound </li>
+                        <li data-name="big"><strong>big</strong> : big </li>
+                        <li data-name="blink"><strong>blink</strong> : blink </li>
+                        <li data-name="blockquote"><strong>blockquote</strong> : blockquote </li>
+                        <li data-name="body"><strong>body</strong> : body 태그는 해당 HTML 문서의 텍스트, 하이퍼링크, 이미지, 리스트 등과 같은 모든
+                            콘텐츠를 포함하는 영역을 정의할 때 사용합니다.</li>
+                        <li data-name="br"><strong>br</strong> : br 태그는 텍스트 내의 줄바꿈(line-break)을 정의할 때 사용합니다. _</li>
+                        <li data-name="button"><strong>button</strong> : button 태그는 클릭할 수 있는 버튼을 정의할 때 사용합니다.</li>
+                    </ul>
+                </div>
+                <div class="css">
+                    <ul>
+                        <li data-name="accent-color"><strong>accent-color</strong> : accent-color 는 특정 요소에 색상을 지정합니다.
+                        </li>
+                        <li data-name="align-content"><strong>align-content</strong> : align-content 는 콘텐츠 아이템의 상하관계 정렬
+                            상태를 설정합니다.</li>
+                        <li data-name="align-items"><strong>align-items</strong> : align-items 는 콘텐츠 아이템의 내부 상하관계 정렬 상태를
+                            설정합니다.</li>
+                        <li data-name="align-self"><strong>align-self</strong> : align-self 는 아이템의 교차축 정렬 정하는 속성 입니다.
+                        </li>
+                        <li data-name="all"><strong>all</strong> : all 는 요소의 속성을 초기화 또는 상속을 설정합니다.</li>
+                        <li data-name="animation"><strong>animation</strong> : animation 는 HTML 요소에 적용되는 CSS 스타일을 다른 CSS
+                            스타일로 부드럽게 변화시킵니다.</li>
+                        <li data-name="animation-delay"><strong>animation-delay</strong> : animation-delay 는 적용 대기 시간을
+                            지정합니다.</li>
+                        <li data-name="animation-direction"><strong>animation-direction</strong> : animation-direction 는
+                            애니메이션의 진행 방향을 설정합니다.</li>
+                        <li data-name="animation-duration"><strong>animation-duration</strong> : animation-duration 는
+                            실행된 애니메이션 진행 시간을 지정하는 속성입니다.</li>
+                        <li data-name="animation-fill-mode"><strong>animation-fill-mode</strong> : animation-fill-mode 는
+                            애니메이션 실행 이전이나 이후에 애니메이션 효과를 표시할지의 여부를 지정하는 속성입니다.</li>
+                    </ul>
+                </div>
+                <div class="javascript">
+                    <ul>
+                        <li data-name="indexOf()"><strong>indexOf()</strong> : indexOf() 메서드는 문자열에서 특정 문자의 위치를 찾고 숫자를
+                            반환합니다.</li>
+                        <li data-name="slice()"><strong>slice()</strong> : slice() 메서드는 문자열에서 원하는 값을 추출하여 문자열을 반환하는 메서드
+                            입니다.</li>
+                        <li data-name="substring()"><strong>substring()</strong> : substring() 메서드는 문자열에서 원하는 값을 추출하여
+                            문자열을 반환하는 메서드 입니다.</li>
+                        <li data-name="substr()"><strong>substr()</strong> : substr() 메서드는 문자열에서 원하는 값을 추출하여 문자열을 반환하는
+                            메서드 입니다.</li>
+                        <li data-name="split()"><strong>split()</strong> : split() 메서드는 문자열에서 원하는 값을 추출 배열로 변환합니다.</li>
+                        <li data-name="trim()"><strong>trim()</strong> : trim() 메서드는 문자열의 앞뒤 공백을 제거합니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <div class="modal__wrap">
+            <div class="modal__btn">소스보기</div>
+            <div class="modal__cont">
+                <div class="modal__box">
+                    <div class="tab__title">
+                        <span class="dot" aria-label="true"></span>
+                        <div class="tabs">
+                            <div class="active">
+                                <span class="favicon" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                        <path
+                                            d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="orange"></path>
+                                        <path
+                                            d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="yellow"></path>
+                                    </svg>
+                                </span>
+                                <em>Javascript</em>
+                                <span class="close" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="favicon" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                        <path
+                                            d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="orange"></path>
+                                        <path
+                                            d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="yellow"></path>
+                                    </svg>
+                                </span>
+                                <em>HTML</em>
+                                <span class="close" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="favicon" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                        <path
+                                            d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="orange"></path>
+                                        <path
+                                            d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="yellow"></path>
+                                    </svg>
+                                </span>
+                                <em>CSS</em>
+                                <span class="close" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+
+                        </div>
+                        <span class="plus" aria-label="true">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                focusable="false">
+                                <path d="M2.5 8H13.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M8 2.5V13.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="cont">
+                        <div class="active">
+<pre><code class="language-js">//선택자
+const searchBox = document.querySelector(".search__box input"); //검색 박스
+const searchList = document.querySelectorAll(".search__list ul li"); //리스트 목록
+const searchInfo = document.querySelector(".num")
+searchInfo.textContent = searchList.length;
+searchBox.addEventListener("keyup", () =&gt; {
+const searchWord = searchBox.value; //사용자가 입력한 키워드
+
+searchList.forEach((el) =&gt; {
+const cssName = el.dataset.name;
+
+if (cssName.indexOf(searchWord)) {
+el.classList.add("hide");
+} else {
+el.classList.remove("hide"); //indexOf() 값이 0이되는 값만 hide를 지워줍니다.
+}
+
+});
+})
+</code></pre>
+                        </div>
+                        <div>
+<pre><code class="language-html">&lt;div class="search__wrap"&gt;
+    &lt;span&gt;indexOf()를 이용하여 HTML 태그 검색하기&lt;/span&gt;
+    &lt;h1&gt;HTML 태그 검색하기&lt;/h1&gt;
+    &lt;div class="search__box"&gt;
+        &lt;label for="search"&gt;검색하기&lt;/label&gt;
+        &lt;input type="text" id="search" placeholder="html 태그를 입력해주세요"&gt;
+    &lt;/div&gt;
+    &lt;div class="search__info"&gt;
+        전체 속성 갯수 : &lt;span class="num"&gt;0&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="search__list"&gt;
+        &lt;div class="css"&gt;
+            &lt;ul&gt;
+                &lt;li data-name="a"&gt;&lt;strong&gt;a&lt;/strong&gt; : a 태그는 다른 페이지 이동을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="abbr"&gt;&lt;strong&gt;abbr&lt;/strong&gt; : abbr 태그는 줄임말이나 머리글자를 표현하는 사용합니다.&lt;/li&gt;
+                &lt;li data-name="acronym"&gt;&lt;strong&gt;acronym&lt;/strong&gt; : acronym 태그는 준말 또는 머리글자를 나타냅니다.&lt;/li&gt;
+                &lt;li data-name="address"&gt;&lt;strong&gt;address&lt;/strong&gt; : address 태그는 가까운 HTML 요소의 사람, 단체, 조직 등에 대한 연락처
+                    정보를 나타냅니다.&lt;/li&gt;
+                &lt;li data-name="applet"&gt;&lt;strong&gt;applet&lt;/strong&gt; : applet 태그는 자바 애플릿을 보이게 하는 곳에 쓰입니다.&lt;/li&gt;
+                &lt;li data-name="area"&gt;&lt;strong&gt;area&lt;/strong&gt; : area 태그는 이미지의 핫스팟 영역을 정의하고 하이퍼링크 (en-US)를 추가할 수
+                    있습니다. map 요소 안에서만 사용할 수 있습니다&lt;/li&gt;
+                &lt;li data-name="article"&gt;&lt;strong&gt;article&lt;/strong&gt; : article 태그는 문서, 페이지, 애플리케이션, 또는 사이트 안에서 독립적으로
+                    구분해 배포하거나 재사용할 수 있는 구획을 나타냅니다.&lt;/li&gt;
+                &lt;li data-name="aside"&gt;&lt;strong&gt;aside&lt;/strong&gt; : aside 태그는 문서의 주요 내용과 간접적으로만 연관된 부분을 나타냅니다. 주로
+                    사이드바 혹은 콜아웃 박스로 표현합니다&lt;/li&gt;
+                &lt;li data-name="audio"&gt;&lt;strong&gt;audio&lt;/strong&gt; : audio 태그는 문서에 소리 콘텐츠를 포함할 때 사용합니다. src 특성 또는
+                    (en-US) 요소를 사용해 한 개 이상의 오디오 소스를 지정할 수 있으며, 다수를 지정한 경우 가장 적절한 소스를 브라우저가 고릅니다.&lt;/li&gt;
+                &lt;li data-name="b"&gt;&lt;strong&gt;b&lt;/strong&gt; : b 태그는 자의 주의를 요소의 콘텐츠로 끌기 위한 용도로 사용합니다. 그 외의 다른 특별한 중요도는
+                    주어지지 않습니다.&lt;/li&gt;
+                &lt;li data-name="base"&gt;&lt;strong&gt;base&lt;/strong&gt; : base 태그는 문서 안의 모든 상대 URL이 사용할 기준 URL을 지정합니다. 문서에는
+                    하나의 요소만 존재할 수 있습니다.&lt;/li&gt;
+                &lt;li data-name="bdi"&gt;&lt;strong&gt;bdi&lt;/strong&gt; : bdi 태그는 BDI는 Bi-Directional Isolation을 의미하며, 주위의
+                    텍스트들과는 다른 방향으로 써지는 텍스트 영역을 정의할 때 사용합니다.&lt;/li&gt;
+                &lt;li data-name="bdo"&gt;&lt;strong&gt;bdo&lt;/strong&gt; : bdo 태그의 BDO는 Bi-Directional Override를 의미하며, 자식 요소의
+                    텍스트 방향성(text directionality)을 정의할 때 사용합니다.&lt;/li&gt;
+                &lt;li data-name="bgsound"&gt;&lt;strong&gt;bgsound&lt;/strong&gt; : bgsound &lt;/li&gt;
+                &lt;li data-name="big"&gt;&lt;strong&gt;big&lt;/strong&gt; : big &lt;/li&gt;
+                &lt;li data-name="blink"&gt;&lt;strong&gt;blink&lt;/strong&gt; : blink &lt;/li&gt;
+                &lt;li data-name="blockquote"&gt;&lt;strong&gt;blockquote&lt;/strong&gt; : blockquote &lt;/li&gt;
+                &lt;li data-name="body"&gt;&lt;strong&gt;body&lt;/strong&gt; : body 태그는 해당 HTML 문서의 텍스트, 하이퍼링크, 이미지, 리스트 등과 같은 모든
+                    콘텐츠를 포함하는 영역을 정의할 때 사용합니다.&lt;/li&gt;
+                &lt;li data-name="br"&gt;&lt;strong&gt;br&lt;/strong&gt; : br 태그는 텍스트 내의 줄바꿈(line-break)을 정의할 때 사용합니다. _&lt;/li&gt;
+                &lt;li data-name="button"&gt;&lt;strong&gt;button&lt;/strong&gt; : button 태그는 클릭할 수 있는 버튼을 정의할 때 사용합니다.&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="css"&gt;
+            &lt;ul&gt;
+                &lt;li data-name="accent-color"&gt;&lt;strong&gt;accent-color&lt;/strong&gt; : accent-color 는 특정 요소에 색상을 지정합니다.
+                &lt;/li&gt;
+                &lt;li data-name="align-content"&gt;&lt;strong&gt;align-content&lt;/strong&gt; : align-content 는 콘텐츠 아이템의 상하관계 정렬
+                    상태를 설정합니다.&lt;/li&gt;
+                &lt;li data-name="align-items"&gt;&lt;strong&gt;align-items&lt;/strong&gt; : align-items 는 콘텐츠 아이템의 내부 상하관계 정렬 상태를
+                    설정합니다.&lt;/li&gt;
+                &lt;li data-name="align-self"&gt;&lt;strong&gt;align-self&lt;/strong&gt; : align-self 는 아이템의 교차축 정렬 정하는 속성 입니다.
+                &lt;/li&gt;
+                &lt;li data-name="all"&gt;&lt;strong&gt;all&lt;/strong&gt; : all 는 요소의 속성을 초기화 또는 상속을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="animation"&gt;&lt;strong&gt;animation&lt;/strong&gt; : animation 는 HTML 요소에 적용되는 CSS 스타일을 다른 CSS
+                    스타일로 부드럽게 변화시킵니다.&lt;/li&gt;
+                &lt;li data-name="animation-delay"&gt;&lt;strong&gt;animation-delay&lt;/strong&gt; : animation-delay 는 적용 대기 시간을
+                    지정합니다.&lt;/li&gt;
+                &lt;li data-name="animation-direction"&gt;&lt;strong&gt;animation-direction&lt;/strong&gt; : animation-direction 는
+                    애니메이션의 진행 방향을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="animation-duration"&gt;&lt;strong&gt;animation-duration&lt;/strong&gt; : animation-duration 는
+                    실행된 애니메이션 진행 시간을 지정하는 속성입니다.&lt;/li&gt;
+                &lt;li data-name="animation-fill-mode"&gt;&lt;strong&gt;animation-fill-mode&lt;/strong&gt; : animation-fill-mode 는
+                    애니메이션 실행 이전이나 이후에 애니메이션 효과를 표시할지의 여부를 지정하는 속성입니다.&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="javascript"&gt;
+            &lt;ul&gt;
+                &lt;li data-name="indexOf()"&gt;&lt;strong&gt;indexOf()&lt;/strong&gt; : indexOf() 메서드는 문자열에서 특정 문자의 위치를 찾고 숫자를
+                    반환합니다.&lt;/li&gt;
+                &lt;li data-name="slice()"&gt;&lt;strong&gt;slice()&lt;/strong&gt; : slice() 메서드는 문자열에서 원하는 값을 추출하여 문자열을 반환하는 메서드
+                    입니다.&lt;/li&gt;
+                &lt;li data-name="substring()"&gt;&lt;strong&gt;substring()&lt;/strong&gt; : substring() 메서드는 문자열에서 원하는 값을 추출하여
+                    문자열을 반환하는 메서드 입니다.&lt;/li&gt;
+                &lt;li data-name="substr()"&gt;&lt;strong&gt;substr()&lt;/strong&gt; : substr() 메서드는 문자열에서 원하는 값을 추출하여 문자열을 반환하는
+                    메서드 입니다.&lt;/li&gt;
+                &lt;li data-name="split()"&gt;&lt;strong&gt;split()&lt;/strong&gt; : split() 메서드는 문자열에서 원하는 값을 추출 배열로 변환합니다.&lt;/li&gt;
+                &lt;li data-name="trim()"&gt;&lt;strong&gt;trim()&lt;/strong&gt; : trim() 메서드는 문자열의 앞뒤 공백을 제거합니다.&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                        </div>
+                        <div>
+<pre><code class="language-css">:root {
+    --htmlColor : #223547;
+    --cssColor : #472222;
+    --javascriptColor : #224736;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NexonLv1Gothic';
+    color: var(--htmlColor);
+}
+*::before *::after {
+    content: '';
+    box-sizing: border-box;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+/* header */
+#header {
+    display: flex;
+    justify-content: space-between;
+ }
+#header h1 { 
+    margin: 10px;
+    font-family: 'Tmon';
+    font-size: 40px;
+}
+#header nav {
+    margin: 10px;
+}
+#header nav ul {
+}
+#header nav li {
+    display: inline;
+    position: relative;
+}
+#header nav li a {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--htmlColor);
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+}
+#header nav li.active a {
+    background-color: var(--htmlColor);
+    color: #fff;
+}
+
+#header nav li .sub {
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 400px;
+}
+
+#header nav li .sub li a {
+    width: auto;
+    background-color: transparent;
+    color: var(--htmlColor);
+    border: 0;
+    text-align: left;
+    line-height: 1.2;
+}
+
+#header nav li .sub li.active a {
+    text-decoration: underline;
+}
+
+
+/* main*/
+#main {
+    margin: 50px 10px;
+}
+.search__wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    border: 2px solid var(--htmlColor);
+    border-radius: 20px;
+    background-color: #f1f3f6;
+    text-align: center;
+    padding: 30px;
+}
+
+.search__wrap &gt; span {
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.search__wrap &gt; h1 {
+    font-family: 'Tmon';
+    color: var(--htmlColor);
+    font-size: 6vw;
+    margin-bottom: 10px;
+}
+.search__box {
+    margin-bottom: 40px;
+}
+.search__box label {
+    position:absolute;
+    clip:rect(0 0 0 0);
+    width:1px;
+    height:1px;
+    margin:-1px;
+    overflow:hidden
+}
+.search__box input {
+    border: 2px solid var(--htmlColor);
+    padding: 15px 40px;
+    width: 70%;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.search__list {}
+.search__list li {
+    text-align: left;
+    line-height: 1.7;
+}
+.search__list li.hide {
+    display: none;
+}
+.search__list li.show {
+    display: block;
+}
+.search__info {
+    text-align: right;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--htmlColor);
+}
+.search__info .keyword {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.search__info .keyword span {
+    border: 2px solid var(--htmlColor);
+    border-radius: 50px;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+.search__info .keyword span:hover {
+    background-color: var(--htmlColor);
+    color: #fff;
+    cursor: pointer;
+}
+
+.type {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    .search__wrap {
+        padding: 20px;
+    }
+    .search__wrap &gt; span {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .search__wrap &gt; h1 {
+        font-size: 44px;
+    }
+    .search__box input {
+        font-size: 16px;
+        pad: 12px 30px;
+    }
+}
+
+</code></pre>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="modal__close">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/modal.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    <script>
+        //선택자
+        const searchBox = document.querySelector(".search__box input"); //검색 박스
+        const searchList = document.querySelectorAll(".search__list ul li"); //리스트 목록
+        const searchInfo = document.querySelector(".num")
+        searchInfo.textContent = searchList.length;
+        searchBox.addEventListener("keyup", () => {
+            const searchWord = searchBox.value; //사용자가 입력한 키워드
+
+            searchList.forEach((el) => {
+                const cssName = el.dataset.name;
+
+                if (cssName.indexOf(searchWord)) {
+                    el.classList.add("hide");
+                } else {
+                    el.classList.remove("hide"); //indexOf() 값이 0이되는 값만 hide를 지워줍니다.
+                }
+
+            });
+        })
+    </script>
+</body>
+
+</html>

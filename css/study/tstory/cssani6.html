@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>css애니</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h3 class="t_tit2">애니메이션 : 통통튀는 글자</h3>
+                <iframe height="400" style="width: 100%" scrolling="no" title="cssani5" src="https://codepen.io/hmm365/embed/QWrgedB?default-tab=result&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/hmm365/pen/QWrgedB"> cssani5</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>) on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+                <div class="t_code">
+                    <pre><code class="language-css">html,body{
+  width: 100%;
+  height: 100%;
+  
+  background: linear-gradient(140deg, skyblue 0%, purple 100%);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  height: 100px;
+}
+
+h1 span {
+  font-family: axis-pan;
+  font-size: 80px;
+  color: #fff;
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 1px 0 #000,
+               0 2px 0 #000,
+               0 3px 0 #000,
+               0 4px 0 #000, 
+               0 5px 0 #000,
+               0 6px 0 #000 transparent,
+               0 7px 0 #000 transparent,
+               0 8px 0 #000 transparent,
+               0 9px 0 #000 transparent,
+               0 10px 10px rgba(0,0,0,0.4);
+  animation: bounce 0.3s ease infinite alternate;
+}
+h1 span:nth-child(2) {animation-delay:0.1s;}
+h1 span:nth-child(3) {animation-delay:0.2s;}
+h1 span:nth-child(4) {animation-delay:0.3s;}
+h1 span:nth-child(5) {animation-delay:0.4s;}
+h1 span:nth-child(6) {animation-delay:0.6s;}
+
+@keyFrames bounce {
+  100% {
+    top : -20px;
+    text-shadow: 0 1px 10px #000,
+                 0 2px 10px #000,
+                 0 3px 10px #000,
+                 0 4px 10px #000, 
+                 0 5px 10px #000,
+                 0 6px 10px #000 transparent,
+                 0 7px 10px #000 transparent,
+                 0 8px 10px #000 transparent,
+                 0 9px 10px #000 transparent,
+                 0 10px 10px rgba(0,0,0,0.4);
+  }
+  
+}
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+    </body>
+</html>

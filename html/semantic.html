@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 레퍼런스 북</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- 구글아이콘 -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <span>이름 : 이중호</span>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <header class="main_header">
+            <h2>HTML <em>레퍼런스 북</em></h2>
+        </header>
+        <nav class="main_menu">
+            <ul>
+                <li><a href="alphabet.html">알파벳</a></li>
+                <li><a href="basic.html">기초 문법</a></li>
+                <li><a href="inline_block.html">블록구조/인라인구조</a></li>
+                <li><a href="web.html">웹표준/웹접근성/웹호환성</a></li>
+                <li class="active"><a href="semantic.html">시멘틱 태그</a></li>
+            </ul>
+            <ul>
+                <li><a href="layout01.html">레이아웃01</a></li>
+                <li><a href="layout02.html">레이아웃02</a></li>
+                <li><a href="layout03.html">레이아웃03</a></li>
+                <li><a href="layout04.html">레이아웃04</a></li>
+                <li><a href="layout05.html">레이아웃05</a></li>
+            </ul>
+        </nav>
+        <div class="document">
+            <h2 class="t_tit2">semantic markup 기본</h2>
+            <p class="t_desc">시각적으로 정보를 전달하는것도 중요하지만 음성으로도 전달해주는것도 중요하기에 시멘틱 마크업이 생겼습니다.</p>
+
+            <h3 class="t_tit2">시멘틱 마크업 예</h3>
+            <p class="t_box">
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;head&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Document&lt;/title&gt;<br>
+                &lt;/head&gt;<br>
+                &lt;body&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;반응형웹 //이것은 스크린 리더로 '반응형웹' 이라고 읽습니다.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;반응형웹&lt;/h1&gt; // 이것은 스크린 리더로 '반응형웹' 헤딩이라고 읽습니다
+                &lt;/body&gt;<br>
+                &lt;/html&gt;<br>
+            </p>
+            <p class="t_desc2">만약 '반응형웹'이 HTML 문서에서 제목으로 사용된고 가정 할경우 위 예시처럼 스크린 리더 에서는 그저'반응형웹' 이라고 읽어주기 때문에 제목인지 알수가없습니다. </p>
+        </div>
+    </main>
+
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+</body>
+
+</html>

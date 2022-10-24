@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 레퍼런스 북</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="../assets/js/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/tokyo-night-dark.min.css">
+    <!-- 구글아이콘 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+        <div class="main_refer">
+            <div class="document">
+                <h2 class="t_tit">구조 관련 요소</h2>
+            <p class="t_desc2">&lt;header&gt;, &lt;section&gt;, &lt;footer&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;aside&gt;</p>
+            <table class="t_table">
+                <colgroup>
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:60%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>요소 유형</th>
+                    <th>태그명</th>
+                    <th>태그의 의미 및 특징</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="ce" rowspan="12">블록 레벨<br>요소</td>
+                    <td class="ce" rowspan="2">&lt;header&gt;<br>&lt;/header&gt;</td>
+                    <td>1. HTML문서의 헤더 영역을 의미하는 태그로 제목이나 네비게이션, 검색 등의 내용들을 포함할 수 있습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있지만 &lt;header&gt;, &lt;footer&gt;태그는 포함할 수 없습니다.</td>
+                  </tr>
+                  <tr>
+                    <td class="ce" rowspan="2">&lt;section&gt;<br>&lt;/section&gt;</td>
+                    <td>1. HTML문서에서 맥락이 같은 요소들을 주제별로 그룹화해주는 태그이며 섹션 주제에 대한 제목 요소(&lt;h1r&gt;~ &lt;h6&gt;)를 포함하는 것이 좋습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있습니다.</td>
+                  </tr>
+                  <tr>
+                    <td class="ce" rowspan="2">&lt;footer&gt;<br>&lt;/footer&gt;</td>
+                    <td>1. HTML문서의 푸터 영역을 의미하는 태그로 섹션 자성자나 저작권에 대한 정보, 관련된 문서의 링크를 포함할 수 있습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있지만 &lt;header&gt;, &lt;footer&gt;태그는 포함할 수 없습니다.</td>
+                  </tr>
+                  <tr>
+                    <td class="ce" rowspan="2">&lt;nav&gt;<br>&lt;/nav&gt;</td>
+                    <td>1. HTML문서의 메인 메뉴나 목차 등을 정의해 주는 태그입니다.</td>
+                  </tr>
+                  <tr>
+                    <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있습니다.</td>
+                  </tr>
+                  <tr>
+                    <td class="ce" rowspan="2">&lt;article&gt;<br>&lt;/article&gt;</td>
+                    <td>1. HTML문서 내에서 독립적으로 배포 또는 재사용이 가능한 게시물, 뉴스 기사, 블로그 포스팅 등을 의미하는 태그이며
+                        제목 요소(&lt;h1r&gt;~ &lt;h6&gt;)를 포함하는 것이 좋습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있습니다.</td>
+                  </tr>
+                  <tr>
+                    <td class="ce" rowspan="2">&lt;aside&gt;<br>&lt;/aside&gt;</td>
+                    <td>1. 메인 콘텐츠와 직접적으로 관련이 없는 영역을 의미하는 태그이며 HTML 문서의 
+                        오른쪽이나 왼쪽의 사이드 메뉴나 광고 등의 영역으로 사용됩니다.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있습니다.</td>
+                  </tr>
+                  
+                </tbody>
+            </table>
+            <hr>
+            <h3 class="t-t_tit">피그마</h3>
+            <div class="t_iframe">
+              <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKARS9cIeTtuG0CCrXbv81M%2FUntitled%3Fnode-id%3D2%253A27" allowfullscreen></iframe>
+            </div>
+            <hr>
+            <div class="t_code">
+<pre><code class="language-css">* {
+  box-sizing: border-box;
+  margin : 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+ul,li{
+  list-style: none;
+}
+li{
+  float: left;
+}
+h1, h2, h3, h4 ,h5 h6 {
+  font-weight: normal;
+}
+.logo1 {
+  display: inline-block;
+  padding: 3px 32px;
+  background-color: #446dff;
+  color: #fff;
+}
+.logo2 {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 1px 26px;   
+}
+/* container */
+#container {
+  width: 1160px;
+  padding: 20px;
+}
+.hearder {
+  display: flex;
+  justify-content: space-between;
+  background-color: #97ffec;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.hearder__logobox {
+  background-color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+.hearder__logobox p {
+  margin: 10px 0;
+}
+.hearder__logobox h1 {
+  margin: 32px 52px 67px 52px;
+}
+.hearder__menu {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hearder__menu .hearder__logo2 {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 1px 26px;
+  margin-bottom: 20px;
+  margin-top: 30px;   
+}
+
+.hearder__menu nav {
+  display: flex;
+  background-color: #fff;
+  padding: 10px;
+  
+}
+.hearder__menu nav p{
+  margin-bottom: 50px;
+}
+.hearder__menu nav ul li {
+  margin: 30px 40px;
+}
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #97ffec;
+  margin-bottom: 20px;
+}
+
+.contents__container {
+  display: flex;
+  background-color: #97ffec;
+  padding: 0 20px 20px 20px;
+  width: 100%;
+}
+.contents__main {
+  display: flex;
+  width: 80%;
+  height: 420px;
+}
+.section {
+  width: 50%;
+  margin-right: 20px;
+  background-color: #fff;
+}
+.section .logo1 {
+  margin: 20px 0 0 36px;
+}
+.section p {
+  text-align: center;
+  line-height: 300px;
+}
+
+.contents__news {
+  width: 20%;
+}
+.article {
+  height: 200px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+.article p{
+  text-align: center;
+  line-height: 180px;
+}
+
+.aside {
+  height: 200px;
+  background-color: #fff;
+}
+.aside p{
+  text-align: center;
+  line-height: 180px;
+}
+.footer {
+  background-color: #97ffec;
+  height: 150px;
+}
+.footer__box {
+  display: flex;
+  margin-left: 150px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  width: 60%;
+}
+.footer__box .logo1 {
+  margin-bottom: 20px;
+}
+.footer__box .side {
+  margin-top: 20px;
+  margin-bottom: 11px;
+  margin-left: 15px;
+}
+</code></pre>
+            </div>
+<div class="t_code">
+<pre><code class="language-html">&lt;body&gt;
+  &lt;div id="container"&gt;
+  &lt;header class="hearder"&gt;
+      &lt;div class="hearder__logobox"&gt;
+          &lt;p class="logo1"&gt;h1&lt;/p&gt;
+          &lt;h1&gt;&lt;a href="#"&gt;반응형웹&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div class="hearder__menu"&gt;
+          &lt;p class="hearder__logo2"&gt;header&lt;/p&gt;
+          &lt;nav&gt;
+              &lt;p class="logo1"&gt;nav&lt;/p&gt;
+              &lt;ul&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;MENU01&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;MENU02&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;MENU03&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;MENU04&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;MENU05&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/nav&gt;
+      &lt;/div&gt;
+      
+  &lt;/header&gt;
+  
+  &lt;div class="contents"&gt;
+      &lt;p class="logo2"&gt;div&lt;/p&gt;
+      &lt;div class="contents__container"&gt;
+          &lt;div class="contents__main"&gt;
+              &lt;section class="section"&gt;
+                  &lt;h2 class="logo1"&gt;section&lt;/h2&gt;
+                  &lt;p&gt;콘텐츠 그룹01&lt;/p&gt;
+              &lt;/section&gt;
+              &lt;section class="section"&gt;
+                  &lt;h2 class="logo1"&gt;section&lt;/h2&gt;
+                  &lt;p&gt;콘텐츠 그룹02&lt;/p&gt;
+              &lt;/section&gt;
+          &lt;/div&gt;
+          &lt;div class="contents__news"&gt;
+              &lt;article class="article"&gt;
+                  &lt;h2 class="logo1"&gt;article&lt;/h2&gt;
+                  &lt;p&gt;주요 기사&lt;/p&gt;
+              &lt;/article&gt;
+              &lt;aside class="aside"&gt;
+                  &lt;h2 class="logo1"&gt;aside&lt;/h2&gt;
+                  &lt;p&gt;광고&lt;/p&gt;
+              &lt;/aside&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;    
+  &lt;/div&gt;
+  &lt;footer class="footer"&gt;
+      &lt;h2 class="logo2"&gt;footer&lt;/h2&gt;
+      &lt;div class="footer__box"&gt;
+          &lt;p class="logo1"&gt;address&lt;/p&gt;
+          &lt;address class="side"&gt;경기도 부천시 오정구 삼정동    032)674-5685    icoxpub@naver.com&lt;/address&gt;
+      &lt;/div&gt;
+      &lt;div class="footer__box"&gt;
+          &lt;p class="logo1"&gt;p&lt;/p&gt;
+          &lt;p class="side"&gt;COPYRIGHT @ All right reserved.&lt;/p&gt;
+      &lt;/div&gt;
+  &lt;/footer&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+            </div>
+            <hr>
+            <h3 class="t_tit2">완성본</h3>
+            <div class="t_iframe">
+              <iframe src="https://hmm365.github.io/coding2/html/in_elment.html" allowfullscreen></iframe>
+          </div>
+            <div class="t_link">
+                <a href="https://hmm365.github.io/coding2/html/in_elment.html">원본 사이트 보기</a>
+                <a href="https://github.com/hmm365/coding2/blob/main/html/in_elment.html">원본 소스 보기</a>
+            </div>
+            </div>
+        </div> 
+    </main>
+
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

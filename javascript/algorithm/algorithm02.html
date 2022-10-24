@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>약수의 개수와 덧셈</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">브라우저 객체</a></li>
+                <li><a href="../javascript09.html">요소 객체</a></li>
+                <li><a href="../javascript10.html">이벤트 객체</a></li>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">for문</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">    
+        <div class="document">
+            <h2 class="t_tit">약수의 개수와 덧셈</h2>
+            <p class="t_desc2">
+                두 정수 left와 right가 매개변수로 주어집니다. left부터 right까지의 모든 수들 중에서, 약수의 개수가 짝수인 수는 더하고, 약수의 개수가 홀수인 수는 뺀 수를 return 하도록 solution 함수를 완성해주세요.
+            </p>
+            <p class="t_box">
+                제한 사항 : 1 ≤ left ≤ right ≤ 1,000<br>
+                입출력 예<br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>left</th>
+                            <th>right</th>
+                            <th>result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center;">13</td>
+                            <td style="text-align: center;">17</td>
+                            <td style="text-align: center;">43</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">24</td>
+                            <td style="text-align: center;">27</td>
+                            <td style="text-align: center;">52</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </p>
+
+            <hr>
+
+            <h3 class="t_tit2">약수의 개수와 덧셈</h3>
+            <div class="t_code">
+<pre><code class="language-js">     function solution(left, right) {
+        var answer = 0;
+        let count = 0;
+
+        for(let i = left; i &lt;= right; i++) { // left 와 right 의 사이
+            count = 0;                          // 초기화
+            for(let j = 1; j &lt;= i; j++){     
+                if(i % j == 0) count++;         // 갯수
+            }
+            if(count % 2) answer -= i;          // 약수의갯수가 짝수면 answer에 i를 더합니다. 그게 아니라면 answer에 i를 뺌니다.
+                else answer += i;  
+    }
+        return answer;
+    }
+</code></pre>
+            <p class="t_box">
+                총평 : 약수를 구하고 조건문으로 하면 쉽게 풀리는것 같다<br>
+                출처 : <a href="https://school.programmers.co.kr/learn/courses/30/lessons/77884" target="_blank">https://school.programmers.co.kr/learn/courses/30/lessons/77884</a> 
+            </p>
+            </div>
+            <!-- //result01 -->
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+    <script>
+{
+    function solution(left, right) {
+        var answer = 0;
+        let count = 0;
+
+        for(let i = left; i <= right; i++) {
+            count = 0;
+            for(let j = 1; j <= i; j++){
+                if(i % j == 0) count++;
+            }
+            if(count % 2) answer -= i; 
+                else answer += i;  
+    }
+        return answer;
+    }
+    
+}
+
+    </script>
+</body>
+</body>
+</html>

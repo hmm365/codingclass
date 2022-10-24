@@ -1,0 +1,20 @@
+.slider__wrap {
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+.slider__img {
+    
+}
+.slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    height: 350px;
+    width: 100%;
+}
+
+.slider:nth-child(1) {
+    opacity: 1;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>카드타입</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <!-- //header -->
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">배너 유형</h2>
+                <p class="t_desc2">이번 배너유형은 포지션을 잡아 했습니다.</p>
+                <div class="t_iframe">
+                    <iframe height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F2Qhs1CeM9EOU0fm44ro7R8%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B02%3Fnode-id%3D371%253A565" allowfullscreen></iframe>
+                </div>
+
+                <hr />
+
+                <h3 class="t_tit2">1.HTML 코드</h3>
+                <div class="t_code">
+                    <div class="t_result">
+                        <details>
+                            <summary>코드 보기</summary>
+                            <pre><code class="language-html">&lt;section id="bannerType" class="banner__wrap nexon"&gt;
+  &lt;h2 class="blind"&gt;배너 영역&lt;/h2&gt;
+  &lt;div class="banner__inner"&gt;
+    &lt;h3 class="title"&gt;은하수&lt;/h3&gt;
+    &lt;p class="desc"&gt;
+      지구(태양계)에서 관측하는 우리 은하의 단면의 모습이다.
+      &lt;a href="" title="새로운페이지열림" target="_blank"&gt;syumay.tistory.com&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;span class="small"&gt;배너 유형01&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+                        </details>
+                    </div>
+                </div>
+
+                <hr />
+
+                <h3 class="t_tit2">2.CSS 코드</h3>
+                <div class="t_code">
+                    <div class="t_result">
+                        <details open>
+                            <summary>코드 보기</summary>
+                            <pre><code class="language-css">.banner__inner {
+  background-image: url(../img/banner_bg01.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 120px 0;
+  color: #fff;
+}
+.banner__inner .title {
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+.banner__inner .desc {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 70px;
+}
+.banner__inner .small {
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+.banner__inner .desc a {
+  color: #fff;
+  display: block;
+}
+.banner__inner .desc a :hover {
+  text-decoration: underline;
+}
+</code></pre>
+                        </details>
+                    </div>
+                </div>
+
+                <hr />
+
+                <h3 class="t_tit2">완성본</h3>
+                <div class="t_iframe">
+                    <iframe height="450px" src="https://syumay.netlify.app/site/bannerType/bannerType01" allowfullscreen></iframe>
+                </div>
+                <div class="t_link">
+                    <a href="https://syumay.netlify.app/site/bannerType/bannerType01">원본 사이트 보기</a>
+                    <a href="https://github.com/hmm365/coding2/blob/main/site/bannerType/bannerType01.html">원본 소스 보기</a>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script></script>
+    </body>
+</html>

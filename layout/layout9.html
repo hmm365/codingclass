@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>레이아웃</title>
+    </head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: #fff;
+        }
+        #wrap {
+            display: flex;
+            flex-wrap: wrap;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #ffe0b2;
+        }
+        #nav {
+            width: 100%;
+            height: 200px;
+            background-color: #ffcc80;
+        }
+        #section {
+            width: 100%;
+            background-color: #ffa726;
+        }
+        .card__inner {
+            width: 80%;
+            padding: 80px 0;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .card {
+            width: 18%;
+            height: 150px;
+            background-color: #ff6600;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #ff9800;
+        }
+        @media (max-width: 1220px) {
+            #wrap {
+                width: 100%;
+            }
+            .card {
+                height: 100px;
+                width: 24%;
+            }
+            .card:nth-child(9) {
+                display: none;
+            }
+            .card:nth-child(10) {
+                display: none;
+            }
+        }
+        @media (max-width: 768px) {
+            #wrap {
+                width: 100%;
+            }
+            .card {
+                height: 100px;
+                width: 31%;
+            }
+            .card:nth-child(9) {
+                display: block;
+            }
+        }
+        @media (max-width: 520px) {
+            #aside {
+                width: 100%;
+                height: 300px;
+            }
+            #section {
+                width: 100%;
+            }
+            .card {
+                height: 100px;
+                width: 48%;
+            }
+            .card:nth-child(10) {
+                display: block;
+            }
+        }
+    </style>
+    <body>
+        <div id="wrap">
+            <div id="header"></div>
+            <div id="nav"></div>
+            <div id="section">
+                <div class="card__inner">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
+            </div>
+            <div id="footer"></div>
+        </div>
+    </body>
+</html>
+컨텐츠를 유형별로 분류하거나 구조적으로 체계화하여, 사용자들이 쉽고 빠르게 컨텐츠를 활용할 수 있도록 설계하며 쉽게 찾을수 있도록 해야합니다. 정보 구조를 설계 할 때, 반드시 파악하고 있어야 할 사항에 대해서 공유해야합니다. 개발 하고자하는 대상 제품을 사용하면서 원하는 것이 무엇인지 고려하면서 정보구조를 설계해야 하며, 개발자의 주관적인 관점이 아닌 사용자의 관점에서 봐야합니다. 정의 사용자의 니즈와 요구사항을 기반으로 사용자가 우리 서비스를 이용하여 어떤 작업을 수행하도록 할 것인가 정해야 하는데 이를 태스크(과업)이라고 한다. 이 태스크(과업)을 누가 어떤 상황에서 어떻게 수행하는가를 그리는 과정이
+시나리오 작업이다. 태스크(과업) 분석은 이 서비스를 통하여 앞에서 정의한 페르소나가 무엇을 할 수 있 을지, 사용자들에게 어떤 기능들을 제공할 것인지에 대하여 사용자의 입장에서 정리하 는 과정이다. 태스크(과업) 도출 과정 시나리오를 기반으로 페르소나의 관점에서 작성한다. 단순 기능의 나열이 아니라 페르소나가 필요한 태스크(과업)을 선정한다 목적에 부합하는 태스크(과업)를 선정한다. 가장 중요한 태스크(과업)이 무엇인지 우선 순위를 정한다 웹 또는 모바일에서 제공하기 적합한가 검토한다.

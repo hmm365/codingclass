@@ -1,0 +1,66 @@
+.banner__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.banner__menu {
+    width: 49%;
+    padding: 20px;
+    border: 1px solid #cdcdcd;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.banner__title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #666;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.banner__title em {
+    color: #666;
+}
+.banner__title.active {
+    color: #000;
+}
+.banner__btn {
+    color: #666;
+    position: relative;
+    padding-right: 20px;
+}
+.banner__btn::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: url(../img/more.jpg);
+    background-size: contain;
+}
+.tab_menu {
+    width: 100%;
+    font-size: 14px;
+    color: #666;
+}
+.tab_menu ul {
+
+}
+.tab_menu li {
+    position: relative;
+    margin-bottom: 15px;
+}
+.tab_menu li:last-child {
+    margin-bottom: 0;
+}
+.tab_menu li span {
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+}
+.banner__img {
+    width: 49%;
+}
+

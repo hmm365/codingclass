@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>페럴럭스이펙트2</title>
+        <link rel="stylesheet" href="../assets/css/arta.css" />
+        <link rel="stylesheet" href="../assets/css/parallax.css" />
+        <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet" />
+        <script src="../assets/js/highlight.min.js"></script>
+        <style>
+            #parallax__cont {
+                max-width: 1600px;
+                width: 98%;
+                margin: 0 auto;
+                /* background-color: rgba(0, 0, 0, 0.4); */
+            }
+            .content__item {
+                width: 1000px;
+                max-width: 70vw;
+                margin: 30vw auto;
+                /* background-color: rgba(255, 255, 255, 0.5); */
+                text-align: left;
+                margin-right: 0;
+                padding-top: 15vw;
+                position: relative;
+            }
+            .content__item:nth-child(even) {
+                margin-left: 0;
+                text-align: right;
+            }
+            .content__item__num {
+                font-size: 35vw;
+                font-family: "Lato";
+                font-weight: 100;
+                left: -5vw;
+                top: -8vw;
+                opacity: 0.7;
+                position: absolute;
+                z-index: -2;
+            }
+            .content__item:nth-child(even) .content__item__num {
+                left: auto;
+                right: -5vw;
+            }
+            .content__item__title {
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+            .content__item__imgWrap {
+                position: relative;
+                width: 100%;
+                padding-bottom: 56.25%;
+                background: #000;
+                overflow: hidden;
+                z-index: -1;
+            }
+            .content__item__img {
+                position: absolute;
+                background: url(../assets/img/effect_bg11.jpg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                width: 110%;
+                height: 110%;
+                left: -5%;
+                top: -5%;
+                filter: saturate(0%);
+                transition: all 1s;
+            }
+            .content__item:nth-child(1) .content__item__img {
+                background-image: url(../assets/img/effect_bg12.jpg);
+            }
+            .content__item:nth-child(2) .content__item__img {
+                background-image: url(../assets/img/effect_bg13.jpg);
+            }
+            .content__item:nth-child(3) .content__item__img {
+                background-image: url(../assets/img/effect_bg14.jpg);
+            }
+            .content__item:nth-child(4) .content__item__img {
+                background-image: url(../assets/img/effect_bg15.jpg);
+            }
+            .content__item:nth-child(5) .content__item__img {
+                background-image: url(../assets/img/effect_bg16.jpg);
+            }
+            .content__item:nth-child(6) .content__item__img {
+                background-image: url(../assets/img/effect_bg17.jpg);
+            }
+            .content__item:nth-child(7) .content__item__img {
+                background-image: url(../assets/img/effect_bg18.jpg);
+            }
+            .content__item:nth-child(8) .content__item__img {
+                background-image: url(../assets/img/effect_bg19.jpg);
+            }
+            .content__item:nth-child(9) .content__item__img {
+                background-image: url(../assets/img/effect_bg20.jpg);
+            }
+            .content__item__desc {
+                font-size: 4vw;
+                line-height: 1.4;
+                margin-top: -5vw;
+                margin-left: 4vw;
+                word-break: keep-all;
+            }
+            .content__item:nth-child(even) .content__item__desc {
+                margin-left: auto;
+                margin-right: -4vw;
+            }
+
+            #parallax__info {
+                position: fixed;
+                left: 20px;
+                bottom: 20px;
+                z-index: 2000;
+                background: rgba(0, 0, 0, 0.6);
+                color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+            }
+            .scrollTop {
+                line-height: 1.4;
+            }
+
+            @media (max-width: 800px) {
+                #parallax__cont {
+                    margin-top: 50vw;
+                }
+            }
+            #parallax__dot {
+                position: fixed;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(0, 0, 0, 0.4);
+                padding: 20px 10px;
+                border-radius: 30px;
+                z-index: 10000;
+            }
+            #parallax__dot li {
+                position: relative;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin: 12px 8px;
+                box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+                transition: box-shadow 0.2s ease;
+            }
+            #parallax__dot a {
+                background: #fff;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+                transition: transform 0.2s ease;
+            }
+            #parallax__dot li.active {
+                box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
+            }
+            #parallax__dot li.active a {
+                transform: scale(0.4);
+            }
+            #parallax__dot li span {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <h1>Javascript parallax Effect01</h1>
+            <p>페럴럭스 이펙트 - 사이드메뉴</p>
+            <ul>
+                <li><a href="parallaxEffect01.html">1</a></li>
+                <li class="active"><a href="parallaxEffect02.html">2</a></li>
+                <li><a href="parallaxEffect03.html">3</a></li>
+                <li><a href="parallaxEffect04.html">4</a></li>
+                <li><a href="parallaxEffect05.html">5</a></li>
+                <li><a href="parallaxEffect06.html">6</a></li>
+                <li><a href="parallaxEffect07.html">7</a></li>
+            </ul>
+        </header>
+        <!-- //header -->
+        <main id="parallax__cont">
+            <section id="section1" class="content__item">
+                <span class="content__item__num">01</span>
+                <h2 class="content__item__title">section1</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">결과도 중요하지만, 과정을 더 중요하게 생각한다.</p>
+            </section>
+            <!-- //section1 -->
+            <section id="section2" class="content__item">
+                <span class="content__item__num">02</span>
+                <h2 class="content__item__title">section2</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">삶이 있는 한 희망은 있다.</p>
+            </section>
+            <!-- //section2 -->
+            <section id="section3" class="content__item">
+                <span class="content__item__num">03</span>
+                <h2 class="content__item__title">section3</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">산다는것 그것은 치열한 전투이다.</p>
+            </section>
+            <!-- //section3 -->
+            <section id="section4" class="content__item">
+                <span class="content__item__num">04</span>
+                <h2 class="content__item__title">section4</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">언제나 현재에 집중할수 있다면 행복할것이다.</p>
+            </section>
+            <!-- //section4 -->
+            <section id="section5" class="content__item">
+                <span class="content__item__num">05</span>
+                <h2 class="content__item__title">section5</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">피할수 없으면 즐겨라.</p>
+            </section>
+            <!-- //section5 -->
+            <section id="section6" class="content__item">
+                <span class="content__item__num">06</span>
+                <h2 class="content__item__title">section6</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">내일은 내일의 태양이 뜬다.</p>
+            </section>
+            <!-- //section6 -->
+            <section id="section7" class="content__item">
+                <span class="content__item__num">07</span>
+                <h2 class="content__item__title">section7</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">1퍼센트의 가능성, 그것이 나의 길이다.</p>
+            </section>
+            <!-- //section7 -->
+            <section id="section8" class="content__item">
+                <span class="content__item__num">08</span>
+                <h2 class="content__item__title">section8</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">자신을 내보여라. 그러면 재능이 드러날 것이다.</p>
+            </section>
+            <!-- //section8 -->
+            <section id="section9" class="content__item">
+                <span class="content__item__num">09</span>
+                <h2 class="content__item__title">section9</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">겨울이 오면 봄이 멀지 않으리.</p>
+            </section>
+            <!-- //section9 -->
+        </main>
+        <!-- // main -->
+        <aside id="parallax__dot">
+            <div></div>
+            <ul>
+                <li class="active">
+                    <a href="#section1"><span></span></a>
+                </li>
+                <li>
+                    <a href="#section2"><span></span></a>
+                </li>
+                <li>
+                    <a href="#section3"><span></span></a>
+                </li>
+                <li>
+                    <a href="#section4"><span></span></a>
+                </li>
+                <li>
+                    <a href="#section5"><span></span></a>
+                </li>
+                <li>
+                    <a href="#section6"><span></span></a>
+                </li>
+                <li>
+                    <a href="#section7"><span></span></a>
+                </li>
+                <li>
+                    <a href="#section8"><span></span></a>
+                </li>
+                <li>
+                    <a href="#section9"><span></span></a>
+                </li>
+            </ul>
+        </aside>
+        <aside id="parallax__info">
+            <div class="scroll">scrollTop : <span>0</span>px</div>
+        </aside>
+        <!-- // aside -->
+        <footer id="footer">
+            <div class="modal__wrap">
+                <div class="modal__btn">소스보기</div>
+                <div class="modal__cont">
+                    <div class="modal__box">
+                        <div class="tab__title">
+                            <span class="dot" aria-label="true"></span>
+                            <div class="tabs">
+                                <div class="active">
+                                    <span class="favicon" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                            <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                            <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange"></path>
+                                            <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow"></path>
+                                        </svg>
+                                    </span>
+                                    <em>Javascript</em>
+                                    <span class="close" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                            <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="favicon" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                            <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                            <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange"></path>
+                                            <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow"></path>
+                                        </svg>
+                                    </span>
+                                    <em>HTML</em>
+                                    <span class="close" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                            <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="favicon" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                            <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                            <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange"></path>
+                                            <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow"></path>
+                                        </svg>
+                                    </span>
+                                    <em>CSS</em>
+                                    <span class="close" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                            <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="plus" aria-label="true">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                    <path d="M2.5 8H13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M8 2.5V13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="cont">
+                            <div class="active">
+                                <pre><code class="language-js">document.querySelectorAll("#parallax__dot a").forEach((el) =&gt; {
+    el.addEventListener("click", (e) =&gt; {
+        e.preventDefault();
+        document.querySelector(el.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+    });
+});
+window.addEventListener("scroll", () =&gt; {
+    let scrollTop = document.documentElement.scrollTop || window.pageYOffset || window.scrollY;
+
+    document.querySelector("#parallax__info span").textContent = Math.floor(scrollTop);
+    
+    document.querySelectorAll(".content__item").forEach((e, i) =&gt; {
+        if (scrollTop &gt;= e.offsetTop - 10) {
+            document.querySelectorAll("#parallax__dot li").forEach((li) =&gt; {
+                li.classList.remove("active");
+            });
+            document.querySelector("#parallax__dot li:nth-child(" + (i + 1) + ")").classList.add("active");
+        }
+    });
+});
+</code></pre>
+                            </div>
+                            <div>
+                                <pre><code class="language-html">&lt;main id="parallax__cont"&gt;
+    &lt;section id="section1" class="content__item"&gt;
+        &lt;span class="content__item__num"&gt;01&lt;/span&gt;
+        &lt;h2 class="content__item__title"&gt;section1&lt;/h2&gt;
+        &lt;figure class="content__item__imgWrap"&gt;
+            &lt;div class="content__item__img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="content__item__desc"&gt;결과도 중요하지만, 과정을 더 중요하게 생각한다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section1 --&gt;
+    &lt;section id="section2" class="content__item"&gt;
+        &lt;span class="content__item__num"&gt;02&lt;/span&gt;
+        &lt;h2 class="content__item__title"&gt;section2&lt;/h2&gt;
+        &lt;figure class="content__item__imgWrap"&gt;
+            &lt;div class="content__item__img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="content__item__desc"&gt;삶이 있는 한 희망은 있다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section2 --&gt;
+    &lt;section id="section3" class="content__item"&gt;
+        &lt;span class="content__item__num"&gt;03&lt;/span&gt;
+        &lt;h2 class="content__item__title"&gt;section3&lt;/h2&gt;
+        &lt;figure class="content__item__imgWrap"&gt;
+            &lt;div class="content__item__img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="content__item__desc"&gt;산다는것 그것은 치열한 전투이다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section3 --&gt;
+    &lt;section id="section4" class="content__item"&gt;
+        &lt;span class="content__item__num"&gt;04&lt;/span&gt;
+        &lt;h2 class="content__item__title"&gt;section4&lt;/h2&gt;
+        &lt;figure class="content__item__imgWrap"&gt;
+            &lt;div class="content__item__img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="content__item__desc"&gt;언제나 현재에 집중할수 있다면 행복할것이다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section4 --&gt;
+    &lt;section id="section5" class="content__item"&gt;
+        &lt;span class="content__item__num"&gt;05&lt;/span&gt;
+        &lt;h2 class="content__item__title"&gt;section5&lt;/h2&gt;
+        &lt;figure class="content__item__imgWrap"&gt;
+            &lt;div class="content__item__img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="content__item__desc"&gt;피할수 없으면 즐겨라.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section5 --&gt;
+    &lt;section id="section6" class="content__item"&gt;
+        &lt;span class="content__item__num"&gt;06&lt;/span&gt;
+        &lt;h2 class="content__item__title"&gt;section6&lt;/h2&gt;
+        &lt;figure class="content__item__imgWrap"&gt;
+            &lt;div class="content__item__img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="content__item__desc"&gt;내일은 내일의 태양이 뜬다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section6 --&gt;
+    &lt;section id="section7" class="content__item"&gt;
+        &lt;span class="content__item__num"&gt;07&lt;/span&gt;
+        &lt;h2 class="content__item__title"&gt;section7&lt;/h2&gt;
+        &lt;figure class="content__item__imgWrap"&gt;
+            &lt;div class="content__item__img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="content__item__desc"&gt;1퍼센트의 가능성, 그것이 나의 길이다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section7 --&gt;
+    &lt;section id="section8" class="content__item"&gt;
+        &lt;span class="content__item__num"&gt;08&lt;/span&gt;
+        &lt;h2 class="content__item__title"&gt;section8&lt;/h2&gt;
+        &lt;figure class="content__item__imgWrap"&gt;
+            &lt;div class="content__item__img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="content__item__desc"&gt;자신을 내보여라. 그러면 재능이 드러날 것이다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section8 --&gt;
+    &lt;section id="section9" class="content__item"&gt;
+        &lt;span class="content__item__num"&gt;09&lt;/span&gt;
+        &lt;h2 class="content__item__title"&gt;section9&lt;/h2&gt;
+        &lt;figure class="content__item__imgWrap"&gt;
+            &lt;div class="content__item__img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="content__item__desc"&gt;겨울이 오면 봄이 멀지 않으리.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section9 --&gt;
+&lt;/main&gt;
+&lt;!-- // main --&gt;
+&lt;aside id="parallax__dot"&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;ul&gt;
+        &lt;li class="active"&gt;
+            &lt;a href="#section1"&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#section2"&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#section3"&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#section4"&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#section5"&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#section6"&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#section7"&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#section8"&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#section9"&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/aside&gt;
+&lt;aside id="parallax__info"&gt;
+    &lt;div class="scroll"&gt;scrollTop : &lt;span&gt;0&lt;/span&gt;px&lt;/div&gt;
+&lt;/aside&gt;
+</code></pre>
+                            </div>
+                            <div>
+                                <pre><code class="language-css">#parallax__cont {
+    max-width: 1600px;
+    width: 98%;
+    margin: 0 auto;
+    /* background-color: rgba(0, 0, 0, 0.4); */
+}
+.content__item {
+    width: 1000px;
+    max-width: 70vw;
+    margin: 30vw auto;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    text-align: left;
+    margin-right: 0;
+    padding-top: 15vw;
+    position: relative;
+}
+.content__item:nth-child(even) {
+    margin-left: 0;
+    text-align: right;
+}
+.content__item__num {
+    font-size: 35vw;
+    font-family: "Lato";
+    font-weight: 100;
+    left: -5vw;
+    top: -8vw;
+    opacity: 0.7;
+    position: absolute;
+    z-index: -2;
+}
+.content__item:nth-child(even) .content__item__num {
+    left: auto;
+    right: -5vw;
+}
+.content__item__title {
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.content__item__imgWrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: #000;
+    overflow: hidden;
+    z-index: -1;
+}
+.content__item__img {
+    position: absolute;
+    background: url(../assets/img/effect_bg11.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 110%;
+    height: 110%;
+    left: -5%;
+    top: -5%;
+    filter: saturate(0%);
+    transition: all 1s;
+}
+.content__item:nth-child(1) .content__item__img {
+    background-image: url(../assets/img/effect_bg12.jpg);
+}
+.content__item:nth-child(2) .content__item__img {
+    background-image: url(../assets/img/effect_bg13.jpg);
+}
+.content__item:nth-child(3) .content__item__img {
+    background-image: url(../assets/img/effect_bg14.jpg);
+}
+.content__item:nth-child(4) .content__item__img {
+    background-image: url(../assets/img/effect_bg15.jpg);
+}
+.content__item:nth-child(5) .content__item__img {
+    background-image: url(../assets/img/effect_bg16.jpg);
+}
+.content__item:nth-child(6) .content__item__img {
+    background-image: url(../assets/img/effect_bg17.jpg);
+}
+.content__item:nth-child(7) .content__item__img {
+    background-image: url(../assets/img/effect_bg18.jpg);
+}
+.content__item:nth-child(8) .content__item__img {
+    background-image: url(../assets/img/effect_bg19.jpg);
+}
+.content__item:nth-child(9) .content__item__img {
+    background-image: url(../assets/img/effect_bg20.jpg);
+}
+.content__item__desc {
+    font-size: 4vw;
+    line-height: 1.4;
+    margin-top: -5vw;
+    margin-left: 4vw;
+    word-break: keep-all;
+}
+.content__item:nth-child(even) .content__item__desc {
+    margin-left: auto;
+    margin-right: -4vw;
+}
+
+#parallax__info {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.scrollTop {
+    line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+    #parallax__cont {
+        margin-top: 50vw;
+    }
+}
+#parallax__dot {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px 10px;
+    border-radius: 30px;
+    z-index: 10000;
+}
+#parallax__dot li {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 12px 8px;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+    transition: box-shadow 0.2s ease;
+}
+#parallax__dot a {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+#parallax__dot li.active {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
+}
+#parallax__dot li.active a {
+    transform: scale(0.4);
+}
+#parallax__dot li span {
+    display: none;
+}
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__close">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../assets/js/highlight.min.js"></script>
+        <script src="../assets/js/modal.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script>
+            document.querySelectorAll("#parallax__dot a").forEach((el) => {
+                el.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    document.querySelector(el.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+                });
+            });
+            window.addEventListener("scroll", () => {
+                let scrollTop = document.documentElement.scrollTop || window.pageYOffset || window.scrollY;
+
+                document.querySelector("#parallax__info span").textContent = Math.floor(scrollTop);
+
+                document.querySelectorAll(".content__item").forEach((e, i) => {
+                    if (scrollTop >= e.offsetTop - 10) {
+                        document.querySelectorAll("#parallax__dot li").forEach((li) => {
+                            li.classList.remove("active");
+                        });
+                        document.querySelector("#parallax__dot li:nth-child(" + (i + 1) + ")").classList.add("active");
+                    }
+                });
+            });
+            // window.scroll(0, 1000);
+            // window.scroll({ left: 0, top: 2000 });
+            // window.scroll({ left: 0, top: 2000, behavior: "smooth" });
+
+            // window.scrollTo(0, 1000);
+            // window.scrollTo({ left: 0, top: 2000 });
+            // window.scrollTo({ left: 0, top: 2000, behavior: "smooth" });
+
+            // window.scrollBy(0, 1000);
+            // window.scrollBy({ left: 0, top: 2000 });
+            // window.scrollBy({ left: 0, top: 2000, behavior: "smooth" });
+        </script>
+    </body>
+</html>

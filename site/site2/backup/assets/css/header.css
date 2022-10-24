@@ -1,0 +1,114 @@
+.header__inner {
+    width: 100%;
+    padding: 0 100px;
+    padding-top: 20px;
+    height: 110px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    background: #adadad;
+}
+.header__logo {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.header__logo a {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+.header__menu ul {
+    display: flex;
+    justify-content: space-between;
+}
+.header__menu li {
+    display: inline;
+}
+.header__menu a {
+    font-size: 16px;
+    font-weight: bold;
+}
+.header__menu li.active {
+    border-bottom: 1px solid #000;
+}
+.header__ham {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-40%);
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    display: none;
+    cursor: pointer;
+}
+.header__ham span {
+    display: block;
+    background: #000;
+    width: 30px;
+    height: 2px;
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-top: 5px;
+    transition: 0.25s margin 0.25s, 0.25s transform;
+}
+.header__ham span:nth-child(1) {
+    margin-top: 17px;
+}
+.header__ham.active span {
+    transition: 0.25s margin, 0.25s transform 0.25s;
+}
+.header__ham.active span:nth-child(1) {
+    margin-top: 25px;
+    margin-bottom: -7px;
+    transform: rotate(45deg);
+}
+.header__ham.active span:nth-child(2) {
+    transform: rotate(45deg);
+}
+.header__ham.active span:nth-child(3) {
+    margin-top: -2px;
+    transform: rotate(135deg);
+}
+@media (max-width: 1250px) {
+    .header__inner {
+        padding: 20px 60px;
+    }
+}
+@media (max-width: 800px) {
+    .header__inner {
+        height: 70px;
+    }
+    .header__menu {
+        position: fixed;
+        right: -100%;
+        top: 69px;
+        background: #adadad;
+        width: 40%;
+        height: 100vh;
+        padding: 20px;
+        text-align: right;
+        transition: right 0.4s ease-in;
+    }
+    .header__menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__menu ul li {
+        display: inline-block;
+        margin: 20px;
+    }
+    .header__menu ul li a {
+        white-space: nowrap;
+    }
+    .header__menu.active {
+        right: 0;
+    }
+    .header__ham {
+        display: block;
+    }
+}

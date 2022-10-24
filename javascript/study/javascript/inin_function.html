@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>spread operator</title>
+        <link rel="stylesheet" href="../../assets/css/style.css" />
+        <link rel="stylesheet" href="../../assets/css/dracula.css" />
+        <script src="../../assets/js/highlight.min.js"></script>
+    </head>
+
+    <body>
+        <!-- //header -->
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">내부함수</h2>
+                <h3 title="t_tit3">스코프</h3>
+                <p class="t_desc2">
+                    현재 실행되는 컨텍스트를 말합니다.<br />
+                    여기서 컨텍스트는 값과 표현식이 **"표현"**되거나 참조 될 수 있음을 의미합니다.<br />
+                    만약 변수 또는 다른 표현식이 "해당 스코프"내에 있지 않다면 사용할 수 없습니다.<br />
+                    스코프는 또한 계층적인 구조를 가지기 때문에 하위 스코프는 상위 스코프에 접근할 수 있지만 반대는 불가합니다.<br />
+                    출처 : MDN
+                </p>
+                <hr />
+                <h3 title="t_tit3">클로저</h3>
+                <p class="t_desc2">
+                    클로저는 주변의 상태 (lexical environment)의 참조와 함께 번들로 묶인 함수의 조합입니다.<br />
+                    즉, 클로져는 우리에게 inner함수에서 outer함수의 스코프에 접근을 가능하게 해줍니다.<br />
+                    자바스크립트에서 클로저는 함수가 생성될 때마다 생성됩니다. <br />
+                    출처 : MDN
+                </p>
+
+                <h3 class="t_tit2">내부함수 예제</h3>
+                <div class="t_code">
+                    <pre><code class="language-js">function func() {
+    console.log("콘솔이 실행되었습니다.1");
+}
+function callback(str) {
+    console.log("콘솔이 실행되었습니다.2");
+    str();
+}
+callback(func);
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result01"></div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //result01 -->
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+
+        <script>
+            //28 내부함수 : 스코프, 클로저
+            {
+                let result = document.querySelector(".result01");
+                function func() {
+                    function funcA() {
+                        result.innerHTML += "함수A가 실행되었습니다." + "<br>";
+                    }
+                    funcA();
+                    function funcB() {
+                        result.innerHTML += "함수B가 실행되었습니다." + "<br>";
+                    }
+                    funcB();
+                }
+                func();
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+/* imageType */
+.image__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.image {
+    width: 32%;
+    position: relative;
+    overflow: hidden;
+}
+.image__box {
+}
+.image__box img {
+    vertical-align: top;
+    transition: all 0.6s ease-in-out;
+}
+.image__desc {
+    position: absolute;
+    left: 0;
+    bottom: -100px;
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+.image:hover .image__desc {
+    bottom: 0;
+}
+.image:hover .image__box img {
+    transform: scale(1.03);
+}
+
+.img1 .image__desc {
+    background: rgba(235, 77, 75, 0.5);
+}
+.img2 .image__desc {
+    background: rgba(255, 208, 89, 0.5);
+}
+.img3 .image__desc {
+    background: rgba(188, 181, 215, 0.5);
+}
+.image__desc h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.image__desc .more {
+    font-size: 16px;
+}
+.image__desc .more:hover {
+    text-decoration: underline;
+}

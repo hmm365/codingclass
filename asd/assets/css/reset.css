@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+* {
+    font-family: "Nanum Gothic", sans-serif;
+}
+/* 링크 초기화 */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* 목록 초기화 */
+li,
+ol,
+ul {
+    list-style: none;
+}
+
+/* 제목 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+/* 폰트 스타일 초기화 */
+em {
+    font-style: normal;
+}
+
+/* 보더 초기화 */
+img,
+fieldset,
+button {
+    border: 0;
+}
+
+/* 블라인드 효과 */
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+/* 이미지 대체(ir) 효과 */
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999;
+}

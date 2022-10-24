@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바스크립트 함수유형</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <!-- //header -->
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">startsWith() / endsWith()</h2>
+                <p class="t_desc2">
+                    startsWith() 메서드는 시작하는 문자열에서 문자열을 검색하여 불린으로(true, false) 반환합니다.<br />
+                    endsWith() 메서드는 끝나는 문자열에서 문자열을 검색하여 불린(true, false)을 반환합니다.
+                </p>
+                <hr />
+                <h2 class="t_tit2">사용법</h2>
+                <p class="t_desc2">
+                    "문자열".startsWith(검색 문자열);<br />
+                    "문자열".startsWith(검색 문자열, 위치값);<br />
+                    "문자열".endsWith(검색 문자열);<br />
+                    "문자열".endsWith(검색 문자열, 위치값);<br />
+                </p>
+                <hr />
+
+                <h3 class="t_tit2">예제</h3>
+                <div class="t_code">
+                    <pre><code class="language-js">const str1 = "javascript reference"
+const currentStr1 = str1.startsWith('javascript'); // true
+const currentStr2 = str1.startsWith("j"); // true
+const currentStr3 = str1.startsWith("java"); // true
+const currentStr4 = str1.startsWith("reference"); // true
+const currentStr5 = str1.startsWith(); // false
+const currentStr6 = str1.startsWith(''); // true
+const currentStr7 = str1.startsWith('reference', 7); // false
+const currentStr8 = str1.startsWith('reference', 11); // true
+
+const currentStr9 = str1.endsWith('reference'); // true
+const currentStr10 = str1.endsWith('e'); // true
+const currentStr11 = str1.endsWith('refer'); // false
+const currentStr12 = str1.endsWith('javascript'); // false
+const currentStr13 = str1.endsWith(); // false
+const currentStr14 = str1.endsWith(''); // true
+const currentStr15 = str1.endsWith('reference' ,7); // false
+const currentStr16 = str1.endsWith('reference' ,20); // true
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+    </body>
+</html>

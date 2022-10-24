@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>repeat</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">find() / findIndex()</h2>
+                <p class="t_desc2">
+                    find()메서드는 주어진 판별 함수를 만족하는 첫 번째 요소의 값을 반환합니다. 그런 요소가 없다면 undefined를 반환합니다.<br />
+                    findIndex() 메서드는 주어진 판별 함수를 만족하는 배열의 첫 번째 요소에 대한 인덱스를 반환합니다. 만족하는 요소가 없으면 -1을 반환합니다.
+                </p>
+                <div class="t_table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col style="width: 32%" />
+                            <col style="width: 32%" />
+                            <col style="width: 32%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="smple11_N1"></td>
+                                <td class="smple11_Q1"></td>
+                                <td class="smple11_M1"></td>
+                                <td class="smple11_P1"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple11_N2"></td>
+                                <td class="smple11_Q2"></td>
+                                <td class="smple11_M2"></td>
+                                <td class="smple11_P2"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple11_N3"></td>
+                                <td class="smple11_Q3"></td>
+                                <td class="smple11_M3"></td>
+                                <td class="smple11_P3"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple11_N4"></td>
+                                <td class="smple11_Q4"></td>
+                                <td class="smple11_M4"></td>
+                                <td class="smple11_P4"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple11_N5"></td>
+                                <td class="smple11_Q5"></td>
+                                <td class="smple11_M5"></td>
+                                <td class="smple11_P5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="t_code">
+                    <pre><code class="language-js">//01
+const arrNum1 = [100, 200, 300, 400, 500];
+const result1 = arrNum1.find((e) => e === 300);
+                          
+//02
+const arrNum2 = [100, 200, 300, 400, 500];
+const result2 = arrNum2.find((e) => e === 600);
+                
+//03               
+const arrText = ["javascript", "jquery", "react"];
+const result3 = arrText.find((e) => e === "javascript");
+                
+//04               
+const result4 = arrText.findIndex((e) => e === "javascript");
+                
+//05            
+const result5 = arrText.findIndex((e) => e === "html");
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script>
+            {
+                const arrNum1 = [100, 200, 300, 400, 500];
+                const result1 = arrNum1.find((e) => e === 300);
+
+                document.querySelector(".smple11_N1").innerHTML = "1";
+                document.querySelector(".smple11_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple11_M1").innerHTML = "arrNum1.find((e) => e === 300)";
+                document.querySelector(".smple11_P1").innerHTML = result1;
+
+                const arrNum2 = [100, 200, 300, 400, 500];
+                const result2 = arrNum2.find((e) => e === 600);
+
+                document.querySelector(".smple11_N2").innerHTML = "2";
+                document.querySelector(".smple11_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple11_M2").innerHTML = "arrNum2.find((e) => e === 600)";
+                document.querySelector(".smple11_P2").innerHTML = result2;
+
+                const arrText = ["javascript", "jquery", "react"];
+                const result3 = arrText.find((e) => e === "javascript");
+
+                document.querySelector(".smple11_N3").innerHTML = "3";
+                document.querySelector(".smple11_Q3").innerHTML = "['javascript', 'jquery', 'react']";
+                document.querySelector(".smple11_M3").innerHTML = "arrText.find((e) => e === 'javascript');";
+                document.querySelector(".smple11_P3").innerHTML = result3;
+
+                const result4 = arrText.findIndex((e) => e === "javascript");
+
+                document.querySelector(".smple11_N4").innerHTML = "4";
+                document.querySelector(".smple11_Q4").innerHTML = "['javascript', 'jquery', 'react']";
+                document.querySelector(".smple11_M4").innerHTML = "arrText.findIndex((e) => e === 'javascript')";
+                document.querySelector(".smple11_P4").innerHTML = result4;
+
+                const result5 = arrText.findIndex((e) => e === "html");
+
+                document.querySelector(".smple11_N5").innerHTML = "5";
+                document.querySelector(".smple11_Q5").innerHTML = "['javascript', 'jquery', 'react']";
+                document.querySelector(".smple11_M5").innerHTML = "arrNum5.findIndex((e) => e === 'html')";
+                document.querySelector(".smple11_P5").innerHTML = result5;
+            }
+        </script>
+    </body>
+</html>

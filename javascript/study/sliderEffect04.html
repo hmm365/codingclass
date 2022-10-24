@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바스크립트 이펙트</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <!-- //header -->
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">이미지 버튼클릭으로 움직이기</h2>
+                <p class="t_desc2">이번 슬라이더 이펙트는 버튼 클릭식 이동하는 이펙트를 만들었습니다.</p>
+                <h2 class="t_tit2">JS 설명</h2>
+                <p class="t_desc2">
+                    gotoSlider 라는 함수를 만들어서 움직이게 만듭니다.<br />
+                    왼쪽,오른쪽 이벤트 리스너를 만들어 각 요소의 조건을 걸어<br />
+                    gotoSlider() 함수에 prevIndex 매개변수값을 넣습니다.<br />
+                    그렇게 되면 버튼이 클릭될때마다 자동적으로 변하게됩니다.
+                </p>
+                <div class="t_code">
+                    <div class="t_result">
+                        <details>
+                            <summary>코드 보기</summary>
+                            <pre><code class="language-js">function gotoSlider(num) {
+    sliderInner.style.transition = "all 400ms";
+    sliderInner.style.transform = "translateX(" + -sliderWidth * num + "px)";
+    currentIndex = num;
+}
+sliderBtnPrev.addEventListener("click", () =&gt; {
+    let prevIndex = (currentIndex + sliderCount - 1) % sliderCount;
+    // let prevIndex = currentIndex - 1;
+    // if (prevIndex &lt; 0) {
+    //     prevIndex = sliderCount - 1;
+    // }
+    gotoSlider(prevIndex);
+});
+
+//오른쪽 버튼 클릭
+sliderBtnNext.addEventListener("click", () =&gt; {
+    let nextIndex = (currentIndex + 1) % sliderCount;
+    gotoSlider(nextIndex);
+});
+</code></pre>
+                        </details>
+                    </div>
+                </div>
+                <div class="t_iframe" style="min-height: 450px">
+                    <iframe src="https://hmm365.github.io/coding2/javascript/effect/sliderEffect04.html"></iframe>
+                </div>
+                <div class="t_link">
+                    <a href="https://github.com/hmm365/coding2/blob/main/javascript/effect/sliderEffect04.html">원본 소스 보기</a>
+                    <a href="https://hmm365.github.io/coding2/javascript/effect/sliderEffect04.html">원본 사이트 보기</a>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+    </body>
+</html>

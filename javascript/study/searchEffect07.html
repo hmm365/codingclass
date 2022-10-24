@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바스크립트 데이터타입</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">검색 이펙트</h2>
+                <p class="t_desc2">이번 이펙트는 타이머을 추가하여 문제를 맞추는것입니다..</p>
+                <div class="t_iframe" style="min-height: 450px">
+                    <iframe src="https://hmm365.github.io/coding2/javascript/effect/searchEffect06.html"></iframe>
+                </div>
+
+                <h3 class="t_tit2">JS코드</h3>
+                <p class="t_desc2">정답을 체크하는 함수입니다. input박스에 값을 넣으면 자동으로 체크하여 보여줍니다.</p>
+                <div class="t_code">
+                    <div class="t_result">
+                        <details open>
+                            <summary>코드 보기</summary>
+                            <pre><code class="language-js">let timeReamining = 120, //남은 시간
+score = 0, //점수
+timeInterval = "",
+answers = {}; //새로운 정답
+function checkInput() {
+    let input = event.currentTarget.value.trim().toLocaleLowerCase();
+
+    if (answers.hasOwnProperty(input) && !answers[input]) {
+        answers[input] = true;
+
+        //정답 표시하기
+        searchAnswers.style.display = "block";
+        searchAnswers.innerHTML += `&lt;span>${input}&lt;/span>`;
+        bgm.play();
+
+        //점수 반영
+        score++;
+        searchScoreNow.innerText = score;
+        //정답 초기화
+        searchInput.value = "";
+    } else {
+        bgm2.play();
+    }
+    // console.log(answers);
+}
+</code></pre>
+                        </details>
+                    </div>
+                </div>
+
+                <h3 class="t_tit2">JS코드</h3>
+                <p class="t_desc2">
+                    시간을 설정하는 코드입니다<br />
+                    setInterval을 사용해 타이머를 구성하였습니다. <br />
+                    또한 초를 분과 초로 나누어 시간을 보기 편하게 했습니다.
+                </p>
+                <div class="t_code">
+                    <div class="t_result">
+                        <details>
+                            <summary>코드 보기</summary>
+                            <pre><code class="language-js">//시간 설정하기
+timeInterval = setInterval(reduceTime, 1000);
+function reduceTime() {
+    timeReamining--;
+    if (timeReamining == 0) endQuiz();
+    searchTime.innerText = displayTime();
+}
+//시간 표시하기
+function displayTime() {
+    if (timeReamining &lt;= 0) {
+        return "0:00";
+    } else {
+        let minutes = Math.floor(timeReamining / 60);
+        let seconds = timeReamining % 60;
+
+        //초 단위가 한자리수 일 때 0을 추가
+        seconds &lt; 10 ? (seconds = "0" + seconds) : seconds;
+        return `${minutes}:${seconds}`;
+    }
+}
+</code></pre>
+                        </details>
+                    </div>
+                </div>
+                <div class="t_link">
+                    <a href="https://hmm365.github.io/coding2/javascript/effect/searchEffect06.html">원본 사이트 보기</a>
+                    <a href="https://github.com/hmm365/coding2/blob/main/javascript/effect/searchEffect06.html">원본 소스 보기</a>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 유형03</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/sunn/SUIT.css');
+
+        .suit {
+            font-family: 'suit';
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 h6 {
+            font-weight: normal;
+        }
+
+        /* Common */
+        .card__wrap {
+            padding: 120px 0;
+        }
+        .container {
+            width: 1200px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+        .pink {
+            background-color: pink;
+        }
+        .gray {
+            background-color: #cdcdcd;
+        }
+
+        /* cardType */
+        .card__inner {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .card {
+            width: 33.333333%;
+            padding: 26px 25px 26px 26px;
+            border-right: 1px solid #eee;
+            background-color: #fff;
+        }
+        .card:nth-child(3n) {
+            border: none;
+        }
+        .card__header {
+            border-radius: 10px;
+            height: 250px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .card__header img{
+            width: 100%;
+            height: 100%;
+        }
+        .card__header .tag{
+            position: absolute;
+            font-size: 14px;
+            color: #7b7b7b;
+            border-radius: 50px;
+            background-color: #fff;
+            padding: 5px 15px;
+            right: 10px;
+            top: 10px;
+        }
+        .card__body .tit {
+            font-size: 20px;
+            font-weight: 300px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; 
+            -webkit-box-orient: vertical;
+        }
+        .card__body .desc {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #666;
+            margin-bottom: 30px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; 
+            -webkit-box-orient: vertical;
+        }
+        .card__body .box {
+            display: flex;
+            justify-content: right;
+        } 
+        .card__body .box .more {
+            font-size: 16px;
+            line-height: 1.17;
+            color: #666;
+            position: relative;
+            margin-right: 50px;
+            text-align: right;
+        }
+        .card__body .box .more .red {
+            color: #dd2a2a;
+        }
+        .card__body .box .more::after {
+            content: '';
+            position: absolute;
+            width: 37.6px;
+            height: 40px;
+            right: -49.9px;
+            top: -1px;
+            background-image: url(img/sky.svg);
+        }
+    </style>
+</head>
+
+<body>
+    <section id="cardType" class="card__wrap suit section pink">
+        <div class="card__inner container gray">
+            <article class="card">
+                <figure class="card__header">
+                        <img src="img/card_bg03_01.jpg" alt="토끼 사진1">
+                        <a href="#" class="tag">Tag</a>
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">너무나도 귀엽고 사랑스러운 토끼 사진 이 여기있습니다 얼른 와서 보시는게 제일좋아요! 빨리와야해요!</h3>
+                    <p class="desc">여러분은 귀여운 토끼 사진을 보실수 있는 기회가 생겼습니다. 진짜귀여운토끼를 함께 보세요! 행복할수있어요 우리다함께 행복해요! 토끼를 보시면 행복할수있습니다!</p>
+                    <div class="box">
+                        <a href="#" class="more">
+                            <p class="red">오늘하루도맑은</p>
+                            <p>하늘</p>
+                            <span aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                        <img src="img/card_bg03_02.jpg" alt="토끼 사진2">
+                        <a href="#" class="tag">Tag</a>
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">너무나도 귀엽고 사랑스러운 토끼 사진 이 여기있습니다 얼른 와서 보시는게 제일좋아요! 빨리와야해요!</h3>
+                    <p class="desc">여러분은 귀여운 토끼 사진을 보실수 있는 기회가 생겼습니다. 진짜귀여운토끼를 함께 보세요! 행복할수있어요 우리다함께 행복해요! 토끼를 보시면 행복할수있습니다!</p>
+                    <div class="box">
+                        <a href="#" class="more">
+                            <p class="red">오늘하루도맑은</p>
+                            <p>하늘</p>
+                            <span aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                        <img src="img/card_bg03_03.jpg" alt="토끼 사진3">
+                        <a href="#" class="tag">Tag</a>
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">너무나도 귀엽고 사랑스러운 토끼 사진 이 여기있습니다 얼른 와서 보시는게 제일좋아요! 빨리와야해요!</h3>
+                    <p class="desc">여러분은 귀여운 토끼 사진을 보실수 있는 기회가 생겼습니다. 진짜귀여운토끼를 함께 보세요! 행복할수있어요 우리다함께 행복해요! 토끼를 보시면 행복할수있습니다!</p>
+                    <div class="box">
+                        <a href="#" class="more">
+                            <p class="red">오늘하루도맑은</p>
+                            <p>하늘</p>
+                            <span aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+
+</html>

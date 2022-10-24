@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃5</title>
+    <style>
+        *{
+            box-sizing: 0;
+            padding: 0;
+            margin: 0;
+        }
+        #header {
+            height: 100px;
+            background-color: #EEEBE9;
+        }
+        #nav {
+            height: 100px;
+            background-color: #B9AAA5;
+        }
+        #footer {
+            height: 100px;
+            background-color: #4E342E;
+        }
+        .container {
+            width: 1200px;
+            height: inherit; 
+            margin: 0 auto; 
+        }
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: #D5CCC9;
+        }
+        .nav {
+            width: 100%;
+            height: 100px;
+            background-color: #9D8980;
+        }
+        .main {
+            width: 100%;
+            height: 780px;
+            background-color: #594139;
+        }
+        .footer {
+            width: 100%;
+            height: 100px;
+            background-color: #3E2723;
+        }
+
+        .contents .cont1 {
+            width: 100%;
+            height: 100px;
+            background-color: #684D43;
+        }
+
+        .contents .cont2 {
+            width: 100%;
+            height: 200px;
+            background-color: #74574A;
+        }
+
+        .contents .cont3 {
+            width: 50%;
+            height: 480px;
+            background-color: #594139;
+            float: left;
+        }
+
+        .contents .cont4 {
+            width: 50%;
+            height: 480px;
+            background-color: #4A352F;
+            float: left;
+        }
+
+         @media (max-width: 1220px) {
+            .container {
+                width: 96%;
+            }
+            .contents .cont1 {
+                float: left;
+                width: 30%;
+                height: 780px;
+            }
+            .contents .cont2 {
+                float: left;
+                width: 70%;
+                height: 390px;
+            }
+            .contents .cont3 {
+                width: 35%;
+                height: 390px;
+            }
+            .contents .cont4 {
+                width: 35%;
+                height: 390px;
+            }
+         }
+         @media (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+            .contents .cont2,
+            .contents .cont3,
+            .contents .cont4 {
+                width: 70%;
+                height: 260px;
+            }
+         }
+
+         @media (max-width: 480px) {
+            .contents .cont1 {
+                width: 100%;
+                height: 150px;
+            }
+
+            .contents .cont2,
+            .contents .cont3,
+            .contents .cont4 {
+                width: 100%;
+                height: 210px;
+            }
+         }
+
+         /* 
+            float으로 인해 영역깨짐 방지법
+            1. 깨지는 영역에 clear:both를 설정한다.
+            2. 부모 박스 영역에 overflow: hidden을 설정한다
+            3. clearfix를 설정한다
+          */
+
+         .clearfix::before,
+         .clearfix::after {
+            content: '';
+            display: block;
+            line-height: 0;
+         }
+         .clearfix::after {
+            clear: both;
+         }  
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <div class="header"></div>
+            </div>
+        </div>
+        <div id="nav">
+            <div class="container">
+                <div class="nav"></div>
+            </div>
+        </div>
+        <div id="main">
+            <div class="contents container clearfix">
+                <div class="cont1"></div>
+                <div class="cont2"></div>
+                <div class="cont3"></div>
+                <div class="cont4"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div class="footer"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

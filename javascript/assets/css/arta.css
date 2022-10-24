@@ -1,0 +1,98 @@
+pre code.hljs {
+    display: block;
+    /* overflow-x: auto; */
+    padding: 20px;
+    font-family: "NexonLv1Gothic";
+    line-height: 1.6;
+    /* margin-bottom: 20px; */
+    border-radius: 5px;
+    height: 100%;
+    text-align: left;
+}
+pre {
+    /* height: 100%; */
+    line-height: 1.3;
+}
+/* .t_code pre code.hljs {
+    display: block;
+    padding: 1em;
+    height: 100%;
+} */
+
+code .hljs {
+    padding: 3px 5px;
+}
+
+.hljs {
+    background: hsl(20 3% 19%);
+    color: #b5b5b5;
+}
+
+.hljs-subst {
+    color: #b5b5b5;
+}
+
+.hljs-section {
+    color: #fff;
+}
+
+.hljs-comment,
+.hljs-meta,
+.hljs-quote {
+    color: #666;
+}
+
+.hljs-property,
+.hljs-bullet,
+.hljs-regexp,
+.hljs-string,
+.hljs-symbol {
+    color: #d9ae2f;
+}
+
+.hljs-params,
+.hljs-addition,
+.hljs-number {
+    color: #03de70;
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-built_in,
+.hljs-link,
+.hljs-literal,
+.hljs-template-variable,
+.hljs-type {
+    color: #32aaee;
+}
+
+.hljs-function,
+.hljs-keyword,
+.hljs-name,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-selector-tag {
+    color: #7952c7;
+}
+
+.hljs-selector-pseudo,
+.hljs-deletion,
+.hljs-template-tag,
+.hljs-title,
+.hljs-variable {
+    color: #d1257b;
+}
+
+.hljs-doctag,
+.hljs-section,
+.hljs-strong {
+    font-weight: 700;
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-tag {
+    color: #666;
+}

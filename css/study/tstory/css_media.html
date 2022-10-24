@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오르셰미술관</title>
+    <style>
+        h1,
+        h2,
+        ul,
+        li,
+        p,
+        div {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .clear:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        a {
+            line-height: 1.5;
+            color: #333;
+        }
+
+        body {
+            background: #f1f1f1;
+            font-size: 13px;
+        }
+
+        header {
+            background: coral;
+        }
+
+        h1 {
+            font-size: 25px;
+            color: #cc0;
+            padding: 10px;
+            color: #fff;
+        }
+
+        .lnb li {
+            margin: 10px;
+            padding: 10px;
+            background: lightgreen;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        .ext {
+            margin: 10px;
+            padding: 20px;
+            background: lightgreen;
+        }
+
+        footer {
+            padding: 10px;
+            background: #aaa;
+        }
+
+        @media all and (min-width:768px) and (max-width:1024px) {
+            .lnb {
+                float: left;
+                width: 25%;
+            }
+
+            .content {
+                float: left;
+                width: 75%;
+            }
+
+            .aside {
+                clear: both;
+            }
+        }
+
+        @media all and (min-width:1025px) {
+            .wrap {
+                max-width: 1280px;
+                margin: 0 auto;
+            }
+
+            .lnb {
+                float: left;
+                width: 20%;
+            }
+
+            .content {
+                float: left;
+                width: 50%;
+            }
+
+            .aside {
+                float: right;
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1>Musee d'Orsay</h1>
+        </header>
+        <div id="container" class="clear">
+            <div class="lnb">
+                <ul>
+                    <li><a href="#">작가의 작품</a></li>
+                    <li><a href="#">작가의 시대</a></li>
+                    <li><a href="#">작가의 일생</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2>PICTURES</h2>
+                <p><a href="#">피리부는 소년</a> <br><a href="#">고흐의 방</a><br><a href="#">황색 그리스도가 있는 화가의 자화상</a><br><a
+                        href="#">오페라좌의 관현악단</a><br><a href="#">만종</a><br><a href="#">제비꽃 장식을 단 베르트모리조</a><br><a
+                        href="#">피리부는 소년</a> <br><a href="#">고흐의 방</a><br><a href="#">황색 그리스도가 있는 화가의 자화상</a><br><a
+                        href="#">오페라좌의 관현악단</a><br><a href="#">만종</a><br><a href="#">제비꽃 장식을 단 베르트모리조</a></p>
+            </div>
+            <div class="aside">
+                <ul class="ext">
+                    <li>
+                        <h2>Workshop Go</h2><a href="#">Life drawing workshop</a>
+                    </li>
+                    <li>
+                        <h2>Summer Exhibition</h2><a href="#">A-level Summer Exibition Online 2010</a>
+                    </li>
+                    <li>
+                        <h2>RA Collection</h2><a href="#">RA Collections</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <p>©2018 Les Amis du Musee d'Orsay. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>css애니</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">애니메이션 만들기</h2>
+
+                <h3 class="t_tit2">애니메이션 : 웨이브</h3>
+                <p class="t_desc">웨이브하는 공을 만들어봅시다.</p>
+                <div class="t_code">
+                    <pre><code class="language-css hljs">@mixin center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+body {
+	@include center;
+	height: 100vh;
+	background-image: linear-gradient(45deg, #00dbde 0%, #fc00ff 100%);
+}
+.row {
+	display: flex;
+	
+	.circle {
+		width: 10px; height: 10px;
+		background: #fff;
+		border-radius: 50%;
+		margin: 5px 10px;
+		transform-origin: top center;
+		animation: spin 1s linear infinite;
+	}
+}
+
+@keyframes spin {
+	0%   {transform: scale(1.1) rotate(0deg)}
+	50%  {transform: scale(0.2) rotate(180deg)}
+	100% {transform: scale(1.1) rotate(360deg)}
+}
+
+// .row:nth-child(1) .circle  {animation-delay: 100ms}
+// .row:nth-child(2) .circle  {animation-delay: 200ms}
+// .row:nth-child(3) .circle  {animation-delay: 300ms}
+// .row:nth-child(4) .circle  {animation-delay: 400ms}
+// .row:nth-child(5) .circle  {animation-delay: 500ms}
+// .row:nth-child(6) .circle  {animation-delay: 600ms}
+// .row:nth-child(7) .circle  {animation-delay: 700ms}
+// .row:nth-child(8) .circle  {animation-delay: 800ms}
+// .row:nth-child(9) .circle  {animation-delay: 900ms}
+// .row:nth-child(10) .circle {animation-delay: 1000ms}
+// .row:nth-child(11) .circle {animation-delay: 1100ms}
+// .row:nth-child(12) .circle {animation-delay: 1200ms}
+
+@for $i from 1 through 12 {
+	.row:nth-child(#{$i}) .circle {animation-delay: 100ms * $i}
+}
+    </code></pre>
+                </div>
+                <iframe height="300" style="width: 100%" scrolling="no" title="cssani3" src="https://codepen.io/hmm365/embed/QWrvroL?default-tab=result&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/hmm365/pen/QWrvroL"> cssani3</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>) on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+    </body>
+</html>

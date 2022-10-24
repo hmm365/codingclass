@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바스크립트 이펙트</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <header id="header">
+            <h1><a href="../index.html">Javascript</a></h1>
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                    <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                    <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                    <li><a href="../javascript04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../javascript05.html">문자열 객체</a></li>
+                    <li><a href="../javascript06.html">배열 객체</a></li>
+                    <li><a href="../javascript07.html">숫자 객체</a></li>
+                    <li><a href="../javascript08.html">수학 객체</a></li>
+                    <li><a href="../javascript09.html">브라우저 객체</a></li>
+                    <li><a href="../javascript10.html">요소 객체</a></li>
+                    <li><a href="../javascript11.html">이벤트 객체</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header -->
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">이미지 좌우로 움직이기</h2>
+                <p class="t_desc2">
+                    이번 슬라이더 이펙트는 slider__inner 클래스 div 을 만들어서 img의 width * 갯수 로하여서 전체 width값을 잡아줍니다. <br />
+                    또한 상위 slider__img 를 이용해 overflow: hidden; 을 주어서 넘치는 영역을 안보이게합니다. <br />
+                    js를 이용하여 sliderInner.style.transition = "all 0.6s" 을 주어서 애니메이션 효과를 넣고 <br />
+                    setInterval 이용하여 slider__inner 의 위치를 img의 width 값에 맞게 변경해줍니다. <br />
+                    또한 Gasp 와 jquery 를이용하여 만들어봤으니 자세한 내용은 아래에있는 소스보기를 통하여 봐주시면되겠습니다.
+                </p>
+                <div class="t_iframe" style="min-height: 450px">
+                    <iframe src="https://hmm365.github.io/coding2/javascript/effect/sliderEffect02.html"></iframe>
+                </div>
+                <div class="t_link">
+                    <a href="https://github.com/hmm365/coding2/blob/main/javascript/effect/sliderEffect02.html">원본 소스 보기</a>
+                    <a href="https://hmm365.github.io/coding2/javascript/effect/sliderEffect02.html">원본 사이트 보기</a>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script></script>
+    </body>
+</html>

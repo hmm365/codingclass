@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바스크립 이펙트</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">페럴럭스 이펙트2</h2>
+                <p class="t_desc2">이번 페럴럭스 이펙트는 사이드 메뉴의 버튼을 클릭하면 해당하는 섹션으로 이동하며, 해당하는 섹션의 위치에 도달하면 버튼의 모양이 바뀜니다.</p>
+                <iframe height="400" style="width: 100%" src="https://syumay.netlify.app/javascript/effect/parallaxeffect02"></iframe>
+                <div class="t_link">
+                    <a href="https://github.com/hmm365/coding2/blob/main/javascript/effect/parallaxEffect02.html">원본 소스 보기</a>
+                    <a href="https://syumay.netlify.app/javascript/effect/parallaxeffect02">원본 사이트 보기</a>
+                </div>
+                <hr />
+                <p class="t_desc2">scroll관련 코드들 간단요약</p>
+
+                <p class="t_box">먼저 scrollTop 에 조건을 걸어 모든 웹브라우저에 스크롤값을 구합니다.</p>
+                <div class="t_code">
+                    <pre><code class="language-js">let scrollTop = document.documentElement.scrollTop || window.pageYOffset || window.scrollY;
+scroll.innerText = Math.round(scrollTop);
+</code></pre>
+                </div>
+                <p class="t_box">
+                    content__item 클래스를 이용해 각 요소의 offsetTop 값을 찾아서 <br />
+                    #parallax__dot 에있는 li 에 효과를 입혀줍니다.<br />
+                    또한 forEach는 0부터 시작하므로 인덱스 값 + 1 하시면 됩니다.
+                </p>
+                <div class="t_code">
+                    <pre><code class="language-js"> document.querySelectorAll(".content__item").forEach((e, i) => {
+    if (scrollTop >= e.offsetTop - 10) {
+        document.querySelectorAll("#parallax__dot li").forEach((li) => {
+            li.classList.remove("active");
+        });
+        document.querySelector("#parallax__dot li:nth-child(" + (i + 1) + ")").classList.add("active");
+    }
+});
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script></script>
+    </body>
+</html>

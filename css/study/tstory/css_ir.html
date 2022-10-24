@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비트맵(Bitmap)과 벡터(Vector)</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+<body>
+
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">IR 효과</h2>
+            <p class="t_desc2">
+                img태그가 아닌 방법으로 이미지를 표현할 경우,<br>
+                이미지가 로딩되지 않을때 나타낼 수 있는 대체 텍스트를 표시할 수 없습니다.<br>
+                때문에 웹 접근성 향상을 위해 숨김 텍스트를 만들어가상으로 alt태그와 같은 효과를 주는 css 작성 기법입니다.<br>
+                IR 효과를 사용하게 되면, 웹 접근성을 떨어트리지 않으면서도 검색 엔진 최적화로부터 좋은 효과를 볼 수 있습니다.
+            </p>
+            <h3 class="t_tit">IR효과 방법</h3>
+<pre><code class="language-css">
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+/* 이미지가 없어도 대체 텍스트를 보여주고자 할 때 */
+.ir_wa {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+/* 대체 텍스트가 아닌 접근성 향상을 위해 숨김 텍스트를 제공할 때 */
+.ir_wa {
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+</code></pre>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+</body>
+</html>

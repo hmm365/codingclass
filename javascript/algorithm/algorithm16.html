@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>두 정수 사이의 합</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">정수 제곱근 판별</h2>
+                <p class="t_desc">
+                    임의의 양의 정수 n에 대해, n이 어떤 양의 정수 x의 제곱인지 아닌지 판단하려 합니다.<br />
+                    n이 양의 정수 x의 제곱이라면 x+1의 제곱을 리턴하고, n이 양의 정수 x의 제곱이 아니라면 -1을 리턴하는 함수를 완성하세요.
+                </p>
+                <p class="t_desc2">n은 1이상, 50000000000000 이하인 양의 정수입니다</p>
+                <hr />
+
+                <h3 class="t_tit2">입출력 예</h3>
+                <table class="t_table">
+                    <thead>
+                        <tr>
+                            <th>n</th>
+                            <th style="text-align: center">return</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>121</td>
+                            <td style="text-align: center">144</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td style="text-align: center">-1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="t_desc2">
+                    입출력 예#1<br />
+                    121은 양의 정수 11의 제곱이므로, (11+1)를 제곱한 144를 리턴합니다.<br />
+
+                    입출력 예#2<br />
+                    3은 양의 정수의 제곱이 아니므로, -1을 리턴합니다.
+                </p>
+                <hr />
+                <h3 class="t_tit2">정수 제곱근 판별</h3>
+                <div class="t_code">
+                    <pre><code class="language-js">function solution(n) {
+    if( Number.isInteger(Math.sqrt(n)) ) return Math.pow(Math.sqrt(n)+1, 2); 
+    else return -1;
+}
+</code></pre>
+                    <p class="t_box">
+                        총평 : sprt로 제곱근 이있으면 pow함수로 거듭제곱을 합니다 없으면 -1 반환<br />
+                        출처 : <a href="https://school.programmers.co.kr/learn/courses/30/lessons/12934" target="_blank">https://school.programmers.co.kr/learn/courses/30/lessons/12934</a>
+                    </p>
+                </div>
+                <!-- //result01 -->
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+    </body>
+</html>

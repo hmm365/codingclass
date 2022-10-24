@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>repeat</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">unshift() / shift()</h2>
+                <p class="t_desc2">
+                    unshift() 메서드는 배열 처음 요소에 추가<br />
+                    shift() 메서드는 배열 처음 요소에 삭제
+                </p>
+                <div class="t_table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 4%" />
+                            <col style="width: 32%" />
+                            <col style="width: 23%" />
+                            <col style="width: 13%" />
+                            <col style="width: 37%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                                <th>결과값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="smple04_N1"></td>
+                                <td class="smple04_Q1"></td>
+                                <td class="smple04_M1"></td>
+                                <td class="smple04_P1"></td>
+                                <td class="smple04_A1"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple04_N2"></td>
+                                <td class="smple04_Q2"></td>
+                                <td class="smple04_M2"></td>
+                                <td class="smple04_P2"></td>
+                                <td class="smple04_A2"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="t_code">
+                    <pre><code class="language-js">// 01
+const arrNum = [100, 200, 300, 400, 500];
+const arrUnshift = arrNum.unshift(600);
+// 02
+const arrNum2 = [100, 200, 300, 400, 500];
+const arrShift = arrNum2.shift();
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script>
+            {
+                const arrNum = [100, 200, 300, 400, 500];
+                const arrUnshift = arrNum.unshift(600);
+
+                document.querySelector(".smple04_N1").innerHTML = "1";
+                document.querySelector(".smple04_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple04_M1").innerHTML = "unshift(600)";
+                document.querySelector(".smple04_P1").innerHTML = arrUnshift; //6
+                document.querySelector(".smple04_A1").innerHTML = arrNum; //600, 100, 200, 300, 400, 500
+
+                const arrNum2 = [100, 200, 300, 400, 500];
+                const arrShift = arrNum2.shift();
+
+                document.querySelector(".smple04_N2").innerHTML = "1";
+                document.querySelector(".smple04_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple04_M2").innerHTML = "shift()";
+                document.querySelector(".smple04_P2").innerHTML = arrShift; //500
+                document.querySelector(".smple04_A2").innerHTML = arrNum2; //200, 300, 400, 500
+            }
+        </script>
+    </body>
+</html>

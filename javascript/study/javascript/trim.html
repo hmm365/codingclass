@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trim</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+    <style>
+        table {
+            border: 1px solid #cdcdcd;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid #cdcdcd;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">숫자 객체</a></li>
+                <li><a href="../javascript08.html">수학 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <!-- 주 타이틀 -->
+            <h2 class="t_tit">trim() | trimStart() | trimEnd()</h2>
+
+            <p class="t_desc">
+                trim() : 앞뒤 문자열 공백제거
+                trimStart() : 앞 공백 제거
+                trimEnd() : 뒤 공백 제거
+            </p>
+
+            <div class="t_code">
+<pre><code class="language-js">//01
+const str1 = "   javascript    ";
+const currentStr1 = str1.trim();
+
+document.querySelector(".sample03_N1").innerHTML = "1";
+document.querySelector(".sample03_Q1").innerHTML = "   javascript    ";
+document.querySelector(".sample03_M1").innerHTML = "trim()";
+document.querySelector(".sample03_P1").innerHTML = currentStr1; // "javascript"
+
+//02
+const str2 = "   javascript    ";
+const currentStr2 = str2.trimStart();
+
+document.querySelector(".sample03_N2").innerHTML = "2";
+document.querySelector(".sample03_Q2").innerHTML = str2;
+document.querySelector(".sample03_M2").innerHTML = "trimStart()";
+document.querySelector(".sample03_P2").innerHTML = currentStr2; // "javascript    "
+
+//03
+const str3 = "   javascript    ";
+const currentStr3 = str3.trimEnd();
+
+document.querySelector(".sample03_N3").innerHTML = "3";
+document.querySelector(".sample03_Q3").innerHTML = str3;
+document.querySelector(".sample03_M3").innerHTML = "trimEnd()";
+document.querySelector(".sample03_P3").innerHTML = currentStr3; //"     javascript"
+</code></pre>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+
+</body>
+</html>

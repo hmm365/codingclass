@@ -1,0 +1,161 @@
+// 양쪽 정렬
+@mixin flex_sb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+}
+
+// 가운데 정렬
+@mixin flex_ce {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin position_ce {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin position_auto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+@mixin border_bottom {
+    position: relative;
+    border-bottom: 3px solid $black;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $black;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+    }
+}
+@mixin border_top {
+    position: relative;
+    border-top: 3px solid $black;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $black;
+        position: absolute;
+        left: 0;
+        top: 4px;
+    }
+}
+
+// 버튼 스타일
+@mixin btn_style1 {
+    background: $black;
+    color: $white;
+    padding: 13px 30px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+@mixin btn_style2 {
+    border: 1px solid #c6c6c6;
+    padding: 13px 30px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: $white;
+    font-size: 1rem;
+    box-sizing: border-box;
+    color: $black;
+}
+@mixin btn_style3 {
+    border: 1px solid #c6c6c6;
+    padding: 13px 30px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 1rem;
+    box-sizing: border-box;
+    color: $black;
+}
+
+// 인풋 스타일
+@mixin input_style1 {
+    border: 1px solid #c6c6c6;
+    padding: 13px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: #666;
+    box-sizing: border-box;
+}
+
+// 이미지 대체(ir) 효과
+@mixin ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+/* 블라인드 효과 */
+@mixin blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+/* 클리어 픽스 */
+@mixin clearfix {
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        line-height: 0;
+    }
+    &::after {
+        clear: both;
+    }
+}
+
+//한줄효과
+@mixin row1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+//두줄효과
+@mixin row2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+//세줄효과
+@mixin row3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+//세줄효과
+@mixin row4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}

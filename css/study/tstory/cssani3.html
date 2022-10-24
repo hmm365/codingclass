@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>css애니</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">애니메이션 만들기</h2>
+                <p class="t_desc2">css 애니메이션을 만들어 봅니다!</p>
+
+                <h3 class="t_tit2">애니메이션 : 움직이는 공</h3>
+                <p class="t_desc">잔상이 뒤따르는 움직이는 공 애니메이션을 만들어 봅니다.</p>
+                <div class="t_code">
+                    <pre><code class="language-css hljs">*{
+  box-sizing:border-box;
+}
+body {
+  background: linear-gradient(to top, #1212aa 0%, #6060dd 100%);
+  width:100vw;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.wrapper{
+  position: absolute;
+  animation: x 1s ease-in-out alternate infinite 0s both;
+}
+.wrapper:nth-of-type(2){
+  animation-delay: 0.1s;
+}
+.wrapper:nth-of-type(3){
+  animation-delay: 0.2s;
+}
+.wrapper:nth-of-type(4){
+  animation-delay: 0.3s;
+}
+.wrapper:nth-of-type(5){
+  animation-delay: 0.4s;
+}
+.wrapper > div {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 100%;
+  margin: 40px;
+  animation: y 1s linear infinite 0s both;
+}
+.wrapper:nth-of-type(2) > div {
+  animation-delay: 0.1s;
+  opacity: 0.8;
+  height: 40px;
+  width: 40px;
+}
+.wrapper:nth-of-type(3) > div {
+  animation-delay: 0.2s;
+  opacity: 0.6;
+  height: 30px;
+  width: 30px;
+}
+.wrapper:nth-of-type(4) > div {
+  animation-delay: 0.3s;
+    opacity: 0.4;
+  height: 20px;
+  width: 20px;
+  }
+.wrapper:nth-of-type(5) > div {
+  animation-delay: 0.4s;
+  opacity: 0.2;
+  height: 10px;
+  width: 10px;
+}
+@keyframes x {
+  0%{transform : translatex(-100px) }
+  100%{transform : translatex(100px) }
+}
+@keyframes y {
+  25%{transform: translatey(-50px)}
+  0%,50%,100%{transform: translatey(0)}
+  75%{transform: translatey(50px)}
+}
+    </code></pre>
+                </div>
+                <iframe height="300" style="width: 100%" scrolling="no" title="cssani3" src="https://codepen.io/hmm365/embed/xxjxVNK?default-tab=result&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/hmm365/pen/xxjxVNK"> cssani3</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>) on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+    </body>
+</html>

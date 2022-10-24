@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="Ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>슬라이더 이펙트</title>
+
+        <link rel="stylesheet" href="../assets/css/slider.css" />
+
+        <link href="https://webfontworld.github.io/tmon/Tmon.css" rel="stylesheet" />
+        <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../assets/css/arta.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+
+        <style>
+            /* slider */
+            .slider__wrap {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            /* 이미지 보이는 영역 */
+            .slider__img {
+                position: relative;
+                height: 450px;
+                width: 800px;
+                overflow: hidden;
+            }
+            /* 이미지를 감싸고 있는 부모 : 움직이는 부분 */
+            .slider__inner {
+                display: flex;
+                flex-wrap: wrap;
+                width: 4800px;
+                height: 450px;
+            }
+            /* 개별적인 이미지 */
+            .slider {
+                position: relative;
+                width: 800px;
+                height: 450px;
+            }
+            .slider::before {
+                content: "";
+                position: absolute;
+                left: 5px;
+                top: 5px;
+                background: rgba(0, 0, 0, 0.4);
+                color: #fff;
+                padding: 5px 10px;
+            }
+            .slider:nth-child(1)::before {
+                content: "이미지1";
+            }
+            .slider:nth-child(2)::before {
+                content: "이미지2";
+            }
+            .slider:nth-child(3)::before {
+                content: "이미지3";
+            }
+            .slider:nth-child(4)::before {
+                content: "이미지4";
+            }
+            .slider:nth-child(5)::before {
+                content: "이미지5";
+            }
+            .slider:nth-child(6)::before {
+                content: "이미지1";
+            }
+
+            @media (max-width: 800px) {
+                .slider__img {
+                    width: 400px;
+                    height: 260px;
+                }
+            }
+            .slider__btn {
+            }
+            .slider__btn a {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 50px;
+                height: 50px;
+                background: rgba(0, 0, 0, 0.4);
+                text-align: center;
+                line-height: 50px;
+                transition: all 0.2s;
+                display: block;
+                color: #fff;
+            }
+            .slider__btn a:hover {
+                background: rgba(0, 0, 0, 0.8);
+            }
+            .slider__btn a.prev {
+                left: 0;
+            }
+            .slider__btn a.next {
+                right: 0;
+            }
+        </style>
+    </head>
+
+    <body class="img08">
+        <header id="header">
+            <h1>Javascript Slider Effect04</h1>
+            <p>슬라이드 이펙트 - 클릭하여 움직이기</p>
+            <ul>
+                <li><a href="sliderEffect01.html">1</a></li>
+                <li><a href="sliderEffect02.html">2</a></li>
+                <li><a href="sliderEffect03.html">3</a></li>
+                <li class="active"><a href="sliderEffect04.html">4</a></li>
+                <li><a href="sliderEffect05.html">5</a></li>
+                <li><a href="sliderEffect06.html">6</a></li>
+                <li><a href="sliderEffect07.html">7</a></li>
+            </ul>
+        </header>
+        <!-- //header -->
+
+        <main id="main">
+            <section id="sliderType04">
+                <div class="slider__wrap">
+                    <div class="slider__img">
+                        <div class="slider__inner">
+                            <div class="slider"><img src="../assets/img/effect_bg11@2x.jpg" alt="동물사진" /></div>
+                            <div class="slider"><img src="../assets/img/effect_bg12@2x.jpg" alt="동물사진" /></div>
+                            <div class="slider"><img src="../assets/img/effect_bg13@2x.jpg" alt="동물사진" /></div>
+                            <div class="slider"><img src="../assets/img/effect_bg14@2x.jpg" alt="동물사진" /></div>
+                            <div class="slider"><img src="../assets/img/effect_bg15@2x.jpg" alt="동물사진" /></div>
+                        </div>
+                    </div>
+                    <div class="slider__btn">
+                        <a href="#" class="prev">prev</a>
+                        <a href="#" class="next">next</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- //main -->
+
+        <footer id="footer">
+            <div class="modal__wrap">
+                <div class="modal__btn">소스보기</div>
+                <div class="modal__cont">
+                    <div class="modal__box">
+                        <div class="tab__title">
+                            <span class="dot" aria-label="true"></span>
+                            <div class="tabs">
+                                <div class="active">
+                                    <span class="favicon" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                            <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                            <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange"></path>
+                                            <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow"></path>
+                                        </svg>
+                                    </span>
+                                    <em>Javascript</em>
+                                    <span class="close" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                            <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="favicon" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                            <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                            <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange"></path>
+                                            <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow"></path>
+                                        </svg>
+                                    </span>
+                                    <em>HTML</em>
+                                    <span class="close" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                            <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="favicon" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                            <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                            <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange"></path>
+                                            <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow"></path>
+                                        </svg>
+                                    </span>
+                                    <em>CSS</em>
+                                    <span class="close" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                            <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="plus" aria-label="true">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                    <path d="M2.5 8H13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M8 2.5V13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="cont">
+                            <div class="active">
+                                <pre><code class="language-js">const sliderWrap = document.querySelector(".slider__wrap");
+const sliderImg = document.querySelector(".slider__img"); //보여지는영역
+const sliderInner = document.querySelector(".slider__inner"); //움직이는 영역
+const slider = document.querySelectorAll(".slider"); //각각 이미지
+const sliderBtn = document.querySelector(".slider__btn"); //버튼
+const sliderBtnPrev = document.querySelector(".slider__btn .prev"); //왼쪽버튼
+const sliderBtnNext = document.querySelector(".slider__btn .next"); //오른쪽버튼
+
+let currentIndex = 0;
+let sliderCount = slider.length; //이미지갯수
+let sliderWidth = sliderImg.offsetWidth; //이미지 가로값
+
+//이미지 움직이는 영역
+function gotoSlider(num) {
+    sliderInner.style.transition = "all 400ms";
+    sliderInner.style.transform = "translateX(" + -sliderWidth * num + "px)";
+    currentIndex = num;
+}
+//왼쪽 버튼 클릭
+sliderBtnPrev.addEventListener("click", () =&gt; {
+    let prevIndex = (currentIndex + sliderCount - 1) % sliderCount;
+    // let prevIndex = currentIndex - 1;
+    // if (prevIndex &lt; 0) {
+    //     prevIndex = sliderCount - 1;
+    // }
+    console.log(prevIndex);
+    gotoSlider(prevIndex);
+});
+
+//오른쪽 버튼 클릭
+sliderBtnNext.addEventListener("click", () =&gt; {
+    let nextIndex = (currentIndex + 1) % sliderCount;
+    console.log(nextIndex);
+    gotoSlider(nextIndex);
+});
+</code></pre>
+                            </div>
+                            <div>
+                                <pre><code class="language-html">&lt;section id="sliderType04"&gt;
+    &lt;div class="slider__wrap"&gt;
+        &lt;div class="slider__img"&gt;
+            &lt;div class="slider__inner"&gt;
+                &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg11@2x.jpg" alt="동물사진" /&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg12@2x.jpg" alt="동물사진" /&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg13@2x.jpg" alt="동물사진" /&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg14@2x.jpg" alt="동물사진" /&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg15@2x.jpg" alt="동물사진" /&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="slider__btn"&gt;
+            &lt;a href="#" class="prev"&gt;prev&lt;/a&gt;
+            &lt;a href="#" class="next"&gt;next&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+                            </div>
+                            <div>
+                                <pre><code class="language-css">/* slider */
+.slider__wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 이미지 보이는 영역 */
+.slider__img {
+    position: relative;
+    height: 450px;
+    width: 800px;
+    overflow: hidden;
+}
+/* 이미지를 감싸고 있는 부모 : 움직이는 부분 */
+.slider__inner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 4800px;
+    height: 450px;
+}
+/* 개별적인 이미지 */
+.slider {
+    position: relative;
+    width: 800px;
+    height: 450px;
+}
+.slider::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 5px 10px;
+}
+.slider:nth-child(1)::before {
+    content: "이미지1";
+}
+.slider:nth-child(2)::before {
+    content: "이미지2";
+}
+.slider:nth-child(3)::before {
+    content: "이미지3";
+}
+.slider:nth-child(4)::before {
+    content: "이미지4";
+}
+.slider:nth-child(5)::before {
+    content: "이미지5";
+}
+.slider:nth-child(6)::before {
+    content: "이미지1";
+
+@media (max-width: 800px) {
+    .slider__img {
+        width: 400px;
+        height: 260px;
+    }
+}
+.slider__btn {
+}
+.slider__btn a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.2s;
+    display: block;
+    color: #fff;
+}
+.slider__btn a:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+.slider__btn a.prev {
+    left: 0;
+}
+.slider__btn a.next {
+    right: 0;
+}
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__close">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+        <script src="../assets/js/highlight.min.js"></script>
+        <script src="../assets/js/modal.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script>
+            const sliderWrap = document.querySelector(".slider__wrap");
+            const sliderImg = document.querySelector(".slider__img"); //보여지는영역
+            const sliderInner = document.querySelector(".slider__inner"); //움직이는 영역
+            const slider = document.querySelectorAll(".slider"); //각각 이미지
+            const sliderBtn = document.querySelector(".slider__btn"); //버튼
+            const sliderBtnPrev = document.querySelector(".slider__btn .prev"); //왼쪽버튼
+            const sliderBtnNext = document.querySelector(".slider__btn .next"); //오른쪽버튼
+
+            let currentIndex = 0;
+            let sliderCount = slider.length; //이미지갯수
+            let sliderWidth = sliderImg.offsetWidth; //이미지 가로값
+
+            //이미지 움직이는 영역
+            function gotoSlider(num) {
+                sliderInner.style.transition = "all 400ms";
+                sliderInner.style.transform = "translateX(" + -sliderWidth * num + "px)";
+                currentIndex = num;
+            }
+            //왼쪽 버튼 클릭
+            sliderBtnPrev.addEventListener("click", () => {
+                let prevIndex = (currentIndex + sliderCount - 1) % sliderCount;
+                // let prevIndex = currentIndex - 1;
+                // if (prevIndex < 0) {
+                //     prevIndex = sliderCount - 1;
+                // }
+                console.log(prevIndex);
+                gotoSlider(prevIndex);
+            });
+
+            //오른쪽 버튼 클릭
+            sliderBtnNext.addEventListener("click", () => {
+                let nextIndex = (currentIndex + 1) % sliderCount;
+                console.log(nextIndex);
+                gotoSlider(nextIndex);
+            });
+        </script>
+    </body>
+</html>

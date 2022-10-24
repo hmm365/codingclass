@@ -1,0 +1,197 @@
+@import url("https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css");
+
+.nexon {
+    font-family: "NexonLv1Gothic";
+    font-weight: 400;
+}
+
+/* text2Type03 */
+.text__wrap {
+    background-color: #f6f8fd;
+}
+.text2__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.text2 {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 29%;
+    position: relative;
+}
+.top {
+    border-bottom: 1px solid #f5f5f5d7;
+    margin-bottom: 20px;
+    height: 195px;
+}
+
+.desc {
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.4;
+}
+.mid {
+    display: flex;
+    margin-bottom: 19px;
+}
+.icon_box {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 18px;
+}
+.icon_box img {
+    position: absolute;
+    left: 19px;
+    top: 20px;
+    margin: 0;
+    width: 24px;
+    height: 24px;
+}
+.text_tit {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 4px;
+}
+.text_tit_2 {
+    font-size: 18px;
+    color: #666;
+    font-weight: 400;
+    margin-left: 11px;
+    margin-top: 5px;
+}
+.icon_star {
+    position: absolute;
+    top: 270px;
+    left: 98px;
+}
+.bottom {
+    border-top: 1px solid #f5f5f5d7;
+}
+.bottom a {
+    display: block;
+    margin: 0 auto;
+    width: 130px;
+    height: 30px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: #4b57e3;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+@media (max-width: 960px) {
+    .text {
+        width: 96%;
+        margin: 0 auto;
+    }
+    .text__inner {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .text .desc1 {
+        display: inline-block;
+    }
+    .text .desc2 {
+        margin-bottom: 30px;
+    }
+    .text .icon__box {
+        left: 43%;
+        margin-bottom: 20px;
+    }
+    .text_left {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .text_right {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .section > h2 {
+        font-size: 40px;
+    }
+    .section > p {
+        font-size: 17px;
+    }
+
+    .image__desc > h3 {
+        font-size: 18px;
+    }
+    .image__desc > a {
+        font-size: 14px;
+    }
+    .text2 {
+        width: 96%;
+        margin-bottom: 20px;
+    }
+    .footer__menu {
+        flex-wrap: wrap;
+    }
+    .footer__first {
+        text-align: center;
+        width: 100% !important;
+    }
+    .footer__first figure {
+        width: 32%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .footer__menu {
+        justify-content: space-around !important;
+    }
+    .footer__right h3 {
+        font-size: 16px;
+    }
+    .footer__menu li a {
+        font-size: 12px !important;
+    }
+    .footer__right {
+        width: 96% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .image__inner {
+        display: block;
+    }
+    .image {
+        width: 96%;
+        margin-bottom: 20px;
+    }
+    .text .icon__box {
+        left: 39%;
+    }
+    .section > h2 {
+        font-size: 30px;
+    }
+    .section > p {
+        font-size: 14px;
+    }
+    .card__inner .card {
+        width: 100%;
+    }
+    .card__inner .card .tit {
+        font-size: 16px;
+    }
+    .card__inner .card .desc {
+        font-size: 13px;
+    }
+    .card__inner .card .more {
+        display: none;
+    }
+    .banner__inner .title {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    .banner__inner .desc {
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형03</title>
+    <link href="https://webfontworld.github.io/yangheeryu/GowunBatang.css" rel="stylesheet">
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+        .gowun {
+            font-family: GowunBatang;
+            font-weight: 400;
+        }
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;   
+            box-sizing: border-box;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+        }
+        .container-fluid {
+            width: 100%;
+            padding: 0 100px;
+            box-sizing: border-box;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section > h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section > p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            clip: inset(50%);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+        /* imageType */
+        .image__inner {
+            display: grid;
+            grid-template-areas:
+                "box1 box1 box2 box3"
+                "box1 box1 box4 box5";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 20px;
+        }
+        .image {
+            position: relative;
+            overflow: hidden;
+        }
+        .image__inner .image:nth-child(1) {
+            grid-area: box1;
+            background: url(../img/img04/img_bg_04_01.jpg);
+            background-size: cover;
+        }  
+        .image__inner .image:nth-child(2) {
+            grid-area: box2;
+        }
+        .image__inner .image:nth-child(3) {
+            grid-area: box3;
+        }
+        .image__inner .image:nth-child(4) {
+            grid-area: box4;
+        }
+        .image__inner .image:nth-child(5) {
+            grid-area: box5;
+        }
+        .image__box {}
+
+        .image__desc {
+            position: absolute;
+            left: 0;
+            bottom: -100%;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            padding: 16px;
+            transition: all 0.6s ease;
+        }
+        .image:hover .image__desc {
+            bottom: 0;
+        }
+        .image__desc h3 {
+            font-size: 20px;
+        }
+        .image__desc p {
+            font-size: 16px;
+            color: #666;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .image__sns {
+            position: absolute;
+            opacity: 0;
+            right: 10px;
+            top: 10px;
+            transition: all 1s ease;
+        }
+        .image__sns a {
+            width: 36px;
+            height: 36px;
+            background: #fff;
+            border-radius: 50%;
+            display: block;
+            margin-bottom: 5px;
+            background: url(../img/img04/image_bg03_icon.svg);
+        }
+        .image:hover .image__sns {
+            opacity: 1;
+        }
+        .image__sns a:nth-child(1) {}
+        .image__sns a:nth-child(2) { background-position: -50px 0; }
+        .image__sns a:nth-child(3) { background-position: -100px 0; }
+        .image__sns a:nth-child(4) { background-position: -150px 0; }
+        .image__sns a:nth-child(5) { background-position: -200px 0; }
+    </style>
+</head>
+<body>
+    <section id="imageType03" class="image__wrap gowun section">
+        <h2>우리의동물사진</h2>
+        <p>
+            우주 최강 귀엽고 깜직한 우리 동물을 보시면 너무 좋아요<br>
+            얼른 동물사진을 보시는게 제일 좋을것 같아요
+        </p>
+        <div class="image__inner container-fluid">
+            <article class="image">
+                <!-- <figure class="image__box">
+                    <img src="img/image_bg03_01.jpg" alt="셰이크 로트폴라 모스크">
+                </figure> -->
+                <div class="image__desc">
+                    <h3>포악한곰</h3>
+                    <p>세상에가 가장무서운 곰입니다 엄청무서우니 도망가는게 좋겠습니다 여러분은 곰이 얼마나 강하고 무서운지 아세요? 나는 겪..</p>
+                </div>
+                <div class="image__sns">
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                </div>
+            </article>
+            <article class="image">
+                <figure class="image__box">
+                    <img src="../img/img04/img_bg_04_02.jpg" alt="셰이크 로트폴라 모스크">
+                </figure>
+                <div class="image__desc">
+                    <h3>셰이크 로트폴라 모스크</h3>
+                    <p>세상에가 가장무서운 곰입니다 엄청무서우니 도망가는게 좋겠습니다 여러분은 곰이 얼마나 강하고 무서운지 아세요? 나는 겪..</p>
+                </div>
+                <div class="image__sns">
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                </div>
+            </article>
+            <article class="image">
+                <figure class="image__box">
+                    <img src="../img/img04/img_bg_04_03.jpg" alt="셰이크 로트폴라 모스크">
+                </figure>
+                <div class="image__desc">
+                    <h3>셰이크 로트폴라 모스크</h3>
+                    <p>세상에가 가장무서운 곰입니다 엄청무서우니 도망가는게 좋겠습니다 여러분은 곰이 얼마나 강하고 무서운지 아세요? 나는 겪..</p>
+                </div>
+                <div class="image__sns">
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                </div>
+            </article>
+            <article class="image">
+                <figure class="image__box">
+                    <img src="../img/img04/img_bg_04_04.jpg" alt="셰이크 로트폴라 모스크">
+                </figure>
+                <div class="image__desc">
+                    <h3>셰이크 로트폴라 모스크</h3>
+                    <p>세상에가 가장무서운 곰입니다 엄청무서우니 도망가는게 좋겠습니다 여러분은 곰이 얼마나 강하고 무서운지 아세요? 나는 겪..</p>
+                </div>
+                <div class="image__sns">
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                </div>
+            </article>
+            <article class="image">
+                <figure class="image__box">
+                    <img src="../img/img04/img_bg_04_05.jpg" alt="셰이크 로트폴라 모스크">
+                </figure>
+                <div class="image__desc">
+                    <h3>셰이크 로트폴라 모스크</h3>
+                    <p>세상에가 가장무서운 곰입니다 엄청무서우니 도망가는게 좋겠습니다 여러분은 곰이 얼마나 강하고 무서운지 아세요? 나는 겪..</p>
+                </div>
+                <div class="image__sns">
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                    <a href="#" class="link"><span class="blind">페이지이동</span></a>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+</html>

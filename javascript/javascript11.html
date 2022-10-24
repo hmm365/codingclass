@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바스크립트 : 이벤트 객체</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/dracula.css" />
+        <script src="assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <header id="header">
+            <h1><a href="index.html">Javascript</a></h1>
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="javascript01.html">데이터 저장하기</a></li>
+                    <li><a href="javascript02.html">데이터 불러오기</a></li>
+                    <li><a href="javascript03.html">데이터 실행하기</a></li>
+                    <li><a href="javascript04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="javascript05.html">문자열 객체</a></li>
+                    <li><a href="javascript06.html">배열 객체</a></li>
+                    <li class="active"><a href="javascript07.html">수학 객체</a></li>
+                    <li><a href="javascript08.html">숫자 객체</a></li>
+                    <li><a href="javascript09.html">브라우저 객체</a></li>
+                    <li><a href="javascript10.html">요소 객체</a></li>
+                    <li><a href="javascript11.html">이벤트 객체</a></li>
+                    <li><a href="javascript12.html">제이 쿼리</a></li>
+                </ul>
+                <ul class="effect">
+                    <li><a href="effect/searchEffect.html">검색 효과</a></li>
+                    <li><a href="effect/quizEffect.html">퀴즈 효과</a></li>
+                    <li><a href="effect/dataEffect.html">데이터 효과</a></li>
+                    <li><a href="effect/mouseEffect.html">마우스 효과</a></li>
+                    <li><a href="effect/sliderEffect.html">슬라이드 효과</a></li>
+                    <li><a href="effect/parallaxEffect.html">패랠렉스 효과</a></li>
+                    <li><a href="effect/gmaeEffect.html">게임 효과</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header -->
+        <main id="main">
+            <div class="container">
+                <div class="main_menu">
+                    <ul>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("click") : 클릭했을 때</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("scroll") : 스크롤했을 때</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("resize") : 브라우저 사이즈 변경 됐을 때</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("selectstart") : 텍스트 선택을 시작 했을 때</a></li>
+                        <br />
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("mousedown") : 마우스 버튼을 눌렀을 시작 했을 때</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("mouseup") : 마우스 버튼을 때는 경우</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("mousemove") : 마우스 움직이는 경우</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("mouseenter") : 마우스 포인터 요소의 위치가 있을 때</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("mouseleave") : 마우스 포인터 요소의 위치가 벗어났을 때</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("mouseover") : 마우스 포인터 요소의 위치가 있을 때</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("mouseout") : 마우스 포인터 요소의 위치가 벗어났을 때</a></li>
+                        <br />
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("drag") : 드래그 중인 경우</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("dragstart") : 드래그 시작했을 때</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("dragend") : 드래그 끝났을 때</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("draenter") : 요소의 위치에 드래그 했을 때</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("dragover") : 요소의 위치 위에 있을 때</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("dragleave") : 요소의 위치 위에서 벗어 났을 때</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("drop") : 요소의 위치에 드롭 했을 때</a></li>
+                        <br />
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("keydown") : 키 눌렀을 떄(한번만 실행)</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("keypress") : 키 눌렀을 떄(누르고 있으면 계속 실행)</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("keyup") : 키 누르고 땟을 떄</a></li>
+                        <br />
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("touchstart") : 터치가 시작 댔을 때</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("touchmove") : 터치가 움직이고 있을 떄</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : addEventListener("touchend") : 터치가 끝 났을 때</a></li>
+                        <br />
+                        <li><a href="#">01. 브라우저 속성 : 크기 및 위치 : window.scrollX : 가로 스크롤 값(브라우저 기준)</a></li>
+                        <li><a href="#">01. 브라우저 속성 : 크기 및 위치 : window.scrollY : 세로 스크롤 값(브라우저 기준)</a></li>
+                        <li><a href="#">01. 브라우저 메서드 : 크기 및 위치 : window.scroll() : 스크롤 값 설정</a></li>
+                        <li><a href="#">01. 브라우저 메서드 : 크기 및 위치 : window.scrollTo() : 스크롤 값 설정(절대 기준)</a></li>
+                        <li><a href="#">01. 브라우저 메서드 : 크기 및 위치 : window.scrollBy() : 스크롤 값 설정(상대 기준)</a></li>
+                        <li><a href="#">01. 이벤트 속성 : clientX : X좌표 값 : 브라우저 기준</a></li>
+                        <li><a href="#">01. 이벤트 속성 : clientY : Y좌표 값 : 브라우저 기준</a></li>
+                        <li><a href="#">01. 이벤트 속성 : offsetX : X좌표 값 : 요소 기준</a></li>
+                        <li><a href="#">01. 이벤트 속성 : offsetY : X좌표 값 : 요소 기준</a></li>
+                        <li><a href="#">01. 이벤트 속성 : pageX : X좌표 값 : 페이지 기준</a></li>
+                        <li><a href="#">01. 이벤트 속성 : pageY : Y좌표 값 : 페이지 기준</a></li>
+                        <li><a href="#">01. 이벤트 속성 : screenX : X좌표 값 : 디바이스 기준</a></li>
+                        <li><a href="#">01. 이벤트 속성 : screenY : Y좌표 값 : 디바이스 기준</a></li>
+                        <li><a href="#">01. 도큐먼트 속성 : document.documentElement.scrollLeft : x좌표 값 : 디바이스 기준</a></li>
+                        <li><a href="#">01. 도큐먼트 속성 : document.documentElement.scrollTop : y좌표 값 : 디바이스 기준</a></li>
+
+                        <br />
+                        <li><a href="#">01. 이벤트 메서드 : preventDefault() : 이벤트 작동 해지</a></li>
+                        <li><a href="#">01. 이벤트 메서드 : dispatchDefault() : 이벤트 작동 해지</a></li>
+                    </ul>
+                </div>
+                <div class="main_sample">
+                    <div id="sample01" class="sample">
+                        <h3>01. 변수 : 데이터 불러오기</h3>
+                        <p>asdf</p>
+                        <div class="script">
+                            <pre><code class="language-js">
+
+</code></pre>
+                        </div>
+                        <div class="result">
+                            <details>
+                                <summary>결과보기</summary>
+                                <div class="sample01_result"></div>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- //sample01 -->
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script>
+            //01. 변수 : 데이터 불러오기
+            {
+            }
+        </script>
+    </body>
+</html>

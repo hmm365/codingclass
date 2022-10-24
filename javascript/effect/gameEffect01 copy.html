@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>게임 이펙트01</title>
+
+        <link rel="stylesheet" href="../assets/css/bg.css" />
+        <link rel="stylesheet" href="../assets/css/game.css" />
+        <link rel="stylesheet" href="../assets/css/music.css" />
+    </head>
+    <body>
+        <header id="header">
+            <h1>Corturtle Game World</h1>
+            <div class="time"></div>
+        </header>
+        <!-- //header -->
+
+        <div class="cursor">
+            <img src="../assets/img/cursor.png" alt="" />
+        </div>
+
+        <main id="main">
+            <div class="icon">
+                <div class="icon1">
+                    <img src="../assets/img/folder.png" alt="뮤직" />
+                    <span>직박구리</span>
+                </div>
+                <div class="icon2">
+                    <img src="../assets/img/folder2.png" alt="영화" />
+                    <span>올빼미</span>
+                </div>
+                <div class="icon3">
+                    <img src="../assets/img/folder3.png" alt="책" />
+                    <span>부엉이</span>
+                </div>
+                <div class="icon4">
+                    <img src="../assets/img/folder4.png" alt="내 폴더" />
+                    <span>논병아리</span>
+                </div>
+                <div class="icon5">
+                    <img src="../assets/img/folder5.png" alt="피그마" />
+                    <span>기러기</span>
+                </div>
+                <div class="icon6">
+                    <img src="../assets/img/folder6.png" alt="내 문서" />
+                    <span>뻐꾸기</span>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+
+        <footer id="footer">
+            <div class="agent"></div>
+        </footer>
+        <!-- //footer -->
+
+        <div class="music__wrap">
+            <div class="music__inner">
+                <div class="music__header">
+                    <div>***</div>
+                    <h2>Music Player</h2>
+                    <div>***</div>
+                </div>
+                <div class="music__contents">
+                    <div class="music__view">
+                        <div class="img">
+                            <img src="../assets/img/musicIcon.png" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>addict to you - Avicii</h3>
+                            <p>YOUTUBE MUSIC</p>
+                        </div>
+                    </div>
+                    <div class="music__control">
+                        <div class="progress">
+                            <div class="bar">
+                                <audio id="main-audio" src="../assets/audio/music-1.mp3"></audio>
+                            </div>
+                            <div class="timer">
+                                <span class="current">0:00</span>
+                                <span class="duration">4:00</span>
+                            </div>
+                        </div>
+                        <div class="vol">
+                            <div class="bar"></div>
+                            <div class="volum">
+                                <span class="down">0</span>
+                                <span class="up">100</span>
+                            </div>
+                        </div>
+
+                        <div class="control">
+                            <i title="전체 반복" id="control-repeat" class="repeat"></i>
+                            <!-- <i title="한곡 반복" class="repeat_one"></i> -->
+                            <!-- <i title="랜덤 재생" class="shuffle"></i> -->
+                            <i title="이전곡 재생" id="control-prev" class="prev"></i>
+                            <div>
+                                <i title="재생" id="control-play" class="play"></i>
+                                <!-- <i title="정지" class="stop"></i> -->
+                            </div>
+                            <i title="다음곡 재생" id="control-next" class="next"></i>
+                            <i title="재생 목록" id="control-list" class="list"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="music__footer">
+                    <div class="music__list">
+                        <h3><span class="list"></span>뮤직 리스트 <span class="close"></span></h3>
+                        <ul>
+                            <!-- <li>
+                                <strong>제목</strong>
+                                <em>아티스트</em>
+                                <span>재생시간</span>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //뮤직 플레이어 -->
+
+        <div class="modal">
+            <button class="buttonSo" type="button">소스보기</button>
+            <div class="modalso">
+                <span class="close"></span>
+                <iframe src="https://github1s.com/hmm365/coding2/blob/main/javascript/effect/gameEffect01.html" frameborder="0"></iframe>
+            </div>
+        </div>
+        <script src="../assets/js/gsap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script>
+            document.querySelector(".buttonSo").addEventListener("click", () => {
+                document.querySelector(".modalso").classList.add("show");
+                document.querySelector(".modalso span.close").addEventListener("click", () => {
+                    document.querySelector(".modalso").classList.remove("show");
+                });
+            });
+            $(".icon1").draggable({
+                drag: function () {
+                    $(".cursor img").attr("src", "../assets/img/cursor.png");
+                },
+            });
+            $(".icon2").draggable({
+                drag: function () {
+                    $(".cursor img").attr("src", "../assets/img/cursor5.png");
+                },
+            });
+            $(".icon3").draggable({
+                drag: function () {
+                    $(".cursor img").attr("src", "../assets/img/cursor3.png");
+                },
+            });
+            $(".icon4").draggable({
+                drag: function () {
+                    $(".cursor img").attr("src", "../assets/img/cursor4.png");
+                },
+            });
+            $(".icon5").draggable({
+                drag: function () {
+                    $(".cursor img").attr("src", "../assets/img/cursor2.png");
+                },
+            });
+            $(".icon6").draggable({
+                drag: function () {
+                    $(".cursor img").attr("src", "../assets/img/cursor6.png");
+                },
+            });
+            $(".music__wrap").draggable();
+
+            function printTime() {
+                const clock = document.querySelector(".time");
+                const now = new Date();
+
+                let hours = now.getHours() % 12;
+                let ampm = now.getHours() <= 12 ? "오전" : "오후";
+
+                let minutes = now.getMinutes();
+                let seconds = now.getSeconds();
+
+                if (minutes < 10) minutes = `0${now.getMinutes()}`;
+                if (seconds < 10) seconds = `0${now.getSeconds()}`;
+                const nowTime = `${now.getFullYear()} 년 ${now.getMonth()} 월 ${now.getDate()} 일 ${ampm} ${hours} 시 ${minutes}분 ${seconds} 초`;
+                clock.innerText = nowTime;
+                setTimeout("printTime()", 1000);
+            }
+
+            function printAgent() {
+                const agent = document.querySelector(".agent");
+                const os = navigator.userAgent.toLocaleLowerCase();
+
+                agent.innerHTML = os;
+
+                if (os.indexOf("window") >= 0) {
+                    agent.innerText = "현재 윈도우를 사용하고 있으며, 화면크기는 " + screen.width + "*" + screen.height + "입니다.";
+                    document.querySelector("body").classList.add("window");
+                } else if (os.indexOf("macintosh") >= 0) {
+                    agent.innerText = "현재 맥을 사용하고 있으며, 화면크기는 " + screen.width + "*" + screen.height + "입니다.";
+                    document.querySelector("body").classList.add("mac");
+                } else if (os.indexOf("iphone") >= 0) {
+                    agent.innerText = "현재 아이폰을 사용하고 있으며, 화면크기는 " + screen.width + "*" + screen.height + "입니다.";
+                    document.querySelector("body").classList.add("iphone");
+                } else if (os.indexOf("android") >= 0) {
+                    agent.innerText = "현재 안드로이드폰을 사용하고 있으며, 화면크기는 " + screen.width + "*" + screen.height + "입니다.";
+                    document.querySelector("body").classList.add("android");
+                }
+            }
+            printAgent();
+
+            window.onload = function () {
+                printTime();
+            };
+
+            const cursor = document.querySelector(".cursor");
+
+            window.addEventListener("mousemove", (e) => {
+                gsap.to(cursor, { duration: 0, left: e.pageX - 3, top: e.pageY - 4 });
+            });
+        </script>
+        <script src="../assets/js/music.js"></script>
+    </body>
+</html>

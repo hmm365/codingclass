@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체육복</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">브라우저 객체</a></li>
+                <li><a href="../javascript09.html">요소 객체</a></li>
+                <li><a href="../javascript10.html">이벤트 객체</a></li>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">for문</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">    
+        <div class="document">
+            <h2 class="t_tit">체육복</h2>
+            <pre class="t_desc">점심시간에 도둑이 들어, 일부 학생이 체육복을 도난당했습니다. 다행히 여벌 체육복이 있는 학생이 이들에게 체육복을 빌려주려 합니다. 
+학생들의 번호는 체격 순으로 매겨져 있어, 바로 앞번호의 학생이나 바로 뒷번호의 학생에게만 체육복을 빌려줄 수 있습니다. 예를 들어, 
+4번 학생은 3번 학생이나 5번 학생에게만 체육복을 빌려줄 수 있습니다. 체육복이 없으면 수업을 들을 수 없기 때문에 체육복을 적절히 빌려 최대한 많은 학생이 체육수업을 들어야 합니다.
+전체 학생의 수 n, 체육복을 도난당한 학생들의 번호가 담긴 배열 lost, 여벌의 체육복을 가져온 학생들의 번호가 담긴 배열 reserve가 매개변수로 주어질 때, 
+체육수업을 들을 수 있는 학생의 최댓값을 return 하도록 solution 함수를 작성해주세요.
+            </pre>
+            <pre class="t_desc2">전체 학생의 수는 2명 이상 30명 이하입니다.
+체육복을 도난당한 학생의 수는 1명 이상 n명 이하이고 중복되는 번호는 없습니다.
+여벌의 체육복을 가져온 학생의 수는 1명 이상 n명 이하이고 중복되는 번호는 없습니다.
+여벌 체육복이 있는 학생만 다른 학생에게 체육복을 빌려줄 수 있습니다.
+여벌 체육복을 가져온 학생이 체육복을 도난당했을 수 있습니다. 이때 이 학생은 체육복을 하나만 도난당했다고 가정하며, 남은 체육복이 하나이기에 다른 학생에게는 체육복을 빌려줄 수 없습니다.
+</pre>
+
+                <hr>
+                <h3 class="t_tit2">입출력 예</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>n</th>
+                            <th>lost</th>
+                            <th>reserve</th>
+                            <th>return</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="text-align: center;">[2, 4]</td>
+                            <td style="text-align: center;">[1, 3, 5]</td>
+                            <td style="text-align: center;">5</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="text-align: center;">[2, 4]</td>
+                            <td style="text-align: center;">[3]</td>
+                            <td style="text-align: center;">4</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td style="text-align: center;">[3]</td>
+                            <td style="text-align: center;">[1]</td>
+                            <td style="text-align: center;">2</td>
+                        </tr>
+                    </tbody>
+                </table>
+<pre class="t_desc2">예제 #1
+1번 학생이 2번 학생에게 체육복을 빌려주고, 3번 학생이나 5번 학생이 4번 학생에게 체육복을 빌려주면 학생 5명이 체육수업을 들을 수 있습니다.
+
+예제 #2
+3번 학생이 2번 학생이나 4번 학생에게 체육복을 빌려주면 학생 4명이 체육수업을 들을 수 있습니다.
+</pre>
+
+            <hr>
+
+            <h3 class="t_tit2">체육복</h3>
+            <div class="t_code">
+<pre><code class="language-js">    function solution(n, lost, reserve) {
+    var answer = 0;
+    var uniform = [];
+    
+    // 새로 배열을 만든 유니폼에 n명만큼 체육복 1 삽입.
+    for(let i=0; i &lt; n; i++){ 
+        uniform[i] = 1;
+    }
+    
+    //체유복이 없으면 1을빼고 여벌이 있으면 1을 더한다.
+    for(let i=0; i &lt; lost.length; i++) {
+        uniform[lost[i]-1] -= 1; // 배열은 0번째 인덱스부터 시작하니 -1을 해줘야한다.
+    }
+    for(let i=0; i &lt; reserve.length; i++) {
+        uniform[reserve[i]-1] += 1;
+    }
+    
+    //앞번호의 학생과 뒷번호의 학생의 여벌옷 등을 구별.
+    for(let i = 0; i &lt; n; i++){
+        if(uniform[i-1] == 2 && uniform[i] == 0) {
+            uniform[i-1] = 1;
+            uniform[i] = 1;
+            }
+        if(uniform[i+1] == 2 && uniform[i] == 0) {
+            uniform[i+1] = 1;
+            uniform[i] = 1;
+            } 
+    }
+    //출력
+    for(let i &lt; uniform.length; i++) {
+        if(uniform[i] &gt; 0) {
+            answer++;
+            }
+    }
+    
+    return answer;
+}
+</code></pre>
+            <p class="t_box">
+                총평 : 배열을 이해하면 편하지만 아직 배열메소드를 이해하지못해서 하드코딩이 되어있는게 아쉽다.<br>
+                출처 : <a href="https://school.programmers.co.kr/learn/courses/30/lessons/42862" target="_blank">https://school.programmers.co.kr/learn/courses/30/lessons/42862</a> 
+            </p>
+            </div>
+            <!-- //result01 -->
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+
+</body>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* cardType */
+.card__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card {
+    width: 32%;
+    background-color: rgba(71, 47, 193, 0.3);
+    border-radius: 23px 23px 20px 20px;
+}
+
+.card__header img {
+    border-radius: 20px 20px 0 0;
+}
+.card__body {
+    padding: 24px;
+}
+.card__body .tit {
+    font-size: 24px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #dadada;
+}
+.card__body .desc {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #b5b5b5;
+    margin-bottom: 20px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.card__body .btn {
+    color: #b5b5b5;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+/* 1280 */
+@media (max-width: 1280px) {
+    .card__body {
+        padding: 20px;
+    }
+    .card__body .tit {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .card__body .desc {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+        -webkit-line-clamp: 2;
+    }
+    .card__body .btn {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+}
+/* 768 */
+@media (max-width: 768px) {
+    .card {
+        width: 48%;
+    }
+    .card:last-child {
+        display: none;
+    }
+    .card__header img {
+        height: 150px;
+    }
+    .card__body {
+        padding: 18px;
+    }
+    .card__body .tit {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .card__body .desc {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        -webkit-line-clamp: 2;
+    }
+    .card__body .btn {
+        font-size: 12px;
+    }
+}
+/* 480 */
+@media (max-width: 480px) {
+    .card__header img {
+        height: 200px;
+    }
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .card__body .tit {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .card__body .desc {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        -webkit-line-clamp: 3;
+    }
+    .card__body .btn {
+        font-size: 14px;
+    }
+}

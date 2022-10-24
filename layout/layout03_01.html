@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>레이아웃</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                background-color: #e1f5fe;
+            }
+            #wrap {
+                display: flex;
+                flex-wrap: wrap;
+                width: 1200px;
+                margin: 0 auto;
+            }
+            #header {
+                width: 100%;
+                height: 100px;
+                background-color: #b3e5fc;
+            }
+            #nav {
+                width: 100%;
+                height: 100px;
+                background-color: #81d4fa;
+            }
+            #aside {
+                width: 30%;
+                height: 780px;
+                background-color: #4fc3f7;
+            }
+            #container {
+                width: 70%;
+            }
+            #section_a {
+                width: 100%;
+                height: 260px;
+                background-color: #29b6f6;
+            }
+            #section_a > div {
+                width: 50%;
+                height: 100%;
+                background-color: #29b6f6;
+            }
+            #section_a > div:first-child {
+                background-color: #285265;
+            }
+            #section_b {
+                width: 100%;
+                height: 260px;
+                background-color: #03a9f4;
+            }
+            #section_c {
+                width: 100%;
+                height: 260px;
+                background-color: #039be5;
+            }
+            #footer {
+                width: 100%;
+                height: 100px;
+                background-color: #0288d1;
+            }
+            @media (max-width: 1220px) {
+                #wrap {
+                    width: 96%;
+                }
+                #container {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                #section_b {
+                    width: 50%;
+                    height: 520px;
+                }
+                #section_c {
+                    width: 50%;
+                    height: 520px;
+                }
+            }
+            @media (max-width: 768px) {
+                #wrap {
+                    width: 100%;
+                }
+                #aside {
+                    width: 30%;
+                }
+                #section_a {
+                    height: 390px;
+                }
+                #section_b {
+                    width: 100%;
+                    height: 390px;
+                }
+                #section_c {
+                    display: none;
+                }
+            }
+            @media (max-width: 480px) {
+                #aside {
+                    width: 100%;
+                    height: 200px;
+                }
+                #container {
+                    width: 100%;
+                }
+                #section_a {
+                    width: 100%;
+                    height: 430px;
+                }
+                #section_b {
+                    width: 100%;
+                    height: 150px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="header"></div>
+            <div id="nav"></div>
+            <div id="aside"></div>
+            <div id="container">
+                <div id="section_a">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div id="section_b"></div>
+                <div id="section_c"></div>
+            </div>
+            <div id="footer"></div>
+        </div>
+    </body>
+</html>

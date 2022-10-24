@@ -1,0 +1,31 @@
+.header__inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20px 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fff;
+}
+.header__logo {
+    width: 30%;
+}
+.header__logo a img {
+    width: 100px;
+}
+.header__menu {
+    width: 70%;
+    text-align: center;
+}
+.header__menu ul {
+}
+.header__menu li {
+    display: inline;
+    font-size: 16px;
+}
+
+.header__menu li a {
+    padding: 13px 10px;
+    margin: 0 5px;
+}
+

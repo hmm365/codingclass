@@ -1,0 +1,60 @@
+/* textType */
+.text__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.text {
+    width: 32%;
+}
+.text .desc1 {
+    width: 147px;
+    height: 20px;
+    border-radius: 30px;
+    background-color: #ff3344;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.text .tit {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 27px;
+}
+.text .desc2 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.text .tit2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.text .desc3 {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 97px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.text .icon__box {
+    width: 60px;
+    height: 60px;
+    background-color: #ff3344;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    position: relative;
+}
+.text img {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+}

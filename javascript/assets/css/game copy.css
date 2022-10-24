@@ -1,0 +1,229 @@
+@font-face {
+    font-family: "LABDigital";
+    font-weight: normal;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.eot");
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.ttf") format("truetype");
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "LABDigital";
+    font-weight: normal;
+    cursor: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    background: #011d3f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+#header h1 {
+    font-size: 20px;
+    color: #fff;
+    padding: 5px 0;
+}
+
+#header .time {
+    color: #fff;
+}
+
+.cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 30;
+    user-select: none;
+    pointer-events: none;
+    cursor: none;
+    width: 23px;
+}
+
+.cursor img {
+    width: 100%;
+}
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #011d3f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.icon1 {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    width: 54px;
+}
+
+.icon1 img {
+    width: 54px;
+}
+
+.icon1 span {
+    display: block;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    padding: 2px;
+    white-space: nowrap;
+}
+
+.icon2 {
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    width: 54px;
+}
+
+.icon2 img {
+    width: 54px;
+}
+
+.icon2 span {
+    display: block;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    padding: 2px;
+    white-space: nowrap;
+}
+
+.icon3 {
+    position: absolute;
+    left: 100px;
+    top: 300px;
+    width: 54px;
+}
+
+.icon3 img {
+    width: 54px;
+}
+
+.icon3 span {
+    display: block;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    padding: 2px;
+    white-space: nowrap;
+}
+
+.icon4 {
+    position: absolute;
+    left: 100px;
+    top: 400px;
+    width: 54px;
+}
+
+.icon4 img {
+    width: 54px;
+}
+
+.icon4 span {
+    display: block;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    padding: 2px;
+    white-space: nowrap;
+}
+
+.icon5 {
+    position: absolute;
+    left: 100px;
+    top: 500px;
+    width: 54px;
+}
+
+.icon5 img {
+    width: 54px;
+}
+
+.icon5 span {
+    display: block;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    padding: 2px;
+    white-space: nowrap;
+}
+
+.icon6 {
+    position: absolute;
+    left: 100px;
+    top: 600px;
+    width: 54px;
+}
+
+.icon6 img {
+    width: 54px;
+}
+
+.icon6 span {
+    display: block;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    padding: 2px;
+    white-space: nowrap;
+}
+
+#footer .agent {
+}
+
+.mac #footer {
+}
+
+.window #footer {
+}
+
+.modalso {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 97%;
+    bottom: 0;
+    z-index: 10;
+    background-color: #fff;
+}
+.modalso .close {
+    float: right;
+    width: 24px;
+    height: 24px;
+    background: url(../img/close.svg) no-repeat;
+    vertical-align: middle;
+}
+.modalso iframe {
+    width: 100%;
+    height: 97%;
+}
+.buttonSo {
+    position: absolute;
+    padding: 10px;
+    background-color: #fff;
+    bottom: 40px;
+    right: 40px;
+}

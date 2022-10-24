@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+<body>
+
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">background 속성</h2>
+            <p class="t_desc2">
+                background 속성은 태그의 배경을 지정하는 속성으로, font 속성과 비슷하게 세부적인 속성들을 한번에 쓸 수 있는 속성입니다.
+            </p>
+            <h3 class="t_tit">background 속성 표</h3>
+            <table class="t_table">
+                <colgroup>
+                    <col style="width: 20%">
+                    <col style="width: 45%">
+                    <col style="width: 35%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th class="ce">속성</th>
+                        <th class="ce">설명</th>
+                        <th class="ce">작성법</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">background-color</td>
+                        <td>배경의 색상을 설정합니다.</td>
+                        <td>
+                            <i>background-color: "색상";</i><br>
+                            background-color: red;<br>
+                            background-color: #000;<br>
+                            background-color: rgba(0, 0, 0, 0.5);
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ce">background-image</td>
+                        <td>배경에 이미지를 설정합니다.</td>
+                        <td>
+                            <i>background-image: url("이미지 경로");</i><br>
+                            background-image: url(img/img.svg);
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ce">background-repeat</td>
+                        <td>배경의 반복을 설정합니다.</td>
+                        <td>
+                            <i>background-repeat: "반복 방법";</i><br>
+                            background-repeat: no-repeat;<br>
+                            background-repeat: repeat-x;<br>
+                            background-repeat: repeat-y;<br>
+                            background-repeat: repeat;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ce">background-position</td>
+                        <td>배경의 위치를 설정합니다.<br>
+                            left, top, center, bottom, right 등의 상수도 쓸 수 있습니다.
+                        </td>
+                        <td>
+                            <i>background-position: "x좌표" "y좌표";</i><br>
+                            background-position: -50px 0;<br>
+                            background-position: center center;<br>
+                            background-position: 0 right;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바스크립트 데이터타입</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">검색 이펙트</h2>
+                <p class="t_desc2">이번 이펙트는 정렬하는 기능을 구현했습니다.</p>
+                <div class="t_iframe" style="min-height: 450px">
+                    <iframe src="https://hmm365.github.io/coding2/javascript/effect/searchEffect06.html"></iframe>
+                </div>
+
+                <h3 class="t_tit2">JS코드</h3>
+                <p class="t_desc2">sort를 이용하여 정렬을 구현했습니다.</p>
+                <div class="t_code">
+                    <div class="t_result">
+                        <details open>
+                            <summary>코드 보기</summary>
+                            <pre><code class="language-js">//반대로 정렬
+function sortReverse() {
+    cssProperty.reverse();
+    updateList();
+}
+// 내림차순
+function sortDescending() {
+    cssProperty.sort((a, b) => b.num - a.num);
+    updateList();
+}
+// 오름차순
+function sortAscending() {
+    cssProperty.sort((a, b) => a.num - b.num);
+    updateList();
+
+// 알파벳(a-z) 정렬
+function sortAlphabet() {
+    cssProperty.sort(function (a, b) {
+        if (a.name > b.name) return 1;
+        else if (a.name &lt; b.name) return -1;
+        else return 0;
+    });
+    updateList();
+}
+// 알파벳(z-a) 정렬
+function sortAlphabetZ() {
+    cssProperty.sort(function (a, b) {
+        if (a.name &lt; b.name) return 1;
+        else if (a.name > b.name) return -1;
+        else return 0;
+    });
+    updateList();
+}
+//랜덤
+function shuffle(data) {
+    console.log(cssProp);
+    for (let i = data.length - 1; i >= 0; i--) {
+        const randomIndex = Math.floor(Math.random() * (i + 1));
+        [data[i], data[randomIndex]] = [data[randomIndex], data[i]];
+        cssList.innerHTML += data[i];
+    }
+}
+</code></pre>
+                        </details>
+                    </div>
+                </div>
+                <div class="t_link">
+                    <a href="https://hmm365.github.io/coding2/javascript/effect/searchEffect06.html">원본 사이트 보기</a>
+                    <a href="https://github.com/hmm365/coding2/blob/main/javascript/effect/searchEffect06.html">원본 소스 보기</a>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+    </body>
+</html>

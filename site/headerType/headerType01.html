@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤더유형</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        em, i, address {
+            font-style: normal;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 h6 {
+            font-weight: normal;
+        }
+
+        /* Common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section>h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .section>span {
+            display: block;
+            text-align: center;
+            font-size: 16px;
+            text-decoration: underline;
+            margin-bottom: 16px;
+        }
+
+        .section>p {
+            font-size: 22px;
+            line-height: 1;
+            text-align: center;
+            font-weight: 300;
+            color: #666;
+            margin-bottom: 70px;
+        }
+
+        .mb70 {
+            margin-bottom: 70px !important;
+        }
+
+        .gray {
+            background-color: #f5f5f5;
+        }
+        /* headerType */
+        .header__inner {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #fff;
+        }
+        .header__logo {
+            width: 20%;
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .header__logo em {
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .header__menu {
+            width: 60%;
+            text-align: center;
+        }
+        .header__menu li {
+            display: inline;
+        }
+        .header__menu li a {
+            padding: 13px 30px;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+        .header__menu li a:hover {
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+        .header_member {
+            width: 20%;
+            text-align: right;
+        }
+        .header_member a {
+            font-size: 16px;
+            border: 1px solid #000;
+            padding: 10px 30px;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        .header_member a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="headerType" class="header__wrap nexon">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="#">web <em>site</em></a>
+            </div>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="#">헤더 영역</a></li>
+                    <li><a href="#">슬라이드 영역</a></li>
+                    <li><a href="#">배너 영역</a></li>
+                    <li><a href="#">컨텐츠 영역</a></li>
+                    <li><a href="#">푸터 영역</a></li>
+                </ul>
+            </nav>
+            <div class="header_member">
+                <a href="#">로그인</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

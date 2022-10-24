@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        .gmarket {
+            font-family: 'GmarketSans';
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 h6 {
+            font-weight: normal;
+        }
+
+        /* Common */
+        .container {
+            width: 100%;
+            padding: 0 100px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section>h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .section>p {
+            font-size: 22px;
+            line-height: 1;
+            text-align: center;
+            font-weight: 300;
+            color: #959595;
+            margin-bottom: 70px;
+        }
+        /* imgType04 */
+        .image__inner {
+            display: flex;
+            width: 100%;
+            height: 520px;
+        }
+        .image__left {
+            width: 50%;
+            margin-right: 10px;
+        }
+        .image__right {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-left: 10px;
+        }
+        .image__right .image {
+            width: 49%;
+        }
+        .image__right .image:nth-child(1) {
+            margin-bottom: 10px;
+        }
+        .image__right .image:nth-child(2) {
+            margin-bottom: 10px;
+        }
+        .image__right .image:nth-child(3) {
+            margin-top: 10px;
+        }
+        .image__right .image:nth-child(4) {
+            margin-top: 10px;
+        }
+
+        .image {
+            position: relative;          
+        }
+        .image__box {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            transition: all 2s;
+        }
+        .image__tit {
+            font-size: 22px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .image__name {
+            font-size: 16px;
+            color: #959595;
+        }
+
+        .img1{
+            background-image: url(../img/img04/img_bg_04_01.jpg);
+            height: 100%;
+        }
+        .img2{
+            background-image: url(../img/img04/img_bg_04_02.jpg);
+        }
+        .img3{
+            background-image: url(../img/img04/img_bg_04_03.jpg);
+        }
+        .img4{
+            background-image: url(../img/img04/img_bg_04_04.jpg);
+        }
+        .img5{
+            background-image: url(../img/img04/img_bg_04_05.jpg);
+        }
+        
+
+        .image:hover .image__option {
+            opacity: 1;   
+        }
+        .image:hover .image__link {
+            opacity: 1;
+        }
+        .image:hover .image__box {
+            bottom: 90px;
+        }
+
+        .image__option {
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 80px;
+            bottom: 0;
+            left: 0;
+            backdrop-filter: blur(3px);
+            background-color: rgba(140, 140, 140, 0.5);
+            padding: 20px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 2s;     
+        }
+        .option__box {
+            display: flex;
+            align-items: center;
+        }
+        .option__box p {
+            margin-right: 40px;
+            font-weight: 300;
+        }
+        .image__link {
+            opacity: 0;
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            display: flex;
+            flex-direction: column;
+            transition: all 2s; 
+        }
+        .image__link img{
+            margin-bottom: 10px;
+        }
+        .image__link img:last-child{
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="imgType03" class="img__wrap gmarket section">
+        <h2>곰</h2>
+        <p>우주최강 제일강하고 귀여운 곰</p>
+        <div class="image__inner container">
+
+            <div class="image__left">
+                <article class="image img1">
+                    <div class="image__box">
+                        <h3 class="image__tit">포악한 곰</h3>
+                        <p class="image__name">곰이좋아</p>
+                    </div>
+                    <div class="image__link">
+                        <img src="../img/img04/img_bg_04_09.svg" alt="페이스북">
+                        <img src="../img/img04/img_bg_04_10.svg" alt="트위터">
+                        <img src="../img/img04/img_bg_04_11.svg" alt="슬랙">
+                        <img src="../img/img04/img_bg_04_12.svg" alt="트위터">
+                    </div>
+                    <div class="image__option">
+                        <div class="option__box">
+                            <img src="../img/img04/img_bg_04_06.svg" alt="종">
+                            <img src="../img/img04/img_bg_04_13.svg" alt="더보기">
+                        </div>
+                        <div class="option__box">
+                            <img src="../img/img04/img_bg_04_07.svg" alt="눈">
+                            <p>15k</p>
+                            <img src="../img/img04/img_bg_04_08.svg" alt="메시지">
+                        </div>
+                        
+                        
+                    </div>
+                </article>
+            </div>
+
+            <div class="image__right">
+                <article class="image img2">
+                    <div class="image__box">
+                        <h3 class="image__tit">예쁜곰</h3>
+                        <p class="image__name">곰이좋아</p>
+                    </div>
+                    <figure class="image__link">
+                        <img src="../img/img04/img_bg_04_09.svg" alt="페이스북">
+                        <img src="../img/img04/img_bg_04_10.svg" alt="트위터">
+                        <img src="../img/img04/img_bg_04_11.svg" alt="슬랙">
+                        <img src="../img/img04/img_bg_04_12.svg" alt="트위터">
+                    </figure>
+                    <figure class="image__option">
+                        <div class="option__box">
+                            <img src="../img/img04/img_bg_04_06.svg" alt="종">
+                            <img src="../img/img04/img_bg_04_13.svg" alt="더보기">
+                        </div>
+                        <div class="option__box">
+                            <img src="../img/img04/img_bg_04_07.svg" alt="눈">
+                            <p>15k</p>
+                            <img src="../img/img04/img_bg_04_08.svg" alt="메시지">
+                        </div>   
+                    </figure>
+                </article>
+
+                <article class="image img3">
+                    <div class="image__box">
+                        <h3 class="image__tit">시크한 여우</h3>
+                        <p class="image__name">구미호</p>
+                    </div>
+                    <div class="image__link">
+                        <img src="../img/img04/img_bg_04_09.svg" alt="페이스북">
+                        <img src="../img/img04/img_bg_04_10.svg" alt="트위터">
+                        <img src="../img/img04/img_bg_04_11.svg" alt="슬랙">
+                        <img src="../img/img04/img_bg_04_12.svg" alt="트위터">
+                    </div>
+                    <figure class="image__link">
+                        <img src="../img/img04/img_bg_04_09.svg" alt="페이스북">
+                        <img src="../img/img04/img_bg_04_10.svg" alt="트위터">
+                        <img src="../img/img04/img_bg_04_11.svg" alt="슬랙">
+                        <img src="../img/img04/img_bg_04_12.svg" alt="트위터">
+                    </figure>
+                    <figure class="image__option">
+                        <div class="option__box">
+                            <img src="../img/img04/img_bg_04_06.svg" alt="종">
+                            <img src="../img/img04/img_bg_04_13.svg" alt="더보기">
+                        </div>
+                        <div class="option__box">
+                            <img src="../img/img04/img_bg_04_07.svg" alt="눈">
+                            <p>15k</p>
+                            <img src="../img/img04/img_bg_04_08.svg" alt="메시지">
+                        </div>   
+                    </figure>
+                </article>
+
+                <article class="image img4">
+                    <div class="image__box">
+                        <h3 class="image__tit">너무 이쁜 강아지</h3>
+                        <p class="image__name">강지</p>
+                    </div>
+                    <figure class="image__link">
+                        <img src="../img/img04/img_bg_04_09.svg" alt="페이스북">
+                        <img src="../img/img04/img_bg_04_10.svg" alt="트위터">
+                        <img src="../img/img04/img_bg_04_11.svg" alt="슬랙">
+                        <img src="../img/img04/img_bg_04_12.svg" alt="트위터">
+                    </figure>
+                    <figure class="image__option">
+                        <div class="option__box">
+                            <img src="../img/img04/img_bg_04_06.svg" alt="종">
+                            <img src="../img/img04/img_bg_04_13.svg" alt="더보기">
+                        </div>
+                        <div class="option__box">
+                            <img src="../img/img04/img_bg_04_07.svg" alt="눈">
+                            <p>15k</p>
+                            <img src="../img/img04/img_bg_04_08.svg" alt="메시지">
+                        </div>   
+                    </figure>
+                </article>
+
+                <article class="image img5">
+                    <div class="image__box">
+                        <h3 class="image__tit">도도한 고양이</h3>
+                        <p class="image__name">나비</p>
+                    </div>
+                    <figure class="image__link">
+                        <img src="../img/img04/img_bg_04_09.svg" alt="페이스북">
+                        <img src="../img/img04/img_bg_04_10.svg" alt="트위터">
+                        <img src="../img/img04/img_bg_04_11.svg" alt="슬랙">
+                        <img src="../img/img04/img_bg_04_12.svg" alt="트위터">
+                    </figure>
+                    <figure class="image__option">
+                        <div class="option__box">
+                            <img src="../img/img04/img_bg_04_06.svg" alt="종">
+                            <img src="../img/img04/img_bg_04_13.svg" alt="더보기">
+                        </div>
+                        <div class="option__box">
+                            <img src="../img/img04/img_bg_04_07.svg" alt="눈">
+                            <p>15k</p>
+                            <img src="../img/img04/img_bg_04_08.svg" alt="메시지">
+                        </div>   
+                    </figure>
+                </article>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

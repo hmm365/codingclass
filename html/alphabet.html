@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML 레퍼런스 북</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <!-- 구글아이콘 -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+    <body>
+        <header id="header">
+            <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+            <span>이름 : 이중호</span>
+        </header>
+        <!-- //header -->
+        <main id="main">
+            <header class="main_header">
+                <h2>HTML <em>레퍼런스 북</em></h2>
+            </header>
+            <nav class="main_menu">
+                <ul>
+                    <li class="active"><a href="alphabet.html">알파벳</a></li>
+                    <!-- <li><a href="basic.html">기초 문법</a></li>
+                <li><a href="inline_block.html">블록구조/인라인구조</a></li>
+                <li><a href="web.html">웹표준/웹접근성/웹호환성</a></li>
+                <li><a href="semantic.html">시멘틱 태그</a></li> -->
+                </ul>
+                <!-- <ul>
+                <li><a href="layout01.html">레이아웃01</a></li>
+                <li><a href="layout02.html">레이아웃02</a></li>
+                <li><a href="layout03.html">레이아웃03</a></li>
+                <li><a href="layout04.html">레이아웃04</a></li>
+                <li><a href="layout05.html">레이아웃05</a></li>
+            </ul> -->
+            </nav>
+            <div class="main_refer">
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col />
+                            <col />
+                            <col style="width: 5%" />
+                            <col style="width: 11%" />
+                            <col style="width: 5%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>속성</th>
+                                <th>설명</th>
+                                <th>보기</th>
+                                <th>중요</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>&lt;a&gt;</td>
+                                <td>&lt;a&gt;태그는 다른 페이지 이동을 설정합니다.</td>
+                                <td><a href="#">클릭</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>&lt;abbr&gt;</td>
+                                <td>&lt;abbr&gt;태그는 준말 또는 머리글자를 나타냅니다. 선택 속성인 title을 사용하면 준말의 전체 뜻이나 설명을 제공할 수 있습니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">grade</span>
+                                    <span class="material-symbols-outlined">grade</span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>&lt;acronym&gt;</td>
+                                <td>&lt;acronym&gt;태그는 준말 또는 머리글자를 나타냅니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td>
+                                    <span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>04</td>
+                                <td>&lt;address&gt;</td>
+                                <td>&lt;address&gt;태그는 가까운 HTML 요소의 사람, 단체, 조직 등에 대한 연락처 정보를 나타냅니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>05</td>
+                                <td>&lt;applet&gt;</td>
+                                <td>&lt;applet&gt;태그는 자바 애플릿을 보이게 하는 곳에 쓰입니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>06</td>
+                                <td>&lt;area&gt;</td>
+                                <td>&lt;area&gt;태그는 이미지의 핫스팟 영역을 정의하고 하이퍼링크 (en-US)를 추가할 수 있습니다. &lt;map&gt; 요소 안에서만 사용할 수 있습니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>07</td>
+                                <td>&lt;article&gt;</td>
+                                <td>&lt;article&gt;태그는 문서, 페이지, 애플리케이션, 또는 사이트 안에서 독립적으로 구분해 배포하거나 재사용할 수 있는 구획을 나타냅니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>08</td>
+                                <td>&lt;aside&gt;</td>
+                                <td>&lt;aside&gt;태그는 문서의 주요 내용과 간접적으로만 연관된 부분을 나타냅니다. 주로 사이드바 혹은 콜아웃 박스로 표현합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>09</td>
+                                <td>&lt;audio&gt;</td>
+                                <td>
+                                    &lt;audio&gt;태그는 문서에 소리 콘텐츠를 포함할 때 사용합니다. src 특성 또는
+                                    <source />
+                                    (en-US) 요소를 사용해 한 개 이상의 오디오 소스를 지정할 수 있으며, 다수를 지정한 경우 가장 적절한 소스를 브라우저가 고릅니다.
+                                </td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>&lt;b&gt;</td>
+                                <td>&lt;b&gt;태그는 자의 주의를 요소의 콘텐츠로 끌기 위한 용도로 사용합니다. 그 외의 다른 특별한 중요도는 주어지지 않습니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>&lt;base&gt;</td>
+                                <td>&lt;base&gt;태그는 문서 안의 모든 상대 URL이 사용할 기준 URL을 지정합니다. 문서에는 하나의 <base /> 요소만 존재할 수 있습니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>&lt;bdi&gt;</td>
+                                <td>&lt;bdi&gt;태그는 BDI는 Bi-Directional Isolation을 의미하며, 주위의 텍스트들과는 다른 방향으로 써지는 텍스트 영역을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>&lt;bdo&gt;</td>
+                                <td>태그의 BDO는 Bi-Directional Override를 의미하며, 자식 요소의 텍스트 방향성(text directionality)을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>&lt;bgsound&gt;</td>
+                                <td>&lt;bgsound&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>&lt;big&gt;</td>
+                                <td>&lt;big&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>&lt;blink&gt;</td>
+                                <td>&lt;blink&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>&lt;blockquote&gt;</td>
+                                <td>&lt;blockquote&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>&lt;body&gt;</td>
+                                <td>태그는 해당 HTML 문서의 텍스트, 하이퍼링크, 이미지, 리스트 등과 같은 모든 콘텐츠를 포함하는 영역을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>19</td>
+                                <td>&lt;br&gt;</td>
+                                <td>&lt;br&gt; 태그는 텍스트 내의 줄바꿈(line-break)을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>&lt;button&gt;</td>
+                                <td>&lt;button&gt; 태그는 클릭할 수 있는 버튼을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <!-- 20 -->
+                            <tr>
+                                <td>21</td>
+                                <td>&lt;canvas&gt;</td>
+                                <td>&lt;canvas&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td>&lt;caption&gt;</td>
+                                <td>&lt;caption&gt; 태그는 테이블의 캡션(caption, 테이블이나 사진, 삽화 등에 붙는 설명)을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>23</td>
+                                <td>&lt;center&gt;</td>
+                                <td>&lt;center&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>24</td>
+                                <td>&lt;cite&gt;</td>
+                                <td>&lt;cite&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>25</td>
+                                <td>&lt;code&gt;</td>
+                                <td>&lt;code&gt; 태그는 컴퓨터 코드(code)의 일부분을 나타낼 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>26</td>
+                                <td>&lt;col&gt;</td>
+                                <td>&lt;col&gt; 태그는&lt;colgroup&gt; 요소에 속하는 각 열(column)의 속성을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>27</td>
+                                <td>&lt;colgroup&gt;</td>
+                                <td>&lt;colgroup&gt; 태그는 테이블에서 서식 지정을 위해 하나 이상의 열을 그룹으로 묶을 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>28</td>
+                                <td>&lt;content&gt;</td>
+                                <td>&lt;content&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>29</td>
+                                <td>&lt;data&gt;</td>
+                                <td>&lt;data&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>30</td>
+                                <td>&lt;datalist&gt;</td>
+                                <td>&lt;datalist&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>31</td>
+                                <td>&lt;dd&gt;</td>
+                                <td>&lt;dd&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>32</td>
+                                <td>&lt;del&gt;</td>
+                                <td>&lt;del&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>33</td>
+                                <td>&lt;details&gt;</td>
+                                <td>&lt;details&gt; 태그는 사용자가 직접 조작하여 보거나 숨길 수 있는 부가적인 세부사항(additional details)을 명시할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td>&lt;dfn&gt;</td>
+                                <td>&lt;dfn&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>35</td>
+                                <td>&lt;dialog&gt;</td>
+                                <td>&lt;dialog&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>36</td>
+                                <td>&lt;dir&gt;</td>
+                                <td>&lt;dir&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>37</td>
+                                <td>&lt;div&gt;</td>
+                                <td>&lt;div&gt; 태그는 HTML 문서에서 특정 영역(division)이나 구획(section)을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>38</td>
+                                <td>&lt;dl&gt;</td>
+                                <td>&lt;dl&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>39</td>
+                                <td>&lt;dt&gt;</td>
+                                <td>&lt;dt&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>&lt;em&gt;</td>
+                                <td>&lt;em&gt; 태그는 강조된 텍스트(emphasized text)를 표현할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <!-- 40 -->
+                            <tr>
+                                <td>41</td>
+                                <td>&lt;embed&gt;</td>
+                                <td>&lt;embed&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>42</td>
+                                <td>&lt;fieldset&gt;</td>
+                                <td>&lt;fieldset&gt; 태그는 &lt;form&gt; 요소에서 연관된 요소들을 하나의 그룹으로 묶을 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>43</td>
+                                <td>&lt;figcaption&gt;</td>
+                                <td>&lt;figcaption&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>44</td>
+                                <td>&lt;figure&gt;</td>
+                                <td>&lt;figure&gt; 태그는 삽화나 다이어그램, 사진 등과 같이 문서의 주요 흐름과는 독립적인 콘텐츠를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>45</td>
+                                <td>&lt;font&gt;</td>
+                                <td>&lt;font&gt; 태그는 텍스트의 폰트(font), 색상 그리고 크기를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>46</td>
+                                <td>&lt;footer&gt;</td>
+                                <td>&lt;footer&gt; 태그는 문서나 특정 섹션(section)의 푸터(footer)를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>47</td>
+                                <td>&lt;form&gt;</td>
+                                <td>&lt;form&gt; 태그는 사용자로부터 입력을 받을 수 있는 HTLM 입력 폼(form)을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>48</td>
+                                <td>&lt;frame&gt;</td>
+                                <td>&lt;frame&gt;태그는 &lt;frameset&gt; 요소에 포함되는 하나의 프레임(frame)을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>49</td>
+                                <td>&lt;frameset&gt;</td>
+                                <td>&lt;frameset&gt; 태그는 문서의 레이아웃을 구성하기 위해 사용되는 프레임(frame)들의 집합을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>50</td>
+                                <td>&lt;head&gt;</td>
+                                <td>&lt;head&gt; 태그는 해당 문서에 대한 정보인 메타데이터(metadata)의 집합을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>51</td>
+                                <td>&lt;header&gt;</td>
+                                <td>&lt;header&gt; 태그는 문서나 특정 섹션(section)의 헤더(header)를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>52</td>
+                                <td>&lt;h1&gt;</td>
+                                <td>&lt;h1&gt; 태그는 HTML 문서에서 제목(heading)을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>53</td>
+                                <td>&lt;hgroup&gt;</td>
+                                <td>&lt;hgroup&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>54</td>
+                                <td>&lt;hr&gt;</td>
+                                <td>&lt;hr&gt; 태그는 콘텐츠 내용에서 주제가 바뀔 때 사용할 수 있는 수평 가로선을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>55</td>
+                                <td>&lt;html&gt;</td>
+                                <td>&lt;html&gt; 태그는 HTML 문서의 루트 요소(root element)를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>56</td>
+                                <td>&lt;i&gt;</td>
+                                <td>&lt;i&gt; 태그는 기본 텍스트와는 다른 분위기나 음성을 위한 텍스트 영역을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>57</td>
+                                <td>&lt;iframe&gt;</td>
+                                <td>&lt;iframe&gt; 태그는 인라인 프레임(inline frame)을 정의할 때 사용합니다</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>58</td>
+                                <td>&lt;image&gt;</td>
+                                <td>&lt;image&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>59</td>
+                                <td>&lt;img&gt;</td>
+                                <td>&lt;img&gt; 태그는 HTML 문서에서 이미지(image)를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>60</td>
+                                <td>&lt;input&gt;</td>
+                                <td>&lt;input&gt; 태그는 사용자로부터 입력을 받을 수 있는 입력 필드(input filed)를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <!-- 60 -->
+                            <tr>
+                                <td>61</td>
+                                <td>&lt;ins&gt;</td>
+                                <td>&lt;ins&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>62</td>
+                                <td>&lt;kbd&gt;</td>
+                                <td>&lt;kbd&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>63</td>
+                                <td>&lt;keygen&gt;</td>
+                                <td>&lt;keygen&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>64</td>
+                                <td>&lt;label&gt;</td>
+                                <td>&lt;label&gt; 태그는 사용자 인터페이스(UI) 요소의 라벨(label)을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>65</td>
+                                <td>&lt;legend&gt;</td>
+                                <td>&lt;legend&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>66</td>
+                                <td>&lt;li&gt;</td>
+                                <td>&lt;li&gt; 태그는 HTML 리스트(list)에 포함되는 아이템(item)을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>67</td>
+                                <td>&lt;link&gt;</td>
+                                <td>&lt;link&gt; 태그는 해당 문서와 외부 소스(external resource) 사이의 관계를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>68</td>
+                                <td>&lt;main&gt;</td>
+                                <td>&lt;main&gt; 태그는 해당 문서의 &lt;body> 요소의 주 콘텐츠(main content)를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>69</td>
+                                <td>&lt;map&gt;</td>
+                                <td>&lt;map&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>70</td>
+                                <td>&lt;mark&gt;</td>
+                                <td>&lt;mark&gt; 태그는 형광펜으로 칠한 것처럼 하이라이트된(highlighted) 텍스트를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>71</td>
+                                <td>&lt;marquee&gt;</td>
+                                <td>&lt;marquee&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>72</td>
+                                <td>&lt;menu&gt;</td>
+                                <td>&lt;menu&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>73</td>
+                                <td>&lt;menuitem&gt;</td>
+                                <td>&lt;menuitem&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>74</td>
+                                <td>&lt;meta&gt;</td>
+                                <td>&lt;meta&gt; 태그는 해당 문서에 대한 정보인 메타데이터(metadata)를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>75</td>
+                                <td>&lt;meter&gt;</td>
+                                <td>&lt;meter&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>76</td>
+                                <td>&lt;nav&gt;</td>
+                                <td>&lt;nav&gt; 태그는 다른 페이지 또는 현재 페이지의 다른 부분과 연결되는 네비게이션 링크(navigation links)들의 집합을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>77</td>
+                                <td>&lt;nobr&gt;</td>
+                                <td>&lt;nobr&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>78</td>
+                                <td>&lt;noembed&gt;</td>
+                                <td>&lt;noembed&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>79</td>
+                                <td>&lt;noframes&gt;</td>
+                                <td>&lt;noframes&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>80</td>
+                                <td>&lt;noscript&gt;</td>
+                                <td>&lt;noscript&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <!-- 80 -->
+                            <tr>
+                                <td>81</td>
+                                <td>&lt;object&gt;</td>
+                                <td>&lt;object&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>82</td>
+                                <td>&lt;ol&gt;</td>
+                                <td>&lt;ol&gt; 태그는 순서가 있는 HTML 리스트(list)를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>83</td>
+                                <td>&lt;optgroup&gt;</td>
+                                <td>&lt;optgroup&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>84</td>
+                                <td>&lt;option&gt;</td>
+                                <td>&lt;option&gt; 태그는 옵션 메뉴를 제공하는 드롭다운 리스트(drop-down list)에서 사용되는 하나의 옵션을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>85</td>
+                                <td>&lt;output&gt;</td>
+                                <td>&lt;output&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>86</td>
+                                <td>&lt;p&gt;</td>
+                                <td>&lt;p&gt; 태그는 paragraph, 즉 문단의 약자로, 하나의 문단을 만들 때 쓰입니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>87</td>
+                                <td>&lt;param&gt;</td>
+                                <td>&lt;param&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>88</td>
+                                <td>&lt;picture&gt;</td>
+                                <td>&lt;picture&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>89</td>
+                                <td>&lt;plaintext&gt;</td>
+                                <td>&lt;plaintext&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>90</td>
+                                <td>&lt;portal&gt;</td>
+                                <td>&lt;portal&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>91</td>
+                                <td>&lt;pre&gt;</td>
+                                <td>&lt;pre&gt; 태그는 미리 정의된 형식(preformatted)의 텍스트를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>92</td>
+                                <td>&lt;progress&gt;</td>
+                                <td>&lt;progress&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>93</td>
+                                <td>&lt;q&gt;</td>
+                                <td>&lt;q&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>94</td>
+                                <td>&lt;rb&gt;</td>
+                                <td>&lt;rb&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>95</td>
+                                <td>&lt;rp&gt;</td>
+                                <td>&lt;rp&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>96</td>
+                                <td>&lt;rt&gt;</td>
+                                <td>&lt;rt&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>97</td>
+                                <td>&lt;rtc&gt;</td>
+                                <td>&lt;rtc&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>98</td>
+                                <td>&lt;ruby&gt;</td>
+                                <td>&lt;ruby&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>99</td>
+                                <td>&lt;s&gt;</td>
+                                <td>&lt;s&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td>&lt;samp&gt;</td>
+                                <td>&lt;samp&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <!-- 100 -->
+                            <tr>
+                                <td>101</td>
+                                <td>&lt;script&gt;</td>
+                                <td>&lt;script&gt; 태그는 자바스크립트와 같은 클라이언트 사이드 스크립트(client-side scripts)를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>102</td>
+                                <td>&lt;section&gt;</td>
+                                <td>&lt;section&gt; 태그는 HTML 문서에 포함된 독립적인 섹션(section)을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>103</td>
+                                <td>&lt;select&gt;</td>
+                                <td>&lt;select&gt; 태그는 옵션 메뉴를 제공하는 드롭다운 리스트(drop-down list)를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>104</td>
+                                <td>&lt;shadow&gt;</td>
+                                <td>&lt;shadow&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>105</td>
+                                <td>&lt;slot&gt;</td>
+                                <td>&lt;slot&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>106</td>
+                                <td>&lt;small&gt;</td>
+                                <td>&lt;small&gt; 태그는 글자 크기가 작은 텍스트를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>107</td>
+                                <td>&lt;source&gt;</td>
+                                <td>&lt;source&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>108</td>
+                                <td>&lt;spacer&gt;</td>
+                                <td>&lt;spacer&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>109</td>
+                                <td>&lt;span&gt;</td>
+                                <td>&lt;span&gt; 태그는 HTML 문서에서 인라인 요소(inline-element)들을 하나로 묶을 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>110</td>
+                                <td>&lt;strike&gt;</td>
+                                <td>&lt;strike&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>111</td>
+                                <td>&lt;strong&gt;</td>
+                                <td>&lt;strong&gt; 태그는 해당 콘텐츠의 중요성이나 심각함, 긴급함 등을 강조할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>112</td>
+                                <td>&lt;style&gt;</td>
+                                <td>&lt;style&gt; 태그는 해당 HTML 문서의 스타일 정보를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>113</td>
+                                <td>&lt;sub&gt;</td>
+                                <td>&lt;sub&gt; 태그는 아랫첨자(subscript) 텍스트를 표현할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>114</td>
+                                <td>&lt;summary&gt;</td>
+                                <td>&lt;summary&gt; 태그는 &lt;details&gt; 요소에 의해 생성되는 대화형 위젯에서 기본적으로 보이는 제목을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>115</td>
+                                <td>&lt;sup&gt;</td>
+                                <td>&lt;sup&gt; 태그는 윗첨자(superscript) 텍스트를 표현할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>116</td>
+                                <td>&lt;table&gt;</td>
+                                <td>&lt;table&gt; 태그는 데이터를 포함하는 셀(cell)들의 행과 열로 구성된 2차원 테이블을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>117</td>
+                                <td>&lt;tbody&gt;</td>
+                                <td>&lt;tbody&gt; 태그는 HTML 테이블에서 내용 콘텐츠(body content)들을 하나의 그룹으로 묶을 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>118</td>
+                                <td>&lt;td&gt;</td>
+                                <td>&lt;td&gt; 태그는 HTML 테이블에서 하나의 데이터 셀(data cell)을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>119</td>
+                                <td>&lt;template&gt;</td>
+                                <td>&lt;template&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>120</td>
+                                <td>&lt;textarea&gt;</td>
+                                <td>&lt;textarea&gt; 태그는 사용자가 여러 줄의 텍스트를 입력할 수 있는 텍스트 입력 영역을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <!-- 120 -->
+                            <tr>
+                                <td>121</td>
+                                <td>&lt;tfoot&gt;</td>
+                                <td>&lt;tfoot&gt; 태그는 HTML 테이블에서 푸터 콘텐츠(footer content)들을 하나의 그룹으로 묶을 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>122</td>
+                                <td>&lt;th&gt;</td>
+                                <td>&lt;th&gt; 태그는 HTML 테이블에서 제목이 되는 헤더 셀(header cell)을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>123</td>
+                                <td>&lt;thead&gt;</td>
+                                <td>&lt;thead&gt; 태그는 HTML 테이블에서 헤더 콘텐츠(header content)들을 하나의 그룹으로 묶을 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>124</td>
+                                <td>&lt;time&gt;</td>
+                                <td>&lt;time&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>125</td>
+                                <td>&lt;title&gt;</td>
+                                <td>&lt;title&gt; 태그는 해당 문서의 제목(title)을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>126</td>
+                                <td>&lt;tr&gt;</td>
+                                <td>&lt;tr&gt; 태그는 테이블에서 셀들로 이루어진 하나의 행(row)을 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>127</td>
+                                <td>&lt;track&gt;</td>
+                                <td>&lt;track&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>128</td>
+                                <td>&lt;tt&gt;</td>
+                                <td>&lt;tt&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                            <tr>
+                                <td>129</td>
+                                <td>&lt;u&gt;</td>
+                                <td>&lt;u&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>130</td>
+                                <td>&lt;ul&gt;</td>
+                                <td>&lt;ul&gt; 태그는 순서가 없는 HTML 리스트(list)를 정의할 때 사용합니다.</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>131</td>
+                                <td>&lt;var&gt;</td>
+                                <td>&lt;var&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>132</td>
+                                <td>&lt;video&gt;</td>
+                                <td>&lt;video&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>133</td>
+                                <td>&lt;wbr&gt;</td>
+                                <td>&lt;wbr&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>134</td>
+                                <td>&lt;xmp&gt;</td>
+                                <td>&lt;xmp&gt;</td>
+                                <td><a href="#">__</a></td>
+                                <td></td>
+                                <td><span class="material-symbols-outlined" title="현재는 사용하지 않습니다.">delete</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+    </body>
+</html>

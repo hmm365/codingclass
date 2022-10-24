@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>repeat</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">slice()</h2>
+                <p class="t_desc2">slice() 메서드는 어떤 배열의 begin부터 end까지(end 미포함)에 대한 얕은 복사본을 새로운 배열 객체로 반환합니다. 원본 배열은 바뀌지 않습니다.</p>
+                <div class="t_table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col style="width: 32%" />
+                            <col style="width: 32%" />
+                            <col style="width: 32%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="smple08_N1"></td>
+                                <td class="smple08_Q1"></td>
+                                <td class="smple08_M1"></td>
+                                <td class="smple08_P1"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple08_N2"></td>
+                                <td class="smple08_Q2"></td>
+                                <td class="smple08_M2"></td>
+                                <td class="smple08_P2"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple08_N3"></td>
+                                <td class="smple08_Q3"></td>
+                                <td class="smple08_M3"></td>
+                                <td class="smple08_P3"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple08_N4"></td>
+                                <td class="smple08_Q4"></td>
+                                <td class="smple08_M4"></td>
+                                <td class="smple08_P4"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple08_N5"></td>
+                                <td class="smple08_Q5"></td>
+                                <td class="smple08_M5"></td>
+                                <td class="smple08_P5"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple08_N6"></td>
+                                <td class="smple08_Q6"></td>
+                                <td class="smple08_M6"></td>
+                                <td class="smple08_P6"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="t_code">
+                    <pre><code class="language-js">//01
+const arrNum1 = [100, 200, 300, 400, 500];
+const result = arrNum1.slice(2);
+
+//02
+const result2 = arrNum1.slice(3);
+ 
+//03
+const result3 = arrNum1.slice(2, 4);
+                
+//04
+const result4 = arrNum1.slice(2, 5);
+
+//05
+const result5 = arrNum1.slice(-2);
+
+//06
+const result6 = arrNum1.slice(-2, 5);
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script>
+            {
+                const arrNum1 = [100, 200, 300, 400, 500];
+                const result = arrNum1.slice(2);
+
+                document.querySelector(".smple08_N1").innerHTML = "1";
+                document.querySelector(".smple08_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple08_M1").innerHTML = "arrNum1.slice(2)";
+                document.querySelector(".smple08_P1").innerHTML = result;
+
+                const result2 = arrNum1.slice(3);
+
+                document.querySelector(".smple08_N2").innerHTML = "2";
+                document.querySelector(".smple08_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple08_M2").innerHTML = "arrNum1.slice(3)";
+                document.querySelector(".smple08_P2").innerHTML = result2;
+
+                const result3 = arrNum1.slice(2, 4);
+
+                document.querySelector(".smple08_N3").innerHTML = "3";
+                document.querySelector(".smple08_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple08_M3").innerHTML = "arrNum1.slice(2, 4)";
+                document.querySelector(".smple08_P3").innerHTML = result3;
+
+                const result4 = arrNum1.slice(2, 5);
+
+                document.querySelector(".smple08_N4").innerHTML = "4";
+                document.querySelector(".smple08_Q4").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple08_M4").innerHTML = "arrNum1.slice(2, 5)";
+                document.querySelector(".smple08_P4").innerHTML = result4;
+
+                const result5 = arrNum1.slice(-2);
+
+                document.querySelector(".smple08_N5").innerHTML = "5";
+                document.querySelector(".smple08_Q5").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple08_M5").innerHTML = "arrNum1.slice(-2)";
+                document.querySelector(".smple08_P5").innerHTML = result5;
+
+                const result6 = arrNum1.slice(-2, 5);
+
+                document.querySelector(".smple08_N6").innerHTML = "6";
+                document.querySelector(".smple08_Q6").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple08_M6").innerHTML = "arrNum1.slice(-2, 5)";
+                document.querySelector(".smple08_P6").innerHTML = result6;
+            }
+        </script>
+    </body>
+</html>

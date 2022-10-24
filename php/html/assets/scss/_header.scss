@@ -1,0 +1,129 @@
+// header
+#header {
+  .header__inner {
+    position: relative;
+    text-align: center;
+    border-bottom: 3px solid #000;
+
+    &:hover .star {
+      transform: rotate(700deg);
+    }
+
+    h1 {
+      width: 100%;
+      font-size: 20px;
+      padding: 20px 0;
+      position: relative;
+
+      a {
+        background: $bg-basic;
+        display: inline-block;
+        padding: 0 10px;
+      }
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        top: 30px;
+        z-index: -1;
+      }
+    }
+    .left {
+      position: absolute;
+      left: 0;
+      top: 14px;
+
+      .star {
+        background-image: url("data:image/svg+xml,%3csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5 0L6.12257 3.45492H9.75528L6.81636 5.59017L7.93893 9.04508L5 6.90983L2.06107 9.04508L3.18364 5.59017L0.244718 3.45492H3.87743L5 0Z' fill='black'/%3e%3c/svg%3e");
+        transition: transform 1s ease-out;
+      }
+
+      a {
+        background: $bg-basic;
+        border-radius: 50px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #000;
+        display: inline-block;
+      }
+    }
+    .right {
+      position: absolute;
+      right: 0;
+      top: 21px;
+
+      li {
+        display: inline;
+
+        a {
+          background: $bg-basic;
+          border: 1px solid #000;
+          padding: 5px 10px;
+          border-radius: 50px;
+          font-size: 0.8rem;
+
+          &.black {
+            background: $black;
+            color: $white;
+          }
+        }
+        &.active a {
+          background: $black;
+          color: $white;
+        }
+      }
+    }
+    .nav {
+      position: absolute;
+      left: 50%;
+      bottom: -0.9rem;
+      transform: translateX(-50%);
+      z-index: 10;
+
+      li {
+        display: inline;
+        transition: all 0.2s;
+
+        span {
+          position: relative;
+          z-index: 100;
+        }
+
+        a {
+          display: inline-block;
+          background: $bg-basic;
+          padding: 3px 6px;
+          border: 1px solid $black;
+          margin: 0 1px;
+          position: relative;
+          z-index: 10;
+
+          &::before {
+            content: "";
+            background: #000;
+            width: 100%;
+            height: 0%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: all 0.2s;
+            z-index: 1;
+          }
+          &:hover::before {
+            height: 100%;
+          }
+        }
+      }
+
+      li:hover {
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

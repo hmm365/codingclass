@@ -1,0 +1,74 @@
+.container {
+    width: 100%;
+    padding: 50px 20px;
+}
+.main__inner {
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.main__inner .right {
+    width: 80%;
+}
+aside {
+    padding: 50px 0;
+}
+aside figure {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+}
+aside figure h2 {
+    font-size: 50px;
+    font-weight: 500;
+    color: #666;
+}
+aside figure img {
+    width: 40px;
+    height: 40px;
+}
+aside h3 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+aside h3.active {
+    color: blue;
+}
+aside ul {
+    margin-left: 20px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+aside ul li {
+    border-bottom: 1px solid #666;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+body.fix {
+    overflow: hidden;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 98;
+}
+.modalbox {
+    display: none;
+    z-index: 100;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+}

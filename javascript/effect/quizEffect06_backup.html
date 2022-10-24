@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트</title>
+    <link rel="stylesheet" href="../assets/css/quiz.css">
+    <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/Cafe24Dangdanghae/Cafe24Dangdanghae.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../javascript01.html">Quiz</a><em>주관식 유형</em></h1>
+        <nav>
+            <ul>
+                <li><a href="quizEffect01.html">1</a></li>
+                <li><a href="quizEffect02.html">2</a></li>
+                <li><a href="quizEffect03.html">3</a></li>
+                <li><a href="quizEffect04.html">4</a></li>
+                <li><a href="quizEffect05.html">5</a></li>
+                <li class="active"><a href="quizEffect06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="quiz__wrap">
+            <div class="quiz">
+                <sapn class="quiz__type"></sapn>
+                <h2 class="quiz__question">
+                    <!-- <span class="number"></span>
+                    <div class="ask">
+                    </div> -->
+                </h2>
+                <div class="quiz__view">
+                    <div class="true">정답입니다!</div>
+                    <div class="false">틀렸습니다!</div>
+                    <div class="dog">
+                        <div class="head">
+                            <div class="ears"></div>
+                            <div class="face"></div>
+                            <div class="eyes">
+                                <div class="teardrop"></div>
+                            </div>
+                            <div class="nose"></div>
+                            <div class="mouth">
+                                <div class="tongue"></div>
+                            </div>
+                            <div class="chin"></div>
+                        </div>
+                        <div class="body">
+                            <div class="tail"></div>
+                            <div class="legs"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz__answer">
+                    <div class="quiz__selects">
+                        <!-- <label for="select1">
+                            <input type="radio" id="select1" class="select" name="select" value="1">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="select2">
+                            <input type="radio" id="select2" class="select" name="select" value="2">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="select3">
+                            <input type="radio" id="select3" class="select" name="select" value="3">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="select4">
+                            <input type="radio" id="select4" class="select" name="select" value="4">
+                            <span class="choice"></span>
+                        </label>-->
+                    </div>
+                    <div class="result"></div> 
+                    <button class="confirm">다음문제 보기</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+        //문제정보
+        const quizInfo = [
+            {
+                answerType: "웹디자인기능사 기출문제 2016년 1회",
+                answerNum: 1,
+                answerAsk: "다음 중 디자인의 조건에 해당하지 않는 것은?",
+                answerChoice: [
+                     "대칭",
+                     "점증",
+                     "반복",
+                     "강조"
+                ],
+                answerResult: "대칭",
+                answerEx: "디자인의 원리 : 균형, 비례, 반복, 통일, 강조",
+            },
+            {
+                answerType: "웹디자인기능사 기출문제 2016년 1회",
+                answerNum: 2,
+                answerAsk: "시각적 균형과 가장 거리가 먼 것은?",
+                answerChoice: [
+                    "명암에 의한 균형",
+                    "경험에 의한 균형",
+                    "질감에 의한 균형",
+                    "위치에 의한 균형"
+                    ],
+                answerResult: "경험에 의한 균형",
+                answerEx: "경험에 의한 균형은 시각적이지않고 추상적이기 때문이다.",
+            },
+            {
+                answerType: "웹디자인기능사 기출문제 2016년 1회",
+                answerNum: 3,
+                answerAsk: "미적 대상을 구상하는 부분과 부분의 사이에 질적으로나 양적 으로 모순되는 일 없이 질서가 잡혀 어울리는 것은?",
+                answerChoice: [
+                    "균형",
+                    "조화",
+                    "변화",
+                    "리듬"
+                ],
+                answerResult: "변화",
+                answerEx: "조화란 요소들이 상호 관계를 가지고 균형감이 안정적으로 이루어진 상태.",
+            },
+            {
+                answerType: "웹디자인기능사 기출문제 2016년 1회",
+                answerNum: 4,
+                answerAsk: "편집디자인의 구성요소에 해당되지 않는 것은?",
+                answerChoice: [
+                    "포맷",
+                    "레이아웃",
+                    "타이포그래피",
+                    "일러스트레이션"
+                ],
+                answerResult: "일러스트레이션",
+                answerEx: "포맷은 파일확장자로서 구성요소에 해당하지 않음.",
+            },
+            {
+                answerType: "웹디자인기능사 기출문제 2016년 1회",
+                answerNum: 5,
+                answerAsk: "색의 진출에 대한 설명으로 틀린 것은?",
+                answerChoice: [
+                    "따뜻한 색이 차가운 색보다 더 진출하는 느낌을 준다.",
+                    "밝은 색이 어두운 색보다 더 진출하는 느낌을 준다.",
+                    "무채색이 유채색보다 더 진출하는 느낌을 준다.",
+                    "팽창색이 수축색보다 더 진출하는 느낌을 준다."
+                ],
+                answerResult: "팽창색이 수축색보다 더 진출하는 느낌을 준다.",
+                answerEx: "진출색: 난색<따뜻한 색>계, 밝은색, 후퇴색: 한색<차가운 색>계, 어두운 색",
+            },
+        ];
+        
+        //선택자
+        const quizQuestion = document.querySelector(".quiz__question"); //문제
+        const quizSelects = document.querySelector(".quiz__selects"); //객관식보기
+        const quizType = document.querySelector(".quiz__type"); // 유형
+        const quizResult = document.querySelector(".quiz__answer .result"); // 해설
+        const quizConfirm = document.querySelector(".quiz__answer .confirm");
+        const quizView = document.querySelector(".quiz__view");
+        let quizCount = 0;
+        let quizScore = 0;
+        // 문제 출력
+        const updateQuiz = (index) => {
+            if(quizInfo.length > index){          
+                const questionTag = `
+                <span class"number">${quizInfo[index].answerNum}.</span>
+                <div class="ask">${quizInfo[index].answerAsk}<div>
+                `;
+                const choiceTag = `
+                    <label for="select1">
+                        <input type="radio" id="select1" class="select" name="select" value="1">
+                        <span class="choice">${quizInfo[index].answerChoice[0]}</span>
+                    </label>
+                    <label for="select2">
+                        <input type="radio" id="select2" class="select" name="select" value="2">
+                        <span class="choice">${quizInfo[index].answerChoice[1]}</span>
+                    </label>
+                    <label for="select3">
+                        <input type="radio" id="select3" class="select" name="select" value="3">
+                        <span class="choice">${quizInfo[index].answerChoice[2]}</span>
+                    </label>
+                    <label for="select4">
+                        <input type="radio" id="select4" class="select" name="select" value="4">
+                        <span class="choice">${quizInfo[index].answerChoice[3]}</span>
+                    </label>
+            `;
+                quizType.innerHTML = quizInfo[0].answerType; //퀴즈 유형
+                quizQuestion.innerHTML = questionTag; //번호, 질문
+                quizSelects.innerHTML = choiceTag; //문제
+                quizResult.innerHTML = quizInfo[0].answerEx; //해설      
+                const quizChoice = quizSelects.querySelectorAll(".choice");
+
+                for(let i=0; i<quizChoice.length; i++){
+                    quizChoice[i].setAttribute("onclick", "choiceSelected(this)");
+                }
+                //문제 , 해설 숨기기
+                quizResult.style.display = "none";
+                quizConfirm.style.display = "none";          
+            } else {
+                quizConfirm.textContent = `총 ${quizInfo.length} 문제 중에 ${quizScore} 문제를 맞추었습니다.`
+            }
+            
+            
+        };
+        const choiceSelected = (answer) => {
+            let userAnswer = answer.textContent;
+            let currentAnswer = quizInfo[quizCount].answerResult;
+            if(userAnswer == currentAnswer) {
+                // console.log("정답");
+                quizView.classList.add("like");
+                quizScore++;
+            } else {
+                // console.log("오답");
+                quizView.classList.add("dislike");
+                quizResult.style.display = "block";
+            }
+            console.log(quizScore);
+            quizConfirm.style.display = "block";
+        };
+
+        updateQuiz(quizCount);
+        
+        const answerQuiz = () => {
+            quizCount++ ;
+            console.log("2."+quizScore);
+            updateQuiz(quizCount);
+            quizView.classList.remove("like", "dislike");
+            if(quizInfo.length -1 == quizCount){
+                quizConfirm.textContent = `점수 확인하기`
+            }
+        }
+        quizConfirm.addEventListener("click", answerQuiz)    
+        // 문제 출력
+        
+
+    </script>
+</body>
+</html>

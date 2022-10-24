@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>repeat</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">indexof() / lastIndexof()</h2>
+                <p class="t_desc2">indexof(),lastIndexof()메서드는 문자열에서 특정 문자의 위치를 찾고 숫자를 반환합니다.</p>
+                <div class="t_table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col style="width: 32%" />
+                            <col style="width: 32%" />
+                            <col style="width: 32%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="smple10_N1"></td>
+                                <td class="smple10_Q1"></td>
+                                <td class="smple10_M1"></td>
+                                <td class="smple10_P1"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple10_N2"></td>
+                                <td class="smple10_Q2"></td>
+                                <td class="smple10_M2"></td>
+                                <td class="smple10_P2"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple10_N3"></td>
+                                <td class="smple10_Q3"></td>
+                                <td class="smple10_M3"></td>
+                                <td class="smple10_P3"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple10_N4"></td>
+                                <td class="smple10_Q4"></td>
+                                <td class="smple10_M4"></td>
+                                <td class="smple10_P4"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple10_N5"></td>
+                                <td class="smple10_Q5"></td>
+                                <td class="smple10_M5"></td>
+                                <td class="smple10_P5"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple10_N6"></td>
+                                <td class="smple10_Q6"></td>
+                                <td class="smple10_M6"></td>
+                                <td class="smple10_P6"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="t_code">
+                    <pre><code class="language-js">//01
+const arrNum1 = [100, 200, 300, 400, 500];
+const arrIndex = arrNum1.indexOf(200);
+
+//02
+const arrNum2 = [100, 200, 300, 400, 500];
+const arrIndex2 = arrNum2.indexOf(300);
+                
+//03                
+const arrNum3 = [100, 200, 300, 400, 500];
+const arrIndex3 = arrNum3.indexOf(600);
+                
+//04                
+const arrNum4 = [100, 200, 300, 400, 200];
+const arrIndex4 = arrNum4.lastIndexOf(200);
+                
+//05                
+const arrNum5 = [100, 200, 300, 400, 200];
+const arrIndex5 = arrNum5.lastIndexOf(600);
+                
+//06      
+const arrNum6 = [100, 200, 300, 400, 200];
+const arrIndex6 = arrNum6.includes(600);
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script>
+            {
+                const arrNum1 = [100, 200, 300, 400, 500];
+                const arrIndex = arrNum1.indexOf(200);
+
+                document.querySelector(".smple10_N1").innerHTML = "1";
+                document.querySelector(".smple10_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple10_M1").innerHTML = "arrNum1.indexOf(200)";
+                document.querySelector(".smple10_P1").innerHTML = arrIndex;
+
+                const arrNum2 = [100, 200, 300, 400, 500];
+                const arrIndex2 = arrNum2.indexOf(300);
+
+                document.querySelector(".smple10_N2").innerHTML = "2";
+                document.querySelector(".smple10_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple10_M2").innerHTML = "arrNum2.indexOf(200)";
+                document.querySelector(".smple10_P2").innerHTML = arrIndex2;
+
+                const arrNum3 = [100, 200, 300, 400, 500];
+                const arrIndex3 = arrNum3.indexOf(600);
+
+                document.querySelector(".smple10_N3").innerHTML = "3";
+                document.querySelector(".smple10_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple10_M3").innerHTML = "arrNum3.indexOf(600)";
+                document.querySelector(".smple10_P3").innerHTML = arrIndex3;
+
+                const arrNum4 = [100, 200, 300, 400, 200];
+                const arrIndex4 = arrNum4.lastIndexOf(200);
+
+                document.querySelector(".smple10_N4").innerHTML = "4";
+                document.querySelector(".smple10_Q4").innerHTML = "[100, 200, 300, 400, 200]";
+                document.querySelector(".smple10_M4").innerHTML = "arrNum4.lastIndexOf(200)";
+                document.querySelector(".smple10_P4").innerHTML = arrIndex4;
+
+                const arrNum5 = [100, 200, 300, 400, 200];
+                const arrIndex5 = arrNum5.lastIndexOf(600);
+
+                document.querySelector(".smple10_N5").innerHTML = "5";
+                document.querySelector(".smple10_Q5").innerHTML = "[100, 200, 300, 400, 200]";
+                document.querySelector(".smple10_M5").innerHTML = "arrNum5.lastIndexOf(600)";
+                document.querySelector(".smple10_P5").innerHTML = arrIndex5;
+
+                const arrNum6 = [100, 200, 300, 400, 200];
+                const arrIndex6 = arrNum6.includes(600);
+
+                document.querySelector(".smple10_N6").innerHTML = "6";
+                document.querySelector(".smple10_Q6").innerHTML = "[100, 200, 300, 400, 200]";
+                document.querySelector(".smple10_M6").innerHTML = "arrNum6.includes(600)";
+                document.querySelector(".smple10_P6").innerHTML = arrIndex6;
+            }
+        </script>
+    </body>
+</html>

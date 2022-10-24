@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>repeat</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">reverse() / sort()</h2>
+                <p class="t_desc2">
+                    everse() 메서드는 배열 요소의 순서를 반대로 정렬<br />
+                    sort 메서드는 배열 정렬
+                </p>
+                <div class="t_table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col style="width: 32%" />
+                            <col style="width: 32%" />
+                            <col style="width: 32%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="smple05_N1"></td>
+                                <td class="smple05_Q1"></td>
+                                <td class="smple05_M1"></td>
+                                <td class="smple05_P1"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple05_N2"></td>
+                                <td class="smple05_Q2"></td>
+                                <td class="smple05_M2"></td>
+                                <td class="smple05_P2"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple05_N3"></td>
+                                <td class="smple05_Q3"></td>
+                                <td class="smple05_M3"></td>
+                                <td class="smple05_P3"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple05_N4"></td>
+                                <td class="smple05_Q4"></td>
+                                <td class="smple05_M4"></td>
+                                <td class="smple05_P4"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple05_N5"></td>
+                                <td class="smple05_Q5"></td>
+                                <td class="smple05_M5"></td>
+                                <td class="smple05_P5"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple05_N6"></td>
+                                <td class="smple05_Q6"></td>
+                                <td class="smple05_M6"></td>
+                                <td class="smple05_P6"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="t_code">
+                    <pre><code class="language-js">// 01
+const arrNum = [100, 200, 300, 400, 500];
+const arrReverse = arrNum.reverse();
+// 02
+const arrNum2 = [100, 200, 200, 300, 400, 500];
+const arrSort = arrNum2.sort();
+// 03
+const arrNum3 = [500, 400, 300, 200, 100];
+const arrSort3 = arrNum3.sort( (a, b) => b - a );
+// 04
+const arrNum4 = [500, 400, 300, 200, 100];
+const arrSort4 = arrNum4.sort( (a, b) => a - b );
+// 05
+const arrNum5 = ['t','d','e','a','b'];
+const arrSort5 = arrNum5.sort( (a, b) => a.localeCompare(b) );
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script>
+            {
+                const arrNum = [100, 200, 300, 400, 500];
+                const arrReverse = arrNum.reverse();
+
+                document.querySelector(".smple05_N1").innerHTML = "1";
+                document.querySelector(".smple05_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple05_M1").innerHTML = "reverse()";
+                document.querySelector(".smple05_P1").innerHTML = arrReverse; // 500, 400, 300, 200, 100
+
+                const arrNum2 = [100, 200, 200, 300, 400, 500];
+                const arrSort = arrNum2.sort();
+
+                document.querySelector(".smple05_N2").innerHTML = "2";
+                document.querySelector(".smple05_Q2").innerHTML = "[100, 200, 200, 300, 400, 500]";
+                document.querySelector(".smple05_M2").innerHTML = "sort()";
+                document.querySelector(".smple05_P2").innerHTML = arrSort; // 100, 200, 200, 300, 400, 500
+
+                const arrNum3 = [500, 400, 300, 200, 100];
+                const arrSort3 = arrNum3.sort((a, b) => b - a);
+
+                document.querySelector(".smple05_N3").innerHTML = "3";
+                document.querySelector(".smple05_Q3").innerHTML = "[100, 200, 200, 300, 400, 500]";
+                document.querySelector(".smple05_M3").innerHTML = "sort((a, b) => b - a)";
+                document.querySelector(".smple05_P3").innerHTML = arrSort3; // 500, 400, 300, 200, 100
+
+                const arrNum4 = [500, 400, 300, 200, 100];
+                const arrSort4 = arrNum4.sort((a, b) => a - b);
+
+                document.querySelector(".smple05_N4").innerHTML = "4";
+                document.querySelector(".smple05_Q4").innerHTML = "[500, 400, 300, 200, 100]";
+                document.querySelector(".smple05_M4").innerHTML = "sort((a, b) => a - b)";
+                document.querySelector(".smple05_P4").innerHTML = arrSort4; // 100, 200, 200, 300, 400, 500
+
+                const arrNum5 = ["t", "d", "e", "a", "b"];
+                const arrSort5 = arrNum5.sort((a, b) => a.localeCompare(b));
+
+                document.querySelector(".smple05_N5").innerHTML = "5";
+                document.querySelector(".smple05_Q5").innerHTML = "[500, 400, 300, 200, 100]";
+                document.querySelector(".smple05_M5").innerHTML = "sort((a, b) => a.localeCompare(b))";
+                document.querySelector(".smple05_P5").innerHTML = arrSort5; // 100, 200, 200, 300, 400, 500
+
+                const arrNum6 = ["t", "d", "e", "a", "b"];
+                const arrSort6 = arrNum6.sort((a, b) => b.localeCompare(a));
+
+                document.querySelector(".smple05_N6").innerHTML = "6";
+                document.querySelector(".smple05_Q6").innerHTML = "[500, 400, 300, 200, 100]";
+                document.querySelector(".smple05_M6").innerHTML = "sort((a, b) => a.localeCompare(b))";
+                document.querySelector(".smple05_P6").innerHTML = arrSort6; // 100, 200, 200, 300, 400, 500
+            }
+        </script>
+    </body>
+</html>

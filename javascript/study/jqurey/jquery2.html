@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gsap</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+<body>
+    <main id="main">
+        <div class="document">
+            <h3 class="t_tit2">속성 선택자</h3>
+            <p class="t_desc">JQuery는 html 요소와 관련된 기능구현이 많아 그만큼 CSS와 매우 밀접한 관계가 있습니다.</p>
+            <h3 class="t_tit2">속성 선택자 종류</h3>
+            <table class="t_table">
+                <colgroup>
+                    <col style="width: 30%">
+                    <col style="width: 30%">
+                    <col style="width: 40%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>선택자 종류</th>
+                        <th colspan="2">설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">요소[속성]</td>
+                        <td class="ce" class="ce">$("span[class]")</td>
+                        <td>span 요소 중 class 속성을 가지고 있는 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">요소[속성='값']</td>
+                        <td class="ce" class="ce">$("span[class='abc']")</td>
+                        <td>span 요소 중 class 가 'abc'인 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">요소[속성!='값']</td>
+                        <td class="ce" class="ce">$("span[class!='abc']")</td>
+                        <td>span 요소 중 class 가 'abc'가 아닌 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">요소[속성~='값']</td>
+                        <td class="ce">$("span[class~='abc']")</td>
+                        <td>span 요소 중 class 가 'abc'를 포함하는 요소를 선택합니다.<br>'abc'앞뒤로 연결된 문자가 없어야 합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">요소[속성*='값']</td>
+                        <td class="ce">$("span[class*='abc']")</td>
+                        <td>span 요소 중 class 가 'abc'가 포함하는 모든 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">요소[속성|='값']</td>
+                        <td class="ce">$("span[class|='abc']")</td>
+                        <td>span 요소 중 class 가 'abc'나 'abc-' 로 시작하는 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">요소[속성^='값']</td>
+                        <td class="ce">$("span[class^='abc']")</td>
+                        <td>span 요소 중 class 가 'abc' 로 시작하는 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">요소[속성$='값']</td>
+                        <td class="ce">$("span[class$='abc']")</td>
+                        <td>span 요소 중 class 가 'abc' 로 끝나는 요소를 선택합니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h3 class="t_tit2">예시</h3>
+            <div class="t_iframe">
+                <iframe height="450" style="width: 100%;" scrolling="no" title="jquery2" src="https://codepen.io/hmm365/embed/WNzVEaO?default-tab=js%2Cresult&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/hmm365/pen/WNzVEaO">
+                    jquery2</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+    <script>
+
+    </script>
+</body>
+</html>
+  

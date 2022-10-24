@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>css애니</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h3 class="t_tit2">애니메이션 : 다보고있다~</h3>
+                <iframe height="400" style="width: 100%" scrolling="no" title="cssani8" src="https://codepen.io/hmm365/embed/rNvYKrV?default-tab=result&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/hmm365/pen/rNvYKrV"> cssani8</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>) on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+                <p class="t_box">css 코드보기</p>
+                <div class="t_code">
+                    <pre><code class="language-css">*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+  overflow: hidden;
+}
+.wrapper{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 369px;
+  height: 547px;
+  transform-style: preserve-3d;
+  perspective: 600px;
+}
+.me{
+  position: absolute;
+  width: 369px;
+  height: 547px;
+  transform: translateZ(80px) scale(0.8);
+}
+.me::before,
+.me::after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background: url(http://www.supah.it/dribbble/006/profile.png) no-repeat 0 0;
+}
+.me::after {
+  height: 30px;
+  top: auto;
+  bottom: -15px;
+  filter: blur(15px);
+  background-size: 100% 30px;
+  border-radius: 100px;
+}
+.eye, .eye::before{
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 175px;
+  left: 119px;
+  z-index: -1;
+  background: url(http://www.supah.it/dribbble/006/eye.png)
+}
+.eye::before{
+  content: '';
+  top: -3px;
+  left: 99px;
+}
+.text{
+  position; absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 390px;
+  height: 595px;
+  transform: translatez(150px) translatex(-11px) translatey(-26px) scale(.55);
+  border: 3px solid #fff;
+  text-align: center;
+  line-height: 1000px;
+  color: #fff;
+  opacity: 0.3;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.36) 39%, rgba(255,255,255,0) 51%, #000 100%)
+}
+.text::after {
+  content: 'eye moving';
+  width: 100%;
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  z-index: 1;
+  line-height: 1;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  text-indent: 20px;
+}
+</code></pre>
+                </div>
+                <p class="t_box">js 코드보기</p>
+                <div class="t_code">
+                    <pre><code class="language-js">const wrap = document.querySelector('.wrapper');
+const eye = document.querySelector('.eye');
+const speed = 1;
+let x = 0;
+let y = 0;
+let followX = 0;
+let followY = 0;
+function animate() {
+  x += (followX - x) * speed;
+  y += (followY - y) * speed;
+  eye.style.transform = `translate(${-x}px, ${-y}px)`;
+  wrap.style.transform = `translate(-50%,-50%) perspective(600px) rotateX(${-y}deg) rotateY(${-x}deg)`;
+  requestAnimationFrame(animate);
+}
+window.addEventListener('mousemove', (e) => {
+  let mouseX = Math.max(-100, Math.min(100,window.innerWidth / 2 - e.clientX));
+  let mouseY = Math.max(-100, Math.min(100,window.innerHeight / 2 - e.clientY));
+   followX = (12 * mouseX) / 100;
+   followY = (10 * mouseY) / 100;
+});
+window.addEventListener('keydown', (e)=>{
+  switch(e.keyCode) {
+    case 37:
+      followX = 12;
+      break;
+    case 38:
+      followY = 10;
+      break;
+    case 39:
+      followX = -12;
+      break;
+    case 40:
+      followY = -10;
+      break;
+    default:
+      break;
+  }
+});
+animate()
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+    </body>
+</html>

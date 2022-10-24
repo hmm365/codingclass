@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css애니</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+<body>
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit2">애니메이션1</h2>
+            <p class="t_desc2">
+                박스가 땅에닿으면 뭉게지는 애니메이션을 만들어봤습니다.
+            </p>
+
+            <hr>
+            <h3 class="t_tit2">HTML코드</h3>
+            <div class="t_code">
+<pre><code class="language-html">&lt;div class="box"&gt;&lt;/div&gt;</code></pre>
+            </div>
+            <hr>
+            <h3 class="t_tit2">css코드</h3>
+            <div class="t_code">
+<pre><code class="language-css">body {
+  height: 100vh;
+  background-image: linear-gradient(to top, skyblue, pink);
+  position: relative;
+  overflow: hidden;
+} 
+
+.box {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+.box::before {
+  content: '';
+  width: 50px;
+  height: 5px;
+  position: absolute;
+  top: 58px;
+  left: 0;
+  background-color: #000;
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: shadow 0.6s linear infinite;
+}
+@keyframes shadow {
+  0% { transform: scale(1, 1);}
+  50% { transform: scale(1.2,1);}
+  100% { transform: scale(1, 1);}
+}
+
+.box::after {
+  content: '';
+  background-color: yellow;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  animation: load 0.6s linear infinite;
+}
+
+@keyframes load {
+  17% { border-bottom-right-radius: 3px; }
+  25% { transform: translatey(9px) rotate(22.5deg);}
+  50% { 
+    transform: translatey(18px) scale(1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+  75% { transform: translatey(9px) rotate(97.5deg);}
+  100% { transform: translatey(0px) rotate(90deg);}
+}
+</code></pre>
+            </div>
+
+            <div class="t_iframe">
+                <iframe height="300" title="cssani" src="https://codepen.io/hmm365/embed/JjLQeZp?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/hmm365/pen/JjLQeZp">
+                    cssani</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+</body>
+</html>

@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="webstoryboy" />
+        <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다." />
+        <meta name="keywords" content="SyuMay, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy" />
+        <title>SyuMay | SVG Animation</title>
+        <!-- Bootstrap core CSS -->
+        <link href="../assets/css/bootstrap.css" rel="stylesheet" />
+        <link href="../assets/css/docs.min.css" rel="stylesheet" />
+        <link href="../assets/css/prism.css" rel="stylesheet" />
+        <!-- 파비콘 -->
+        <link rel="shortcut icon" href="../assets/ico/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png" />
+        <link rel="icon" href="../assets/ico/icon.png" />
+        <link rel="icon" href="../assets/ico/favicon_57.png" sizes="16x16" />
+        <link rel="icon" href="../assets/ico/favicon_72.png" sizes="32x32" />
+        <link rel="icon" href="../assets/ico/favicon_114.png" sizes="48x48" />
+        <link rel="icon" href="../assets/ico/favicon_114.png" sizes="64x64" />
+        <link rel="icon" href="../assets/ico/favicon_114.png" sizes="128x128" />
+        <!-- Facebook meta tags -->
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="SyuMay" />
+        <meta property="og:url" content="https://webstoryboy.co.kr/" />
+        <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+        <meta property="og:site_name" content="SyuMay" />
+        <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+        <!-- twitter meta tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@webstoryboy" />
+        <meta name="twitter:title" content="SyuMay" />
+        <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+        <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+        <!-- 웹 폰트 -->
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet" />
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <a class="sr-only" href="#content">Skip to main content</a>
+        <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="../index.html" class="navbar-brand">WEB'S &lt;/doc&gt;</a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                    <ul class="nav navbar-nav">
+                        <li><a href="https://syumay.tistory.com">Tistory</a></li>
+                        <li><a href="https://codepen.io/hmm365">Codepen</a></li>
+                        <li><a href="https://github.com/hmm365">Github</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="bs-header bgs5" id="content">
+            <div class="container">
+                <h1>SVG Animation Reference v1.0 &lt;/doc&gt;</h1>
+                <p><a href="https://richclub8.dothome.co.kr" target="_blank">richclub8.dothome.co.kr</a></p>
+            </div>
+        </div>
+        <div class="container bs-docs-container">
+            <div class="row">
+                <div class="col-md-12" role="main"></div>
+                <!-- Intro0 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro0" class="page-header">SVG</h2>
+                    <p class="bs-callout bs-callout-info">스케일러블 벡터 그래픽스(Scalable Vector Graphics, SVG)는 2차원 벡터 그래픽을 표현하기 위한 XML 기반의 파일 형식으로, 1999년 W3C(World Wide Web Consortium)의 주도하에 개발된 오픈 표준의 벡터 그래픽 파일 형식이다. SVG 형식의 이미지와 그 작동은 XML 텍스트 파일들로 정의 되어 검색화·목록화·스크립트화가 가능하며 필요하다면 압축도 가능하다.</p>
+                    <ul>
+                        <li>인터넷 익스플로러9 버전 이상부터 지원됩니다.</li>
+                        <li>XML을 이용하여 라인, 곡선, 기하학적인 그래픽 표현이 가능합니다.</li>
+                        <li>벡터 방식이기 때문에 확대하거나 축소가 가능합니다.</li>
+                        <li>DOM 단위로 컨트롤이 가능하지만 문서 복잡도가 증가되면 렌더링이 느려집니다.</li>
+                    </ul>
+                </div>
+                <!-- //Intro0 -->
+                <style>
+                    .svgBox {
+                        padding: 40px;
+                        background-color: #2d2d2d;
+                        border-bottom-left-radius: 20px;
+                        border-bottom-right-radius: 20px;
+                    }
+                    .svgBox svg {
+                        width: 160px;
+                        height: 160px;
+                        background: #e3f3fd;
+                        margin: 6px;
+                        border-radius: 30px;
+                    }
+                </style>
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">사각형(rect)</h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">svg</em></h3>
+                        <div class="svgBox svg1">
+                            <svg>
+                                <rect width="100" height="100" fill="#5A3FFF" x="30" y="30"></rect>
+                            </svg>
+                            <svg>
+                                <rect width="100" height="100" fill="#5A3FFF" x="30" y="30" stroke="#030A1A" stroke-width="5"></rect>
+                            </svg>
+                            <svg>
+                                <rect fill="#5A3FFF" width="100" height="100" x="30" y="30" rx="20" ry="20" />
+                            </svg>
+                            <svg>
+                                <rect fill="#5A3FFF" width="100" height="100" x="30" y="30" rx="20" ry="20" stroke="#030A1A" stroke-width="5" />
+                            </svg>
+                            <svg>
+                                <rect fill="#5A3FFF" width="100" height="100" x="30" y="30" rx="40" ry="40" />
+                            </svg>
+                            <svg>
+                                <rect fill="#5A3FFF" width="100" height="100" x="30" y="30" rx="60" ry="60" stroke="#030A1A" stroke-width="5" />
+                            </svg>
+                        </div>
+                    </div>
+                    <pre class="line-numbers language-html"><code>&lt;div class="svgBox svg1"&gt;
+    &lt;svg&gt;
+        &lt;rect fill="#5A3FFF" width="100" height="100" x="30" y="30" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;rect fill="#5A3FFF" width="100" height="100" x="30" y="30" stroke="#030A1A" stroke-width="5" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;rect fill="#5A3FFF" width="100" height="100" x="30" y="30" rx="20" ry="20" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;rect fill="#5A3FFF" width="100" height="100" x="30" y="30" rx="20" ry="20" stroke="#030A1A" stroke-width="5" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;rect fill="#5A3FFF" width="100" height="100" x="30" y="30" rx="40" ry="40" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;rect fill="#5A3FFF" width="100" height="100" x="30" y="30" rx="60" ry="60" stroke="#030A1A" stroke-width="5" /&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+                <!-- //Intro1 -->
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">원형(circle, ellipse)</h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">svg</em></h3>
+                        <div class="svgBox svg2">
+                            <svg>
+                                <circle fill="#5A3FFF" r="60" cx="80" cy="80" />
+                            </svg>
+                            <svg>
+                                <circle fill="#5A3FFF" r="60" cx="80" cy="80" stroke="#030A1A" stroke-width="5" />
+                            </svg>
+                            <svg>
+                                <ellipse fill="#5A3FFF" rx="60" ry="40" cx="80" cy="80" />
+                            </svg>
+                            <svg>
+                                <ellipse fill="#5A3FFF" rx="60" ry="40" cx="80" cy="80" stroke="#030A1A" stroke-width="5" />
+                            </svg>
+                            <svg>
+                                <ellipse fill="#5A3FFF" rx="40" ry="60" cx="80" cy="80" />
+                            </svg>
+                            <svg>
+                                <ellipse fill="#5A3FFF" rx="40" ry="60" cx="80" cy="80" stroke="#030A1A" stroke-width="5" />
+                            </svg>
+                        </div>
+                    </div>
+                    <pre class="line-numbers language-html"><code>&lt;div class="svgBox svg1"&gt;
+    &lt;svg&gt;
+        &lt;circle fill="#5A3FFF" r="60" cx="80" cy="80" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;circle fill="#5A3FFF" r="60" cx="80" cy="80" stroke="#030A1A" stroke-width="5" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;ellipse fill="#5A3FFF" rx="60" ry="40" cx="80" cy="80" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;ellipse fill="#5A3FFF" rx="60" ry="40" cx="80" cy="80" stroke="#030A1A" stroke-width="5" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;ellipse fill="#5A3FFF" rx="40" ry="60" cx="80" cy="80" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;ellipse fill="#5A3FFF" rx="40" ry="60" cx="80" cy="80" stroke="#030A1A" stroke-width="5" /&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+                <!-- //Intro2 -->
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">다각형(polygon)</h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">svg</em></h3>
+                        <div class="svgBox svg3">
+                            <svg>
+                                <polygon points="136,141 10,101 108,12" fill="#5A3FFF" />
+                            </svg>
+                            <svg>
+                                <polygon points="121,131 56,140 15,89 39,27 104,18 145,70" fill="#5A3FFF" />
+                            </svg>
+                            <svg>
+                                <polygon points="115,134 71,144 30,124 12,82 26,39 64,14 108,20 139,53 142,98" fill="#5A3FFF" />
+                            </svg>
+                            <svg>
+                                <polygon points="133,129 87,115 50,144 49,96 9,70 54,54 67,8 96,47 144,45 116,84" fill="#5A3FFF" />
+                            </svg>
+                            <svg>
+                                <polygon points="128,130 94,111 88,149 73,114 45,141 53,104 15,110 44,84 10,66 48,62 30,28 64,47 70,9 85,45 113,17 105,55 143,49 114,75 148,92 110,96" fill="#5A3FFF" />
+                            </svg>
+                            <svg>
+                                <polygon
+                                    points="80,8.15 81.84,70.37 106.02,13.02 85.26,71.69 128.53,26.96 87.98,74.17 144.49,48.08 89.62,77.46
+                                    151.73,73.55 89.96,81.12 149.29,99.91 88.95,84.65 137.49,123.61 86.74,87.59 117.93,141.45 83.61,89.52 93.24,151.01 80,90.2
+                                    66.76,151.01 76.39,89.52 42.07,141.45 73.26,87.59 22.51,123.61 71.05,84.65 10.71,99.91 70.04,81.12 8.27,73.55 70.38,77.46
+                                    15.51,48.08 72.02,74.17 31.47,26.96 74.74,71.69 53.98,13.02 78.16,70.37"
+                                    fill="#5A3FFF"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                    <pre class="line-numbers language-html"><code>&lt;div class="svgBox svg3"&gt;
+    &lt;svg&gt;
+        &lt;polygon points="136,141 10,101 108,12" fill="#5A3FFF" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;polygon points="121,131 56,140 15,89 39,27 104,18 145,70" fill="#5A3FFF"/&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;polygon points="115,134 71,144 30,124 12,82 26,39 64,14 108,20 139,53 142,98" fill="#5A3FFF" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;polygon points="133,129 87,115 50,144 49,96 9,70 54,54 67,8 96,47 144,45 116,84" fill="#5A3FFF" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;polygon points="128,130 94,111 88,149 73,114 45,141 53,104 15,110 44,84 10,66 48,62 30,28 64,47 70,9 85,45 113,17 105,55 143,49 114,75 148,92 110,96" fill="#5A3FFF" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;polygon points="80,8.15 81.84,70.37 106.02,13.02 85.26,71.69 128.53,26.96 87.98,74.17 144.49,48.08 89.62,77.46
+        151.73,73.55 89.96,81.12 149.29,99.91 88.95,84.65 137.49,123.61 86.74,87.59 117.93,141.45 83.61,89.52 93.24,151.01 80,90.2
+        66.76,151.01 76.39,89.52 42.07,141.45 73.26,87.59 22.51,123.61 71.05,84.65 10.71,99.91 70.04,81.12 8.27,73.55 70.38,77.46
+        15.51,48.08 72.02,74.17 31.47,26.96 74.74,71.69 53.98,13.02 78.16,70.37" fill="#5A3FFF" /&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+                <!-- //Intro3 -->
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">패스(path)</h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">svg</em></h3>
+                        <div class="svgBox svg4">
+                            <svg class="svg">
+                                <path fill="none" stroke="#0D47A1" stroke-width="2" d="M7,154.667c0-82.358,65.152-149,145.667-149" />
+                            </svg>
+                            <svg class="svg">
+                                <path
+                                    fill="none"
+                                    stroke="#0D47A1"
+                                    stroke-width="2"
+                                    d="M151.534,123.547c-33.711,33.711-88.369,33.711-122.08,0
+                                    c-26.97-26.969-26.97-70.695,0-97.665c21.575-21.576,56.556-21.576,78.131,0c17.261,17.26,17.261,45.245,0.001,62.504
+                                    c-13.809,13.809-36.196,13.809-50.005,0c-11.046-11.046-11.046-28.956,0-40.002c8.837-8.837,23.166-8.837,32.003,0
+                                    c7.069,7.07,7.07,18.532,0,25.602c-5.656,5.657-14.826,5.657-20.482,0c-4.524-4.524-4.524-11.86,0-16.385"
+                                />
+                            </svg>
+                            <svg class="svg">
+                                <path
+                                    fill="none"
+                                    stroke="#0D47A1"
+                                    stroke-width="2"
+                                    d="M82.671,81.243c50.565,48.259,14.182,69.191-2.135,1.229
+                                    c16.316,67.962-25.611,65.895-2.46-0.122c-23.151,66.017-57.304,41.617-2.004-1.432c-55.3,43.049-70.84,4.057-0.912-2.288
+                                    c-69.929,6.345-61.919-34.86,0.47-2.417c-62.389-32.442-33.374-62.777,1.703-1.78c-35.076-60.997,5.73-70.826,2.395-0.577
+                                    c3.335-70.249,42.981-56.458,2.326,0.81c40.655-57.268,66.554-24.232,1.521,1.938c65.033-26.17,68.953,15.62,0.23,2.452
+                                    C152.526,92.225,133.236,129.502,82.671,81.243z"
+                                />
+                            </svg>
+                            <svg class="svg">
+                                <path
+                                    fill="none"
+                                    stroke="#0D47A1"
+                                    stroke-width="2"
+                                    d="M131.502,129.683c-44.4-42.871-49.621-39.867-34.943,20.102
+                                    c-14.678-59.969-20.694-60.265-40.261-1.983c19.566-58.281,14.666-61.783-32.799-23.436C70.963,86.018,68.733,80.421,8.573,86.918
+                                    c60.16-6.497,61.31-12.409,7.692-39.569c53.617,27.16,57.781,22.808,27.864-29.131c29.917,51.938,35.772,50.527,39.189-9.441
+                                    c-3.417,59.969,2.272,61.948,38.075,13.245c-35.803,48.703-32.086,53.443,24.869,31.726C89.308,75.465,89.87,81.462,150.03,93.884
+                                    C89.87,81.462,87.102,86.812,131.502,129.683z"
+                                />
+                            </svg>
+                            <svg class="svg">
+                                <path
+                                    fill="none"
+                                    stroke="#0D47A1"
+                                    stroke-width="2"
+                                    d="M58.665,139.312c0-6.873,42-6.873,42-13.747s-42-6.874-42-13.748
+                                    s42-6.874,42-13.748c0-6.872-42-6.872-42-13.744c0-6.874,42-6.874,42-13.747c0-6.877-42-6.877-42-13.753
+                                    c0-6.874,42-6.874,42-13.748c0-6.878-42-6.878-42-13.757s42-6.879,42-13.758"
+                                />
+                            </svg>
+                            <svg class="svg">
+                                <path
+                                    fill="none"
+                                    stroke="#0D47A1"
+                                    stroke-width="2"
+                                    d="M93.108,91.478c42.049,30.58-13.048,57.425-13.347,6.503
+                                    c0.299,50.922-55.041,24.58-13.405-6.381c-41.636,30.961-55.545-28.728-3.37-14.458c-52.176-14.27-14.181-62.359,9.204-11.649
+                                    c-23.385-50.71,37.901-50.989,14.846-0.067c23.055-50.922,61.484-3.179,9.309,11.565C148.521,62.245,135.157,122.058,93.108,91.478
+                                    z"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                    <pre class="line-numbers language-html"><code>&lt;div class="svgBox svg3"&gt;
+    &lt;svg class="svg"&gt;
+        &lt;path fill="none" stroke="#0D47A1" stroke-width="2" d="M7,154.667c0-82.358,65.152-149,145.667-149"/&gt;
+    &lt;/svg&gt;
+    &lt;svg class="svg"&gt;
+        &lt;path fill="none" stroke="#0D47A1" stroke-width="2" d="M151.534,123.547c-33.711,33.711-88.369,33.711-122.08,0
+        c-26.97-26.969-26.97-70.695,0-97.665c21.575-21.576,56.556-21.576,78.131,0c17.261,17.26,17.261,45.245,0.001,62.504
+        c-13.809,13.809-36.196,13.809-50.005,0c-11.046-11.046-11.046-28.956,0-40.002c8.837-8.837,23.166-8.837,32.003,0
+        c7.069,7.07,7.07,18.532,0,25.602c-5.656,5.657-14.826,5.657-20.482,0c-4.524-4.524-4.524-11.86,0-16.385"/&gt;
+    &lt;/svg&gt;
+    &lt;svg class="svg"&gt;
+        &lt;path fill="none" stroke="#0D47A1" stroke-width="2" d="M82.671,81.243c50.565,48.259,14.182,69.191-2.135,1.229
+        c16.316,67.962-25.611,65.895-2.46-0.122c-23.151,66.017-57.304,41.617-2.004-1.432c-55.3,43.049-70.84,4.057-0.912-2.288
+        c-69.929,6.345-61.919-34.86,0.47-2.417c-62.389-32.442-33.374-62.777,1.703-1.78c-35.076-60.997,5.73-70.826,2.395-0.577
+        c3.335-70.249,42.981-56.458,2.326,0.81c40.655-57.268,66.554-24.232,1.521,1.938c65.033-26.17,68.953,15.62,0.23,2.452
+        C152.526,92.225,133.236,129.502,82.671,81.243z"/&gt;
+    &lt;/svg&gt;
+    &lt;svg class="svg"&gt;
+        &lt;path fill="none" stroke="#0D47A1" stroke-width="2" d="M131.502,129.683c-44.4-42.871-49.621-39.867-34.943,20.102
+        c-14.678-59.969-20.694-60.265-40.261-1.983c19.566-58.281,14.666-61.783-32.799-23.436C70.963,86.018,68.733,80.421,8.573,86.918
+        c60.16-6.497,61.31-12.409,7.692-39.569c53.617,27.16,57.781,22.808,27.864-29.131c29.917,51.938,35.772,50.527,39.189-9.441
+        c-3.417,59.969,2.272,61.948,38.075,13.245c-35.803,48.703-32.086,53.443,24.869,31.726C89.308,75.465,89.87,81.462,150.03,93.884
+        C89.87,81.462,87.102,86.812,131.502,129.683z"/&gt;
+    &lt;/svg&gt;
+    &lt;svg class="svg"&gt;
+        &lt;path fill="none" stroke="#0D47A1" stroke-width="2" d="M58.665,139.312c0-6.873,42-6.873,42-13.747s-42-6.874-42-13.748
+        s42-6.874,42-13.748c0-6.872-42-6.872-42-13.744c0-6.874,42-6.874,42-13.747c0-6.877-42-6.877-42-13.753
+        c0-6.874,42-6.874,42-13.748c0-6.878-42-6.878-42-13.757s42-6.879,42-13.758"/&gt;
+    &lt;/svg&gt;
+    &lt;svg class="svg"&gt;
+        &lt;path fill="none" stroke="#0D47A1" stroke-width="2" d="M93.108,91.478c42.049,30.58-13.048,57.425-13.347,6.503
+        c0.299,50.922-55.041,24.58-13.405-6.381c-41.636,30.961-55.545-28.728-3.37-14.458c-52.176-14.27-14.181-62.359,9.204-11.649
+        c-23.385-50.71,37.901-50.989,14.846-0.067c23.055-50.922,61.484-3.179,9.309,11.565C148.521,62.245,135.157,122.058,93.108,91.478
+        z"/&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+                <!-- //Intro4 -->
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">라인(line, polyline)</h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">svg</em></h3>
+                        <div class="svgBox svg5">
+                            <svg style="background: #e3f3fd">
+                                <line x1="0" y1="0" x2="200" y2="200" stroke="#0D47A1" stroke-width="2" fill="none" />
+                            </svg>
+                            <svg style="background: #e3f3fd">
+                                <line x1="50" y1="50" x2="200" y2="200" stroke="#0D47A1" stroke-width="2" fill="none" />
+                            </svg>
+                            <svg style="background: #e3f3fd">
+                                <line x1="100" y1="100" x2="200" y2="200" stroke="#0D47A1" stroke-width="2" fill="none" />
+                            </svg>
+                            <svg style="background: #e3f3fd">
+                                <polyline points="21,17.2 21,139.2 117,52.2" stroke="#0D47A1" stroke-width="2" fill="none" />
+                            </svg>
+                            <svg style="background: #e3f3fd">
+                                <polyline points="21,17.2 21,139.2 122,28.2 141,139.2" stroke="#0D47A1" stroke-width="2" fill="none" />
+                            </svg>
+                            <svg style="background: #e3f3fd">
+                                <polyline points="21,17.2 21,139.2 122,28.2 141,139.2 23.5,11.7" stroke="#0D47A1" stroke-width="2" fill="none" />
+                            </svg>
+                        </div>
+                    </div>
+                    <pre class="line-numbers language-html"><code>&lt;div class="svgBox svg3"&gt;
+    &lt;svg&gt;
+        &lt;line x1="0" y1="0" x2="200" y2="200" stroke="#0D47A1" stroke-width="2" fill="none" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;line x1="50" y1="50" x2="200" y2="200" stroke="#0D47A1" stroke-width="2" fill="none" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;line x1="100" y1="100" x2="200" y2="200" stroke="#0D47A1" stroke-width="2" fill="none" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;polyline points="21,17.2 21,139.2 117,52.2" stroke="#0D47A1" stroke-width="2" fill="none" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;polyline points="21,17.2 21,139.2 122,28.2 141,139.2" stroke="#0D47A1" stroke-width="2" fill="none" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;polyline points="21,17.2 21,139.2 122,28.2 141,139.2 23.5,11.7" stroke="#0D47A1" stroke-width="2" fill="none" /&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+                <!-- //Intro5 -->
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">클리핑 마스크(Clip-path)</h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">svg</em></h3>
+                        <div class="svgBox svg6">
+                            <svg>
+                                <image xlink:href="img/bg.jpg" width="160" height="160"></image>
+                            </svg>
+                            <svg>
+                                <image xlink:href="img/bg.jpg" width="160" height="160" clip-path="circle(60px)"></image>
+                            </svg>
+                            <svg>
+                                <clipPath id="clipPath1">
+                                    <polygon points="136,141 10,101 108,12" />
+                                </clipPath>
+                                <image xlink:href="img/bg.jpg" width="160" height="160" clip-path="url(#clipPath1)"></image>
+                            </svg>
+                            <svg>
+                                <clipPath id="clipPath2">
+                                    <polygon points="121,131 56,140 15,89 39,27 104,18 145,70" />
+                                </clipPath>
+                                <image xlink:href="img/bg.jpg" width="160" height="160" clip-path="url(#clipPath2)"></image>
+                            </svg>
+                            <svg>
+                                <clipPath id="clipPath3">
+                                    <polygon points="121,131 56,140 15,89 39,27 104,18 145,70" />
+                                </clipPath>
+                                <image xlink:href="img/bg.jpg" width="160" height="160" clip-path="url(#clipPath3)"></image>
+                            </svg>
+                            <svg>
+                                <clipPath id="clipPath4">
+                                    <polygon points="128,130 94,111 88,149 73,114 45,141 53,104 15,110 44,84 10,66 48,62 30,28 64,47 70,9 85,45 113,17 105,55 143,49 114,75 148,92 110,96" />
+                                </clipPath>
+                                <image xlink:href="img/bg.jpg" width="160" height="160" clip-path="url(#clipPath4)"></image>
+                            </svg>
+                        </div>
+                    </div>
+                    <pre class="line-numbers language-html"><code>&lt;div class="svgBox svg3"&gt;
+    &lt;svg&gt;
+        &lt;image xlink:href="img/bg.jpg" width="160" height="160"&gt;&lt;/image&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;image xlink:href="img/bg.jpg" width="160" height="160" clip-path="circle(60px)"&gt;&lt;/image&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;clipPath id="clipPath1"&gt;
+            &lt;polygon points="136,141 10,101 108,12" /&gt;
+        &lt;/clipPath&gt;
+        &lt;image xlink:href="img/bg.jpg" width="160" height="160" clip-path="url(#clipPath1)"&gt;&lt;/image&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;clipPath id="clipPath2"&gt;
+            &lt;polygon points="121,131 56,140 15,89 39,27 104,18 145,70" /&gt;
+        &lt;/clipPath&gt;
+        &lt;image xlink:href="img/bg.jpg" width="160" height="160" clip-path="url(#clipPath2)"&gt;&lt;/image&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;clipPath id="clipPath3"&gt;
+            &lt;polygon points="121,131 56,140 15,89 39,27 104,18 145,70" /&gt;
+        &lt;/clipPath&gt;
+        &lt;image xlink:href="img/bg.jpg" width="160" height="160" clip-path="url(#clipPath3)"&gt;&lt;/image&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;clipPath id="clipPath4"&gt;
+            &lt;polygon points="128,130 94,111 88,149 73,114 45,141 53,104 15,110 44,84 10,66 48,62 30,28 64,47 70,9 85,45 113,17 105,55 143,49 114,75 148,92 110,96" /&gt;
+        &lt;/clipPath&gt;
+        &lt;image xlink:href="img/bg.jpg" width="160" height="160" clip-path="url(#clipPath4)"&gt;&lt;/image&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+                <!-- //Intro6 -->
+                <style>
+                    @font-face {
+                        font-family: "SCoreDream";
+                        font-weight: 900;
+                        font-style: normal;
+                        src: url("https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.eot");
+                        src: url("https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.ttf") format("truetype");
+                        font-display: swap;
+                    }
+                    .svg7 {
+                        display: flex;
+                    }
+                    .text-wrap {
+                        background-color: #e3f3fd;
+                        width: 160px;
+                        height: 160px;
+                        margin: 6px;
+                        display: inline-block;
+                        overflow: hidden;
+                        border-radius: 30px;
+                    }
+                    .text-clip {
+                        font-size: 70px;
+                        text-align: center;
+                        font-family: "sCoreDream";
+                        text-transform: uppercase;
+                        line-height: 170px;
+                        -webkit-text-fill-color: #0d47a1;
+                    }
+                    .text-clip.c2 {
+                        -webkit-text-fill-color: transparent;
+                        -webkit-background-clip: text;
+                        background-image: url(img/bg.jpg);
+                        background-size: 100%;
+                    }
+                    .text-clip.c3 {
+                        -webkit-text-fill-color: transparent;
+                        -webkit-background-clip: text;
+                        background-image: linear-gradient(60deg, #ff5858, #f09819);
+                    }
+                    .text-clip.c4 {
+                        -webkit-text-fill-color: transparent;
+                        -webkit-background-clip: text;
+                        -webkit-text-stroke: 2px #0d47a1;
+                    }
+                </style>
+                <!-- Intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">클리핑 마스크(Clip-path)</h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">svg</em></h3>
+                        <div class="svgBox svg7">
+                            <svg>
+                                <text fill="#614fe1" x="7" y="110" font-family="sCoreDream" font-size="70" font-weight="900">SVG</text>
+                            </svg>
+                            <svg>
+                                <pattern id="pattern1" patternunites="useSpaceOuUse" width="100%" height="100%">
+                                    <image xlink:href="img/bg.jpg" width="160" height="160" />
+                                </pattern>
+                                <text fill="url(#pattern1)" x="7" y="110" font-family="sCoreDream" font-size="70" font-weight="900">SVG</text>
+                            </svg>
+                            <div class="text-wrap">
+                                <div class="text-clip">SVG</div>
+                            </div>
+                            <div class="text-wrap">
+                                <div class="text-clip c2">SVG</div>
+                            </div>
+                            <div class="text-wrap">
+                                <div class="text-clip c3">SVG</div>
+                            </div>
+                            <div class="text-wrap">
+                                <div class="text-clip c4">SVG</div>
+                            </div>
+                        </div>
+                    </div>
+                    <pre class="line-numbers language-css"><code>@font-face {
+    font-family: "SCoreDream";
+    font-weight: 900;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.eot");
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.woff2") format("woff2"),
+      url("https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.ttf") format("truetype");
+    font-display: swap;
+}
+.svg7 {
+    display: flex;
+}
+.text-wrap {
+    background-color: #e3f3fd;
+    width: 160px;
+    height: 160px;
+    margin: 6px;
+    display: inline-block;
+    overflow: hidden;
+}
+.text-clip {
+    font-size: 70px;
+    text-align: center;
+    font-family: "sCoreDream";
+    text-transform: uppercase;
+    line-height: 170px;
+    -webkit-text-fill-color: #0d47a1;
+}
+.text-clip.c2 {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: url(img/bg.jpg);
+    background-size: 100%;
+}
+.text-clip.c3 {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(60deg, #ff5858, #f09819);
+}
+.text-clip.c4 {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 2px #0d47a1;
+}
+</code></pre>
+                    <pre class="line-numbers language-html"><code>&lt;div class="svgBox svg7"&gt;
+    &lt;svg&gt;
+        &lt;text fill="#614fe1" x="7" y="110" font-family="sCoreDream" font-size="70" font-weight="900"&gt;SVG&lt;/text&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;pattern id="pattern1" patternunites="useSpaceOuUse" width="100%" height="100%"&gt;
+            &lt;image xlink:href="img/bg.jpg" width="160" height="160" /&gt;
+        &lt;/pattern&gt;
+        &lt;text fill="url(#pattern1)" x="7" y="110" font-family="sCoreDream" font-size="70" font-weight="900"&gt;SVG&lt;/text&gt;
+    &lt;/svg&gt;
+    &lt;div class="text-wrap"&gt;
+        &lt;div class="text-clip"&gt;SVG&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text-wrap"&gt;
+        &lt;div class="text-clip c2"&gt;SVG&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text-wrap"&gt;
+        &lt;div class="text-clip c3"&gt;SVG&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="text-wrap"&gt;
+        &lt;div class="text-clip c4"&gt;SVG&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+                <!-- //Intro7 -->
+                <style>
+                    .anil {
+                        width: 100px;
+                        height: 100px;
+                        x: 30px;
+                        y: 30px;
+                        fill: none;
+                        stroke: #0d47a1;
+                        stroke-width: 2px;
+                        stroke-dasharray: 50;
+                        stroke-dashoffset: 50;
+                        animation: ani1 1s infinite linear alternate-reverse;
+                    }
+                    @keyframes ani1 {
+                        0% {
+                            stroke-dashoffset: 50;
+                        }
+                        100% {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+                    .ani2 {
+                        width: 100px;
+                        height: 100px;
+                        x: 30px;
+                        y: 30px;
+                        fill: none;
+                        stroke: #0d47a1;
+                        stroke-width: 2px;
+                        stroke-dasharray: 400;
+                        stroke-dashoffset: 400;
+                        animation: ani2 2s infinite linear alternate-reverse;
+                    }
+                    @keyframes ani2 {
+                        0% {
+                            stroke-dashoffset: 400;
+                        }
+                        100% {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+                    .ani3 {
+                        animation: ani3 1s infinite linear alternate-reverse;
+                        stroke-dasharray: 230px;
+                        stroke-dashoffset: 230px;
+                    }
+                    @keyframes ani3 {
+                        0% {
+                            stroke-dashoffset: 230px;
+                        }
+                        100% {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+                    .ani4 {
+                        animation: ani4 1s infinite linear alternate-reverse;
+                        stroke-dasharray: 605px;
+                        stroke-dashoffset: 605px;
+                    }
+                    @keyframes ani4 {
+                        0% {
+                            stroke-dashoffset: 605px;
+                        }
+                        100% {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+                    .ani5 {
+                        animation: ani5 1s infinite linear alternate-reverse;
+                        stroke-dasharray: 411px;
+                        stroke-dashoffset: 411px;
+                    }
+                    @keyframes ani5 {
+                        0% {
+                            stroke-dashoffset: 411px;
+                        }
+                        100% {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+                    .ani6 {
+                        animation: ani6 1s infinite linear alternate-reverse;
+                        stroke-dasharray: 614px;
+                        stroke-dashoffset: 614px;
+                    }
+                    @keyframes ani6 {
+                        0% {
+                            stroke-dashoffset: 614px;
+                        }
+                        100% {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+                </style>
+                <!-- Intro8 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro8" class="page-header">클리핑 마스크(Clip-path)</h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">svg</em></h3>
+                        <div class="svgBox svg8">
+                            <svg>
+                                <rect class="anil" />
+                            </svg>
+                            <svg>
+                                <rect class="ani2"></rect>
+                            </svg>
+                            <svg style="background: #e3f3fd">
+                                <path class="ani3" fill="none" stroke="#0D47A1" stroke-width="2" d="M7,154.667c0-82.358,65.152-149,145.667-149" />
+                            </svg>
+                            <svg style="background: #e3f3fd">
+                                <path
+                                    class="ani4"
+                                    fill="none"
+                                    stroke="#0D47A1"
+                                    stroke-width="2"
+                                    d="M151.534,123.547c-33.711,33.711-88.369,33.711-122.08,0
+                                    c-26.97-26.969-26.97-70.695,0-97.665c21.575-21.576,56.556-21.576,78.131,0c17.261,17.26,17.261,45.245,0.001,62.504
+                                    c-13.809,13.809-36.196,13.809-50.005,0c-11.046-11.046-11.046-28.956,0-40.002c8.837-8.837,23.166-8.837,32.003,0
+                                    c7.069,7.07,7.07,18.532,0,25.602c-5.656,5.657-14.826,5.657-20.482,0c-4.524-4.524-4.524-11.86,0-16.385"
+                                />
+                            </svg>
+                            <svg style="background: #e3f3fd">
+                                <path
+                                    class="ani5"
+                                    fill="none"
+                                    stroke="#0D47A1"
+                                    stroke-width="2"
+                                    d="M58.665,139.312c0-6.873,42-6.873,42-13.747s-42-6.874-42-13.748
+                                    s42-6.874,42-13.748c0-6.872-42-6.872-42-13.744c0-6.874,42-6.874,42-13.747c0-6.877-42-6.877-42-13.753
+                                    c0-6.874,42-6.874,42-13.748c0-6.878-42-6.878-42-13.757s42-6.879,42-13.758"
+                                />
+                            </svg>
+                            <svg style="background: #e3f3fd">
+                                <path
+                                    class="ani6"
+                                    fill="none"
+                                    stroke="#0D47A1"
+                                    stroke-width="2"
+                                    d="M93.108,91.478c42.049,30.58-13.048,57.425-13.347,6.503
+                                    c0.299,50.922-55.041,24.58-13.405-6.381c-41.636,30.961-55.545-28.728-3.37-14.458c-52.176-14.27-14.181-62.359,9.204-11.649
+                                    c-23.385-50.71,37.901-50.989,14.846-0.067c23.055-50.922,61.484-3.179,9.309,11.565C148.521,62.245,135.157,122.058,93.108,91.478
+                                    z"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                    <pre class="line-numbers language-html"><code>&lt;div class="svgBox svg8"&gt;
+    &lt;svg&gt;
+        &lt;rect class="anil" /&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;rect class="ani2"&gt;&lt;/rect&gt;
+    &lt;/svg&gt;
+    &lt;svg style="background: #e3f3fd"&gt;
+        &lt;path class="ani3" fill="none" stroke="#0D47A1" stroke-width="2" d="M7,154.667c0-82.358,65.152-149,145.667-149" /&gt;
+    &lt;/svg&gt;
+    &lt;svg style="background: #e3f3fd"&gt;
+        &lt;path
+            class="ani4"
+            fill="none"
+            stroke="#0D47A1"
+            stroke-width="2"
+            d="M151.534,123.547c-33.711,33.711-88.369,33.711-122.08,0
+            c-26.97-26.969-26.97-70.695,0-97.665c21.575-21.576,56.556-21.576,78.131,0c17.261,17.26,17.261,45.245,0.001,62.504
+            c-13.809,13.809-36.196,13.809-50.005,0c-11.046-11.046-11.046-28.956,0-40.002c8.837-8.837,23.166-8.837,32.003,0
+            c7.069,7.07,7.07,18.532,0,25.602c-5.656,5.657-14.826,5.657-20.482,0c-4.524-4.524-4.524-11.86,0-16.385"
+        /&gt;
+    &lt;/svg&gt;
+    &lt;svg style="background: #e3f3fd"&gt;
+        &lt;path
+            class="ani5"
+            fill="none"
+            stroke="#0D47A1"
+            stroke-width="2"
+            d="M58.665,139.312c0-6.873,42-6.873,42-13.747s-42-6.874-42-13.748
+            s42-6.874,42-13.748c0-6.872-42-6.872-42-13.744c0-6.874,42-6.874,42-13.747c0-6.877-42-6.877-42-13.753
+            c0-6.874,42-6.874,42-13.748c0-6.878-42-6.878-42-13.757s42-6.879,42-13.758"
+        /&gt;
+    &lt;/svg&gt;
+    &lt;svg style="background: #e3f3fd"&gt;
+        &lt;path
+            class="ani6"
+            fill="none"
+            stroke="#0D47A1"
+            stroke-width="2"
+            d="M93.108,91.478c42.049,30.58-13.048,57.425-13.347,6.503
+            c0.299,50.922-55.041,24.58-13.405-6.381c-41.636,30.961-55.545-28.728-3.37-14.458c-52.176-14.27-14.181-62.359,9.204-11.649
+            c-23.385-50.71,37.901-50.989,14.846-0.067c23.055-50.922,61.484-3.179,9.309,11.565C148.521,62.245,135.157,122.058,93.108,91.478
+            z"
+        /&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                    <iframe height="400" style="width: 100%" scrolling="no" title="Text Animation" src="https://codepen.io/hmm365/embed/jOxbmON?default-tab=result&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"> See the Pen <a href="https://codepen.io/hmm365/pen/jOxbmON"> Text Animation</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>) on <a href="https://codepen.io">CodePen</a>. </iframe>
+                </div>
+                <!-- //Intro8 -->
+                <!-- //col-md-12 -->
+            </div>
+            <!-- //row -->
+        </div>
+        <!-- //container -->
+        <!-- Footer -->
+        <footer class="bs-footer" role="contentinfo">
+            <div class="container">
+                <ul class="footer-links muted">
+                    <li>Currently v2.0</li>
+                    <li>&middot;</li>
+                    <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
+                    <li>&middot;</li>
+                    <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                    <li>&middot;</li>
+                    <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- //Footer -->
+        <!-- Bootstrap core JavaScript -->
+        <script src="../assets/js/jquery-1.9.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/docs.min.js"></script>
+        <script src="../assets/js/prism.js"></script>
+    </body>
+</html>

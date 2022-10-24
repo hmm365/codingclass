@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 관련 메서드</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+
+<body>
+    <main id="main">
+        <div class="document">
+            <h3 class="t_tit2">attr()관련 메서드</h3>
+            <p class="t_desc">선택한 요소의 attribute(속성)를 선택, 생성, 변경할 수 있습니다.</p>
+            <table class="t_table">
+                <colgroup>
+                    <col style="width: 30%">
+                    <col style="width: 70%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>실행 분류</th>
+                        <th>형식</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">취득</td>
+                        <td>$("a").attr("href");</td>
+                    </tr>
+                    <tr>
+                        <td class="ce" rowspan="2">생성, 변경</td>
+                        <td>$("a").attr("href", "http://icoxpublish.com").attr("target", "_blank");</td>
+                    </tr>
+                    <tr>
+                        <td>$("a").attr({"href": "http://icoxpublish.com", target:"_blank"});</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">콜백 함수</td>
+                        <td>$("a").attr("href", function(index, h){ <br>
+                            //index는 각 a 요소의 index 0, 1, 2 <br>
+                            //h는 각 a 요소 href 속성1 <br>return attribute(속성) // 각 a 요소의 속성을 생성 및 변경합니다. <br>
+                            }); <br>
+                            ... <br>
+                            &lt;a title="새창" href="http://www.daum.net" target="_blank" rel="noopener"&gt;다음&lt;/a&gt;
+                            &lt;a title="새창" href="http://www.naver.com" target="_blank" rel="noopener"&gt;네이버&lt;/a&gt;
+                            &lt;a title="새창" href="http://www.nate.net" target="_blank" rel="noopener"&gt;네이트&lt;/a&gt;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="t_tit2">예시</h3>
+            <div class="t_iframe">
+                <iframe height="450" style="width: 100%;" scrolling="no" title="jquery17"
+                    src="https://codepen.io/hmm365/embed/vYjEyLM?default-tab=js%2Cresult&theme-id=dark" frameborder="no"
+                    loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/hmm365/pen/vYjEyLM">
+                        jquery17</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+            </div>
+            <hr>
+            <h3 class="t_tit2">prop()관련 메서드</h3>
+            <p class="t_desc">prop()는 자바스크립트 property(프로퍼티)에 관련된 메서드입니다.<br>
+                 prop() 메서드는 요소의 속성을 true, false로 제어할 수 있습니다.</p>
+            <table class="t_table">
+                <colgroup>
+                    <col style="width: 30%">
+                    <col style="width: 70%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>실행 분류</th>
+                        <th>형식</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">추가</td>
+                        <td>$("div").removeClass(클래스명);</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">콜백 함수</td>
+                        <td>$("div").removeClass(function)index, className){<br>
+                            //index는 각 div 요소의 0, 1, 2 //className은 각 div의 class 속성 <br>
+                            m1, m2, m3 return class 속성 // 각 div에 class 속성을 제거합니다. )}<br>
+                            &lt;div class="m1&gt;내용1&lt;/div&gt;<br>
+                            &lt;div class="m2&gt;내용2&lt;/div&gt;<br>
+                            &lt;div class="m3&gt;내용3&lt;/div&gt;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="t_tit2">예시</h3>
+            <div class="t_iframe">
+                <iframe height="450" style="width: 100%;" scrolling="no" title="Untitled"
+                    src="https://codepen.io/hmm365/embed/NWMPRQG?default-tab=js%2Cresult&theme-id=dark" frameborder="no"
+                    loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/hmm365/pen/NWMPRQG">
+                        Untitled</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+            </div>
+            <hr>
+            <h3 class="t_tit2">hasclass()관련 메서드</h3>
+            <p class="t_desc">if문의 조건식으로 사용됩니다. 선택한 요소 클래스가 있으면 true, 없으면 false를 반환합니다.</p>
+            <h3 class="t_tit2">예시</h3>
+            <div class="t_iframe">
+                <iframe height="450" style="width: 100%;" scrolling="no" title="jquery18" src="https://codepen.io/hmm365/embed/MWGYbev?default-tab=js%2Cresult&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/hmm365/pen/MWGYbev">
+                    jquery18</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

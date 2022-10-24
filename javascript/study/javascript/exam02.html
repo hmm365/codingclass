@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>spread operator</title>
+        <link rel="stylesheet" href="../../assets/css/style.css" />
+        <link rel="stylesheet" href="../../assets/css/dracula.css" />
+        <script src="../../assets/js/highlight.min.js"></script>
+    </head>
+
+    <body>
+        <!-- //header -->
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit2">배열 매서드 응용2</h2>
+                <p class="t_desc2">
+                    배열 매서드를 응용 해보았습니다.<br />
+                    배열 ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"] 을 이용하여,<br />
+                    b,d,f,h,k 만 출력하게했습니다.
+                </p>
+                <hr />
+                <h3 class="t_tit2">매서드 응용</h3>
+                <div class="t_code">
+                    <pre><code class="language-js"> const num1 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+let result1 = num1
+    .map((e, i) => {
+        if ((i + 1) % 2 == 0) return e;
+    })
+    .filter((e) => e != null);
+console.log(result1.join());
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result01"></div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //result01 -->
+                <div class="t_code">
+                    <pre><code class="language-js">const num2 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+let result2 = [];
+for (i = 0; i &lt; num2.length; i++) {
+    if ((i + 1) % 2 == 0) result2 += num2.slice(i, i + 1);
+}
+console.log(result2.split("").join());
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result02"></div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //result02 -->
+                <div class="t_code">
+                    <pre><code class="language-js">const num3 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+let result3 = num3.filter((el) => el === "b" || el === "d" || el === "f" || el === "h" || el === "k");
+console.log(result3.join());
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result03"></div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //result03 -->
+                <div class="t_code">
+                    <pre><code class="language-js">const num4 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+let result4 = [];
+num4.forEach((el, i) => {
+    if ((i + 1) % 2 == 0) result4 += num4[i];
+});
+console.log(result4.split("").join());
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result04"></div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //result04 -->
+                <div class="t_code">
+                    <pre><code class="language-js">const num5 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+let result5 = num5.join("").match(/[b || d || f || h || k]/g);
+console.log(result5.join());
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result05"></div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //result05 -->
+                <div class="t_code">
+                    <pre><code class="language-js">const num6 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+let result6 = num5
+    .join("")
+    .replace(/[a || c || e || g || i]/g, "")
+    .split("");
+console.log(result6.join());
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result06"></div>
+                        </details>
+                    </div>
+                </div>
+                <hr />
+                <!-- //result06 -->
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+
+        <script>
+            {
+                //b d f h k
+                const num1 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+                let result1 = num1
+                    .map((e, i) => {
+                        if ((i + 1) % 2 == 0) return e;
+                    })
+                    .filter((e) => e != null);
+                document.querySelector(".result01").innerText = result1.join();
+
+                const num2 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+                let result2 = [];
+                for (i = 0; i < num2.length; i++) {
+                    if ((i + 1) % 2 == 0) result2 += num2.slice(i, i + 1);
+                }
+                document.querySelector(".result02").innerText = result2.split("").join();
+
+                const num3 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+                let result3 = num3.filter((el) => el === "b" || el === "d" || el === "f" || el === "h" || el === "k");
+                document.querySelector(".result03").innerText = result3.join();
+
+                const num4 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+                let result4 = [];
+                num4.forEach((el, i) => {
+                    if ((i + 1) % 2 == 0) result4 += num4[i];
+                });
+                document.querySelector(".result04").innerText = result4.split("").join();
+
+                const num5 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+                let result5 = num5.join("").match(/[b || d || f || h || k]/g);
+                document.querySelector(".result05").innerText = result5.join();
+
+                const num6 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+                let result6 = num5
+                    .join("")
+                    .replace(/[a || c || e || g || i]/g, "")
+                    .split("");
+                document.querySelector(".result06").innerText = result6.join();
+            }
+        </script>
+    </body>
+</html>

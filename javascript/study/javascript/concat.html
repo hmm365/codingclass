@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>repeat</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">concat() : 펼침연산자</h2>
+                <p class="t_desc2">concat() 매서드는 배열요소를 결합시킵니다.</p>
+                <div class="t_table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col style="width: 32%" />
+                            <col style="width: 32%" />
+                            <col style="width: 32%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="smple06_N1"></td>
+                                <td class="smple06_Q1"></td>
+                                <td class="smple06_M1"></td>
+                                <td class="smple06_P1"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple06_N2"></td>
+                                <td class="smple06_Q2"></td>
+                                <td class="smple06_M2"></td>
+                                <td class="smple06_P2"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="t_code">
+                    <pre><code class="language-js">//01
+const arrNum1 = [100, 200, 300];
+const arrNum2 = [400, 500, 600];
+const arrConcat = arrNum1.concat(arrNum2);
+//02
+const arrSpered = [...arrNum1, ...arrNum2];
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script>
+            {
+                const arrNum1 = [100, 200, 300];
+                const arrNum2 = [400, 500, 600];
+                const arrConcat = arrNum1.concat(arrNum2);
+
+                document.querySelector(".smple06_N1").innerHTML = "1";
+                document.querySelector(".smple06_Q1").innerHTML = "[100, 200, 300], [400, 500, 600]";
+                document.querySelector(".smple06_M1").innerHTML = "arrNum1.concat(arrNum2)";
+                document.querySelector(".smple06_P1").innerHTML = arrConcat;
+
+                const arrSpered = [...arrNum1, ...arrNum2];
+
+                document.querySelector(".smple06_N2").innerHTML = "2";
+                document.querySelector(".smple06_Q2").innerHTML = "[100, 200, 300], [400, 500, 600]";
+                document.querySelector(".smple06_M2").innerHTML = "arrSpered = [...arrNum1, ...arrNum2]";
+                document.querySelector(".smple06_P2").innerHTML = arrSpered;
+            }
+        </script>
+    </body>
+</html>

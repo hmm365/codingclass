@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>css애니</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">애니메이션 만들기</h2>
+                <h3 class="t_tit2">애니메이션 : 움직이는 사진</h3>
+                <p class="t_box">움직이는 사진을 만들어 봅시다.</p>
+                <div class="t_code">
+                    <pre><code class="language-css">@font-face {
+    font-family: 'LocusSangsang';
+    font-weight: normal;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/locus/LocusSangsang.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/locus/LocusSangsang.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/locus/LocusSangsang.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/locus/LocusSangsang.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/locus/LocusSangsang.ttf') format("truetype");
+    font-display: swap;
+}
+body {
+  font-family: "LocusSangsang";
+  background-image: linear-gradient(135deg, #191970 0%, #483D8B 40%, #9370DB 100%);
+  height: 100vh;
+}
+.hover__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.hover__wrap &gt; div {
+  max-width: 400px;
+  margin: 3%;
+  position: relative;
+  perspective: 500px;
+}
+.hover__wrap &gt; div img {
+  max-width: 100%;
+  border: 10px solid #f0f8FF;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  vertical-align:top;
+}
+
+.hover__wrap &gt; div .front,
+.hover__wrap &gt; div .front{
+  transition: transform 1s;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+.hover__wrap &gt; div .back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: transform 1s;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.hover__wrap &gt; div figcaption {
+  background: rgba(0,0,0,0.4);
+  color: #f8f8ff;
+  padding: 10px;
+  line-height: 1.5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translatez(100px);
+  width: 60%;
+  backface-visibility: hidden;
+}
+
+/* mouse hover effect */
+.hover__updown .front {
+  transform: rotateY(0deg);
+}
+
+.hover__updown:hover .front {
+  transform: rotateX(180deg);
+}
+
+.hover__updown .back {
+  transform: rotateX(-180deg);
+}
+.hover__updown:hover .back {
+  transform: rotateX(0deg);
+  z-index: 1;
+}
+.hover__leftright .front {
+  transform: rotateY(0deg);
+}
+
+.hover__leftright:hover .front {
+  transform: rotateY(180deg);
+}
+
+.hover__leftright .back {
+  transform: rotateY(-180deg);
+}
+.hover__leftright:hover .back {
+  transform: rotateY(0deg);
+  z-index: 1;
+}
+    </code></pre>
+                </div>
+                <iframe height="400" style="width: 100%" scrolling="no" title="cssani4" src="https://codepen.io/hmm365/embed/poVwEWm?default-tab=result&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/hmm365/pen/poVwEWm"> cssani4</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>) on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+    </body>
+</html>

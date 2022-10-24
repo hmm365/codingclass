@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바스크립트 이펙트</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <!-- //header -->
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">이미지 좌우로 움직이기</h2>
+                <p class="t_desc2">
+                    이번 슬라이더 이펙트는 slider__inner 클래스 div 을 만들어서 img의 width * 갯수 로하여서 전체 width값을 잡아줍니다. <br />
+                    또한 상위 slider__img 를 이용해 overflow: hidden; 을 주어서 넘치는 영역을 안보이게합니다. <br />
+                    js를 이용하여 sliderInner.style.transition = "all 0.6s" 을 주어서 애니메이션 효과를 넣고 <br />
+                    setInterval 이용하여 slider__inner 의 위치를 img의 width 값에 맞게 변경해줍니다. <br />
+                    그리고 다시 첫번째로 자연스럽게 가기위해서 마지막 이미지를 다시 첫번째로 한 후 <br />
+                    setTimeout 을이용하여 자연스럽게 만들어줍니다.<br />
+                    또한 Gasp 와 jquery 를이용하여 만들어봤으니 자세한 내용은 아래에있는 소스보기를 통하여 봐주시면되겠습니다.
+                </p>
+                <div class="t_iframe" style="min-height: 450px">
+                    <iframe src="https://hmm365.github.io/coding2/javascript/effect/sliderEffect03.html"></iframe>
+                </div>
+                <div class="t_link">
+                    <a href="https://github.com/hmm365/coding2/blob/main/javascript/effect/sliderEffect03.html">원본 소스 보기</a>
+                    <a href="https://hmm365.github.io/coding2/javascript/effect/sliderEffect03.html">원본 사이트 보기</a>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>페럴럭스이펙트7</title>
+        <link rel="stylesheet" href="../assets/css/arta.css" />
+        <link rel="stylesheet" href="../assets/css/parallax.css" />
+        <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet" />
+        <script src="../assets/js/highlight.min.js"></script>
+        <style>
+            #parallax__cont {
+                max-width: 1600px;
+                width: 98%;
+                margin: 0 auto;
+                /* background-color: rgba(0, 0, 0, 0.4); */
+            }
+            .content__item {
+                width: 1000px;
+                max-width: 70vw;
+                margin: 30vw auto;
+                /* background-color: rgba(255, 255, 255, 0.5); */
+                text-align: left;
+                margin-right: 0;
+                padding-top: 15vw;
+                position: relative;
+            }
+            .content__item:nth-child(even) {
+                margin-left: 0;
+                text-align: right;
+            }
+            .content__item__num {
+                font-size: 35vw;
+                font-family: "Lato";
+                font-weight: 100;
+                left: -5vw;
+                top: -8vw;
+                opacity: 0.7;
+                position: absolute;
+                z-index: -2;
+            }
+            .content__item:nth-child(even) .content__item__num {
+                left: auto;
+                right: -5vw;
+            }
+            .content__item__title {
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+            .content__item__imgWrap {
+                position: relative;
+                width: 100%;
+                padding-bottom: 56.25%;
+                /* background: #000; */
+                overflow: hidden;
+                z-index: -1;
+            }
+            .content__item__img {
+                position: absolute;
+                background: url(../assets/img/effect_bg11.jpg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                width: 110%;
+                height: 110%;
+                left: -5%;
+                top: -5%;
+                filter: saturate(0%);
+                /* transition: all 1s; */
+            }
+            .content__item:nth-child(1) .content__item__img {
+                background-image: url(../assets/img/effect_bg12.jpg);
+            }
+            .content__item:nth-child(2) .content__item__img {
+                background-image: url(../assets/img/effect_bg13.jpg);
+            }
+            .content__item:nth-child(3) .content__item__img {
+                background-image: url(../assets/img/effect_bg14.jpg);
+            }
+            .content__item:nth-child(4) .content__item__img {
+                background-image: url(../assets/img/effect_bg15.jpg);
+            }
+            .content__item:nth-child(5) .content__item__img {
+                background-image: url(../assets/img/effect_bg16.jpg);
+            }
+            .content__item:nth-child(6) .content__item__img {
+                background-image: url(../assets/img/effect_bg17.jpg);
+            }
+            .content__item:nth-child(7) .content__item__img {
+                background-image: url(../assets/img/effect_bg18.jpg);
+            }
+            .content__item:nth-child(8) .content__item__img {
+                background-image: url(../assets/img/effect_bg19.jpg);
+            }
+            .content__item:nth-child(9) .content__item__img {
+                background-image: url(../assets/img/effect_bg20.jpg);
+            }
+            .content__item__desc {
+                font-size: 4vw;
+                line-height: 1.4;
+                margin-top: -5vw;
+                margin-left: 4vw;
+                word-break: keep-all;
+            }
+            .content__item:nth-child(even) .content__item__desc {
+                margin-left: auto;
+                margin-right: -4vw;
+            }
+
+            @media (max-width: 800px) {
+                #parallax__cont {
+                    margin-top: 50vw;
+                }
+            }
+
+            #parallax__info {
+                position: fixed;
+                left: 20px;
+                bottom: 20px;
+                z-index: 2000;
+                background: rgba(0, 0, 0, 0.6);
+                color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+            }
+            #parallax__info .info li,
+            .scrollTop {
+                line-height: 1.4;
+            }
+
+            /* option */
+            .reveal > div {
+                opacity: 0;
+            }
+
+            .reveal.show > div {
+                animation: opacity 1s linear forwards;
+            }
+
+            .reveal {
+                position: relative;
+            }
+            .reveal > span {
+                opacity: 0;
+            }
+            .reveal.show > span {
+                animation: opacity 1s linear forwards;
+            }
+
+            .reveal::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 0;
+                height: 100%;
+                background: #fff;
+                z-index: 1;
+            }
+
+            .reveal.reveal-TWO::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                left: 0;
+                top: 0;
+                width: 0;
+                height: 100%;
+                z-index: 1;
+                background-color: orange;
+            }
+
+            .reveal.show::before {
+                animation: reveal 1s;
+            }
+
+            .reveal.reveal-RTL.show::before {
+                animation: reveal-RTL 1s;
+            }
+
+            .reveal.reveal-TTB.show::before {
+                animation: reveal-TTB 1s;
+            }
+
+            .reveal.reveal-BTT.show::before {
+                animation: reveal-BTT 1s;
+            }
+
+            /* 2개 */
+            .reveal.reveal-TWO.show::after {
+                animation: reveal 1s 0.3s;
+            }
+
+            .reveal.reveal-RTL.show::after {
+                animation: reveal-RTL 1s 0.3s;
+            }
+
+            .reveal.reveal-TTB.show::after {
+                animation: reveal-TTB 1s 0.3s;
+            }
+
+            .reveal.reveal-BTT.show::after {
+                animation: reveal-BTT 1s 0.3s;
+            }
+
+            @keyframes opacity {
+                0% {
+                    opacity: 0;
+                }
+
+                60% {
+                    opacity: 0;
+                }
+
+                70% {
+                    opacity: 1;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes reveal {
+                0% {
+                    width: 0;
+                    left: 0;
+                }
+
+                50% {
+                    width: 100%;
+                    left: 0;
+                }
+
+                80% {
+                    width: 100%;
+                    left: 0;
+                }
+
+                100% {
+                    width: 0;
+                    left: 100%;
+                }
+            }
+
+            @keyframes reveal-RTL {
+                0% {
+                    width: 0;
+                    right: 0;
+                    left: auto;
+                }
+
+                50% {
+                    width: 100%;
+                    right: 0;
+                    left: auto;
+                }
+
+                80% {
+                    width: 100%;
+                    right: 0;
+                    left: auto;
+                }
+
+                100% {
+                    width: 0;
+                    right: 100%;
+                    left: auto;
+                }
+            }
+
+            @keyframes reveal-TTB {
+                0% {
+                    width: 100%;
+                    height: 0;
+                    top: 0;
+                }
+
+                50% {
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                }
+
+                80% {
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                }
+
+                100% {
+                    width: 100%;
+                    height: 0;
+                    top: 100%;
+                }
+            }
+
+            @keyframes reveal-BTT {
+                0% {
+                    width: 100%;
+                    height: 0;
+                    bottom: 0;
+                    top: auto;
+                }
+
+                50% {
+                    width: 100%;
+                    height: 100%;
+                    bottom: 0;
+                    top: auto;
+                }
+
+                80% {
+                    width: 100%;
+                    height: 100%;
+                    bottom: 0;
+                    top: auto;
+                }
+
+                100% {
+                    width: 100%;
+                    height: 0;
+                    bottom: 100%;
+                    top: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <h1><a href="parallaxEffect.html">parallaxEffect07</a></h1>
+            <p>페럴럭스 이펙트 - 리빌 효과</p>
+            <ul>
+                <li><a href="parallaxEffect01.html">1</a></li>
+                <li><a href="parallaxEffect02.html">2</a></li>
+                <li><a href="parallaxEffect03.html">3</a></li>
+                <li><a href="parallaxEffect04.html">4</a></li>
+                <li><a href="parallaxEffect05.html">5</a></li>
+                <li><a href="parallaxEffect06.html">6</a></li>
+                <li class="active"><a href="parallaxEffect07.html">7</a></li>
+            </ul>
+        </header>
+        <!-- //header -->
+
+        <main id="parallax__cont">
+            <div id="contents">
+                <section id="section1" class="content__item">
+                    <span class="content__item__num">01</span>
+                    <h2 class="content__item__title">section1</h2>
+                    <figure class="content__item__imgWrap reveal">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc reveal" data-delay="500"><span>내일은 내일의 태양이 뜬다.</span></p>
+                </section>
+                <!-- //section1 -->
+
+                <section id="section2" class="content__item">
+                    <span class="content__item__num">02</span>
+                    <h2 class="content__item__title">section2</h2>
+                    <figure class="content__item__imgWrap reveal reveal-RTL" data-delay="1500">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc reveal reveal-RTL">삶이 있는 한 희망은 있다.</p>
+                </section>
+                <!-- //section2 -->
+
+                <section id="section3" class="content__item">
+                    <span class="content__item__num">03</span>
+                    <h2 class="content__item__title">section3</h2>
+                    <figure class="content__item__imgWrap reveal reveal-TTB">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc reveal reveal-TTB" data-delay="1500">먼저 자신을 비웃어라, 다른 사람이 당신을 비웃기 전에.</p>
+                </section>
+                <!-- //section3 -->
+
+                <section id="section4" class="content__item">
+                    <span class="content__item__num">04</span>
+                    <h2 class="content__item__title">section4</h2>
+                    <figure class="content__item__imgWrap reveal reveal-BTT" data-delay="1500">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc reveal reveal-TTB">평생 살 것처럼 꿈을 꾸어라, 그리고 내일 죽을 것처럼 오늘을 살아라.</p>
+                </section>
+                <!-- //section4 -->
+
+                <section id="section5" class="content__item">
+                    <span class="content__item__num">05</span>
+                    <h2 class="content__item__title">section5</h2>
+                    <figure class="content__item__imgWrap reveal reveal-TWO">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc reveal reveal-TWO" data-delay="1500">꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다.</p>
+                </section>
+                <!-- //section5 -->
+
+                <section id="section6" class="content__item">
+                    <span class="content__item__num">06</span>
+                    <h2 class="content__item__title">section6</h2>
+                    <figure class="content__item__imgWrap reveal reveal-TWO reveal-RTL">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc reveal reveal-RTL">고개 숙이지 마십시오. 세상을 똑바로 정면으로 바라보십시오.</p>
+                </section>
+                <!-- //section6 -->
+
+                <section id="section7" class="content__item">
+                    <span class="content__item__num">07</span>
+                    <h2 class="content__item__title">section7</h2>
+                    <figure class="content__item__imgWrap reveal reveal-TWO reveal-TTB" data-delay="1500">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc reveal reveal-TWO reveal-RTL">신을 내보여라, 그러면 재능이 드러날 것이다.</p>
+                </section>
+                <!-- //section7 -->
+
+                <section id="section8" class="content__item">
+                    <span class="content__item__num">08</span>
+                    <h2 class="content__item__title">section8</h2>
+                    <figure class="content__item__imgWrap reveal reveal-TWO reveal-BTT">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc reveal reveal-TWO reveal-BTT">최고에 도달하려면 최저에서 시작하라.</p>
+                </section>
+                <!-- //section8 -->
+
+                <section id="section9" class="content__item">
+                    <span class="content__item__num">09</span>
+                    <h2 class="content__item__title">section9</h2>
+                    <figure class="content__item__imgWrap reveal">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc reveal">인생을 다시 산다면 다음번에는 더 많은 실수를 저지르리라.</p>
+                </section>
+                <!-- //section9 -->
+            </div>
+        </main>
+        <!-- // main -->
+        <aside id="parallax__info">
+            <div class="scroll">scrollTop : <span>0</span>px</div>
+        </aside>
+        <footer id="footer">
+            <div class="modal__wrap">
+                <div class="modal__btn">소스보기</div>
+                <div class="modal__cont">
+                    <div class="modal__box">
+                        <div class="tab__title">
+                            <span class="dot" aria-label="true"></span>
+                            <div class="tabs">
+                                <div class="active">
+                                    <span class="favicon" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                            <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                            <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange"></path>
+                                            <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow"></path>
+                                        </svg>
+                                    </span>
+                                    <em>Javascript</em>
+                                    <span class="close" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                            <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="favicon" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                            <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                            <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange"></path>
+                                            <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow"></path>
+                                        </svg>
+                                    </span>
+                                    <em>HTML</em>
+                                    <span class="close" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                            <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="favicon" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                            <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                            <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange"></path>
+                                            <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow"></path>
+                                        </svg>
+                                    </span>
+                                    <em>CSS</em>
+                                    <span class="close" aria-label="true">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                            <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="plus" aria-label="true">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                    <path d="M2.5 8H13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M8 2.5V13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="cont">
+                            <div class="active">
+                                <pre><code class="language-js">//reveal 클래스 자식에 글씨만 있다면, 가상으로 span 태그로 만듬
+const reveal = document.querySelectorAll(".reveal");
+reveal.forEach((e) => {
+    if (e.innerText) {
+        e.innerHTML = `&lt;span>${e.innerText}&lt;/span>`;
+    }
+});
+
+function scroll() {
+    let scrollTop = window.scrollY;
+
+    const reveal = document.querySelectorAll(".reveal");
+
+    reveal.forEach((el) => {
+        let revealOffset = el.offsetTop + el.parentElement.offsetTop;
+        let revealDelay = el.dataset.delay;
+        if (scrollTop >= revealOffset - window.innerHeight / 2) {
+            if (revealDelay == undefined) {
+                el.classList.add("show");
+            } else {
+                setTimeout(() => {
+                    el.classList.add("show");
+                }, revealDelay);
+            }
+        }
+
+        // if (scrollTop > revealOffset - window.innerHeight / 2) {
+        //     el.classList.add("show");
+        // }
+    });
+
+    requestAnimationFrame(scroll);
+}
+scroll();
+
+</code></pre>
+                            </div>
+                            <div>
+                                <pre><code class="language-html">&lt;main id="parallax__cont">
+    &lt;div id="contents">
+        &lt;section id="section1" class="content__item">
+            &lt;span class="content__item__num">01&lt;/span>
+            &lt;h2 class="content__item__title">section1&lt;/h2>
+            &lt;figure class="content__item__imgWrap reveal">
+                &lt;div class="content__item__img">&lt;/div>
+            &lt;/figure>
+            &lt;p class="content__item__desc reveal" data-delay="500">&lt;span>내일은 내일의 태양이 뜬다.&lt;/span>&lt;/p>
+        &lt;/section>
+        &lt;!-- //section1 -->
+
+        &lt;section id="section2" class="content__item">
+            &lt;span class="content__item__num">02&lt;/span>
+            &lt;h2 class="content__item__title">section2&lt;/h2>
+            &lt;figure class="content__item__imgWrap reveal reveal-RTL" data-delay="1500">
+                &lt;div class="content__item__img">&lt;/div>
+            &lt;/figure>
+            &lt;p class="content__item__desc reveal reveal-RTL">삶이 있는 한 희망은 있다.&lt;/p>
+        &lt;/section>
+        &lt;!-- //section2 -->
+
+        &lt;section id="section3" class="content__item">
+            &lt;span class="content__item__num">03&lt;/span>
+            &lt;h2 class="content__item__title">section3&lt;/h2>
+            &lt;figure class="content__item__imgWrap reveal reveal-TTB">
+                &lt;div class="content__item__img">&lt;/div>
+            &lt;/figure>
+            &lt;p class="content__item__desc reveal reveal-TTB" data-delay="1500">먼저 자신을 비웃어라, 다른 사람이 당신을 비웃기 전에.&lt;/p>
+        &lt;/section>
+        &lt;!-- //section3 -->
+
+        &lt;section id="section4" class="content__item">
+            &lt;span class="content__item__num">04&lt;/span>
+            &lt;h2 class="content__item__title">section4&lt;/h2>
+            &lt;figure class="content__item__imgWrap reveal reveal-BTT" data-delay="1500">
+                &lt;div class="content__item__img">&lt;/div>
+            &lt;/figure>
+            &lt;p class="content__item__desc reveal reveal-TTB">평생 살 것처럼 꿈을 꾸어라, 그리고 내일 죽을 것처럼 오늘을 살아라.&lt;/p>
+        &lt;/section>
+        &lt;!-- //section4 -->
+
+        &lt;section id="section5" class="content__item">
+            &lt;span class="content__item__num">05&lt;/span>
+            &lt;h2 class="content__item__title">section5&lt;/h2>
+            &lt;figure class="content__item__imgWrap reveal reveal-TWO">
+                &lt;div class="content__item__img">&lt;/div>
+            &lt;/figure>
+            &lt;p class="content__item__desc reveal reveal-TWO" data-delay="1500">꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다.&lt;/p>
+        &lt;/section>
+        &lt;!-- //section5 -->
+
+        &lt;section id="section6" class="content__item">
+            &lt;span class="content__item__num">06&lt;/span>
+            &lt;h2 class="content__item__title">section6&lt;/h2>
+            &lt;figure class="content__item__imgWrap reveal reveal-TWO reveal-RTL">
+                &lt;div class="content__item__img">&lt;/div>
+            &lt;/figure>
+            &lt;p class="content__item__desc reveal reveal-RTL">고개 숙이지 마십시오. 세상을 똑바로 정면으로 바라보십시오.&lt;/p>
+        &lt;/section>
+        &lt;!-- //section6 -->
+
+        &lt;section id="section7" class="content__item">
+            &lt;span class="content__item__num">07&lt;/span>
+            &lt;h2 class="content__item__title">section7&lt;/h2>
+            &lt;figure class="content__item__imgWrap reveal reveal-TWO reveal-TTB" data-delay="1500">
+                &lt;div class="content__item__img">&lt;/div>
+            &lt;/figure>
+            &lt;p class="content__item__desc reveal reveal-TWO reveal-RTL">신을 내보여라, 그러면 재능이 드러날 것이다.&lt;/p>
+        &lt;/section>
+        &lt;!-- //section7 -->
+
+        &lt;section id="section8" class="content__item">
+            &lt;span class="content__item__num">08&lt;/span>
+            &lt;h2 class="content__item__title">section8&lt;/h2>
+            &lt;figure class="content__item__imgWrap reveal reveal-TWO reveal-BTT">
+                &lt;div class="content__item__img">&lt;/div>
+            &lt;/figure>
+            &lt;p class="content__item__desc reveal reveal-TWO reveal-BTT">최고에 도달하려면 최저에서 시작하라.&lt;/p>
+        &lt;/section>
+        &lt;!-- //section8 -->
+
+        &lt;section id="section9" class="content__item">
+            &lt;span class="content__item__num">09&lt;/span>
+            &lt;h2 class="content__item__title">section9&lt;/h2>
+            &lt;figure class="content__item__imgWrap reveal">
+                &lt;div class="content__item__img">&lt;/div>
+            &lt;/figure>
+            &lt;p class="content__item__desc reveal">인생을 다시 산다면 다음번에는 더 많은 실수를 저지르리라.&lt;/p>
+        &lt;/section>
+        &lt;!-- //section9 -->
+    &lt;/div>
+&lt;/main>
+</code></pre>
+                            </div>
+                            <div>
+                                <pre><code class="language-css">#parallax__cont {
+    max-width: 1600px;
+    width: 98%;
+    margin: 0 auto;
+    /* background-color: rgba(0, 0, 0, 0.4); */
+}
+.content__item {
+    width: 1000px;
+    max-width: 70vw;
+    margin: 30vw auto;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    text-align: left;
+    margin-right: 0;
+    padding-top: 15vw;
+    position: relative;
+}
+.content__item:nth-child(even) {
+    margin-left: 0;
+    text-align: right;
+}
+.content__item__num {
+    font-size: 35vw;
+    font-family: "Lato";
+    font-weight: 100;
+    left: -5vw;
+    top: -8vw;
+    opacity: 0.7;
+    position: absolute;
+    z-index: -2;
+}
+.content__item:nth-child(even) .content__item__num {
+    left: auto;
+    right: -5vw;
+}
+.content__item__title {
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.content__item__imgWrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* background: #000; */
+    overflow: hidden;
+    z-index: -1;
+}
+.content__item__img {
+    position: absolute;
+    background: url(../assets/img/effect_bg11.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 110%;
+    height: 110%;
+    left: -5%;
+    top: -5%;
+    filter: saturate(0%);
+    /* transition: all 1s; */
+}
+.content__item:nth-child(1) .content__item__img {
+    background-image: url(../assets/img/effect_bg12.jpg);
+}
+.content__item:nth-child(2) .content__item__img {
+    background-image: url(../assets/img/effect_bg13.jpg);
+}
+.content__item:nth-child(3) .content__item__img {
+    background-image: url(../assets/img/effect_bg14.jpg);
+}
+.content__item:nth-child(4) .content__item__img {
+    background-image: url(../assets/img/effect_bg15.jpg);
+}
+.content__item:nth-child(5) .content__item__img {
+    background-image: url(../assets/img/effect_bg16.jpg);
+}
+.content__item:nth-child(6) .content__item__img {
+    background-image: url(../assets/img/effect_bg17.jpg);
+}
+.content__item:nth-child(7) .content__item__img {
+    background-image: url(../assets/img/effect_bg18.jpg);
+}
+.content__item:nth-child(8) .content__item__img {
+    background-image: url(../assets/img/effect_bg19.jpg);
+}
+.content__item:nth-child(9) .content__item__img {
+    background-image: url(../assets/img/effect_bg20.jpg);
+}
+.content__item__desc {
+    font-size: 4vw;
+    line-height: 1.4;
+    margin-top: -5vw;
+    margin-left: 4vw;
+    word-break: keep-all;
+}
+.content__item:nth-child(even) .content__item__desc {
+    margin-left: auto;
+    margin-right: -4vw;
+}
+
+@media (max-width: 800px) {
+    #parallax__cont {
+        margin-top: 50vw;
+    }
+}
+
+#parallax__info {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+#parallax__info .info li,
+.scrollTop {
+    line-height: 1.4;
+}
+
+/* option */
+.reveal > div {
+    opacity: 0;
+}
+
+.reveal.show > div {
+    animation: opacity 1s linear forwards;
+}
+
+.reveal {
+    position: relative;
+}
+.reveal > span {
+    opacity: 0;
+}
+.reveal.show > span {
+    animation: opacity 1s linear forwards;
+}
+
+.reveal::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    z-index: 1;
+}
+
+.reveal.reveal-TWO::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    z-index: 1;
+    background-color: orange;
+}
+
+.reveal.show::before {
+    animation: reveal 1s;
+}
+
+.reveal.reveal-RTL.show::before {
+    animation: reveal-RTL 1s;
+}
+
+.reveal.reveal-TTB.show::before {
+    animation: reveal-TTB 1s;
+}
+
+.reveal.reveal-BTT.show::before {
+    animation: reveal-BTT 1s;
+}
+
+/* 2개 */
+.reveal.reveal-TWO.show::after {
+    animation: reveal 1s 0.3s;
+}
+
+.reveal.reveal-RTL.show::after {
+    animation: reveal-RTL 1s 0.3s;
+}
+
+.reveal.reveal-TTB.show::after {
+    animation: reveal-TTB 1s 0.3s;
+}
+
+.reveal.reveal-BTT.show::after {
+    animation: reveal-BTT 1s 0.3s;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        width: 0;
+        left: 0;
+    }
+
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    80% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes reveal-RTL {
+    0% {
+        width: 0;
+        right: 0;
+        left: auto;
+    }
+
+    50% {
+        width: 100%;
+        right: 0;
+        left: auto;
+    }
+
+    80% {
+        width: 100%;
+        right: 0;
+        left: auto;
+    }
+
+    100% {
+        width: 0;
+        right: 100%;
+        left: auto;
+    }
+}
+
+@keyframes reveal-TTB {
+    0% {
+        width: 100%;
+        height: 0;
+        top: 0;
+    }
+
+    50% {
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+
+    80% {
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+
+    100% {
+        width: 100%;
+        height: 0;
+        top: 100%;
+    }
+}
+
+@keyframes reveal-BTT {
+    0% {
+        width: 100%;
+        height: 0;
+        bottom: 0;
+        top: auto;
+    }
+
+    50% {
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        top: auto;
+    }
+
+    80% {
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        top: auto;
+    }
+
+    100% {
+        width: 100%;
+        height: 0;
+        bottom: 100%;
+        top: auto;
+    }
+}
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__close">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="../assets/js/highlight.min.js"></script>
+        <script src="../assets/js/modal.js"></script>
+        <script src="../assets/js/gsap.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script>
+            //reveal 클래스 자식에 글씨만 있다면, 가상으로 span 태그로 만듬
+            const reveal = document.querySelectorAll(".reveal");
+            reveal.forEach((e) => {
+                if (e.innerText) {
+                    e.innerHTML = `<span>${e.innerText}</span>`;
+                }
+            });
+
+            function scroll() {
+                let scrollTop = window.scrollY;
+
+                const reveal = document.querySelectorAll(".reveal");
+
+                reveal.forEach((el) => {
+                    let revealOffset = el.offsetTop + el.parentElement.offsetTop;
+                    let revealDelay = el.dataset.delay;
+                    if (scrollTop >= revealOffset - window.innerHeight / 2) {
+                        if (revealDelay == undefined) {
+                            el.classList.add("show");
+                        } else {
+                            setTimeout(() => {
+                                el.classList.add("show");
+                            }, revealDelay);
+                        }
+                    }
+
+                    // if (scrollTop > revealOffset - window.innerHeight / 2) {
+                    //     el.classList.add("show");
+                    // }
+                });
+
+                requestAnimationFrame(scroll);
+            }
+            scroll();
+        </script>
+    </body>
+</html>

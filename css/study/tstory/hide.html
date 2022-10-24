@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소숨기기</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+
+<body>
+    <main id="main">
+        <div class="document">
+              <h2 class="t_tit2"> 요소를 숨기는 법 </h2>
+              <p class="t_desc2"> 요소를 숨기는 법은 총 다섯가지가 있습니다. 한번 살펴봅시다.  </p><br> 
+  
+              <h3 class="t_tit2"> 01. display를 사용하는 방법 </h3>
+              <p class="t_desc"> 요소가 있는 블럭을 건드리는 방법입니다. 영역을 없애버리면서 애니메이션도 쓸 수 없게 만듭니다.</p>
+              <p class="t_box">
+                 .원하는 영역 { display : none; } 
+              </p>
+              
+              <h3 class="t_tit2"> 02. opacity 사용하는 방법 </h3>
+              <p class="t_desc"> 투명도를 조절하는 방법 입니다. 영역도 살릴 수 있고 애니메이션도 사용할 수 있습니다.</p>
+              <p class="t_box">
+                 .원하는 영역 { opacity : 0; } // 투명도를 0으로 만듬
+              </p>
+  
+              <h3 class="t_tit2"> 03. visibility 사용하는 방법 </h3>
+              <p class="t_desc"> 레이아웃을 변경하지 않고 요소를 보이거나 숨기는 방법입니다. 영역을 없애버리면서 애니메이션도 쓸 수 없게 만듭니다.</p>
+              <p class="t_box">
+                 .원하는 영역 { visibility : hidden; } //숨긴다
+              </p>
+  
+              <h3 class="t_tit2"> 04. whidth와 height값을 건드는 방법</h3>
+              <p class="t_desc"> 높이값과 넓이값을 없애는 방법입니다. 영역을 없애버리면서 애니메이션도 쓸 수 없게 만드는 방법입니다.</p>
+              <p class="t_box">
+                 .원하는 영역 { whidth : 0; height: 0; } 
+              </p>
+  
+              <h3 class="t_tit2"> 05. transform을 사용하는 방법 </h3>
+              <p class="t_desc"> 크기를 주지 않는 방법입니다. 영역을 없애버리지만 애니메이션은 사용할 수 있습니다.</p>
+              <p class="t_box">
+                 .원하는 영역 { transform: scale(0); } 
+              </p>
+              
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

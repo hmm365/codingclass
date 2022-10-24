@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>spread operator</title>
+        <link rel="stylesheet" href="../../assets/css/style.css" />
+        <link rel="stylesheet" href="../../assets/css/dracula.css" />
+        <script src="../../assets/js/highlight.min.js"></script>
+    </head>
+
+    <body>
+        <!-- //header -->
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit2">배열 매서드 응용!</h2>
+                <p class="t_desc2">
+                    배열 매서드를 응용 해보았습니다.<br />
+                    배열 [100, 200, 300, 400, 500, 600, 700, 800, 900] 을 이용하여,<br />
+                    400,500만 출력되게 해보았습니다.
+                </p>
+                <hr />
+                <h3 class="t_tit2">매서드 응용</h3>
+                <div class="t_code">
+                    <pre><code class="language-js">const number = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+const result1 = number.slice(3, 5).join(",");
+console.log(result1);
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result01"></div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //result01 -->
+                <div class="t_code">
+                    <pre><code class="language-js">const number2 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+const result2 = number2.splice(3, 2).join(",");
+console.log(result2);
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result02"></div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //result02 -->
+                <div class="t_code">
+                    <pre><code class="language-js">const number3 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+const result3 = number3.filter((el) => el === 400 || el === 500).join(",");
+console.log(result3);
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result03"></div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //result03 -->
+                <div class="t_code">
+                    <pre><code class="language-js">const number4 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+const result4 = number4
+    .map((e) => {
+        if (e == 400 || e == 500) {
+            return e;
+        }
+    })
+    .filter((e) => e != null)
+    .join(",");
+console.log(result4);
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result04"></div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //result04 -->
+                <div class="t_code">
+                    <pre><code class="language-js">const number5 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+let result5 = [];
+result5 = number5
+    .slice(number5.indexOf(400), number5.indexOf(400) + 1)
+    .concat(number5.slice(number5.indexOf(500), number5.indexOf(500) + 1))
+    .join(",");
+console.log(result5);
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result05"></div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //result05 -->
+                <div class="t_code">
+                    <pre><code class="language-js">const number6 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+let result6 = [];
+result6 = result6
+    .concat(
+        number5.find((e) => e == 400),
+        number5.find((e) => e == 600)
+    )
+    .join(",");
+console.log(result6);
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result06"></div>
+                        </details>
+                    </div>
+                </div>
+                <hr />
+                <!-- //result06 -->
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+
+        <script>
+            {
+                //결과값 400, 500
+                const number = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                const result1 = number.slice(3, 5).join(",");
+                document.querySelector(".result01").innerText = result1;
+                const number2 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                const result2 = number2.splice(3, 2).join(",");
+                document.querySelector(".result02").innerText = result2;
+                const number3 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                const result3 = number3.filter((el) => el === 400 || el === 500).join(",");
+                document.querySelector(".result03").innerText = result3;
+                const number4 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                const result4 = number4
+                    .map((e) => {
+                        if (e == 400 || e == 500) {
+                            return e;
+                        }
+                    })
+                    .filter((e) => e != null)
+                    .join(",");
+                document.querySelector(".result04").innerText = result4;
+                const number5 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                let result5 = [];
+                result5 = number5
+                    .slice(number5.indexOf(400), number5.indexOf(400) + 1)
+                    .concat(number5.slice(number5.indexOf(500), number5.indexOf(500) + 1))
+                    .join(",");
+                document.querySelector(".result05").innerText = result5;
+                const number6 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                let result6 = [];
+                result6 = result6
+                    .concat(
+                        number5.find((e) => e == 400),
+                        number5.find((e) => e == 600)
+                    )
+                    .join(",");
+                document.querySelector(".result06").innerText = result6;
+            }
+        </script>
+    </body>
+</html>

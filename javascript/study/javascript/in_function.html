@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>join() | pop() | push</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">숫자 객체</a></li>
+                <li><a href="../javascript08.html">수학 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">내장 함수</h2>
+            <p class="t_desc2">
+                자바스크립트에 기본적으로 내장되어 있는 함수들을 말합니다.
+            </p>
+
+            <hr>
+
+            <h2 class="t_tit">인코딩, 디코딩 함수</h2>
+<pre class="t_desc2">'https://www.google.com/search?query=자바스크립트'
+
+위와 같이 URL 주소에 쿼리 정보를 전송해 데이터를 처리해야 하는 프로그램의 경우 한글과 같은 유니코드 문자가 포함되어 있으면
+류가 발생할 수 있는데 이런 경우 인코딩 함수를 이용해 문자를 부호화시키고 부호화된 문자를 
+다시 디코딩 함수를 이용해 원래 문자로 되돌릴 수 있다.
+</pre>
+            <div class="t_table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>함수명</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ce">encodeURIComponent()</td>
+                            <td>영문, 숫자와 ( ) - _ . ~ * ! ' 을 제외한 문자를 인코딩한다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">decodeURIComponent()</td>
+                            <td>encodeURIComponent()의 디코딩 함수</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="t_code">
+<pre><code class="language-js">var encodeStr = '자바스크립트';
+console.log(encodeURIComponent(encodeStr));     // 문자 부호화되어 출력
+var decodeStr = encodeURIComponent(encodeStr);
+console.log(decodeURIComponent(decodeStr));     // 부호화된 것을 다시 문자로 디코딩해서 '자바스크립트' 제대로 출력됨
+</code></pre>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="sample01_result"></div>
+                </details>
+            </div>
+            <!-- sample01_result -->
+
+            <hr>
+
+            <h2 class="t_tit">숫자, 유·무한 값 판별 함수</h2>
+            <div class="t_table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>함수명</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ce">isNaN()</td>
+                            <td>숫자인지 아닌지를 판별하는 함수. 숫자면 false, 숫자가 아니면 true를 반환.<br>NaN은 Not a Number의 약자.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">isFinite()</td>
+                            <td>유한값인지 무한값인지를 판별하는 함수. 유한값이면 true, 무한값이면 false를 반환.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="t_code">
+<pre><code class="language-js">var num1 = '숫자';
+if (!isNaN(num1)) {     // isNaN이 아닌 !isNaN임에 주목!
+    console.log('숫자');
+} else {
+    console.log('숫자아님');    // num1은 문자열이므로 true를 반환해야 하지만 isNan 앞에 느낌표가 붙어서 반대로 false 반환
+}
+
+var num2 = 1 / 0;
+if (isFinite(num2)) {
+    console.log('유한값');
+} else {
+    console.log('무한값');
+}
+</code></pre>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="sample02_result"></div>
+                </details>
+            </div>
+
+            <hr>
+            <!-- sample02_result -->
+            <h2 class="t_tit">숫자, 문자 변환 함수</h2>
+            <div class="t_table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>함수명</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ce">Number()</td>
+                            <td>숫자로 변환해주는 함수</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">parselnt()</td>
+                            <td>숫자와 문자가 포함됐을 경우 정수 부분만 숫자로 변환해주는 함수</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">parseFloat()</td>
+                            <td>숫자와 문자가 포함됐을 경우 소수 부분까지 숫자로 변환해주는 함수</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">String()</td>
+                            <td>문자로 변환해주는 함수</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="t_code">
+<pre><code class="language-js">var num3 = '10';
+console.log(Number(num3));      // 따옴표 안에 있는 문자열 '10'을 숫자 10으로 변경
+
+var num4 = '100px';
+console.log(parseInt(num4));    // 정수부분 100 제외하고 px 무시함
+
+var num5 = '33.3%';
+console.log(parseFloat(num5));      // 소수 부분까지 숫자 변환, 문자 '%' 무시
+
+var num6 = 10;
+console.log(typeof num6);       // typeof는 변수 안 데이터가 어떤 형태인지를 판별해줌, 숫자이므로 number출력
+console.log(typeof String(num6));   // String(num6)으로 10을 '10'(문자열)로 바꿈 --> 타입이 string으로 변했음
+</code></pre>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="sample03_result"></div>
+                </details>
+            </div>      
+
+            <hr>
+            <!-- sample03_result -->
+
+            <h2 class="t_tit">자바스크립트 코드 변경 함수</h2>
+            <div class="t_table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>함수명</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ce">eval()</td>
+                            <td>문자를 자바스크립트 코드로 변경해주는 함수</td>
+                        </tr>
+                    </tbody>    
+                </table>
+            </div>
+            <div class="t_code">
+<pre><code class="language-js">vvar str1 = 'var num7 = 10';
+var str2 = 'var num8 = 20';
+
+//eval 함수를 통해 문자열에서 js코드로 변경
+eval(str1);
+eval(str2);
+consloe.log(num7 + num8);   //무사히 둘을 더해 30 출력
+</code></pre>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="sample04_result"></div>
+                </details>
+            </div>      
+
+            <hr>
+            <!-- sample03_result -->
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+        hljs.highlightAll();
+    </script>
+    <script>
+        //01
+        {
+            let result = document.querySelector(".sample01_result")
+            var encodeStr = '자바스크립트';
+            result.innerHTML += encodeURIComponent(encodeStr) + "<br>"
+            var decodeStr = decodeURIComponent(encodeStr);
+            result.innerHTML += decodeStr;
+        }
+        //02
+        {
+            let result = document.querySelector(".sample02_result")
+            var num1 = '숫자';
+            if (!isNaN(num1)) {     // isNaN이 아닌 !isNaN임에 주목!
+                result.innerHTML += '숫자<br>';
+            } else {
+                result.innerHTML += '숫자아님<br>';    // num1은 문자열이므로 true를 반환해야 하지만 isNan 앞에 느낌표가 붙어서 반대로 false 반환
+            }
+            
+            var num2 = 1 / 0;
+            if (isFinite(num2)) {
+                result.innerHTML += '유한값<br>';
+            } else {
+                result.innerHTML += '무한값';
+            }
+        }
+        //03
+        {
+            let result = document.querySelector(".sample03_result")
+            var num3 = '10';
+            result.innerHTML += Number(num3) + "<br>";      // 따옴표 안에 있는 문자열 '10'을 숫자 10으로 변경
+
+            var num4 = '100px';
+            result.innerHTML += parseInt(num4) + "<br>";    // 정수부분 100 제외하고 px 무시함
+
+            var num5 = '33.3%';
+            result.innerHTML += parseFloat(num5) + "<br>";      // 소수 부분까지 숫자 변환, 문자 '%' 무시
+
+            var num6 = 10;
+            result.innerHTML += typeof num6 + "<br>";       // typeof는 변수 안 데이터가 어떤 형태인지를 판별해줌, 숫자이므로 number출력
+            result.innerHTML += typeof String(num6) + "<br>";   // String(num6)으로 10을 '10'(문자열)로 바꿈 --> 타입이 string으로 변했음
+        }
+        //04
+        {
+            var str1 = 'var num7 = 10';
+            var str2 = 'var num8 = 20';
+            let result = document.querySelector(".sample04_result")
+            //eval 함수를 통해 문자열에서 js코드로 변경
+            eval(str1);
+            eval(str2);
+            result.innerHTML += num7 + num8;   //무사히 둘을 더해 30 출력
+        }
+    </script>
+</body>
+
+</html>

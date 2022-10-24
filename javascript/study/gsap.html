@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gsap</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+<body>
+    <main id="main">
+        <div class="document">
+            <h3 class="t_tit2">GSAP</h2>
+                <div class="t_code">
+            <p class="t_desc2">GSAP는 GrennSock에서 만든 자바스크립트 애니메이션 라이브러리이다.<br>
+                일반적으로 애니메이션 효과는 CSS로 처리하거나 제이쿼리(JQuery)에서 제공하는 .animate()나 fadeIn(), SlideDown() 등으로 구현하는 것이 일반적이다.<br> 
+                하지만 사용자의 욕구는 끝이 없고 그 이상의 복잡한 애니메이션을 구현하려면 다른 도구의 힘을 빌려야 하는데 GSAP가 그 중 하나이다.<br>
+                GSAP는 제이쿼리보다 20배 이상 퍼포먼스가 좋고 사용법도 간단하다고 주장한다.
+            </p>
+            </div>
+            <hr>
+            <h3 class="t_tit2">설치</h2>
+            <p class="t_desc">
+                <a href="https://greensock.com/docs/v3/Installation" target="_blank" rel="noopener">공식 사이트</a>
+                에서 받거나 <a href="https://cdnjs.com/libraries/gsap" target="_blank" rel="noopener">CDN</a>
+                , 혹은 <code>npm install gsap</code>로 설치할 수 있다.
+            </p>
+            <h3 class="t_tit2">cnd에서 라이브러리 가져오기</h2>
+
+            <p class="t_desc">
+                CDN이란 Contents Delivery Network의 약자로, 데이터를 분산된 서버에서 받아오는 것을 말한다.<br>
+                GSAP이나 jQuery의 라이브러리를 호스팅된 서버에 직접 설치해서 사용할 수도 있지만, CDN을 사용하면 클라이언트가 직접 자신의 위치로 라이브러리를 전송받게 된다.    
+            </p>
+            <div class="t_code">
+<pre><code class="language-js">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"&gt;&lt;/script&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;
+</code></pre>
+            </div>
+            <p class="t_desc">라이브러리를 사용하려면 js파일의 링크를 가져오는 것 처럼 CDN 서버의 절대 주소를 입력하면 된다.</p>
+            <hr>
+            <h3 class="t_tit2">
+                GSAP의 Tween 객체를 만드는 기본 메소드
+            </h3>
+            <p class="t_desc2">
+                gsap.to() <br>
+                gsap.from()<br>
+                gsap.fromTo()
+            </p>
+            <p class="t_box">
+                // GSAP animate<br>
+                gsap.to(".box",<br>
+                {rotation: 27, x: 500, duration: 2});
+            </p>
+            <p class="t_desc">
+                gsap의 메소드 to는 첫번째 인자로 DOM 요소를 받는데, 마치 querySelector와 같이 클래스를 표기한다. 따로 변수에 DOM 요소를 할당하지 않아도 된다는 것 같다.<br>
+                두번째 인자로 옵션값들을 담은 객체를 전달하게 된다. 편의성에 특화된 라이브러리이기 때문에 사용 방법이 꽤 직관적이어서 이해하기 쉬웠다.<br>
+                결국 to 메소드는 타겟을 어디론가 보낸다는 것 같고, from은 어디서부터, fromTo는 어디서부터 어디로 어떻게 애니메이션을 만들지 결정하기 위한 메소드임을 짐작할 수 있다.
+            </p>
+            <div class="t_iframe">
+                <iframe style="height: 500px;"src="https://codepen.io/hmm365/embed/LYdKXaJ?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/hmm365/pen/LYdKXaJ">
+                    Untitled</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+    <script>
+
+    </script>
+</body>
+</html>
+  

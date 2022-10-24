@@ -1,0 +1,133 @@
+.textCard__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.textCard__inner .text__card {
+    width: 32.2%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    border-radius: 20px;
+    transition: all 0.4s;
+}
+
+.textCard__inner .text__card:hover {
+    background-color: #cdcdcd;
+}
+
+.textCard__inner .text__card > span {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    background-image: url(../img/text_icon2.svg);
+}
+.textCard__inner .text__card:nth-child(2) > span {
+    background-position: -70px 0;
+}
+.textCard__inner .text__card:nth-child(3) > span {
+    background-position: -140px 0;
+}
+
+.textCard__inner .text__desc {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.titbox__header {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    align-content: flex-start;
+}
+
+.titbox__header .text__tit {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.titbox__header .text__tdesc {
+    color: #666;
+    font-size: 18px;
+}
+.text__titbox .star {
+    margin-bottom: 20px;
+}
+.text__titbox .star img {
+    width: 20px;
+    height: 20px;
+}
+
+.text__card .text__more {
+    font-size: 18px;
+    padding: 5px 30px 2px 30px;
+    border-radius: 20px;
+    background-color: #3b4a5c;
+    color: #fff;
+    margin: 0 auto;
+}
+.textCard__inner .text__card hr {
+    width: 100%;
+    height: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+@media (max-width: 1250px) {
+    .textCard__inner .text__desc {
+        font-size: 16px;
+    }
+    .textCard__inner .text__card > span {
+        margin-right: 10px;
+    }
+    .titbox__header .text__tit {
+        font-size: 20px;
+    }
+    .titbox__header .text__tdesc {
+        font-size: 16px;
+    }
+    .text__card .text__more {
+        font-size: 16px;
+        padding: 5px 20px 2px 20px;
+    }
+}
+@media (max-width: 800px) {
+    .textCard__inner {
+        justify-content: center;
+    }
+    .textCard__inner .text__card {
+        width: 60%;
+        margin-bottom: 20px;
+    }
+    .textCard__inner .text__card:last-child {
+        margin-bottom: 0;
+    }
+    .textCard__inner .text__card > span {
+        margin-right: 20px;
+    }
+    .titbox__header .text__tit {
+        font-size: 24px;
+    }
+    .titbox__header .text__tdesc {
+        font-size: 18px;
+    }
+    .text__card .text__more {
+        font-size: 18px;
+        padding: 5px 30px 2px 30px;
+    }
+}
+@media (max-width: 500px) {
+    .textCard__inner .text__card {
+        width: 80%;
+    }
+}

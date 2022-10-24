@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지타입</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+<body>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">사이트 유형 | 이미지유형2</h2>
+            <p class="t_desc2">
+                이번 이미지 타입은 gird 를 이용하여 작업하였습니다.<br>
+                flex박스와 차이점은 div박스를 묶어서 left, right 을 안나누는 차이가 있습니다.
+            </p>
+            <div class="t_iframe" style="min-height: 450px;">
+                <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F2Qhs1CeM9EOU0fm44ro7R8%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B02%3Fnode-id%3D4%253A147" allowfullscreen></iframe>
+            </div>
+            
+            <hr>
+
+            <h3 class="t_tit2">1.HTML 코드</h3>
+            <div class="t_code">
+                <div class="t_result">
+                    <details>
+                        <summary>코드 보기</summary>
+<pre><code class="language-html">&lt;section id="imageType03" class="image__wrap gowun section"&gt;
+    &lt;h2&gt;우리의동물사진&lt;/h2&gt;
+    &lt;p&gt;
+        우주 최강 귀엽고 깜직한 우리 동물을 보시면 너무 좋아요&lt;br&gt;
+        얼른 동물사진을 보시는게 제일 좋을것 같아요
+    &lt;/p&gt;
+    &lt;div class="image__inner container-fluid"&gt;
+        &lt;article class="image"&gt;
+            &lt;!-- &lt;figure class="image__box"&gt;
+                &lt;img src="img/image_bg03_01.jpg" alt="셰이크 로트폴라 모스크"&gt;
+            &lt;/figure&gt; --&gt;
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;포악한곰&lt;/h3&gt;
+                &lt;p&gt;세상에가 가장무서운 곰입니다 엄청무서우니 도망가는게 좋겠습니다 여러분은 곰이 얼마나 강하고 무서운지 아세요? 나는 겪..&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="image__sns"&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="image"&gt;
+            &lt;figure class="image__box"&gt;
+                &lt;img src="../img/img04/img_bg_04_02.jpg" alt="셰이크 로트폴라 모스크"&gt;
+            &lt;/figure&gt;
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;셰이크 로트폴라 모스크&lt;/h3&gt;
+                &lt;p&gt;세상에가 가장무서운 곰입니다 엄청무서우니 도망가는게 좋겠습니다 여러분은 곰이 얼마나 강하고 무서운지 아세요? 나는 겪..&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="image__sns"&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="image"&gt;
+            &lt;figure class="image__box"&gt;
+                &lt;img src="../img/img04/img_bg_04_03.jpg" alt="셰이크 로트폴라 모스크"&gt;
+            &lt;/figure&gt;
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;셰이크 로트폴라 모스크&lt;/h3&gt;
+                &lt;p&gt;세상에가 가장무서운 곰입니다 엄청무서우니 도망가는게 좋겠습니다 여러분은 곰이 얼마나 강하고 무서운지 아세요? 나는 겪..&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="image__sns"&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="image"&gt;
+            &lt;figure class="image__box"&gt;
+                &lt;img src="../img/img04/img_bg_04_04.jpg" alt="셰이크 로트폴라 모스크"&gt;
+            &lt;/figure&gt;
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;셰이크 로트폴라 모스크&lt;/h3&gt;
+                &lt;p&gt;세상에가 가장무서운 곰입니다 엄청무서우니 도망가는게 좋겠습니다 여러분은 곰이 얼마나 강하고 무서운지 아세요? 나는 겪..&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="image__sns"&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="image"&gt;
+            &lt;figure class="image__box"&gt;
+                &lt;img src="../img/img04/img_bg_04_05.jpg" alt="셰이크 로트폴라 모스크"&gt;
+            &lt;/figure&gt;
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;셰이크 로트폴라 모스크&lt;/h3&gt;
+                &lt;p&gt;세상에가 가장무서운 곰입니다 엄청무서우니 도망가는게 좋겠습니다 여러분은 곰이 얼마나 강하고 무서운지 아세요? 나는 겪..&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="image__sns"&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="blind"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+                    </details>
+                </div>
+            </div>
+
+            <hr>
+
+            <h3 class="t_tit2">2.CSS 코드</h3>
+            <div class="t_code">    
+                <div class="t_result">
+                    <details open>
+                        <summary>코드 보기</summary>
+<pre><code class="language-css">/* fonts */
+    @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+    .gowun {
+        font-family: GowunBatang;
+        font-weight: 400;
+    }
+    /* reset */
+    * {
+        margin: 0;
+        padding: 0;   
+        box-sizing: border-box;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    img {
+        width: 100%;
+        vertical-align: top;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+    }
+    /* common */
+    .container {
+        width: 1160px;
+        padding: 0 20px;
+        margin: 0 auto;
+        min-width: 1160px;
+    }
+    .container-fluid {
+        width: 100%;
+        padding: 0 100px;
+        box-sizing: border-box;
+    }
+    .section {
+        padding: 120px 0;
+    }
+    .section &gt; h2 {
+        font-size: 50px;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .section &gt; p {
+        font-size: 22px;
+        font-weight: 300;
+        color: #666;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    .blind {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        clip: inset(50%);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+    }
+    /* imageType */
+    .image__inner {
+        display: grid;
+        grid-template-areas:
+            "box1 box1 box2 box3"
+            "box1 box1 box4 box5";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    .image {
+        position: relative;
+        overflow: hidden;
+    }
+    .image__inner .image:nth-child(1) {
+        grid-area: box1;
+        background: url(../img/img04/img_bg_04_01.jpg);
+        background-size: cover;
+    }  
+    .image__inner .image:nth-child(2) {
+        grid-area: box2;
+    }
+    .image__inner .image:nth-child(3) {
+        grid-area: box3;
+    }
+    .image__inner .image:nth-child(4) {
+        grid-area: box4;
+    }
+    .image__inner .image:nth-child(5) {
+        grid-area: box5;
+    }
+    .image__box {}
+    
+    .image__desc {
+        position: absolute;
+        left: 0;
+        bottom: -100%;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        padding: 16px;
+        transition: all 0.6s ease;
+    }
+    .image:hover .image__desc {
+        bottom: 0;
+    }
+    .image__desc h3 {
+        font-size: 20px;
+    }
+    .image__desc p {
+        font-size: 16px;
+        color: #666;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .image__sns {
+        position: absolute;
+        opacity: 0;
+        right: 10px;
+        top: 10px;
+        transition: all 1s ease;
+    }
+    .image__sns a {
+        width: 36px;
+        height: 36px;
+        background: #fff;
+        border-radius: 50%;
+        display: block;
+        margin-bottom: 5px;
+        background: url(../img/img04/image_bg03_icon.svg);
+    }
+    .image:hover .image__sns {
+        opacity: 1;
+    }
+    .image__sns a:nth-child(1) {}
+    .image__sns a:nth-child(2) { background-position: -50px 0; }
+    .image__sns a:nth-child(3) { background-position: -100px 0; }
+    .image__sns a:nth-child(4) { background-position: -150px 0; }
+    .image__sns a:nth-child(5) { background-position: -200px 0; }
+</code></pre>
+                    </details>
+                </div>
+            </div>
+
+            <hr>
+
+            <h3 class="t_tit2">완성본</h3>
+            <div class="t_iframe">
+                <iframe src="https://hmm365.github.io/coding2/site/cardType/imgType/imgType03.html" allowfullscreen></iframe>
+            </div>
+            <div class="t_link">
+                <a href="https://hmm365.github.io/coding2/site/cardType/imgType/imgType03.html">원본 사이트 보기</a>
+                <a href="https://github.com/hmm365/coding2/blob/main/site/cardType/imgType/imgType03.html">원본 소스 보기</a>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+    <script>
+
+    </script>
+</body>
+</html>
+  

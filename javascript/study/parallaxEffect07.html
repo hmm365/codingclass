@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바스크립 이펙트</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">페럴럭스 이펙트u</h2>
+                <p class="t_desc2">이번 페럴럭스 이펙트는 사이드 메뉴의 버튼을 클릭하면 해당하는 섹션으로 이동하며, 해당하는 섹션의 위치에 도달하면 버튼의 모양이 바뀜니다.</p>
+                <iframe height="500" style="width: 100%" src="https://syumay.netlify.app/javascript/effect/parallaxeffect07"></iframe>
+
+                <hr />
+                <h2 class="t_ti2">js 코드 설명</h2>
+
+                <p class="t_desc2">
+                    1. .content__item__desc에 reveal이 붙었을때의 상태만을 다중으로 선택 후 해당 요소를 forEach를 통해 추출합니다. <br />
+                    2. 각 꺼낸 요소를 .innerText로 문자열로 변환 후 splitText라는 변수안에 넣고 <br />
+                    3. "&lt;span aria-hidden='true'>" + splitWrap + "&lt;/span>";를 통해 splitText 양쪽에 span 태그를 열고 닫는 태그를 넣어줍니다. <br />
+                    5. splitText을 각 뽑아낸 요소에 innerHTML로 넣습니다~ //스크롤시 딜레이를 걸어 show를 붙여주는 원리 0. revealDelay 에는 el.dataset.delay(각 요소의 data-delay여부)를 넣어주고 1. 만약 revealDelay(data-delay 여부)가 찾을 수 없음과 같다면 2. 각 요소에 show 클래스를 붙여주고 3. 만약 찾을 수 있다면 각 요소는 setTimeout에 revealDelay(data-delay 여부)초 만큼 딜레이 후 show를 붙여줍니다.
+                </p>
+                <div class="t_code">
+                    <pre><code class="language-js">//reveal 클래스 자식에 글씨만 있다면, 가상으로 span 태그로 만듬
+const reveal = document.querySelectorAll(".reveal");
+reveal.forEach((e) => {
+    if (e.innerText) {
+        e.innerHTML = `&lt;span>${e.innerText}&lt;/span>`;
+    }
+});
+
+function scroll() {
+    let scrollTop = window.scrollY;
+
+    const reveal = document.querySelectorAll(".reveal");
+
+    reveal.forEach((el) => {
+        let revealOffset = el.offsetTop + el.parentElement.offsetTop;
+        let revealDelay = el.dataset.delay;
+        if (scrollTop >= revealOffset - window.innerHeight / 2) {
+            if (revealDelay == undefined) {
+                el.classList.add("show");
+            } else {
+                setTimeout(() => {
+                    el.classList.add("show");
+                }, revealDelay);
+            }
+        }
+
+        // if (scrollTop > revealOffset - window.innerHeight / 2) {
+        //     el.classList.add("show");
+        // }
+    });
+
+    requestAnimationFrame(scroll);
+}
+scroll();
+</code></pre>
+                </div>
+                <div class="t_link">
+                    <a href="https://github.com/hmm365/coding2/blob/main/javascript/effect/parallaxEffect07.html">원본 소스 보기</a>
+                    <a href="https://syumay.netlify.app/javascript/effect/parallaxeffect07">원본 사이트 보기</a>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script></script>
+    </body>
+</html>

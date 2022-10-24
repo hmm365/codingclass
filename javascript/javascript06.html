@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바스크립트 : 배열 객체</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/dracula.css" />
+        <script src="assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <header id="header">
+            <h1><a href="index.html">Javascript</a></h1>
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="javascript01.html">데이터 저장하기</a></li>
+                    <li><a href="javascript02.html">데이터 불러오기</a></li>
+                    <li><a href="javascript03.html">데이터 실행하기</a></li>
+                    <li><a href="javascript04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="javascript05.html">문자열 객체</a></li>
+                    <li><a href="javascript06.html">배열 객체</a></li>
+                    <li class="active"><a href="javascript07.html">수학 객체</a></li>
+                    <li><a href="javascript08.html">숫자 객체</a></li>
+                    <li><a href="javascript09.html">브라우저 객체</a></li>
+                    <li><a href="javascript10.html">요소 객체</a></li>
+                    <li><a href="javascript11.html">이벤트 객체</a></li>
+                    <li><a href="javascript12.html">제이 쿼리</a></li>
+                </ul>
+                <ul class="effect">
+                    <li><a href="effect/searchEffect.html">검색 효과</a></li>
+                    <li><a href="effect/quizEffect.html">퀴즈 효과</a></li>
+                    <li><a href="effect/dataEffect.html">데이터 효과</a></li>
+                    <li><a href="effect/mouseEffect.html">마우스 효과</a></li>
+                    <li><a href="effect/sliderEffect.html">슬라이드 효과</a></li>
+                    <li><a href="effect/parallaxEffect.html">패랠렉스 효과</a></li>
+                    <li><a href="effect/gmaeEffect.html">게임 효과</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header -->
+        <main id="main">
+            <div class="container">
+                <div class="main_menu">
+                    <ul>
+                        <li><a href="#sample01">01. 배열 속성 : length : 배열 길이 구하기</a></li>
+                        <li><a href="#sample02">02. 배열 메서드 : join() : 배열 요소 문자열을 결합 : 반환(문자열)</a></li>
+                        <li><a href="#sample03">03. 배열 메서드 : push() : 배열 마지막 요소에 추가 : 반환(문자열) : ★★★</a></li>
+                        <li><a href="#sample03">03. 배열 메서드 : pop() : 배열 마지막 요소를 삭제 : 반환(삭제된 요소)</a></li>
+                        <li><a href="#sample04">04. 배열 메서드 : unshift() : 배열 처음 요소에 추가 : 반환(숫자)</a></li>
+                        <li><a href="#sample04">04. 배열 메서드 : shift() : 배열 처음 요소 삭제 : 반환(삭제된 요소)</a></li>
+                        <li><a href="#sample05">05. 배열 메서드 : reverse() : 배열 요소의 순서를 반대로 정렬 : 반환(배열)</a></li>
+                        <li><a href="#sample05">05. 배열 메서드 : sort() : 배열 요소를 정렬할 때 : 반환(배열)</a></li>
+                        <li><a href="#sample06">06. 배열 메서드 : concat() : 배열 요소를 결합할 때 : 반환(배열)</a></li>
+                        <li><a href="#sample07">07. 배열 메서드 : reduce() : 배열 요소를 하나로 정리 : 반환(결괏값)</a></li>
+                        <li><a href="#sample07">07. 배열 메서드 : reduceRight() : 배열 요소를 하나로 정리 : 반환(결괏값)</a></li>
+                        <li><a href="#sample08">08. 배열 메서드 : slice() : 배열 요소를 다른 요소로 변경 : 반환(배열) : ★★★</a></li>
+                        <li><a href="#sample09">09. 배열 메서드 : splice() : 배열 요소를 다른 요소로 변경 : 반환(배열) : ★★★</a></li>
+                        <li><a href="#sample10">10. 배열 메서드 : indexof() : 배열 요소를 검색할 때 : 반환(숫자)</a></li>
+                        <li><a href="#sample10">10. 배열 메서드 : lastIndexof() : 배열 요소를 끝에서 검색할 때 : 반환(숫자)</a></li>
+                        <li><a href="#sample10">10. 배열 메서드 : include() : 배열 요소를 검색할 때 : 반환(불린)</a></li>
+                        <li><a href="#sample11">11. 배열 메서드 : find() : 배열 요소를 검색할 때 : 반환(요소) : ★★★</a></li>
+                        <li><a href="#sample11">11. 배열 메서드 : findIndex() : 배열 요소를 검색할 때 : 반환(숫자) : ★★★</a></li>
+                        <li><a href="#sample12">12. 배열 메서드 : filter() : 조건에 만족하는 배열 요소 검색할 떄 : 반환(배열) : ★★★</a></li>
+                        <li><a href="#sample13">13. 배열 메서드 : map() : 배열 요소를 추출하여 새로운 배열로 만듬 : 반환(배열) : ★★★</a></li>
+                        <li><a href="#sample14">14. 배열 메서드 : Array.from() : 문자열을 배열 반환 : 반환(배열)</a></li>
+                    </ul>
+                </div>
+                <div class="main_sample">
+                    <div id="sample01" class="sample">
+                        <h3>01. 배열 속성 : length : 배열 길이 구하기</h3>
+                        <p>length 속성은 배열의 길이를 반환합니다.</p>
+                        <div class="table">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 4%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 22%" />
+                                    <col style="width: 42%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>기본값</th>
+                                        <th>메서드</th>
+                                        <th>리턴값</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="smple01_N1"></td>
+                                        <td class="smple01_Q1"></td>
+                                        <td class="smple01_M1"></td>
+                                        <td class="smple01_P1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple01_N2"></td>
+                                        <td class="smple01_Q2"></td>
+                                        <td class="smple01_M2"></td>
+                                        <td class="smple01_P2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple01_N3"></td>
+                                        <td class="smple01_Q3"></td>
+                                        <td class="smple01_M3"></td>
+                                        <td class="smple01_P3"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="script">
+                            <pre><code class="language-js">//01
+const arrNum = [100, 200, 300, 400, 500];
+//02
+const arrTxt = ['a', 'b', 'c', 'd', 'e', 'f'];
+//03
+const arr = [1, 2, ['c', 'd']];
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- //sample01 -->
+                    <div id="sample02" class="sample">
+                        <h3>02. 배열 메서드 : join() : 배열 요소 문자열을 결합 : 반환(문자열)</h3>
+                        <p>join() 메서드는 배열의 모든 요소를 연결해 하나의 문자열로 만듭니다.</p>
+                        <div class="table">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 4%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 22%" />
+                                    <col style="width: 42%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>기본값</th>
+                                        <th>메서드</th>
+                                        <th>리턴값</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="smple02_N1"></td>
+                                        <td class="smple02_Q1"></td>
+                                        <td class="smple02_M1"></td>
+                                        <td class="smple02_P1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple02_N2"></td>
+                                        <td class="smple02_Q2"></td>
+                                        <td class="smple02_M2"></td>
+                                        <td class="smple02_P2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple02_N3"></td>
+                                        <td class="smple02_Q3"></td>
+                                        <td class="smple02_M3"></td>
+                                        <td class="smple02_P3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple02_N4"></td>
+                                        <td class="smple02_Q4"></td>
+                                        <td class="smple02_M4"></td>
+                                        <td class="smple02_P4"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="script">
+                            <pre><code class="language-js">const arrNum = [100, 200, 300, 400, 500];
+//01
+const text1 = arrNum.join("");
+//02
+const text2 = arrNum.join(" ");
+//03
+const text3 = arrNum.join("★");
+//04
+const text4 = arrNum.join("-");
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- //sample02 -->
+                    <div id="sample03" class="sample">
+                        <h3>03. 배열 메서드 : push() / pop()</h3>
+                        <p>
+                            push() 매서드는 마지막 요소에 추가하며, 전체길이값을 반환합니다.<br />
+                            pop()매서드는 마지막 요소를 제거하고 그 요소를 반환합니다.
+                        </p>
+                        <div class="table">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 4%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 23%" />
+                                    <col style="width: 13%" />
+                                    <col style="width: 37%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>기본값</th>
+                                        <th>메서드</th>
+                                        <th>리턴값</th>
+                                        <th>결과값</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="smple03_N1"></td>
+                                        <td class="smple03_Q1"></td>
+                                        <td class="smple03_M1"></td>
+                                        <td class="smple03_P1"></td>
+                                        <td class="smple03_A1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple03_N2"></td>
+                                        <td class="smple03_Q2"></td>
+                                        <td class="smple03_M2"></td>
+                                        <td class="smple03_P2"></td>
+                                        <td class="smple03_A2"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="script">
+                            <pre><code class="language-js">//01
+const arrNum = [100, 200, 300, 400, 500];
+const arrPush = arrNum.push(600);
+//02
+const arrNum2 = [100, 200, 300, 400, 500];
+const arrPop = arrNum2.pop();
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- //sample03 -->
+                    <div id="sample04" class="sample">
+                        <h3>04. 배열 메서드 : unshift() / shift()</h3>
+                        <p>
+                            unshift() 메서드는 배열 처음 요소에 추가<br />
+                            shift() 메서드는 배열 처음 요소에 삭제
+                        </p>
+                        <div class="table">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 4%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 23%" />
+                                    <col style="width: 13%" />
+                                    <col style="width: 37%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>기본값</th>
+                                        <th>메서드</th>
+                                        <th>리턴값</th>
+                                        <th>결과값</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="smple04_N1"></td>
+                                        <td class="smple04_Q1"></td>
+                                        <td class="smple04_M1"></td>
+                                        <td class="smple04_P1"></td>
+                                        <td class="smple04_A1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple04_N2"></td>
+                                        <td class="smple04_Q2"></td>
+                                        <td class="smple04_M2"></td>
+                                        <td class="smple04_P2"></td>
+                                        <td class="smple04_A2"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="script">
+                            <pre><code class="language-js">// 01
+const arrNum = [100, 200, 300, 400, 500];
+const arrUnshift = arrNum.unshift(600);
+// 02
+const arrNum2 = [100, 200, 300, 400, 500];
+const arrShift = arrNum2.shift();
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- //sample04 -->
+                    <div id="sample05" class="sample">
+                        <h3>05. 배열 메서드 : reverse() / sort()</h3>
+                        <p>reverse() 메서드는 배열 요소의 순서를 반대로 정렬 sort 메서드는 배열 정렬</p>
+                        <div class="table">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 5%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 32%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>기본값</th>
+                                        <th>메서드</th>
+                                        <th>리턴값</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="smple05_N1"></td>
+                                        <td class="smple05_Q1"></td>
+                                        <td class="smple05_M1"></td>
+                                        <td class="smple05_P1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple05_N2"></td>
+                                        <td class="smple05_Q2"></td>
+                                        <td class="smple05_M2"></td>
+                                        <td class="smple05_P2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple05_N3"></td>
+                                        <td class="smple05_Q3"></td>
+                                        <td class="smple05_M3"></td>
+                                        <td class="smple05_P3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple05_N4"></td>
+                                        <td class="smple05_Q4"></td>
+                                        <td class="smple05_M4"></td>
+                                        <td class="smple05_P4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple05_N5"></td>
+                                        <td class="smple05_Q5"></td>
+                                        <td class="smple05_M5"></td>
+                                        <td class="smple05_P5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple05_N6"></td>
+                                        <td class="smple05_Q6"></td>
+                                        <td class="smple05_M6"></td>
+                                        <td class="smple05_P6"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="script">
+                            <pre><code class="language-js">// 01
+const arrNum = [100, 200, 300, 400, 500];
+const arrReverse = arrNum.reverse();
+// 02
+const arrNum2 = [100, 200, 200, 300, 400, 500];
+const arrSort = arrNum2.sort();
+// 03
+const arrNum3 = [500, 400, 300, 200, 100];
+const arrSort3 = arrNum3.sort( (a, b) => b - a );
+// 04
+const arrNum4 = [500, 400, 300, 200, 100];
+const arrSort4 = arrNum4.sort( (a, b) => a - b );
+// 05
+const arrNum5 = ['t','d','e','a','b'];
+const arrSort5 = arrNum5.sort( (a, b) => a.localeCompare(b) );
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- //sample05 -->
+                    <div id="sample06" class="sample">
+                        <h3>06. 배열 메서드 : concat() : 펼침연산자</h3>
+                        <p>concat() 매서드는 배열요소를 결합시킵니다.</p>
+                        <div class="table">
+                            <div class="table">
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 5%" />
+                                        <col style="width: 32%" />
+                                        <col style="width: 32%" />
+                                        <col style="width: 32%" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>번호</th>
+                                            <th>기본값</th>
+                                            <th>메서드</th>
+                                            <th>리턴값</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="smple06_N1"></td>
+                                            <td class="smple06_Q1"></td>
+                                            <td class="smple06_M1"></td>
+                                            <td class="smple06_P1"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="smple06_N2"></td>
+                                            <td class="smple06_Q2"></td>
+                                            <td class="smple06_M2"></td>
+                                            <td class="smple06_P2"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="script">
+                            <pre><code class="language-js">//01
+const arrNum1 = [100, 200, 300];
+const arrNum2 = [400, 500, 600];
+const arrConcat = arrNum1.concat(arrNum2);
+//02
+const arrSpered = [...arrNum1, ...arrNum2];
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- //sample06 -->
+                    <div id="sample07" class="sample">
+                        <h3>07. 배열 메서드 : reduce() / reduceRight()</h3>
+                        <p>
+                            reduce() 매서드는 메서드는 배열의 각 요소에 대해 주어진 reducer 함수를 실행하고, 하나의 결과값을 반환합니다. <br />
+                            reduceRight() 매서드는 메서드는 배열의 각 요소에 대해 주어진 reducer 함수를 실행하고, 하나의 결과값을 반환합니다.
+                        </p>
+                        <div class="table">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 5%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 32%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>기본값</th>
+                                        <th>메서드</th>
+                                        <th>리턴값</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="smple07_N1"></td>
+                                        <td class="smple07_Q1"></td>
+                                        <td class="smple07_M1"></td>
+                                        <td class="smple07_P1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple07_N2"></td>
+                                        <td class="smple07_Q2"></td>
+                                        <td class="smple07_M2"></td>
+                                        <td class="smple07_P2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple07_N3"></td>
+                                        <td class="smple07_Q3"></td>
+                                        <td class="smple07_M3"></td>
+                                        <td class="smple07_P3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple07_N4"></td>
+                                        <td class="smple07_Q4"></td>
+                                        <td class="smple07_M4"></td>
+                                        <td class="smple07_P4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple07_N5"></td>
+                                        <td class="smple07_Q5"></td>
+                                        <td class="smple07_M5"></td>
+                                        <td class="smple07_P5"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="script">
+                            <pre><code class="language-js">//01
+const arrNum1 = [100, 200, 300, 400, 500];
+const arrReduce1 = arrNum1.reduce((element) => element);
+
+//02
+const arrNum2 = [100, 200, 300, 400, 500];
+const arrReduce2 = arrNum1.reduce((p, c) => p + c);
+
+//03
+const arrNum3 = [100, 200, 300, 400, 500];
+let sum = 0;
+for (let i = 0; i &lt arrNum2.length; i++) sum += arrNum3[i];
+    
+//04 
+const arrNum4 = [
+    [100, 200],
+    [300, 400],
+];
+const arrReduce4 = arrNum4.reduce((p, c) => p.concat(c));
+    
+//05
+const arrNum5 = ["javascript", "react", "vue"];
+const arrReduce5 = arrNum5.reduceRight((p, c) => p + c);
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- //sample07 -->
+                    <div id="sample08" class="sample">
+                        <h3>08. 배열 메서드 : slice()</h3>
+                        <p>slice() 메서드는 어떤 배열의 begin부터 end까지(end 미포함)에 대한 얕은 복사본을 새로운 배열 객체로 반환합니다. 원본 배열은 바뀌지 않습니다.</p>
+                        <div class="table">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 5%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 32%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>기본값</th>
+                                        <th>메서드</th>
+                                        <th>리턴값</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="smple08_N1"></td>
+                                        <td class="smple08_Q1"></td>
+                                        <td class="smple08_M1"></td>
+                                        <td class="smple08_P1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple08_N2"></td>
+                                        <td class="smple08_Q2"></td>
+                                        <td class="smple08_M2"></td>
+                                        <td class="smple08_P2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple08_N3"></td>
+                                        <td class="smple08_Q3"></td>
+                                        <td class="smple08_M3"></td>
+                                        <td class="smple08_P3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple08_N4"></td>
+                                        <td class="smple08_Q4"></td>
+                                        <td class="smple08_M4"></td>
+                                        <td class="smple08_P4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple08_N5"></td>
+                                        <td class="smple08_Q5"></td>
+                                        <td class="smple08_M5"></td>
+                                        <td class="smple08_P5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple08_N6"></td>
+                                        <td class="smple08_Q6"></td>
+                                        <td class="smple08_M6"></td>
+                                        <td class="smple08_P6"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="script">
+                            <pre><code class="language-js">//01
+const arrNum1 = [100, 200, 300, 400, 500];
+const result = arrNum1.slice(2);
+
+//02
+const result2 = arrNum1.slice(3);
+ 
+//03
+const result3 = arrNum1.slice(2, 4);
+                
+//04
+const result4 = arrNum1.slice(2, 5);
+
+//05
+const result5 = arrNum1.slice(-2);
+
+//06
+const result6 = arrNum1.slice(-2, 5);
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- //sample08 -->
+                    <div id="sample09" class="sample">
+                        <h3>09. 배열 메서드 : splice() : 배열 요소를 다른 요소로 변경</h3>
+                        <p>splice() 메서드는 배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경합니다.</p>
+                        <div class="table">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 4%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 23%" />
+                                    <col style="width: 13%" />
+                                    <col style="width: 37%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>기본값</th>
+                                        <th>메서드</th>
+                                        <th>리턴값</th>
+                                        <th>결과값</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="smple09_N1"></td>
+                                        <td class="smple09_Q1"></td>
+                                        <td class="smple09_M1"></td>
+                                        <td class="smple09_P1"></td>
+                                        <td class="smple09_A1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple09_N2"></td>
+                                        <td class="smple09_Q2"></td>
+                                        <td class="smple09_M2"></td>
+                                        <td class="smple09_P2"></td>
+                                        <td class="smple09_A2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple09_N3"></td>
+                                        <td class="smple09_Q3"></td>
+                                        <td class="smple09_M3"></td>
+                                        <td class="smple09_P3"></td>
+                                        <td class="smple09_A3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple09_N4"></td>
+                                        <td class="smple09_Q4"></td>
+                                        <td class="smple09_M4"></td>
+                                        <td class="smple09_P4"></td>
+                                        <td class="smple09_A4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple09_N5"></td>
+                                        <td class="smple09_Q5"></td>
+                                        <td class="smple09_M5"></td>
+                                        <td class="smple09_P5"></td>
+                                        <td class="smple09_A5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple09_N6"></td>
+                                        <td class="smple09_Q6"></td>
+                                        <td class="smple09_M6"></td>
+                                        <td class="smple09_P6"></td>
+                                        <td class="smple09_A6"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="script">
+                            <pre><code class="language-js">//01
+const arrNum1 = [100, 200, 300, 400, 500];
+const result = arrNum1.splice(2);
+ 
+//02
+const arrNum2 = [100, 200, 300, 400, 500];
+const result2 = arrNum2.splice(2, 3);
+
+//03
+const arrNum3 = [100, 200, 300, 400, 500];
+const result3 = arrNum3.splice(2, 3, "javascript");
+ 
+//04
+const arrNum4 = [100, 200, 300, 400, 500];
+const result4 = arrNum4.splice(1, 1, "javascript");
+                
+//05
+const arrNum5 = [100, 200, 300, 400, 500];
+const result5 = arrNum5.splice(1, 0, "javascript");
+          
+//06
+const arrNum6 = [100, 200, 300, 400, 500];
+const result6 = arrNum6.splice(0, 4, "javascript");
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- //sample09 -->
+                    <div id="sample10" class="sample">
+                        <h3>10. 배열 메서드 : indexof() / lastIndexof() / includes()</h3>
+                        <p>indexof(),lastIndexof()메서드는 문자열에서 특정 문자의 위치를 찾고 숫자를 반환합니다.</p>
+                        <div class="table">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 5%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 32%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>기본값</th>
+                                        <th>메서드</th>
+                                        <th>리턴값</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="smple10_N1"></td>
+                                        <td class="smple10_Q1"></td>
+                                        <td class="smple10_M1"></td>
+                                        <td class="smple10_P1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple10_N2"></td>
+                                        <td class="smple10_Q2"></td>
+                                        <td class="smple10_M2"></td>
+                                        <td class="smple10_P2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple10_N3"></td>
+                                        <td class="smple10_Q3"></td>
+                                        <td class="smple10_M3"></td>
+                                        <td class="smple10_P3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple10_N4"></td>
+                                        <td class="smple10_Q4"></td>
+                                        <td class="smple10_M4"></td>
+                                        <td class="smple10_P4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple10_N5"></td>
+                                        <td class="smple10_Q5"></td>
+                                        <td class="smple10_M5"></td>
+                                        <td class="smple10_P5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple10_N6"></td>
+                                        <td class="smple10_Q6"></td>
+                                        <td class="smple10_M6"></td>
+                                        <td class="smple10_P6"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="script">
+                            <pre><code class="language-js">//01
+const arrNum1 = [100, 200, 300, 400, 500];
+const arrIndex = arrNum1.indexOf(200);
+
+//02
+const arrNum2 = [100, 200, 300, 400, 500];
+const arrIndex2 = arrNum2.indexOf(300);
+                
+//03                
+const arrNum3 = [100, 200, 300, 400, 500];
+const arrIndex3 = arrNum3.indexOf(600);
+                
+//04                
+const arrNum4 = [100, 200, 300, 400, 200];
+const arrIndex4 = arrNum4.lastIndexOf(200);
+                
+//05                
+const arrNum5 = [100, 200, 300, 400, 200];
+const arrIndex5 = arrNum5.lastIndexOf(600);
+                
+//06      
+const arrNum6 = [100, 200, 300, 400, 200];
+const arrIndex6 = arrNum6.includes(600);
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- //sample10 -->
+                    <div id="sample11" class="sample">
+                        <h3>11. 배열 메서드 : find() / findIndex()</h3>
+                        <p>
+                            find()메서드는 주어진 판별 함수를 만족하는 첫 번째 요소의 값을 반환합니다. 그런 요소가 없다면 undefined를 반환합니다.<br />
+                            findIndex() 메서드는 주어진 판별 함수를 만족하는 배열의 첫 번째 요소에 대한 인덱스를 반환합니다. 만족하는 요소가 없으면 -1을 반환합니다.
+                        </p>
+                        <div class="table">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 5%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 32%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>기본값</th>
+                                        <th>메서드</th>
+                                        <th>리턴값</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="smple11_N1"></td>
+                                        <td class="smple11_Q1"></td>
+                                        <td class="smple11_M1"></td>
+                                        <td class="smple11_P1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple11_N2"></td>
+                                        <td class="smple11_Q2"></td>
+                                        <td class="smple11_M2"></td>
+                                        <td class="smple11_P2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple11_N3"></td>
+                                        <td class="smple11_Q3"></td>
+                                        <td class="smple11_M3"></td>
+                                        <td class="smple11_P3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple11_N4"></td>
+                                        <td class="smple11_Q4"></td>
+                                        <td class="smple11_M4"></td>
+                                        <td class="smple11_P4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple11_N5"></td>
+                                        <td class="smple11_Q5"></td>
+                                        <td class="smple11_M5"></td>
+                                        <td class="smple11_P5"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="script">
+                            <pre><code class="language-js">//01
+const arrNum1 = [100, 200, 300, 400, 500];
+const result1 = arrNum1.find((e) => e === 300);
+                          
+//02
+const arrNum2 = [100, 200, 300, 400, 500];
+const result2 = arrNum2.find((e) => e === 600);
+                
+//03               
+const arrText = ["javascript", "jquery", "react"];
+const result3 = arrText.find((e) => e === "javascript");
+                
+//04               
+const result4 = arrText.findIndex((e) => e === "javascript");
+                
+//05            
+const result5 = arrText.findIndex((e) => e === "html");
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- //sample11 -->
+                    <div id="sample12" class="sample">
+                        <h3>12. 배열 메서드 : filter()</h3>
+                        <p>filter() 메서드는 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다.</p>
+                        <div class="table">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 5%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 32%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>기본값</th>
+                                        <th>메서드</th>
+                                        <th>리턴값</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="smple12_N1"></td>
+                                        <td class="smple12_Q1"></td>
+                                        <td class="smple12_M1"></td>
+                                        <td class="smple12_P1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple12_N2"></td>
+                                        <td class="smple12_Q2"></td>
+                                        <td class="smple12_M2"></td>
+                                        <td class="smple12_P2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple12_N3"></td>
+                                        <td class="smple12_Q3"></td>
+                                        <td class="smple12_M3"></td>
+                                        <td class="smple12_P3"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="script">
+                            <pre><code class="language-js">//01
+ const arrNum1 = [100, 200, 300, 400, 500];
+ const result1 = arrNum1.filter((e) => e === 300);
+                
+ //02                              
+ const arrNum2 = [100, 200, 300, 400, 500];
+ const result2 = arrNum2.filter((e) => e === 600);
+                
+ //03            
+ const arrNum3 = [100, 200, 300, 400, 500];
+ const result3 = arrNum3.filter((e) => e >= 300);
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- //sample12 -->
+                    <div id="sample13" class="sample">
+                        <h3>13. 배열 메서드 : map()</h3>
+                        <p>map() 메서드는 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다.</p>
+                        <div class="table">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 5%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 32%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>기본값</th>
+                                        <th>메서드</th>
+                                        <th>리턴값</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="smple13_N1"></td>
+                                        <td class="smple13_Q1"></td>
+                                        <td class="smple13_M1"></td>
+                                        <td class="smple13_P1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple13_N2"></td>
+                                        <td class="smple13_Q2"></td>
+                                        <td class="smple13_M2"></td>
+                                        <td class="smple13_P2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple13_N3"></td>
+                                        <td class="smple13_Q3"></td>
+                                        <td class="smple13_M3"></td>
+                                        <td class="smple13_P3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple13_N4"></td>
+                                        <td class="smple13_Q4"></td>
+                                        <td class="smple13_M4"></td>
+                                        <td class="smple13_P4"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="script">
+                            <pre><code class="language-js">//01
+const arrNum1 = [100, 200, 300, 400, 500];
+const result1 = arrNum1.map((e) => e);
+ 
+//02
+const arrNum2 = [100, 200, 300, 400, 500];
+const result2 = arrNum2.map((e) => e + "j");
+                
+//03                
+const arrNum3 = [100, 200, 300, 400, 500];
+const result3 = arrNum3.map((e) => e + 100);
+
+//04
+const arrNum4 = [{ a: 100 }, { a: 200 }, { a: 300 }];
+const result4 = arrNum4.map((e) => e.a);
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- //sample13 -->
+                    <div id="sample14" class="sample">
+                        <h3>14. 배열 메서드 : Array.from()</h3>
+                        <p>Array.from() 메서드는 유사 배열 객체(array-like object)나 반복 가능한 객체(iterable object)를 얕게 복사해 새로운Array 객체를 만듭니다.</p>
+                        <div class="table">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 5%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 32%" />
+                                    <col style="width: 32%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>기본값</th>
+                                        <th>메서드</th>
+                                        <th>리턴값</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="smple14_N1"></td>
+                                        <td class="smple14_Q1"></td>
+                                        <td class="smple14_M1"></td>
+                                        <td class="smple14_P1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple14_N2"></td>
+                                        <td class="smple14_Q2"></td>
+                                        <td class="smple14_M2"></td>
+                                        <td class="smple14_P2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="smple14_N3"></td>
+                                        <td class="smple14_Q3"></td>
+                                        <td class="smple14_M3"></td>
+                                        <td class="smple14_P3"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="script">
+                            <pre><code class="language-js">//01
+const text1 = "javascript";
+const result1 = Array.from(text1);
+
+//02
+const text2 = "javascript";
+const result2 = Array.from(text2, (el) => el + "10");
+
+//03
+const text3 = "javascript";
+const result3 = [...text3].map((el) => el);
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- //sample14 -->
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+        </footer>
+        <!-- //footer -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script>
+            //01
+            {
+                const arrNum = [100, 200, 300, 400, 500];
+
+                document.querySelector(".smple01_N1").innerHTML = "1";
+                document.querySelector(".smple01_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple01_M1").innerHTML = "arrNum.length";
+                document.querySelector(".smple01_P1").innerHTML = arrNum.length;
+
+                const arrTxt = ["a", "b", "c", "d", "e", "f"];
+                document.querySelector(".smple01_N2").innerHTML = "2";
+                document.querySelector(".smple01_Q2").innerHTML = "['a', 'b', 'c', 'd', 'e', 'f']";
+                document.querySelector(".smple01_M2").innerHTML = "arrTxt.length";
+                document.querySelector(".smple01_P2").innerHTML = arrTxt.length;
+
+                const arr = [1, 2, ["c", "d"]];
+                document.querySelector(".smple01_N3").innerHTML = "3";
+                document.querySelector(".smple01_Q3").innerHTML = "[1, 2, ['c', 'd']]";
+                document.querySelector(".smple01_M3").innerHTML = "arr.length";
+                document.querySelector(".smple01_P3").innerHTML = arr.length;
+            }
+            //02
+            {
+                const arrNum = [100, 200, 300, 400, 500];
+                const text1 = arrNum.join("");
+                const text2 = arrNum.join(" ");
+                const text3 = arrNum.join("★");
+                const text4 = arrNum.join("-");
+
+                document.querySelector(".smple02_N1").innerHTML = "1";
+                document.querySelector(".smple02_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple02_M1").innerHTML = "join('')";
+                document.querySelector(".smple02_P1").innerHTML = text1;
+
+                document.querySelector(".smple02_N2").innerHTML = "2";
+                document.querySelector(".smple02_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple02_M2").innerHTML = "join(' ')";
+                document.querySelector(".smple02_P2").innerHTML = text2;
+
+                document.querySelector(".smple02_N3").innerHTML = "3";
+                document.querySelector(".smple02_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple02_M3").innerHTML = "join('★')";
+                document.querySelector(".smple02_P3").innerHTML = text3;
+
+                document.querySelector(".smple02_N4").innerHTML = "4";
+                document.querySelector(".smple02_Q4").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple02_M4").innerHTML = "join('-')";
+                document.querySelector(".smple02_P4").innerHTML = text4;
+            }
+            //03
+            {
+                const arrNum = [100, 200, 300, 400, 500];
+                const arrPush = arrNum.push(600);
+
+                document.querySelector(".smple03_N1").innerHTML = "1";
+                document.querySelector(".smple03_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple03_M1").innerHTML = "push(600)";
+                document.querySelector(".smple03_P1").innerHTML = arrPush; //6
+                document.querySelector(".smple03_A1").innerHTML = arrNum; //100, 200, 300, 400, 500, 600
+
+                const arrNum2 = [100, 200, 300, 400, 500];
+                const arrPop = arrNum2.pop();
+
+                document.querySelector(".smple03_N2").innerHTML = "2";
+                document.querySelector(".smple03_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple03_M2").innerHTML = "pop()";
+                document.querySelector(".smple03_P2").innerHTML = arrPop; //500
+                document.querySelector(".smple03_A2").innerHTML = arrNum2; //100, 200, 300, 400
+            }
+            // 04 unshift() : 배열 처음 요소에 추가 : 반환(숫자) 여기부터 정리
+            // 04 shift() : 배열 처음 요소에 삭제 : 반환(숫자)
+            {
+                const arrNum = [100, 200, 300, 400, 500];
+                const arrUnshift = arrNum.unshift(600);
+
+                document.querySelector(".smple04_N1").innerHTML = "1";
+                document.querySelector(".smple04_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple04_M1").innerHTML = "unshift(600)";
+                document.querySelector(".smple04_P1").innerHTML = arrUnshift; //6
+                document.querySelector(".smple04_A1").innerHTML = arrNum; //600, 100, 200, 300, 400, 500
+
+                const arrNum2 = [100, 200, 300, 400, 500];
+                const arrShift = arrNum2.shift();
+
+                document.querySelector(".smple04_N2").innerHTML = "1";
+                document.querySelector(".smple04_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple04_M2").innerHTML = "shift()";
+                document.querySelector(".smple04_P2").innerHTML = arrShift; //500
+                document.querySelector(".smple04_A2").innerHTML = arrNum2; //200, 300, 400, 500
+            }
+            // 05 reverse() : 배열 요소의 순서를 반대로 정렬
+            {
+                const arrNum = [100, 200, 300, 400, 500];
+                const arrReverse = arrNum.reverse();
+
+                document.querySelector(".smple05_N1").innerHTML = "1";
+                document.querySelector(".smple05_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple05_M1").innerHTML = "reverse()";
+                document.querySelector(".smple05_P1").innerHTML = arrReverse; // 500, 400, 300, 200, 100
+
+                const arrNum2 = [100, 200, 200, 300, 400, 500];
+                const arrSort = arrNum2.sort();
+
+                document.querySelector(".smple05_N2").innerHTML = "2";
+                document.querySelector(".smple05_Q2").innerHTML = "[100, 200, 200, 300, 400, 500]";
+                document.querySelector(".smple05_M2").innerHTML = "sort()";
+                document.querySelector(".smple05_P2").innerHTML = arrSort; // 100, 200, 200, 300, 400, 500
+
+                const arrNum3 = [500, 400, 300, 200, 100];
+                const arrSort3 = arrNum3.sort((a, b) => b - a);
+
+                document.querySelector(".smple05_N3").innerHTML = "3";
+                document.querySelector(".smple05_Q3").innerHTML = "[100, 200, 200, 300, 400, 500]";
+                document.querySelector(".smple05_M3").innerHTML = "sort((a, b) => b - a)";
+                document.querySelector(".smple05_P3").innerHTML = arrSort3; // 500, 400, 300, 200, 100
+
+                const arrNum4 = [500, 400, 300, 200, 100];
+                const arrSort4 = arrNum4.sort((a, b) => a - b);
+
+                document.querySelector(".smple05_N4").innerHTML = "4";
+                document.querySelector(".smple05_Q4").innerHTML = "[500, 400, 300, 200, 100]";
+                document.querySelector(".smple05_M4").innerHTML = "sort((a, b) => a - b)";
+                document.querySelector(".smple05_P4").innerHTML = arrSort4; // 100, 200, 200, 300, 400, 500
+
+                const arrNum5 = ["t", "d", "e", "a", "b"];
+                const arrSort5 = arrNum5.sort((a, b) => a.localeCompare(b));
+
+                document.querySelector(".smple05_N5").innerHTML = "5";
+                document.querySelector(".smple05_Q5").innerHTML = "[500, 400, 300, 200, 100]";
+                document.querySelector(".smple05_M5").innerHTML = "sort((a, b) => a.localeCompare(b))";
+                document.querySelector(".smple05_P5").innerHTML = arrSort5; // 100, 200, 200, 300, 400, 500
+
+                const arrNum6 = ["t", "d", "e", "a", "b"];
+                const arrSort6 = arrNum6.sort((a, b) => b.localeCompare(a));
+
+                document.querySelector(".smple05_N6").innerHTML = "6";
+                document.querySelector(".smple05_Q6").innerHTML = "[500, 400, 300, 200, 100]";
+                document.querySelector(".smple05_M6").innerHTML = "sort((a, b) => a.localeCompare(b))";
+                document.querySelector(".smple05_P6").innerHTML = arrSort6; // 100, 200, 200, 300, 400, 500
+            }
+            //06
+            {
+                const arrNum1 = [100, 200, 300];
+                const arrNum2 = [400, 500, 600];
+                const arrConcat = arrNum1.concat(arrNum2);
+
+                document.querySelector(".smple06_N1").innerHTML = "1";
+                document.querySelector(".smple06_Q1").innerHTML = "[100, 200, 300], [400, 500, 600]";
+                document.querySelector(".smple06_M1").innerHTML = "arrNum1.concat(arrNum2)";
+                document.querySelector(".smple06_P1").innerHTML = arrConcat;
+
+                const arrSpered = [...arrNum1, ...arrNum2];
+
+                document.querySelector(".smple06_N2").innerHTML = "2";
+                document.querySelector(".smple06_Q2").innerHTML = "[100, 200, 300], [400, 500, 600]";
+                document.querySelector(".smple06_M2").innerHTML = "arrSpered = [...arrNum1, ...arrNum2]";
+                document.querySelector(".smple06_P2").innerHTML = arrSpered;
+            }
+            //07
+            {
+                const arrNum1 = [100, 200, 300, 400, 500];
+                const arrReduce1 = arrNum1.reduce((element) => element);
+
+                document.querySelector(".smple07_N1").innerHTML = "1";
+                document.querySelector(".smple07_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple07_M1").innerHTML = "arrNum1.reduce((element) => element)";
+                document.querySelector(".smple07_P1").innerHTML = arrReduce1;
+
+                const arrNum2 = [100, 200, 300, 400, 500];
+                const arrReduce2 = arrNum1.reduce((p, c) => p + c);
+
+                document.querySelector(".smple07_N2").innerHTML = "2";
+                document.querySelector(".smple07_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple07_M2").innerHTML = "arrNum1.reduce((p, c) => p + c)";
+                document.querySelector(".smple07_P2").innerHTML = arrReduce2;
+
+                const arrNum3 = [100, 200, 300, 400, 500];
+                let sum = 0;
+                let sum2 = 0;
+                for (let i = 0; i < arrNum2.length; i++) sum += arrNum3[i];
+
+                document.querySelector(".smple07_N3").innerHTML = "3";
+                document.querySelector(".smple07_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple07_M3").innerHTML = "for()";
+                document.querySelector(".smple07_P3").innerHTML = sum;
+
+                const arrNum4 = [
+                    [100, 200],
+                    [300, 400],
+                ];
+                const arrReduce4 = arrNum4.reduce((p, c) => p.concat(c));
+                document.querySelector(".smple07_N4").innerHTML = "4";
+                document.querySelector(".smple07_Q4").innerHTML = "[100, 200], 300, 400]";
+                document.querySelector(".smple07_M4").innerHTML = "reduce((p, c) => p.concat(c)";
+                document.querySelector(".smple07_P4").innerHTML = arrReduce4;
+
+                const arrNum5 = ["javascript", "react", "vue"];
+                const arrReduce5 = arrNum5.reduceRight((p, c) => p + c);
+                document.querySelector(".smple07_N5").innerHTML = "5";
+                document.querySelector(".smple07_Q5").innerHTML = "[javascript, react, vue]";
+                document.querySelector(".smple07_M5").innerHTML = "arrNum4.reduceRight((p, c) => p + c)";
+                document.querySelector(".smple07_P5").innerHTML = arrReduce5;
+            }
+            //08
+            {
+                const arrNum1 = [100, 200, 300, 400, 500];
+                const result = arrNum1.slice(2);
+
+                document.querySelector(".smple08_N1").innerHTML = "1";
+                document.querySelector(".smple08_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple08_M1").innerHTML = "arrNum1.slice(2)";
+                document.querySelector(".smple08_P1").innerHTML = result;
+
+                const result2 = arrNum1.slice(3);
+
+                document.querySelector(".smple08_N2").innerHTML = "2";
+                document.querySelector(".smple08_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple08_M2").innerHTML = "arrNum1.slice(3)";
+                document.querySelector(".smple08_P2").innerHTML = result2;
+
+                const result3 = arrNum1.slice(2, 4);
+
+                document.querySelector(".smple08_N3").innerHTML = "3";
+                document.querySelector(".smple08_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple08_M3").innerHTML = "arrNum1.slice(2, 4)";
+                document.querySelector(".smple08_P3").innerHTML = result3;
+
+                const result4 = arrNum1.slice(2, 5);
+
+                document.querySelector(".smple08_N4").innerHTML = "4";
+                document.querySelector(".smple08_Q4").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple08_M4").innerHTML = "arrNum1.slice(2, 5)";
+                document.querySelector(".smple08_P4").innerHTML = result4;
+
+                const result5 = arrNum1.slice(-2);
+
+                document.querySelector(".smple08_N5").innerHTML = "5";
+                document.querySelector(".smple08_Q5").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple08_M5").innerHTML = "arrNum1.slice(-2)";
+                document.querySelector(".smple08_P5").innerHTML = result5;
+
+                const result6 = arrNum1.slice(-2, 5);
+
+                document.querySelector(".smple08_N6").innerHTML = "6";
+                document.querySelector(".smple08_Q6").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple08_M6").innerHTML = "arrNum1.slice(-2, 5)";
+                document.querySelector(".smple08_P6").innerHTML = result6;
+            }
+            //09
+            {
+                const arrNum1 = [100, 200, 300, 400, 500];
+                const result = arrNum1.splice(2);
+
+                document.querySelector(".smple09_N1").innerHTML = "1";
+                document.querySelector(".smple09_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple09_M1").innerHTML = "arrNum1.slice(2)";
+                document.querySelector(".smple09_P1").innerHTML = result;
+                document.querySelector(".smple09_A1").innerHTML = arrNum1;
+
+                const arrNum2 = [100, 200, 300, 400, 500];
+                const result2 = arrNum2.splice(2, 3);
+
+                document.querySelector(".smple09_N2").innerHTML = "2";
+                document.querySelector(".smple09_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple09_M2").innerHTML = "arrNum2.slice(2, 3)";
+                document.querySelector(".smple09_P2").innerHTML = result;
+                document.querySelector(".smple09_A2").innerHTML = arrNum2;
+
+                const arrNum3 = [100, 200, 300, 400, 500];
+                const result3 = arrNum3.splice(2, 3, "javascript");
+
+                document.querySelector(".smple09_N3").innerHTML = "3";
+                document.querySelector(".smple09_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple09_M3").innerHTML = "arrNum3.slice(2, 3, 'javascript')";
+                document.querySelector(".smple09_P3").innerHTML = result3;
+                document.querySelector(".smple09_A3").innerHTML = arrNum3;
+
+                const arrNum4 = [100, 200, 300, 400, 500];
+                const result4 = arrNum4.splice(1, 1, "javascript");
+
+                document.querySelector(".smple09_N4").innerHTML = "4";
+                document.querySelector(".smple09_Q4").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple09_M4").innerHTML = "arrNum4.slice(1, 1, 'javascript')";
+                document.querySelector(".smple09_P4").innerHTML = result4;
+                document.querySelector(".smple09_A4").innerHTML = arrNum4;
+
+                const arrNum5 = [100, 200, 300, 400, 500];
+                const result5 = arrNum5.splice(1, 0, "javascript");
+
+                document.querySelector(".smple09_N5").innerHTML = "5";
+                document.querySelector(".smple09_Q5").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple09_M5").innerHTML = "arrNum5.slice(1, 0, 'javascript')";
+                document.querySelector(".smple09_P5").innerHTML = result5;
+                document.querySelector(".smple09_A5").innerHTML = arrNum5;
+
+                const arrNum6 = [100, 200, 300, 400, 500];
+                const result6 = arrNum6.splice(0, 4, "javascript");
+
+                document.querySelector(".smple09_N6").innerHTML = "6";
+                document.querySelector(".smple09_Q6").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple09_M6").innerHTML = "arrNum5.slice(0, 4, 'javascript')";
+                document.querySelector(".smple09_P6").innerHTML = result6;
+                document.querySelector(".smple09_A6").innerHTML = arrNum6;
+            }
+            //10
+            {
+                const arrNum1 = [100, 200, 300, 400, 500];
+                const arrIndex = arrNum1.indexOf(200);
+
+                document.querySelector(".smple10_N1").innerHTML = "1";
+                document.querySelector(".smple10_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple10_M1").innerHTML = "arrNum1.indexOf(200)";
+                document.querySelector(".smple10_P1").innerHTML = arrIndex;
+
+                const arrNum2 = [100, 200, 300, 400, 500];
+                const arrIndex2 = arrNum2.indexOf(300);
+
+                document.querySelector(".smple10_N2").innerHTML = "2";
+                document.querySelector(".smple10_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple10_M2").innerHTML = "arrNum2.indexOf(200)";
+                document.querySelector(".smple10_P2").innerHTML = arrIndex2;
+
+                const arrNum3 = [100, 200, 300, 400, 500];
+                const arrIndex3 = arrNum3.indexOf(600);
+
+                document.querySelector(".smple10_N3").innerHTML = "3";
+                document.querySelector(".smple10_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple10_M3").innerHTML = "arrNum3.indexOf(600)";
+                document.querySelector(".smple10_P3").innerHTML = arrIndex3;
+
+                const arrNum4 = [100, 200, 300, 400, 200];
+                const arrIndex4 = arrNum4.lastIndexOf(200);
+
+                document.querySelector(".smple10_N4").innerHTML = "4";
+                document.querySelector(".smple10_Q4").innerHTML = "[100, 200, 300, 400, 200]";
+                document.querySelector(".smple10_M4").innerHTML = "arrNum4.lastIndexOf(200)";
+                document.querySelector(".smple10_P4").innerHTML = arrIndex4;
+
+                const arrNum5 = [100, 200, 300, 400, 200];
+                const arrIndex5 = arrNum5.lastIndexOf(600);
+
+                document.querySelector(".smple10_N5").innerHTML = "5";
+                document.querySelector(".smple10_Q5").innerHTML = "[100, 200, 300, 400, 200]";
+                document.querySelector(".smple10_M5").innerHTML = "arrNum5.lastIndexOf(600)";
+                document.querySelector(".smple10_P5").innerHTML = arrIndex5;
+
+                const arrNum6 = [100, 200, 300, 400, 200];
+                const arrIndex6 = arrNum6.includes(600);
+
+                document.querySelector(".smple10_N6").innerHTML = "6";
+                document.querySelector(".smple10_Q6").innerHTML = "[100, 200, 300, 400, 200]";
+                document.querySelector(".smple10_M6").innerHTML = "arrNum6.includes(600)";
+                document.querySelector(".smple10_P6").innerHTML = arrIndex6;
+            }
+            //11
+            {
+                const arrNum1 = [100, 200, 300, 400, 500];
+                const result1 = arrNum1.find((e) => e === 300);
+
+                document.querySelector(".smple11_N1").innerHTML = "1";
+                document.querySelector(".smple11_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple11_M1").innerHTML = "arrNum1.find((e) => e === 300)";
+                document.querySelector(".smple11_P1").innerHTML = result1;
+
+                const arrNum2 = [100, 200, 300, 400, 500];
+                const result2 = arrNum2.find((e) => e === 600);
+
+                document.querySelector(".smple11_N2").innerHTML = "2";
+                document.querySelector(".smple11_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple11_M2").innerHTML = "arrNum2.find((e) => e === 600)";
+                document.querySelector(".smple11_P2").innerHTML = result2;
+
+                const arrText = ["javascript", "jquery", "react"];
+                const result3 = arrText.find((e) => e === "javascript");
+
+                document.querySelector(".smple11_N3").innerHTML = "3";
+                document.querySelector(".smple11_Q3").innerHTML = "['javascript', 'jquery', 'react']";
+                document.querySelector(".smple11_M3").innerHTML = "arrText.find((e) => e === 'javascript');";
+                document.querySelector(".smple11_P3").innerHTML = result3;
+
+                const result4 = arrText.findIndex((e) => e === "javascript");
+
+                document.querySelector(".smple11_N4").innerHTML = "4";
+                document.querySelector(".smple11_Q4").innerHTML = "['javascript', 'jquery', 'react']";
+                document.querySelector(".smple11_M4").innerHTML = "arrText.findIndex((e) => e === 'javascript')";
+                document.querySelector(".smple11_P4").innerHTML = result4;
+
+                const result5 = arrText.findIndex((e) => e === "html");
+
+                document.querySelector(".smple11_N5").innerHTML = "5";
+                document.querySelector(".smple11_Q5").innerHTML = "['javascript', 'jquery', 'react']";
+                document.querySelector(".smple11_M5").innerHTML = "arrNum5.findIndex((e) => e === 'html')";
+                document.querySelector(".smple11_P5").innerHTML = result5;
+            }
+            //12
+            {
+                const arrNum1 = [100, 200, 300, 400, 500];
+                const result1 = arrNum1.filter((e) => e === 300);
+
+                document.querySelector(".smple12_N1").innerHTML = "1";
+                document.querySelector(".smple12_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple12_M1").innerHTML = "arrNum1.filter((e) => e === 300)";
+                document.querySelector(".smple12_P1").innerHTML = result1;
+
+                const arrNum2 = [100, 200, 300, 400, 500];
+                const result2 = arrNum2.filter((e) => e === 600);
+
+                document.querySelector(".smple12_N2").innerHTML = "1";
+                document.querySelector(".smple12_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple12_M2").innerHTML = "arrNum2.filter((e) => e === 600)";
+                document.querySelector(".smple12_P2").innerHTML = result2;
+
+                const arrNum3 = [100, 200, 300, 400, 500];
+                const result3 = arrNum3.filter((e) => e >= 300);
+
+                document.querySelector(".smple12_N3").innerHTML = "1";
+                document.querySelector(".smple12_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple12_M3").innerHTML = "arrNum3.filter((e) => e >= 300)";
+                document.querySelector(".smple12_P3").innerHTML = result3;
+            }
+            //13
+            {
+                const arrNum1 = [100, 200, 300, 400, 500];
+                const result1 = arrNum1.map((e) => e);
+
+                document.querySelector(".smple13_N1").innerHTML = "1";
+                document.querySelector(".smple13_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple13_M1").innerHTML = "arrNum1.forEach((e) => e)";
+                document.querySelector(".smple13_P1").innerHTML = result1;
+
+                const arrNum2 = [100, 200, 300, 400, 500];
+                const result2 = arrNum2.map((e) => e + "j");
+
+                document.querySelector(".smple13_N2").innerHTML = "2";
+                document.querySelector(".smple13_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple13_M2").innerHTML = "arrNum2.forEach((e) => e + 'j')";
+                document.querySelector(".smple13_P2").innerHTML = result2;
+
+                const arrNum3 = [100, 200, 300, 400, 500];
+                const result3 = arrNum3.map((e) => e + 100);
+
+                document.querySelector(".smple13_N3").innerHTML = "3";
+                document.querySelector(".smple13_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple13_M3").innerHTML = "arrNum3.forEach((e) => e + 100)";
+                document.querySelector(".smple13_P3").innerHTML = result3;
+
+                const arrNum4 = [{ a: 100 }, { a: 200 }, { a: 300 }];
+                const result4 = arrNum4.map((e) => e.a);
+
+                document.querySelector(".smple13_N4").innerHTML = "4";
+                document.querySelector(".smple13_Q4").innerHTML = "[{ a: 100 }, { a: 200 }, { a: 300 }]";
+                document.querySelector(".smple13_M4").innerHTML = "arrNum4.map((e) => e.a)";
+                document.querySelector(".smple13_P4").innerHTML = result4;
+            }
+            //14
+            {
+                const text1 = "javascript";
+                const result1 = Array.from(text1);
+
+                document.querySelector(".smple14_N1").innerHTML = "1";
+                document.querySelector(".smple14_Q1").innerHTML = "'javascript'";
+                document.querySelector(".smple14_M1").innerHTML = "Array.from(text)";
+                document.querySelector(".smple14_P1").innerHTML = `[${result1}]`;
+
+                const text2 = "javascript";
+                const result2 = Array.from(text2, (el) => el + "10");
+
+                document.querySelector(".smple14_N2").innerHTML = "1";
+                document.querySelector(".smple14_Q2").innerHTML = "'javascript'";
+                document.querySelector(".smple14_M2").innerHTML = "Array.from(text2, (el) => el + '10')";
+                document.querySelector(".smple14_P2").innerHTML = `[${result2}]`;
+
+                const text3 = "javascript";
+                const result3 = [...text3].map((el) => el);
+
+                document.querySelector(".smple14_N3").innerHTML = "3";
+                document.querySelector(".smple14_Q3").innerHTML = "'javascript'";
+                document.querySelector(".smple14_M3").innerHTML = "[...text3].map((el) => el)";
+                document.querySelector(".smple14_P3").innerHTML = `[${result3}]`;
+            }
+
+            {
+                // //결과값 400, 500
+                // const number = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                // const result1 = number.slice(3, 5).join(",");
+                // console.log(result1);
+                // const number2 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                // const result2 = number2.splice(3, 2).join(",");
+                // console.log(result2);
+                // const number3 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                // const result3 = number3.filter((el) => el === 400 || el === 500).join(",");
+                // console.log(result3);
+                // const number4 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                // const result4 = number4
+                //     .map((e) => {
+                //         if (e == 400 || e == 500) {
+                //             return e;
+                //         }
+                //     })
+                //     .filter((e) => e != null)
+                //     .join(",");
+                // console.log(result4);
+                // const number5 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                // let result5 = [];
+                // result5 = number5
+                //     .slice(number5.indexOf(400), number5.indexOf(400) + 1)
+                //     .concat(number5.slice(number5.indexOf(500), number5.indexOf(500) + 1))
+                //     .join(",");
+                // console.log(result5);
+                // const number6 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                // let result6 = [];
+                // result6 = result6
+                //     .concat(
+                //         number5.find((e) => e == 400),
+                //         number5.find((e) => e == 600)
+                //     )
+                //     .join(",");
+                // console.log(result6);
+            }
+            {
+                // const num1 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+                // //b d f h k
+                // let result1 = num1
+                //     .map((e, i) => {
+                //         if ((i + 1) % 2 == 0) return e;
+                //     })
+                //     .filter((e) => e != null);
+                // console.log(Array.from(result1));
+                // const num2 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+                // let result2 = [];
+                // for (i = 0; i < num2.length; i++) {
+                //     if ((i + 1) % 2 == 0) result2 += num2.slice(i, i + 1);
+                // }
+                // console.log(Array.from(result2));
+                // const num3 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+                // let result3 = num3.filter((el) => el === "b" || el === "d" || el === "f" || el === "h" || el === "k");
+                // console.log(result3);
+                // const num4 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+                // let result4 = [];
+                // num4.forEach((el, i) => {
+                //     if ((i + 1) % 2 == 0) result4 += num4[i];
+                // });
+                // console.log(Array.from(result4));
+            }
+            {
+                const num1 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+                //ef
+                let result1 = num1.filter((el) => el === "e" || el === "f");
+                console.log(result1);
+                const num2 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+                result2 = num2.join("").match(/[e][f]/g);
+                console.log(result2);
+                const num3 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+                result3 = num3
+                    .map((e) => {
+                        if (e == "e" || e == "f") {
+                            return e;
+                        }
+                    })
+                    .filter((e) => e != null);
+                console.log(result3);
+            }
+        </script>
+    </body>
+</html>

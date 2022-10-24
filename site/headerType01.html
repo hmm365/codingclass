@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드타입</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+<body>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">사이트 유형 | 헤더유형</h2>
+            <p class="t_desc2">
+                헤더유형은 맨위에 나오는 유형입니다.
+            </p>
+            <div class="t_iframe">
+                <iframe height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F2Qhs1CeM9EOU0fm44ro7R8%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B02%3Fnode-id%3D221%253A1739" allowfullscreen></iframe>
+            </div>
+            
+            <hr>
+
+            <h3 class="t_tit2">1.HTML 코드</h3>
+            <div class="t_code">
+                <div class="t_result">
+                    <details>
+                        <summary>코드 보기</summary>
+<pre><code class="language-html">&lt;section id="headerType" class="header__wrap nexon"&gt;
+    &lt;div class="header__inner"&gt;
+        &lt;div class="header__logo"&gt;
+            &lt;a href="#"&gt;web &lt;em&gt;site&lt;/em&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;nav class="header__menu"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;헤더 영역&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;슬라이드 영역&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;배너 영역&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;컨텐츠 영역&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;푸터 영역&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;div class="header_member"&gt;
+            &lt;a href="#"&gt;로그인&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+                    </details>
+                </div>
+            </div>
+
+            <hr>
+
+            <h3 class="t_tit2">2.CSS 코드</h3>
+            <div class="t_code">    
+                <div class="t_result">
+                    <details open>
+                        <summary>코드 보기</summary>
+<pre><code class="language-css">/* fonts */
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css').nexon {
+    font-family: 'NexonLv1Gothic';
+    font-weight: 400;
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+img {
+    width: 100%;
+a {
+    text-decoration: none;
+    color: #000;
+}
+em, i, address {
+    font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5 h6 {
+    font-weight: normal;
+/* Common */
+.container {
+    width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+.section {
+    padding: 120px 0;
+.section&gt;h2 {
+    font-size: 50px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+.section&gt;span {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: underline;
+    margin-bottom: 16px;
+.section&gt;p {
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+    font-weight: 300;
+    color: #666;
+    margin-bottom: 70px;
+.mb70 {
+    margin-bottom: 70px !important;
+.gray {
+    background-color: #f5f5f5;
+}
+/* headerType */
+.header__inner {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fff;
+}
+.header__logo {
+    width: 20%;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.header__logo em {
+    font-size: 18px;
+    font-weight: 400;
+}
+.header__menu {
+    width: 60%;
+    text-align: center;
+}
+.header__menu li {
+    display: inline;
+}
+.header__menu li a {
+    padding: 13px 30px;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+.header__menu li a:hover {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+.header_member {
+    width: 20%;
+    text-align: right;
+}
+.header_member a {
+    font-size: 16px;
+    border: 1px solid #000;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+.header_member a:hover {
+    background-color: #000;
+    color: #fff;
+}
+</code></pre>
+                    </details>
+                </div>
+            </div>
+
+            <hr>
+
+            <h3 class="t_tit2">완성본</h3>
+            <div class="t_iframe">
+                <iframe height="450px" src="https://hmm365.github.io/coding2/site/headerType/headerType01.html" allowfullscreen></iframe>
+            </div>
+            <div class="t_link">
+                <a href="https://hmm365.github.io/coding2/site/headerType/headerType01.html">원본 사이트 보기</a>
+                <a href="https://github.com/hmm365/coding2/blob/main/site/headerType/headerType01.html">원본 소스 보기</a>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+    <script>
+
+    </script>
+</body>
+</html>
+  

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>repeat</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">filter()</h2>
+                <p class="t_desc2">filter() 메서드는 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다.</p>
+                <div class="t_table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%" />
+                            <col style="width: 32%" />
+                            <col style="width: 32%" />
+                            <col style="width: 32%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="smple12_N1"></td>
+                                <td class="smple12_Q1"></td>
+                                <td class="smple12_M1"></td>
+                                <td class="smple12_P1"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple12_N2"></td>
+                                <td class="smple12_Q2"></td>
+                                <td class="smple12_M2"></td>
+                                <td class="smple12_P2"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple12_N3"></td>
+                                <td class="smple12_Q3"></td>
+                                <td class="smple12_M3"></td>
+                                <td class="smple12_P3"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="t_code">
+                    <pre><code class="language-js">//01
+ const arrNum1 = [100, 200, 300, 400, 500];
+ const result1 = arrNum1.filter((e) => e === 300);
+                
+ //02                              
+ const arrNum2 = [100, 200, 300, 400, 500];
+ const result2 = arrNum2.filter((e) => e === 600);
+                
+ //03            
+ const arrNum3 = [100, 200, 300, 400, 500];
+ const result3 = arrNum3.filter((e) => e >= 300);
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script>
+            {
+                const arrNum1 = [100, 200, 300, 400, 500];
+                const result1 = arrNum1.filter((e) => e === 300);
+
+                document.querySelector(".smple12_N1").innerHTML = "1";
+                document.querySelector(".smple12_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple12_M1").innerHTML = "arrNum1.filter((e) => e === 300)";
+                document.querySelector(".smple12_P1").innerHTML = result1;
+
+                const arrNum2 = [100, 200, 300, 400, 500];
+                const result2 = arrNum2.filter((e) => e === 600);
+
+                document.querySelector(".smple12_N2").innerHTML = "1";
+                document.querySelector(".smple12_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple12_M2").innerHTML = "arrNum2.filter((e) => e === 600)";
+                document.querySelector(".smple12_P2").innerHTML = result2;
+
+                const arrNum3 = [100, 200, 300, 400, 500];
+                const result3 = arrNum3.filter((e) => e >= 300);
+
+                document.querySelector(".smple12_N3").innerHTML = "1";
+                document.querySelector(".smple12_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple12_M3").innerHTML = "arrNum3.filter((e) => e >= 300)";
+                document.querySelector(".smple12_P3").innerHTML = result3;
+            }
+        </script>
+    </body>
+</html>

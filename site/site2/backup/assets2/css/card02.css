@@ -1,0 +1,51 @@
+/* cardType02 */
+.card__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*양쪽 정렬*/
+}
+
+.card__inner .card {
+    width: 24%;
+    position: relative;
+}
+
+.card__inner .card:first-child {
+    margin-bottom: 50px;
+}
+.card__inner .card img {
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.card__inner .card .tit {
+    font-size: 28px;
+    margin-bottom: 10px;
+    /* 한줄효과 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 20px;
+}
+.card__inner .card .desc {
+    font-size: 18;
+    font-weight: 300;
+    line-height: 1.4;
+    /* 세줄이상이면 ...으로 보이게 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: #555;
+}
+.card__inner .card .more {
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/Arrow.svg);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 220px;
+    border-radius: 5px;
+}

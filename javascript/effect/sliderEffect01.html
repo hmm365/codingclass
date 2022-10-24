@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="Ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 이펙트</title>
+
+    <link rel="stylesheet" href="../assets/css/slider.css">
+
+    <link href="https://webfontworld.github.io/tmon/Tmon.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/arta.css">
+    <script src="../assets/js/highlight.min.js"></script>
+
+    <style>
+        /* slider */
+        .slider__wrap {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slider__img {
+            position: relative;
+            height: 450px;
+            width: 800px;
+        }
+        .slider {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .slider::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 5px 10px;
+        }
+        .slider:nth-child(1) {opacity: 1;}
+        .slider:nth-child(1)::before {content: '이미지1';}  
+        .slider:nth-child(2)::before {content: '이미지2';}
+        .slider:nth-child(3)::before {content: '이미지3';}
+        .slider:nth-child(4)::before {content: '이미지4';}
+        .slider:nth-child(5)::before {content: '이미지5';}
+        .slider:nth-child(6)::before {content: '이미지6';}
+        .slider:nth-child(7)::before {content: '이미지7';}
+        .slider:nth-child(8)::before {content: '이미지8';}
+        .slider:nth-child(9)::before {content: '이미지9';}
+        .slider:nth-child(10)::before {content: '이미지10';}
+
+        @media (max-width: 800px){
+            .slider__img {
+                width: 400px;
+                height: 260px;
+            }
+        }
+    </style>
+</head>
+
+<body class="img09">
+    <header id="header">
+        <h1>Javascript Slider Effect01</h1>
+        <p>슬라이드 이펙트 - 트랜지션 효과</p>
+        <ul>
+            <li class="active"><a href="sliderEffect01.html">1</a></li>
+            <li><a href="sliderEffect02.html">2</a></li>
+            <li><a href="sliderEffect03.html">3</a></li>
+            <li><a href="sliderEffect04.html">4</a></li>
+            <li><a href="sliderEffect05.html">5</a></li>
+            <li><a href="sliderEffect06.html">6</a></li>
+            <li><a href="sliderEffect07.html">7</a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="sliderType01">
+            <div class="slider__wrap">
+                <div class="slider__img">
+                    <div class="slider"><img src="../assets/img/effect_bg11@2x.jpg" alt="동물사진"></div>
+                    <div class="slider"><img src="../assets/img/effect_bg12@2x.jpg" alt="동물사진"></div>
+                    <div class="slider"><img src="../assets/img/effect_bg13@2x.jpg" alt="동물사진"></div>
+                    <div class="slider"><img src="../assets/img/effect_bg14@2x.jpg" alt="동물사진"></div>
+                    <div class="slider"><img src="../assets/img/effect_bg15@2x.jpg" alt="동물사진"></div>
+                    <div class="slider"><img src="../assets/img/effect_bg16@2x.jpg" alt="동물사진"></div>
+                    <div class="slider"><img src="../assets/img/effect_bg17@2x.jpg" alt="동물사진"></div>
+                    <div class="slider"><img src="../assets/img/effect_bg18@2x.jpg" alt="동물사진"></div>
+                    <div class="slider"><img src="../assets/img/effect_bg19@2x.jpg" alt="동물사진"></div>
+                    <div class="slider"><img src="../assets/img/effect_bg20@2x.jpg" alt="동물사진"></div>
+                    <sapn class="img_name"></sapn>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <div class="modal__wrap">
+            <div class="modal__btn">소스보기</div>
+            <div class="modal__cont">
+                <div class="modal__box">
+                    <div class="tab__title">
+                        <span class="dot" aria-label="true"></span>
+                        <div class="tabs">
+                            <div class="active">
+                                <span class="favicon" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                        <path
+                                            d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="orange"></path>
+                                        <path
+                                            d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="yellow"></path>
+                                    </svg>
+                                </span>
+                                <em>Javascript</em>
+                                <span class="close" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="favicon" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                        <path
+                                            d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="orange"></path>
+                                        <path
+                                            d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="yellow"></path>
+                                    </svg>
+                                </span>
+                                <em>HTML</em>
+                                <span class="close" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="favicon" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <circle cx="9" cy="9" r="9" fill="#000"></circle>
+                                        <path
+                                            d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="orange"></path>
+                                        <path
+                                            d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                            fill="yellow"></path>
+                                    </svg>
+                                </span>
+                                <em>CSS</em>
+                                <span class="close" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                        focusable="false">
+                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+
+                        </div>
+                        <span class="plus" aria-label="true">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                focusable="false">
+                                <path d="M2.5 8H13.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M8 2.5V13.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="cont">
+                        <div class="active">
+<pre><code class="language-js">const sliderWrap = document.querySelector(".slider__wrap");
+const sliderImg = document.querySelector(".slider__img");
+const slider = document.querySelectorAll(".slider");
+let timeCount = 0;
+let currentIndex = 0;                   //현재 보이는 이미지
+let sliderCount = slider.length;        //이미지 갯수
+const silderTimer = setInterval(() => {
+    // timeCount == sliderCount * 5 -1 ? clearInterval(silderTimer) : timeCount++;
+    timeCount == timeCount++
+    //console.log(timeCount)
+    let nextIndex = (currentIndex + 1 ) % sliderCount;
+    slider[currentIndex].style.opacity = "0"; //첫번째 이미지를 안보이게
+    slider[nextIndex].style.opacity = "1"; //두번째 이미지를 보이게
+    currentIndex = nextIndex; //currentIndex를 다음 이미지로 넘김
+}, 1000);
+</code></pre>
+                        </div>
+                        <div>
+<pre><code class="language-html">&lt;div class="slider__wrap"&gt;
+    &lt;div class="slider__img"&gt;
+        &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg11@2x.jpg" alt="동물사진"&gt;&lt;/div&gt;
+        &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg12@2x.jpg" alt="동물사진"&gt;&lt;/div&gt;
+        &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg13@2x.jpg" alt="동물사진"&gt;&lt;/div&gt;
+        &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg14@2x.jpg" alt="동물사진"&gt;&lt;/div&gt;
+        &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg15@2x.jpg" alt="동물사진"&gt;&lt;/div&gt;
+        &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg16@2x.jpg" alt="동물사진"&gt;&lt;/div&gt;
+        &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg17@2x.jpg" alt="동물사진"&gt;&lt;/div&gt;
+        &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg18@2x.jpg" alt="동물사진"&gt;&lt;/div&gt;
+        &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg19@2x.jpg" alt="동물사진"&gt;&lt;/div&gt;
+        &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg20@2x.jpg" alt="동물사진"&gt;&lt;/div&gt;
+        &lt;sapn class="img_name"&gt;&lt;/sapn&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                        </div>
+                        <div>
+<pre><code class="language-css">/* slider */
+.slider__wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider__img {
+    position: relative;
+    height: 450px;
+    width: 800px;
+}
+.slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.slider::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 5px 10px;
+}
+.slider:nth-child(1) {opacity: 1;}
+.slider:nth-child(1)::before {content: '이미지1';}  
+.slider:nth-child(2)::before {content: '이미지2';}
+.slider:nth-child(3)::before {content: '이미지3';}
+.slider:nth-child(4)::before {content: '이미지4';}
+.slider:nth-child(5)::before {content: '이미지5';}
+.slider:nth-child(6)::before {content: '이미지6';}
+.slider:nth-child(7)::before {content: '이미지7';}
+.slider:nth-child(8)::before {content: '이미지8';}
+.slider:nth-child(9)::before {content: '이미지9';}
+.slider:nth-child(10)::before {content: '이미지10';}
+
+@media (max-width: 800px){
+    .slider__wrap {
+    width: 100%;
+    height: 100vh;
+    }
+}
+</code></pre>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="modal__close">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/modal.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    <script>
+        {
+            const sliderWrap = document.querySelector(".slider__wrap");
+            const sliderImg = document.querySelector(".slider__img");
+            const slider = document.querySelectorAll(".slider");
+            let timeCount = 0;
+            let currentIndex = 0;                   //현재 보이는 이미지
+            let sliderCount = slider.length;        //이미지 갯수
+            const silderTimer = setInterval(() => {
+                // timeCount == sliderCount * 5 -1 ? clearInterval(silderTimer) : timeCount++;
+                timeCount == timeCount++
+                //console.log(timeCount)
+                let nextIndex = (currentIndex + 1 ) % sliderCount;
+                slider[currentIndex].style.opacity = "0"; //첫번째 이미지를 안보이게
+                slider[nextIndex].style.opacity = "1"; //두번째 이미지를 보이게
+                currentIndex = nextIndex; //currentIndex를 다음 이미지로 넘김
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>

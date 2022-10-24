@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        .gmarket {
+            font-family: 'GmarketSans';
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4 ,h5 h6 {
+            font-weight: normal;
+        }
+
+        /* Common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section>h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .section>p {
+            font-size: 22px;
+            line-height: 1;
+            text-align: center;
+            font-weight: 300;
+            color: #666;
+            margin-bottom: 70px;
+        }
+
+        .gray {
+            background-color: #f5f5f5;
+        }
+        /* imgType */
+        .image__inner {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .image {
+            width: 32%;
+            position: relative;
+            overflow: hidden;
+        }
+        .image__box img{
+            vertical-align: top;
+            transition: all 0.5s ease-in;
+        }
+        .image:hover .image__box img{
+            transform: scale(1.03);
+        }
+
+        .image__desc {
+            position: absolute;
+            bottom: -100px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            padding: 23px 20px;
+            box-sizing: border-box;  
+            transition: all 0.3s ease-in;
+        }
+        .img1 .image__desc { background: rgba(31,26,23,0.1);}
+        .img1 .image__desc .image__tit { color: #FFFFFF;}
+        .img1 .image__desc .image__more { color: #FFFFFF;}
+
+        .img2 .image__desc { background: rgba(203,213,234,0.1);}
+        .img2 .image__desc .image__tit { color: #0052FF;}
+        .img2 .image__desc .image__more { color: #0052FF;}
+
+        .img3 .image__desc { background: rgba(67,67,67,0.1);}
+        .img3 .image__desc  .image__tit { color: #9a9a9a;}
+        .img3 .image__desc .image__more { color: #9a9a9a;}
+        
+        .image:hover .image__desc {
+            bottom: 0;
+        }
+        .image__desc .image__tit {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .image__desc .image__more {
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .image__desc .image__more:hover {
+            text-decoration: underline;
+        }
+    
+        
+
+    </style>
+</head>
+<body>
+    <section id="imgType01" class="img__wrap gmarket section">
+        <h2>펭귄 사진</h2>
+        <p>여러분은 엄청 귀여운 펭귄를 보실 수 있는 기회가 지금 생겼습니다.</p>
+        <div class="image__inner container">
+            <article class="image img1">
+                <figure class="image__box">
+                    <img src="../img/img_bg_02_01.jpg" alt="펭귄 사진">
+                </figure>
+                <div class="image__desc">
+                    <h3 class="image__tit">펭귄 사진</h3>
+                    <a class="image__more" href="/">자세히보기</a>
+                </div>
+            </article>
+
+            <article class="image img2">
+                <figure class="image__box">
+                    <img src="../img/img_bg_02_02.jpg" alt="펭귄 사진">
+                </figure>
+                <div class="image__desc">
+                    <h3 class="image__tit">펭귄 사진</h3>
+                    <a class="image__more" href="/">자세히보기</a>
+                </div>
+            </article>
+
+            <article class="image img3">
+                <figure class="image__box">
+                    <img src="../img/img_bg_02_03.jpg" alt="펭귄 사진">
+                </figure>
+                <div class="image__desc">
+                    <h3 class="image__tit">펭귄 사진</h3>
+                    <a class="image__more" href="/">자세히보기</a>
+                </div>
+            </article>
+            
+            
+        </div>
+    </section>
+</body>
+</html>

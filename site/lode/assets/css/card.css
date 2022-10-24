@@ -1,0 +1,14 @@
+.cardType__inner {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #cdcdcd;
+}
+.card {
+    width: 24%;
+}
+.card__img {
+    margin-bottom: 20px;
+}
+.card__tit {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 유형03</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/score/SCoreDream.css');
+
+        .suit {
+            font-family: 'SCoreDream';
+            font-weight: 300;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 h6 {
+            font-weight: normal;
+        }
+
+        /* Common */
+        .card__wrap {
+            padding: 120px 0;
+        }
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+        .pink {
+            background-color: pink;
+        }
+        .gray {
+            background-color: #cdcdcd;
+        }
+        /* blind */
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            clip: inset(50%);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+
+        /* cardType03 */
+        .card__inner {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .card {
+            width: 33.3333333%;
+            padding: 26px;
+            border-right: 1px solid #eee;
+            background-color: #fff;
+            box-sizing: border-box;
+        }
+        .card:nth-child(3n) {
+            border: none;
+        }
+        .card__header {
+            height: 250px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .card__header img{
+            border-radius: 10px;
+            box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.5);
+            height: 100%;
+        }
+        .card__header .tag{
+            position: absolute;
+            font-size: 14px;
+            color: #7b7b7b;
+            border-radius: 50px;
+            background-color: #fff;
+            padding: 5px 15px;
+            right: 10px;
+            top: 10px;
+        }
+        .card__contents .tit {
+            font-size: 20px;
+            font-weight: 300px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; 
+            -webkit-box-orient: vertical;
+        }
+        .card__contents .desc {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #666;
+            margin-bottom: 30px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; 
+            -webkit-box-orient: vertical;
+        }
+        .card__footer {
+            display: flex;
+            justify-content: flex-end;
+        } 
+        .card__footer .more {
+            font-size: 16px;
+            line-height: 1.17;
+            position: relative;
+            color: #dd2a2a;
+            text-align: right;
+            padding-right: 50px;
+        }
+        .card__footer .more p {
+            color: #666;
+        }
+        .card__footer .more img {
+            box-sizing: border-box;
+            position: absolute;
+            height: 95%;
+            width: auto;
+            right: 1px;
+            top: 0px;
+            border-radius: 50%;
+            box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <section id="cardType" class="card__wrap SCoreDream section pink">
+        <h2 class="blind">귀여운 토끼</h2>
+        <div class="card__inner container gray">
+            <article class="card">
+                <figure class="card__header">
+                        <img src="img/card_bg03_01.jpg" alt="토끼 사진1">
+                        <figcaption class="tag">Tag</figcaption>
+                </figure>
+                <div class="card__contents">
+                    <h3 class="tit">너무나도 귀엽고 사랑스러운 토끼 사진 이 여기있습니다 얼른 와서 보시는게 제일좋아요! 빨리와야해요!</h3>
+                    <p class="desc">여러분은 귀여운 토끼 사진을 보실수 있는 기회가 생겼습니다. 진짜귀여운토끼를 함께 보세요! 행복할수있어요 우리다함께 행복해요! 토끼를 보시면 행복할수있습니다!</p>
+                </div>
+                <div class="card__footer">
+                    <a href="#" class="more">
+                        <h4>오늘하루도맑은 하늘</h4>
+                        <p>9 seconds ago</p>
+                        <img src="img/cadrd_bg03_icon01.png" alt="프로필사진">
+                    </a> 
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                        <img src="img/card_bg03_02.jpg" alt="토끼 사진2">
+                        <figcaption class="tag">Tag</figcaption>
+                </figure>
+                <div class="card__contents">
+                    <h3 class="tit">너무나도 귀엽고 사랑스러운 토끼 사진 이 여기있습니다 얼른 와서 보시는게 제일좋아요! 빨리와야해요!</h3>
+                    <p class="desc">여러분은 귀여운 토끼 사진을 보실수 있는 기회가 생겼습니다. 진짜귀여운토끼를 함께 보세요! 행복할수있어요 우리다함께 행복해요! 토끼를 보시면 행복할수있습니다!</p>
+                </div>
+                <div class="card__footer">
+                    <a href="#" class="more">
+                        <h4>오늘하루도맑은 하늘</h4>
+                        <p>9 seconds ago</p>
+                        <img src="img/cadrd_bg03_icon01.png" alt="프로필사진">
+                    </a> 
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                        <img src="img/card_bg03_03.jpg" alt="토끼 사진3">
+                        <figcaption class="tag">Tag</figcaption>
+                </figure>
+                <div class="card__contents">
+                    <h3 class="tit">너무나도 귀엽고 사랑스러운 토끼 사진 이 여기있습니다 얼른 와서 보시는게 제일좋아요! 빨리와야해요!</h3>
+                    <p class="desc">여러분은 귀여운 토끼 사진을 보실수 있는 기회가 생겼습니다. 진짜귀여운토끼를 함께 보세요! 행복할수있어요 우리다함께 행복해요! 토끼를 보시면 행복할수있습니다!</p>
+                </div>
+                <div class="card__footer">
+                    <a href="#" class="more">
+                        <h4>오늘하루도맑은 하늘</h4>
+                        <p>9 seconds ago</p>
+                        <img src="img/cadrd_bg03_icon01.png" alt="프로필사진">
+                    </a> 
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+
+</html>

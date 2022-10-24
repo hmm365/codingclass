@@ -1,0 +1,159 @@
+body {
+    background: #030a1a;
+}
+#skip {
+    position: relative;
+    z-index: 100000;
+}
+#skip a {
+    background: #030a1a;
+    color: #b5b5b5;
+    position: absolute;
+    padding: 20px 40px;
+    left: -400px;
+    top: 5px;
+}
+#skip a:active,
+#skip a:focus {
+    left: 5px;
+}
+
+.container {
+    width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 120px 0;
+}
+
+.section > h2 {
+    font-size: 50px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #dadada;
+}
+.section > span {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: underline;
+    text-underline-position: under;
+    margin-bottom: 20px;
+    color: #666;
+}
+.section > p {
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+    font-weight: 300;
+    color: #b5b5b5;
+    margin-bottom: 70px;
+}
+/* 1280 */
+@media (max-width: 1280px) {
+    .container {
+        width: 90%;
+    }
+    .section {
+        padding: 100px 0;
+    }
+}
+/* 768 */
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 0;
+    }
+    .section > h2 {
+        font-size: 40px;
+    }
+    .section > span {
+        font-size: 14px;
+    }
+    .section > p {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+}
+/* 480 */
+@media (max-width: 480px) {
+    .container {
+        padding: 0;
+    }
+    .section {
+        padding: 40px 20px;
+    }
+    .section > h2 {
+        font-size: 28px;
+    }
+    .section > span {
+        font-size: 14px;
+    }
+    .section > p {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+}
+/* 폰트 */
+.nexon {
+    font-family: "NexonLv1Gothic";
+    font-weight: 400;
+}
+
+/* 배경 */
+.gray {
+    background-color: #f5f5f5;
+}
+
+/* 간격 셋팅 */
+.mb0 {
+    margin-bottom: 0 !important;
+}
+.mb10 {
+    margin-bottom: 10px !important;
+}
+.mb20 {
+    margin-bottom: 20px !important;
+}
+.mb30 {
+    margin-bottom: 30px !important;
+}
+.mb40 {
+    margin-bottom: 40px !important;
+}
+.mb50 {
+    margin-bottom: 50px !important;
+}
+.mb60 {
+    margin-bottom: 60px !important;
+}
+.mb70 {
+    margin-bottom: 70px !important;
+}
+
+.mt0 {
+    margin-top: 0 !important;
+}
+.mt10 {
+    margin-top: 10px !important;
+}
+.mt20 {
+    margin-top: 20px !important;
+}
+.mt30 {
+    margin-top: 30px !important;
+}
+.mt40 {
+    margin-top: 40px !important;
+}
+.mt50 {
+    margin-top: 50px !important;
+}
+.mt60 {
+    margin-top: 60px !important;
+}
+.mt70 {
+    margin-top: 70px !important;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prettier error</title>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/dracula.css" />
+    <script src="../../assets/js/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="document">
+      <!-- 주 타이틀 -->
+      <h2 class="t_tit2">prettier</h2>
+      <p class="t_desc">Prettier는 VSCode에서 코드를 이쁘게 자동으로 정렬해줍니다.</p>
+      <h2 class="t_tit2">설치 방법</h2>
+      <p class="t_desc">1. VSCode Extenstion탭에서 검색하여 설치해줍니다</p>
+      <p></p>
+      <p class="t_desc">
+        설정 (Preference)에 들어가서 'Default Formatter'를 검색, Prettier - Code formatter 으로 설정해줍니다.
+      </p>
+      <p></p>
+      <p class="t_desc">설정 (Preference)에 들어가서 'editor format on save'를 검색, 체크박스에 체크 해줍니다.</p>
+      <p></p>
+      <p class="t_desc">
+        다시 검색창에 'json'을 검색하면 아래와 같이 Edit in setting.json 파일이 나오는데, 눌러줍니다.<br />
+        (VSCode 에디터의 전반적인 설정값을 넣는 json 파일입니다)
+      </p>
+      <p></p>
+      <p class="t_desc">editor.formatOnSave이 false 라면 true 로 변경해 줍니다.</p>
+      <p></p>
+      <p class="t_desc">그래도 안된다면 다음 과 같이 json 문구에 이 문장을 추가해줍니다.</p>
+      <div class="t_code">
+        <pre><code class="language-js">"editor.defaultFormatter": "esbenp.prettier-vscode",
+"[typescriptreact]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[typescript]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+        </code></pre>
+      </div>
+    </div>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

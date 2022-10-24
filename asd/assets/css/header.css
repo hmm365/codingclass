@@ -1,0 +1,25 @@
+#headerType {
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    align-items: flex-end;
+    margin: 0 auto;
+}
+
+#headerType h3 {
+}
+#headerType img {
+    width: 50%;
+}
+#headerType ul {
+}
+#headerType li {
+    display: inline;
+    margin-right: 30px;
+    font-size: 16px;
+}
+#headerType li:last-child {
+    margin-right: 0;
+}

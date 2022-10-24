@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>두 정수 사이의 합</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">자릿수 더하기</h2>
+                <p class="t_desc">
+                    자연수 N이 주어지면, N의 각 자릿수의 합을 구해서 return 하는 solution 함수를 만들어 주세요.<br />
+                    예를들어 N = 123이면 1 + 2 + 3 = 6을 return 하면 됩니다.
+                </p>
+                <p class="t_desc2">N의 범위 : 100,000,000 이하의 자연수</p>
+                <hr />
+
+                <h3 class="t_tit2">입출력 예</h3>
+                <table class="t_table">
+                    <thead>
+                        <tr>
+                            <th>N</th>
+                            <th>answer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>123</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>987</td>
+                            <td>24</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="t_desc2">
+                    입출력 예 #1<br />
+                    문제의 예시와 같습니다.<br />
+
+                    입출력 예 #2<br />
+                    9 + 8 + 7 = 24이므로 24를 return 하면 됩니다.
+                </p>
+                <hr />
+                <h3 class="t_tit2">자릿수 더하기</h3>
+                <div class="t_code">
+                    <pre><code class="language-js">function solution(n)
+{
+  // return n.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b));
+    
+  let answer = 0
+  n = n.toString()
+  for (let i = 0; i &lt; n.length; i++){
+    answer += parseInt(n[i])
+  }
+  return answer; 
+}
+</code></pre>
+                    <p class="t_box">
+                        총평 : 처음에 한줄코딩으로 해볼려했는데 이상하게 마지막에서 오류까떠서 어쩔수없이 반복문을 이용했습니다.<br />
+                        출처 : <a href="https://school.programmers.co.kr/learn/courses/30/lessons/12931" target="_blank">https://school.programmers.co.kr/learn/courses/30/lessons/12931</a>
+                    </p>
+                </div>
+                <!-- //result01 -->
+            </div>
+        </main>
+        <!-- //main -->
+        <script>
+            hljs.highlightAll();
+        </script>
+    </body>
+</html>

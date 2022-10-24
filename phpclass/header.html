@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>헤더</title>
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/common.css" />
+        <link rel="stylesheet" href="assets/css/font.css" />
+        <link rel="stylesheet" href="assets/css/header.css" />
+        <link rel="stylesheet" href="assets/css/board.css" />
+    </head>
+    <body>
+        <header id="header">
+            <h1 class="gaeul"><em>M</em><em>s</em><em>s</em><em>f</em></h1>
+            <form action="#.php" name="school" method="post">
+                <fieldset>
+                    <legend class="blind">학원 검색 영역입니다.</legend>
+                    <div>
+                        <label class="blind" for="schoolSearch">지역</label>
+                        <input type="text" name="schoolSearch" id="schoolSearch" placeholder="지역을 검색해주세요." />
+                    </div>
+                    <button type="submit" value="수정하기" class="ir">수정하기</button>
+                </fieldset>
+            </form>
+            <nav class="nav">
+                <ul class="menu gaeul">
+                    <li><a href="#">사이트소개</a></li>
+                    <li><a href="#">학원 찾기</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                </ul>
+                <ul class="menu__login gaeul">
+                    <li class="login"><a href="#" class="login__btn">로그인</a></li>
+                    <li class="join"><a href="#" class="join__btn">회원가입</a></li>
+                </ul>
+            </nav>
+            <!-- <ul class="menu__login">
+                <li class="my">마이메뉴</li>
+                <li class="out">로그아웃</li>
+            </ul> -->
+        </header>
+        <main id="board__main">
+            <section id="board__nav" class="board__nav">
+                <nav>
+                    <ul>
+                        <li class="active"><a href="#">공지사항</a></li>
+                        <li><a href="#">정보공유게시판</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">질문게시판</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section id="board" class="container">
+                <h2 class="gaeul">공지사항</h2>
+                <div class="board__inner">
+                    <div class="board__table">
+                        <table>
+                            <colgroup>
+                                <col style="width: 5%" />
+                                <col />
+                                <col style="width: 10%" />
+                                <col style="width: 10%" />
+                                <col style="width: 7%" />
+                                <col style="width: 7%" />
+                            </colgroup>
+                            <thead>
+                                <tr class="gaeul">
+                                    <th>No</th>
+                                    <th class="left">제목</th>
+                                    <th>작성자</th>
+                                    <th>작성시간</th>
+                                    <th>조회수</th>
+                                    <th>좋아요</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="left"><a href="boardView.html">게시판 제목입니다.</a></td>
+                                    <td>황상연</td>
+                                    <td>2분전</td>
+                                    <td>12</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="left"><a href="boardView.html">게시판 제목입니다.</a></td>
+                                    <td>황상연</td>
+                                    <td>2분전</td>
+                                    <td>12</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="left"><a href="boardView.html">게시판 제목입니다.</a></td>
+                                    <td>황상연</td>
+                                    <td>2분전</td>
+                                    <td>12</td>
+                                    <td>30</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="board__pages">
+                        <ul>
+                            <li><a href="#">처음으로</a></li>
+                            <li><a href="#">이전</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">다음</a></li>
+                            <li><a href="#">마지막으로</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

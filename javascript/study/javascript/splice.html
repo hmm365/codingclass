@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>repeat</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dracula.css" />
+        <script src="../assets/js/highlight.min.js"></script>
+    </head>
+    <body>
+        <main id="main">
+            <div class="document">
+                <h2 class="t_tit">splice()</h2>
+                <p class="t_desc2">splice() 메서드는 배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경합니다.</p>
+                <div class="t_table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 4%" />
+                            <col style="width: 32%" />
+                            <col style="width: 23%" />
+                            <col style="width: 13%" />
+                            <col style="width: 37%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                                <th>결과값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="smple09_N1"></td>
+                                <td class="smple09_Q1"></td>
+                                <td class="smple09_M1"></td>
+                                <td class="smple09_P1"></td>
+                                <td class="smple09_A1"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple09_N2"></td>
+                                <td class="smple09_Q2"></td>
+                                <td class="smple09_M2"></td>
+                                <td class="smple09_P2"></td>
+                                <td class="smple09_A2"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple09_N3"></td>
+                                <td class="smple09_Q3"></td>
+                                <td class="smple09_M3"></td>
+                                <td class="smple09_P3"></td>
+                                <td class="smple09_A3"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple09_N4"></td>
+                                <td class="smple09_Q4"></td>
+                                <td class="smple09_M4"></td>
+                                <td class="smple09_P4"></td>
+                                <td class="smple09_A4"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple09_N5"></td>
+                                <td class="smple09_Q5"></td>
+                                <td class="smple09_M5"></td>
+                                <td class="smple09_P5"></td>
+                                <td class="smple09_A5"></td>
+                            </tr>
+                            <tr>
+                                <td class="smple09_N6"></td>
+                                <td class="smple09_Q6"></td>
+                                <td class="smple09_M6"></td>
+                                <td class="smple09_P6"></td>
+                                <td class="smple09_A6"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="t_code">
+                    <pre><code class="language-js">//01
+const arrNum1 = [100, 200, 300, 400, 500];
+const result = arrNum1.splice(2);
+ 
+//02
+const arrNum2 = [100, 200, 300, 400, 500];
+const result2 = arrNum2.splice(2, 3);
+
+//03
+const arrNum3 = [100, 200, 300, 400, 500];
+const result3 = arrNum3.splice(2, 3, "javascript");
+ 
+//04
+const arrNum4 = [100, 200, 300, 400, 500];
+const result4 = arrNum4.splice(1, 1, "javascript");
+                
+//05
+const arrNum5 = [100, 200, 300, 400, 500];
+const result5 = arrNum5.splice(1, 0, "javascript");
+          
+//06
+const arrNum6 = [100, 200, 300, 400, 500];
+const result6 = arrNum6.splice(0, 4, "javascript");
+</code></pre>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script>
+            {
+                const arrNum1 = [100, 200, 300, 400, 500];
+                const result = arrNum1.splice(2);
+
+                document.querySelector(".smple09_N1").innerHTML = "1";
+                document.querySelector(".smple09_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple09_M1").innerHTML = "arrNum1.slice(2)";
+                document.querySelector(".smple09_P1").innerHTML = result;
+                document.querySelector(".smple09_A1").innerHTML = arrNum1;
+
+                const arrNum2 = [100, 200, 300, 400, 500];
+                const result2 = arrNum2.splice(2, 3);
+
+                document.querySelector(".smple09_N2").innerHTML = "2";
+                document.querySelector(".smple09_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple09_M2").innerHTML = "arrNum2.slice(2, 3)";
+                document.querySelector(".smple09_P2").innerHTML = result;
+                document.querySelector(".smple09_A2").innerHTML = arrNum2;
+
+                const arrNum3 = [100, 200, 300, 400, 500];
+                const result3 = arrNum3.splice(2, 3, "javascript");
+
+                document.querySelector(".smple09_N3").innerHTML = "3";
+                document.querySelector(".smple09_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple09_M3").innerHTML = "arrNum3.slice(2, 3, 'javascript')";
+                document.querySelector(".smple09_P3").innerHTML = result3;
+                document.querySelector(".smple09_A3").innerHTML = arrNum3;
+
+                const arrNum4 = [100, 200, 300, 400, 500];
+                const result4 = arrNum4.splice(1, 1, "javascript");
+
+                document.querySelector(".smple09_N4").innerHTML = "4";
+                document.querySelector(".smple09_Q4").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple09_M4").innerHTML = "arrNum4.slice(1, 1, 'javascript')";
+                document.querySelector(".smple09_P4").innerHTML = result4;
+                document.querySelector(".smple09_A4").innerHTML = arrNum4;
+
+                const arrNum5 = [100, 200, 300, 400, 500];
+                const result5 = arrNum5.splice(1, 0, "javascript");
+
+                document.querySelector(".smple09_N5").innerHTML = "5";
+                document.querySelector(".smple09_Q5").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple09_M5").innerHTML = "arrNum5.slice(1, 0, 'javascript')";
+                document.querySelector(".smple09_P5").innerHTML = result5;
+                document.querySelector(".smple09_A5").innerHTML = arrNum5;
+
+                const arrNum6 = [100, 200, 300, 400, 500];
+                const result6 = arrNum6.splice(0, 4, "javascript");
+
+                document.querySelector(".smple09_N6").innerHTML = "6";
+                document.querySelector(".smple09_Q6").innerHTML = "[100, 200, 300, 400, 500]";
+                document.querySelector(".smple09_M6").innerHTML = "arrNum5.slice(0, 4, 'javascript')";
+                document.querySelector(".smple09_P6").innerHTML = result6;
+                document.querySelector(".smple09_A6").innerHTML = arrNum6;
+            }
+        </script>
+    </body>
+</html>

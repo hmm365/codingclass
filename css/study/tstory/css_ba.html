@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>join() | pop() | push</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+</head>
+
+<body>
+
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">CSS 기본 문법</h2>
+            <pre class="t_desc2">CSS를 정의하는 방법으로는 내부 스타일시트, 외부 스타일시트, 인라인 스타일시트 등이 있습니다. 
+실제로는 외부 스타일시트를 주로 사용합니다. 인라인 스타일시트는 대체로 거의 사용하지 않으나, 
+우선순위가 가장 높기 때문에 필요한 경우에는 편리하게 사용할 수 있습니다. 
+참고로, CSS에서의 주석은 /* */로 표현합니다.
+</pre>
+
+            <hr>
+
+            <h2 class="t_tit">내부 스타일시트</h2>
+            <pre class="t_desc2">CSS를 HTML 문서 안에&lt;style&gt; 태그로 기재하여 HTML 문서 안에 CSS가 함께 저장되도록 하는 형태입니다.</pre>
+            <div class="t_code">
+<pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;내부 스타일시트&lt;/title&gt;
+    &lt;style type = "text/css"&gt;
+        p {color : red;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;우리가 기쁘게 하는것들&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            </div>
+            <details>
+                <summary>결과보기</summary>
+                <p style="color: red;">우리가 기쁘게 하는것들</p>
+            </details>
+
+            <hr>
+            <!-- sample01_result -->
+
+            <h2 class="t_tit">외부 스타일시트</h2>
+<pre class="t_desc2">스타일 속성들을 따로 저장하여 HTML 문서에 파일명으로 연결할 수 있습니다. 
+이때 스타일은 *.css 확장자를 가진 별도의 파일로 저장하고, HTML에서는 &lt;link&gt; 태그를 이용하여 선언합니다. 
+내부 스타일시트는 그 스타일이 기술된 페이지에만 적용되는 반면, 외부 스타일시트는 그 스타일을 선언한 모든 HTML 페이지에 적용됩니다.</pre>
+            <div class="t_code">
+<pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;외부 스타일시트&lt;/title&gt;
+    &lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;우리가 기쁘게 하는것들&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            <p class="t_desc">
+                외부 스타일 시트(CSS파일)에는 다음과 같이, @charset "utf-8"; @charset "euc-kr"; 등 html 문서에서 지정한 것과 동일한 문자셋을 지정합니다.
+            </p>
+<pre><code class="language-CSS">@charset "utf-8";
+p {color: red;}
+</code></pre>            
+            <details>
+                <summary>결과보기</summary>
+                <p style="color: red;">우리가 기쁘게 하는것들</p>
+            </details>
+        </div>
+            <hr>
+            <!-- sample02_result -->
+
+            <h2 class="t_tit">@import</h2>
+<pre class="t_desc2">@import는 CSS 안으로 다른 CSS 파일을 불러들일 경우 사용합니다. 
+CSS의 맨 윗줄에 기술합니다.</pre>
+            <div class="t_code">
+<pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;스타일시트 포함&lt;/title&gt;
+    &lt;style type="text/css"&gt;
+        @import url("style.css");
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;우리가 기쁘게 하는것들&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            <p class="t_desc">
+                또한, @import는 어떤 CSS 파일 안에 공통 CSS를 불러들일 경우에도 사용할 수 있습니다.
+            </p>
+<pre><code class="language-CSS">@charset "utf-8";
+@import url("common.css");
+</code></pre> 
+<pre class="t_desc">@import는 공통으로 들어가야 할 스타일을 따로 저장하여 다른 CSS에 삽입시켜 사용할 수 있도록 해줍니다.
+그러나 CSS파일을 너무 여러 개로 분리하면 오히려 복잡해지므로, 용량이 적다면 하나의 파일로 저장하는 것이 좋습니다
+</pre>           
+            <details>
+                <summary>결과보기</summary>
+                <p style="color: red;">우리가 기쁘게 하는것들</p>
+            </details>
+        </div>
+            <hr>
+            <!-- sample03_result -->
+
+                        <h2 class="t_tit">인라인 스타일(inline style)</h2>
+<pre class="t_desc2">인라인 스타일은 태그에 직접 CSS를 정의해주는 기법으로, 해당 요소에 style=" " 형식으로 기술합니다. 
+인라인 스타일은 내부스타일이나 외부스타일에서 기술된 속성보다 우선적으로 적용되므로, 
+우선순위가 절대적으로 높아야 할 경우에 사용할 수 있습니다. 그러나 스타일을 공통 CSS로 수정할 수 없고, 
+일일이 html을 열어서 편집해야 하기 때문에 일반적으로 많이 사용하지는 않습니다.    
+</pre>
+            <div class="t_code">
+<pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+    &lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;인라인 스타일&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p style="color: red;"&gt;우리가 기쁘게 하는것들&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
+            <details>
+                <summary>결과보기</summary>
+                <p style="color: red;">우리가 기쁘게 하는것들</p>
+            </details>
+        </div>
+            <hr>
+            <!-- sample02_result -->
+
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
