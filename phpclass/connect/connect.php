@@ -1,5 +1,5 @@
 <?php
-    $host = "syumay.dothome.co.kr";
+    $host = "localhost";
     $user = "syumay";
     $pass = "Tkfkddlek!2";
     $db = "syumay";
