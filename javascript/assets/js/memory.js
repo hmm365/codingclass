@@ -48,9 +48,9 @@ function matchCards(img1, img2) {
 		disableDeck = false;
 		if (matchedCard == 8) {
 			soundSuccess.play();
+			clearInterval(interval);
 			memoryResult.classList.add("open");
 			textResult();
-			clearInterval(interval);
 		}
 	} else {
 		console.log("틀리다");
@@ -76,7 +76,7 @@ function matchCards(img1, img2) {
 function shuffledCard(params) {
 	cardOne = cardTwo = "";
 	disableDeck = true;
-	matchCard = 0;
+	matchedCard = 0;
 	timeresult = -4;
 	let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
 	let result = arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
@@ -108,26 +108,28 @@ function shuffledCard(params) {
 function textResult() {
 	let currentMin = Math.floor(timeresult / 60);
 	let currentSec = Math.floor(timeresult % 60);
+	let reultTime = timeresult;
 	if (currentMin > 0) {
 		document.querySelector(".memory__time").innerHTML = `총 <em>${currentMin}</em> 분 <em>${currentSec}</em> 초가 걸렸습니다.`;
 	} else document.querySelector(".memory__time").innerHTML = `총 <em>${currentSec}</em> 초가 걸렸습니다.`;
-	if (timeresult <= 20) {
-		document.querySelector(".memory__grade").innerHTML = "S";
+	console.log(reultTime);
+	if (reultTime <= 20) {
+		document.querySelector(".memory__grade").innerText = "S";
 		document.querySelector(".memory__rank").innerHTML = "상위 <em>1</em>% 프로 입니다</span>";
-	} else if (20 < timeresult <= 30) {
-		document.querySelector(".memory__grade").innerHTML = "A";
+	} else if (20 < reultTime && reultTime <= 30) {
+		document.querySelector(".memory__grade").innerText = "A";
 		document.querySelector(".memory__rank").innerHTML = "상위 <em>10</em>% 프로 입니다</span>";
-	} else if (30 < timeresult <= 50) {
-		document.querySelector(".memory__grade").innerHTML = "B";
+	} else if (30 < reultTime && reultTime <= 50) {
+		document.querySelector(".memory__grade").innerText = "B";
 		document.querySelector(".memory__rank").innerHTML = "상위 <em>30</em>% 프로 입니다</span>";
-	} else if (50 < timeresult <= 70) {
-		document.querySelector(".memory__grade").innerHTML = "C";
+	} else if (50 < reultTime && reultTime <= 70) {
+		document.querySelector(".memory__grade").innerText = "C";
 		document.querySelector(".memory__rank").innerHTML = "상위 <em>60</em>% 프로 입니다</span>";
-	} else if (70 < timeresult <= 100) {
-		document.querySelector(".memory__grade").innerHTML = "D";
+	} else if (70 < reultTime && reultTime <= 100) {
+		document.querySelector(".memory__grade").innerText = "D";
 		document.querySelector(".memory__rank").innerHTML = "상위 <em>80</em>% 프로 입니다</span>";
 	} else {
-		document.querySelector(".memory__grade").innerHTML = "F";
+		document.querySelector(".memory__grade").innerText = "F";
 		document.querySelector(".memory__rank").innerHTML = "상위 <em>90</em>% 프로 입니다</span>";
 	}
 }
@@ -143,5 +145,6 @@ document.querySelector(".memory__replay").addEventListener("click", () => {
 });
 
 document.querySelector(".memory__bye").addEventListener("click", () => {
+	memoryResult.classList.remove("open");
 	document.querySelector(".memory__wrap").classList.remove("open");
 });
