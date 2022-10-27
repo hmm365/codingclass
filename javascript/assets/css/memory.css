@@ -1,0 +1,242 @@
+.memory__wrap {
+	display: none;
+}
+.memory__wrap.open {
+	display: block;
+}
+
+.memory__inner {
+	width: 700px;
+	/* height: 700px; */
+	position: absolute;
+	left: 300px;
+	top: 100px;
+	background: #030a1a;
+	border-radius: 20px;
+	/* text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff, 0 0 2rem #182747, 0 0 4rem #182747, 0 0 6rem #182747, 0 0 8rem #182747, 0 0 10rem #182747;
+	box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff, 0 0 2rem #182747, inset 0 0 2rem #182747, 0 0 4rem #182747, inset 0 0 4rem #182747; */
+	/* animation: flicker 1.5s infinite alternate; */
+}
+.memory__header {
+	padding-inline: 2rem;
+	background-color: hsl(180deg 4% 16%);
+	display: flex;
+	align-items: center;
+	color: #fff;
+	height: 40px;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	position: relative;
+}
+.memory__header .dot {
+	width: 15px;
+	height: 15px;
+	background-color: rgb(249, 225, 47);
+	display: inline-block;
+	border-radius: 50%;
+	position: relative;
+}
+.memory__header .dot::before {
+	content: "";
+	position: absolute;
+	left: 25px;
+	top: 0;
+	width: 15px;
+	height: 15px;
+	background-color: rgb(81, 249, 47);
+	border-radius: 50%;
+}
+.memory__header .dot::after {
+	content: "";
+	position: absolute;
+	right: 25px;
+	top: 0;
+	width: 15px;
+	height: 15px;
+	background-color: rgb(237, 73, 36);
+	border-radius: 50%;
+}
+.memory__header .memory__close {
+	background: url(../img/close.svg);
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	right: 10px;
+}
+
+.memory__card {
+	padding: 30px;
+}
+.memory__card .cards {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.memory__card .cards li {
+	list-style: none;
+	width: 150px;
+	height: 150px;
+	position: relative;
+
+	transform-style: preserve-3d;
+	perspective: 300px;
+}
+.memory__card .cards li .view {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 10%;
+	border-radius: 20px;
+	background: #765e46;
+	backface-visibility: hidden;
+	transition: all 0.6s;
+	user-select: none;
+	pointer-events: none;
+}
+.memory__card .cards li .front {
+}
+.memory__card .cards li.flip .front {
+	transform: rotateY(180deg);
+}
+.memory__card .cards li .back {
+	transform: rotateY(-180deg);
+}
+.memory__card .cards li.flip .back {
+	transform: rotateY(0deg);
+}
+.memory__card .cards li img {
+	width: 100%;
+}
+
+.memory__card .cards li.shakeX {
+	animation: shakeX 1s;
+}
+.memory__card .cards li.shakeY {
+	animation: shakeY 1s;
+}
+
+.memory__result {
+	position: absolute;
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff, 0 0 2rem #182747, inset 0 0 2rem #182747, 0 0 4rem #182747, inset 0 0 4rem #182747;
+	width: 50%;
+	height: 50%;
+	background-color: #030a1a;
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size: 18px;
+}
+.memory__time {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+.memory__time em {
+	font-style: normal;
+	color: rgb(65, 103, 255);
+}
+.memory__desc {
+	margin-bottom: 20px;
+}
+.memory__grade {
+	display: inline-block;
+	padding: 30px;
+	background: rgb(216, 201, 126);
+	border-radius: 50%;
+	margin-bottom: 20px;
+	font-size: 30px;
+	color: rgb(71, 80, 255);
+}
+.memory__rank {
+	display: block;
+	margin-bottom: 20px;
+}
+.memory__rank em {
+	margin-right: 3px;
+	font-style: normal;
+	color: rgb(65, 103, 255);
+}
+.memory__replay {
+	border: 0;
+	font-family: "Galmuri9";
+	background: rgb(71, 77, 255);
+	padding: 10px;
+	font-size: 18px;
+	border-radius: 20px;
+	margin-right: 10px;
+	color: #fff;
+}
+.memory__bye {
+	border: 0;
+	font-family: "Galmuri9";
+	background: rgb(71, 77, 255);
+	padding: 10px;
+	font-size: 18px;
+	border-radius: 20px;
+	color: #fff;
+}
+@keyframes shakeX {
+	from,
+	to {
+		transform: translate3d(0, 0, 0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		transform: translate3d(-10px, 0, 0);
+	}
+
+	20%,
+	40%,
+	60%,
+	80% {
+		transform: translate3d(10px, 0, 0);
+	}
+}
+
+@keyframes shakeY {
+	from,
+	to {
+		transform: translate3d(0, 0, 0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		transform: translate3d(0, -10px, 0);
+	}
+
+	20%,
+	40%,
+	60%,
+	80% {
+		transform: translate3d(0, 10px, 0);
+	}
+}
+
+/* @keyframes flicker {
+	0%,
+	19%,
+	21%,
+	23%,
+	25%,
+	54%,
+	56%,
+	100% {
+		text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff, 0 0 2rem #182747, 0 0 4rem #182747, 0 0 6rem #182747, 0 0 8rem #182747, 0 0 10rem #182747;
+		box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff, 0 0 2rem #182747, inset 0 0 2rem #182747, 0 0 4rem #182747, inset 0 0 4rem #182747;
+	}
+	 55% {
+		text-shadow: none;
+		box-shadow: none;
+	} 
+} */

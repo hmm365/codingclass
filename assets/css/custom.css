@@ -72,7 +72,7 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 #header.sub .header_tit h2 {
 	display: none;
 }
-#header img {width: 190px; display: block; margin: 0 auto; padding-right: 50px;}
+#header img {width: 190px; display: block; margin: 0 auto; }
 
 #header h1{
 	color: #fff;
