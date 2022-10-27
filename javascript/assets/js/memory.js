@@ -74,8 +74,8 @@ function matchCards(img1, img2) {
 
 // 카드 섞기
 function shuffledCard(params) {
-	cardone = cardTwo = "";
-	disableDeck = false;
+	cardOne = cardTwo = "";
+	disableDeck = true;
 	matchCard = 0;
 	timeresult = -4;
 	let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
@@ -89,6 +89,7 @@ function shuffledCard(params) {
 
 		setTimeout(() => {
 			card.classList.remove("flip");
+			disableDeck = false;
 		}, 4000);
 
 		let imgTag = card.querySelector(".back img");
@@ -110,19 +111,19 @@ function textResult() {
 	if (currentMin > 0) {
 		document.querySelector(".memory__time").innerHTML = `총 <em>${currentMin}</em> 분 <em>${currentSec}</em> 초가 걸렸습니다.`;
 	} else document.querySelector(".memory__time").innerHTML = `총 <em>${currentSec}</em> 초가 걸렸습니다.`;
-	if (timeresult >= 20) {
+	if (timeresult <= 20) {
 		document.querySelector(".memory__grade").innerHTML = "S";
 		document.querySelector(".memory__rank").innerHTML = "상위 <em>1</em>% 프로 입니다</span>";
-	} else if (20 < timeresult >= 30) {
+	} else if (20 < timeresult <= 30) {
 		document.querySelector(".memory__grade").innerHTML = "A";
 		document.querySelector(".memory__rank").innerHTML = "상위 <em>10</em>% 프로 입니다</span>";
-	} else if (30 < timeresult >= 50) {
+	} else if (30 < timeresult <= 50) {
 		document.querySelector(".memory__grade").innerHTML = "B";
 		document.querySelector(".memory__rank").innerHTML = "상위 <em>30</em>% 프로 입니다</span>";
-	} else if (50 < timeresult >= 70) {
+	} else if (50 < timeresult <= 70) {
 		document.querySelector(".memory__grade").innerHTML = "C";
 		document.querySelector(".memory__rank").innerHTML = "상위 <em>60</em>% 프로 입니다</span>";
-	} else if (70 < timeresult >= 100) {
+	} else if (70 < timeresult <= 100) {
 		document.querySelector(".memory__grade").innerHTML = "D";
 		document.querySelector(".memory__rank").innerHTML = "상위 <em>80</em>% 프로 입니다</span>";
 	} else {

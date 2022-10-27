@@ -749,11 +749,15 @@
 					setTimeout(() => {
 						shuffledCard();
 					}, 700);
-				} else memorywrap.classList.remove("open");
+				} else {
+					memorywrap.classList.remove("open");
+					clearInterval(interval);
+				}
 			});
 			const memoryBoxClose = document.querySelector(".memory__header .memory__close");
 			memoryBoxClose.addEventListener("click", () => {
 				memorywrap.classList.remove("open");
+				clearInterval(interval);
 			});
 
 			// 서치 게임 시작 & 창 닫기
