@@ -3,6 +3,8 @@
 // 03 두개의 카드 뒤집기 확인하기
 const memoryWrap = document.querySelector(".memory__wrap");
 const memoryCards = memoryWrap.querySelectorAll(".cards li");
+const memoryResult = document.querySelector(".memory__result");
+
 let cardOne, cardTwo;
 let disableDeck = false;
 let matchedCard = 0;
@@ -12,6 +14,9 @@ let sound = ["../assets/audio/match.mp3", "../assets/audio/unmatch.mp3", "../ass
 let soundMatch = new Audio([sound[0]]);
 let soundUnMatch = new Audio([sound[1]]);
 let soundSuccess = new Audio([sound[2]]);
+let timeresult = -4;
+
+let interval;
 
 // 카드 뒤집기
 function flipCard(e) {
@@ -37,14 +42,15 @@ function matchCards(img1, img2) {
 	if (img1 == img2) {
 		matchedCard++;
 		soundMatch.play();
-		console.log("같다");
 		cardOne.removeEventListener("click", flipCard);
 		cardTwo.removeEventListener("click", flipCard);
 		cardOne = cardTwo = "";
 		disableDeck = false;
 		if (matchedCard == 8) {
 			soundSuccess.play();
-			alert("게임 오버");
+			memoryResult.classList.add("open");
+			textResult();
+			clearInterval(interval);
 		}
 	} else {
 		console.log("틀리다");
@@ -71,13 +77,12 @@ function shuffledCard(params) {
 	cardone = cardTwo = "";
 	disableDeck = false;
 	matchCard = 0;
-
+	timeresult = -4;
 	let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
 	let result = arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
 
 	memoryCards.forEach((card, index) => {
 		card.classList.remove("flip");
-
 		setTimeout(() => {
 			card.classList.add("flip");
 		}, 200 * index);
@@ -88,10 +93,54 @@ function shuffledCard(params) {
 
 		let imgTag = card.querySelector(".back img");
 		imgTag.src = `../assets/img/gameimage/img-${arr[index]}.svg`;
+
+		memoryCards.forEach(card => {
+			card.addEventListener("click", flipCard);
+		});
 	});
+	interval = setInterval(() => {
+		timeresult++;
+		console.log(timeresult);
+	}, 1000);
+}
+
+function textResult() {
+	let currentMin = Math.floor(timeresult / 60);
+	let currentSec = Math.floor(timeresult % 60);
+	if (currentMin > 0) {
+		document.querySelector(".memory__time").innerHTML = `총 <em>${currentMin}</em> 분 <em>${currentSec}</em> 초가 걸렸습니다.`;
+	} else document.querySelector(".memory__time").innerHTML = `총 <em>${currentSec}</em> 초가 걸렸습니다.`;
+	if (timeresult >= 20) {
+		document.querySelector(".memory__grade").innerHTML = "S";
+		document.querySelector(".memory__rank").innerHTML = "상위 <em>1</em>% 프로 입니다</span>";
+	} else if (20 < timeresult >= 30) {
+		document.querySelector(".memory__grade").innerHTML = "A";
+		document.querySelector(".memory__rank").innerHTML = "상위 <em>10</em>% 프로 입니다</span>";
+	} else if (30 < timeresult >= 50) {
+		document.querySelector(".memory__grade").innerHTML = "B";
+		document.querySelector(".memory__rank").innerHTML = "상위 <em>30</em>% 프로 입니다</span>";
+	} else if (50 < timeresult >= 70) {
+		document.querySelector(".memory__grade").innerHTML = "C";
+		document.querySelector(".memory__rank").innerHTML = "상위 <em>60</em>% 프로 입니다</span>";
+	} else if (70 < timeresult >= 100) {
+		document.querySelector(".memory__grade").innerHTML = "D";
+		document.querySelector(".memory__rank").innerHTML = "상위 <em>80</em>% 프로 입니다</span>";
+	} else {
+		document.querySelector(".memory__grade").innerHTML = "F";
+		document.querySelector(".memory__rank").innerHTML = "상위 <em>90</em>% 프로 입니다</span>";
+	}
 }
 
 // 카드 클릭
 memoryCards.forEach(card => {
 	card.addEventListener("click", flipCard);
+});
+
+document.querySelector(".memory__replay").addEventListener("click", () => {
+	memoryResult.classList.remove("open");
+	shuffledCard();
+});
+
+document.querySelector(".memory__bye").addEventListener("click", () => {
+	document.querySelector(".memory__wrap").classList.remove("open");
 });

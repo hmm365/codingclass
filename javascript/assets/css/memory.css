@@ -115,8 +115,12 @@
 .memory__card .cards li.shakeY {
 	animation: shakeY 1s;
 }
+.memory__result.open {
+	display: block;
+}
 
 .memory__result {
+	display: none;
 	position: absolute;
 	padding: 20px;
 	border-radius: 20px;
