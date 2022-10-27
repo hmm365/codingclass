@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>헤더</title>
+        <link rel="stylesheet" href="../assets/css/common.css" />
+        <link rel="stylesheet" href="../assets/css/reset.css" />
+        <link rel="stylesheet" href="../assets/css/fonts.css" />
+    </head>
+    <body>
+        <header id="header">
+            <div class="header__wrap">
+                <div class="header__inner">
+                    <!-- ham -->
+                    <div class="toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <!-- header__top -->
+                    <div class="header__top">
+                        <div class="headerTop__inner container">
+                            <!-- logo -->
+                            <div class="logo">
+                                <h1>
+                                    <a href="#c">IT.<em>D</em></a>
+                                </h1>
+                            </div>
+
+                            <!-- nav -->
+                            <nav class="header__nav">
+                                <ul>
+                                    <li class="active"><a href="#c">Bookmark</a></li>
+                                    <li><a href="#c">Category</a></li>
+                                    <li><a href="#c">Wallpaper</a></li>
+                                    <li><a href="#c">Notice</a></li>
+                                    <li><a href="#c">Feedback</a></li>
+                                </ul>
+                            </nav>
+
+                            <!-- 로그인 안했을 때 -->
+                            <!-- <a href="#c">Log In</a> -->
+
+                            <!-- 로그인 했을 때 -->
+                            <div class="profile">
+                                <figure class="profile__img">
+                                    <img src="/assets/image/main_image01.jpg" alt="프로필 이미지" />
+                                </figure>
+                                <div class="profile__nav">
+                                    <ul>
+                                        <li><a href="#c">내정보</a></li>
+                                        <li><a href="#c">업로드</a></li>
+                                        <li><a href="#c">로그아웃</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //header__top -->
+                    <div class="header__bottom">
+                        <div class="headerBottom__inner container">
+                            <div class="header__search">
+                                <input type="text" placeholder="검색어를 입력해주세요." />
+                            </div>
+                            <button>검색</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header -->
+
+        <!-- jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- ham -->
+        <script>
+            // header script
+            $('.toggle').click(function () {
+                $(this).toggleClass('active');
+            });
+
+            const hamBtn = document.querySelector('.toggle');
+            const nav = document.querySelector('.headerTop__inner nav');
+
+            hamBtn.addEventListener('click', () => {
+                nav.classList.toggle('show');
+            });
+
+            const profileBox = document.querySelector('.profile'); // 프로필 박스
+            const profileImg = document.querySelector('.profile__img'); // 프로필 이미지
+            const profileNav = profileBox.querySelector('.profile__nav'); // 프로필 박스 네이게이션
+            // console.log(profileNav); 프로필 박스, 프로필 이미지, 프로필 박스 네비게이션 모두 확인 완료
+
+            profileBox.addEventListener('mouseenter', () => {
+                profileNav.style.display = 'inline-block';
+            });
+            profileNav.addEventListener('mouseleave', () => {
+                profileNav.style.display = 'none';
+            });
+            // header script
+        </script>
+    </body>
+</html>

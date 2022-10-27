@@ -1,0 +1,523 @@
+* {
+    color: #06283d;
+}
+
+
+button {
+    background: none;
+}
+
+textarea {
+    font-family: 'GmarketSans';
+}
+
+#main {
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+
+.mypage__wrap {
+}
+
+/* Banner */
+.mypage__banner {
+    background-color: #1363df;
+}
+.mypage__banner .banner__inner {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    height: 200px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.mypage__banner .banner__inner .banner_title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+}
+.mypage__banner .banner__inner .banner_udline {
+    width: 94px;
+    height: 5px;
+    background: #fff;
+    position: absolute;
+    bottom: 75px;
+    opacity: 0.2;
+}
+
+/* mypage__info */
+.mypage__info {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 30px;
+
+}
+.mypage__info .info__profile {
+    width: 40%;
+    border-right: 1px solid #dcdcdc;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.mypage__info .info__profile img {
+    margin-right: 20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.mypage__info .info__profile .nickname {
+    width: 150px;
+    font-size: 20px;
+    margin-right: 10px;
+    font-family: 'GmarketSans';
+    margin-bottom: 10px;
+}
+.mypage__info .info__profile .modify_nickName {
+    color: #aaa;
+    font-size: 16px;
+}
+.mypage__info .info__profile .modify_nickname_cancel {
+    color: #aaa;
+    font-size: 16px;
+}
+.mypage__info .info__profile .modify_nickname_complete {
+    color: #1363df;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.mypage__info .info__profile .modify_profile {
+    position: absolute;
+    color: #888;
+    font-size: 14px;
+    left: 281px;
+    top: 90px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    line-height: 30px;
+    text-align: center;
+    display: none;
+}
+.mypage__info .info__profile .modify_profile_input {
+    color: #888;
+    font-size: 14px;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+.mypage__info .info__profile .modify_profile_cancel {
+    position: absolute;
+    color: #888;
+    font-size: 14px;
+    left: 170px;
+    top: 90px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    line-height: 30px;
+    text-align: center;
+    display: none;
+}
+
+.mypage__info .info__personal {
+    font-size: 18px;
+    width: 60%;
+    display: flex;
+    padding: 0 30px;
+    justify-content: center;
+}
+.info__personal .info__title {
+    width: 35%;
+}
+.info__personal .info__title p {
+    margin-bottom: 20px;
+}
+.info__personal .info__title p:last-child {
+    margin-bottom: 0;
+}
+.info__personal .info__desc {
+    font-size: 16px;
+}
+.info__personal .info__desc input {
+    width: 150px;
+}
+.info__personal .info__desc .gender {
+    font-family: 'GmarketSans';
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #aaa;
+}
+.info__personal .info__desc .phone {
+    font-family: 'GmarketSans';
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #aaa;
+}
+.info__personal .info__desc button {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: #aaa;
+}
+.info__personal .info__desc .personal_email {
+    height: 18px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #aaa;
+}
+.info__personal .info__desc .personal_upload {
+    font-size: 16px;
+    color: #aaa;
+}
+/* .mypage__info .info__personal {
+    margin-bottom: 20px;
+} */
+/* .mypage__info .info__personal p:last-child {
+    margin-bottom: 0;
+}
+.mypage__info .info__personal p span {
+    color: #aaa;
+    font-size: 16px;
+    margin-left: 10px;
+} */
+
+/* mypage__text */
+.mypage__text {
+    border-bottom: 1px dashed #dcdcdc;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+.mypage__text .text__intro {
+}
+
+.mypage__text .intro__inner {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: end;
+}
+.mypage__text .intro__change {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: end;
+}
+.mypage__text .intro__inner h3 {
+    font-size: 18px;
+    margin-right: 10px;
+}
+.mypage__text .intro__change h3 {
+    font-size: 18px;
+    margin-right: 10px;
+}
+.mypage__text .intro__inner button {
+    font-size: 16px;
+    color: #aaa;
+}
+.mypage__text .intro__change button {
+    font-size: 16px;
+    color: #aaa;
+    margin-right: 10px;
+}
+.mypage__text .intro__change .modify_intro_complete {
+    color: #1363df;
+}
+.mypage__text .intro__part1 textarea {
+    width: 100%;
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.mypage__text .introD__inner {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: end;
+}
+.mypage__text .introD__change {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: end;
+}
+.mypage__text .introD__inner h3 {
+    font-size: 18px;
+    margin-right: 10px;
+}
+.mypage__text .introD__change h3 {
+    font-size: 18px;
+    margin-right: 10px;
+}
+.mypage__text .introD__inner button {
+    font-size: 16px;
+    color: #aaa;
+}
+.mypage__text .introD__change button {
+    font-size: 16px;
+    color: #aaa;
+    margin-right: 10px;
+}
+.mypage__text .introD__change .modify_introD_complete {
+    color: #1363df;
+}
+.mypage__text .intro__part2 textarea {
+    width: 100%;
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    min-height: 150px;
+}
+
+.mypage__text .active__inner {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: end;
+}
+.mypage__text .active__change {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: end;
+}
+.mypage__text .active__inner h3 {
+    font-size: 18px;
+    margin-right: 10px;
+}
+.mypage__text .active__change h3 {
+    font-size: 18px;
+    margin-right: 10px;
+}
+.mypage__text .active__inner button {
+    font-size: 16px;
+    color: #aaa;
+}
+.mypage__text .active__change button {
+    font-size: 16px;
+    color: #aaa;
+    margin-right: 10px;
+}
+.mypage__text .active__change .active_intro_complete {
+    color: #1363df;
+}
+.mypage__text .intro__part3 textarea {
+    width: 100%;
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.intro__part4{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: 10px 0; 
+}
+.mypage__text .intro__part4 button {
+    font-size: 16px;
+}
+.mypage__text .intro__part4 .modify_pass {
+    padding: 10px;
+    color: #777;
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.mypage__text .intro__part4 .join_leave {
+    border: 1px solid #1363DF;
+    background-color: #1363DF;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+/* mypage card */
+.mypage__card .card__title {
+    margin-bottom: 20px;
+    font-size: 18px;
+    margin-left: 0.5%;
+    font-weight: 700;
+}
+.mypage__inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+.mypage__inner .mypage__cardBox {
+    position: relative;
+    width: 24%;
+    margin: 0 0.5%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 4px #dcdcdc;
+}
+
+.mypage__inner .mypage__cardBox .cardBox__image {
+    width: 100%;
+}
+.mypage__inner .mypage__cardBox .cardBox__image figure {
+    overflow: hidden;
+}
+.mypage__inner .mypage__cardBox .cardBox__image figure img {
+    width: 100%;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1220px) {
+    .mypage__info.container {
+        width: 90%;
+    }
+    .mypage__text.container {
+        width: 90%;
+    }
+    .mypage__card.container {
+        width: 90%;
+    }
+}
+@media (max-width: 980px) {
+    .mypage__info {
+        padding-top: 30px;
+        flex-wrap: wrap;
+    }
+    .mypage__info .info__profile {
+        width: 100%;
+        border-right: none;
+        justify-content: start;
+    }
+    .mypage__info .info__personal {
+        padding: 30px 0 0px 10px;
+        width: 100%;
+    }
+    .mypage__info .info__personal .info__title {
+        font-size: 17px;
+        margin-bottom: 10px;
+        width: 25%;
+    }
+    .mypage__info .info__personal .info__desc {
+        width: 75%;
+    }
+    .mypage__info .info__personal .info__desc input {
+        margin-bottom: 20px;
+    }
+    .mypage__info .info__personal .info__desc .personal_email {
+        margin-bottom: 23px;
+    }
+
+    .mypage__text .intro__inner h3 {
+        font-size: 16px;
+    }
+    .mypage__text .intro__inner button {
+        font-size: 12px;
+    }
+    .mypage__text .intro__part1 textarea {
+        font-size: 12px;
+    }
+    .mypage__text .introD__inner h3 {
+        font-size: 16px;
+    }
+    .mypage__text .introD__inner button {
+        font-size: 12px;
+    }
+    .mypage__text .intro__part2 textarea {
+        font-size: 12px;
+    }
+    .mypage__text .active__inner h3 {
+        font-size: 16px;
+    }
+    .mypage__text .active__inner button {
+        font-size: 12px;
+    }
+    .mypage__text .intro__part3 textarea {
+        font-size: 12px;
+    }
+    .mypage__text .intro__change h3 {
+        font-size: 16px;
+    }
+    .mypage__text .introD__change h3 {
+        font-size: 16px;
+    }
+    .mypage__text .active__change h3 {
+        font-size: 16px;
+    }
+    .mypage__text .intro__change button {
+        font-size: 12px;
+    }
+    .mypage__text .introD__change button {
+        font-size: 12px;
+    }
+    .mypage__text .active__change button {
+        font-size: 12px;
+    }
+    .mypage__text .intro__part4 .join_leave {
+        font-size: 14px;
+    }
+    .mypage__text .intro__part4 .modify_pass {
+        font-size: 14px;
+    }
+}
+@media (max-width: 748px) {
+    .mypage__info .info__personal .info__title {
+        width: 30%;
+    }
+    .mypage__info .info__personal .info__desc {
+        width: 70%;
+    }
+    .mypage__info .info__profile .nickname {
+        font-size: 18px;
+    }
+    .mypage__info .info__profile .modify_nickName {
+        font-size: 14px;
+    }
+    .mypage__info .info__personal .info__title {
+        font-size: 16px;
+    }
+    .info__personal .info__desc .gender {
+        font-size: 14px;
+    }
+    .info__personal .info__desc .phone {
+        font-size: 14px;
+    }
+    .info__personal .info__desc .personal_email {
+        font-size: 14px;
+    }
+    .mypage__info .info__personal .info__desc .personal_email {
+        margin-bottom: 25px;
+    }
+    .info__personal .info__desc .personal_upload {
+        font-size: 14px;
+    }
+    .info__personal .info__desc button {
+        font-size: 12px;    
+    }
+
+    .mypage__inner .mypage__cardBox {
+        width: 49%;
+        margin: 0 0.5%;
+        margin-bottom: 20px;
+    }
+    .mypage__text .intro__part4 .join_leave {
+        font-size: 12px;
+    }
+    .mypage__text .intro__part4 .modify_pass {
+        font-size: 12px;
+    }
+}
+@media (max-width: 480px) {
+    .info__personal .info__desc input {
+        width: 120px;
+    }
+}

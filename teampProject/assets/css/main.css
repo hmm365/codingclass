@@ -1,0 +1,192 @@
+#main {
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+#main .main_wrap {
+}
+#main .main_wrap .main_inner {
+}
+
+/* main_card (메인 이미지 박스 요소) */
+.main_card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.main_card:last-child {
+}
+.main_card .main_cardBox {
+    position: relative;
+    width: 24%;
+    /* border: 1px solid #f5f5f5; */
+    margin-bottom: 20px;
+    box-shadow: 0 0 4px #dcdcdc;
+}
+/* main_image (박스 이미지 요소 부분) */
+.main_card .main_cardBox .main_image {
+    width: 100%;
+}
+.main_card .main_cardBox .main_image figure {
+    overflow: hidden;
+}
+.main_card .main_cardBox .main_image figure img {
+    width: 100%;
+}
+/* main_info (박스 인포 요소) */
+.main_card .main_cardBox .main_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.main_card .main_cardBox .main_info .mainInfo_left {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.main_card .main_cardBox .main_info .mainInfo_left figure {
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
+.main_card .main_cardBox .main_info .mainInfo_left figure img {
+    border-radius: 50%;
+}
+.main_card .main_cardBox .main_info .mainInfo_left .mainInfo_title {
+}
+.main_card .main_cardBox .main_info .mainInfo_left .mainInfo_title h3 a {
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 170px;
+    color: #666;
+    font-size: 15px;
+}
+.main_card .main_cardBox .main_info .mainInfo_left .mainInfo_title span {
+    color: #888;
+    font-size: 13px;
+}
+.main_card .main_cardBox .main_info .mainInfo_right {
+    padding-top: 10px;
+    border-top: 1px solid #dcdcdc;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.mainInfo_right figure {
+    display: flex;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+/* 밑줄 효과 */
+.mainInfo_right figure {
+
+    display: flex;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+} */
+.mainInfo_right figure img {
+
+}
+.mainInfo_right span {
+    color: #fff;
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.main_card .main_cardBox > img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.main_card .main_cardBox > img.show {
+    background-image: url("/assets/image/heartClick_ico.svg");
+}
+
+/* 메인 베너 */
+.main_banner {
+    box-sizing: border-box;
+    height: 500px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, #113dff 9.47%, #2fa9f0 111.9%);
+}
+.main_banner .banner_inner {
+    text-align: center;
+    line-height: 1.4;
+}
+
+.banner__text {
+    font-size: 25px;
+    color: #fff;
+}
+
+.banner__text em {
+}
+.banner__text p {
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 18px;
+}
+.banner__bg {
+    animation: up 1s cubic-bezier(0, 0, 0.33, 1.12) forwards;
+    transform: scale(0.8) translateY(300px);
+    opacity: 0;
+}
+
+@keyframes up {
+    0% {
+        transform: scale(0.8) translateY(300px);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0.8) translateY(-120px);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(0.8) translateY(-100px);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1220px) {
+    .container {
+        width: 96%;
+    }
+}
+@media (max-width: 1200px) {
+    .container {
+        width: 96%;
+    }
+    .main_card .main_cardBox {
+        width: 32%;
+    }
+}
+
+@media (max-width: 850px) {
+    .main_card .main_cardBox {
+        width: 48%;
+    }
+}
+@media (max-width: 580px) {
+    .main_card .main_cardBox {
+        margin: 20px auto;
+        width: 96%;
+    }
+}

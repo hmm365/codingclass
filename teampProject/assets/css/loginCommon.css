@@ -1,0 +1,421 @@
+input {
+    font-family: 'GmarketSans'; /* input 에는 (*)공통 폰트가 안들어가서 따로 줘야합니다. */
+}
+input::placeholder {
+    font-family: 'GmarketSans';
+}
+
+/* 로그인 페이지 공통 요소 */
+.login__popup {
+    padding-top: 110px;
+}
+.login__popup > .login__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login__popup > .login__wrap > .login__inner {
+}
+.login__popup > .login__wrap > .login__inner > .login__box {
+    font-family: 'GmarketSans';
+    box-sizing: border-box;
+    width: 500px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    text-align: center;
+}
+.login__popup > .login__wrap > .login__inner > .login__box.container {
+}
+
+/* .login__box 부터 태그 시작 */
+.login__box > form {
+}
+.login__box > form > fieldset {
+}
+.login__box > form > fieldset > h2 {
+    color: #555;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 3px #ccc;
+}
+.login__box > form > fieldset > h2 > em {
+    color: #1363df;
+}
+.login__box > form > fieldset > span {
+    color: #666;
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.login__box > form > fieldset > .join__title {
+    margin-bottom: 40px;
+}
+.login__box > form > fieldset > p {
+    color: #888;
+    font-size: 13px;
+    word-break: keep-all;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+.login__box > form > fieldset > legend {
+}
+.login__box > form > fieldset > div {
+    /* background-color: #f5f5f5; 영역 확인용 */
+    width: 100%;
+}
+.login__box > form > fieldset > div > p {
+    color: #777;
+    text-align: left;
+    font-size: 13px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.login__box > form > fieldset > div > div {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+/* reset password 부분 이전 비밀번호 */
+.login__box > form > fieldset > div > div > p {
+    color: #777;
+    font-size: 12px;
+    margin-right: 5px;
+}
+.login__box > form > fieldset > div > div > p + p {
+    color: red;
+}
+/* //reset password 부분 이전 비밀번호 */
+
+.login__box > form > fieldset > div > label {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+.login__box > form > fieldset > div > input {
+    box-sizing: border-box;
+    font-weight: 300;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    border: 1px solid #dcdcdc;
+}
+.login__box > form > fieldset > div > input::placeholder {
+    color: #aaa;
+}
+
+.login__box > form > fieldset > div + div {
+}
+.login__box > form > fieldset > div + div > .error__title {
+    display: flex;
+}
+.login__box > form > fieldset > div + div > .error__title > p {
+    color: #777;
+    text-align: left;
+    font-size: 12px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.login__box > form > fieldset > div + div > .error__title > p + p {
+    color: red;
+}
+.login__box > form > fieldset > div + div > label {
+}
+.login__box > form > fieldset > div + div > input {
+}
+.login__box > form > fieldset > a {
+    color: #1363df;
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.login__box > form > fieldset > .lost {
+    font-size: 14px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+.login__box > form > fieldset > .lost > a {
+    color: #1363df;
+}
+.login__box > form > fieldset > .lost > a + a {
+}
+.login__box > form > fieldset > button {
+    cursor: pointer;
+    box-sizing: border-box;
+    color: #fff;
+    background: linear-gradient(94.73deg, #24a7ff 9.47%, #1363df 111.9%);
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    border-radius: 5px;
+}
+.login__box > form > fieldset > button + button {
+    color: #1363df;
+    background: #fff;
+    border: 1px solid #dcdcdc;
+}
+
+/* 이용약관 페이지 css */
+#joinAgree {
+    padding-top: 110px;
+}
+#joinAgree > .agree__wrap {
+}
+#joinAgree > .agree__wrap.container {
+    font-family: 'GmarketSans';
+    box-sizing: border-box;
+    width: 500px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    text-align: center;
+}
+.agree__wrap > h2 {
+    color: #555;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 3px #ccc;
+}
+.agree__wrap > h2 > em {
+    color: #1363df;
+}
+.agree__wrap > p {
+    color: #666;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.agree__wrap > div {
+    color: #666;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.agree__wrap > div > input {
+}
+.agree__wrap > div > label {
+    display: inline-block;
+    font-size: 14px;
+}
+.agree__wrap > div + div {
+}
+.agree__wrap > div + div > div {
+}
+.agree__wrap > div + div > div > .checkbox__inner {
+}
+.agree__wrap > div + div > div > .checkbox__inner > input {
+}
+.agree__wrap > div + div > div > .checkbox__inner > label {
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.checkbox__inner + .desc {
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+    color: #666;
+    line-height: 1.5;
+    font-weight: 300;
+    height: 150px;
+    overflow-y: scroll;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+    width: 100%;
+    word-break: keep-all;
+    margin-bottom: 20px;
+}
+.checkbox__inner > .desc ul {
+}
+.checkbox__inner > .desc ul li {
+}
+.agree__inner > div + div {
+}
+.agree__inner > div + div > .checkbox__footer > input {
+}
+.agree__inner > div + div > .checkbox__footer > label {
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.agree__inner > div + div > .desc {
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+    color: #666;
+    line-height: 1.5;
+    font-weight: 300;
+    height: 150px;
+    overflow-y: scroll;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+    width: 100%;
+    word-break: keep-all;
+    margin-bottom: 20px;
+}
+.agree__inner > div + div + a {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: #fff;
+    background: linear-gradient(94.73deg, #24a7ff 9.47%, #1363df 111.9%);
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    border-radius: 5px;
+}
+.agree__inner > div + div + a + a {
+    display: block;
+    text-align: center;
+    color: #1363df;
+    cursor: pointer;
+    font-size: 14px;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    padding: 15px 0;
+    border-radius: 5px;
+}
+
+/* 회원가입 페이지 css */
+.overlay {
+}
+.overlay > div > input {
+    box-sizing: border-box;
+    margin-right: 10px;
+    font-weight: 300;
+    width: 73%;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    border: 1px solid #dcdcdc;
+}
+.overlay > div > a {
+    font-size: 13px;
+    box-sizing: border-box;
+    font-weight: 300;
+    width: 26%;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    border: 1px solid #dcdcdc;
+}
+
+/* checkbox */
+input[type='checkbox'] {
+    appearance: none;
+    position: relative;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    outline: none !important;
+    border: 1px solid #eeeeee;
+    border-radius: 50px;
+    background: #fbfbfb;
+}
+
+input[type='checkbox']::before {
+    content: '\2713';
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    overflow: hidden;
+    transform: scale(0) translate(-50%, -50%);
+    line-height: 1;
+}
+
+input[type='checkbox']:hover {
+    border-color: rgba(170, 170, 170, 0.5);
+}
+
+input[type='checkbox']:checked {
+    background: #1363df;
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+input[type='checkbox']:checked::before {
+    border-radius: 2px;
+    transform: scale(1) translate(-50%, -50%);
+}
+
+/* 회원가입 완료 페이지 css */
+.login__box > figure {
+}
+.login__box > figure > img {
+    width: 45%;
+    margin-bottom: 30px;
+}
+.login__box > p {
+    color: #444;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.login__box > span {
+    color: #666;
+    line-height: 1.4;
+    font-weight: 300;
+    word-break: keep-all;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.login__box > button {
+    cursor: pointer;
+    box-sizing: border-box;
+    color: #fff;
+    background: linear-gradient(94.73deg, #24a7ff 9.47%, #1363df 111.9%);
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    border-radius: 5px;
+}
+/* //회원가입 완료 페이지 css */
+
+/* 노트북 */
+@media (max-width: 1220px) {
+    .login__popup > .login__wrap > .login__inner > .login__box {
+    }
+    .login__popup > .login__wrap > .login__inner {
+        width: 90%;
+    }
+}
+
+/* 태블릿 */
+@media (max-width: 748px) {
+    .login__popup > .login__wrap > .login__inner > .login__box {
+        width: 90%;
+    }
+    #joinAgree > .agree__wrap.container {
+        width: 90%;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 480px) {
+    .login__popup > .login__wrap > .login__inner > .login__box {
+        width: 98%;
+    }
+    #joinAgree > .agree__wrap.container {
+        width: 100%;
+    }
+    .agree__wrap > div > label {
+        font-size: 13px;
+        text-align: center;
+    }
+    .agree__wrap > div > input {
+        appearance: none;
+        position: relative;
+        top: -5px;
+        right: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+    }
+}

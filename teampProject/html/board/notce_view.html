@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>게시글 쓰기 페이지</title>
+
+        <!-- CSS Link -->
+        <link rel="stylesheet" href="/assets/css/common.css" />
+        <link rel="stylesheet" href="/assets/css/reset.css" />
+        <link rel="stylesheet" href="/assets/css/fonts.css" />
+        <link rel="stylesheet" href="/assets/css/board.css" />
+        <link rel="stylesheet" href="/assets/css/boardView.css" />
+    </head>
+    <body>
+        <header id="header">
+            <div class="header__wrap">
+                <div class="header__inner">
+                    <!-- ham -->
+                    <div class="toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <!-- header__top -->
+                    <div class="header__top">
+                        <div class="headerTop__inner container">
+                            <!-- logo -->
+                            <div class="logo">
+                                <h1>
+                                    <a href="#c">IT.<em>D</em></a>
+                                </h1>
+                            </div>
+
+                            <!-- nav -->
+                            <nav class="header__nav">
+                                <ul>
+                                    <li class="active"><a href="#c">Bookmark</a></li>
+                                    <li><a href="#c">Category</a></li>
+                                    <li><a href="#c">Wallpaper</a></li>
+                                    <li><a href="#c">Notice</a></li>
+                                    <li><a href="#c">Feedback</a></li>
+                                </ul>
+                            </nav>
+
+                            <a href="#c">Log In</a>
+                        </div>
+                    </div>
+                    <!-- //header__top -->
+                    <div class="header__bottom">
+                        <div class="headerBottom__inner container">
+                            <div class="header__search">
+                                <input type="text" placeholder="검색어를 입력해주세요." />
+                            </div>
+                            <button>검색</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header -->
+
+        <!-- jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- ham -->
+        <script>
+            $(".toggle").click(function () {
+                $(this).toggleClass("active");
+            });
+
+            const hamBtn = document.querySelector(".toggle");
+            const nav = document.querySelector(".headerTop__inner nav");
+
+            hamBtn.addEventListener("click", () => {
+                nav.classList.toggle("show");
+            });
+        </script>
+
+        <main id="main">
+            <div class="main_wrap">
+                <section class="board_wrap">
+                    <div class="board_inner container">
+                        <div class="board_box">
+                            <div class="board_title">
+                                <h2>FEEDBACK</h2>
+                                <p class="line1"></p>
+                            </div>
+                            <p class="board_desc">IT.D에서 제공하는 게시글 입니다.</p>
+
+                            <div class="board__view">
+                                <div class="board__view__title">
+                                    <h3>IT.D 필수 공지사항</h3>
+                                    <div class="board__view__flex">
+                                        <p>Nickname | <span>쿼카</span></p>
+                                        <p>Date | <span>2022. 10. 06</span></p>
+                                        <p class="views"><em>Views</em> | <span>22</span></p>
+                                    </div>
+                                </div>
+                                <div class="board__view__desc">
+                                    안녕하세요. IT.D 입니다.<br />
+                                    여기는 글 보기 페이지이며 공지사항과 피드백 둘 다 동일하게 적용이 됩니다.<br /><br />
+                                    제목은 Bold체, 내용과 닉네임, 날짜는 미디움으로 설정하였습니다.<br />
+                                    lineheight 140%<br /><br />
+                                    행복한 하루 되시길 바랍니다.<br />
+                                    감사합니다.
+                                </div>
+                                <div class="btn_group">
+                                    <a href="#" class="btn_save">쓰기</a>
+                                </div>
+                                <!-- <div class="btn_group">
+                                    <a href="#" class="btn_modify">수정</a>
+                                    <a href="#" class="btn_delete">삭제</a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <div class="footer_inner">
+                <div class="footer_wrap">
+                    <h2><em>IT.D</em> | Free Image Download Site</h2>
+                    <div class="footer_bottom container">
+                        <div class="footer_left">
+                            <p>
+                                The creator : 전보연, 송성희, 김석준, 이중호 <br />
+                                경기도광역시 단원구 고잔동 535-2번지 601호 코스모프라자 라인컴퓨터아트학원
+                            </p>
+                            <a href="#">이용약관</a>
+                            <a href="#">개인정보 처리방침</a>
+                            <a href="#">검색결과 수집정책</a>
+                            <figure class="footer_sns">
+                                <a href="#"><img src="/assets/image/footer_sns01.png" alt="피그마 링크" /></a>
+                                <a href="#"><img src="/assets/image/footer_sns02.png" alt="닷홈 링크" /></a>
+                            </figure>
+                        </div>
+                        <div class="footer_right">
+                            <article class="footer_menu">
+                                <h3>카테고리</h3>
+                                <ul>
+                                    <li><a href="#">조회수 순위</a></li>
+                                    <li><a href="#">다운로드 순위</a></li>
+                                    <li><a href="#">반응 순위</a></li>
+                                    <li><a href="#">댓글 순위</a></li>
+                                </ul>
+                            </article>
+                            <article class="footer_menu">
+                                <h3>메뉴</h3>
+                                <ul>
+                                    <li><a href="#">즐겨찾기</a></li>
+                                    <li><a href="#">카테고리</a></li>
+                                    <li><a href="#">배경화면</a></li>
+                                    <li><a href="#">피드백</a></li>
+                                </ul>
+                            </article>
+                            <article class="footer_menu">
+                                <h3>고객센터</h3>
+                                <ul>
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">피드백</a></li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- // footer -->
+    </body>
+    <script></script>
+</html>

@@ -1,0 +1,122 @@
+a {
+    text-decoration: underline;
+}
+/* main */
+#main {
+    margin: 20px;
+}
+.main_wrap {
+}
+.main_wrap .main_inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* figma */
+.figma_wrap {
+    border-radius: 20px;
+    width: 32%;
+    background: linear-gradient(94.73deg, #388fc0 9.47%, #195eb1 111.9%);
+}
+.figma_inner {
+}
+.figma_inner .figma_box {
+    padding: 20px;
+}
+.figma_inner .figma_box h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 15px;
+    color: #769fcd;
+}
+.figma_inner .figma_box ul {
+}
+.figma_inner .figma_box ul li {
+    margin-bottom: 5px;
+    color: #dcdcdc;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.4s;
+    font-size: 14px;
+}
+.figma_inner .figma_box ul li:hover {
+    background-color: #195eb1;
+}
+.figma_inner .figma_box ul li a {
+    color: #fff;
+}
+
+/* HTML */
+.html_wrap {
+    border-radius: 20px;
+    width: 32%;
+    background: linear-gradient(94.73deg, #388fc0 9.47%, #195eb1 111.9%);
+}
+.html_inner {
+}
+.html_inner .html_box {
+    padding: 20px;
+}
+.html_inner .html_box h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 15px;
+    color: #769fcd;
+}
+.html_inner .html_box ul {
+}
+.html_inner .html_box ul li {
+    margin-bottom: 5px;
+    color: #dcdcdc;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.4s;
+    font-size: 14px;
+}
+.html_inner .html_box ul li:hover {
+    background-color: #195eb1;
+}
+.html_inner .html_box ul li a {
+    color: #fff;
+}
+
+/* PHP */
+.php_wrap {
+    border-radius: 20px;
+    width: 32%;
+    background: linear-gradient(94.73deg, #388fc0 9.47%, #195eb1 111.9%);
+}
+.php_inner {
+}
+.php_inner .php_box {
+    padding: 20px;
+}
+.php_inner .php_box h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 15px;
+    color: #769fcd;
+}
+.php_inner .php_box ul {
+}
+.php_inner .php_box ul li {
+    margin-bottom: 5px;
+    color: #dcdcdc;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.4s;
+    font-size: 14px;
+}
+.php_inner .php_box ul li a {
+    color: #fff;
+}

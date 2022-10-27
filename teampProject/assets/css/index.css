@@ -1,0 +1,142 @@
+/* header */
+* {
+    font-family: 'GmarketSans';
+}
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 0;
+    text-align: center;
+    background-color: #fff;
+    z-index: 9999;
+    border-bottom: 1px solid #dcdcdc;
+}
+#header > h1 {
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+#header > h1 > em {
+    color: #1363df;
+    border-bottom: 2px solid #1363df;
+}
+#header > p {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+#header > p > em {
+    color: #1363df;
+}
+#header > p + p {
+    font-size: 14px;
+    color: #999;
+}
+#header > nav {
+}
+#header > nav > ul {
+}
+#header > nav > ul > li {
+    display: inline-block;
+    margin: 0 20px;
+}
+#header > nav > ul > li > a {
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #8013df;
+    color: #fff;
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+}
+#header > nav > ul > li + li > a {
+    background-color: #ff5d40;
+}
+#header > nav > ul > li + li + li > a {
+    background-color: #1363df;
+}
+
+/* main */
+#main {
+    padding: 200px 0 40px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+#main > .index__wrap {
+}
+#main > .index__wrap > .index__inner {
+}
+.index__inner > .index {
+}
+.index__inner > .index > article {
+    margin-bottom: 100px;
+}
+.index__inner > .index > article > h2 {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 15px;
+}
+.index__inner > .index > article > .list {
+}
+.index__inner > .index > article > .list > h3 {
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #1363df;
+}
+.index__inner > .index > article > .list > ul {
+    margin-bottom: 20px;
+}
+.index__inner > .index > article > .list > ul > li {
+    /* margin-bottom: 5px; */
+}
+.index__inner > .index > article > .list > ul > li > a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+    overflow: hidden;
+}
+.index__inner > .index > article > .list > ul > li > a::before {
+    content: '';
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #1363df;
+    transform: translateX(-170px);
+    transition: transform 0.4s ease-in-out;
+}
+
+.index__inner > .index > article > .list > ul > li > a:hover::before {
+    transform: translateX(0);
+}
+
+/* 인덱스 링크 페이지 css */
+.indexLink__header {
+}
+.indexLink__header > h3 > a {
+    color: #1363df;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+.indexLink__header > h3 > a:hover {
+    transform: scale(1.05);
+}
+.indexLink__header > h2 {
+    color: #fff;
+    display: inline-block;
+    font-size: 25px;
+    padding: 20px 30px;
+    background-color: #1363df;
+}

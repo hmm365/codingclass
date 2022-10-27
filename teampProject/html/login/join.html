@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>회원가입 입력</title>
+        <!-- <link rel="stylesheet" href="../../assets/css/join.css" /> -->
+        <link rel="stylesheet" href="../../assets/css/reset.css" />
+        <link rel="stylesheet" href="../../assets/css/common.css" />
+        <link rel="stylesheet" href="../../assets/css/loginCommon.css" />
+        <style>
+            @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+        </style>
+    </head>
+
+    <body>
+        <header id="header">
+            <div class="header__wrap">
+                <div class="header__inner">
+                    <!-- ham -->
+                    <div class="toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <!-- header__top -->
+                    <div class="header__top">
+                        <div class="headerTop__inner container">
+                            <!-- logo -->
+                            <div class="logo">
+                                <h1>
+                                    <a href="#c">IT.<em>D</em></a>
+                                </h1>
+                            </div>
+
+                            <!-- nav -->
+                            <nav class="header__nav">
+                                <ul>
+                                    <li class="active"><a href="#c">Bookmark</a></li>
+                                    <li><a href="#c">Category</a></li>
+                                    <li><a href="#c">Wallpaper</a></li>
+                                    <li><a href="#c">Notice</a></li>
+                                    <li><a href="#c">Feedback</a></li>
+                                </ul>
+                            </nav>
+
+                            <a href="#c">Log In</a>
+                        </div>
+                    </div>
+                    <!-- //header__top -->
+                    <div class="header__bottom">
+                        <div class="headerBottom__inner container">
+                            <div class="header__search">
+                                <input type="text" placeholder="검색어를 입력해주세요." />
+                            </div>
+                            <button>검색</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header -->
+
+        <div class="login__popup">
+            <div class="login__wrap">
+                <div class="login__inner">
+                    <div class="login__box container">
+                        <form name="회원가입" action="메인페이지">
+                            <fieldset>
+                                <h2>IT.<em>D</em></h2>
+                                <span class="join__title">Create an account 📌</span>
+                                <legend>회원가입 입력 폼</legend>
+                                <div class="overlay">
+                                    <div class="input__alert">
+                                        <p class="input__title">ID</p>
+                                        <p class="msg" id="youidComment">아이디가 존재합니다.</p>
+                                    </div>
+                                    <label for="youID">ID</label>
+                                    <div class="input__error">
+                                        <input type="id" name="youID" id="youID" placeholder="아이디를 입력해주세요." class="input__style1" required />
+                                        <a href="#c" class="check" onclick="nickChecking()">중복검사</a>
+                                    </div>
+                                </div>
+                                <div class="overlay">
+                                    <div class="input__alert">
+                                        <p class="input__title">NICKNAME</p>
+                                        <p class="msg" id="youNameComment">이름은 한글로만 작성해 주세요</p>
+                                    </div>
+                                    <label for="NickName">NICKNAME</label>
+                                    <div class="input__error">
+                                        <input type="name" name="youName" id="youName" placeholder="성함을 입력해주세요." class="input__style2" required />
+                                        <a href="#c" class="check" onclick="nickChecking()">중복검사</a>
+                                    </div>
+                                </div>
+                                <div class="overlay">
+                                    <div class="input__alert">
+                                        <p class="input__title">E-MAIL</p>
+                                        <p class="msg" id="youEmailComment">이메일이 존재합니다.</p>
+                                    </div>
+                                    <label for="youEmail">이메일</label>
+                                    <div class="input__error">
+                                        <input type="eamil" name="youEmail" id="youEmail" placeholder="이메일을 입력해주세요." class="input__style3" required />
+                                        <a href="#c" class="check" onclick="nickChecking()">중복검사</a>
+                                    </div>
+                                </div>
+                                <div class="overlay">
+                                    <div class="input__alert">
+                                        <p class="input__title">PASSWORD</p>
+                                        <p class="msg" id="youPassComment">비밀번호가 일치하지 않습니다.</p>
+                                    </div>
+                                    <label for="youPass">비밀번호</label>
+                                    <input type="password" name="youPass" id="youPass" placeholder="비밀번호를 입력해주세요." class="input__style4" required />
+                                </div>
+                                <div class="overlay">
+                                    <div class="input__alert">
+                                        <p class="input__title">PW CHECK</p>
+                                        <p class="msg" id="youPassCComment">비밀번호를 다시 확인해주세요</p>
+                                    </div>
+                                    <label for="youPassC">비밀번호 확인</label>
+                                    <input type="password" name="youPassC" id="youPassC" placeholder="비밀번호를 다시한번 입력해주세요." class="input__style5" required />
+                                </div>
+                                <button type="submit" class="input__button">계정 생성</button>
+                                <button type="submit" class="join__button">이전 페이지로 돌아가기</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="footer_inner">
+                <div class="footer_wrap">
+                    <h2><em>IT.D</em> | Free Image Download Site</h2>
+                    <div class="footer_bottom container">
+                        <div class="footer_left">
+                            <p>
+                                The creator : 전보연, 송성희, 김석준, 이중호 <br />
+                                경기도광역시 단원구 고잔동 535-2번지 601호 코스모프라자 라인컴퓨터아트학원
+                            </p>
+                            <a href="#">이용약관</a>
+                            <a href="#">개인정보 처리방침</a>
+                            <a href="#">검색결과 수집정책</a>
+                            <figure class="footer_sns">
+                                <a href="#"><img src="/assets/image/footer_sns01.png" alt="피그마 링크" /></a>
+                                <a href="#"><img src="/assets/image/footer_sns02.png" alt="닷홈 링크" /></a>
+                            </figure>
+                        </div>
+                        <div class="footer_right">
+                            <article class="footer_menu">
+                                <h3>카테고리</h3>
+                                <ul>
+                                    <li><a href="#">조회수 순위</a></li>
+                                    <li><a href="#">다운로드 순위</a></li>
+                                    <li><a href="#">반응 순위</a></li>
+                                    <li><a href="#">댓글 순위</a></li>
+                                </ul>
+                            </article>
+                            <article class="footer_menu">
+                                <h3>메뉴</h3>
+                                <ul>
+                                    <li><a href="#">즐겨찾기</a></li>
+                                    <li><a href="#">카테고리</a></li>
+                                    <li><a href="#">배경화면</a></li>
+                                    <li><a href="#">피드백</a></li>
+                                </ul>
+                            </article>
+                            <article class="footer_menu">
+                                <h3>고객센터</h3>
+                                <ul>
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">피드백</a></li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- // footer -->
+
+        <!-- jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- ham -->
+        <script>
+            $('.toggle').click(function () {
+                $(this).toggleClass('active');
+            });
+
+            const hamBtn = document.querySelector('.toggle');
+            const nav = document.querySelector('.headerTop__inner nav');
+
+            hamBtn.addEventListener('click', () => {
+                nav.classList.toggle('show');
+            });
+        </script>
+    </body>
+</html>

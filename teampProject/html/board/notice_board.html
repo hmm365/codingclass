@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>공지사항 페이지</title>
+
+        <!-- CSS Link -->
+        <link rel="stylesheet" href="/assets/css/common.css" />
+        <link rel="stylesheet" href="/assets/css/reset.css" />
+        <link rel="stylesheet" href="/assets/css/fonts.css" />
+        <link rel="stylesheet" href="/assets/css/board.css" />
+    </head>
+    <body>
+        <header id="header">
+            <div class="header__wrap">
+                <div class="header__inner">
+                    <!-- ham -->
+                    <div class="toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <!-- header__top -->
+                    <div class="header__top">
+                        <div class="headerTop__inner container">
+                            <!-- logo -->
+                            <div class="logo">
+                                <h1>
+                                    <a href="#c">IT.<em>D</em></a>
+                                </h1>
+                            </div>
+
+                            <!-- nav -->
+                            <nav class="header__nav">
+                                <ul>
+                                    <li class="active"><a href="#c">Bookmark</a></li>
+                                    <li><a href="#c">Category</a></li>
+                                    <li><a href="#c">Wallpaper</a></li>
+                                    <li><a href="#c">Notice</a></li>
+                                    <li><a href="#c">Feedback</a></li>
+                                </ul>
+                            </nav>
+
+                            <a href="#c">Log In</a>
+                        </div>
+                    </div>
+                    <!-- //header__top -->
+                    <div class="header__bottom">
+                        <div class="headerBottom__inner container">
+                            <div class="header__search">
+                                <input type="text" placeholder="검색어를 입력해주세요." />
+                            </div>
+                            <button>검색</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header -->
+
+        <!-- jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- ham -->
+        <script>
+            $('.toggle').click(function () {
+                $(this).toggleClass('active');
+            });
+
+            const hamBtn = document.querySelector('.toggle');
+            const nav = document.querySelector('.headerTop__inner nav');
+
+            hamBtn.addEventListener('click', () => {
+                nav.classList.toggle('show');
+            });
+        </script>
+
+        <main id="main">
+            <div class="main_wrap">
+                <section class="board_wrap board_mb">
+                    <div class="board_inner container">
+                        <div class="board_box">
+                            <div class="board_title">
+                                <h2>NOTICE</h2>
+                                <p class="line1"></p>
+                            </div>
+                            <p>IT.D의 공지사항을 알려드립니다.</p>
+                            <div class="board_search">
+                                <form action="boardSearch.php" name="boardSearch" method="get">
+                                    <fieldset>
+                                        <select name="searchOption" id="searchOption">
+                                            <option value="title">제목</option>
+                                            <option value="contents">내용</option>
+                                            <option value="name">등록자</option>
+                                        </select>
+                                        <legend class="ir">게시판 검색 영역</legend>
+                                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력해주세요." aria-label="search" required />
+                                        <button type="submit" class="searchBtn">검색</button>
+                                        <button type="submit" class="searchBtn_Res"><img src="../assets/img/search_Icon.svg" alt="검색" /></button>
+                                        <!-- <a href="boardWrite.php" class="btn">글쓰기</a> -->
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="board_table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Number</th>
+                                            <th>Title</th>
+                                            <th class="Nickname">Nickname</th>
+                                            <th class="Date">Date</th>
+                                            <th class="Views">Views</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="ce">1</td>
+                                            <td class="lf">
+                                                <a href="#">IT.D 필수 공지사항</a>
+                                                <p class="resinfo">관리자 | <span>2022.10.01 </span><em>| 조회수 : 112</em></p>
+                                            </td>
+                                            <td class="ce Nickname">관리자</td>
+                                            <td class="ce Date">2022. 10. 01</td>
+                                            <td class="ce Views">1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ce">2</td>
+                                            <td class="lf">
+                                                <a href="#">IT.D 이용약관</a>
+                                                <p class="resinfo">관리자 | <span>2022.10.01 </span><em>| 조회수 : 132</em></p>
+                                            </td>
+                                            <td class="ce Nickname">관리자</td>
+                                            <td class="ce Date">2022. 10. 01</td>
+                                            <td class="ce Views">2</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ce">3</td>
+                                            <td class="lf">
+                                                <a href="#">IT.D 개인정보 처리방침</a>
+                                                <p class="resinfo">관리자 | <span>2022.10.01 </span><em>| 조회수 : 121</em></p>
+                                            </td>
+                                            <td class="ce Nickname">관리자</td>
+                                            <td class="ce Date">2022. 10. 01</td>
+                                            <td class="ce Views">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ce">4</td>
+                                            <td class="lf">
+                                                <a href="#">IT.D 회원가입 방법</a>
+                                                <p class="resinfo">관리자 | <span>2022.10.01 </span><em>| 조회수 : 314</em></p>
+                                            </td>
+                                            <td class="ce Nickname">관리자</td>
+                                            <td class="ce Date">2022. 10. 01</td>
+                                            <td class="ce Views">4</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ce">5</td>
+                                            <td class="lf">
+                                                <a href="#">점검 시간 알림</a>
+                                                <p class="resinfo">관리자 | <span>2022.10.01 </span><em>| 조회수 : 2351</em></p>
+                                            </td>
+                                            <td class="ce Nickname">관리자</td>
+                                            <td class="ce Date">2022. 10. 01</td>
+                                            <td class="ce Views">5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ce">6</td>
+                                            <td class="lf">
+                                                <a href="#">긴급 점검 알림</a>
+                                                <p class="resinfo">관리자 | <span>2022.10.01 </span><em>| 조회수 : 541</em></p>
+                                            </td>
+                                            <td class="ce Nickname">관리자</td>
+                                            <td class="ce Date">2022. 10. 01</td>
+                                            <td class="ce Views">6</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ce">7</td>
+                                            <td class="lf">
+                                                <a href="#">새해 기념 이벤트 공지사항</a>
+                                                <p class="resinfo">관리자 | <span>2022.10.01 </span><em>| 조회수 : 41</em></p>
+                                            </td>
+                                            <td class="ce Nickname">관리자</td>
+                                            <td class="ce Date">2022. 10. 01</td>
+                                            <td class="ce Views">7</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ce">8</td>
+                                            <td class="lf">
+                                                <a href="#">새해 복 많이 받으시길 바랍니다.</a>
+                                                <p class="resinfo">관리자 | <span>2022.10.01 </span><em>| 조회수 : 71</em></p>
+                                            </td>
+                                            <td class="ce Nickname">관리자</td>
+                                            <td class="ce Date">2022. 10. 01</td>
+                                            <td class="ce Views">8</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ce">9</td>
+                                            <td class="lf">
+                                                <a href="#">게시판 공지사항을 올려주세요.</a>
+                                                <p class="resinfo">관리자 | <span>2022.10.01 </span><em>| 조회수 : 51</em></p>
+                                            </td>
+                                            <td class="ce Nickname">관리자</td>
+                                            <td class="ce Date">2022. 10. 01</td>
+                                            <td class="ce Views">9</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ce">10</td>
+                                            <td class="lf">
+                                                <a href="#">게시판 공지사항을 올려주세요.</a>
+                                                <p class="resinfo">관리자 | <span>2022.10.01 </span><em>| 조회수 : 91</em></p>
+                                            </td>
+                                            <td class="ce Nickname">관리자</td>
+                                            <td class="ce Date">2022. 10. 01</td>
+                                            <td class="ce Views">10</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //board_table -->
+
+                            <div class="board_writeBtn">
+                                <a href="#">글쓰기</a>
+                            </div>
+
+                            <div class="board_pages">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="ir board_first">처음으로</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="ir board_prev">이전</a>
+                                    </li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li>
+                                        <a href="#" class="ir board_next">다음</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="ir board_last">마지막으로</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- .board_pages -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <div class="footer_inner">
+                <div class="footer_wrap">
+                    <h2><em>IT.D</em> | Free Image Download Site</h2>
+                    <div class="footer_bottom container">
+                        <div class="footer_left">
+                            <p>
+                                The creator : 전보연, 송성희, 김석준, 이중호 <br />
+                                경기도광역시 단원구 고잔동 535-2번지 601호 코스모프라자 라인컴퓨터아트학원
+                            </p>
+                            <a href="#">이용약관</a>
+                            <a href="#">개인정보 처리방침</a>
+                            <a href="#">검색결과 수집정책</a>
+                            <figure class="footer_sns">
+                                <a href="#"><img src="/assets/image/footer_sns01.png" alt="피그마 링크" /></a>
+                                <a href="#"><img src="/assets/image/footer_sns02.png" alt="닷홈 링크" /></a>
+                            </figure>
+                        </div>
+                        <div class="footer_right">
+                            <article class="footer_menu">
+                                <h3>카테고리</h3>
+                                <ul>
+                                    <li><a href="#">조회수 순위</a></li>
+                                    <li><a href="#">다운로드 순위</a></li>
+                                    <li><a href="#">반응 순위</a></li>
+                                    <li><a href="#">댓글 순위</a></li>
+                                </ul>
+                            </article>
+                            <article class="footer_menu">
+                                <h3>메뉴</h3>
+                                <ul>
+                                    <li><a href="#">즐겨찾기</a></li>
+                                    <li><a href="#">카테고리</a></li>
+                                    <li><a href="#">배경화면</a></li>
+                                    <li><a href="#">피드백</a></li>
+                                </ul>
+                            </article>
+                            <article class="footer_menu">
+                                <h3>고객센터</h3>
+                                <ul>
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">피드백</a></li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- // footer -->
+    </body>
+</html>

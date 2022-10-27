@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>마이페이지</title>
+
+        <link rel="stylesheet" href="../../assets/css/reset.css" />
+        <link rel="stylesheet" href="../../assets/css/common.css" />
+        <link rel="stylesheet" href="../../assets/css/fonts.css" />
+        <link rel="stylesheet" href="../../assets/css/mypage.css" />
+    </head>
+    <body>
+        <header id="header">
+            <div class="header__wrap">
+                <div class="header__inner">
+                    <!-- ham -->
+                    <div class="toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <!-- header__top -->
+                    <div class="header__top">
+                        <div class="headerTop__inner container">
+                            <!-- logo -->
+                            <div class="logo">
+                                <h1>
+                                    <a href="#c">IT.<em>D</em></a>
+                                </h1>
+                            </div>
+
+                            <!-- nav -->
+                            <nav class="header__nav">
+                                <ul>
+                                    <li class="active"><a href="#c">Bookmark</a></li>
+                                    <li><a href="#c">Category</a></li>
+                                    <li><a href="#c">Wallpaper</a></li>
+                                    <li><a href="#c">Notice</a></li>
+                                    <li><a href="#c">Feedback</a></li>
+                                </ul>
+                            </nav>
+
+                            <!-- 로그인 안했을 때 -->
+                            <!-- <a href="#c">Log In</a> -->
+
+                            <!-- 로그인 했을 때 -->
+                            <div class="profile">
+                                <figure class="profile__img">
+                                    <img src="../../assets/image/main_image01.jpg" alt="프로필 이미지" />
+                                </figure>
+                                <div class="profile__nav">
+                                    <ul>
+                                        <li><a href="#c">내정보</a></li>
+                                        <li><a href="#c">업로드</a></li>
+                                        <li><a href="#c">로그아웃</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //header__top -->
+                    <div class="header__bottom">
+                        <div class="headerBottom__inner container">
+                            <div class="header__search">
+                                <input type="text" placeholder="검색어를 입력해주세요." />
+                            </div>
+                            <button>검색</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header -->
+
+        <main id='main'>
+            <section class='mypage__wrap'>
+                <div class='mypage__banner'>
+                    <div class='banner__inner container'>
+                        <h2 class='banner_title'>MY PAGE</h2>
+                        <p class='banner_udline'></p>
+                    </div>
+                </div>
+                <div class='mypage__info container'>
+                    <div class='info__profile'>
+                        <div>
+                            <img class='info__profile_img' src='../../assets/image/mypage_profile.svg' alt='프로필 이미지' />
+                            <div>
+                                <from id="uploadForm">
+                                    <label for="userFile" class='modify_profile_input'>사진 변경</label>
+                                    <input type="file" enctype="multipart/form-data" name="userFile" id="userFile" accept=".jpg, .jpeg .png, .gif" style= 'display : none' >
+                                    <button type='button' class='modify_profile_cancel' >취소</button>
+                                    <button type='button' class='modify_profile' >변경</button>
+                                </from>
+                            </div>
+                        </div>
+                        <div class='info_change'>
+                            <div>
+                                <label for='nickname' class='ir'></label>
+                                <input type='text' id='nickname' class='nickname' name='nickname' placeholder='1~10글자까지'' />
+                            </div>
+                            <div>
+                                <button type='button' class='modify_nickname_cancel'>취소</button>
+                                <button type='button' class='modify_nickname_complete'>변경</button>
+                            </div>
+                        </div>
+                        <!-- <div class='info'>
+                            <span class='nickname'></span>
+                            <button type='button' class='modify_nickName'>수정</button>
+                        </div> -->
+                    </div>
+                    <div class='info__personal'>
+                        <div class='info__title'>
+                            <p>Gender</p>
+                            <p>Phone</p>
+                            <p>E-mail</p>
+                            <p>Upload</p>
+                        </div>
+                        <div class='info__desc'>
+                            <div class='personal_gender_change'>
+                                <form>
+                                    <label for='gender' class='ir'>성별</label>
+                                    <input type='text' id='gender' class='gender' name='gender'  />
+                                    <button type='button' class='modify_gender_cancel'>취소</button>
+                                    <button type='button' class='modify_gender_complete'>변경</button>
+                                </form>
+                            </div>
+                            <!-- <div class='personal_gender'>
+                                <form>
+                                    <label for='gender' class='ir'>성별</label>
+                                    <input type='text' id='gender_val' class='gender' name='gender_val' disabled/>
+                                    <button type='button' class='modify_gender'>수정</button>
+                                </form>
+                            </div> -->
+
+                            <div class='personal_phone_change'>
+                                <form>
+                                    <label for='phone' class='ir'>전화번호</label>
+                                    <input type='text' id='phone' class='phone' name='phone' />
+                                    <button type='button' class='modify_Phone_cancel'>취소</button>
+                                    <button type='button' class='modify_Phone_complete'>변경</button>
+                                </form>
+                            </div>
+
+                            <!-- <div class='personal_phone'>
+                                <form>
+                                    <label for='phone' class='ir'>전화번호</label>
+                                    <input type='text' id='phone_val' class='phone' name='phone_val' disabled/>
+                                    <button type='button' class='modify_Phone'>수정</button>
+                                </form>
+                            </div> -->
+                            <div class='personal_email'></div>
+                            <div class='personal_upload'>0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='mypage__text container'>
+                    <div class='text__intro'>
+                        <div class='intro__part1'>
+                            <div class='intro__change'>
+                                <h3>짧은 소개</h3>
+                                <button type='button' class='modify_intro_cancle'>취소</button>
+                                <button type='button' class='modify_intro_complete'>완료</button>
+                            </div>
+                            <div class='intro__inner'>
+                                <h3>짧은 소개</h3>
+                                <button type='button' class='modify_intro'>수정</button>
+                            </div>
+                            <label for='intro_title' class='ir'>짧은 소개</label>
+                            <textarea name='intro' id='intro' cols='30' rows='1' placeholder='총 글자 수 30자 입니다.' style='resize: none' disabled><?=$userInfo['userShortInfo']?></textarea>
+                        </div>
+
+                        <div class='intro__part2'>
+                            <div class='introD__change'>
+                                <h3>자세한 소개</h3>
+                                <button type='button' class='modify_introD_cancel'>취소</button>
+                                <button type='button' class='modify_introD_complete'>완료</button>
+                            </div>
+                            <div class='introD__inner'>
+                                <h3>자세한 소개</h3>
+                                <button type='button' class='modify_introD'>수정</button>
+                            </div>
+                            <label for='introD_title' class='ir'>자세한 소개</label>
+                            <textarea name='introD' id='introD' cols='30' rows='1' placeholder='안녕하세요. 이 곳은 자세한 소개 칸 입니다. 총 200자 까지 적을 수 있으며, 짧은 소개에서 자신을 소개 한 것보다 더욱 더 자세한 소개를 적을 수 있습니다.' style='resize: none' disabled><?=$userInfo['userLongInfo']?></textarea>
+                        </div>
+                        <div class='intro__part3'>
+                            <!-- <div class='active__change'>
+                                <h3>활동 분야</h3>
+                                <button type='button' class='active_intro_cancel'>취소</button>
+                                <button type='button' class='active_intro_complete'>완료</button>
+                            </div> -->
+                            <div class='active__inner'>
+                                <h3>활동 분야</h3>
+                                <button type='button' class='active_intro'>수정</button>
+                            </div>
+                            <label for='active_title' class='ir'>활동 분야</label>
+                            <textarea name='active' id='active' cols='30' rows='1' placeholder='배경 화면' style='resize: none' disabled></textarea>
+                        </div>
+                        <div class="intro__part4">
+                            <button type="button" class="modify_pass">비밀번호 변경</button>
+                            <button type="button" class="join_leave">회원 탈퇴</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class='mypage__card container'>
+                <h1 class='card__title'>UPLOAD POSTS</h1>
+                <div class='mypage__inner'>
+                    <article class='mypage__cardBox'>
+                        <div class='cardBox__image'>
+                            <figure>
+                                <a href='#Redirect'><img src='../../assets/image/mypage_image01.jpg' alt='이미지' /></a>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class='mypage__cardBox'>
+                        <div class='cardBox__image'>
+                            <figure>
+                                <a href='#Redirect'><img src='../../assets/image/mypage_image02.jpg' alt='이미지' /></a>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class='mypage__cardBox'>
+                        <div class='cardBox__image'>
+                            <figure>
+                                <a href='#Redirect'><img src='../../assets/image/mypage_image03.jpg' alt='이미지' /></a>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class='mypage__cardBox'>
+                        <div class='cardBox__image'>
+                            <figure>
+                                <a href='#Redirect'><img src='../../assets/image/mypage_image04.jpg' alt='이미지' /></a>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class='mypage__cardBox'>
+                        <div class='cardBox__image'>
+                            <figure>
+                                <a href='#Redirect'><img src='../../assets/image/mypage_image05.jpg' alt='이미지' /></a>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class='mypage__cardBox'>
+                        <div class='cardBox__image'>
+                            <figure>
+                                <a href='#Redirect'><img src='../../assets/image/mypage_image06.jpg' alt='이미지' /></a>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class='mypage__cardBox'>
+                        <div class='cardBox__image'>
+                            <figure>
+                                <a href='#Redirect'><img src='../../assets/image/mypage_image07.jpg' alt='이미지' /></a>
+                            </figure>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <!-- //main -->
+
+        <footer id="footer">
+            <div class="footer_inner">
+                <div class="footer_wrap">
+                    <h2><em>IT.D</em> | Free Image Download Site</h2>
+                    <div class="footer_bottom container">
+                        <div class="footer_left">
+                            <p>
+                                The creator : 전보연, 송성희, 김석준, 이중호 <br />
+                                경기도광역시 단원구 고잔동 535-2번지 601호 코스모프라자 라인컴퓨터아트학원
+                            </p>
+                            <a href="#">이용약관</a>
+                            <a href="#">개인정보 처리방침</a>
+                            <a href="#">검색결과 수집정책</a>
+                            <figure class="footer_sns">
+                                <a href="#"><img src="../../assets/image/footer_sns01.png" alt="피그마 링크" /></a>
+                                <a href="#"><img src="../../assets/image/footer_sns02.png" alt="닷홈 링크" /></a>
+                            </figure>
+                        </div>
+                        <div class="footer_right">
+                            <article class="footer_menu">
+                                <h3>카테고리</h3>
+                                <ul>
+                                    <li><a href="#">조회수 순위</a></li>
+                                    <li><a href="#">다운로드 순위</a></li>
+                                    <li><a href="#">반응 순위</a></li>
+                                    <li><a href="#">댓글 순위</a></li>
+                                </ul>
+                            </article>
+                            <article class="footer_menu">
+                                <h3>메뉴</h3>
+                                <ul>
+                                    <li><a href="#">즐겨찾기</a></li>
+                                    <li><a href="#">카테고리</a></li>
+                                    <li><a href="#">배경화면</a></li>
+                                    <li><a href="#">피드백</a></li>
+                                </ul>
+                            </article>
+                            <article class="footer_menu">
+                                <h3>고객센터</h3>
+                                <ul>
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">피드백</a></li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- // footer -->
+
+        <!-- jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- ham -->
+        <script>
+            // header script
+            $('.toggle').click(function () {
+                $(this).toggleClass('active');
+            });
+
+            const hamBtn = document.querySelector('.toggle');
+            const nav = document.querySelector('.headerTop__inner nav');
+
+            hamBtn.addEventListener('click', () => {
+                nav.classList.toggle('show');
+            });
+
+            const profileBox = document.querySelector('.profile'); // 프로필 박스
+            const profileImg = document.querySelector('.profile__img'); // 프로필 이미지
+            const profileNav = profileBox.querySelector('.profile__nav'); // 프로필 박스 네이게이션
+            // console.log(profileNav); 프로필 박스, 프로필 이미지, 프로필 박스 네비게이션 모두 확인 완료
+
+            profileBox.addEventListener('mouseenter', () => {
+                profileNav.style.display = 'inline-block';
+            });
+            profileNav.addEventListener('mouseleave', () => {
+                profileNav.style.display = 'none';
+            });
+            // header script
+        </script>
+    </body>
+</html>

@@ -1,0 +1,189 @@
+input {
+    color: #555;
+    font-family: 'GmarketSans';
+    border: 0;
+}
+input::placeholder {
+    color: #aaa;
+}
+input:focus {
+    outline: none;
+}
+textarea {
+    font-family: 'GmarketSans';
+    border: 0;
+    outline: none;
+}
+
+#main {
+    padding-top: 200px;
+    margin-bottom: 100px;
+}
+#upload {
+}
+#upload > .upload__inner {
+}
+.upload__inner > .upload__title {
+}
+.upload__title > fieldset > input {
+    color: #555;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #dcdcdc;
+}
+.upload__title > fieldset > input::placeholder {
+    color: #aaa;
+}
+.upload__inner > .upload__write {
+}
+.upload__write > fieldset {
+}
+.upload__write > fieldset > textarea {
+    color: #555;
+    font-size: 14px;
+    padding: 10px 0;
+    width: 100%;
+    height: 100%;
+    /* min-height: 335px; */
+    resize: none;
+}
+.upload__write > fieldset > textarea::placeholder {
+    color: #aaa;
+}
+.upload__inner > .upload__tag {
+    align-items: center;
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 30px;
+}
+.upload__tag > span {
+    color: #555;
+    border-radius: 50px;
+    padding: 5px 10px;
+    background-color: #f5f5f5;
+    font-size: 12px;
+    margin-right: 10px;
+}
+.upload__tag > .tagComplete {
+    border-radius: 50px;
+    padding: 5px 10px;
+    background-color: #f5f5f5;
+    font-size: 12px;
+    transition: background-color 0.2s;
+}
+.upload__tag > .tagComplete:hover {
+    background-color: #1363df;
+}
+.upload__tag > .tagComplete:hover a {
+    color: #fff;
+}
+.upload__tag > .tagComplete > a {
+    color: #555;
+    margin-right: 5px;
+    transition: color 0.2s;
+}
+.upload__tag > .tagComplete > a + a {
+    display: inline-block;
+    margin-right: 0;
+    width: 7px;
+    height: 7px;
+    background-image: url('../image/tagDelete_ico.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.upload__tag > .tag {
+    align-items: center;
+    display: flex;
+    /* padding: 5px 10px; */
+}
+.upload__tag > .tag > span {
+    margin-right: 0;
+}
+.upload__tag > .tag > input {
+    font-size: 12px;
+    box-sizing: content-box;
+    width: 100%;
+}
+.upload__inner > .upload__btn {
+    text-align: center;
+}
+.upload__btn > button {
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    background-color: #fff;
+    transition: transform 0.2s, background-color 0.2s;
+}
+.upload__btn > button > a {
+    display: inline-block;
+    color: #777;
+    transition: transform 0.2s;
+}
+.upload__btn > button:hover {
+    border: 1px solid #1363df;
+    background-color: #1363df;
+    transform: scale(1.05);
+}
+.upload__btn > button:hover a {
+    color: #fff;
+}
+
+.upload__image {
+    border-bottom: 1px solid #dcdcdc;
+    padding: 10px 0;
+}
+.upload__image > input {
+    cursor: pointer;
+    font-size: 0;
+    color: #fff;
+    width: 140px;
+    height: 32px;
+    background-image: url('../image/basicImage_ico.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.2s;
+}
+.upload__image > input:hover {
+    font-size: 0;
+    color: #fff;
+    width: 140px;
+    height: 32px;
+    background-image: url('../image/basicImageHover_ico.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.upload__image > .uploadWallpaperImage {
+    font-size: 0;
+    color: #fff;
+    width: 157px;
+    height: 32px;
+    background-image: url('../image/wallpaperImage_ico.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.upload__image > .uploadWallpaperImage:hover {
+    font-size: 0;
+    color: #fff;
+    width: 157px;
+    height: 32px;
+    background-image: url('../image/wallpaperImageHover_ico.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.upload__image > input > span {
+}
+.upload__image > input::file-selector-button {
+    display: none;
+}
+
+@media (max-width: 1220px) {
+    .upload__inner.container {
+        width: 94%;
+    }
+}

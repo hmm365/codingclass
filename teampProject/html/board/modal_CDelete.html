@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>modal</title>
+
+        <link rel="stylesheet" href="/assets/css/reset.css" />
+        <link rel="stylesheet" href="/assets/css/fonts.css" />
+        <link rel="stylesheet" href="/assets/css/modal.css" />
+    </head>
+    <body>
+        <div id="modal" class="gmark">
+            <div class="modal__bg"></div>
+            <div class="modal__wrap">
+                <div class="modal__inner">
+                    <div class="modal__header">
+                        <img src="/assets/image/modal_icon.svg" alt="경고" />
+                        <h3>댓글 삭제</h3>
+                    </div>
+                    <label for="youPass" class="blind">댓글 삭제</label>
+                    <input type="password" id="youPass" name="youPass" maxlength="20" placeholder="비밀번호를 입력해주세요." autocomplete="off" />
+                    <div class="button">
+                        <button type="button" class="btn_cancel">취소</button>
+                        <button type="button" class="btn_check">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
