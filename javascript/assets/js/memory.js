@@ -95,9 +95,7 @@ function shuffledCard(params) {
 		let imgTag = card.querySelector(".back img");
 		imgTag.src = `../assets/img/gameimage/img-${arr[index]}.svg`;
 
-		memoryCards.forEach(card => {
-			card.addEventListener("click", flipCard);
-		});
+		card.addEventListener("click", flipCard);
 	});
 	interval = setInterval(() => {
 		timeresult++;
@@ -135,9 +133,9 @@ function textResult() {
 }
 
 // 카드 클릭
-memoryCards.forEach(card => {
-	card.addEventListener("click", flipCard);
-});
+// memoryCards.forEach(card => {
+// 	card.addEventListener("click", flipCard);
+// });
 
 document.querySelector(".memory__replay").addEventListener("click", () => {
 	memoryResult.classList.remove("open");

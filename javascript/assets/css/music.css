@@ -96,13 +96,13 @@
 	width: 24px;
 	height: 24px;
 	background: url(../img/music_icon.svg) no-repeat;
-	background-position: -175px;
+	background-position: -125px;
 }
 .music__control .control .shuffle {
 	width: 24px;
 	height: 24px;
 	background: url(../img/music_icon.svg) no-repeat;
-	background-position: -125px;
+	background-position: -150px;
 }
 .music__control .control .prev {
 	width: 24px;
@@ -131,7 +131,7 @@
 	background: url(../img/music_icon.svg) no-repeat;
 	width: 24px;
 	height: 24px;
-	background-position: -150px;
+	background-position: -175px;
 }
 
 .music__footer {
@@ -155,18 +155,16 @@
 	background: url(../img/music_icon.svg) no-repeat;
 	width: 24px;
 	height: 24px;
-	background-position: -142px;
+	background-position: -175px;
 	margin-right: 5px;
 }
 .music__list h3 .close {
 	position: absolute;
 	right: 0;
 	display: inline-block;
-	background: url(../img/music_icon.svg) no-repeat;
+	background: url(../img/close.svg);
 	width: 24px;
 	height: 24px;
-	background-position: -190px;
-	background-size: 216px;
 	margin-right: 5px;
 }
 .music__list ul {
