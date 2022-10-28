@@ -28,6 +28,10 @@
 	border-top-right-radius: 0.5rem;
 	position: relative;
 }
+.memory__header h2 {
+	margin-left: 40px;
+	font-size: 18px;
+}
 .memory__header .dot {
 	width: 15px;
 	height: 15px;
