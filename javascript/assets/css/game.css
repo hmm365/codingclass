@@ -318,3 +318,14 @@ body {
 		opacity: 0;
 	}
 }
+/* 클릭 영역 */
+.container-disable {
+	/* 클릭 불가능 none */
+	pointer-events: none;
+}
+
+/* 클릭 불가 영역 */
+.container-able {
+	/* 클릭 가능 auto (기본설정)*/
+	pointer-events: auto;
+}
