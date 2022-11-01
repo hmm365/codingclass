@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>콜라츠 추ㄱ</title>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<link rel="stylesheet" href="../assets/css/dracula.css" />
+		<script src="../assets/js/highlight.min.js"></script>
+	</head>
+	<body>
+		<main id="main">
+			<div class="document">
+				<h2 class="t_tit">콜라츠 추측</h2>
+				<p class="t_desc">1937년 Collatz란 사람에 의해 제기된 이 추측은, 주어진 수가 1이 될 때까지 다음 작업을 반복하면, 모든 수를 1로 만들 수 있다는 추측입니다. 작업은 다음과 같습니다</p>
+				<p class="t_desc2">
+					1-1. 입력된 수가 짝수라면 2로 나눕니다. <br />
+					1-2. 입력된 수가 홀수라면 3을 곱하고 1을 더합니다. <br />
+					2. 결과로 나온 수에 같은 작업을 1이 될 때까지 반복합니다. <br />
+
+					예를 들어, 주어진 수가 6이라면 6 → 3 → 10 → 5 → 16 → 8 → 4 → 2 → 1 이 되어 총 8번 만에 1이 됩니다.<br />
+					위 작업을 몇 번이나 반복해야 하는지 반환하는 함수, solution을 완성해 주세요.<br />
+					단, 주어진 수가 1인 경우에는 0을, 작업을 500번 반복할 때까지 1이 되지 않는다면 –1을 반환해 주세요.<br />
+					입력된 수, num은 1 이상 8,000,000 미만인 정수입니다.
+				</p>
+				<hr />
+
+				<h3 class="t_tit2">입출력 예</h3>
+				<table class="t_table">
+					<thead>
+						<tr>
+							<th>n</th>
+							<th>result</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>6</td>
+							<td>8</td>
+						</tr>
+						<tr>
+							<td>16</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>626331</td>
+							<td>-1</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="t_desc2">
+					입출력 예 #1<br />
+					문제의 설명과 같습니다.<br />
+
+					입출력 예 #2<br />
+					16 → 8 → 4 → 2 → 1 이 되어 총 4번 만에 1이 됩니다.<br />
+
+					입출력 예 #3<br />
+					626331은 500번을 시도해도 1이 되지 못하므로 -1을 리턴해야 합니다.
+				</p>
+				<hr />
+				<h3 class="t_tit2"></h3>
+				<div class="t_code">
+					<pre><code class="language-js">function solution(num) {
+    var count = 0;
+    while(count < 500){
+        if(num == 1) return count;
+        num % 2 == 0 ?  num = num/2 : num = num*3+1;
+        count ++;
+    }
+    return -1;
+}
+</code></pre>
+					<p class="t_box">
+						총평 : 처음에 재귀함수로 쓸까 고민하다가 삼항연산자를 이용해서 하는방법이 더욱 간단할거 같았습니다.<br />
+						출처 : <a href="https://school.programmers.co.kr/learn/courses/30/lessons/12943" target="_blank">https://school.programmers.co.kr/learn/courses/30/lessons/12943</a>
+					</p>
+				</div>
+				<!-- //result01 -->
+			</div>
+		</main>
+		<!-- //main -->
+		<footer id="footer">
+			<a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+		</footer>
+		<!-- //footer -->
+		<script>
+			hljs.highlightAll();
+		</script>
+	</body>
+</html>
