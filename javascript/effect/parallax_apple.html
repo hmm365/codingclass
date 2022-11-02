@@ -34,13 +34,13 @@
 			#contents {
 			}
 			#section1 {
-				height: 4500px;
+				height: 5000px;
 			}
 			#section2 {
-				height: 4500px;
-				background: #222222;
+				height: 4200px;
 			}
 			#section3 {
+				height: 8000px;
 			}
 			#section4 {
 			}
@@ -92,7 +92,11 @@
 				font-weight: 400;
 				white-space: nowrap;
 			}
-
+			.sec3bg {
+				width: 100%;
+				height: 100%;
+				background: #222;
+			}
 			.sec3_card {
 				width: 60vw;
 				height: 60vh;
@@ -103,7 +107,7 @@
 				white-space: nowrap;
 			}
 			.sec3_img {
-				width: 50%;
+				width: 30%;
 			}
 			.sec3_link {
 				font-size: 2vw;
@@ -134,6 +138,26 @@
 				font-size: 1.5vw;
 				color: rgb(103, 103, 103);
 			}
+			.sec4 {
+				font-size: 5vw;
+			}
+			.sec4_text2 {
+				color: rgb(168, 130, 255);
+			}
+			.sec5_text1 {
+				font-size: 3vw;
+			}
+			.sec5_text2 {
+				width: 40vw;
+				height: 60vh;
+				border: 3px solid #000;
+				border-radius: 10px;
+				overflow: hidden;
+			}
+			.sec5_text2 iframe {
+				width: 100%;
+				height: 100%;
+			}
 		</style>
 	</head>
 	<body>
@@ -141,17 +165,14 @@
 		<div class="contents">
 			<section id="section1">
 				<div class="sec1">
-					<div class="sec1_text1 fixed" data-0="top: 50%; opacity:1" data-500="top:30%; opacity:0">
-						중호<br />
-						PORTFOLIO
-					</div>
+					<div class="sec1_text1 fixed" data-0="top: 50%; opacity:1" data-500="top:30%; opacity:0">저의 포트폴리오.</div>
 					<div
 						class="sec1_text2 fixed"
 						data-500="top:70%; opacity:0; transform: translate(-50%, -50%) scale(1);"
 						data-1000="top:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
 						data-1500="top:30%; opacity:0; transform: translate(-50%, -50%) scale(0);"
 					>
-						프론트엔드 개발자입니다.
+						시작하겠습니다.
 					</div>
 				</div>
 
@@ -197,49 +218,55 @@
 			</section>
 			<!-- //section1 -->
 			<section id="section2">
+				<div
+					class="sec3bg fixed"
+					data-4200="left:50%; top:50%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+					data-5500="left:50%; top:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+					data-8200="left:50%; top:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+					data-8300="left:-20%; top:120%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+				></div>
 				<div class="sec3">
 					<div
 						class="sec3_card sec3_text1 fixed"
-						data-4000="left:50%; opacity:0; transform: translate(-50%, -50%) scale(0);"
-						data-4500="left:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
-						data-5600="left:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
-						data-5800="left:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
-						data-6500="left:0%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+						data-5000="left:50%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+						data-5500="left:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+						data-6300="left:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+						data-6500="left:-30%; opacity:0; transform: translate(-50%, -50%) scale(1);"
 					>
 						<img
 							src="img/git-hub.png"
 							alt=""
 							class="sec3_img fixed"
-							data-4500="top: 15%; opacity:0; transform: translate(-50%, -50%) scale(0);"
-							data-4700="top: 15%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-5000="top: 15%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-5200="top: 15%; opacity:1; transform: translate(-50%, -50%) scale(1);"
 						/>
 
 						<p
 							class="sec3_tit fixed"
-							data-4700="top: 35%; opacity:0; transform: translate(-50%, -50%) scale(0);"
-							data-5000="top: 35%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-5200="top: 35%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-5500="top: 35%; opacity:1; transform: translate(-50%, -50%) scale(1);"
 						>
 							<span>소스 코드의 저장소</span> 입니다.
 						</p>
 
 						<p
 							class="sec3_list1 fixed"
-							data-5000="top: 0%; left:0%; opacity:0; transform: translate(-50%, -50%);"
-							data-5300="top: 50%; left:28%; opacity:1; transform: translate(-50%, -50%);"
+							data-5500="top: 0%; left:0%; opacity:0; transform: translate(-50%, -50%);"
+							data-5800="top: 50%; left:28%; opacity:1; transform: translate(-50%, -50%);"
 						>
 							·과거 프로젝트
 						</p>
 						<p
 							class="sec3_list2 fixed"
-							data-5300="top: 60%; left:42.5%; opacity:0; transform: translate(-50%, -50%);"
-							data-5600="top: 60%; left:42.5%; opacity:1; transform: translate(-50%, -50%);"
+							data-5800="top: 60%; left:42.5%; opacity:0; transform: translate(-50%, -50%);"
+							data-6100="top: 60%; left:42.5%; opacity:1; transform: translate(-50%, -50%);"
 						>
 							·혼자서 코딩 연습을위해 공부한 소스 코드
 						</p>
 						<p
 							class="sec3_list3 fixed"
-							data-5000="top: 100%; left:100%; opacity:0; transform: translate(-50%, -50%) ;"
-							data-5300="top: 70%; left:39.5%; opacity:1; transform: translate(-50%, -50%) ;"
+							data-5500="top: 100%; left:100%; opacity:0; transform: translate(-50%, -50%) ;"
+							data-5800="top: 70%; left:39.5%; opacity:1; transform: translate(-50%, -50%) ;"
 						>
 							·학원에서 공부한 코딩과제 소스 코드
 						</p>
@@ -247,64 +274,63 @@
 						<a
 							href="https://github.com/hmm365"
 							class="sec3_link fixed"
-							data-5300="top: 85%; opacity:0; transform: translate(-50%, -50%) scale(0) rotate(360deg);"
-							data-5600="top: 85%; opacity:1; transform: translate(-50%, -50%) scale(1) rotate(0);"
+							data-5800="top: 85%; opacity:0; transform: translate(-50%, -50%) scale(0) rotate(360deg);"
+							data-6100="top: 85%; opacity:1; transform: translate(-50%, -50%) scale(1) rotate(0);"
 						>
 							보러 가기
 						</a>
 					</div>
-					<!-- //sec3_text2 -->
+					<!-- //sec3_text1 -->
 					<div
 						class="sec3_card sec3_text2 fixed"
-						data-4000="left:50%; opacity:0; transform: translate(-50%, -50%) scale(0);"
-						data-4500="left:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
-						data-5600="left:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
-						data-5800="left:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
-						data-6500="left:0%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+						data-6500="left:120%; opacity:0; transform: translate(-50%, -50%) rotate(360deg);"
+						data-7200="left:50%; opacity:1; transform: translate(-50%, -50%) rotate(0deg);"
+						data-8000="left:50%; top:50%; opacity:1; transform: translate(-50%, -50%) rotate(0deg);"
+						data-8300="left:-30%; top:120%; opacity:0; transform: translate(-50%, -50%) rotate(0deg);"
 					>
 						<img
-							src="img/git-hub.png"
+							src="img/tistory.png"
 							alt=""
 							class="sec3_img fixed"
-							data-4500="top: 15%; opacity:0; transform: translate(-50%, -50%) scale(0);"
-							data-4700="top: 15%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-7200="top: 50%; opacity:0; transform: translate(-50%, -50%) scale(0) rotate(-360deg);"
+							data-7800="top: 15%; opacity:1; transform: translate(-50%, -50%) scale(1) rotate(0deg);"
 						/>
 
 						<p
 							class="sec3_tit fixed"
-							data-4700="top: 35%; opacity:0; transform: translate(-50%, -50%) scale(0);"
-							data-5000="top: 35%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-7200="top: 50%; opacity:1; transform: translate(-50%, -50%) scale(0) rotate(240deg);"
+							data-7800="top: 35%; opacity:1; transform: translate(-50%, -50%) scale(1) rotate(0deg);"
 						>
-							<span>소스 코드의 저장소</span> 입니다.
+							<span>공부 및 지식 공유 목적의 블로그</span> 입니다.
 						</p>
 
 						<p
 							class="sec3_list1 fixed"
-							data-5000="top: 0%; left:0%; opacity:0; transform: translate(-50%, -50%);"
-							data-5300="top: 50%; left:28%; opacity:1; transform: translate(-50%, -50%);"
+							data-7200="top: 50%; left:50%; opacity:0; transform: translate(-50%, -50%) scale(0.7) rotate(160deg);"
+							data-7800="top: 50%; left:30%; opacity:1; transform: translate(-50%, -50%) scale(1) rotate(0deg);"
 						>
-							·과거 프로젝트
+							·공부한 것을 나의 것으로 만들기위한 기록
 						</p>
 						<p
 							class="sec3_list2 fixed"
-							data-5300="top: 60%; left:42.5%; opacity:0; transform: translate(-50%, -50%);"
-							data-5600="top: 60%; left:42.5%; opacity:1; transform: translate(-50%, -50%);"
+							data-7200="top: 50%; left:50%; opacity:1; transform: translate(-50%, -50%) scale(0.7) rotate(-160deg);"
+							data-7800="top: 60%; left: 29%; opacity:1; transform: translate(-50%, -50%) scale(1) rotate(0deg);"
 						>
-							·혼자서 코딩 연습을위해 공부한 소스 코드
+							·학원에서 배운 수업의 내용 복습 겸 정리
 						</p>
 						<p
 							class="sec3_list3 fixed"
-							data-5000="top: 100%; left:100%; opacity:0; transform: translate(-50%, -50%) ;"
-							data-5300="top: 70%; left:39.5%; opacity:1; transform: translate(-50%, -50%) ;"
+							data-7200="top: 50%; left:50%; opacity:1; transform: translate(-50%, -50%) scale(0.5) rotate(360deg);"
+							data-7800="top: 70%; left:25%; opacity:1; transform: translate(-50%, -50%) scale(1) rotate(0deg);"
 						>
-							·학원에서 공부한 코딩과제 소스 코드
+							·지식 공유를 통해 지식의 상향화
 						</p>
 
 						<a
-							href="https://github.com/hmm365"
+							href="https://syumay.tistory.com/"
 							class="sec3_link fixed"
-							data-5300="top: 85%; opacity:0; transform: translate(-50%, -50%) scale(0) rotate(360deg);"
-							data-5600="top: 85%; opacity:1; transform: translate(-50%, -50%) scale(1) rotate(0);"
+							data-7200="top: 50%; opacity:1; transform: translate(-50%, -50%) scale(0) rotate(360deg);"
+							data-7800="top: 85%; opacity:1; transform: translate(-50%, -50%) scale(1) rotate(0);"
 						>
 							보러 가기
 						</a>
@@ -312,7 +338,171 @@
 				</div>
 			</section>
 			<!-- //section2 -->
-			<section id="section3"></section>
+			<section id="section3">
+				<div class="sec4">
+					<div>
+						<div
+							class="sec4_text1 fixed"
+							data-8300="left:35%; top:30%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-8400="left:30%; top:30%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10500="left:30%; top:30%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-11000="left:10%; top:10%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-11200="opacity:0;"
+						>
+							지
+						</div>
+						<div
+							class="sec4_text1 fixed"
+							data-8400="left:40%; top:30%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-8500="left:35%; top:30%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10500="left:35%; top:30%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-11000="left:15%; top:10%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-11200="opacity:0;"
+						>
+							금
+						</div>
+						<div
+							class="sec4_text1 fixed"
+							data-8500="left:45%; top:30%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-8600="left:40%; top:30%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10500="left:40%; top:30%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-11000="left:20%; top:10%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-11200="opacity:0;"
+						>
+							부
+						</div>
+						<div
+							class="sec4_text1 fixed"
+							data-8700="left:50%; top:30%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-8800="left:45%; top:30%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10500="left:45%; top:30%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-11000="left:25%; top:10%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-11200="opacity:0;"
+						>
+							터
+						</div>
+					</div>
+
+					<div>
+						<div
+							class="sec4_text1 fixed"
+							data-8800="left:47%; top:100%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-8900="left:42%; top:45%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10300="left:42%; top:45%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10900="left:42%; top:120%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+						>
+							제
+						</div>
+						<div
+							class="sec4_text1 fixed"
+							data-8900="left:52%; top:100%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-9000="left:47%; top:45%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10300="left:47%; top:45%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10800="left:47%; top:120%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+						>
+							가
+						</div>
+						<div
+							class="sec4_text2 fixed"
+							data-9000="left:57%; top:100%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-9100="left:52%; top:45%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10300="left:52%; top:45%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10700="left:52%; top:120%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+						>
+							공
+						</div>
+						<div
+							class="sec4_text2 fixed"
+							data-9100="left:62%; top:100%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-9200="left:57%; top:45%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10300="left:57%; top:45%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10600="left:57%; top:120%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+						>
+							부
+						</div>
+						<div
+							class="sec4_text1 fixed"
+							data-9300="left:67%; top:100%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-9400="left:62%; top:45%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10300="left:62%; top:45%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10500="left:62%; top:120%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+						>
+							한
+						</div>
+					</div>
+
+					<div>
+						<div
+							class="sec4_text1 fixed"
+							data-9400="left:50%; top:60%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-9500="left:55%; top:60%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10100="left:55%; top:60%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10900="left:120%; top:60%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+						>
+							내
+						</div>
+						<div
+							class="sec4_text1 fixed"
+							data-9500="left:55%; top:60%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-9600="left:60%; top:60%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10100="left:60%; top:60%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10800="left:120%; top:60%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+						>
+							용
+						</div>
+						<div
+							class="sec4_text1 fixed"
+							data-9600="left:60%; top:60%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-9700="left:65%; top:60%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10100="left:65%; top:60%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10700="left:120%; top:60%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+						>
+							입
+						</div>
+						<div
+							class="sec4_text1 fixed"
+							data-9700="left:65%; top:60%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-9800="left:70%; top:60%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10100="left:70%; top:60%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10600="left:120%; top:60%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+						>
+							니
+						</div>
+						<div
+							class="sec4_text1 fixed"
+							data-9900="left:70%; top:60%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-10000="left:75%; top:60%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10100="left:75%; top:60%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+							data-10500="left:120%; top:60%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+						>
+							다
+						</div>
+					</div>
+				</div>
+				<div class="sec5">
+					<div
+						class="sec5_text1 fixed"
+						data-11000="left:19%; top:10%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+						data-11400="left:19%; top:10%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+					>
+						searchEffect01
+					</div>
+					<div
+						class="sec5_text2 fixed"
+						data-11500="left:30%; top:50%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+						data-11800="left:30%; top:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+					>
+						<iframe src="https://hmm365.github.io/codingclass/javascript/effect/searchEffect01.html" frameborder="0"></iframe>
+					</div>
+					<div
+						class="sec5_text1 fixed"
+						data-11800="left:65%; top:25%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+						data-12200="left:65%; top:25%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+					>
+						searchEffect 는
+					</div>
+				</div>
+			</section>
 			<!-- //section3 -->
 			<section id="section4"></section>
 			<!-- //section4 -->
