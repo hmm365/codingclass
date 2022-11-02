@@ -31,6 +31,9 @@
 }
 .main_card .main_cardBox .main_image figure img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
 }
 /* main_info (박스 인포 요소) */
 .main_card .main_cardBox .main_info {
@@ -55,6 +58,9 @@
     height: 50px;
 }
 .main_card .main_cardBox .main_info .mainInfo_left figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 50%;
 }
 .main_card .main_cardBox .main_info .mainInfo_left .mainInfo_title {
@@ -90,17 +96,15 @@
 
 /* 밑줄 효과 */
 .mainInfo_right figure {
-
     display: flex;
     width: 15px;
     height: 15px;
     margin-left: 5px;
-} */
-.mainInfo_right figure img {
-
+}
+*/ .mainInfo_right figure img {
 }
 .mainInfo_right span {
-    color: #fff;
+    color: #aaa;
     font-size: 13px;
     margin-left: 5px;
 }

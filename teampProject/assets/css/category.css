@@ -1,6 +1,6 @@
 /* category tag부분 */
 .category__title h2 {
-    color: #06283D;
+    color: #06283d;
     font-weight: bold;
     font-size: 20px;
     line-height: 1.4;
@@ -18,16 +18,16 @@
     margin-bottom: 20px;
     border-radius: 50px;
     box-sizing: border-box;
-    color: #AAAAAA;
+    color: #aaaaaa;
     background: #fff;
     border: 1px solid #aaaaaa;
     font-size: 14px;
 }
 
 .category__title .category__tag li a.active {
-    background: #1363DF;
+    background: #1363df;
     color: #fff;
-    border: 1px solid #1363DF;
+    border: 1px solid #1363df;
 }
 
 #main {
@@ -35,9 +35,11 @@
     margin-bottom: 50px;
 }
 
-#main .main_wrap {}
+#main .main_wrap {
+}
 
-#main .main_wrap .main_inner {}
+#main .main_wrap .main_inner {
+}
 
 /* main_card (메인 이미지 박스 요소) */
 .main_card {
@@ -45,7 +47,8 @@
     flex-wrap: wrap;
 }
 
-.main_card:last-child {}
+.main_card:last-child {
+}
 
 .main_card .main_cardBox {
     position: relative;
@@ -67,6 +70,9 @@
 
 .main_card .main_cardBox .main_image figure img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* main_info (박스 인포 요소) */
@@ -119,7 +125,7 @@
     margin-left: 5px;
 }
 
-.main_card .main_cardBox>img {
+.main_card .main_cardBox > img {
     cursor: pointer;
     width: 30px;
     height: 30px;
@@ -128,7 +134,7 @@
     right: 10px;
 }
 
-.main_card .main_cardBox>img.show {
+.main_card .main_cardBox > img.show {
     background-image: url("/assets/image/heartClick_ico.svg");
 }
 
@@ -150,7 +156,7 @@
     backdrop-filter: blur(10px);
 }
 
-.banner_inner>p {
+.banner_inner > p {
     font-weight: bold;
     font-size: 20px;
     color: #fff;
@@ -170,7 +176,6 @@
     .container {
         width: 96%;
     }
-
 }
 
 @media (max-width: 1200px) {
@@ -183,14 +188,12 @@
         margin: 0 0.5%;
         margin-bottom: 20px;
     }
-
 }
 
 @media (max-width: 850px) {
     .main_card .main_cardBox {
         width: 48%;
     }
-
 }
 
 @media (max-width: 580px) {
@@ -198,8 +201,6 @@
         margin: 20px auto;
         width: 96%;
     }
-
-
 }
 
 /* SWIPER */

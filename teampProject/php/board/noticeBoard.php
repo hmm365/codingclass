@@ -19,7 +19,6 @@ include "../connect/session.php";
     <body>
         <?php include "../include/header.php" ?>
         <!-- header -->
-     
         <main id="main">
             <div class="main_wrap">
                 <section class="board_wrap board_mb">

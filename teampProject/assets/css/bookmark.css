@@ -3,9 +3,11 @@
     margin-bottom: 50px;
 }
 
-#main .main_wrap {}
+#main .main_wrap {
+}
 
-#main .main_wrap .main_inner {}
+#main .main_wrap .main_inner {
+}
 
 /* main_card (메인 이미지 박스 요소) */
 .main_card {
@@ -13,7 +15,8 @@
     flex-wrap: wrap;
 }
 
-.main_card:last-child {}
+.main_card:last-child {
+}
 
 .main_card .main_cardBox {
     position: relative;
@@ -35,6 +38,9 @@
 
 .main_card .main_cardBox .main_image figure img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* main_info (박스 인포 요소) */
@@ -58,9 +64,11 @@
     height: 50px;
 }
 
-.main_card .main_cardBox .main_info .mainInfo_left figure img {}
+.main_card .main_cardBox .main_info .mainInfo_left figure img {
+}
 
-.main_card .main_cardBox .main_info .mainInfo_left .mainInfo_title {}
+.main_card .main_cardBox .main_info .mainInfo_left .mainInfo_title {
+}
 
 .main_card .main_cardBox .main_info .mainInfo_left .mainInfo_title h3 a {
     color: #666;
@@ -85,7 +93,8 @@
     margin-left: 5px;
 }
 
-.main_card .main_cardBox .main_info .mainInfo_right figure img {}
+.main_card .main_cardBox .main_info .mainInfo_right figure img {
+}
 
 .main_card .main_cardBox .main_info .mainInfo_right span {
     color: #888;
@@ -93,7 +102,7 @@
     margin-left: 5px;
 }
 
-.main_card .main_cardBox>img {
+.main_card .main_cardBox > img {
     cursor: pointer;
     width: 30px;
     height: 30px;
@@ -102,8 +111,8 @@
     right: 10px;
 }
 
-.main_card .main_cardBox>img.show {
-    background-image: url('/assets/image/heartClick_ico.svg');
+.main_card .main_cardBox > img.show {
+    background-image: url("/assets/image/heartClick_ico.svg");
 }
 
 .bookmark_banner {

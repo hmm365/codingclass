@@ -2,9 +2,11 @@
     margin-bottom: 50px;
 }
 
-#main .main_wrap {}
+#main .main_wrap {
+}
 
-#main .main_wrap .main_inner {}
+#main .main_wrap .main_inner {
+}
 
 /* main_card (메인 이미지 박스 요소) */
 .main_card {
@@ -13,7 +15,8 @@
     justify-content: space-between;
 }
 
-.main_card:last-child {}
+.main_card:last-child {
+}
 
 .main_card .main_cardBox {
     position: relative;
@@ -34,6 +37,9 @@
 
 .main_card .main_cardBox .main_image figure img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* main_info (박스 인포 요소) */
@@ -57,9 +63,11 @@
     height: 50px;
 }
 
-.main_card .main_cardBox .main_info .mainInfo_left figure img {}
+.main_card .main_cardBox .main_info .mainInfo_left figure img {
+}
 
-.main_card .main_cardBox .main_info .mainInfo_left .mainInfo_title {}
+.main_card .main_cardBox .main_info .mainInfo_left .mainInfo_title {
+}
 
 .main_card .main_cardBox .main_info .mainInfo_left .mainInfo_title h3 a {
     color: #666;
@@ -84,7 +92,8 @@
     margin-left: 5px;
 }
 
-.main_card .main_cardBox .main_info .mainInfo_right figure img {}
+.main_card .main_cardBox .main_info .mainInfo_right figure img {
+}
 
 .main_card .main_cardBox .main_info .mainInfo_right span {
     color: #888;
@@ -92,7 +101,7 @@
     margin-left: 5px;
 }
 
-.main_card .main_cardBox>img {
+.main_card .main_cardBox > img {
     cursor: pointer;
     width: 30px;
     height: 30px;
@@ -101,14 +110,14 @@
     right: 10px;
 }
 
-.main_card .main_cardBox>img.show {
-    background-image: url('/assets/image/heartClick_ico.svg');
+.main_card .main_cardBox > img.show {
+    background-image: url("/assets/image/heartClick_ico.svg");
 }
 
 /* 배너 부분 */
 .search_banner {
     width: 100%;
-    background: #41268D;
+    background: #41268d;
     height: 200px;
     margin: 57px 0;
 }
@@ -122,7 +131,7 @@
     backdrop-filter: blur(10px);
 }
 
-.banner_inner>p {
+.banner_inner > p {
     font-weight: bold;
     font-size: 20px;
     color: #fff;
@@ -143,7 +152,8 @@
     width: 100%;
 }
 
-.search_inner {}
+.search_inner {
+}
 
 .search_input {
     display: flex;
@@ -151,14 +161,14 @@
     position: relative;
 }
 
-.search_inner .search_input>input {
+.search_inner .search_input > input {
     width: 95%;
     padding: 10px 30px;
     box-sizing: border-box;
     margin-right: 2%;
     height: 42px;
     border: 1px solid #999999;
-    color: #AAAAAA;
+    color: #aaaaaa;
     font-weight: 400;
     position: relative;
 }
@@ -172,7 +182,7 @@
     z-index: 99;
 }
 
-.search_inner .search_input>button {
+.search_inner .search_input > button {
     color: #555555;
     height: 42px;
     width: 50px;
@@ -204,7 +214,6 @@
     .container {
         width: 96%;
     }
-
 }
 
 @media (max-width: 1200px) {
@@ -215,14 +224,12 @@
     .main_card .main_cardBox {
         width: 32%;
     }
-
 }
 
 @media (max-width: 850px) {
     .main_card .main_cardBox {
         width: 48%;
     }
-
 }
 
 @media (max-width: 580px) {

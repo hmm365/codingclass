@@ -16,9 +16,9 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
-                $('.btn-sidebar').click(function () {
-                    $('.sidebar').toggleClass('active');
-                    $('.btn-sidebar').toggleClass('toggle');
+                $(".btn-sidebar").click(function () {
+                    $(".sidebar").toggleClass("active");
+                    $(".btn-sidebar").toggleClass("toggle");
                 });
             });
         </script>
@@ -48,7 +48,7 @@
                             <nav class="header__nav">
                                 <ul>
                                     <li class="active"><a href="#c">Bookmark</a></li>
-                                    <li><a href="#c">Category</a></li>
+                                    <li><a href="#c">Pictures</a></li>
                                     <li><a href="#c">Wallpaper</a></li>
                                     <li><a href="#c">Notice</a></li>
                                     <li><a href="#c">Feedback</a></li>
@@ -80,9 +80,7 @@
                             <img src="../../assets/image/passwordChange_bg.png" alt="회원가입 축하 이미지" />
                         </figure>
                         <p>Password change complete ✅</p>
-                        <span>
-                            비밀번호 변경이 완료 되었습니다!
-                        </span>
+                        <span> 비밀번호 변경이 완료 되었습니다! </span>
                         <button type="button">메인으로 이동하기</button>
                     </div>
                 </section>
@@ -144,15 +142,15 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- ham -->
         <script>
-            $('.toggle').click(function () {
-                $(this).toggleClass('active');
+            $(".toggle").click(function () {
+                $(this).toggleClass("active");
             });
 
-            const hamBtn = document.querySelector('.toggle');
-            const nav = document.querySelector('.headerTop__inner nav');
+            const hamBtn = document.querySelector(".toggle");
+            const nav = document.querySelector(".headerTop__inner nav");
 
-            hamBtn.addEventListener('click', () => {
-                nav.classList.toggle('show');
+            hamBtn.addEventListener("click", () => {
+                nav.classList.toggle("show");
             });
         </script>
     </body>

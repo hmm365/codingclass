@@ -1,246 +1,216 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>비밀번호 찾기</title>
-    <link rel="stylesheet" href="../../assets/css/reset.css" />
-    <link rel="stylesheet" href="../../assets/css/common.css" />
-    <link rel="stylesheet" href="../../assets/css/fonts.css" />
-    <link rel="stylesheet" href="../../assets/css/loginCommon.css" />
-    <style>
-      .mypage_banner {
-        width: 100%;
-        background: #1363df;
-        height: 200px;
-        position: relative;
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>비밀번호 찾기</title>
+        <link rel="stylesheet" href="../../assets/css/reset.css" />
+        <link rel="stylesheet" href="../../assets/css/common.css" />
+        <link rel="stylesheet" href="../../assets/css/fonts.css" />
+        <link rel="stylesheet" href="../../assets/css/loginCommon.css" />
+        <style>
+            .mypage_banner {
+                width: 100%;
+                background: #1363df;
+                height: 200px;
+                position: relative;
+            }
 
-      .banner_inner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        line-height: 200px;
-        margin-top: 120px;
-        background: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(10px);
-      }
+            .banner_inner {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                line-height: 200px;
+                margin-top: 120px;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+            }
 
-      .banner_inner > p {
-        font-weight: bold;
-        font-size: 20px;
-        color: #fff;
-        opacity: 0.8;
-      }
+            .banner_inner > p {
+                font-weight: bold;
+                font-size: 20px;
+                color: #fff;
+                opacity: 0.8;
+            }
 
-      .banner_inner .banner_udline {
-        width: 94px;
-        height: 5px;
-        background: #fff;
-        position: absolute;
-        bottom: 75px;
-        opacity: 0.2;
-      }
+            .banner_inner .banner_udline {
+                width: 94px;
+                height: 5px;
+                background: #fff;
+                position: absolute;
+                bottom: 75px;
+                opacity: 0.2;
+            }
 
-      .login__popup {
-        padding-top: 0;
-      }
-    </style>
+            .login__popup {
+                padding-top: 0;
+            }
+        </style>
 
-    <style>
-      @import url("https://webfontworld.github.io/gmarket/GmarketSans.css");
-    </style>
-  </head>
+        <style>
+            @import url("https://webfontworld.github.io/gmarket/GmarketSans.css");
+        </style>
+    </head>
 
-  <body>
-    <header id="header">
-      <div class="header__wrap">
-        <div class="header__inner">
-          <!-- ham -->
-          <div class="toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+    <body>
+        <header id="header">
+            <div class="header__wrap">
+                <div class="header__inner">
+                    <!-- ham -->
+                    <div class="toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 
-          <!-- header__top -->
-          <div class="header__top">
-            <div class="headerTop__inner container">
-              <!-- logo -->
-              <div class="logo">
-                <h1>
-                  <a href="#c">IT.<em>D</em></a>
-                </h1>
-              </div>
-              <!-- nav -->
-              <nav class="header__nav">
-                <ul>
-                  <li class="active"><a href="#c">Bookmark</a></li>
-                  <li><a href="#c">Category</a></li>
-                  <li><a href="#c">Wallpaper</a></li>
-                  <li><a href="#c">Notice</a></li>
-                  <li><a href="#c">Feedback</a></li>
-                </ul>
-              </nav>
+                    <!-- header__top -->
+                    <div class="header__top">
+                        <div class="headerTop__inner container">
+                            <!-- logo -->
+                            <div class="logo">
+                                <h1>
+                                    <a href="#c">IT.<em>D</em></a>
+                                </h1>
+                            </div>
+                            <!-- nav -->
+                            <nav class="header__nav">
+                                <ul>
+                                    <li class="active"><a href="#c">Bookmark</a></li>
+                                    <li><a href="#c">Pictures</a></li>
+                                    <li><a href="#c">Wallpaper</a></li>
+                                    <li><a href="#c">Notice</a></li>
+                                    <li><a href="#c">Feedback</a></li>
+                                </ul>
+                            </nav>
 
-              <a href="#c">Log In</a>
-            </div>
-          </div>
-          <!-- //header__top -->
-          <div class="header__bottom">
-            <div class="headerBottom__inner container">
-              <div class="header__search">
-                <input type="text" placeholder="검색어를 입력해주세요." />
-              </div>
-              <button>검색</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- header -->
-    <section class="mypage_banner">
-      <div class="banner_inner container">
-        <p>MY PAGE</p>
-        <div class="banner_udline"></div>
-      </div>
-    </section>
-    <!-- banner -->
-    <div class="login__popup">
-      <div class="login__wrap">
-        <div class="login__inner">
-          <div class="login__box container">
-            <form name="로그인" action="메인페이지">
-              <fieldset>
-                <span>Find Password 💻 </span>
-                <legend>비밀번호 찾기 폼</legend>
-                <p class="login__desc">비밀번호를 변경하겠습니다.</p>
-                <div>
-                  <div class="error__title">
-                    <p class="input__title">이전 비밀번호</p>
-                    <p class="error__pw">비밀번호가 맞지 않습니다.</p>
-                  </div>
-                  <label for="PrePass">이전 비밀번호</label>
-                  <input
-                    type="id"
-                    name="PrePass"
-                    id="PrePass"
-                    placeholder="비밀번호를 입력해주세요."
-                    class="input__style1"
-                    required
-                  />
+                            <a href="#c">Log In</a>
+                        </div>
+                    </div>
+                    <!-- //header__top -->
+                    <div class="header__bottom">
+                        <div class="headerBottom__inner container">
+                            <div class="header__search">
+                                <input type="text" placeholder="검색어를 입력해주세요." />
+                            </div>
+                            <button>검색</button>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                  <p class="input__title">새 비밀번호</p>
-                  <label for="NewPass">새 비밀번호</label>
-                  <input
-                    type="NewPass"
-                    name="NewPass"
-                    id="NewPass"
-                    placeholder="비밀번호를 입력해주세요."
-                    class="input__style2"
-                    required
-                  />
-                </div>
-                <div>
-                  <div class="error__title">
-                    <p class="input__title">비밀번호 확인</p>
-                    <p class="error__pw">비밀번호가 일치하지 않습니다.</p>
-                  </div>
-                  <label for="PassC">비밀번호 확인</label>
-                  <input
-                    type="PassC"
-                    name="PassC"
-                    id="PassC"
-                    placeholder="비밀번호를 입력해주세요."
-                    class="input__style2"
-                    required
-                  />
-                </div>
-                <button type="submit" class="input__button">
-                  비밀번호 변경
-                </button>
-                <button type="submit" class="join__button">
-                  이전 페이지로 돌아가기
-                </button>
-              </fieldset>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <footer id="footer">
-      <div class="footer_inner">
-        <div class="footer_wrap">
-          <h2><em>IT.D</em> | Free Image Download Site</h2>
-          <div class="footer_bottom container">
-            <div class="footer_left">
-              <p>
-                The creator : 전보연, 송성희, 김석준, 이중호 <br />
-                경기도광역시 단원구 고잔동 535-2번지 601호 코스모프라자
-                라인컴퓨터아트학원
-              </p>
-              <a href="#">이용약관</a>
-              <a href="#">개인정보 처리방침</a>
-              <a href="#">검색결과 수집정책</a>
-              <figure class="footer_sns">
-                <a href="#"
-                  ><img src="/assets/image/footer_sns01.png" alt="피그마 링크"
-                /></a>
-                <a href="#"
-                  ><img src="/assets/image/footer_sns02.png" alt="닷홈 링크"
-                /></a>
-              </figure>
             </div>
-            <div class="footer_right">
-              <article class="footer_menu">
-                <h3>카테고리</h3>
-                <ul>
-                  <li><a href="#">조회수 순위</a></li>
-                  <li><a href="#">다운로드 순위</a></li>
-                  <li><a href="#">반응 순위</a></li>
-                  <li><a href="#">댓글 순위</a></li>
-                </ul>
-              </article>
-              <article class="footer_menu">
-                <h3>메뉴</h3>
-                <ul>
-                  <li><a href="#">즐겨찾기</a></li>
-                  <li><a href="#">카테고리</a></li>
-                  <li><a href="#">배경화면</a></li>
-                  <li><a href="#">피드백</a></li>
-                </ul>
-              </article>
-              <article class="footer_menu">
-                <h3>고객센터</h3>
-                <ul>
-                  <li><a href="#">공지사항</a></li>
-                  <li><a href="#">피드백</a></li>
-                </ul>
-              </article>
+        </header>
+        <!-- header -->
+        <section class="mypage_banner">
+            <div class="banner_inner container">
+                <p>MY PAGE</p>
+                <div class="banner_udline"></div>
             </div>
-          </div>
+        </section>
+        <!-- banner -->
+        <div class="login__popup">
+            <div class="login__wrap">
+                <div class="login__inner">
+                    <div class="login__box container">
+                        <form name="로그인" action="메인페이지">
+                            <fieldset>
+                                <span>Find Password 💻 </span>
+                                <legend>비밀번호 찾기 폼</legend>
+                                <p class="login__desc">비밀번호를 변경하겠습니다.</p>
+                                <div>
+                                    <div class="error__title">
+                                        <p class="input__title">이전 비밀번호</p>
+                                        <p class="error__pw">비밀번호가 맞지 않습니다.</p>
+                                    </div>
+                                    <label for="PrePass">이전 비밀번호</label>
+                                    <input type="id" name="PrePass" id="PrePass" placeholder="비밀번호를 입력해주세요." class="input__style1" required />
+                                </div>
+                                <div>
+                                    <p class="input__title">새 비밀번호</p>
+                                    <label for="NewPass">새 비밀번호</label>
+                                    <input type="NewPass" name="NewPass" id="NewPass" placeholder="비밀번호를 입력해주세요." class="input__style2" required />
+                                </div>
+                                <div>
+                                    <div class="error__title">
+                                        <p class="input__title">비밀번호 확인</p>
+                                        <p class="error__pw">비밀번호가 일치하지 않습니다.</p>
+                                    </div>
+                                    <label for="PassC">비밀번호 확인</label>
+                                    <input type="PassC" name="PassC" id="PassC" placeholder="비밀번호를 입력해주세요." class="input__style2" required />
+                                </div>
+                                <button type="submit" class="input__button">비밀번호 변경</button>
+                                <button type="submit" class="join__button">이전 페이지로 돌아가기</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </footer>
-    <!-- // footer -->
 
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- ham -->
-    <script>
-      $(".toggle").click(function () {
-        $(this).toggleClass("active");
-      });
+        <footer id="footer">
+            <div class="footer_inner">
+                <div class="footer_wrap">
+                    <h2><em>IT.D</em> | Free Image Download Site</h2>
+                    <div class="footer_bottom container">
+                        <div class="footer_left">
+                            <p>
+                                The creator : 전보연, 송성희, 김석준, 이중호 <br />
+                                경기도광역시 단원구 고잔동 535-2번지 601호 코스모프라자 라인컴퓨터아트학원
+                            </p>
+                            <a href="#">이용약관</a>
+                            <a href="#">개인정보 처리방침</a>
+                            <a href="#">검색결과 수집정책</a>
+                            <figure class="footer_sns">
+                                <a href="#"><img src="/assets/image/footer_sns01.png" alt="피그마 링크" /></a>
+                                <a href="#"><img src="/assets/image/footer_sns02.png" alt="닷홈 링크" /></a>
+                            </figure>
+                        </div>
+                        <div class="footer_right">
+                            <article class="footer_menu">
+                                <h3>카테고리</h3>
+                                <ul>
+                                    <li><a href="#">조회수 순위</a></li>
+                                    <li><a href="#">다운로드 순위</a></li>
+                                    <li><a href="#">반응 순위</a></li>
+                                    <li><a href="#">댓글 순위</a></li>
+                                </ul>
+                            </article>
+                            <article class="footer_menu">
+                                <h3>메뉴</h3>
+                                <ul>
+                                    <li><a href="#">즐겨찾기</a></li>
+                                    <li><a href="#">카테고리</a></li>
+                                    <li><a href="#">배경화면</a></li>
+                                    <li><a href="#">피드백</a></li>
+                                </ul>
+                            </article>
+                            <article class="footer_menu">
+                                <h3>고객센터</h3>
+                                <ul>
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">피드백</a></li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- // footer -->
 
-      const hamBtn = document.querySelector(".toggle");
-      const nav = document.querySelector(".headerTop__inner nav");
+        <!-- jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- ham -->
+        <script>
+            $(".toggle").click(function () {
+                $(this).toggleClass("active");
+            });
 
-      hamBtn.addEventListener("click", () => {
-        nav.classList.toggle("show");
-      });
-    </script>
-  </body>
+            const hamBtn = document.querySelector(".toggle");
+            const nav = document.querySelector(".headerTop__inner nav");
+
+            hamBtn.addEventListener("click", () => {
+                nav.classList.toggle("show");
+            });
+        </script>
+    </body>
 </html>

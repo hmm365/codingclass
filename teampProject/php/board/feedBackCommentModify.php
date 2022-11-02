@@ -13,7 +13,7 @@
     $comment = $connect -> real_escape_string(trim($comment));
     $feedBackBoardId = $connect -> real_escape_string(trim($feedBackBoardId));
     $commentId = $connect -> real_escape_string(trim($commentId));
-
+    $comment = nl2br($comment);
     // $regTime = time();
 
     $sql = "UPDATE feedBackComment SET comment = '$comment' WHERE feedBackBoardId = '$feedBackBoardId' AND commentId = '$commentId'";

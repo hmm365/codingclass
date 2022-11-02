@@ -2,13 +2,12 @@
     color: #06283d;
 }
 
-
 button {
     background: none;
 }
 
 textarea {
-    font-family: 'GmarketSans';
+    font-family: "GmarketSans";
 }
 
 #main {
@@ -53,7 +52,6 @@ textarea {
     align-items: center;
     border-bottom: 1px solid #dcdcdc;
     margin-bottom: 30px;
-
 }
 .mypage__info .info__profile {
     width: 40%;
@@ -74,7 +72,7 @@ textarea {
     width: 150px;
     font-size: 20px;
     margin-right: 10px;
-    font-family: 'GmarketSans';
+    font-family: "GmarketSans";
     margin-bottom: 10px;
 }
 .mypage__info .info__profile .modify_nickName {
@@ -151,13 +149,13 @@ textarea {
     width: 150px;
 }
 .info__personal .info__desc .gender {
-    font-family: 'GmarketSans';
+    font-family: "GmarketSans";
     font-size: 16px;
     margin-bottom: 25px;
     color: #aaa;
 }
 .info__personal .info__desc .phone {
-    font-family: 'GmarketSans';
+    font-family: "GmarketSans";
     font-size: 16px;
     margin-bottom: 20px;
     color: #aaa;
@@ -320,11 +318,11 @@ textarea {
     box-sizing: border-box;
 }
 
-.intro__part4{
+.intro__part4 {
     display: flex;
     align-items: center;
     justify-content: end;
-    margin: 10px 0; 
+    margin: 10px 0;
 }
 .mypage__text .intro__part4 button {
     font-size: 16px;
@@ -338,8 +336,8 @@ textarea {
 }
 
 .mypage__text .intro__part4 .join_leave {
-    border: 1px solid #1363DF;
-    background-color: #1363DF;
+    border: 1px solid #1363df;
+    background-color: #1363df;
     padding: 10px;
     box-sizing: border-box;
     color: #fff;
@@ -375,6 +373,9 @@ textarea {
 .mypage__inner .mypage__cardBox .cardBox__image figure img {
     width: 100%;
     box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
 }
 
 @media (max-width: 1220px) {
@@ -501,7 +502,7 @@ textarea {
         font-size: 14px;
     }
     .info__personal .info__desc button {
-        font-size: 12px;    
+        font-size: 12px;
     }
 
     .mypage__inner .mypage__cardBox {

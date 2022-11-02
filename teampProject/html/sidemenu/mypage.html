@@ -36,7 +36,7 @@
                             <nav class="header__nav">
                                 <ul>
                                     <li class="active"><a href="#c">Bookmark</a></li>
-                                    <li><a href="#c">Category</a></li>
+                                    <li><a href="#c">Pictures</a></li>
                                     <li><a href="#c">Wallpaper</a></li>
                                     <li><a href="#c">Notice</a></li>
                                     <li><a href="#c">Feedback</a></li>
@@ -75,35 +75,35 @@
         </header>
         <!-- header -->
 
-        <main id='main'>
-            <section class='mypage__wrap'>
-                <div class='mypage__banner'>
-                    <div class='banner__inner container'>
-                        <h2 class='banner_title'>MY PAGE</h2>
-                        <p class='banner_udline'></p>
+        <main id="main">
+            <section class="mypage__wrap">
+                <div class="mypage__banner">
+                    <div class="banner__inner container">
+                        <h2 class="banner_title">MY PAGE</h2>
+                        <p class="banner_udline"></p>
                     </div>
                 </div>
-                <div class='mypage__info container'>
-                    <div class='info__profile'>
+                <div class="mypage__info container">
+                    <div class="info__profile">
                         <div>
-                            <img class='info__profile_img' src='../../assets/image/mypage_profile.svg' alt='프로필 이미지' />
+                            <img class="info__profile_img" src="../../assets/image/mypage_profile.svg" alt="프로필 이미지" />
                             <div>
                                 <from id="uploadForm">
-                                    <label for="userFile" class='modify_profile_input'>사진 변경</label>
-                                    <input type="file" enctype="multipart/form-data" name="userFile" id="userFile" accept=".jpg, .jpeg .png, .gif" style= 'display : none' >
-                                    <button type='button' class='modify_profile_cancel' >취소</button>
-                                    <button type='button' class='modify_profile' >변경</button>
+                                    <label for="userFile" class="modify_profile_input">사진 변경</label>
+                                    <input type="file" enctype="multipart/form-data" name="userFile" id="userFile" accept=".jpg, .jpeg .png, .gif" style="display: none" />
+                                    <button type="button" class="modify_profile_cancel">취소</button>
+                                    <button type="button" class="modify_profile">변경</button>
                                 </from>
                             </div>
                         </div>
-                        <div class='info_change'>
+                        <div class="info_change">
                             <div>
-                                <label for='nickname' class='ir'></label>
+                                <label for="nickname" class="ir"></label>
                                 <input type='text' id='nickname' class='nickname' name='nickname' placeholder='1~10글자까지'' />
                             </div>
                             <div>
-                                <button type='button' class='modify_nickname_cancel'>취소</button>
-                                <button type='button' class='modify_nickname_complete'>변경</button>
+                                <button type="button" class="modify_nickname_cancel">취소</button>
+                                <button type="button" class="modify_nickname_complete">변경</button>
                             </div>
                         </div>
                         <!-- <div class='info'>
@@ -111,20 +111,20 @@
                             <button type='button' class='modify_nickName'>수정</button>
                         </div> -->
                     </div>
-                    <div class='info__personal'>
-                        <div class='info__title'>
+                    <div class="info__personal">
+                        <div class="info__title">
                             <p>Gender</p>
                             <p>Phone</p>
                             <p>E-mail</p>
                             <p>Upload</p>
                         </div>
-                        <div class='info__desc'>
-                            <div class='personal_gender_change'>
+                        <div class="info__desc">
+                            <div class="personal_gender_change">
                                 <form>
-                                    <label for='gender' class='ir'>성별</label>
-                                    <input type='text' id='gender' class='gender' name='gender'  />
-                                    <button type='button' class='modify_gender_cancel'>취소</button>
-                                    <button type='button' class='modify_gender_complete'>변경</button>
+                                    <label for="gender" class="ir">성별</label>
+                                    <input type="text" id="gender" class="gender" name="gender" />
+                                    <button type="button" class="modify_gender_cancel">취소</button>
+                                    <button type="button" class="modify_gender_complete">변경</button>
                                 </form>
                             </div>
                             <!-- <div class='personal_gender'>
@@ -135,12 +135,12 @@
                                 </form>
                             </div> -->
 
-                            <div class='personal_phone_change'>
+                            <div class="personal_phone_change">
                                 <form>
-                                    <label for='phone' class='ir'>전화번호</label>
-                                    <input type='text' id='phone' class='phone' name='phone' />
-                                    <button type='button' class='modify_Phone_cancel'>취소</button>
-                                    <button type='button' class='modify_Phone_complete'>변경</button>
+                                    <label for="phone" class="ir">전화번호</label>
+                                    <input type="text" id="phone" class="phone" name="phone" />
+                                    <button type="button" class="modify_Phone_cancel">취소</button>
+                                    <button type="button" class="modify_Phone_complete">변경</button>
                                 </form>
                             </div>
 
@@ -151,53 +151,63 @@
                                     <button type='button' class='modify_Phone'>수정</button>
                                 </form>
                             </div> -->
-                            <div class='personal_email'></div>
-                            <div class='personal_upload'>0</div>
+                            <div class="personal_email"></div>
+                            <div class="personal_upload">0</div>
                         </div>
                     </div>
                 </div>
 
-                <div class='mypage__text container'>
-                    <div class='text__intro'>
-                        <div class='intro__part1'>
-                            <div class='intro__change'>
+                <div class="mypage__text container">
+                    <div class="text__intro">
+                        <div class="intro__part1">
+                            <div class="intro__change">
                                 <h3>짧은 소개</h3>
-                                <button type='button' class='modify_intro_cancle'>취소</button>
-                                <button type='button' class='modify_intro_complete'>완료</button>
+                                <button type="button" class="modify_intro_cancle">취소</button>
+                                <button type="button" class="modify_intro_complete">완료</button>
                             </div>
-                            <div class='intro__inner'>
+                            <div class="intro__inner">
                                 <h3>짧은 소개</h3>
-                                <button type='button' class='modify_intro'>수정</button>
+                                <button type="button" class="modify_intro">수정</button>
                             </div>
-                            <label for='intro_title' class='ir'>짧은 소개</label>
-                            <textarea name='intro' id='intro' cols='30' rows='1' placeholder='총 글자 수 30자 입니다.' style='resize: none' disabled><?=$userInfo['userShortInfo']?></textarea>
+                            <label for="intro_title" class="ir">짧은 소개</label>
+                            <textarea name="intro" id="intro" cols="30" rows="1" placeholder="총 글자 수 30자 입니다." style="resize: none" disabled><?=$userInfo['userShortInfo']?></textarea>
                         </div>
 
-                        <div class='intro__part2'>
-                            <div class='introD__change'>
+                        <div class="intro__part2">
+                            <div class="introD__change">
                                 <h3>자세한 소개</h3>
-                                <button type='button' class='modify_introD_cancel'>취소</button>
-                                <button type='button' class='modify_introD_complete'>완료</button>
+                                <button type="button" class="modify_introD_cancel">취소</button>
+                                <button type="button" class="modify_introD_complete">완료</button>
                             </div>
-                            <div class='introD__inner'>
+                            <div class="introD__inner">
                                 <h3>자세한 소개</h3>
-                                <button type='button' class='modify_introD'>수정</button>
+                                <button type="button" class="modify_introD">수정</button>
                             </div>
-                            <label for='introD_title' class='ir'>자세한 소개</label>
-                            <textarea name='introD' id='introD' cols='30' rows='1' placeholder='안녕하세요. 이 곳은 자세한 소개 칸 입니다. 총 200자 까지 적을 수 있으며, 짧은 소개에서 자신을 소개 한 것보다 더욱 더 자세한 소개를 적을 수 있습니다.' style='resize: none' disabled><?=$userInfo['userLongInfo']?></textarea>
+                            <label for="introD_title" class="ir">자세한 소개</label>
+                            <textarea
+                                name="introD"
+                                id="introD"
+                                cols="30"
+                                rows="1"
+                                placeholder="안녕하세요. 이 곳은 자세한 소개 칸 입니다. 총 200자 까지 적을 수 있으며, 짧은 소개에서 자신을 소개 한 것보다 더욱 더 자세한 소개를 적을 수 있습니다."
+                                style="resize: none"
+                                disabled
+                            >
+<?=$userInfo['userLongInfo']?></textarea
+                            >
                         </div>
-                        <div class='intro__part3'>
+                        <div class="intro__part3">
                             <!-- <div class='active__change'>
                                 <h3>활동 분야</h3>
                                 <button type='button' class='active_intro_cancel'>취소</button>
                                 <button type='button' class='active_intro_complete'>완료</button>
                             </div> -->
-                            <div class='active__inner'>
+                            <div class="active__inner">
                                 <h3>활동 분야</h3>
-                                <button type='button' class='active_intro'>수정</button>
+                                <button type="button" class="active_intro">수정</button>
                             </div>
-                            <label for='active_title' class='ir'>활동 분야</label>
-                            <textarea name='active' id='active' cols='30' rows='1' placeholder='배경 화면' style='resize: none' disabled></textarea>
+                            <label for="active_title" class="ir">활동 분야</label>
+                            <textarea name="active" id="active" cols="30" rows="1" placeholder="배경 화면" style="resize: none" disabled></textarea>
                         </div>
                         <div class="intro__part4">
                             <button type="button" class="modify_pass">비밀번호 변경</button>
@@ -207,56 +217,55 @@
                 </div>
             </section>
 
-
-            <section class='mypage__card container'>
-                <h1 class='card__title'>UPLOAD POSTS</h1>
-                <div class='mypage__inner'>
-                    <article class='mypage__cardBox'>
-                        <div class='cardBox__image'>
+            <section class="mypage__card container">
+                <h1 class="card__title">UPLOAD POSTS</h1>
+                <div class="mypage__inner">
+                    <article class="mypage__cardBox">
+                        <div class="cardBox__image">
                             <figure>
-                                <a href='#Redirect'><img src='../../assets/image/mypage_image01.jpg' alt='이미지' /></a>
+                                <a href="#Redirect"><img src="../../assets/image/mypage_image01.jpg" alt="이미지" /></a>
                             </figure>
                         </div>
                     </article>
-                    <article class='mypage__cardBox'>
-                        <div class='cardBox__image'>
+                    <article class="mypage__cardBox">
+                        <div class="cardBox__image">
                             <figure>
-                                <a href='#Redirect'><img src='../../assets/image/mypage_image02.jpg' alt='이미지' /></a>
+                                <a href="#Redirect"><img src="../../assets/image/mypage_image02.jpg" alt="이미지" /></a>
                             </figure>
                         </div>
                     </article>
-                    <article class='mypage__cardBox'>
-                        <div class='cardBox__image'>
+                    <article class="mypage__cardBox">
+                        <div class="cardBox__image">
                             <figure>
-                                <a href='#Redirect'><img src='../../assets/image/mypage_image03.jpg' alt='이미지' /></a>
+                                <a href="#Redirect"><img src="../../assets/image/mypage_image03.jpg" alt="이미지" /></a>
                             </figure>
                         </div>
                     </article>
-                    <article class='mypage__cardBox'>
-                        <div class='cardBox__image'>
+                    <article class="mypage__cardBox">
+                        <div class="cardBox__image">
                             <figure>
-                                <a href='#Redirect'><img src='../../assets/image/mypage_image04.jpg' alt='이미지' /></a>
+                                <a href="#Redirect"><img src="../../assets/image/mypage_image04.jpg" alt="이미지" /></a>
                             </figure>
                         </div>
                     </article>
-                    <article class='mypage__cardBox'>
-                        <div class='cardBox__image'>
+                    <article class="mypage__cardBox">
+                        <div class="cardBox__image">
                             <figure>
-                                <a href='#Redirect'><img src='../../assets/image/mypage_image05.jpg' alt='이미지' /></a>
+                                <a href="#Redirect"><img src="../../assets/image/mypage_image05.jpg" alt="이미지" /></a>
                             </figure>
                         </div>
                     </article>
-                    <article class='mypage__cardBox'>
-                        <div class='cardBox__image'>
+                    <article class="mypage__cardBox">
+                        <div class="cardBox__image">
                             <figure>
-                                <a href='#Redirect'><img src='../../assets/image/mypage_image06.jpg' alt='이미지' /></a>
+                                <a href="#Redirect"><img src="../../assets/image/mypage_image06.jpg" alt="이미지" /></a>
                             </figure>
                         </div>
                     </article>
-                    <article class='mypage__cardBox'>
-                        <div class='cardBox__image'>
+                    <article class="mypage__cardBox">
+                        <div class="cardBox__image">
                             <figure>
-                                <a href='#Redirect'><img src='../../assets/image/mypage_image07.jpg' alt='이미지' /></a>
+                                <a href="#Redirect"><img src="../../assets/image/mypage_image07.jpg" alt="이미지" /></a>
                             </figure>
                         </div>
                     </article>
@@ -321,27 +330,27 @@
         <!-- ham -->
         <script>
             // header script
-            $('.toggle').click(function () {
-                $(this).toggleClass('active');
+            $(".toggle").click(function () {
+                $(this).toggleClass("active");
             });
 
-            const hamBtn = document.querySelector('.toggle');
-            const nav = document.querySelector('.headerTop__inner nav');
+            const hamBtn = document.querySelector(".toggle");
+            const nav = document.querySelector(".headerTop__inner nav");
 
-            hamBtn.addEventListener('click', () => {
-                nav.classList.toggle('show');
+            hamBtn.addEventListener("click", () => {
+                nav.classList.toggle("show");
             });
 
-            const profileBox = document.querySelector('.profile'); // 프로필 박스
-            const profileImg = document.querySelector('.profile__img'); // 프로필 이미지
-            const profileNav = profileBox.querySelector('.profile__nav'); // 프로필 박스 네이게이션
+            const profileBox = document.querySelector(".profile"); // 프로필 박스
+            const profileImg = document.querySelector(".profile__img"); // 프로필 이미지
+            const profileNav = profileBox.querySelector(".profile__nav"); // 프로필 박스 네이게이션
             // console.log(profileNav); 프로필 박스, 프로필 이미지, 프로필 박스 네비게이션 모두 확인 완료
 
-            profileBox.addEventListener('mouseenter', () => {
-                profileNav.style.display = 'inline-block';
+            profileBox.addEventListener("mouseenter", () => {
+                profileNav.style.display = "inline-block";
             });
-            profileNav.addEventListener('mouseleave', () => {
-                profileNav.style.display = 'none';
+            profileNav.addEventListener("mouseleave", () => {
+                profileNav.style.display = "none";
             });
             // header script
         </script>

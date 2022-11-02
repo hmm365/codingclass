@@ -1,6 +1,7 @@
 <?php
 include "../connect/connect.php";
 include "../connect/session.php";
+$userMemberId = $_SESSION['userMemberID'];
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -34,12 +35,11 @@ include "../connect/session.php";
                                 $viewNum = 8;
 
                                 $viewLimit = ($viewNum * $page) - $viewNum;
-                                $boardSql = "SELECT b.categgoryBoardID, b.categgoryTitle, i.userPhoto, i.userNickName, b.categgoryPhoto, b.categgoryView 
+                                $boardSql = "SELECT b.categgoryBoardID, b.categgoryTitle,i.userMemberID, i.userPhoto, i.userNickName, b.categgoryPhoto, b.categgoryView 
                                 FROM categoryBoard as b 
-                                JOIN categoryTag as t ON b.categgoryBoardID = t.categgoryBoardID 
-                                JOIN userMember as i ON i.userMemberID = b.userMemberID 
-                                JOIN categoryLike as q ON q.categgoryBoardID = b.categgoryBoardID
-                                GROUP BY b.categgoryBoardID ORDER BY b.categgoryBoardID DESC LIMIT {$viewLimit}, {$viewNum}";
+                                JOIN userMember as i ON i.userMemberID = b.userMemberID
+                                WHERE b.categgoryBoardID IN (SELECT categgoryBoardID FROM categoryLike WHERE userMemberID = '$userMemberId') ORDER BY b.categgoryBoardID DESC LIMIT {$viewLimit}, {$viewNum}";
+
                                 $boardResult = $connect -> query($boardSql);
                                 foreach($boardResult as $board) {    
                                     $categoryId = $board['categgoryBoardID'];
@@ -68,7 +68,7 @@ include "../connect/session.php";
                                 <em class="blind tagName"><?=$tagInfo?></em>
                                 <div class="main_image">
                                     <figure>
-                                        <a href="#"><img src="../assets/categoryImg/<?=$board['categgoryPhoto']?>" alt="이미지" /></a>
+                                        <a href="../mypage/userpage.php?userMemberID=<?=$board['userMemberID']?>"><img src="../assets/categoryimg/<?=$board['categgoryPhoto']?>" alt="이미지" /></a>
                                     </figure>
                                 </div>
                                 <div class="main_info">
@@ -77,7 +77,7 @@ include "../connect/session.php";
                                             <a href="#"><img src="../assets/userimg/<?=$board['userPhoto']?>" alt="프로필 이미지" /></a>
                                         </figure>
                                         <div class="mainInfo_title">
-                                            <h3><a href="#"><?=$board['categgoryTitle']?></a></h3>
+                                            <h3><a href="../imgeview/imgview.php?categgoryBoardID=<?=$board['categgoryBoardID']?>"><?=$board['categgoryTitle']?></a></h3>
                                             <span><?=$board['userNickName']?></span>
                                         </div>
                                     </div>

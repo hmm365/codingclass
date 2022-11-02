@@ -1,6 +1,13 @@
 * {
     font-family: "GmarketSans";
 }
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    vertical-align: top;
+}
 #main {
     margin-bottom: 30px;
 }
@@ -18,6 +25,7 @@
     right: 0;
     background-color: #fff;
     z-index: 999;
+    border-bottom: 1px solid #dcdcdc;
 }
 #header .header_wrap {
 }
@@ -65,7 +73,7 @@
 /* header__top */
 .header__top {
     padding: 10px 0;
-    border-bottom: 1px solid #dcdcdc;
+    /* border-bottom: 1px solid #dcdcdc; */
 }
 .header__top .headerTop__inner {
     box-sizing: border-box;
@@ -199,7 +207,7 @@
 /* header__bottom */
 .header__bottom {
     padding: 10px 0;
-    border-bottom: 1px solid #dcdcdc;
+    /* border-bottom: 1px solid #dcdcdc; */
 }
 .header__bottom .headerBottom__inner {
     display: flex;

@@ -1,410 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bookmark</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookmark</title>
+        <link rel="stylesheet" href="../../assets/css/common.css" />
+        <link rel="stylesheet" href="../../assets/css/reset.css" />
+        <link rel="stylesheet" href="../../assets/css/bookmark.css" />
+        <link rel="stylesheet" href="../../assets/css/fonts.css" />
+    </head>
 
-    <link rel="stylesheet" href="../../assets/css/common.css">
-    <link rel="stylesheet" href="../../assets/css/reset.css">
-    <link rel="stylesheet" href="../../assets/css/bookmark.css">
-    <link rel="stylesheet" href="../../assets/css/fonts.css">
-</head>
+    <body>
+        <header id="header">
+            <div class="header__wrap">
+                <div class="header__inner">
+                    <!-- ham -->
+                    <div class="toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 
-<body>
-    <header id="header">
-        <div class="header__wrap">
-            <div class="header__inner">
-                <!-- ham -->
-                <div class="toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                    <!-- header__top -->
+                    <div class="header__top">
+                        <div class="headerTop__inner container">
+                            <!-- logo -->
+                            <div class="logo">
+                                <h1>
+                                    <a href="#c">IT.<em>D</em></a>
+                                </h1>
+                            </div>
 
-                <!-- header__top -->
-                <div class="header__top">
-                    <div class="headerTop__inner container">
-                        <!-- logo -->
-                        <div class="logo">
-                            <h1>
-                                <a href="#c">IT.<em>D</em></a>
-                            </h1>
-                        </div>
-
-                        <!-- nav -->
-                        <nav class="header__nav">
-                            <ul>
-                                <li class="active"><a href="#c">Bookmark</a></li>
-                                <li><a href="#c">Category</a></li>
-                                <li><a href="#c">Wallpaper</a></li>
-                                <li><a href="#c">Notice</a></li>
-                                <li><a href="#c">Feedback</a></li>
-                            </ul>
-                        </nav>
-
-                        <!-- 로그인 안했을 때 -->
-                        <!-- <a href="#c">Log In</a> -->
-
-                        <!-- 로그인 했을 때 -->
-                        <div class="profile">
-                            <figure class="profile__img">
-                                <img src="/assets/image/main_image01.jpg" alt="프로필 이미지" />
-                            </figure>
-                            <div class="profile__nav">
+                            <!-- nav -->
+                            <nav class="header__nav">
                                 <ul>
-                                    <li><a href="#c">내정보</a></li>
-                                    <li><a href="#c">업로드</a></li>
-                                    <li><a href="#c">로그아웃</a></li>
+                                    <li class="active"><a href="#c">Bookmark</a></li>
+                                    <li><a href="#c">Pictures</a></li>
+                                    <li><a href="#c">Wallpaper</a></li>
+                                    <li><a href="#c">Notice</a></li>
+                                    <li><a href="#c">Feedback</a></li>
                                 </ul>
+                            </nav>
+
+                            <!-- 로그인 안했을 때 -->
+                            <!-- <a href="#c">Log In</a> -->
+
+                            <!-- 로그인 했을 때 -->
+                            <div class="profile">
+                                <figure class="profile__img">
+                                    <img src="/assets/image/main_image01.jpg" alt="프로필 이미지" />
+                                </figure>
+                                <div class="profile__nav">
+                                    <ul>
+                                        <li><a href="#c">내정보</a></li>
+                                        <li><a href="#c">업로드</a></li>
+                                        <li><a href="#c">로그아웃</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- //header__top -->
-                <div class="header__bottom">
-                    <div class="headerBottom__inner container">
-                        <div class="header__search">
-                            <input type="text" placeholder="검색어를 입력해주세요." />
-                        </div>
-                        <button>검색</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- header -->
-    <main id="main">
-        <div class="main_wrap">
-            <div class="main_inner">
-                <section class="bookmark_banner">
-                    <div class="banner_inner container">
-                        <p>BOOKMARK</p>
-                        <div class="banner_udline"></div>
-                    </div>
-                </section>
-                <section class="main_card container">
-                    <article class="main_cardBox">
-                        <div class="main_image">
-                            <figure>
-                                <a href="#"><img src="/assets/image/main_image01.jpg" alt="이미지" /></a>
-                            </figure>
-                        </div>
-                        <div class="main_info">
-                            <div class="mainInfo_left">
-                                <figure>
-                                    <a href="#"><img src="/assets/image/profile_ico.png" alt="프로필 이미지" /></a>
-                                </figure>
-                                <div class="mainInfo_title">
-                                    <h3><a href="#">이미지 제목</a></h3>
-                                    <span>크리에이터 이름</span>
-                                </div>
+                    <!-- //header__top -->
+                    <div class="header__bottom">
+                        <div class="headerBottom__inner container">
+                            <div class="header__search">
+                                <input type="text" placeholder="검색어를 입력해주세요." />
                             </div>
-
-                            <div class="mainInfo_right">
-                                <figure>
-                                    <img src="/assets/image/comment_ico.svg" alt="댓글뷰 이미지" />
-                                </figure>
-                                <span>20</span>
-                                <figure>
-                                    <img src="/assets/image/view_ico.svg" alt="댓글뷰 이미지" />
-                                </figure>
-                                <span>12</span>
-                            </div>
-                        </div>
-                        <img src="/assets/image/heartBasic_ico.svg" alt="공감 아이콘" />
-                    </article>
-                    <article class="main_cardBox">
-                        <div class="main_image">
-                            <figure>
-                                <a href="#"><img src="/assets/image/main_image02.jpg" alt="이미지" /></a>
-                            </figure>
-                        </div>
-                        <div class="main_info">
-                            <div class="mainInfo_left">
-                                <figure>
-                                    <a href="#"><img src="/assets/image/profile_ico.png" alt="프로필 이미지" /></a>
-                                </figure>
-                                <div class="mainInfo_title">
-                                    <h3><a href="#">이미지 제목</a></h3>
-                                    <span>크리에이터 이름</span>
-                                </div>
-                            </div>
-
-                            <div class="mainInfo_right">
-                                <figure>
-                                    <img src="/assets/image/comment_ico.svg" alt="댓글뷰 이미지" />
-                                </figure>
-                                <span>20</span>
-                                <figure>
-                                    <img src="/assets/image/view_ico.svg" alt="댓글뷰 이미지" />
-                                </figure>
-                                <span>12</span>
-                            </div>
-                        </div>
-                        <img src="/assets/image/heartBasic_ico.svg" alt="공감 아이콘" />
-                    </article>
-                    <article class="main_cardBox">
-                        <div class="main_image">
-                            <figure>
-                                <a href="#"><img src="/assets/image/main_image03.jpg" alt="이미지" /></a>
-                            </figure>
-                        </div>
-                        <div class="main_info">
-                            <div class="mainInfo_left">
-                                <figure>
-                                    <a href="#"><img src="/assets/image/profile_ico.png" alt="프로필 이미지" /></a>
-                                </figure>
-                                <div class="mainInfo_title">
-                                    <h3><a href="#">이미지 제목</a></h3>
-                                    <span>크리에이터 이름</span>
-                                </div>
-                            </div>
-
-                            <div class="mainInfo_right">
-                                <figure>
-                                    <img src="/assets/image/comment_ico.svg" alt="댓글뷰 이미지" />
-                                </figure>
-                                <span>20</span>
-                                <figure>
-                                    <img src="/assets/image/view_ico.svg" alt="댓글뷰 이미지" />
-                                </figure>
-                                <span>12</span>
-                            </div>
-                        </div>
-                        <img src="/assets/image/heartBasic_ico.svg" alt="공감 아이콘" />
-                    </article>
-                    <article class="main_cardBox">
-                        <div class="main_image">
-                            <figure>
-                                <a href="#"><img src="/assets/image/main_image04.jpg" alt="이미지" /></a>
-                            </figure>
-                        </div>
-                        <div class="main_info">
-                            <div class="mainInfo_left">
-                                <figure>
-                                    <a href="#"><img src="/assets/image/profile_ico.png" alt="프로필 이미지" /></a>
-                                </figure>
-                                <div class="mainInfo_title">
-                                    <h3><a href="#">이미지 제목</a></h3>
-                                    <span>크리에이터 이름</span>
-                                </div>
-                            </div>
-
-                            <div class="mainInfo_right">
-                                <figure>
-                                    <img src="/assets/image/comment_ico.svg" alt="댓글뷰 이미지" />
-                                </figure>
-                                <span>20</span>
-                                <figure>
-                                    <img src="/assets/image/view_ico.svg" alt="댓글뷰 이미지" />
-                                </figure>
-                                <span>12</span>
-                            </div>
-                        </div>
-                        <img src="/assets/image/heartBasic_ico.svg" alt="공감 아이콘" />
-                    </article>
-                    <article class="main_cardBox">
-                        <div class="main_image">
-                            <figure>
-                                <a href="#"><img src="/assets/image/main_image05.jpg" alt="이미지" /></a>
-                            </figure>
-                        </div>
-                        <div class="main_info">
-                            <div class="mainInfo_left">
-                                <figure>
-                                    <a href="#"><img src="/assets/image/profile_ico.png" alt="프로필 이미지" /></a>
-                                </figure>
-                                <div class="mainInfo_title">
-                                    <h3><a href="#">이미지 제목</a></h3>
-                                    <span>크리에이터 이름</span>
-                                </div>
-                            </div>
-
-                            <div class="mainInfo_right">
-                                <figure>
-                                    <img src="/assets/image/comment_ico.svg" alt="댓글뷰 이미지" />
-                                </figure>
-                                <span>20</span>
-                                <figure>
-                                    <img src="/assets/image/view_ico.svg" alt="댓글뷰 이미지" />
-                                </figure>
-                                <span>12</span>
-                            </div>
-                        </div>
-                        <img src="/assets/image/heartBasic_ico.svg" alt="공감 아이콘" />
-                    </article>
-                    <article class="main_cardBox">
-                        <div class="main_image">
-                            <figure>
-                                <a href="#"><img src="/assets/image/main_image06.jpg" alt="이미지" /></a>
-                            </figure>
-                        </div>
-                        <div class="main_info">
-                            <div class="mainInfo_left">
-                                <figure>
-                                    <a href="#"><img src="/assets/image/profile_ico.png" alt="프로필 이미지" /></a>
-                                </figure>
-                                <div class="mainInfo_title">
-                                    <h3><a href="#">이미지 제목</a></h3>
-                                    <span>크리에이터 이름</span>
-                                </div>
-                            </div>
-
-                            <div class="mainInfo_right">
-                                <figure>
-                                    <img src="/assets/image/comment_ico.svg" alt="댓글뷰 이미지" />
-                                </figure>
-                                <span>20</span>
-                                <figure>
-                                    <img src="/assets/image/view_ico.svg" alt="댓글뷰 이미지" />
-                                </figure>
-                                <span>12</span>
-                            </div>
-                        </div>
-                        <img src="/assets/image/heartBasic_ico.svg" alt="공감 아이콘" />
-                    </article>
-                    <article class="main_cardBox">
-                        <div class="main_image">
-                            <figure>
-                                <a href="#"><img src="/assets/image/main_image07.jpg" alt="이미지" /></a>
-                            </figure>
-                        </div>
-                        <div class="main_info">
-                            <div class="mainInfo_left">
-                                <figure>
-                                    <a href="#"><img src="/assets/image/profile_ico.png" alt="프로필 이미지" /></a>
-                                </figure>
-                                <div class="mainInfo_title">
-                                    <h3><a href="#">이미지 제목</a></h3>
-                                    <span>크리에이터 이름</span>
-                                </div>
-                            </div>
-
-                            <div class="mainInfo_right">
-                                <figure>
-                                    <img src="/assets/image/comment_ico.svg" alt="댓글뷰 이미지" />
-                                </figure>
-                                <span>20</span>
-                                <figure>
-                                    <img src="/assets/image/view_ico.svg" alt="댓글뷰 이미지" />
-                                </figure>
-                                <span>12</span>
-                            </div>
-                        </div>
-                        <img src="/assets/image/heartBasic_ico.svg" alt="공감 아이콘" />
-                    </article>
-                    <article class="main_cardBox">
-                        <div class="main_image">
-                            <figure>
-                                <a href="#"><img src="/assets/image/main_image08.jpg" alt="이미지" /></a>
-                            </figure>
-                        </div>
-                        <div class="main_info">
-                            <div class="mainInfo_left">
-                                <figure>
-                                    <a href="#"><img src="/assets/image/profile_ico.png" alt="프로필 이미지" /></a>
-                                </figure>
-                                <div class="mainInfo_title">
-                                    <h3><a href="#">이미지 제목</a></h3>
-                                    <span>크리에이터 이름</span>
-                                </div>
-                            </div>
-
-                            <div class="mainInfo_right">
-                                <figure>
-                                    <img src="/assets/image/comment_ico.svg" alt="댓글뷰 이미지" />
-                                </figure>
-                                <span>20</span>
-                                <figure>
-                                    <img src="/assets/image/view_ico.svg" alt="댓글뷰 이미지" />
-                                </figure>
-                                <span>12</span>
-                            </div>
-                        </div>
-                        <img src="/assets/image/heartBasic_ico.svg" alt="공감 아이콘" />
-                    </article>
-                </section>
-            </div>
-        </div>
-        <footer id="footer">
-            <div class="footer_inner">
-                <div class="footer_wrap">
-                    <h2><em>IT.D</em> | Free Image Download Site</h2>
-                    <div class="footer_bottom container">
-                        <div class="footer_left">
-                            <p>
-                                The creator : 전보연, 송성희, 김석준, 이중호 <br />
-                                경기도광역시 단원구 고잔동 535-2번지 601호 코스모프라자 라인컴퓨터아트학원
-                            </p>
-                            <a href="#">이용약관</a>
-                            <a href="#">개인정보 처리방침</a>
-                            <a href="#">검색결과 수집정책</a>
-                            <figure class="footer_sns">
-                                <a href="#"><img src="/assets/image/footer_sns01.png" alt="피그마 링크" /></a>
-                                <a href="#"><img src="/assets/image/footer_sns02.png" alt="닷홈 링크" /></a>
-                            </figure>
-                        </div>
-                        <div class="footer_right">
-                            <article class="footer_menu">
-                                <h3>카테고리</h3>
-                                <ul>
-                                    <li><a href="#">조회수 순위</a></li>
-                                    <li><a href="#">다운로드 순위</a></li>
-                                    <li><a href="#">반응 순위</a></li>
-                                    <li><a href="#">댓글 순위</a></li>
-                                </ul>
-                            </article>
-                            <article class="footer_menu">
-                                <h3>메뉴</h3>
-                                <ul>
-                                    <li><a href="#">즐겨찾기</a></li>
-                                    <li><a href="#">카테고리</a></li>
-                                    <li><a href="#">배경화면</a></li>
-                                    <li><a href="#">피드백</a></li>
-                                </ul>
-                            </article>
-                            <article class="footer_menu">
-                                <h3>고객센터</h3>
-                                <ul>
-                                    <li><a href="#">공지사항</a></li>
-                                    <li><a href="#">피드백</a></li>
-                                </ul>
-                            </article>
+                            <button>검색</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!-- // footer -->
-    </main>
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        $('.toggle').click(function () {
-            $(this).toggleClass('active');
-        });
+        </header>
+        <!-- header -->
+        <main id="main">
+            <div class="main_wrap">
+                <div class="main_inner">
+                    <section class="bookmark_banner">
+                        <div class="banner_inner container">
+                            <p>BOOKMARK</p>
+                            <div class="banner_udline"></div>
+                        </div>
+                    </section>
+                    <section class="main_card container">
+                        <article class="main_cardBox">
+                            <div class="main_image">
+                                <figure>
+                                    <a href="#"><img src="/assets/image/main_image01.jpg" alt="이미지" /></a>
+                                </figure>
+                            </div>
+                            <div class="main_info">
+                                <div class="mainInfo_left">
+                                    <figure>
+                                        <a href="#"><img src="/assets/image/profile_ico.png" alt="프로필 이미지" /></a>
+                                    </figure>
+                                    <div class="mainInfo_title">
+                                        <h3><a href="#">이미지 제목</a></h3>
+                                        <span>크리에이터 이름</span>
+                                    </div>
+                                </div>
 
-        const hamBtn = document.querySelector('.toggle');
-        const nav = document.querySelector('.headerTop__inner nav');
+                                <div class="mainInfo_right">
+                                    <figure>
+                                        <img src="/assets/image/comment_ico.svg" alt="댓글뷰 이미지" />
+                                    </figure>
+                                    <span>20</span>
+                                    <figure>
+                                        <img src="/assets/image/view_ico.svg" alt="댓글뷰 이미지" />
+                                    </figure>
+                                    <span>12</span>
+                                </div>
+                            </div>
+                            <img src="/assets/image/heartBasic_ico.svg" alt="공감 아이콘" />
+                        </article>
+                        <article class="main_cardBox">
+                            <div class="main_image">
+                                <figure>
+                                    <a href="#"><img src="/assets/image/main_image02.jpg" alt="이미지" /></a>
+                                </figure>
+                            </div>
+                            <div class="main_info">
+                                <div class="mainInfo_left">
+                                    <figure>
+                                        <a href="#"><img src="/assets/image/profile_ico.png" alt="프로필 이미지" /></a>
+                                    </figure>
+                                    <div class="mainInfo_title">
+                                        <h3><a href="#">이미지 제목</a></h3>
+                                        <span>크리에이터 이름</span>
+                                    </div>
+                                </div>
 
-        hamBtn.addEventListener('click', () => {
-            nav.classList.toggle('show');
-        });
-    </script>
-    <script>
-        const heartBtn = document.querySelectorAll('.main_card .main_cardBox > img');
-        console.log(heartBtn);
+                                <div class="mainInfo_right">
+                                    <figure>
+                                        <img src="/assets/image/comment_ico.svg" alt="댓글뷰 이미지" />
+                                    </figure>
+                                    <span>20</span>
+                                    <figure>
+                                        <img src="/assets/image/view_ico.svg" alt="댓글뷰 이미지" />
+                                    </figure>
+                                    <span>12</span>
+                                </div>
+                            </div>
+                            <img src="/assets/image/heartBasic_ico.svg" alt="공감 아이콘" />
+                        </article>
+                        <article class="main_cardBox">
+                            <div class="main_image">
+                                <figure>
+                                    <a href="#"><img src="/assets/image/main_image03.jpg" alt="이미지" /></a>
+                                </figure>
+                            </div>
+                            <div class="main_info">
+                                <div class="mainInfo_left">
+                                    <figure>
+                                        <a href="#"><img src="/assets/image/profile_ico.png" alt="프로필 이미지" /></a>
+                                    </figure>
+                                    <div class="mainInfo_title">
+                                        <h3><a href="#">이미지 제목</a></h3>
+                                        <span>크리에이터 이름</span>
+                                    </div>
+                                </div>
 
-        heartBtn.forEach((heart, num) => {
-            // console.log(num);
-            heart.addEventListener('click', () => {
-                heartBtn[num].classList.toggle('show');
+                                <div class="mainInfo_right">
+                                    <figure>
+                                        <img src="/assets/image/comment_ico.svg" alt="댓글뷰 이미지" />
+                                    </figure>
+                                    <span>20</span>
+                                    <figure>
+                                        <img src="/assets/image/view_ico.svg" alt="댓글뷰 이미지" />
+                                    </figure>
+                                    <span>12</span>
+                                </div>
+                            </div>
+                            <img src="/assets/image/heartBasic_ico.svg" alt="공감 아이콘" />
+                        </article>
+                        <article class="main_cardBox">
+                            <div class="main_image">
+                                <figure>
+                                    <a href="#"><img src="/assets/image/main_image04.jpg" alt="이미지" /></a>
+                                </figure>
+                            </div>
+                            <div class="main_info">
+                                <div class="mainInfo_left">
+                                    <figure>
+                                        <a href="#"><img src="/assets/image/profile_ico.png" alt="프로필 이미지" /></a>
+                                    </figure>
+                                    <div class="mainInfo_title">
+                                        <h3><a href="#">이미지 제목</a></h3>
+                                        <span>크리에이터 이름</span>
+                                    </div>
+                                </div>
+
+                                <div class="mainInfo_right">
+                                    <figure>
+                                        <img src="/assets/image/comment_ico.svg" alt="댓글뷰 이미지" />
+                                    </figure>
+                                    <span>20</span>
+                                    <figure>
+                                        <img src="/assets/image/view_ico.svg" alt="댓글뷰 이미지" />
+                                    </figure>
+                                    <span>12</span>
+                                </div>
+                            </div>
+                            <img src="/assets/image/heartBasic_ico.svg" alt="공감 아이콘" />
+                        </article>
+                        <article class="main_cardBox">
+                            <div class="main_image">
+                                <figure>
+                                    <a href="#"><img src="/assets/image/main_image05.jpg" alt="이미지" /></a>
+                                </figure>
+                            </div>
+                            <div class="main_info">
+                                <div class="mainInfo_left">
+                                    <figure>
+                                        <a href="#"><img src="/assets/image/profile_ico.png" alt="프로필 이미지" /></a>
+                                    </figure>
+                                    <div class="mainInfo_title">
+                                        <h3><a href="#">이미지 제목</a></h3>
+                                        <span>크리에이터 이름</span>
+                                    </div>
+                                </div>
+
+                                <div class="mainInfo_right">
+                                    <figure>
+                                        <img src="/assets/image/comment_ico.svg" alt="댓글뷰 이미지" />
+                                    </figure>
+                                    <span>20</span>
+                                    <figure>
+                                        <img src="/assets/image/view_ico.svg" alt="댓글뷰 이미지" />
+                                    </figure>
+                                    <span>12</span>
+                                </div>
+                            </div>
+                            <img src="/assets/image/heartBasic_ico.svg" alt="공감 아이콘" />
+                        </article>
+                        <article class="main_cardBox">
+                            <div class="main_image">
+                                <figure>
+                                    <a href="#"><img src="/assets/image/main_image06.jpg" alt="이미지" /></a>
+                                </figure>
+                            </div>
+                            <div class="main_info">
+                                <div class="mainInfo_left">
+                                    <figure>
+                                        <a href="#"><img src="/assets/image/profile_ico.png" alt="프로필 이미지" /></a>
+                                    </figure>
+                                    <div class="mainInfo_title">
+                                        <h3><a href="#">이미지 제목</a></h3>
+                                        <span>크리에이터 이름</span>
+                                    </div>
+                                </div>
+
+                                <div class="mainInfo_right">
+                                    <figure>
+                                        <img src="/assets/image/comment_ico.svg" alt="댓글뷰 이미지" />
+                                    </figure>
+                                    <span>20</span>
+                                    <figure>
+                                        <img src="/assets/image/view_ico.svg" alt="댓글뷰 이미지" />
+                                    </figure>
+                                    <span>12</span>
+                                </div>
+                            </div>
+                            <img src="/assets/image/heartBasic_ico.svg" alt="공감 아이콘" />
+                        </article>
+                        <article class="main_cardBox">
+                            <div class="main_image">
+                                <figure>
+                                    <a href="#"><img src="/assets/image/main_image07.jpg" alt="이미지" /></a>
+                                </figure>
+                            </div>
+                            <div class="main_info">
+                                <div class="mainInfo_left">
+                                    <figure>
+                                        <a href="#"><img src="/assets/image/profile_ico.png" alt="프로필 이미지" /></a>
+                                    </figure>
+                                    <div class="mainInfo_title">
+                                        <h3><a href="#">이미지 제목</a></h3>
+                                        <span>크리에이터 이름</span>
+                                    </div>
+                                </div>
+
+                                <div class="mainInfo_right">
+                                    <figure>
+                                        <img src="/assets/image/comment_ico.svg" alt="댓글뷰 이미지" />
+                                    </figure>
+                                    <span>20</span>
+                                    <figure>
+                                        <img src="/assets/image/view_ico.svg" alt="댓글뷰 이미지" />
+                                    </figure>
+                                    <span>12</span>
+                                </div>
+                            </div>
+                            <img src="/assets/image/heartBasic_ico.svg" alt="공감 아이콘" />
+                        </article>
+                        <article class="main_cardBox">
+                            <div class="main_image">
+                                <figure>
+                                    <a href="#"><img src="/assets/image/main_image08.jpg" alt="이미지" /></a>
+                                </figure>
+                            </div>
+                            <div class="main_info">
+                                <div class="mainInfo_left">
+                                    <figure>
+                                        <a href="#"><img src="/assets/image/profile_ico.png" alt="프로필 이미지" /></a>
+                                    </figure>
+                                    <div class="mainInfo_title">
+                                        <h3><a href="#">이미지 제목</a></h3>
+                                        <span>크리에이터 이름</span>
+                                    </div>
+                                </div>
+
+                                <div class="mainInfo_right">
+                                    <figure>
+                                        <img src="/assets/image/comment_ico.svg" alt="댓글뷰 이미지" />
+                                    </figure>
+                                    <span>20</span>
+                                    <figure>
+                                        <img src="/assets/image/view_ico.svg" alt="댓글뷰 이미지" />
+                                    </figure>
+                                    <span>12</span>
+                                </div>
+                            </div>
+                            <img src="/assets/image/heartBasic_ico.svg" alt="공감 아이콘" />
+                        </article>
+                    </section>
+                </div>
+            </div>
+            <footer id="footer">
+                <div class="footer_inner">
+                    <div class="footer_wrap">
+                        <h2><em>IT.D</em> | Free Image Download Site</h2>
+                        <div class="footer_bottom container">
+                            <div class="footer_left">
+                                <p>
+                                    The creator : 전보연, 송성희, 김석준, 이중호 <br />
+                                    경기도광역시 단원구 고잔동 535-2번지 601호 코스모프라자 라인컴퓨터아트학원
+                                </p>
+                                <a href="#">이용약관</a>
+                                <a href="#">개인정보 처리방침</a>
+                                <a href="#">검색결과 수집정책</a>
+                                <figure class="footer_sns">
+                                    <a href="#"><img src="/assets/image/footer_sns01.png" alt="피그마 링크" /></a>
+                                    <a href="#"><img src="/assets/image/footer_sns02.png" alt="닷홈 링크" /></a>
+                                </figure>
+                            </div>
+                            <div class="footer_right">
+                                <article class="footer_menu">
+                                    <h3>카테고리</h3>
+                                    <ul>
+                                        <li><a href="#">조회수 순위</a></li>
+                                        <li><a href="#">다운로드 순위</a></li>
+                                        <li><a href="#">반응 순위</a></li>
+                                        <li><a href="#">댓글 순위</a></li>
+                                    </ul>
+                                </article>
+                                <article class="footer_menu">
+                                    <h3>메뉴</h3>
+                                    <ul>
+                                        <li><a href="#">즐겨찾기</a></li>
+                                        <li><a href="#">카테고리</a></li>
+                                        <li><a href="#">배경화면</a></li>
+                                        <li><a href="#">피드백</a></li>
+                                    </ul>
+                                </article>
+                                <article class="footer_menu">
+                                    <h3>고객센터</h3>
+                                    <ul>
+                                        <li><a href="#">공지사항</a></li>
+                                        <li><a href="#">피드백</a></li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- // footer -->
+        </main>
+        <!-- jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(".toggle").click(function () {
+                $(this).toggleClass("active");
             });
-        });
-    </script>
-</body>
 
+            const hamBtn = document.querySelector(".toggle");
+            const nav = document.querySelector(".headerTop__inner nav");
+
+            hamBtn.addEventListener("click", () => {
+                nav.classList.toggle("show");
+            });
+        </script>
+        <script>
+            const heartBtn = document.querySelectorAll(".main_card .main_cardBox > img");
+            console.log(heartBtn);
+
+            heartBtn.forEach((heart, num) => {
+                // console.log(num);
+                heart.addEventListener("click", () => {
+                    heartBtn[num].classList.toggle("show");
+                });
+            });
+        </script>
+    </body>
 </html>

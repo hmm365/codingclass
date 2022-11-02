@@ -44,7 +44,7 @@ include "../connect/session.php";
                                      case 'title' :
                                          $sql .= "WHERE b.boardTitle LIKE '%{$searchKeyword}%' ORDER BY ${searchBoardId} DESC ";
                                          break;
-                                     case 'content' :
+                                     case 'contents' :
                                          $sql .= "WHERE b.boardContents LIKE '%{$searchKeyword}%' ORDER BY ${searchBoardId} DESC ";
                                          break;
                                      case 'name' :
@@ -63,7 +63,7 @@ include "../connect/session.php";
                                ?>
                             </div>
 
-                            <p>총 <?= $boardCount ?> 개의 게시글이 있습니다.</p>" ?>
+                            <p>총 <?= $boardCount ?> 개의 게시글이 있습니다.</p>
                             <div class="board_search"> 
                                  <form action='boardSearch.php' name='boardSearch' method='get'>
                                             <fieldset>
@@ -114,7 +114,7 @@ include "../connect/session.php";
                                                                 $info = $result -> fetch_array(MYSQLI_ASSOC);
                                                                 echo "<tr>";
                                                                     echo "<td class='ce'>".$info[$searchBoardId]."</td>";
-                                                                    echo "<td class='lf'><a href='noticeBoardView.php?$searchBoardId={$info[$searchBoardId]}'>".$info['boardTitle']."
+                                                                    echo "<td class='lf'><a href='noticeBoardView.php?noticeBoardID={$info[$searchBoardId]}'>".$info['boardTitle']."
                                                                     <p class='resinfo'>".$info['userNickName']. "|<span>".date('Y-m-d', $info['regTime'])." </span><em>| 조회수 : ".$info['boardView']."</em></p>
                                                                     </td>";
                                                                     echo "<td class='ce Nickname'>".$info['userNickName']."</td>";
@@ -149,7 +149,7 @@ include "../connect/session.php";
                                  <?php }  
                                         } else { ?>
                                         <div class='board_writeBtn'>
-                                            <a href='#'>글쓰기</a>
+                                            <a href='noticeBoardWrite.php'>글쓰기</a>
                                         </div>
                               <?php } 
                                 } ?>

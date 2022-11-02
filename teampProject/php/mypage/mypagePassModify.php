@@ -2,7 +2,9 @@
 
 include "../connect/connect.php";
 include "../connect/session.php";
-    
+if( !isset($_SESSION['userMemberID']) ){ 
+    echo "<script>window.alert('잘못된접근입니다.'); location.href = '../main/main.php';</script>";
+    }
     $type = $_POST['type'];
     $userMemberID = $_SESSION['userMemberID'];
 

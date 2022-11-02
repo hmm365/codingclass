@@ -12,13 +12,14 @@ $page = 1;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <!-- Link Swiper's CSS -->
-    <title>Bookmark</title>
-
+    <title>Pictures</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/category.css">
     <link rel="stylesheet" href="../assets/css/fonts.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+   
 
 </head>
 
@@ -29,8 +30,8 @@ $page = 1;
         <div class="main_wrap">
             <div class="main_inner">
                 <section class="bookmark_banner">
-                    <div class="banner_inner">
-                        <p>CATEGORY</p>
+                    <div class="banner_inner container">
+                        <p>BEST PICTURES</p>
                         <div class="banner_udline"></div>
                     </div>
                 </section>
@@ -38,42 +39,18 @@ $page = 1;
                 <section class="card_inner container">
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
+                        <?php 
+                            $rankBoardSql = "SELECT b.categgoryBoardID, b.categgoryTitle, i.userPhoto, i.userNickName, b.categgoryPhoto, b.categgoryView FROM categoryBoard as b JOIN userMember as i ON i.userMemberID = b.userMemberID GROUP BY b.categgoryBoardID ORDER BY b.categgoryView DESC LIMIT 7"; 
+                            $rankBoardResult = $connect -> query($rankBoardSql);
+                            foreach($rankBoardResult as $rankBoard) {
+                        ?>
                             <div class="swiper-slide">
-                                <img src="../assets/image/main_image01.jpg" alt="">
-                                <p>WALLPAPER <br><em>배경화면</em></p>
+                            <a href="../imgeview/imgview.php?categgoryBoardID=<?=$rankBoard['categgoryBoardID']?>"><img src="../assets/categoryimg/<?=$rankBoard['categgoryPhoto']?>" alt="이미지" /></a>
+                                <p><?=$rankBoard['categgoryTitle']?> <br><em><?=$rankBoard['userNickName']?></em></p>
                             </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/image/main_image02.jpg" alt="">
-                                <p>ANIMAL<br><em>동물</em></p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/image/main_image03.jpg" alt="">
-                                <p>ILLUSTRATION<br><em>일러스트</em></p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/image/main_image04.jpg" alt="">
-                                <p>PLANTS<br><em>식물</em></p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../../assets/image/main_image05.jpg" alt="">
-                                <p>FOOD<br><em>음식</em></p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../../assets/image/main_image07.jpg" alt="">
-                                <p><em></em></p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/image/main_image06.jpg" alt="">
-                                <p><em></em></p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/image/main_image05.jpg" alt="">
-                                <p><em></em></p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/image/main_image04.jpg" alt="">
-                                <p><em></em></p>
-                            </div>
+                        <?php 
+                            }
+                        ?>
                         </div>
                     </div>
                 </section>
@@ -82,30 +59,25 @@ $page = 1;
                 <section class="category__title container">
                     <h2>CATEGORY</h2>
                     <ul class="category__tag">
-                    <li><a href="/" data-tab-target="#All" class="active">All</a></li>
-                    <?php 
-                        $rankSql = "SELECT categgoryTag, COUNT(categgoryBoardID) AS ranking FROM categoryTag GROUP BY categgoryTag ORDER BY COUNT(categgoryBoardID) DESC LIMIT 5";
-                        $rankResult = $connect -> query($rankSql);
-                        $rankInfo = $rankResult -> fetch_array(MYSQLI_ASSOC);
-                        foreach($rankResult as $rank) {
-                            echo "<li><a href='/' data-tab-target='".$rank['ranking']."' >#".$rank['categgoryTag']."</a></li>";
-                        }
-                    ?>
-                    <!-- <ul class="category__tag">
-                        <li><a href="#" data-tab-target="#All" class="active">All</a></li>
-                        <li><a href="#" data-tab-target="#love">love</a></li>
-                        <li><a href="#" data-tab-target="#pastal">pastal</a></li>
-                        <li><a href="#" data-tab-target="#plants">plants</a></li>
-                        <li><a href="#" data-tab-target="#vintage">vintage</a></li>
-                    </ul> -->
+                        <li><a href="/" data-tab-target="#All" class="active">All</a></li>
+                        <?php 
+                            $rankSql = "SELECT categgoryTag, COUNT(categgoryBoardID) AS ranking FROM categoryTag GROUP BY categgoryTag ORDER BY COUNT(categgoryBoardID) DESC LIMIT 5";
+                            $rankResult = $connect -> query($rankSql);
+                            $rankInfo = $rankResult -> fetch_array(MYSQLI_ASSOC);
+                            foreach($rankResult as $rank) {
+                                echo "<li><a href='/' data-tab-target='".$rank['ranking']."' >#".$rank['categgoryTag']."</a></li>";
+                            }
+                        ?>
                     </ul>
                 </section>
                 <section class="main_card container active">
                     <?php 
+                        
+                        
                         $viewNum = 8;
                         $viewLimit = ($viewNum * $page) - $viewNum;
 
-                        $boardSql = "SELECT b.categgoryBoardID, b.categgoryTitle, i.userPhoto, i.userNickName, b.categgoryPhoto, b.categgoryView FROM categoryBoard as b JOIN categoryTag as t ON b.categgoryBoardID = t.categgoryBoardID JOIN userMember as i ON i.userMemberID = b.userMemberID GROUP BY b.categgoryBoardID ORDER BY b.categgoryBoardID DESC LIMIT {$viewLimit}, {$viewNum};";
+                        $boardSql = "SELECT b.categgoryBoardID, b.categgoryTitle,i.userMemberID, i.userPhoto, i.userNickName, b.categgoryPhoto, b.categgoryView FROM categoryBoard as b JOIN userMember as i ON i.userMemberID = b.userMemberID GROUP BY b.categgoryBoardID ORDER BY b.categgoryBoardID DESC LIMIT {$viewLimit}, {$viewNum};";
                         $boardResult = $connect -> query($boardSql);
                         foreach($boardResult as $board) {    
                             $categoryId = $board['categgoryBoardID'];
@@ -134,16 +106,16 @@ $page = 1;
                         <em class="blind tagName"><?=$tagInfo?></em>
                         <div class="main_image">
                             <figure>
-                                <a href="#"><img src="../assets/categoryImg/<?=$board['categgoryPhoto']?>" alt="이미지" /></a>
+                                <a href="../imgeview/imgview.php?categgoryBoardID=<?=$board['categgoryBoardID']?>"><img src="../assets/categoryimg/<?=$board['categgoryPhoto']?>" alt="이미지" /></a>
                             </figure>
                         </div>
                         <div class="main_info">
                             <div class="mainInfo_left">
                                 <figure>
-                                    <a href="#"><img src="../assets/userimg/<?=$board['userPhoto']?>" alt="프로필 이미지" /></a>
+                                    <a href="../mypage/userpage.php?userMemberID=<?=$board['userMemberID']?>"><img src="../assets/userimg/<?=$board['userPhoto']?>" alt="프로필 이미지" /></a>
                                 </figure>
                                 <div class="mainInfo_title">
-                                    <h3><a href="#"><?=$board['categgoryTitle']?></a></h3>
+                                    <h3><a href="../imgeview/imgview.php?categgoryBoardID=<?=$board['categgoryBoardID']?>"><?=$board['categgoryTitle']?></a></h3>
                                     <span><?=$board['userNickName']?></span>
                                 </div>
                             </div>
@@ -215,6 +187,7 @@ $page = 1;
             const mainCardBox = document.querySelectorAll('.main_cardBox');
             tagRemove();
             tagActive();
+
             categoryTags.forEach(tag => {
                 tag.addEventListener('click', (e)=>{
                     e.preventDefault();

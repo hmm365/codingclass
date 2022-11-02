@@ -1,10 +1,25 @@
 <?php
 include "../connect/connect.php";
 include "../connect/session.php";
+if( !isset($_SESSION['userMemberID']) ){ 
+    echo "<script>window.alert('잘못된접근입니다.'); location.href = '../main/main.php';</script>";
+}
 $userMemberId = $_SESSION['userMemberID'];
 $userSql = "SELECT * FROM userMember WHERE userMemberID = '$userMemberId'";
 $userResult = $connect -> query($userSql);
 $userInfo = $userResult -> fetch_array(MYSQLI_ASSOC);
+
+$page = 1;
+$viewNum = 8;
+
+$viewLimit = ($viewNum * $page) - $viewNum;
+$boardSql = "SELECT * FROM categoryBoard as b JOIN userMember as m ON b.userMemberID = m.userMemberID  WHERE m.userMemberID = '$userMemberId' ORDER BY b.categgoryBoardID DESC ";
+$boardResult = $connect -> query($boardSql);
+$boardcount = $boardResult -> num_rows;
+$boardSql .= "LIMIT {$viewLimit}, {$viewNum} ";
+$boardResult = $connect -> query($boardSql);
+
+
 ?>
 <!DOCTYPE html>
 <html lang='ko'>
@@ -104,7 +119,7 @@ $userInfo = $userResult -> fetch_array(MYSQLI_ASSOC);
                                 </form>
                             </div>
                             <div class='personal_email'><?=$userInfo['userEmail']?></div>
-                            <div class='personal_upload'>0</div>
+                            <div class='personal_upload'><?=$boardcount?></div>
                         </div>
                     </div>
                 </div>
@@ -164,14 +179,12 @@ $userInfo = $userResult -> fetch_array(MYSQLI_ASSOC);
                 <h1 class='card__title'>UPLOAD POSTS</h1>
                 <div class='mypage__inner'>
                 <?php 
-                        $boardSql = "SELECT * FROM categoryBoard as b JOIN userMember as m ON b.userMemberID = m.userMemberID  WHERE m.userMemberID = '$userMemberId'";
-                        $boardResult = $connect -> query($boardSql);
                         foreach($boardResult as $board) {    
                 ?>
                     <article class='mypage__cardBox'>
                         <div class='cardBox__image'>
                             <figure>
-                                <a href='#'><img src='../assets/categoryImg/<?=$board['categgoryPhoto']?>' alt='이미지' /></a>
+                                <a href='../imgeview/imgview.php?categgoryBoardID=<?=$board['categgoryBoardID']?>'><img src='../assets/categoryimg/<?=$board['categgoryPhoto']?>' alt='이미지' /></a>
                             </figure>
                         </div>
                     </article>
@@ -549,6 +562,52 @@ $userInfo = $userResult -> fetch_array(MYSQLI_ASSOC);
                         }
                     })
                 })
+
+                let loading = false;
+                let pagecount = 2;
+                function next_load(){
+                    $.ajax({
+                            url:"mypageModify.php",
+                            method: "POST",
+                            dataType: "json",
+                            data : {
+                                "type": "categoryscroll",
+                                "page": pagecount,
+                            },
+                            
+                            success: function(data)
+                            {
+                                if(data.result == 'good'){
+                                    pagecount++;
+                                    $('.mypage__inner').append(data.page)                            
+                                    loading = false;    //실행 가능 상태로 변경
+                                }
+                                else
+                                {
+                                    console.log('failed');
+                                }
+                            },error: function(request, status, error){
+                                console.log("request" + request);
+                                console.log("status" + status);
+                                console.log("error" + error);
+                            }
+                        });
+                }
+
+                $(window).scroll(function(){
+                    if($(window).scrollTop()+200>=$(document).height() - $(window).height())
+                    {
+                        if(!loading)    //실행 가능 상태라면?
+                        {
+                            loading = true; //실행 불가능 상태로 변경
+                            next_load(); 
+                        }
+                        else            //실행 불가능 상태라면?
+                        {
+                            // console.log('다음페이지를 로딩중입니다.');  
+                        }
+                    }
+                });          
             </script>
         
     </body>

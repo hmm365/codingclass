@@ -55,8 +55,8 @@ $userInfo = $userResult -> fetch_array(MYSQLI_ASSOC);
                                     
                                     echo '<ul>
                                             <li class="bookMark"><a href="../bookmark/bookMark.php">Bookmark</a></li>
-                                            <li class="category"><a href="../category/category.php">Category</a></li>
-                                            <li class="wallpaper"><a href="../category/wallpager.php">Wallpaper</a></li>
+                                            <li class="category"><a href="../category/category.php">Pictures</a></li>
+                                            <li class="wallpaper"><a href="../category/wallpaper.php">Wallpaper</a></li>
                                             <li class="notice"><a href="../board/noticeBoard.php">Notice</a></li>
                                             <li class="feedBack"><a href="../board/feedBackBoard.php">Feedback</a></li>
                                         </ul>';
@@ -82,7 +82,7 @@ $userInfo = $userResult -> fetch_array(MYSQLI_ASSOC);
                                         <div class="profile__nav">
                                             <ul>
                                                 <li><a href="../mypage/mypage.php">내정보</a></li>
-                                                <li><a href="#c">업로드</a></li>
+                                                <li><a href="../upload/upload.php">업로드</a></li>
                                                 <li><a href="../login/logout.php">로그아웃</a></li>
                                             </ul>
                                     </div>
@@ -95,14 +95,29 @@ $userInfo = $userResult -> fetch_array(MYSQLI_ASSOC);
                     <div class="header__bottom">
                         <div class="headerBottom__inner container">
                             <div class="header__search">
-                                <input type="text" placeholder="검색어를 입력해주세요." />
+                                <label for='header__search__input' class="ir" >검색</label>
+                                <input onkeypress="show_name(event)" id='header__search__input' name='header__search__input' type="text" placeholder="검색어를 입력해주세요." />
                             </div>
-                            <button>검색</button>
+                            <button id="header__searchBtn">검색</button>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+        <script>
+            const searchBtn = document.querySelector('#header__searchBtn')
+            searchBtn.addEventListener('click', () =>{
+                console.log()
+                let resultText = document.querySelector('#header__search__input').value
+                location.href=`../search/search.php?searchKeyword=${resultText}&searchSelect=0`;
+            })
+            function show_name(e){
+                let resultText = document.querySelector('#header__search__input').value
+                if(e.keyCode == 13){   
+                    location.href=`../search/search.php?searchKeyword=${resultText}&searchSelect=0`;
+                }
+            }
+        </script>
         <!-- jquery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- ham -->
@@ -111,7 +126,6 @@ $userInfo = $userResult -> fetch_array(MYSQLI_ASSOC);
             $('.toggle').click(function () {
                 $(this).toggleClass('active');
             });
-
             const hamBtn = document.querySelector('.toggle');
             const nav = document.querySelector('.headerTop__inner nav');
 

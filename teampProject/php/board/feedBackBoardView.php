@@ -138,7 +138,7 @@
                                   $info = $result->fetch_array(MYSQLI_ASSOC);
                               }
                               
-                              $sql2 = "SELECT b.commentId, a.userNickName, b.feedBackBoardID, b.userMemberID, b.comment, b.clike, b.regTime, a.userPhoto FROM userMember a JOIN feedBackComment b ON (a.userMemberID = b.userMemberID) WHERE feedBackBoardID = '$feedBackBoardID' ORDER BY commentId DESC";
+                              $sql2 = "SELECT b.commentId, a.userNickName, a.userMemberID, b.feedBackBoardID, b.userMemberID, b.comment, b.clike, b.regTime, a.userPhoto FROM userMember a JOIN feedBackComment b ON (a.userMemberID = b.userMemberID) WHERE feedBackBoardID = '$feedBackBoardID' ORDER BY commentId DESC";
                             //   echo "<script>alert('".$sql2."')</script>";
                               $result2 = $connect->query($sql2);
                               $commentCount2 = $result2 -> num_rows;
@@ -152,7 +152,7 @@
                                             <legend class="ir">댓글 작성 영역</legend>
                                             <div class="userComment__inner">
                                                 <div class="userIcon">
-                                                    <img src="../assets/userimg/<?=$userInfo['userPhoto']?>" alt="프로필 사진" />
+                                                    <img src="../assets/userimg/Img_default.jpg " alt="프로필 사진" />
                                                 </div>
                                                     <?php
                                                     if(isset($_SESSION['userMemberID']) ){ 
@@ -208,7 +208,7 @@
                                                                 <img src='../assets/userimg/".$info2['userPhoto']."' alt='프로필 사진' />
                                                             </div>
                                                             <div class='userComments__name'>
-                                                                <a href=''>".$info2["userNickName"]."</a>
+                                                                <a href='../mypage/userpage.php?userMemberID=".$info2["userMemberID"]."'>".$info2["userNickName"]."</a>
                                                                 <p>".date("Y-m-d", $info2["regTime"])."</p>
                                                             </div>";
                                             if($likeCount2 == 1){
@@ -291,7 +291,7 @@
                                 <h3>게시글 수정</h3>
                             </div>
                             <label for="userPass" class="blind">게시글 수정</label>
-                            <input type="password" id="userPass" name="userPass" maxlength="20" placeholder="비밀번호를 입력해주세요." autocomplete="off" />
+                            <input onkeyup="enterkey()" type="password" id="userPass" name="userPass" maxlength="20" placeholder="비밀번호를 입력해주세요." autocomplete="off" />
                             <div class="button">
                                 <button type="button" class="btn_cancel">취소</button>
                                 <button type="button" class="btn_check" onclick="passChecking()">확인</button>
@@ -308,7 +308,7 @@
                                 <h3>게시글 삭제</h3>
                             </div>
                             <label for="youPass" class="blind">게시글 삭제</label>
-                            <input type="password" id="youPass" name="youPass" maxlength="20" placeholder="비밀번호를 입력해주세요." autocomplete="off" />
+                            <input onkeyup="enterkey()" type="password" id="youPass" name="youPass" maxlength="20" placeholder="비밀번호를 입력해주세요." autocomplete="off" />
                             <div class="button">
                                 <button type="button" class="btn_cancel">취소</button>
                                 <button type="button" class="btn_check" onclick="passChecking2()">확인</button>
@@ -367,6 +367,11 @@
                                          form.submit();
                                      }
                                     
+                                    function enterkey() {
+                                        if (window.event.keyCode == 13) {
+                                            passChecking()
+                                        }
+                                    }
                                     function passChecking() {
                                         let youPass = $('#modal.modify #userPass').val();
                                         $.ajax({

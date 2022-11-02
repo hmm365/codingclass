@@ -10,6 +10,7 @@
 
     $boardTitle = $connect -> real_escape_string(trim($boardTitle));
     $boardContents = $connect -> real_escape_string(trim($boardContents));
+    $boardContents = nl2br($_POST['boardContents']);
     $boardView = 1;
     $regTime = time();
     $userMemberID = $_SESSION['userMemberID'];

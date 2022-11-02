@@ -31,7 +31,7 @@ include "../connect/session.php";
                             </div>
                             <p>IT.D의 피드백 게시판입니다.</p>
                             <div class="board_search">
-                                <form action="boardSearch.php" name="boardSearch" method="get">
+                                <form action="feedBackSearch.php" name="boardSearch" method="get">
                                     <fieldset>
                                         <select name="searchOption" id="searchOption">
                                             <option value="title">제목</option>

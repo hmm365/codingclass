@@ -14,7 +14,9 @@
 
     $regTime = time();
     $userMemberID = $_SESSION['userMemberID'];
-
+    
+    $comment = nl2br($comment);
+    
     $sql = "INSERT INTO feedBackComment(feedBackBoardID, userMemberID, comment, regTime) VALUES('$feedBackBoardId', '$userMemberID', '$comment', '$regTime');";
     // echo $sql;
     $result = $connect -> query($sql);  

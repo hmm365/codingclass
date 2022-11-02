@@ -67,5 +67,10 @@ if(!isset($_SESSION['userMemberID']) ){
         <!-- footer -->
         
         <!-- // footer -->
+        <script>
+            document.querySelector(".btn_cancle").addEventListener("click", () => {
+                   history.back();
+                });
+        </script>
     </body>
 </html>

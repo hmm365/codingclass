@@ -1,0 +1,241 @@
+#main {
+	margin-bottom: 50px;
+}
+
+#main .main_wrap {
+}
+
+#main .main_wrap .main_inner {
+}
+
+/* main_card (메인 이미지 박스 요소) */
+.main_card {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.main_card:last-child {
+}
+
+.main_card .main_cardBox {
+	position: relative;
+	width: 24%;
+	/* border: 1px solid #f5f5f5; */
+	margin-bottom: 20px;
+	box-shadow: 0 0 4px #dcdcdc;
+}
+
+/* main_image (박스 이미지 요소 부분) */
+.main_card .main_cardBox .main_image {
+	width: 100%;
+}
+
+.main_card .main_cardBox .main_image figure {
+	overflow: hidden;
+}
+
+.main_card .main_cardBox .main_image figure img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	object-position: center;
+}
+
+/* main_info (박스 인포 요소) */
+.main_card .main_cardBox .main_info {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+.main_card .main_cardBox .main_info .mainInfo_left {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.main_card .main_cardBox .main_info .mainInfo_left figure {
+	margin-right: 10px;
+	width: 50px;
+	height: 50px;
+}
+
+.main_card .main_cardBox .main_info .mainInfo_left figure img {
+	border-radius: 50%;
+}
+
+.main_card .main_cardBox .main_info .mainInfo_left .mainInfo_title {
+}
+
+.main_card .main_cardBox .main_info .mainInfo_left .mainInfo_title h3 a {
+	color: #666;
+	font-size: 17px;
+}
+
+.main_card .main_cardBox .main_info .mainInfo_left .mainInfo_title span {
+	color: #888;
+	font-size: 13px;
+}
+
+.main_card .main_cardBox .main_info .mainInfo_right {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.main_card .main_cardBox .main_info .mainInfo_right figure {
+	display: flex;
+	width: 15px;
+	height: 15px;
+	margin-left: 5px;
+}
+
+.main_card .main_cardBox .main_info .mainInfo_right figure img {
+}
+
+.main_card .main_cardBox .main_info .mainInfo_right span {
+	color: #888;
+	font-size: 13px;
+	margin-left: 5px;
+}
+
+.main_card .main_cardBox > img {
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.main_card .main_cardBox > img.show {
+	background-image: url("/assets/image/heartClick_ico.svg");
+}
+
+/* 배너 부분 */
+.search_banner {
+	width: 100%;
+	background: #41268d;
+	height: 200px;
+	margin: 57px 0;
+}
+
+.banner_inner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 200px;
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+}
+
+.banner_inner > p {
+	font-weight: bold;
+	font-size: 20px;
+	color: #fff;
+	opacity: 0.8;
+}
+
+.banner_inner .banner_udline {
+	width: 94px;
+	height: 5px;
+	background: #fff;
+	position: absolute;
+	bottom: 75px;
+	opacity: 0.2;
+}
+
+/* 검색 박스 */
+.search_wrap {
+	width: 100%;
+}
+
+.search_inner {
+}
+
+.search_input {
+	display: flex;
+	flex-wrap: nowrap;
+	position: relative;
+}
+
+.search_inner .search_input > input {
+	width: 95%;
+	padding: 10px 30px;
+	box-sizing: border-box;
+	margin-right: 2%;
+	height: 42px;
+	border: 1px solid #999999;
+	color: #aaaaaa;
+	font-weight: 400;
+	position: relative;
+}
+
+.search_inner .search_input img {
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	left: 10px;
+	top: 15px;
+	z-index: 99;
+}
+
+.search_inner .search_input > button {
+	color: #555555;
+	height: 42px;
+	width: 50px;
+	word-break: break-all;
+	background: #fff;
+	border: 1px solid #999999;
+}
+
+#image_sort {
+	border: 0;
+	margin: 30px 10px 30px 10px;
+	clear: both;
+}
+
+.search_sort {
+	border-bottom: 1px solid #dcdcdc;
+	margin-bottom: 30px;
+	border-radius: 0;
+}
+
+.search_sort .num {
+	float: right;
+	margin-top: 30px;
+	color: #777777;
+	font-size: 14px;
+}
+
+@media (max-width: 1220px) {
+	.container {
+		width: 96%;
+	}
+}
+
+@media (max-width: 1200px) {
+	.container {
+		width: 96%;
+	}
+
+	.main_card .main_cardBox {
+		width: 32%;
+	}
+}
+
+@media (max-width: 850px) {
+	.main_card .main_cardBox {
+		width: 48%;
+	}
+}
+
+@media (max-width: 580px) {
+	.main_card .main_cardBox {
+		margin: 20px auto;
+		width: 96%;
+	}
+}

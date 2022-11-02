@@ -1,281 +1,281 @@
 button {
-    background-color: transparent;
+	background-color: transparent;
 }
 textarea {
-    vertical-align: top;
+	vertical-align: top;
 }
 
 .board_wrap .board_inner .board_box .board_desc {
-    padding-bottom: 80px;
-    border-bottom: none;
+	padding-bottom: 80px;
+	border-bottom: none;
 }
 
 .board__view {
-    border-bottom: 2px solid #dcdcdc;
+	border-bottom: 2px solid #dcdcdc;
 }
 .board__view__title {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid #388fc0;
-    align-items: center;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2px solid #388fc0;
+	align-items: center;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
 }
 .board__view__title h3 {
-    font-size: 25px;
-    color: #666666;
-    font-weight: 700;
+	font-size: 25px;
+	color: #666666;
+	font-weight: 700;
 }
 .board__view__flex {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .board_wrap .board_inner .board_box .board__view__flex p {
-    display: block;
-    margin-bottom: 0;
-    font-size: 18px;
-    font-weight: 500;
-    color: #999999;
+	display: block;
+	margin-bottom: 0;
+	font-size: 18px;
+	font-weight: 500;
+	color: #999999;
 }
 
 .board_wrap .board_inner .board_box .board__view__flex p {
-    margin-right: 20px !important;
+	margin-right: 20px !important;
 }
 .board_wrap .board_inner .board_box .board__view__flex p:last-child {
-    margin-right: 0 !important;
+	margin-right: 0 !important;
 }
 .board__view__desc {
-    width: 100%;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.4;
-    min-height: 500px;
-    color: #666666;
+	width: 100%;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.4;
+	min-height: 500px;
+	color: #666666;
 }
 
 .btn_group {
-    text-align: right;
-    margin-bottom: 20px;
+	text-align: right;
+	margin-bottom: 20px;
 }
 .btn_group a {
-    display: inline-block;
+	display: inline-block;
 }
 .btn_save {
-    background: #388fc0;
-    border: 1px solid #388fc0;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 16px;
-    padding: 11px 34px;
-    color: #ffffff;
+	background: #388fc0;
+	border: 1px solid #388fc0;
+	border-radius: 5px;
+	font-weight: 500;
+	font-size: 16px;
+	padding: 11px 34px;
+	color: #ffffff;
 }
 .btn_modify {
-    background: #388fc0;
-    border: 1px solid #388fc0;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 16px;
-    padding: 11px 34px;
-    color: #ffffff;
+	background: #388fc0;
+	border: 1px solid #388fc0;
+	border-radius: 5px;
+	font-weight: 500;
+	font-size: 16px;
+	padding: 11px 34px;
+	color: #ffffff;
 }
 .btn_delete {
-    background: #fff;
-    border: 1px solid #388fc0;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 16px;
-    padding: 11px 34px;
-    color: #388fc0;
+	background: #fff;
+	border: 1px solid #388fc0;
+	border-radius: 5px;
+	font-weight: 500;
+	font-size: 16px;
+	padding: 11px 34px;
+	color: #388fc0;
 }
 .board__comments {
-    padding-top: 20px;
+	padding-top: 20px;
 }
 .board__comments h3 {
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 29px;
-    color: #666666;
-    margin-bottom: 50px;
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 29px;
+	color: #666666;
+	margin-bottom: 50px;
 }
 
 /* comment */
 .comment {
-    border-bottom: 2px solid #dcdcdc;
-    margin-bottom: 20px;
+	border-bottom: 2px solid #dcdcdc;
+	margin-bottom: 20px;
 }
 
 .userComment__inner {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    height: 58px;
-    box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	height: 58px;
+	box-sizing: border-box;
 }
 .userIcon {
-    width: 50px;
-    height: 50px;
+	width: 50px;
+	height: 50px;
 }
 .userIcon img {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .userComment {
-    position: relative;
-    width: 100%;
-    margin-left: 10px;
+	position: relative;
+	width: 100%;
+	margin-left: 10px;
 }
 .userComment.login textarea {
-    height: 60px;
-    padding: 20px 20px 10px 20px;
-    color: #666666;
+	height: 60px;
+	padding: 20px 20px 10px 20px;
+	color: #666666;
 }
 
 .userComment textarea {
-    width: 100%;
-    height: 58px;
-    background: #ffffff;
-    border: 1px solid #646464;
-    border-radius: 4px;
-    resize: none;
-    font-size: 16px;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    cursor: text;
+	width: 100%;
+	height: 58px;
+	background: #ffffff;
+	border: 1px solid #646464;
+	border-radius: 4px;
+	resize: none;
+	font-size: 16px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	cursor: text;
 }
 
 .userComment p {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    font-size: 16px !important;
-    margin: 0 !important;
-    color: #999999 !important;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	font-size: 16px !important;
+	margin: 0 !important;
+	color: #999999 !important;
 }
 .userComment a {
-    font-size: 16px !important;
-    margin: 0 !important;
-    color: #388fc0;
+	font-size: 16px !important;
+	margin: 0 !important;
+	color: #388fc0;
 }
 .commentBtn {
-    text-align: right;
-    margin-bottom: 20px;
+	text-align: right;
+	margin-bottom: 20px;
 }
 .commentBtn button {
-    background: #388fc0;
-    border: 1px solid #388fc0;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 16px;
-    padding: 11px 34px;
-    color: #ffffff;
-    cursor: pointer;
+	background: #388fc0;
+	border: 1px solid #388fc0;
+	border-radius: 5px;
+	font-weight: 500;
+	font-size: 16px;
+	padding: 11px 34px;
+	color: #ffffff;
+	cursor: pointer;
 }
 .userComments {
 }
 .userComments li {
-    border-bottom: 2px solid #dcdcdc;
-    margin-bottom: 20px;
+	border-bottom: 2px solid #dcdcdc;
+	margin-bottom: 20px;
 }
 
 .userComments__item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
 }
 .userComments__title {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 .userComments__name {
-    margin-left: 10px;
+	margin-left: 10px;
 }
 .userComments__name a {
-    font-weight: 700;
-    font-size: 16px;
-    margin-bottom: 3px;
-    display: block;
-    color: #666666;
+	font-weight: 700;
+	font-size: 16px;
+	margin-bottom: 3px;
+	display: block;
+	color: #666666;
 }
 .userComments__name p {
-    text-align: left !important;
-    margin: 0 !important;
-    font-weight: 500 !important;
-    font-size: 12px !important;
-    color: #999999 !important;
+	text-align: left !important;
+	margin: 0 !important;
+	font-weight: 500 !important;
+	font-size: 12px !important;
+	color: #999999 !important;
 }
 .userComments__like {
-    display: flex;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    align-items: center;
+	display: flex;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	align-items: center;
 }
 .userComments__like img {
-    width: 15px;
-    height: 15px;
+	width: 15px;
+	height: 15px;
 }
 .userComments__like span {
-    font-weight: 500;
-    font-size: 12px;
-    margin-left: 2px;
-    color: #999;
+	font-weight: 500;
+	font-size: 12px;
+	margin-left: 2px;
+	color: #999;
 }
 .userComments__modify a,
 .userComments__modify span {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    color: #666666;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: #666666;
 }
 .userComments__desc p {
-    display: block;
-    margin: 0 !important;
-    margin-left: 58px !important;
-    text-align: initial !important;
-    font-weight: 500 !important;
-    font-size: 18px !important;
-    color: #666666 !important;
-    margin-bottom: 10px !important;
+	display: block;
+	margin: 0 !important;
+	margin-left: 58px !important;
+	text-align: initial !important;
+	font-weight: 500 !important;
+	font-size: 18px !important;
+	color: #666666 !important;
+	margin-bottom: 10px !important;
 }
 .userComments__comment {
-    margin-left: 58px;
-    margin-bottom: 16px;
+	margin-left: 58px;
+	margin-bottom: 16px;
 }
 .userComments__comment button {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    color: #999999;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 14px;
+	color: #999999;
 }
 .userComments__comment .view {
-    color: #388fc0;
+	color: #388fc0;
 }
 .userComments__comment .view::before {
-    content: "";
-    background: url(../img/caretUp.svg);
-    width: 14px;
-    height: 14px;
-    padding: 0px 7px;
-    background-repeat: no-repeat;
+	content: "";
+	background: url(../img/caretUp.svg);
+	width: 14px;
+	height: 14px;
+	padding: 0px 7px;
+	background-repeat: no-repeat;
 }
 .userComments__comment .view.noview::before {
-    content: "";
-    background: url(../img/caretDown.svg);
-    width: 14px;
-    height: 14px;
-    padding: 0px 7px;
-    background-repeat: no-repeat;
+	content: "";
+	background: url(../img/caretDown.svg);
+	width: 14px;
+	height: 14px;
+	padding: 0px 7px;
+	background-repeat: no-repeat;
 }
 .userComments__comment .write.noview {
-    margin-left: 0;
+	margin-left: 0;
 }
 .userComments__comment .write {
-    margin-left: 10px;
+	margin-left: 10px;
 }
 .userComments__comment .view:hover,
 .userComments__comment .write:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 /* 
 data-placeholder=
@@ -288,81 +288,81 @@ position: absolute;
 } */
 
 .leftLine {
-    padding-left: 20px;
-    margin-left: 65px;
-    border-left: 2px solid #dcdcdc;
+	padding-left: 20px;
+	margin-left: 65px;
+	border-left: 2px solid #dcdcdc;
 }
 .leftLine .comment {
-    border-bottom: 2px dashed #dcdcdc;
+	border-bottom: 2px dashed #dcdcdc;
 }
 .leftLine > div:last-child.comment {
-    border: none;
+	border: none;
 }
 .leftLine .userComments ul li {
-    border-bottom: 2px dashed #dcdcdc;
+	border-bottom: 2px dashed #dcdcdc;
 }
 .leftLine .userComments ul li:last-child {
-    border: none;
+	border: none;
 }
 .leftLine .userComments ul li .userComments__desc p {
-    margin-bottom: 20px !important;
+	margin-bottom: 20px !important;
 }
 
 .userComments li > .comment {
-    margin-bottom: 0;
-    border: none;
+	margin-bottom: 0;
+	border: none;
 }
 
 @media (max-width: 1220px) {
-    .container {
-        width: 90%;
-    }
+	.container {
+		width: 90%;
+	}
 }
 
 @media (max-width: 748px) {
-    .container {
-        width: 96%;
-    }
-    .board_wrap .board_inner .board_box .board_desc {
-        padding-bottom: 40px;
-    }
-    .board__view__title h3 {
-        font-size: 20px;
-    }
-    .board_wrap .board_inner .board_box .board__view__flex p {
-        font-size: 14px;
-    }
-    .board_wrap .board_inner .board_box .board__view__flex p {
-        margin-right: 10px !important;
-    }
-    .board_wrap .board_inner .board_box .board__view__flex p:last-child {
-        margin-right: 0 !important;
-    }
-    .board__view__desc {
-        font-size: 16px;
-        min-height: 300px;
-    }
+	.container {
+		width: 96%;
+	}
+	.board_wrap .board_inner .board_box .board_desc {
+		padding-bottom: 40px;
+	}
+	.board__view__title h3 {
+		font-size: 20px;
+	}
+	.board_wrap .board_inner .board_box .board__view__flex p {
+		font-size: 14px;
+	}
+	.board_wrap .board_inner .board_box .board__view__flex p {
+		margin-right: 10px !important;
+	}
+	.board_wrap .board_inner .board_box .board__view__flex p:last-child {
+		margin-right: 0 !important;
+	}
+	.board__view__desc {
+		font-size: 16px;
+		min-height: 300px;
+	}
 
-    .board__comments h3 {
-        font-size: 18px;
-    }
-    .userComment p {
-        font-size: 16px !important;
-    }
-    .userComments__desc p {
-        font-size: 16px !important;
-    }
-    .userComment textarea {
-        font-size: 16px;
-    }
+	.board__comments h3 {
+		font-size: 18px;
+	}
+	.userComment p {
+		font-size: 16px !important;
+	}
+	.userComments__desc p {
+		font-size: 16px !important;
+	}
+	.userComment textarea {
+		font-size: 16px;
+	}
 
-    .views {
-        display: none !important;
-    }
-    .board_wrap .board_inner .board_box .board__view__flex p:nth-child(2) {
-        margin-right: 0 !important;
-    }
-    /* .board_wrap .board_inner .board_box .board__view__flex p em {
+	.views {
+		display: none !important;
+	}
+	.board_wrap .board_inner .board_box .board__view__flex p:nth-child(2) {
+		margin-right: 0 !important;
+	}
+	/* .board_wrap .board_inner .board_box .board__view__flex p em {
         display: block;
         overflow: hidden;
         font-size: 0;
@@ -376,64 +376,64 @@ position: absolute;
         float: left;
         margin-right: 10px;
     } */
-    .board__comments h3 {
-        font-size: 20px;
-        margin-bottom: 23px;
-    }
-    .commentBtn button {
-        padding: 6px 7px;
-    }
-    .btn_save {
-        padding: 6px 7px;
-    }
-    .btn_modify {
-        padding: 6px 7px;
-    }
-    .btn_delete {
-        padding: 6px 7px;
-    }
-    .userComments__desc p {
-        margin-left: 0 !important;
-        font-size: 16px;
-    }
-    .userComments__comment {
-        margin-left: 0;
-    }
-    .leftLine {
-        margin-left: 6px;
-    }
-    .userIcon {
-        width: 40px;
-        height: 40px;
-    }
+	.board__comments h3 {
+		font-size: 20px;
+		margin-bottom: 23px;
+	}
+	.commentBtn button {
+		padding: 6px 7px;
+	}
+	.btn_save {
+		padding: 6px 7px;
+	}
+	.btn_modify {
+		padding: 6px 7px;
+	}
+	.btn_delete {
+		padding: 6px 7px;
+	}
+	.userComments__desc p {
+		margin-left: 0 !important;
+		font-size: 16px;
+	}
+	.userComments__comment {
+		margin-left: 0;
+	}
+	.leftLine {
+		margin-left: 6px;
+	}
+	.userIcon {
+		width: 40px;
+		height: 40px;
+	}
 }
 
 @media (max-width: 480px) {
-    .board__view__title h3 {
-        font-size: 18px;
-    }
-    .board_wrap .board_inner .board_box .board__view__flex p {
-        display: block;
-        margin-bottom: 0;
-        font-size: 12px;
-        font-weight: 500;
-        color: #777777;
-    }
-    .board__view__desc {
-        font-size: 14px;
-        min-height: 200px;
-    }
+	.board__view__title h3 {
+		font-size: 18px;
+	}
+	.board_wrap .board_inner .board_box .board__view__flex p {
+		display: block;
+		margin-bottom: 0;
+		font-size: 12px;
+		font-weight: 500;
+		color: #777777;
+	}
+	.board__view__desc {
+		font-size: 14px;
+		min-height: 200px;
+	}
 
-    .board__comments h3 {
-        font-size: 18px;
-    }
-    .userComment p {
-        font-size: 14px !important;
-    }
-    .userComments__desc p {
-        font-size: 14px !important;
-    }
-    .userComment textarea {
-        font-size: 14px;
-    }
+	.board__comments h3 {
+		font-size: 18px;
+	}
+	.userComment p {
+		font-size: 14px !important;
+	}
+	.userComments__desc p {
+		font-size: 14px !important;
+	}
+	.userComment textarea {
+		font-size: 14px;
+	}
 }

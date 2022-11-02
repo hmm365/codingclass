@@ -1,6 +1,6 @@
 /* header */
 * {
-    font-family: 'GmarketSans';
+    font-family: "GmarketSans";
 }
 #header {
     position: fixed;
@@ -70,8 +70,11 @@
 #main > .index__wrap > .index__inner {
 }
 .index__inner > .index {
+    display: flex;
+    flex-wrap: wrap;
 }
 .index__inner > .index > article {
+    width: 33%;
     margin-bottom: 100px;
 }
 .index__inner > .index > article > h2 {
@@ -105,7 +108,7 @@
     overflow: hidden;
 }
 .index__inner > .index > article > .list > ul > li > a::before {
-    content: '';
+    content: "";
     bottom: 0px;
     right: 0;
     left: 0;

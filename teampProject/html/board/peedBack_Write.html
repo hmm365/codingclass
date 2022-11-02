@@ -37,7 +37,7 @@
                             <nav class="header__nav">
                                 <ul>
                                     <li class="active"><a href="#c">Bookmark</a></li>
-                                    <li><a href="#c">Category</a></li>
+                                    <li><a href="#c">Pictures</a></li>
                                     <li><a href="#c">Wallpaper</a></li>
                                     <li><a href="#c">Notice</a></li>
                                     <li><a href="#c">Feedback</a></li>
@@ -61,21 +61,21 @@
         </header>
         <!-- header -->
 
-         <!-- jquery -->
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-         <!-- ham -->
-         <script>
-             $('.toggle').click(function () {
-                 $(this).toggleClass('active');
-             });
- 
-             const hamBtn = document.querySelector('.toggle');
-             const nav = document.querySelector('.headerTop__inner nav');
- 
-             hamBtn.addEventListener('click', () => {
-                 nav.classList.toggle('show');
-             });
-         </script>
+        <!-- jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- ham -->
+        <script>
+            $(".toggle").click(function () {
+                $(this).toggleClass("active");
+            });
+
+            const hamBtn = document.querySelector(".toggle");
+            const nav = document.querySelector(".headerTop__inner nav");
+
+            hamBtn.addEventListener("click", () => {
+                nav.classList.toggle("show");
+            });
+        </script>
 
         <main id="main">
             <div class="main_wrap">
@@ -166,6 +166,5 @@
             </div>
         </footer>
         <!-- // footer -->
-
     </body>
 </html>
