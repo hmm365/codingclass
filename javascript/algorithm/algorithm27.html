@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>두 정수 사이의 합</title>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<link rel="stylesheet" href="../assets/css/dracula.css" />
+		<script src="../assets/js/highlight.min.js"></script>
+	</head>
+	<body>
+		<main id="main">
+			<div class="document">
+				<h2 class="t_tit">가운데 글자 가져오기</h2>
+				<p class="t_desc">
+					단어 s의 가운데 글자를 반환하는 함수, solution을 만들어 보세요.<br />
+					단어의 길이가 짝수라면 가운데 두글자를 반환하면 됩니다.
+				</p>
+				<p class="t_desc2">s는 길이가 1 이상, 100이하인 스트링입니다</p>
+				<hr />
+
+				<h3 class="t_tit2">입출력 예</h3>
+				<table class="t_table">
+					<thead>
+						<tr>
+							<th>s</th>
+							<th>return</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>"abcde"</td>
+							<td>"c"</td>
+						</tr>
+						<tr>
+							<td>"qwer"</td>
+							<td>"we"</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="t_desc2"></p>
+				<hr />
+				<h3 class="t_tit2"></h3>
+				<div class="t_code">
+					<pre><code class="language-js">function solution(s) {
+    var answer = '';
+    if(s.length % 2 == 0) {
+        answer = s[s.length / 2 -1] + s[s.length / 2]
+    } else answer = s[Math.floor(s.length / 2)];
+    return answer;
+}
+</code></pre>
+					<p class="t_box">
+						총평 : 배열이 짝수인지 홀수인지 판변후 짝수면 두개를반환 홀수면 하나를 반환합니다.<br />
+						출처 : <a href="https://school.programmers.co.kr/learn/courses/30/lessons/12903" target="_blank">https://school.programmers.co.kr/learn/courses/30/lessons/12903</a>
+					</p>
+				</div>
+				<!-- //result01 -->
+			</div>
+		</main>
+		<!-- //main -->
+		<footer id="footer">
+			<a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+		</footer>
+		<!-- //footer -->
+		<script>
+			hljs.highlightAll();
+		</script>
+	</body>
+</html>
