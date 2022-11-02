@@ -1,0 +1,149 @@
+/* body */
+body {
+    background: var(--bg_basic);
+}
+
+/* skip */
+#skip {
+    position: relative;
+    z-index: 100000;
+}
+
+#skip a {
+    background: #000;
+    color: #fff;
+    position: absolute;
+    padding: 20px 40px;
+    left: -400px;
+    top: 5px;
+}
+
+#skip a:active,
+#skip a:focus {
+    left: 5px;
+}
+
+/* container */
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* section */
+.section>h2 {
+    text-align: center;
+    padding: 100px 0 0;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.section>p {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 70px;
+    font-size: 20px;
+}
+
+.section>p em {
+    color: red;
+    font-weight: 500;
+}
+
+/* blind */
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+/* ir */
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+/* input style */
+.input_style1 {
+    border: 0;
+    background-color: #f5f5f5;
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 300;
+    box-sizing: border-box;
+}
+.input_style2 {
+    border: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 9px 30px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* btn style */
+.btn_style1 {
+    display: block;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn_style2 {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.btn_style3 {
+    border: 0;
+    background: #fff;
+    border-radius: 5px;
+    color: #666;
+    padding: 9px 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn_style4 {
+    border: 0;
+    background: #000;
+    border-radius: 5px;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 16px;
+}
+
+/* select style */
+.select_style1 {
+    border: 0;
+    padding: 11px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #666;
+}
+
+
+/* margin style */
+.mt0 {margin-top: 0 !important;}
+.mt10 {margin-top: 10px !important;}
+.mt20 {margin-top: 20px !important;}
+.mt30 {margin-top: 30px !important;}
+.mt40 {margin-top: 40px !important;}
+.mt50 {margin-top: 50px !important;}
+
+.mr0 {margin-right: 0 !important;}
+.mr10 {margin-right: 10px !important;}
+.mr20 {margin-right: 20px !important;}
+.mr30 {margin-right: 30px !important;}
+.mr40 {margin-right: 40px !important;}
+.mr50 {margin-right: 50px !important;}

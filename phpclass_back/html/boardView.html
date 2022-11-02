@@ -8,7 +8,7 @@
     <title>PHP 사이트 만들기</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
 
     <!-- META -->
     <meta name="author" content="webstoryboy">
@@ -37,23 +37,27 @@
     <header id="header">
         <div class="header__inner container">
             <div class="left">
-                <a href="index.html" class="star"><span class="ir">메인으로</span></a>
+                <ul>
+                    <li>
+                        <a href="#" class="star"></a>
+                    </li>
+                </ul>
             </div>
             <h1>
-                <a href="main.html">PHP BLOG</a>
+                <a href="#">PHP BLOG</a>
             </h1>
             <div class="right">
                 <ul>
-                    <li><a href="login.html">로그인</a></li>
-                    <li><a href="join.html">회원가입</a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="joinAgree.html">회원가입</a></li>
                 </ul>
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="join.html"><span>회원가입</span></a></li>
-                    <li><a href="login.html"><span>로그인</span></a></li>
-                    <li><a href="board.html"><span>게시판</span></a></li>
-                    <li><a href="blog.html"><span>블로그</span></a></li>
+                    <li><a href="#"><span>로그인</span></a></li>
+                    <li><a href="#"><span>블로그</span></a></li>
+                    <li><a href="#"><span>로그아웃</span></a></li>
+                    <li><a href="#"><span>연락처</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -61,10 +65,13 @@
     <!-- //header -->
 
     <main id="main">
-        <section id="board" class="container section">
-            <h2>게시판</h2>
-            <p>웹디자이너, 웹퍼블리셔, 프론트앤드 개발자를 위한 게시판입니다.</p>
+        <section id="board" class="container">
+            <h2>게시판 보기 영역입니다.</h2>
             <div class="board__inner">
+                <div class="board__title">
+                    <h3>게시판</h3>
+                    <p>웹디자이너, 웹퍼블리셔, 프론트앤드 개발자를 위한 게시판입니다.</p>
+                </div>
                 <div class="board__view">
                     <table>
                         <colgroup>
@@ -111,24 +118,26 @@
                     </table>
                 </div>
                 <div class="board__btn">
-                    <a href="boardModify.html">수정하기</a>
+                    <a href="#">수정하기</a>
                     <a href="#">삭제하기</a>
-                    <a href="board.html">목록보기</a>
+                    <a href="#">목록보기</a>
                 </div>
+            </div>
         </section>
         <!-- //board -->
+
+
     </main>
     <!-- //main -->
 
     <footer id="footer">
-        <h2 class="blind">푸터 영역입니다.</h2>
+        <h2>푸터 영역입니다.</h2>
         <div class="footer__inner container">
             <address>Copyright @2022 webstoryboy</address>
-            <div><a href="index.html">blog by webstoryboy</a></div>
+            <div>blog by webstoryboy</div>
         </div>
     </footer>
     <!-- //footer -->
-
 </body>
 
 </html>

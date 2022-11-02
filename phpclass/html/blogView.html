@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP 사이트 만들기</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- META -->
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="PHP 사이트 만들기입니다.">
+    <meta name="keyword" content="사이트, 만들기, 튜토리얼, 웹스토리보이">
+    <meta name="robots" content="all">
+
+    <!-- ICON -->
+    <link rel="icon" href="assets/img/icon_256.png" />
+    <link rel="shortcut icon" href="assets/img/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/img/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon_192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon_16.png" />
+</head>
+
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner container">
+            <div class="left">
+                <a href="index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="main.html">PHP BLOG</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="join.html">회원가입</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="join.html"><span>회원가입</span></a></li>
+                    <li><a href="login.html"><span>로그인</span></a></li>
+                    <li><a href="board.html"><span>게시판</span></a></li>
+                    <li><a href="blog.html"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="container section">
+            <div class="blog__inner">
+                <div class="blog__title">
+                    <span class="cate">javascript</span>
+                    <h3 class="title">vscode에 scss설치하기</h3>
+                    <div class="info">
+                        <span>글쓴이</span>
+                        <span>2022-07-04</span>
+                        <div class="modify">
+                            <a href="blogModify.html">수정</a>
+                            <a href="#">삭제</a>
+                        </div>
+                    </div> 
+                </div>
+                <div class="blog__contents">
+                    <div class="blog__contents__title">
+                        <div></div>
+                    </div>
+                    <div class="blog__contents__cont">
+                        토스의 페이테크(Paytech) 계열사 토스페이먼츠(대표 ‘김민표’)가 아마존웹서비스 코리아(이하 ‘AWS’)와 손잡고 이커머스 스타트업 대상 첫 웨비나를 개최한다고 12일 밝혔다.<br><br>
+                        이번 웨비나는 ‘이커머스 스타트업의 결제전환율 개선과 결제 외 솔루션 활용을 통한 기업 성장’을 주제로, 코로나19를 기점으로 빠르게 성장 중인 이커머스 스타트업의 고객 관계 강화 및 추가 매출 기회 창출을 돕기 위해 마련되었다.<br><br>
+
+                        토스페이먼츠는 자사의 결제 솔루션 도입 및 컨설팅 서비스를 제공 받아 매출을 향상시킨 기존 이커머스 가맹점 사례를 공유한다.<br><br>
+
+                        특히, ▲ 가맹점의 브랜드 디자인 및 유저 인터페이스(UI)에 최적화할 수 있는 간편 결제 솔루션 ‘브랜드페이’ 구축 사례 ▲ 가맹점 브랜드 제휴 상업자 표시 카드(PLCC)와 간편 결제 솔루션 연계를 통한 고객 마케팅 사례 등이 구체적으로 소개될 예정이다.<br><br>
+
+                        결제 부문 외에 사업자에게 꼭 필요한 통신판매 등록, 호스팅, 마케팅 및 파이낸싱 등 토스페이먼츠가 제공하는 다양한 솔루션도 확인할 수 있다. 또한, 고객의 쇼핑 경험 향상을 위해 AWS 서비스를 이용하여 대규모 트래픽이 발생하는 마케팅 행사에 유연하게 대응하는 방법과, 머신러닝을 이용한 맞춤형 제품 추천, 라이브 커머스 구현 사례에 대해 선보이게 된다.<br><br>
+                        slice() 메서드는 문자열에서 원하는 값을 추출하여 새로운 문자열을 반환합니다.<br>
+                        substring() 메서드는 문자열에서 원하는 값을 추출하여 새로운 문자열을 반환합니다.<br>
+                        substr() 메서드는 문자열에서 원하는 값을 추출하여 새로운 문자열을 반환합니다.<br>
+                        split() 메서드는 문자열을 부분 문자열로 구분하고 배열로 반환합니다.<br>
+                        replace() 메서드는 문자열에서 특정 문자열을 교체하여 새로은 문자열을 반환합니다.<br>
+                        replaceAll() 메서드는 문자열에서 모든 특정 문자열을 교체하여 새로은 문자열을 반환합니다.<br>
+                        concat() 메서드는 둘 이상의 문자열을 결합하여 새로운 문자열을 반환합니다.<br>
+                        repeat() 메서드는 문자열을 복사하여, 복사한 새로운 문자열을 반환합니다.<br>
+                        padStart() 메서드는 주어진 길이에 맞게 앞 문자열을 채우고, 새로운 문자열을 반환합니다.<br>
+                        padEnd() 메서드는 주어진 길이에 맞게 뒤 문자열을 채우고, 새로운 문자열을 반환합니다.<br>
+                        trim() 메서드는 문자열의 앞뒤 공백을 제거하고, 새로운 문자열을 반환합니다.<br>
+                        trimStart() 메서드는 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.<br>
+                        trimEnd() 메서드는 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.<br>
+                        toUpperCase() 메서드는 문자열을 대문자로 설정하고, 새로운 문자열을 반환합니다.<br>
+                        toLowerCase() 메서드는 문자열을 소문자로 설정하고, 새로운 문자열을 반환합니다.<br>
+                        toString() 메서드는 데이터를 문자열로 변환하고, 새로운 문자열을 반환합니다.<br>
+                    </div>
+                    <div class="blog__contents__comment">
+                        
+                    </div>
+                </div>  
+                <div class="blog__aside">
+                    <div class="aside__intro">
+                        <div class="img">
+                            <img src="assets/img/banner_bg01.jpg" alt="배너 이미지">
+                        </div>
+                        <div class="desc">
+                            어떤 일이라도 <em>노력</em>하고 즐기면 그 결과는 <em>빛</em>을 바란다고 생각합니다.
+                        </div>
+                    </div>
+                    <article class="aside__cate">
+                        <h3>카테고리</h3>
+                    </article>
+                    <article class="aside__cate">
+                        <h3>최신 글</h3>
+                    </article>
+                    <article class="aside__cate">
+                        <h3>인기 글</h3>
+                    </article>
+                    <article class="aside__cate">
+                        <h3>최신 댓글</h3>
+                    </article>
+                </div>
+                <div class="blog__article">
+                    <h3>관련글</h3>
+                    <article class="card__wrap">
+                        <div class="card__inner column4">
+                            <div class="card">
+                                <figure class="card__header">
+                                    <img src="assets/img/card_bg03.jpg" alt="vscode에 scss설치하기">
+                                    <a href="blogView.html" class="go" title="컨텐츠 바로가기"></a>
+                                </figure>
+                                <div class="card__contents">
+                                    <div class="title">
+                                        <h3><a href="blogView.html"  title="컨텐츠 바로가기">한권 분량 ‘서해 피격’ 감사원 수사요청서… 내용 주목</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <figure class="card__header">
+                                    <img src="assets/img/card_bg02.jpg" alt="vscode에 scss설치하기">
+                                    <a href="blogView.html" class="go" title="컨텐츠 바로가기"></a>
+                                </figure>
+                                <div class="card__contents">
+                                    <div class="title">
+                                        <h3><a href="blogView.html"  title="컨텐츠 바로가기">한권 분량 ‘서해 피격’ 감사원 수사요청서… 내용 주목</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <figure class="card__header">
+                                    <img src="assets/img/card_bg01.jpg" alt="vscode에 scss설치하기">
+                                    <a href="blogView.html" class="go" title="컨텐츠 바로가기"></a>
+                                </figure>
+                                <div class="card__contents">
+                                    <div class="title">
+                                        <h3><a href="blogView.html"  title="컨텐츠 바로가기">한권 분량 ‘서해 피격’ 감사원 수사요청서… 내용 주목</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <figure class="card__header">
+                                    <img src="assets/img/card_bg04.jpg" alt="vscode에 scss설치하기">
+                                    <a href="blogView.html" class="go" title="컨텐츠 바로가기"></a>
+                                </figure>
+                                <div class="card__contents">
+                                    <div class="title">
+                                        <h3><a href="blogView.html"  title="컨텐츠 바로가기">한권 분량 ‘서해 피격’ 감사원 수사요청서… 내용 주목</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <h2 class="blind">푸터 영역입니다.</h2>
+        <div class="footer__inner container">
+            <address>Copyright @2022 webstoryboy</address>
+            <div><a href="index.html">blog by webstoryboy</a></div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP 사이트 만들기</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- META -->
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="PHP 사이트 만들기입니다.">
+    <meta name="keyword" content="사이트, 만들기, 튜토리얼, 웹스토리보이">
+    <meta name="robots" content="all">
+
+    <!-- ICON -->
+    <link rel="icon" href="assets/img/icon_256.png" />
+    <link rel="shortcut icon" href="assets/img/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/img/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon_192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon_16.png" />
+</head>
+
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner container">
+            <div class="left">
+                <a href="index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="main.html">PHP BLOG</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="join.html">회원가입</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="join.html"><span>회원가입</span></a></li>
+                    <li><a href="login.html"><span>로그인</span></a></li>
+                    <li><a href="board.html"><span>게시판</span></a></li>
+                    <li><a href="blog.html"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="blog" class="container section">
+            <h2>개발과 관련된 게시글입니다.</h2>
+            <p>개발과 관련된 글을 모았어요~</p>
+
+            <div class="blog__search">
+                <form action="blogSearch.php">
+                    <legend class="blind">블로그 서치</legend>
+                    <input type="search" name="searchKeyword" id="searchKeyword" class="input_style2" placeholder="검색어를 입력하세요!" aria-label="search" required>
+                    <button>검색하기</button>
+                    <a href="blogWrite.html" class="btn">글쓰기</a>
+                </form>
+            </div>
+
+            <div class="blog__inner">
+                <div class="blog__contents">
+                    <article class="card__wrap">
+                        <div class="card__inner column2">
+                            <div class="card">
+                                <figure class="card__header">
+                                    <img src="assets/img/card_bg01.jpg" alt="vscode에 scss설치하기">
+                                    <a href="blogView.html" class="go" title="컨텐츠 바로가기"></a>
+                                </figure>
+                                <div class="card__contents">
+                                    <div class="title">
+                                        <h3><a href="blogView.html" title="컨텐츠 바로가기">한권 분량 ‘서해 피격’ 감사원 수사요청서… 내용 주목</a></h3>
+                                        <p>
+                                            감사원이 거론한 모든 내용이 검찰 수사로 확인될 것인지는 단언하기 어렵다. 검찰은 감사원이 제시한 내용 중에는 사실이라기보다 ‘해석의 영역’에 가까운 것도 포함됐다고 보는 것으로 알려졌다. 대표적인 대목은 사망 공무원 이대준씨가 “‘어떤 선박’에 옮겨탄 정황이 있으나 미분석”됐다는 부분이다. 이는 이씨가 북한군에 의해 발견되기 전 중국 어선에 올랐다는 내용으로 받아들여졌는데, 그렇다면 왜 다시 바다에서 북한군에게 발견된 것인지 또 다른 의문을 낳았었다. 이 대목은 감사원 발표부터가 단정적 수준은 아니라서 검찰 수사 과정에서도 큰 의미가 부여되진 않을 것이라는 관측이 나온다.
+                                        </p>
+                                    </div>
+                                    <div class="info">
+                                        <em class="author">@webs</em> 
+                                        <span class="time">2022-03-09</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <figure class="card__header">
+                                    <img src="assets/img/card_bg02.jpg" alt="vscode에 scss설치하기">
+                                    <a href="blogView.html" class="go" title="컨텐츠 바로가기"></a>
+                                </figure>
+                                <div class="card__contents">
+                                    <div class="title">
+                                        <h3><a href="blogView.html" title="컨텐츠 바로가기">한권 분량 ‘서해 피격’ 감사원 수사요청서… 내용 주목</a></h3>
+                                        <p>
+                                            감사원이 거론한 모든 내용이 검찰 수사로 확인될 것인지는 단언하기 어렵다. 검찰은 감사원이 제시한 내용 중에는 사실이라기보다 ‘해석의 영역’에 가까운 것도 포함됐다고 보는 것으로 알려졌다. 대표적인 대목은 사망 공무원 이대준씨가 “‘어떤 선박’에 옮겨탄 정황이 있으나 미분석”됐다는 부분이다. 이는 이씨가 북한군에 의해 발견되기 전 중국 어선에 올랐다는 내용으로 받아들여졌는데, 그렇다면 왜 다시 바다에서 북한군에게 발견된 것인지 또 다른 의문을 낳았었다. 이 대목은 감사원 발표부터가 단정적 수준은 아니라서 검찰 수사 과정에서도 큰 의미가 부여되진 않을 것이라는 관측이 나온다.
+                                        </p>
+                                    </div>
+                                    <div class="info">
+                                        <em class="author">@webs</em> 
+                                        <span class="time">2022-03-09</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <figure class="card__header">
+                                    <img src="assets/img/card_bg03.jpg" alt="vscode에 scss설치하기">
+                                    <a href="blogView.html" class="go" title="컨텐츠 바로가기"></a>
+                                </figure>
+                                <div class="card__contents">
+                                    <div class="title">
+                                        <h3><a href="blogView.html"  title="컨텐츠 바로가기">한권 분량 ‘서해 피격’ 감사원 수사요청서… 내용 주목</a></h3>
+                                        <p>
+                                            감사원이 거론한 모든 내용이 검찰 수사로 확인될 것인지는 단언하기 어렵다. 검찰은 감사원이 제시한 내용 중에는 사실이라기보다 ‘해석의 영역’에 가까운 것도 포함됐다고 보는 것으로 알려졌다. 대표적인 대목은 사망 공무원 이대준씨가 “‘어떤 선박’에 옮겨탄 정황이 있으나 미분석”됐다는 부분이다. 이는 이씨가 북한군에 의해 발견되기 전 중국 어선에 올랐다는 내용으로 받아들여졌는데, 그렇다면 왜 다시 바다에서 북한군에게 발견된 것인지 또 다른 의문을 낳았었다. 이 대목은 감사원 발표부터가 단정적 수준은 아니라서 검찰 수사 과정에서도 큰 의미가 부여되진 않을 것이라는 관측이 나온다.
+                                        </p>
+                                    </div>
+                                    <div class="info">
+                                        <em class="author">@webs</em> 
+                                        <span class="time">2022-03-09</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <figure class="card__header">
+                                    <img src="assets/img/card_bg04.jpg" alt="vscode에 scss설치하기">
+                                    <a href="blogView.html" class="go" title="컨텐츠 바로가기"></a>
+                                </figure>
+                                <div class="card__contents">
+                                    <div class="title">
+                                        <h3><a href="blogView.html" title="컨텐츠 바로가기">한권 분량 ‘서해 피격’ 감사원 수사요청서… 내용 주목</a></h3>
+                                        <p>
+                                            감사원이 거론한 모든 내용이 검찰 수사로 확인될 것인지는 단언하기 어렵다. 검찰은 감사원이 제시한 내용 중에는 사실이라기보다 ‘해석의 영역’에 가까운 것도 포함됐다고 보는 것으로 알려졌다. 대표적인 대목은 사망 공무원 이대준씨가 “‘어떤 선박’에 옮겨탄 정황이 있으나 미분석”됐다는 부분이다. 이는 이씨가 북한군에 의해 발견되기 전 중국 어선에 올랐다는 내용으로 받아들여졌는데, 그렇다면 왜 다시 바다에서 북한군에게 발견된 것인지 또 다른 의문을 낳았었다. 이 대목은 감사원 발표부터가 단정적 수준은 아니라서 검찰 수사 과정에서도 큰 의미가 부여되진 않을 것이라는 관측이 나온다.
+                                        </p>
+                                    </div>
+                                    <div class="info">
+                                        <em class="author">@webs</em> 
+                                        <span class="time">2022-03-09</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <figure class="card__header">
+                                    <img src="assets/img/card_bg01.jpg" alt="vscode에 scss설치하기">
+                                    <a href="blogView.html" class="go" title="컨텐츠 바로가기"></a>
+                                </figure>
+                                <div class="card__contents">
+                                    <div class="title">
+                                        <h3><a href="blogView.html" title="컨텐츠 바로가기">한권 분량 ‘서해 피격’ 감사원 수사요청서… 내용 주목</a></h3>
+                                        <p>
+                                            감사원이 거론한 모든 내용이 검찰 수사로 확인될 것인지는 단언하기 어렵다. 검찰은 감사원이 제시한 내용 중에는 사실이라기보다 ‘해석의 영역’에 가까운 것도 포함됐다고 보는 것으로 알려졌다. 대표적인 대목은 사망 공무원 이대준씨가 “‘어떤 선박’에 옮겨탄 정황이 있으나 미분석”됐다는 부분이다. 이는 이씨가 북한군에 의해 발견되기 전 중국 어선에 올랐다는 내용으로 받아들여졌는데, 그렇다면 왜 다시 바다에서 북한군에게 발견된 것인지 또 다른 의문을 낳았었다. 이 대목은 감사원 발표부터가 단정적 수준은 아니라서 검찰 수사 과정에서도 큰 의미가 부여되진 않을 것이라는 관측이 나온다.
+                                        </p>
+                                    </div>
+                                    <div class="info">
+                                        <em class="author">@webs</em> 
+                                        <span class="time">2022-03-09</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <figure class="card__header">
+                                    <img src="assets/img/card_bg02.jpg" alt="vscode에 scss설치하기">
+                                    <a href="blogView.html" class="go" title="컨텐츠 바로가기"></a>
+                                </figure>
+                                <div class="card__contents">
+                                    <div class="title">
+                                        <h3><a href="blogView.html" title="컨텐츠 바로가기">한권 분량 ‘서해 피격’ 감사원 수사요청서… 내용 주목</a></h3>
+                                        <p>
+                                            감사원이 거론한 모든 내용이 검찰 수사로 확인될 것인지는 단언하기 어렵다. 검찰은 감사원이 제시한 내용 중에는 사실이라기보다 ‘해석의 영역’에 가까운 것도 포함됐다고 보는 것으로 알려졌다. 대표적인 대목은 사망 공무원 이대준씨가 “‘어떤 선박’에 옮겨탄 정황이 있으나 미분석”됐다는 부분이다. 이는 이씨가 북한군에 의해 발견되기 전 중국 어선에 올랐다는 내용으로 받아들여졌는데, 그렇다면 왜 다시 바다에서 북한군에게 발견된 것인지 또 다른 의문을 낳았었다. 이 대목은 감사원 발표부터가 단정적 수준은 아니라서 검찰 수사 과정에서도 큰 의미가 부여되진 않을 것이라는 관측이 나온다.
+                                        </p>
+                                    </div>
+                                    <div class="info">
+                                        <em class="author">@webs</em> 
+                                        <span class="time">2022-03-09</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <figure class="card__header">
+                                    <img src="assets/img/card_bg03.jpg" alt="vscode에 scss설치하기">
+                                    <a href="blogView.html" class="go" title="컨텐츠 바로가기"></a>
+                                </figure>
+                                <div class="card__contents">
+                                    <div class="title">
+                                        <h3><a href="blogView.html"  title="컨텐츠 바로가기">한권 분량 ‘서해 피격’ 감사원 수사요청서… 내용 주목</a></h3>
+                                        <p>
+                                            감사원이 거론한 모든 내용이 검찰 수사로 확인될 것인지는 단언하기 어렵다. 검찰은 감사원이 제시한 내용 중에는 사실이라기보다 ‘해석의 영역’에 가까운 것도 포함됐다고 보는 것으로 알려졌다. 대표적인 대목은 사망 공무원 이대준씨가 “‘어떤 선박’에 옮겨탄 정황이 있으나 미분석”됐다는 부분이다. 이는 이씨가 북한군에 의해 발견되기 전 중국 어선에 올랐다는 내용으로 받아들여졌는데, 그렇다면 왜 다시 바다에서 북한군에게 발견된 것인지 또 다른 의문을 낳았었다. 이 대목은 감사원 발표부터가 단정적 수준은 아니라서 검찰 수사 과정에서도 큰 의미가 부여되진 않을 것이라는 관측이 나온다.
+                                        </p>
+                                    </div>
+                                    <div class="info">
+                                        <em class="author">@webs</em> 
+                                        <span class="time">2022-03-09</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <figure class="card__header">
+                                    <img src="assets/img/card_bg01.jpg" alt="vscode에 scss설치하기">
+                                    <a href="blogView.html" class="go" title="컨텐츠 바로가기"></a>
+                                </figure>
+                                <div class="card__contents">
+                                    <div class="title">
+                                        <h3><a href="blogView.html" title="컨텐츠 바로가기">한권 분량 ‘서해 피격’ 감사원 수사요청서… 내용 주목</a></h3>
+                                        <p>
+                                            감사원이 거론한 모든 내용이 검찰 수사로 확인될 것인지는 단언하기 어렵다. 검찰은 감사원이 제시한 내용 중에는 사실이라기보다 ‘해석의 영역’에 가까운 것도 포함됐다고 보는 것으로 알려졌다. 대표적인 대목은 사망 공무원 이대준씨가 “‘어떤 선박’에 옮겨탄 정황이 있으나 미분석”됐다는 부분이다. 이는 이씨가 북한군에 의해 발견되기 전 중국 어선에 올랐다는 내용으로 받아들여졌는데, 그렇다면 왜 다시 바다에서 북한군에게 발견된 것인지 또 다른 의문을 낳았었다. 이 대목은 감사원 발표부터가 단정적 수준은 아니라서 검찰 수사 과정에서도 큰 의미가 부여되진 않을 것이라는 관측이 나온다.
+                                        </p>
+                                    </div>
+                                    <div class="info">
+                                        <em class="author">@webs</em> 
+                                        <span class="time">2022-03-09</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__pages">
+                            <ul>
+                                <li><a href="#">&lt;&lt;</a></li>
+                                <li><a href="#">&lt;</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">&gt;</a></li>
+                                <li><a href="#">&gt;&gt;</a></li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                <div class="blog__aside">
+                    <div class="aside__intro">
+                        <div class="img">
+                            <img src="assets/img/banner_bg01.jpg" alt="배너 이미지">
+                        </div>
+                        <div class="desc">
+                            어떤 일이라도 <em>노력</em>하고 즐기면 그 결과는 <em>빛</em>을 바란다고 생각합니다.
+                        </div>
+                    </div>
+                    <article class="aside__cate">
+                        <h3>카테고리</h3>
+                    </article>
+                    <article class="aside__cate">
+                        <h3>최신 글</h3>
+                    </article>
+                    <article class="aside__cate">
+                        <h3>인기 글</h3>
+                    </article>
+                    <article class="aside__cate">
+                        <h3>최신 댓글</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <h2 class="blind">푸터 영역입니다.</h2>
+        <div class="footer__inner container">
+            <address>Copyright @2022 webstoryboy</address>
+            <div><a href="index.html">blog by webstoryboy</a></div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP 사이트 만들기</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- META -->
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="PHP 사이트 만들기입니다.">
+    <meta name="keyword" content="사이트, 만들기, 튜토리얼, 웹스토리보이">
+    <meta name="robots" content="all">
+
+    <!-- ICON -->
+    <link rel="icon" href="assets/img/icon_256.png" />
+    <link rel="shortcut icon" href="assets/img/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/img/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon_192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon_16.png" />
+</head>
+
+<body>
+
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner container">
+            <div class="left">
+                <a href="index.html" class="star"><span class="ir">메인으로</span></a>
+            </div>
+            <h1>
+                <a href="main.html">PHP BLOG</a>
+            </h1>
+            <div class="right">
+                <ul>
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="join.html">회원가입</a></li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="join.html"><span>회원가입</span></a></li>
+                    <li><a href="login.html"><span>로그인</span></a></li>
+                    <li><a href="board.html"><span>게시판</span></a></li>
+                    <li><a href="blog.html"><span>블로그</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="board" class="container section">
+            <h2>검색결과 게시판</h2>
+            <p>총 <em>1111</em>건의 게시물이 검색되었습니다.</p>
+            <div class="board__inner">
+                <div class="board__table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%">
+                            <col>
+                            <col style="width: 10%">
+                            <col style="width: 10%">
+                            <col style="width: 7%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>제목</th>
+                                <th>등록자</th>
+                                <th>등록일</th>
+                                <th>조회수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="boardView.html">게시판 제목입니다.</a></td>
+                                <td>황상연</td>
+                                <td>2022-03-04</td>
+                                <td>999</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href="boardView.html">게시판 제목입니다.</a></td>
+                                <td>황상연</td>
+                                <td>2022-03-04</td>
+                                <td>999</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><a href="boardView.html">게시판 제목입니다.</a></td>
+                                <td>황상연</td>
+                                <td>2022-03-04</td>
+                                <td>999</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><a href="boardView.html">게시판 제목입니다.</a></td>
+                                <td>황상연</td>
+                                <td>2022-03-04</td>
+                                <td>999</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><a href="boardView.html">게시판 제목입니다.</a></td>
+                                <td>황상연</td>
+                                <td>2022-03-04</td>
+                                <td>999</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><a href="boardView.html">게시판 제목입니다.</a></td>
+                                <td>황상연</td>
+                                <td>2022-03-04</td>
+                                <td>59</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><a href="boardView.html">게시판 제목입니다.</a></td>
+                                <td>황상연</td>
+                                <td>2022-03-04</td>
+                                <td>39</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><a href="boardView.html">게시판 제목입니다.</a></td>
+                                <td>황상연</td>
+                                <td>2022-03-04</td>
+                                <td>99</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td><a href="boardView.html">게시판 제목입니다.</a></td>
+                                <td>황상연</td>
+                                <td>2022-03-04</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><a href="boardView.html">게시판 제목입니다.</a></td>
+                                <td>황상연</td>
+                                <td>2022-03-04</td>
+                                <td>999</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="board__pages">
+                    <ul>
+                        <li><a href="#">처음으로</a></li>
+                        <li><a href="#">이전</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">다음</a></li>
+                        <li><a href="#">마지막으로</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- //board -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <h2 class="blind">푸터 영역입니다.</h2>
+        <div class="footer__inner container">
+            <address>Copyright @2022 webstoryboy</address>
+            <div><a href="index.html">blog by webstoryboy</a></div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link href="https://webfontworld.github.io/leferi/LeferiBase.css" rel="stylesheet" />
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "LeferiBase";
+			}
+			.fixed {
+				position: fixed;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.scroll {
+				position: fixed;
+				left: 10px;
+				top: 10px;
+				width: 40px;
+				height: 40px;
+				background: rgba(0, 0, 0, 0.3);
+				text-align: center;
+				line-height: 40px;
+				z-index: 100000;
+			}
+			/* layout */
+			#contents {
+			}
+			#section1 {
+				height: 4500px;
+			}
+			#section2 {
+				height: 4500px;
+				background: #222222;
+			}
+			#section3 {
+			}
+			#section4 {
+			}
+			#section5 {
+			}
+			#section6 {
+			}
+			/* sec1 */
+			.sec1_text1 {
+				font-size: 8vw;
+				font-weight: 400;
+				white-space: nowrap;
+			}
+			.sec1_text2 {
+				font-size: 8vw;
+				font-weight: 400;
+				white-space: nowrap;
+			}
+
+			/* sec2 */
+			.sec2 {
+				width: 30vw;
+				height: 30vh;
+			}
+			.sec2_box {
+				width: 30%;
+				height: 30%;
+				position: fixed;
+				left: 60%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			.sec2_text1 {
+				font-size: 5vw;
+				font-weight: 400;
+				white-space: nowrap;
+			}
+			.sec2_text2 {
+				width: 23vw;
+				height: 30vw;
+				background: url(img/my.JPG);
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+
+			.sec2_text3 {
+				font-size: 2vw;
+				font-weight: 400;
+				white-space: nowrap;
+			}
+
+			.sec3_card {
+				width: 60vw;
+				height: 60vh;
+				background: #fff;
+				border-radius: 20px;
+				text-decoration: none;
+				color: #000;
+				white-space: nowrap;
+			}
+			.sec3_img {
+				width: 50%;
+			}
+			.sec3_link {
+				font-size: 2vw;
+				color: rgb(168, 130, 255);
+				display: block;
+				padding: 1vw;
+				background: #222222;
+				border-radius: 20px;
+				text-decoration: none;
+			}
+			.sec3_tit {
+				font-size: 3vw;
+				display: block;
+				color: rgb(103, 103, 103);
+			}
+			.sec3_tit span {
+				color: #000;
+			}
+			.sec3_list1 {
+				font-size: 1.5vw;
+				color: rgb(103, 103, 103);
+			}
+			.sec3_list2 {
+				font-size: 1.5vw;
+				color: rgb(103, 103, 103);
+			}
+			.sec3_list3 {
+				font-size: 1.5vw;
+				color: rgb(103, 103, 103);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="scroll">0</div>
+		<div class="contents">
+			<section id="section1">
+				<div class="sec1">
+					<div class="sec1_text1 fixed" data-0="top: 50%; opacity:1" data-500="top:30%; opacity:0">
+						중호<br />
+						PORTFOLIO
+					</div>
+					<div
+						class="sec1_text2 fixed"
+						data-500="top:70%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+						data-1000="top:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+						data-1500="top:30%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+					>
+						프론트엔드 개발자입니다.
+					</div>
+				</div>
+
+				<div class="sec2">
+					<div
+						class="sec2_text1 fixed"
+						data-1300="top:50%; left:0%; opacity:0; transform: translate(-50%, -50%);"
+						data-1600="top:50%; left:70%; opacity:1; transform: translate(-50%, -50%);"
+						data-2700="top:50%; left:70%; opacity:1; transform: translate(-50%, -50%);"
+						data-3400="top:30%; left:70%; opacity:1; transform: translate(-50%, -50%);"
+						data-3700="top:30%; left:33%; opacity:1; transform: translate(-50%, -50%);"
+						data-4000="top:30%; left:33%; opacity:1; transform: translate(-50%, -50%);"
+						data-4500="top:0%; left:00%; opacity:0; transform: translate(-50%, -50%);"
+					>
+						저는 이런 사람입니다.
+					</div>
+
+					<div
+						class="sec2_text2 fixed"
+						data-1600="	left:100%; opacity:0; transform: translate(-50%, -50%);"
+						data-2300="	left:30%; opacity:1; transform: translate(-50%, -50%);"
+						data-2700="	left:30%; opacity:1; transform: translate(-50%, -50%);"
+						data-3400="	left:0%; opacity:0; transform: translate(-50%, -50%);"
+					>
+						<!-- data-3700=" left:0%; opacity:0; transform: translate(-50%, -50%);" -->
+						<!-- <img src="img/my.JPG" alt="" /> -->
+					</div>
+
+					<div
+						class="sec2_text3 fixed"
+						data-2700="top:50%; left:50%; opacity:0; transform: translate(-50%, -50%);"
+						data-3400="top:50%; left:65%; opacity:1; transform: translate(-50%, -50%);"
+						data-3700="top:50%; left:65%; opacity:1; transform: translate(-50%, -50%);"
+						data-4000="top:50%; left:65%; opacity:1; transform: translate(-50%, -50%);"
+						data-4500="top:100%; left:100%; opacity:0; transform: translate(-50%, -50%);"
+					>
+						상상한 무궁무진한 아이디어를 제가 배운 기술로<br />
+						구현해가는 과정이 재밌습니다.<br />
+						항상 새로운 시도를 두려워하지 않는<br />
+						프론트앤드 개발자가 되겠습니다.
+					</div>
+				</div>
+			</section>
+			<!-- //section1 -->
+			<section id="section2">
+				<div class="sec3">
+					<div
+						class="sec3_card sec3_text1 fixed"
+						data-4000="left:50%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+						data-4500="left:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+						data-5600="left:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+						data-5800="left:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+						data-6500="left:0%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+					>
+						<img
+							src="img/git-hub.png"
+							alt=""
+							class="sec3_img fixed"
+							data-4500="top: 15%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-4700="top: 15%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+						/>
+
+						<p
+							class="sec3_tit fixed"
+							data-4700="top: 35%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-5000="top: 35%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+						>
+							<span>소스 코드의 저장소</span> 입니다.
+						</p>
+
+						<p
+							class="sec3_list1 fixed"
+							data-5000="top: 0%; left:0%; opacity:0; transform: translate(-50%, -50%);"
+							data-5300="top: 50%; left:28%; opacity:1; transform: translate(-50%, -50%);"
+						>
+							·과거 프로젝트
+						</p>
+						<p
+							class="sec3_list2 fixed"
+							data-5300="top: 60%; left:42.5%; opacity:0; transform: translate(-50%, -50%);"
+							data-5600="top: 60%; left:42.5%; opacity:1; transform: translate(-50%, -50%);"
+						>
+							·혼자서 코딩 연습을위해 공부한 소스 코드
+						</p>
+						<p
+							class="sec3_list3 fixed"
+							data-5000="top: 100%; left:100%; opacity:0; transform: translate(-50%, -50%) ;"
+							data-5300="top: 70%; left:39.5%; opacity:1; transform: translate(-50%, -50%) ;"
+						>
+							·학원에서 공부한 코딩과제 소스 코드
+						</p>
+
+						<a
+							href="https://github.com/hmm365"
+							class="sec3_link fixed"
+							data-5300="top: 85%; opacity:0; transform: translate(-50%, -50%) scale(0) rotate(360deg);"
+							data-5600="top: 85%; opacity:1; transform: translate(-50%, -50%) scale(1) rotate(0);"
+						>
+							보러 가기
+						</a>
+					</div>
+					<!-- //sec3_text2 -->
+					<div
+						class="sec3_card sec3_text2 fixed"
+						data-4000="left:50%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+						data-4500="left:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+						data-5600="left:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+						data-5800="left:50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+						data-6500="left:0%; opacity:0; transform: translate(-50%, -50%) scale(1);"
+					>
+						<img
+							src="img/git-hub.png"
+							alt=""
+							class="sec3_img fixed"
+							data-4500="top: 15%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-4700="top: 15%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+						/>
+
+						<p
+							class="sec3_tit fixed"
+							data-4700="top: 35%; opacity:0; transform: translate(-50%, -50%) scale(0);"
+							data-5000="top: 35%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+						>
+							<span>소스 코드의 저장소</span> 입니다.
+						</p>
+
+						<p
+							class="sec3_list1 fixed"
+							data-5000="top: 0%; left:0%; opacity:0; transform: translate(-50%, -50%);"
+							data-5300="top: 50%; left:28%; opacity:1; transform: translate(-50%, -50%);"
+						>
+							·과거 프로젝트
+						</p>
+						<p
+							class="sec3_list2 fixed"
+							data-5300="top: 60%; left:42.5%; opacity:0; transform: translate(-50%, -50%);"
+							data-5600="top: 60%; left:42.5%; opacity:1; transform: translate(-50%, -50%);"
+						>
+							·혼자서 코딩 연습을위해 공부한 소스 코드
+						</p>
+						<p
+							class="sec3_list3 fixed"
+							data-5000="top: 100%; left:100%; opacity:0; transform: translate(-50%, -50%) ;"
+							data-5300="top: 70%; left:39.5%; opacity:1; transform: translate(-50%, -50%) ;"
+						>
+							·학원에서 공부한 코딩과제 소스 코드
+						</p>
+
+						<a
+							href="https://github.com/hmm365"
+							class="sec3_link fixed"
+							data-5300="top: 85%; opacity:0; transform: translate(-50%, -50%) scale(0) rotate(360deg);"
+							data-5600="top: 85%; opacity:1; transform: translate(-50%, -50%) scale(1) rotate(0);"
+						>
+							보러 가기
+						</a>
+					</div>
+				</div>
+			</section>
+			<!-- //section2 -->
+			<section id="section3"></section>
+			<!-- //section3 -->
+			<section id="section4"></section>
+			<!-- //section4 -->
+			<section id="section5"></section>
+			<!-- //section5 -->
+			<section id="section6"></section>
+			<!-- //section6 -->
+		</div>
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+	<script>
+		const s = skrollr.init();
+
+		function scroll() {
+			let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+			document.querySelector(".scroll").innerText = Math.ceil(scrollTop);
+
+			// document.querySelector(".sec1_text1").style.marginLeft = -scrollTop + "px";
+			requestAnimationFrame(scroll);
+		}
+		scroll();
+	</script>
+</html>
