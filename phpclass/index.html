@@ -4,75 +4,91 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>PHP</title>
+		<link href="https://webfontworld.github.io/locus/LocusSangsang.css" rel="stylesheet" />
 		<style>
-			@font-face {
-				font-family: "GmarketSans";
-				font-weight: 500;
-				font-style: normal;
-				src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot");
-				src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix") format("embedded-opentype"),
-					url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2") format("woff2"),
-					url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff") format("woff"),
-					url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf") format("truetype");
-				font-display: swap;
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: "LocusSangsang";
 			}
-
-			body {
-				font-family: "GmarketSans";
-				font-size: 20px;
-				line-height: 1.4;
-			}
-
 			a {
+				color: #000;
 				text-decoration: none;
+				font-size: 20px;
+			}
+			a:hover {
+				text-decoration: underline;
+				text-underline-position: under;
+			}
+			li {
+				list-style: none;
+				font-size: 20px;
+				margin-bottom: 5px;
+			}
+			h2 {
+				margin-bottom: 10px;
+			}
+			.box {
+				padding: 5%;
+				max-width: 1200px;
+				width: 100%;
+				margin: 0 auto;
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.box h1 {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+			.box > div {
+				width: 50%;
 			}
 		</style>
 	</head>
-
 	<body>
-		<h2>html</h2>
-		메인페이지 : <a href="html/main.html">main.html</a><br />
-		회원가입 동의 페이지: <a href="html/joinAgree.html">joinAgree.html</a><br />
-		회원가입 페이지: <a href="html/join.html">join.html</a><br />
-		회원가입 완료 페이지: <a href="html/joinResult.html">joinResult.html</a><br />
-		게시판 페이지: <a href="html/board.html">board.html</a><br />
-		게시판 수정 페이지: <a href="html/boardModify.html">boardModify.html</a><br />
-		게시판 보기 페이지: <a href="html/boardView.html">boardView.html</a><br />
-		게시판 쓰기 페이지: <a href="html/boardWrite.html">boardWrite.html</a><br />
-		게시판 서치 페이지: <a href="html/boardSearch.html">boardSearch.html</a><br />
+		<div class="box">
+			<h1>PHP 프로젝트</h1>
+			<div>
+				<h2>HTML</h2>
+				<ul>
+					<li><a href="html/main.html" target="_blank">메인페이지</a></li>
+					<li><a href="html/join.html" target="_blank">회원가입</a></li>
+					<li><a href="html/join2.html" target="_blank">회원가입</a></li>
+					<li><a href="html/joinInfo.html" target="_blank">회원가입 정보 페이지</a></li>
+					<li><a href="html/joinResult.html" target="_blank">회원가입 결과</a></li>
+					<br />
+					<li><a href="html/login.html" target="_blank">로그인</a></li>
+					<br />
+					<li><a href="html/board.html" target="_blank">게시판 페이지</a></li>
+					<li><a href="html/boardModify.html" target="_blank">게시판 수정 페이지</a></li>
+					<li><a href="html/boardSearch.html" target="_blank">게시판 결과 페이지</a></li>
+					<li><a href="html/boardView.html" target="_blank">게시판 보기 페이지</a></li>
+					<li><a href="html/boardWrite.html" target="_blank">게시판 쓰기 페이지</a></li>
+					<br />
+					<li><a href="html/blog.html" target="_blank">블로그 페이지</a></li>
+					<li><a href="html/blogCate.html" target="_blank">블로그 카테고리 페이지</a></li>
+					<li><a href="html/blogModify.html" target="_blank">블로그 수정 페이지</a></li>
+					<li><a href="html/blogView.html" target="_blank">블로그 뷰 페이지</a></li>
+					<li><a href="html/blogWrite.html" target="_blank">블로그 쓰기 페이지</a></li>
+					<br />
+					<li><a href="#" target="_blank">블로그 댓글 페이지</a></li>
+				</ul>
+			</div>
+			<div>
+				<h2>PHP</h2>
+				<ul>
+					<li><a href="http://suymay.dothome.co.kr/myadmin/index.php" target="_blank">myadmin</a></li>
+					<br />
+					<li><a href="create/createBlog.php">블로그 테이블 만들기</a></li>
+					<li><a href="create/createBoard.php">게시판 테이블 만들기</a></li>
+					<li><a href="create/createComment.php">댓글 테이블 만들기</a></li>
+					<li><a href="create/createMember.php">회원 테이블 만들기</a></li>
 
-		<br />
-		<h2>php</h2>
-		phpMyAdmin 접속 : <a href="phpMyAdmin5/">phpMyAdmin</a><br />
-		DB 접속 : <a href="connect/connect.php">connect.php</a><br />
-		메인페이지 : <a href="main/main.php">main.php</a><br />
-		회원가입 : <a href="login/join.php">join.php</a><br />
-
-		<br />
-		<h2>게시판</h2>
-		게시판 페이지 : <a href="board/board.php">board.php</a><br />
-		게시판 보기 페이지 : <a href="board/boardView.php">boardView.php</a><br />
-		게시판 쓰기 페이지 : <a href="board/boardWrite.php">boardWrite.php</a><br />
-		게시판 수정 페이지 : <a href="board/boardModify.php">boardModify.php</a><br />
-
-		<br />
-		<h2>테이블 만들기</h2>
-		mymember 테이블 만들기 <a href="create/createMember.php">createMember.php</a><br />
-		myboard 테이블 만들기 <a href="create/createBoard.php">createBoard.php</a><br />
-		adminMember 테이블 만들기 <a href="create/createAdminMember.php">adminMember.php</a><br />
-		myBlog 테이블 만들기 <a href="create/createBlog.php">createBlog.php</a><br />
-		Comment 테이블 만들기 <a href="create/createComment.php">createComment.php</a><br />
-
-		<br />
-		<h2>blog</h2>
-
-		블로그 페이지 : <a href="blog/blog.php">blog.php</a><br />
-		블로그 글쓰기 : <a href="blog/blogWrite.php">blogWrite.php</a><br />
-		블로그 카테고리 : <a href="blog/blogCategory.php">blogCategory.php</a><br />
-		블로그 보기 : <a href="blog/blogView.php">blogView.php</a><br />
-		<br />
-		<h2>관리자</h2>
-		관리자 회원가입 : <a href="admin/adminjoin.php">adminJoin.php</a><br />
+					<li><a href="join/join.php">회원가입 페이지</a></li>
+					<li><a href="login/login.php">로그인 페이지</a></li>
+				</ul>
+			</div>
+		</div>
 	</body>
 </html>
