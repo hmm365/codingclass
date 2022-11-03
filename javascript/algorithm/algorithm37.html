@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>두 정수 사이의 합</title>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<link rel="stylesheet" href="../assets/css/dracula.css" />
+		<script src="../assets/js/highlight.min.js"></script>
+	</head>
+	<body>
+		<main id="main">
+			<div class="document">
+				<h2 class="t_tit">이상한 문자 만들기</h2>
+				<p class="t_desc">
+					문자열 s는 한 개 이상의 단어로 구성되어 있습니다.<br />
+					각 단어는 하나 이상의 공백문자로 구분되어 있습니다.<br />
+					각 단어의 짝수번째 알파벳은 대문자로, 홀수번째 알파벳은 소문자로 바꾼 문자열을 리턴하는 함수, solution을 완성하세요.
+				</p>
+				<p class="t_desc2">
+					문자열 전체의 짝/홀수 인덱스가 아니라, 단어(공백을 기준)별로 짝/홀수 인덱스를 판단해야합니다.<br />
+					첫 번째 글자는 0번째 인덱스로 보아 짝수번째 알파벳으로 처리해야 합니다.
+				</p>
+				<hr />
+
+				<h3 class="t_tit2">입출력 예</h3>
+				<table class="t_table">
+					<thead>
+						<tr>
+							<th>s</th>
+							<th>return</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>"try hello world"</td>
+							<td>"TrY HeLlO WoRlD"</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="t_desc2">
+					"try hello world"는 세 단어 "try", "hello", "world"로 구성되어 있습니다.<br />
+					각 단어의 짝수번째 문자를 대문자로, 홀수번째 문자를 소문자로 바꾸면 "TrY", "HeLlO", "WoRlD"입니다.<br />
+					따라서 "TrY HeLlO WoRlD" 를 리턴합니다.
+				</p>
+				<hr />
+				<h3 class="t_tit2"></h3>
+				<div class="t_code">
+					<pre><code class="language-js">function solution(s) {
+  return s.toUpperCase().replace(/(\w)(\w)/g, reult => {return reult[0].toUpperCase() + reult[1].toLowerCase();});
+}
+</code></pre>
+					<p class="t_box">
+						총평 : <br />
+						출처 :
+						<a href="https://school.programmers.co.kr/learn/courses/30/lessons/12930" target="_blank"
+							>https://school.programmers.co.kr/learn/courses/30/lessons/12930</a
+						>
+					</p>
+				</div>
+				<!-- //result01 -->
+			</div>
+		</main>
+		<!-- //main -->
+		<footer id="footer">
+			<a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+		</footer>
+		<!-- //footer -->
+		<script>
+			hljs.highlightAll();
+		</script>
+	</body>
+</html>

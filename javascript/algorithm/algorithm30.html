@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>두 정수 사이의 합</title>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<link rel="stylesheet" href="../assets/css/dracula.css" />
+		<script src="../assets/js/highlight.min.js"></script>
+	</head>
+	<body>
+		<main id="main">
+			<div class="document">
+				<h2 class="t_tit">문자열 다루기 기본</h2>
+				<p class="t_desc">
+					문자열 s의 길이가 4 혹은 6이고, 숫자로만 구성돼있는지 확인해주는 함수, solution을 완성하세요.<br />
+					예를 들어 s가 "a234"이면 False를 리턴하고 "1234"라면 True를 리턴하면 됩니다.
+				</p>
+				<p class="t_desc2">
+					s는 길이 1 이상, 길이 8 이하인 문자열입니다.<br />
+					s는 영문 알파벳 대소문자 또는 0부터 9까지 숫자로 이루어져 있습니다.
+				</p>
+				<hr />
+
+				<h3 class="t_tit2">입출력 예</h3>
+				<table class="t_table">
+					<thead>
+						<tr>
+							<th>s</th>
+							<th>return</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>"a234"</td>
+							<td>false</td>
+						</tr>
+						<tr>
+							<td>"1234"</td>
+							<td>true</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="t_code">
+					<pre><code class="language-js">function solution(s) {
+    // return s.includes(s.match(/[a-zA-Z]/)) == true ? false : true; 문자열을 찾아버렸는데 오류가뜸
+    return s.includes(s.match(/^\d{6}$|^\d{4}$/));
+}
+</code></pre>
+					<p class="t_box">
+						총평 : 정규식으로 문자열을 찾으면 오류가뜨는건 아마 숫자도 문자열로 취급되어있어서 그런것 같습니다.<br />
+						출처 :
+						<a href="https://school.programmers.co.kr/learn/courses/30/lessons/12918" target="_blank"
+							>https://school.programmers.co.kr/learn/courses/30/lessons/12918</a
+						>
+					</p>
+				</div>
+				<!-- //result01 -->
+			</div>
+		</main>
+		<!-- //main -->
+		<footer id="footer">
+			<a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+		</footer>
+		<!-- //footer -->
+		<script>
+			hljs.highlightAll();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>두 정수 사이의 합</title>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<link rel="stylesheet" href="../assets/css/dracula.css" />
+		<script src="../assets/js/highlight.min.js"></script>
+	</head>
+	<body>
+		<main id="main">
+			<div class="document">
+				<h2 class="t_tit">직사각형 별찍기</h2>
+				<p class="t_desc">
+					이 문제에는 표준 입력으로 두 개의 정수 n과 m이 주어집니다.<br />
+					별(*) 문자를 이용해 가로의 길이가 n, 세로의 길이가 m인 직사각형 형태를 출력해보세요.
+				</p>
+				<p class="t_desc2">n과 m은 각각 1000 이하인 자연수입니다.</p>
+				<hr />
+
+				<h3 class="t_tit2">입출력 예</h3>
+				<p class="t_desc2">5 3</p>
+				<p class="t_desc2">
+					*****<br />
+					*****<br />
+					*****
+				</p>
+				<hr />
+				<div class="t_code">
+					<pre><code class="language-js">process.stdin.setEncoding('utf8');
+process.stdin.on('data', data => {
+    const n = data.split(" ");
+    const a = Number(n[0]), b = Number(n[1]);
+    for(let i=0; i<b; i++){
+        let s = "";
+        for(let j=0; j<a; j++){
+            s = s + "*" 
+        } 
+    console.log(s);
+    }
+});
+</code></pre>
+					<p class="t_box">
+						총평 : 학교에서 배웠던 별찍기..<br />
+						출처 :
+						<a href="https://school.programmers.co.kr/learn/courses/30/lessons/12969" target="_blank"
+							>https://school.programmers.co.kr/learn/courses/30/lessons/12969</a
+						>
+					</p>
+				</div>
+				<!-- //result01 -->
+			</div>
+		</main>
+		<!-- //main -->
+		<footer id="footer">
+			<a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+		</footer>
+		<!-- //footer -->
+		<script>
+			hljs.highlightAll();
+		</script>
+	</body>
+</html>
