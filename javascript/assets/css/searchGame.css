@@ -1,347 +1,351 @@
 @font-face {
-	font-family: "Cafe24Simplehae";
-	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Cafe24Simplehae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-	font-family: "Cafe24Dangdanghae";
-	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.2/Cafe24Dangdanghae.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Cafe24Dangdanghae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.2/Cafe24Dangdanghae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
 }
 #search__game {
-	width: 50%;
-	display: none;
-	position: absolute;
-	top: 100px;
-	left: 100px;
+    display: none;
+
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
 }
 #search__game.open {
-	display: block;
+    display: block;
+}
+.search__game__inner {
+    transform: translate(-50%, -50%);
 }
 @keyframes slide {
-	0% {
-		background-position: 0 0;
-	}
+    0% {
+        background-position: 0 0;
+    }
 
-	100% {
-		background-position: -120px 60px;
-	}
+    100% {
+        background-position: -120px 60px;
+    }
 }
 .search__header {
-	padding-inline: 2rem;
-	background-color: hsl(180deg 4% 16%);
-	display: flex;
-	align-items: center;
-	color: #fff;
-	height: 40px;
-	border-top-left-radius: 0.5rem;
-	border-top-right-radius: 0.5rem;
-	position: relative;
+    padding-inline: 2rem;
+    background-color: hsl(180deg 4% 16%);
+    display: flex;
+    align-items: center;
+    color: #fff;
+    height: 40px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    position: relative;
 }
 .search__header .dot {
-	width: 15px;
-	height: 15px;
-	background-color: rgb(249, 225, 47);
-	display: inline-block;
-	border-radius: 50%;
-	position: relative;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(249, 225, 47);
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
 }
 .search__header h2 {
-	margin-left: 40px;
-	font-size: 18px;
+    margin-left: 40px;
+    font-size: 18px;
 }
 .search__header .dot::before {
-	content: "";
-	position: absolute;
-	left: 25px;
-	top: 0;
-	width: 15px;
-	height: 15px;
-	background-color: rgb(81, 249, 47);
-	border-radius: 50%;
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(81, 249, 47);
+    border-radius: 50%;
 }
 .search__header .dot::after {
-	content: "";
-	position: absolute;
-	right: 25px;
-	top: 0;
-	width: 15px;
-	height: 15px;
-	background-color: rgb(237, 73, 36);
-	border-radius: 50%;
+    content: '';
+    position: absolute;
+    right: 25px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(237, 73, 36);
+    border-radius: 50%;
 }
 .search__header .search__close {
-	background: url(../img/close.svg);
-	width: 25px;
-	height: 25px;
-	position: absolute;
-	right: 10px;
+    background: url(../img/close.svg);
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
 }
 .search__body {
-	height: 80vh;
-	top: 10%;
-	margin: 0 auto;
-	color: black;
-	background-color: #fff;
-	background-size: 60px 60px;
-	background-position: 0 0;
-	animation: slide 4s infinite linear;
-	font-family: "Cafe24Simplehae";
-	position: relative;
-	overflow: hidden;
-	overflow-y: scroll;
-	/* display: none; */
-	border-radius: 0 0 0.5rem 0.5rem;
-	border-bottom: 3px solid #000;
-	border-left: 3px solid #000;
-	border-right: 3px solid #000;
+    height: 80vh;
+    top: 10%;
+    margin: 0 auto;
+    color: black;
+    background-color: #fff;
+    background-size: 60px 60px;
+    background-position: 0 0;
+    animation: slide 4s infinite linear;
+    font-family: 'Cafe24Simplehae';
+    position: relative;
+    overflow: hidden;
+    overflow-y: scroll;
+    /* display: none; */
+    border-radius: 0 0 0.5rem 0.5rem;
+    border-bottom: 3px solid #000;
+    border-left: 3px solid #000;
+    border-right: 3px solid #000;
 }
 .search_wrap {
-	width: 65%;
-	position: absolute;
-	left: 50%;
-	top: 72%;
-	height: 900px;
-	transform: translate(-50%, -50%);
-	display: inline-flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 45px 30px 50px 30px;
-	border: 3px solid black;
-	border-radius: 5px;
-	background: white;
+    width: 65%;
+    position: absolute;
+    left: 50%;
+    top: 72%;
+    height: 900px;
+    transform: translate(-50%, -50%);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 30px 50px 30px;
+    border: 3px solid black;
+    border-radius: 5px;
+    background: white;
 }
 .search_wrap .cafe {
-	font-family: "Cafe24Dangdanghae";
-	font-size: 3rem;
-	margin: 20px;
-	word-break: keep-all;
-	text-align: center;
+    font-family: 'Cafe24Dangdanghae';
+    font-size: 3rem;
+    margin: 20px;
+    word-break: keep-all;
+    text-align: center;
 }
 .search_wrap .desc {
-	text-align: center;
-	line-height: 1.5;
-	font-size: 20px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 20px;
 }
 .search__box {
-	position: relative;
-	margin-top: 20px;
+    position: relative;
+    margin-top: 20px;
 }
 .search__box label {
-	position: absolute;
-	clip: rect(0 0 0 0);
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
 }
 .search__box #search {
-	width: 100%;
-	color: inherit;
-	background: white;
-	padding: 15px 40px;
-	border: 3px solid black;
-	box-shadow: 0 0 0 black;
-	box-sizing: border-box;
-	font-size: 20px;
+    width: 100%;
+    color: inherit;
+    background: white;
+    padding: 15px 40px;
+    border: 3px solid black;
+    box-shadow: 0 0 0 black;
+    box-sizing: border-box;
+    font-size: 20px;
 }
 
 .search__box .start {
-	width: 100%;
-	color: inherit;
-	background: white;
-	padding: 17px 40px;
-	border: 3px solid black;
-	box-shadow: 0 0 0 black;
-	position: absolute;
-	left: 50%;
-	bottom: 0;
-	transform: translateX(-50%);
-	text-align: center;
-	box-sizing: border-box;
-	font-size: 20px;
+    width: 100%;
+    color: inherit;
+    background: white;
+    padding: 17px 40px;
+    border: 3px solid black;
+    box-shadow: 0 0 0 black;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 20px;
 }
 
 .time__search {
-	display: inline-block;
-	text-align: center;
-	font-size: 2.1rem;
-	margin: auto;
-	padding: 25px;
-	border: 10px solid #6e5cb8;
-	border-radius: 300px;
-	margin-bottom: 20px;
-	margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+    font-size: 2.1rem;
+    margin: auto;
+    padding: 25px;
+    border: 10px solid #6e5cb8;
+    border-radius: 300px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 .time__search.sec {
-	border: 10px solid #8f4fd9;
+    border: 10px solid #8f4fd9;
 }
 .search__info {
-	width: 100%;
-	justify-content: center;
-	margin-top: 30px;
-	font-size: 20px;
-	display: flex;
-	padding-bottom: 20px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 20px;
+    display: flex;
+    padding-bottom: 20px;
 }
 .search__info .num {
-	margin-right: 10px;
+    margin-right: 10px;
 }
 .search__answers {
-	width: 100%;
-	max-height: 100px;
-	overflow-y: scroll;
-	border-bottom: 2px solid #72e0ec;
-	padding: 20px;
-	box-sizing: border-box;
-	text-align: center;
-	display: none;
+    width: 100%;
+    max-height: 100px;
+    overflow-y: scroll;
+    border-bottom: 2px solid #72e0ec;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    display: none;
 }
 .search__answers span {
-	display: inline-block;
-	background: #ca66f9;
-	padding: 10px 20px;
-	color: #fff;
-	border-radius: 30px;
-	margin: 3px;
+    display: inline-block;
+    background: #ca66f9;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 30px;
+    margin: 3px;
 }
 .search__missAnswers {
-	width: 100%;
-	max-height: 200px;
-	overflow-y: scroll;
-	border-bottom: 2px solid #72e0ec;
-	box-sizing: border-box;
-	padding: 20px;
-	text-align: center;
-	display: none;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: scroll;
+    border-bottom: 2px solid #72e0ec;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    display: none;
 }
 .search__missAnswers span {
-	display: inline-block;
-	border: 1px solid #ca66f9;
-	color: #ca66f9;
-	padding: 10px 20px;
-	border-radius: 30px;
-	margin: 3px;
+    display: inline-block;
+    border: 1px solid #ca66f9;
+    color: #ca66f9;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin: 3px;
 }
 .search__list {
-	max-height: 200px;
-	overflow-y: scroll;
-	padding: 20px;
-	border-bottom: 2px solid #72e0ec;
-	border-left: 2px solid #72e0ec;
-	border: 2px solid #72e0ec;
+    max-height: 200px;
+    overflow-y: scroll;
+    padding: 20px;
+    border-bottom: 2px solid #72e0ec;
+    border-left: 2px solid #72e0ec;
+    border: 2px solid #72e0ec;
 }
 .search__list span {
-	display: inline-block;
-	border: 1px solid #ca66f9;
-	color: #ca66f9;
-	padding: 10px 20px;
-	border-radius: 30px;
-	margin: 3px;
+    display: inline-block;
+    border: 1px solid #ca66f9;
+    color: #ca66f9;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin: 3px;
 }
 .search__list span:hover {
-	border: 1px solid #ca66f9;
-	color: #fff;
-	background: #ca66f9;
+    border: 1px solid #ca66f9;
+    color: #fff;
+    background: #ca66f9;
 }
 .search__stop {
-	display: none;
+    display: none;
 }
 
 #search__game::-webkit-scrollbar {
-	width: 5px;
+    width: 5px;
 }
 .search__list::-webkit-scrollbar {
-	width: 5px;
-	height: 40px;
+    width: 5px;
+    height: 40px;
 }
 
 #search__game::-webkit-scrollbar-thumb {
-	background: #fff;
-	border-radius: 5px;
+    background: #fff;
+    border-radius: 5px;
 }
 .search__list::-webkit-scrollbar-thumb {
-	background: #ca66f9;
-	border-radius: 5px;
+    background: #ca66f9;
+    border-radius: 5px;
 }
 
 #search__game::-webkit-scrollbar-track {
-	background: #ffd966;
+    background: #ffd966;
 }
 .search__list::-webkit-scrollbar-track {
-	background: #fff;
+    background: #fff;
 }
 
 /* 결과 창 */
 .search__result {
-	position: fixed;
-	right: -10vw;
-	top: 1vw;
-	transform: scale3d(0, 0, 0);
-	width: 30vw;
-	height: 30vw;
-	background: #fff;
-	z-index: 10000;
-	display: flex;
-	align-items: center;
-	display: none;
-	justify-content: center;
-	border: 3px solid #946bc6;
-	border-radius: 50%;
+    position: fixed;
+    right: -10vw;
+    top: 1vw;
+    transform: scale3d(0, 0, 0);
+    width: 30vw;
+    height: 30vw;
+    background: #fff;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    display: none;
+    justify-content: center;
+    border: 3px solid #946bc6;
+    border-radius: 50%;
 }
 .search__result.show {
-	display: flex;
-	animation: rubberBand 1s 0.6s ease forwards;
+    display: flex;
+    animation: rubberBand 1s 0.6s ease forwards;
 }
 .svg__wrap {
-	text-align: center;
+    text-align: center;
 }
 .search__result .result {
-	font-size: 1.2vw;
-	margin-top: 30px;
-	line-height: 1.4;
+    font-size: 1.2vw;
+    margin-top: 30px;
+    line-height: 1.4;
 }
 .search__result .restart {
-	background: #946bc5;
-	color: #fff;
-	border: 0;
-	font-size: 1.2vw;
-	border-radius: 50px;
-	padding: 10px 20px;
-	margin-top: 20px;
+    background: #946bc5;
+    color: #fff;
+    border: 0;
+    font-size: 1.2vw;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-top: 20px;
 }
 
 @keyframes rubberBand {
-	from {
-		transform: scale3d(0, 0, 0);
-	}
+    from {
+        transform: scale3d(0, 0, 0);
+    }
 
-	30% {
-		transform: scale3d(1.25, 0.75, 1);
-	}
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
 
-	40% {
-		transform: scale3d(0.75, 1.25, 1);
-	}
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
 
-	50% {
-		transform: scale3d(1.15, 0.85, 1);
-	}
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
 
-	65% {
-		transform: scale3d(0.95, 1.05, 1);
-	}
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
 
-	75% {
-		transform: scale3d(1.05, 0.95, 1);
-	}
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
 
-	100% {
-		transform: scale3d(1, 1, 1);
-	}
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
 }
