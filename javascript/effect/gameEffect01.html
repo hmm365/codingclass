@@ -1023,9 +1023,10 @@
                     </div>
 
                     <div class="tetris__start">게임 시작</div>
-                    <div class="scoreT">
-                        <span>점수 : </span>
-                        <em></em>
+                    <div class="scoreTBox">
+                        <span class="scoreT">SCORE : <em></em></span>
+
+                        <span class="scoreL">LELVEL: <em></em></span>
                         <audio id="tetris-audio" src="../assets/audio/Tetris_Bradinsky.mp3" loop="loop"></audio>
                     </div>
                     <div class="tetris__over">
@@ -1216,12 +1217,14 @@
                 } else {
                     musicwrap.classList.remove('open');
                     musicAudio.pause();
+                    musicAudio.currentTime = 0;
                 }
             });
             const musicBtnClose = document.querySelector('.music__close');
             musicBtnClose.addEventListener('click', () => {
                 musicwrap.classList.remove('open');
                 musicAudio.pause();
+                musicAudio.currentTime = 0;
             });
 
             //메모리게임
@@ -1267,6 +1270,7 @@
                     resetsearchGame();
                     searchBox.classList.remove('open');
                     searchAudio.pause();
+                    searchAudio.currentTime = 0;
                 }
             });
 
@@ -1274,6 +1278,7 @@
                 resetsearchGame();
                 searchBox.classList.remove('open');
                 searchAudio.pause();
+                searchAudio.currentTime = 0;
             });
 
             const gamebox = document.querySelectorAll('.game_box > div');
@@ -1300,14 +1305,18 @@
                     zindex();
                     document.querySelector('.tetris__wrap').style.zIndex = 1001;
                     tetrisStart.style.display = 'block';
+                    tetrisReset();
                 } else {
                     tetrisBox.classList.remove('open');
+                    tetrisAudio.pause();
+                    tetrisAudio.currentTime = 0;
                     // tetrisAudio.pause();
                 }
             });
             tetrisBoxClose.addEventListener('click', () => {
                 tetrisBox.classList.remove('open');
-                // tetrisBox.pause();
+                tetrisAudio.pause();
+                tetrisAudio.currentTime = 0;
             });
         </script>
     </body>

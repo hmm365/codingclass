@@ -5,18 +5,27 @@ const tetrisWrap = document.querySelector('.tetris__wrap');
 const playground = tetrisWrap.querySelector('.playground > ul');
 const tetrisStart = tetrisWrap.querySelector('.tetris__start');
 const scoreTetris = tetrisWrap.querySelector('.scoreT em');
+const levelTetris = tetrisWrap.querySelector('.scoreL em');
 const tetrisRestart = tetrisWrap.querySelector('.tetris__over');
-scoreTetris.innerText = 0;
+const tetrisAudio = document.querySelector('#tetris-audio');
+// const tetrisAudioPlay = document.querySelector('.tetris__play');
+// const tetrisAudioStop = document.querySelector('.tetris__stop');
 
 //변수 설정
 let rows = 20;
 let cols = 10;
 let scoreT = 0;
 let duration = 500;
+let tetrisSec = 1;
 let downInterval;
+let tetrisTime;
 let tempMovungItem;
 let overChecked = true;
 let chked = true;
+let tetrisSeconds = 0;
+
+levelTetris.innerText = 1;
+scoreTetris.innerText = 0;
 //블록 정보
 const movingItem = {
     type: '',
@@ -237,7 +246,7 @@ function prependNewLine() {
 
 //블록 출력하기
 function renderBlocks(moveType = '') {
-    console.log(moveType);
+    // console.log(moveType);
     //아무것도 없을때도 처리, 있을때도 처리
     //정보 하나씩 가져오기
     // const ty = tempMovungItem.type;
@@ -253,6 +262,13 @@ function renderBlocks(moveType = '') {
     movingBlocks.forEach((moving) => {
         moving.classList.remove(type, 'moving');
     });
+
+    //게임 닫으면 초기화
+    if (!tetrisWrap.classList.contains('open')) {
+        clearInterval(downInterval);
+        clearInterval(tetrisTime);
+        document.removeEventListener('keydown', keydownEvt);
+    }
 
     //좌표값 가져오기
     // console.log(blocks[type][direction]); //좌표값 가져오는지 확인
@@ -273,28 +289,30 @@ function renderBlocks(moveType = '') {
         } else {
             tempMovungItem = { ...movingItem };
             if (moveType === 'retry') {
-                //만약 movetype값이 retry라면 초를 초기화하고 showGameOverText 실행
+                //만약 movetype값이 retry라면 초를 초기화하고 gameover 실행
                 clearInterval(downInterval);
-
+                clearInterval(tetrisTime);
                 //이벤트 삭제
                 document.removeEventListener('keydown', keydownEvt);
+                tetrisAudio.pause();
+                tetrisAudio.currentTime = 0;
                 tetrisRestart.style.display = 'block';
                 tetrisRestart.addEventListener('click', () => {
                     tetrisRestart.style.display = 'none';
-                    tetrisReset();
+                    tetrisRestartGame();
                 });
             } else {
                 // if (chked) {
                 setTimeout(() => {
+                    console.log('재귀');
                     renderBlocks('retry'); //재귀함수
                     //맨 밑에 있을 경우
                     if (moveType === 'top') {
                         seizeBlock();
                     }
                 }, 0);
+                return true;
             }
-
-            return true;
         }
 
         // console.log({ playground }); //정보확인
@@ -323,21 +341,43 @@ function seizeBlock() {
     //     tetrisRestart.style.display = 'block';
     //     tetrisRestart.addEventListener('click', () => {
     //         tetrisRestart.style.display = 'none';
-    //         tetrisReset();
+    //         tetrisRestartGame();
     //     });
     // } else {
     //     generateNewBlock();
     // }
 }
-// 게임 초기화
+//게임 초기화
 function tetrisReset() {
+    tetrisSeconds = 0;
+    tetrisRestart.style.display = 'none';
+    playground.innerHTML = '';
+    init();
+    scoreT = 0;
+}
+
+// 게임 다시시작
+function tetrisRestartGame() {
     // chked = true;
+    tetrisSeconds = 0;
     playground.innerHTML = '';
     init();
     scoreT = 0;
     document.addEventListener('keydown', keydownEvt);
     generateNewBlock();
+    tetrisAudio.play();
+    tetrisTime = setInterval(() => {
+        tetrisSeconds++;
+        if (duration == 100) {
+            levelTetris.innerText = '최고 레벨';
+        } else if (tetrisSeconds == 30 * tetrisSec) {
+            tetrisSec++;
+            duration -= 50;
+            levelTetris.innerText = tetrisSec;
+        }
+    }, 1000);
 }
+
 //한줄 제거하기
 function checkMatch() {
     const childNodes = playground.childNodes;
@@ -365,22 +405,22 @@ function checkMatch() {
 }
 
 //게임 오버
-function tetrisOver() {
-    const childNodes = playground.childNodes;
-    let match = false;
-    childNodes[0].children[0].childNodes.forEach((li) => {
-        if (li.classList.contains('seized')) {
-            match = true;
-        }
-    });
-    // console.log(match);
-    //게임오버 액션
-    if (match) {
-        overChecked = false;
-    } else {
-        overChecked = true;
-    }
-}
+// function tetrisOver() {
+//     const childNodes = playground.childNodes;
+//     let match = false;
+//     childNodes[0].children[0].childNodes.forEach((li) => {
+//         if (li.classList.contains('seized')) {
+//             match = true;
+//         }
+//     });
+//     // console.log(match);
+//     //게임오버 액션
+//     if (match) {
+//         overChecked = false;
+//     } else {
+//         overChecked = true;
+//     }
+// }
 
 //새로운 블록 만들기
 function generateNewBlock() {
@@ -456,13 +496,33 @@ function keydownEvt(e) {
     }
 }
 
-//이벤트
-document.addEventListener('keydown', keydownEvt);
-
-init();
-
 //게임시작
 tetrisStart.addEventListener('click', () => {
+    document.addEventListener('keydown', keydownEvt);
     generateNewBlock();
     tetrisStart.style.display = 'none';
+    tetrisAudioPlaying();
+    tetrisTime = setInterval(() => {
+        tetrisSeconds++;
+        if (duration == 100) {
+            levelTetris.innerText = '최고 레벨';
+        } else if (tetrisSeconds == 30 * tetrisSec) {
+            tetrisSec++;
+            duration -= 50;
+            levelTetris.innerText = tetrisSec;
+        }
+    }, 1000);
 });
+
+function tetrisAudioPlaying() {
+    tetrisAudio.volume = 0.8;
+    tetrisAudio.play();
+    // audioPlay.style.display = 'none';
+    // audioStop.style.display = 'inline-block';
+}
+function tetrisAudioStoping() {
+    tetrisAudio.pause();
+    tetrisAudio.currentTime = 0;
+    // audioStop.style.display = 'none';
+    // audioPlay.style.display = 'inline-block';
+}
