@@ -7,6 +7,7 @@ const tetrisStart = tetrisWrap.querySelector('.tetris__start');
 const scoreTetris = tetrisWrap.querySelector('.scoreT em');
 const levelTetris = tetrisWrap.querySelector('.scoreL em');
 const tetrisRestart = tetrisWrap.querySelector('.tetris__over');
+const tetrisOver = tetrisWrap.querySelector('.tetris__restart');
 const tetrisAudio = document.querySelector('#tetris-audio');
 // const tetrisAudioPlay = document.querySelector('.tetris__play');
 // const tetrisAudioStop = document.querySelector('.tetris__stop');
@@ -297,7 +298,7 @@ function renderBlocks(moveType = '') {
                 tetrisAudio.pause();
                 tetrisAudio.currentTime = 0;
                 tetrisRestart.style.display = 'block';
-                tetrisRestart.addEventListener('click', () => {
+                tetrisOver.addEventListener('click', () => {
                     tetrisRestart.style.display = 'none';
                     tetrisRestartGame();
                 });
@@ -359,8 +360,10 @@ function tetrisReset() {
 // 게임 다시시작
 function tetrisRestartGame() {
     // chked = true;
-    tetrisSeconds = 0;
+    tetrisSeconds = 1;
     playground.innerHTML = '';
+    levelTetris.innerText = '1';
+    scoreTetris.innerText = '0';
     init();
     scoreT = 0;
     document.addEventListener('keydown', keydownEvt);
