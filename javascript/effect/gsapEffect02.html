@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>gsapEffect02</title>
+        <style>
+            .img-wrap {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                margin: 0 auto;
+                width: 1200px;
+                margin-top: 1000px;
+            }
+            .img {
+                height: 600px;
+                background-size: cover;
+            }
+            .img:nth-child(1) {
+                background-image: url(https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80);
+            }
+            .img:nth-child(2) {
+                background-image: url(https://images.unsplash.com/photo-1517495306984-f84210f9daa8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3858&q=80);
+            }
+            .img:nth-child(3) {
+                background-image: url(https://images.unsplash.com/photo-1548266652-99cf27701ced?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+            }
+            .img:nth-child(4) {
+                background-image: url(https://images.unsplash.com/photo-1463947628408-f8581a2f4aca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80);
+            }
+            .img:nth-child(5) {
+                background-image: url(https://images.unsplash.com/photo-1436891620584-47fd0e565afb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80);
+            }
+            .img:nth-child(6) {
+                background-image: url(https://images.unsplash.com/photo-1590372648787-fa5a935c2c40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+            }
+            .img:nth-child(7) {
+                background-image: url(https://images.unsplash.com/photo-1428908728789-d2de25dbd4e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80);
+            }
+            .img:nth-child(8) {
+                background-image: url(https://images.unsplash.com/photo-1465080357990-d4bc259ec4a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80);
+            }
+            .img:nth-child(9) {
+                background-image: url(https://images.unsplash.com/photo-1472190649224-495422e1b602?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2942&q=80);
+            }
+            .img:nth-child(10) {
+                background-image: url(https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80);
+            }
+            .img:nth-child(11) {
+                background-image: url(https://images.unsplash.com/photo-1548268770-66184a21657e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80);
+            }
+            .img:nth-child(12) {
+                background-image: url(https://images.unsplash.com/reserve/e66NHyUFQx6lNahLbW6g_IMG_2536_2.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80);
+            }
+            .img:nth-child(13) {
+                background-image: url(https://images.unsplash.com/photo-1437435409766-a478cc6da81a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80);
+            }
+            .img:nth-child(14) {
+                background-image: url(https://images.unsplash.com/photo-1440166830278-3eb28bc7f9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80);
+            }
+            .img:nth-child(15) {
+                background-image: url(https://images.unsplash.com/photo-1553882951-9c3dab4a50cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80);
+            }
+        </style>
+    </head>
+    <body>
+        <section class="img-wrap">
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+        </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+
+            requestAnimationFrame(raf);
+
+            const tl = gsap
+                .timeline({
+                    scrollTrigger: {
+                        trigger: '.img-wrap .img',
+                        scrub: true,
+                    },
+                })
+                .to('.img', {
+                    y: -1000,
+                    scrub: true,
+                    stagger: 0.2,
+                    easing: 'power1.out',
+                });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>gsap Effect</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            #contents > section {
+                height: 80vh;
+            }
+            #section1 {
+                background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+            }
+            #section2 {
+                background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+            }
+            #section3 {
+                background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+            }
+            #section4 {
+                background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+            }
+            #section5 {
+                background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+            }
+            #section6 {
+                background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+            }
+            .square {
+                width: 200px;
+                height: 200px;
+                background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+            }
+            .square.red {
+                background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+            }
+            .square2 {
+                width: 200px;
+                height: 200px;
+                background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+            }
+            .square2.red {
+                background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+            }
+
+            .panel {
+                height: 100vh;
+                background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+            }
+            .box {
+                width: 100px;
+                height: 100px;
+                background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+            }
+            .box-red {
+                background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+            }
+            nav {
+                position: sticky;
+                top: 0;
+                transition: all 600ms ease-in-out;
+                background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+                color: #000;
+                text-align: center;
+            }
+            li {
+                display: inline-block;
+                padding: 10px;
+            }
+            .not-active {
+                background: #fff;
+                color: #453a94;
+            }
+        </style>
+    </head>
+    <body>
+        <main id="contents">
+            <!-- <section id="section1"></section>
+            <section id="section2">
+                <div class="square"></div>
+            </section>
+            <section id="section3"></section>
+            <section id="section4"></section>
+            <section id="section5"></section>
+            <section id="section6"></section> -->
+            <nav>
+                <ul>
+                    <li>about</li>
+                    <li>work</li>
+                    <li>contact</li>
+                </ul>
+            </nav>
+            <div class="panel">
+                A Timeline is a powerful sequencing tool that acts as a container for tweens and other timelines, making it simple to control them as a whole
+                and precisely manage their timing. Without Timelines, building complex sequences would be far more cumbersome because you'd need to use a delay
+                for every animation.
+            </div>
+            <!-- <div class="box"></div>
+            <div class="panel"></div> -->
+        </main>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+            ScrollTrigger.create({
+                trigger: '.panel',
+                start: 'top 3.5%',
+                markers: true,
+                toggleClass: { targets: 'nav', className: 'not-active' },
+                onEnter: () => console.log('hi'),
+                onLeave: () => console.log('bye'),
+                onEnterBack: () => console.log('hiBack'),
+                onLeaveBack: () => console.log('byeBack'),
+            });
+        </script>
+        <script>
+            // gsap.registerPlugin(ScrollTrigger);
+            // const tl = gsap.timeline({
+            //     scrollTrigger: {
+            //         trigger: '.square',
+            //         markers: true,
+            //         start: 'top 80%',
+            //         end: 'top 30%',
+            //         toggleActions: 'restart pause resume reset',
+            //         scrub: 1,
+            //     },
+            // });
+            // tl.to('.square', {
+            //     x: 1000,
+            //     duration: 2,
+            //     borderRadius: 0,
+            //     esae: 'elasic',
+            //     rotate: '360deg',
+            // })
+            //     .to('.square', {
+            //         y: 500,
+            //         duration: 2,
+            //         borderRadius: 100,
+            //         rotate: '0deg',
+            //     })
+            //     .to('.square', {
+            //         x: 0,
+            //         duration: 2,
+            //         skewY: 3,
+            //         scale: 2,
+            //     })
+            //     .to('.square', {
+            //         y: 0,
+            //         duration: 2,
+            //         borderRadius: 0,
+            //         skewY: 0,
+            //         scale: 1,
+            //     });
+            // const tl = gsap.timeline({ repeat: 2, yoyo: true });
+            // tl.to('.square', {
+            //     x: 1000,
+            //     duration: 2,
+            //     borderRadius: 0,
+            //     esae: 'elasic'
+            //     rotate: '360deg',
+            // })
+            //     .to('.square', {
+            //         y: 500,
+            //         duration: 2,
+            //         borderRadius: 100,
+            //         rotate: '0deg',
+            //     })
+            //     .to('.square', {
+            //         x: 0,
+            //         duration: 2,
+            //         skewY: 3,
+            //         scale: 2,
+            //     })
+            //     .to('.square', {
+            //         y: 0,
+            //         duration: 2,
+            //         borderRadius: 0,
+            //         skewY: 0,
+            //         scale: 1,
+            //     });
+        </script>
+        <script>
+            // gsap.registerPlugin(ScrollTrigger);
+            // gsap.to('.square', {
+            //     x: 1000,
+            //     duration: 2,
+            //     borderRadius: 0,
+            //     rotate: '360deg',
+            // });
+            // gsap.to('.square', {
+            //     y: 500,
+            //     duration: 2,
+            //     delay: 2,
+            //     borderRadius: 100,
+            //     rotate: '0deg',
+            // });
+            // gsap.to('.square', {
+            //     x: 0,
+            //     duration: 2,
+            //     delay: 4,
+            //     skewY: 3,
+            //     scale: 2,
+            // });
+            // gsap.to('.square', {
+            //     y: 0,
+            //     duration: 2,
+            //     delay: 6,
+            //     borderRadius: 0,
+            //     skewY: 0,
+            //     scale: 1,
+            // });
+        </script>
+        <script>
+            // gsap.registerPlugin(ScrollTrigger);
+            // gsap.to('.square', {
+            //     // x: 1000,
+            //     duration: 1,
+            //     scrollTrigger: {
+            //         trigger: '.square',
+            //         start: 'top 70%',
+            //         end: 'top 30%',
+            //         markers: {
+            //             startColor: 'blue',
+            //             endColor: 'purple',
+            //             fontSize: '30px',
+            //         },
+            //         toggleClass: 'red',
+            //         toggleActions: 'restart pause resume reset',
+            //         //고정
+            //         pin: true,
+            //         pinSpacing: true,
+            //     },
+            // });
+        </script>
+        <script>
+            // gsap.registerPlugin(ScrollTrigger);
+            // gsap.to('.square', {
+            //     x: 1000,
+            //     duration: 1,
+            //     scrollTrigger: {
+            //         trigger: '.square',
+            //         start: 'top 70%',
+            //         end: 'top 30%',
+            //         //스크롤 할때마다 움직이기
+            //         scrub: true,
+            //         // scrub: 4,
+            //         markers: {
+            //             startColor: 'blue',
+            //             endColor: 'purple',
+            //             fontSize: '30px',
+            //         },
+            //         toggleClass: 'red',
+            //         toggleActions: 'restart pause resume reset',
+            //     },
+            // });
+        </script>
+        <script>
+            // gsap.registerPlugin(ScrollTrigger);
+            // gsap.to('.square', {
+            //     x: 1000,
+            //     duration: 1,
+            //     scrollTrigger: {
+            //         trigger: '.square',
+            //         start: 'top 70%',
+            //         end: 'top 30%',
+            //         markers: {
+            //             startColor: 'blue',
+            //             endColor: 'purple',
+            //             fontSize: '30px',
+            //         },
+            //         toggleClass: 'red',
+            //         toggleActions: 'restart pause resume reset',
+
+            //onEnter, onLeave, onEnterBack , onLeaveBack
+            //"play", "pause", "resume", "reset", "restart", "complete", "reverse", and "none".
+            //     },
+            // });
+        </script>
+    </body>
+</html>

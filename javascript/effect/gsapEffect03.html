@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>gsapEffect03</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .horizontalWrap {
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+            }
+            .horizontalSection {
+                overscroll-behavior: none;
+                width: 500%;
+                display: flex;
+                flex-wrap: nowrap;
+            }
+            .section {
+                width: 100%;
+                height: 100vh;
+            }
+            .section1 {
+                background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+            }
+            .section2 {
+                background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+            }
+            .section3 {
+                background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+            }
+            .section4 {
+                background-image: linear-gradient(
+                    to top,
+                    #505285 0%,
+                    #585e92 12%,
+                    #65689f 25%,
+                    #7474b0 37%,
+                    #7e7ebb 50%,
+                    #8389c7 62%,
+                    #9795d4 75%,
+                    #a2a1dc 87%,
+                    #b5aee4 100%
+                );
+            }
+            .section5 {
+                background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="horizontalWrap">
+            <div class="horizontalSection">
+                <section class="section section1"></section>
+                <section class="section section2"></section>
+                <section class="section section3"></section>
+                <section class="section section4"></section>
+                <section class="section section5"></section>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+
+        <script>
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+
+            requestAnimationFrame(raf);
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            const sections = gsap.utils.toArray('.section');
+
+            gsap.to(sections, {
+                xPercent: -100 * (sections.length - 1),
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.horizontalWrap',
+                    pin: true,
+                    scrub: 1,
+                    end: '+=10000',
+                    markers: true,
+                },
+            });
+        </script>
+    </body>
+</html>
