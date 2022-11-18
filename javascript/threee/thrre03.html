@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            #webgl {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background: radial-gradient(circle farthest-corner at center center, #071021, #19324a);
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="webgl"></canvas>
+        <script src="js/three.min.js"></script>
+        <script>
+            class Stage {
+                constructor() {
+                    this.renderParam = {
+                        width: window.innerWidth,
+                        height: window.innerHeight,
+                    };
+                    this.cameraParam = {
+                        fov: 120,
+                        near: 1,
+                        far: 1000,
+                    };
+                    this.scene = null;
+                    this.rederer = null;
+                    this.camera = null;
+                    this.mesh = null;
+                    this.init();
+                }
+                init() {
+                    this._setScene();
+                    this._setRender();
+                    this._setCamera();
+                    this._setMesh();
+                    this._setFog();
+                    this._update();
+                    this._render();
+                    onresize = this._resize.bind(this);
+                }
+                _setScene() {
+                    this.scene = new THREE.Scene();
+                }
+                _setRender() {
+                    this.renderer = new THREE.WebGLRenderer({
+                        canvas: document.getElementById('webgl'),
+                        antialias: true,
+                        alpha: true,
+                    });
+                    this.renderer.setSize(this.renderParam.width, this.renderParam.height);
+                    this.renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1);
+                }
+                _setCamera() {
+                    this.camera = new THREE.PerspectiveCamera(
+                        this.cameraParam.fov,
+                        this.renderParam.width / this.renderParam.height,
+                        this.cameraParam.near,
+                        this.cameraParam.far
+                    );
+                    this.camera.position.set(0, 0, 10);
+                    this.camera.lookAt(new THREE.Vector3(0, 0, 0));
+                }
+                _setMesh() {
+                    const vertice = [];
+                    const size = 3000;
+                    const length = 3000;
+                    const geometry = new THREE.BufferGeometry();
+                    const material = new THREE.PointsMaterial({
+                        color: 0xffffff,
+                        size: 2,
+                    });
+
+                    for (let i = 0; i < length; i++) {
+                        const x = size * (Math.random() - 0.5);
+                        const y = size * (Math.random() - 0.5);
+                        const z = size * (Math.random() - 0.5);
+
+                        vertice.push(x, y, z);
+                    }
+                    geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertice, 3));
+
+                    this.mesh = new THREE.Points(geometry, material);
+                    this.scene.add(this.mesh);
+                }
+                _setFog() {
+                    this.scene.fog = new THREE.Fog(0xffffff, 50, 200);
+                }
+                _update() {
+                    let rotation = 0;
+                    const radian = (rotation * Math.PI) / 180;
+
+                    rotation += 0.1;
+
+                    this.camera.position.x = 1000 * Math.sin(rotation);
+                    this.camera.position.z = 1000 * Math.cos(rotation);
+                    this.mesh.rotation.y += 0.001;
+                }
+                _render() {
+                    this._update();
+                    this.renderer.render(this.scene, this.camera);
+                    requestAnimationFrame(this._render.bind(this));
+                }
+                _resize() {
+                    this.camera.aspect = window.innerWidth / window.innerHeight;
+                    this.camera.updateProjectionMatrix();
+                    this.renderer.setSize(window.innerWidth, window.innerHeight);
+                }
+            }
+            (() => {
+                const stage = new Stage();
+            })();
+        </script>
+    </body>
+</html>

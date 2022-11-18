@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                background: #000;
+            }
+            #webgl {
+                position: fixed;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="webgl"></canvas>
+        <script src="js/three.min.js"></script>
+        <script>
+            console.log(THREE);
+            class Stage {
+                constructor() {
+                    this.renderParam = {
+                        width: window.innerWidth,
+                        height: window.innerHeight,
+                    };
+                    this.cameraParam = {
+                        fov: 75,
+                        near: 1,
+                        far: 1000,
+                    };
+                    //변수 설정(전역변수로)
+                    this.scene = null;
+                    this.renderer = null;
+                    this.camera = null;
+                    this.mesh = null;
+                    this.mesh2 = null;
+                    this.mesh3 = null;
+                    this.init();
+                }
+                init() {
+                    this._setScene(); //화면 설정
+                    this._setRender(); //렌더러 설정
+                    this._setCamera(); //카메라 설정
+                    //this._setMesh(); //메쉬 설정
+                    this._setMesh2(); //메쉬 설정(다른거)
+                    this._setMesh3(); //메쉬 설정(다른거2)
+                    this._setMesh4();
+                    this._setLight(); //조명 설정
+                    this._update(); //업데이트 설정
+                    this._render(); //업데이트 설정 --> 애니메이션 돌리기
+                    onresize = this._resize.bind(this); //리사이즈 설정
+                }
+                //컴파일 설정
+                _setScene() {
+                    this.scene = new THREE.Scene();
+                }
+                //렌더
+                _setRender() {
+                    this.renderer = new THREE.WebGLRenderer({
+                        canvas: document.getElementById('webgl'),
+                        antialias: true,
+                        alpha: true,
+                    });
+                    this.renderer.setSize(window.innerWidth, window.innerHeight);
+                    this.renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1); //해상도 처리
+                }
+                //카메라
+                _setCamera() {
+                    this.camera = new THREE.PerspectiveCamera(
+                        this.cameraParam.fov,
+                        this.renderParam.width / this.renderParam.height,
+                        this.cameraParam.near,
+                        this.cameraParam.far
+                    );
+                    this.camera.position.set(0, 0, 7);
+                }
+                //메쉬
+                _setMesh() {
+                    const geometry = new THREE.TorusGeometry(2, 0.5, 16, 100); //모양 설정
+                    const material = new THREE.MeshLambertMaterial({ color: 0xf1f4f4 }); //표면 설정, 색상은 헥사코드
+                    this.mesh = new THREE.Mesh(geometry, material);
+                    this.scene.add(this.mesh);
+                }
+                //메쉬2
+                _setMesh2() {
+                    const geometry = new THREE.BoxGeometry(3, 3, 3, 4, 4, 4); //모양 설정
+                    const material = new THREE.MeshStandardMaterial({ color: 0xf1f4f4 }); //표면 설정, 색상은 헥사코드
+                    this.mesh = new THREE.Mesh(geometry, material);
+                    this.mesh.position.set(4, 0, 0);
+                    this.scene.add(this.mesh);
+                }
+                //메쉬3
+                _setMesh3() {
+                    const geometry = new THREE.BoxGeometry(3, 3, 3, 4, 4, 4); //모양 설정
+                    const material = new THREE.MeshStandardMaterial({
+                        color: 0xf1f4f4,
+                        wireframe: true,
+                    }); //표면 설정, 색상은 헥사코드
+                    this.mesh2 = new THREE.Mesh(geometry, material);
+                    this.mesh2.position.set(-4, 0, 0);
+                    this.scene.add(this.mesh2);
+                }
+                _setMesh4() {
+                    const geometry = new THREE.CapsuleGeometry(1, 0.3, 4, 4);
+                    const material = new THREE.MeshStandardMaterial({
+                        color: 0xf1f4f4,
+                    }); //표면 설정, 색상은 헥사코드
+                    this.mesh3 = new THREE.Mesh(geometry, material);
+                    this.mesh3.position.set(-4, 0, 0);
+                    this.scene.add(this.mesh3);
+                }
+                //조명
+                _setLight() {
+                    const light = new THREE.DirectionalLight(0xffffff, 1.5);
+                    light.position.y = 10;
+                    this.scene.add(light);
+                    const light2 = new THREE.DirectionalLight(0xffffff, 0.3);
+                    light2.position.set(-20, -10, 10);
+                    this.scene.add(light2);
+                    const ambientlight = new THREE.AmbientLight(0x663399, 0.1);
+                    this.scene.add(ambientlight);
+                }
+                //애니메이션
+                _update() {
+                    this.mesh.rotation.x += 0.002;
+                    this.mesh.rotation.y += 0.002;
+                    this.mesh.rotation.z += 0.002;
+                    this.mesh2.rotation.x += 0.005;
+                    this.mesh2.rotation.y += 0.005;
+                    this.mesh2.rotation.z += 0.005;
+
+                    this.mesh3.rotation.x += 0.005;
+                    this.mesh3.rotation.y += 0.005;
+                    this.mesh3.rotation.z += 0.005;
+                }
+                //애니메이션 플레이
+                _render() {
+                    this._update();
+                    this.renderer.render(this.scene, this.camera);
+                    requestAnimationFrame(this._render.bind(this)); //자기 자신을 묶어야함
+                }
+                _resize() {
+                    this.camera.aspect = window.innerWidth / window.innerHeight;
+                    this.camera.updateProjectionMatrix();
+                    this.renderer.setSize(window.innerWidth, window.innerHeight);
+                    this.renderer.render(this.scene, this.camera);
+                }
+            }
+            //즉시 실행(인스턴스)
+            (() => {
+                const stage = new Stage();
+            })();
+        </script>
+    </body>
+</html>
