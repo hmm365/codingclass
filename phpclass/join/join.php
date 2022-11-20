@@ -2,15 +2,16 @@
     include "../connect/connect.php";
     include "../connect/session.php";
 ?>
+
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <?php include "../include/head.php";?>
-    <!-- //head -->
+    <title>PHP 사이트 만들기</title>
+
+    <?php include "../include/head.php"?>
 </head>
 <body>
     <div id="skip">
@@ -19,8 +20,10 @@
         <a href="#footer">푸터 영역 바로가기</a>
     </div>
     <!-- //skip -->
-    <?php include "../include/header.php";?>
-    <!-- //header -->
+
+    <?php include "../include/header.php"?>
+    <!-- header -->
+    
     <main id="main">
         <section id="join" class="container section">
             <h2>회원가입</h2>
@@ -73,7 +76,8 @@
         </section>
     </main>
     <!-- //main -->
-    <?php include "../include/footer.php";?>
-    <!-- //footer -->
+
+    <?php include "../include/footer.php"?>
+    <!-- footer -->
 </body>
 </html>

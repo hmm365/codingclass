@@ -1,6 +1,6 @@
 <?php
-    include '../connect/connect.php';
-    $sql = "create table myMember(";
+    include "../connect/connect.php";
+    $sql = "CREATE TABLE myMember(";
     $sql .= "memberID int(10) unsigned NOT NULL AUTO_INCREMENT,";
     $sql .= "youEmail varchar(40) UNIQUE NOT NULL,";
     $sql .= "youName varchar(10) NOT NULL,";

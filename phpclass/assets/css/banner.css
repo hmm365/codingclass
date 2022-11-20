@@ -5,6 +5,7 @@
     justify-content: space-between;
     height: inherit;
     position: relative;
+    margin-top: 20px;
 }
 .banner__inner.under {
     border-bottom: 3px solid #000;
@@ -43,7 +44,7 @@
 }
 
 .banner__inner .desc em::before {
-    content: "";
+    content: '';
     width: 0%;
     height: 100%;
     background: #f0dac2;
@@ -95,6 +96,3 @@
     width: 20%;
     margin: 0 auto;
 }
-
-
-

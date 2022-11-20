@@ -22,7 +22,11 @@
         <nav class="nav">
             <ul>
                 <li><a href="../join/join.php"><span>회원가입</span></a></li>
-                <li><a href="../login/login.php"><span>로그인</span></a></li>
+                <?php if(isset($_SESSION['memberID'])){ ?>
+                    <li style="display:none"><a href="../login/login.php"><span>로그인</span></a></li>
+                <?php } else { ?>
+                    <li><a href="../login/login.php"><span>로그인</span></a></li>
+                <?php } ?>
                 <li><a href="../board/board.php"><span>게시판</span></a></li>
                 <li><a href="../blog/blog.php"><span>블로그</span></a></li>
             </ul>
