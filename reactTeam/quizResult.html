@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>quzi</title>
+        <link rel="stylesheet" href="assets/css/styile.css" />
+    </head>
+    <body id="plaid">
+        <main id="main">
+            <nav class="memu__list"></nav>
+            <section id="quizCont" class="container">
+                <div class="quizCont__wrap">
+                    <div class="quizCont__inner">
+                        <h2 class="quiz__questions blue">오늘 당신을 위한 책 장르는 !</h2>
+                        <img class="quiz__questionsImg big" src="assets/img/quizResult.png" alt="quiz1Image" />
+                        <p class="quiz__tit">사랑</p>
+                        <p class="quiz__desc">입니다</p>
+                        <button class="quiz__button last">보러가기</button>
+                    </div>
+                </div>
+            </section>
+            <aside id="aisde" class="">
+                <span class="rightAllow ir">오른쪽화살표</span>
+                <div class="preview__book">
+                    <h2 class="preview__title">PREVIEW</h2>
+                    <a class="preview__img" href="#"><img src="assets/img/noBookImg.png" alt="없는이미지" /></a>
+                    <p class="preview__bookTitle">오늘의 책은?!</p>
+                    <p class="preview__bookDesc">북북에서 책의 내용을 미리 확인해보세요! 이 곳에 줄거리가 나타납니다.</p>
+                </div>
+            </aside>
+            <div class="leftAllow">
+                <span class="lf ir">왼쪽화살표</span>
+                <span class="prev">PREVIEW</span>
+            </div>
+        </main>
+    </body>
+    <script>
+        document.body.style.minHeight = document.querySelector('.container').offsetHeight + 'px';
+        const aisdeBtn = document.querySelector('.rightAllow');
+        aisdeBtn.addEventListener('click', () => {
+            document.querySelectorAll('.container').forEach((el) => {
+                el.classList.add('active');
+            });
+            document.querySelector('#aisde').classList.add('hide');
+        });
+        const aisdeBtn2 = document.querySelector('.leftAllow');
+        aisdeBtn2.addEventListener('click', () => {
+            document.querySelectorAll('.container').forEach((el) => {
+                el.classList.remove('active');
+            });
+            document.querySelector('#aisde').classList.remove('hide');
+        });
+    </script>
+</html>

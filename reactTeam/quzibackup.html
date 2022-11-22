@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>quzi</title>
+        <link rel="stylesheet" href="assets/css/styile.css" />
+    </head>
+    <body id="plaid">
+        <main id="main">
+            <nav class="memu__list"></nav>
+            <section id="quizCont" class="container">
+                <div class="noteIcons">
+                    <div class="noteIcons__inner">
+                        <span class="noteIcon ir">노트 아이콘</span>
+                        <span class="noteIcon ir">노트 아이콘</span>
+                        <span class="noteIcon ir">노트 아이콘</span>
+                        <span class="noteIcon ir">노트 아이콘</span>
+                        <span class="noteIcon ir">노트 아이콘</span>
+                        <span class="noteIcon ir">노트 아이콘</span>
+                        <span class="noteIcon ir">노트 아이콘</span>
+                        <span class="noteIcon ir">노트 아이콘</span>
+                        <span class="noteIcon ir">노트 아이콘</span>
+                        <span class="noteIcon ir">노트 아이콘</span>
+                        <span class="noteIcon ir">노트 아이콘</span>
+                        <span class="noteIcon ir">노트 아이콘</span>
+                        <span class="noteIcon ir">노트 아이콘</span>
+                        <span class="noteIcon ir">노트 아이콘</span>
+                        <span class="noteIcon ir">노트 아이콘</span>
+                    </div>
+                </div>
+                <div class="quizCont__wrap">
+                    <div class="quizCont__inner">
+                        <h2 class="quiz__questions">당신의 취미는 무엇인가요?</h2>
+                        <img class="quiz__questionsImg" src="assets/img/quiz1.png" alt="quiz1Image" />
+                        <button class="quiz__button">독서하기</button>
+                        <button class="quiz__button">음악듣기</button>
+                        <button class="quiz__button last">게임하기</button>
+                        <div class="quiz__pageInner">
+                            <a class="quiz__prev" href="#"><span class="ir">이전</span></a>
+                            <span class="quize__pageNum">1</span>
+                            <a class="quiz__next" href="#"><span class="ir">다음</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <aside id="aisde" class="">
+                <div class="quiz__aisde">
+                    <span class="rightAllow ir">오른쪽화살표</span>
+                    <div class="preview__book">
+                        <h2 class="preview__title">PREVIEW</h2>
+                        <a class="preview__img" href="#"><img src="assets/img/noBookImg.png" alt="없는이미지" /></a>
+                        <p class="preview__bookTitle">오늘의 책은?!</p>
+                        <p class="preview__bookDesc">북북에서 책의 내용을 미리 확인해보세요! 이 곳에 줄거리가 나타납니다.</p>
+                    </div>
+                </div>
+            </aside>
+            <span class="leftAllow ir">왼쪽화살표</span>
+        </main>
+    </body>
+    <script>
+        const aisdeBtn = document.querySelector('.rightAllow');
+        aisdeBtn.addEventListener('click', () => {
+            document.querySelectorAll('.container').forEach((el) => {
+                el.classList.add('active');
+            });
+            document.querySelector('.quiz__aisde').classList.add('hide');
+            document.querySelector('#aisde').classList.add('hide');
+        });
+        const aisdeBtn2 = document.querySelector('.leftAllow');
+        aisdeBtn2.addEventListener('click', () => {
+            document.querySelectorAll('.container').forEach((el) => {
+                el.classList.remove('active');
+            });
+            document.querySelector('.quiz__aisde').classList.remove('hide');
+            document.querySelector('#aisde').classList.remove('hide');
+        });
+    </script>
+</html>

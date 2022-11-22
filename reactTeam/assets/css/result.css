@@ -1,0 +1,145 @@
+#resultCont {
+    width: 50%;
+    margin: 0 0 0 23%;
+}
+.tests {
+    height: 3000px;
+}
+.resultSearch {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    margin: 30px 0;
+    padding: 10px 0;
+    z-index: 20;
+}
+.resultSearch__info h2 {
+    display: inline-block;
+    font-family: var(--Timon);
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 120%;
+    color: #111053;
+    margin-right: 10px;
+}
+.resultSearch__info span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #666666;
+}
+.resultButton {
+    width: 40%;
+    position: relative;
+}
+.resultButton input {
+    width: 100%;
+    border: 0;
+    border-radius: 100px;
+    padding: 16px 54px 16px 30px;
+    font-size: 16px;
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.12);
+}
+.resultButton button {
+    top: 4px;
+    right: 5px;
+    position: absolute;
+    width: 44.92px;
+    height: 44.92px;
+    scale: 0.8;
+    background: url(../img/seacrhIcon.svg);
+    cursor: pointer;
+}
+#resultCont > .box:last-child {
+    margin-bottom: 0;
+}
+.box {
+    display: flex;
+    padding: 40px 55px;
+    justify-content: space-between;
+    background: #ffffff;
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.12);
+    border-radius: 20px;
+    margin-bottom: 45px;
+    max-height: 300px;
+}
+.box figure {
+    width: 30%;
+    text-align: center;
+}
+.box figure img {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    max-width: 182px;
+}
+.box__info {
+    position: relative;
+    width: 60%;
+}
+.box__info .title {
+    margin-top: 15px;
+    margin-bottom: 33px;
+    font-family: var(--Timon);
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 120%;
+    color: #111053;
+}
+.box__info .author {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    color: #111053;
+    margin-bottom: 26px;
+}
+.box__info .date {
+    display: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #111053;
+}
+.box__info .box__button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: var(--ObjSans);
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 140%;
+    color: #ffffff;
+    padding: 16px 45px;
+    background: #111053;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#resultCont.active {
+    width: 70%;
+}
+
+#resultCont.active .box {
+    padding: 80px 70px;
+    max-height: 400px;
+}
+
+#resultCont.active .box figure img {
+    max-width: 220px;
+}
+
+#resultCont.active .box__info .date {
+    display: block;
+}
+
+#resultCont.active .box__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#resultCont.active .box__info .title {
+    margin-top: 2%;
+}

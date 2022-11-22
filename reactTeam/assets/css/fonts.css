@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;700;800;900&display=swap');
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TmonMonsori';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Object Sans';
+    src: url('../fonts/ObjectSans-HeavySlanted.eot');
+    src: url('../fonts/ObjectSans-HeavySlanted.eot?#iefix') format('embedded-opentype'), url('../fonts/ObjectSans-HeavySlanted.woff2') format('woff2'),
+        url('../fonts/ObjectSans-HeavySlanted.woff') format('woff'), url('../fonts/ObjectSans-HeavySlanted.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Object Sans';
+    src: url('../fonts/ObjectSans-Heavy.eot');
+    src: url('../fonts/ObjectSans-Heavy.eot?#iefix') format('embedded-opentype'), url('../fonts/ObjectSans-Heavy.woff2') format('woff2'),
+        url('../fonts/ObjectSans-Heavy.woff') format('woff'), url('../fonts/ObjectSans-Heavy.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Object Sans Slanted';
+    src: url('../fonts/ObjectSans-Slanted.eot');
+    src: url('../fonts/ObjectSans-Slanted.eot?#iefix') format('embedded-opentype'), url('../fonts/ObjectSans-Slanted.woff2') format('woff2'),
+        url('../fonts/ObjectSans-Slanted.woff') format('woff'), url('../fonts/ObjectSans-Slanted.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Object Sans';
+    src: url('../fonts/ObjectSans-Regular.eot');
+    src: url('../fonts/ObjectSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/ObjectSans-Regular.woff2') format('woff2'),
+        url('../fonts/ObjectSans-Regular.woff') format('woff'), url('../fonts/ObjectSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

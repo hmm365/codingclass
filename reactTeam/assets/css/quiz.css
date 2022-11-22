@@ -1,0 +1,117 @@
+#plaid {
+    background-color: rgba(241, 241, 245, 0.85);
+    background-image: url(../img/plaid_pattern.png);
+}
+#plaid::after {
+    content: '';
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    background-image: url(../img/bg01.png);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.04;
+    z-index: -1;
+}
+
+#quizCont {
+    position: relative;
+    filter: drop-shadow(0px 4px 10px rgba(0, 6, 53, 0.25));
+}
+
+.quizCont__wrap {
+    background-image: url(../img/memo.svg);
+    background-size: cover;
+    padding: 45px 30px;
+    padding-top: 150px;
+    /* background: #fff; */
+    position: relative;
+    border-radius: 5px;
+}
+
+.quizCont__inner {
+    text-align: center;
+    align-items: center;
+}
+.quiz__questions {
+    font-size: 28px;
+    font-family: var(--Timon);
+    font-weight: 800;
+}
+.quiz__questionsImg {
+    width: 50%;
+}
+.quiz__button {
+    display: block;
+    margin: 0 auto;
+    width: 68%;
+    padding: 24px 0px;
+    background: #f3f3f6;
+    border-radius: 20px;
+    margin-bottom: 23px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #111053;
+    cursor: pointer;
+}
+.quizCont__inner .last {
+    margin-bottom: 70px;
+}
+.quiz__pageInner {
+    display: flex;
+    margin: 0 auto;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.quiz__prev,
+.quiz__next {
+    display: inline-block;
+}
+.quiz__prev span,
+.quiz__next span {
+    width: 40px;
+    height: 40px;
+}
+.quize__pageNum {
+    font-family: var(--Timon);
+    font-size: 20px;
+    font-weight: 900;
+}
+.quiz__prev span {
+    background: url(../img/leftArrow.svg);
+}
+.quiz__next span {
+    background: url(../img/rightArrow.svg);
+}
+
+#quizCont.active {
+    margin: 0px 0 0 37%;
+}
+.quiz__questions.blue {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 140%;
+    color: #111053;
+}
+.quiz__questionsImg.big {
+    width: 60%;
+}
+.quiz__tit {
+    font-family: var(--Timon);
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 140%;
+    color: #4240a7;
+    margin-bottom: 10px;
+}
+.quiz__desc {
+    font-family: var(--Timon);
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 140%;
+    color: #111053;
+    margin-bottom: 54px;
+}
