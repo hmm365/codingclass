@@ -61,19 +61,34 @@ body {
     line-height: 120%;
     margin-bottom: 37px;
 }
+.preview__img {
+    display: block;
+    text-align: center;
+}
 .preview__img img {
     width: 100%;
     margin-bottom: 27px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
 }
 .preview__bookTitle {
     font-weight: 700;
     font-size: 20px;
     margin-bottom: 44px;
 }
+.preview__bookTitle span {
+    margin-top: 10px;
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #111053;
+}
 .preview__bookDesc {
     font-weight: 400;
     font-size: 16px;
     line-height: 160%;
+    margin-bottom: 20px;
 }
 
 .leftAllow {
