@@ -37,7 +37,8 @@
         </main>
     </body>
     <script>
-        document.body.style.minHeight = document.querySelector('.container').offsetHeight + 'px';
+        document.body.style.minHeight = document.querySelector('.container').scrollHeight + 'px';
+
         const aisdeBtn = document.querySelector('.rightAllow');
         aisdeBtn.addEventListener('click', () => {
             document.querySelectorAll('.container').forEach((el) => {
