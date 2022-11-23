@@ -8,8 +8,15 @@
         <link rel="stylesheet" href="assets/css/styile.css" />
     </head>
     <body id="plaid">
+        <nav class="memu__list">
+            <h2>BOOK! BOOK!</h2>
+            <img src="assets/img/navIcon2.png" alt="아이콘2" />
+            <a href="#">MENU1</a>
+            <a href="#">MENU2</a>
+            <a href="#">MENU3</a>
+            <button type="button"><span class="ir">왼쪽 화살표</span><em>BACK</em></button>
+        </nav>
         <main id="main">
-            <nav class="memu__list"></nav>
             <section id="quizCont" class="container">
                 <div class="quizCont__wrap">
                     <div class="quizCont__inner">
@@ -26,20 +33,20 @@
                     </div>
                 </div>
             </section>
-            <aside id="aisde" class="">
-                <span class="rightAllow ir">오른쪽화살표</span>
-                <div class="preview__book">
-                    <h2 class="preview__title">PREVIEW</h2>
-                    <a class="preview__img" href="#"><img src="assets/img/noBookImg.png" alt="없는이미지" /></a>
-                    <p class="preview__bookTitle">오늘의 책은?!</p>
-                    <p class="preview__bookDesc">북북에서 책의 내용을 미리 확인해보세요! 이 곳에 줄거리가 나타납니다.</p>
-                </div>
-            </aside>
-            <div class="leftAllow">
-                <span class="lf ir">왼쪽화살표</span>
-                <span class="prev">PREVIEW</span>
-            </div>
         </main>
+        <aside id="aisde" class="">
+            <span class="rightAllow ir">오른쪽화살표</span>
+            <div class="preview__book">
+                <h2 class="preview__title">PREVIEW</h2>
+                <a class="preview__img" href="#"><img src="assets/img/noBookImg.png" alt="없는이미지" /></a>
+                <p class="preview__bookTitle">오늘의 책은?!</p>
+                <p class="preview__bookDesc">북북에서 책의 내용을 미리 확인해보세요! 이 곳에 줄거리가 나타납니다.</p>
+            </div>
+        </aside>
+        <div class="leftAllow">
+            <span class="lf ir">왼쪽화살표</span>
+            <span class="prev">PREVIEW</span>
+        </div>
     </body>
     <script>
         document.body.style.minHeight = document.querySelector('.container').offsetHeight + 'px';

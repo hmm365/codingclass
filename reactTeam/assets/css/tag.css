@@ -153,6 +153,7 @@
     box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.12);
     border-radius: 20px;
     padding: 90px 35px;
+    cursor: pointer;
 }
 #tagCont.active .tag__right p {
     font-family: var(--Timon);
