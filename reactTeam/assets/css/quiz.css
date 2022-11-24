@@ -17,13 +17,15 @@
     text-align: center;
     align-items: center;
 }
-.quiz__questions {
+
+.quiz__questionsTit {
     font-size: 28px;
     font-family: var(--Timon);
     font-weight: 800;
 }
 .quiz__questionsImg {
     width: 50%;
+    margin-bottom: 30px;
 }
 .quiz__button {
     display: block;
@@ -38,9 +40,11 @@
     color: #111053;
     cursor: pointer;
 }
-.quizCont__inner .last {
+
+.quiz__button:last-child {
     margin-bottom: 70px;
 }
+
 .quiz__pageInner {
     display: flex;
     margin: 0 auto;
@@ -73,7 +77,7 @@
 #quizCont.active {
     margin: 0px 0 0 36%;
 }
-.quiz__questions.blue {
+.quiz__questionsTit.blue {
     font-weight: 900;
     font-size: 30px;
     line-height: 140%;
