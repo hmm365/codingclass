@@ -503,3 +503,58 @@ main {
     line-height: 115%;
     color: #ffffff;
 }
+
+/* //connect */
+.footer {
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 100px 0;
+}
+.footer__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 130px;
+}
+.footer__info a {
+    color: #fff;
+}
+.footer__info h2 {
+    width: 40%;
+}
+.footer__info h2 a {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 112.5%;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.footer__info > ul {
+    width: 20%;
+}
+.footer__info > ul > li > span {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 100%;
+    color: #ffffff;
+    opacity: 0.6;
+}
+.footer__info > ul > li > ul {
+    margin-top: 32px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 146%;
+}
+.footer_btn a {
+    display: inline-block;
+    text-align: center;
+    padding: 15px 80px;
+    background: #262626;
+    border-radius: 50px;
+
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 105.5%;
+    color: #ffffff;
+    margin-right: 30px;
+}
+/* //footer__info */
