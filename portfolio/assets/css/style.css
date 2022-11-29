@@ -442,17 +442,64 @@ main {
 
 .growing {
     padding: 150px 0;
+    background: #fff;
 }
 .growing__info {
-    display: flex;
 }
 .growing__info h2 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 115%;
 }
 
 .growing__info h2 span {
+    display: block;
+    font-weight: 300;
+    font-size: 80px;
 }
 
 .growing__desc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 .growing__desc p {
+    width: 40%;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 144.5%;
+    margin-bottom: 60px;
+}
+.growing__desc p:last-child {
+    margin-bottom: 0;
+}
+
+.groupPhoto img {
+    opacity: 0.4;
+}
+
+.connect {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.connect__info {
+    margin-left: 10vw;
+}
+.connect__info h3 {
+    font-weight: 300;
+    font-size: 200px;
+    line-height: 115%;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.connect__info h2 {
+    font-weight: 500;
+    font-size: 300px;
+    line-height: 115%;
+    color: #ffffff;
 }
