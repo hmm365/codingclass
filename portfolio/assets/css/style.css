@@ -279,26 +279,14 @@ main {
     -webkit-text-stroke: 1px #000;
 }
 .example span {
-    white-space: nowrap;
-    display: inline-block;
+    display: inline-flex;
     font-family: var(--Poppins);
     font-weight: 900;
     font-size: 130px;
     line-height: 115%;
     text-transform: uppercase;
-
     color: transparent;
     -webkit-text-stroke: 1px #fff;
-}
-
-.example__top {
-    transform: translateX(0);
-}
-.example__midle {
-    transform: translateX(0);
-}
-.example__bottom {
-    transform: translateX(0);
 }
 
 /* //example */
