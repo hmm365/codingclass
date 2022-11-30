@@ -21,9 +21,9 @@
                         <h2>
                             <span>
                                 <em class="headline__one">P</em>
-                                <em class="headline__two">o</em>
-                                <em class="headline__three">r</em>
-                                <em class="headline__four">t</em>
+                                <em class="headline__one">o</em>
+                                <em class="headline__one">r</em>
+                                <em class="headline__one">t</em>
                             </span>
                             <strong>
                                 <em class="headline__tit">frontend</em>
@@ -94,6 +94,30 @@
                     <article class="project__card__conts card1">
                         <div class="project__card__wrap">
                             <div class="project__card__inner">
+                                <div class="card">
+                                    <div class="card__info">
+                                        <span class="num">01</span>
+                                        <div class="desc__info">
+                                            <h2><span>website</span> coding</h2>
+                                            <p>웹표준 을 준수하여 HTML CSS Javascrip 로 만든 사이트입니다.</p>
+                                        </div>
+                                    </div>
+                                    <figure class="siteImg">
+                                        <img src="assets/img/website01.png" alt="website01" />
+                                    </figure>
+                                </div>
+                                <div class="card">
+                                    <div class="card__info">
+                                        <span class="num">01</span>
+                                        <div class="desc__info">
+                                            <h2><span>website</span> coding</h2>
+                                            <p>웹표준 을 준수하여 HTML CSS Javascrip 로 만든 사이트입니다.</p>
+                                        </div>
+                                    </div>
+                                    <figure class="siteImg">
+                                        <img src="assets/img/website01.png" alt="website01" />
+                                    </figure>
+                                </div>
                                 <div class="card">
                                     <div class="card__info">
                                         <span class="num">01</span>
@@ -395,48 +419,26 @@
         <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
         <script>
             window.onload = function () {
-                var tl = gsap.timeline({ repeat: 0, repeatDelay: 0.5 });
-                tl.fromTo(
-                    '.headline__one',
-                    {
-                        scale: 0,
-                    },
-                    { scale: 1.3, duration: 0.5 }
-                ).to('.headline__one', {
-                    scale: 1,
-                    duration: 1,
-                });
-                tl.fromTo(
-                    '.headline__two',
-                    {
-                        x: 2000,
-                    },
-                    { x: 0, duration: 1 }
-                );
-                tl.fromTo(
-                    '.headline__three',
-                    {
-                        x: 2000,
-                    },
-                    { x: 0, duration: 1 }
-                );
-                tl.fromTo(
-                    '.headline__four',
-                    {
-                        x: 2000,
-                    },
-                    { x: 0, duration: 1 }
-                );
+                var tl = gsap.timeline({ repeat: 0, repeatDelay: 0 });
+
                 tl.fromTo(
                     '.headline__tit',
                     {
                         x: -1000,
                     },
-                    { x: 0, duration: 2 }
+                    { x: 0, duration: 1 }
                 );
-                tl.fromTo('.headline__desc', { x: 2000 }, { x: 0, duration: 2 });
-                tl.fromTo('.headline__btn', { opacity: 0 }, { opacity: 1, duration: 2 });
-                tl.fromTo('.header', { opacity: 0 }, { opacity: 1, duration: 2 });
+                tl.fromTo(
+                    '.headline__one',
+                    {
+                        opacity: 0,
+                        y: 100,
+                    },
+                    { opacity: 1, y: 0, duration: 0.8 }
+                );
+                tl.fromTo('.headline__desc', { y: -100, opacity: 0 }, { y: 0, opacity: 1, duration: 1 });
+                tl.fromTo('.headline__btn', { opacity: 0 }, { opacity: 1, duration: 1 });
+                tl.fromTo('.header', { opacity: 0 }, { opacity: 1, duration: 1 });
             };
 
             const lenis = new Lenis({
@@ -458,7 +460,7 @@
                     xPercent: -100 * (sections.length - 1),
                     ease: 'none',
                     scrollTrigger: {
-                        start: 'top 15%',
+                        start: 'top 5%',
                         trigger: pam,
                         pin: true,
                         scrub: 1,
@@ -466,13 +468,27 @@
                         markers: true,
                     },
                 });
-                gsap.fromTo(`${pam} .card__info`, { opacity: 0 }, { opacity: 1 });
             }
 
             horiz(gsap.utils.toArray('.card1 .card'), '.card1');
             horiz(gsap.utils.toArray('.card2 .card'), '.card2');
             horiz(gsap.utils.toArray('.card3 .card'), '.card3');
             horiz(gsap.utils.toArray('.card4 .card'), '.card4');
+            gsap.set('.connect__info h2', {
+                x: 2000,
+            });
+            gsap.to('.connect__info h2', {
+                xPercent: -160,
+                ease: 'none',
+                scrollTrigger: {
+                    start: 'top 5%',
+                    trigger: '.connect',
+                    pin: true,
+                    scrub: 1,
+                    end: '+=5000',
+                    markers: true,
+                },
+            });
         </script>
     </body>
 </html>

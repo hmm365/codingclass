@@ -307,15 +307,14 @@ main {
 }
 
 .project__card__inner {
-    width: 300%;
+    white-space: nowrap;
 }
 .project__card__inner .card {
     display: inline-block;
-    width: 65vw;
+    width: 100vw;
     height: 65vh;
     position: relative;
     align-items: center;
-    margin-right: 80px;
 }
 
 .project .desc__info {
@@ -348,7 +347,7 @@ main {
     position: absolute;
     font-family: var(--Poppins);
     top: -6vh;
-    right: -12vw;
+    right: 8vw;
     font-weight: 100;
     font-size: 130px;
     line-height: 93%;
@@ -356,7 +355,7 @@ main {
     z-index: 10;
 }
 .siteImg {
-    width: 100%;
+    width: 80%;
     position: absolute;
     top: 0;
     left: 10vw;
@@ -562,6 +561,7 @@ main {
 .example .example__top > span {
     display: inline-flex;
     will-change: transform;
+    /* transform: translateX(0%); */
     animation: marquee 15s linear infinite;
 }
 .example .example__midle > span {
@@ -579,7 +579,7 @@ main {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-52%);
+        transform: translateX(-51.5%);
     }
 }
 @keyframes marquee-a {
