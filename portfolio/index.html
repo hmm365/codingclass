@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
     <body>
+        <img class="blind" src="./assets/img/cat.jpg" alt="고양이" />
         <header class="header">
             <div class="header__info first__container">
                 <h1><a href="#">SYUMAY</a></h1>
@@ -476,28 +477,6 @@
                 });
             }
 
-            function horizR(sections, pam) {
-                console.log(-widt);
-                gsap.set(sections, {
-                    x: -widt,
-                });
-                gsap.to(sections, {
-                    xPercent: 100 * (sections.length - 1),
-                    ease: 'none',
-                    scrollTrigger: {
-                        start: 'top 5%',
-                        trigger: pam,
-                        pin: true,
-                        scrub: 1,
-                        end: '+=4000',
-                        markers: true,
-                    },
-                });
-            }
-
-            function test(params) {
-                let a = document.querySelector(`${pam} .card`).offsetWidth;
-            }
             horiz(gsap.utils.toArray('.card1 .card'), '.card1');
             horiz(gsap.utils.toArray('.card2 .card'), '.card2');
             horiz(gsap.utils.toArray('.card3 .card'), '.card3');
