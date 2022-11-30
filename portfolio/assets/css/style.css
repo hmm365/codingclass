@@ -598,3 +598,14 @@ main {
         transform: translateX(0.5%);
     }
 }
+
+.headline__info .headline__tit {
+    opacity: 0;
+    transform: translateX(-1000);
+}
+.headline__info .headline__one,
+.headline__info .headline__desc,
+.headline__info .headline__btn,
+.header {
+    opacity: 0;
+}
