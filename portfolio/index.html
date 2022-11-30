@@ -78,7 +78,7 @@
                     <img class="profile" src="assets/img/profile.png" alt="profile" />
                 </div>
             </section>
-            <section class="example">
+            <section class="example topEx">
                 <div class="example__top">
                     <span>WEBSITE 😵‍💫 PHPSITE 🫥 REACTSITE 🥺 VUESITE 😵‍💫&nbsp;<span>WEBSITE 😵‍💫 PHPSITE 🫥 REACTSITE 🥺 VUESITE</span></span>
                 </div>
@@ -464,16 +464,39 @@
                         trigger: pam,
                         pin: true,
                         scrub: 1,
-                        end: '+=5000',
+                        end: '+=4000',
                         markers: true,
                     },
                 });
             }
 
+            function horizR(sections, pam) {
+                console.log(-widt);
+                gsap.set(sections, {
+                    x: -widt,
+                });
+                gsap.to(sections, {
+                    xPercent: 100 * (sections.length - 1),
+                    ease: 'none',
+                    scrollTrigger: {
+                        start: 'top 5%',
+                        trigger: pam,
+                        pin: true,
+                        scrub: 1,
+                        end: '+=4000',
+                        markers: true,
+                    },
+                });
+            }
+
+            function test(params) {
+                let a = document.querySelector(`${pam} .card`).offsetWidth;
+            }
             horiz(gsap.utils.toArray('.card1 .card'), '.card1');
             horiz(gsap.utils.toArray('.card2 .card'), '.card2');
             horiz(gsap.utils.toArray('.card3 .card'), '.card3');
             horiz(gsap.utils.toArray('.card4 .card'), '.card4');
+
             gsap.set('.connect__info h2', {
                 x: 2000,
             });

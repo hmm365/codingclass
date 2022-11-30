@@ -93,7 +93,7 @@ class Light {
         this.createSun();
     }
     createLights(colorTrue) {
-        console.log(colorTrue);
+        // console.log(colorTrue);
         for (let i = 0; i < 3; i++) {
             const group = new THREE.Group();
             const light = new THREE.PointLight(colorTrue);
@@ -129,7 +129,7 @@ class Light {
 class World {
     constructor(opts, testtest) {
         this.testtest = testtest;
-        console.log(testtest);
+        // console.log(testtest);
         World.defaultOpts.container = testtest;
         this.opts = Object.assign({}, World.defaultOpts, opts);
 

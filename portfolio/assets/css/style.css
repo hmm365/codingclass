@@ -15,6 +15,7 @@
 }
 main {
     background: #000;
+    overflow-x: hidden;
 }
 
 .header {
@@ -302,24 +303,23 @@ main {
 }
 .project__card__conts {
     width: 100%;
-    height: 100vh;
+
     padding: 100px 0;
 }
-
 .project__card__inner {
     white-space: nowrap;
 }
 .project__card__inner .card {
     display: inline-block;
     width: 100vw;
-    height: 65vh;
+    padding: 10% 0;
     position: relative;
     align-items: center;
 }
 
 .project .desc__info {
     position: relative;
-    padding-top: 25%;
+    padding-top: 15%;
     z-index: 10;
 }
 .project .desc__info h2 {
