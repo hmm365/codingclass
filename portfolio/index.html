@@ -80,16 +80,13 @@
             </section>
             <section class="example">
                 <div class="example__top">
-                    <span>WEBSITE 😵‍💫 PHPSITE 🫥 REACTSITE 🥺 VUESITE 😵‍💫</span>
-                    <span>WEBSITE 😵‍💫 PHPSITE 🫥 REACTSITE 🥺 VUESITE</span>
+                    <span>WEBSITE 😵‍💫 PHPSITE 🫥 REACTSITE 🥺 VUESITE 😵‍💫&nbsp;<span>WEBSITE 😵‍💫 PHPSITE 🫥 REACTSITE 🥺 VUESITE</span></span>
                 </div>
                 <div class="example__midle">
-                    <span>searchEffect 🥰 quizEffect 😅 mouseEffect 🥰</span>
-                    <span>searchEffect 🥰 quizEffect 😅 mouseEffect</span>
+                    <span>searchEffect 🥰 quizEffect 😅 mouseEffect 🥰&nbsp;<span>searchEffect 🥰 quizEffect 😅 mouseEffect</span></span>
                 </div>
                 <div class="example__bottom">
-                    <span>gameEffect 🥺 parallaxEffect 🤑 sliderEffect 🥺</span>
-                    <span>gameEffect 🥺 parallaxEffect 🤑 sliderEffect</span>
+                    <span>gameEffect 🥺 parallaxEffect 🤑 sliderEffect 🥺&nbsp;<span>gameEffect 🥺 parallaxEffect 🤑 sliderEffect</span></span>
                 </div>
             </section>
             <section class="project">
@@ -231,16 +228,13 @@
             </section>
             <section class="example black">
                 <div class="example__top">
-                    <span>WEBSITE 😵‍💫 PHPSITE 🫥 REACTSITE 🥺 VUESITE 😵‍💫</span>
-                    <span>WEBSITE 😵‍💫 PHPSITE 🫥 REACTSITE 🥺 VUESITE</span>
+                    <span>WEBSITE 😵‍💫 PHPSITE 🫥 REACTSITE 🥺 VUESITE 😵‍💫&nbsp;<span>WEBSITE 😵‍💫 PHPSITE 🫥 REACTSITE 🥺 VUESITE</span></span>
                 </div>
                 <div class="example__midle">
-                    <span>searchEffect 🥰 quizEffect 😅 mouseEffect 🥰</span>
-                    <span>searchEffect 🥰 quizEffect 😅 mouseEffect</span>
+                    <span>searchEffect 🥰 quizEffect 😅 mouseEffect 🥰&nbsp;<span>searchEffect 🥰 quizEffect 😅 mouseEffect</span></span>
                 </div>
                 <div class="example__bottom">
-                    <span>gameEffect 🥺 parallaxEffect 🤑 sliderEffect 🥺</span>
-                    <span>gameEffect 🥺 parallaxEffect 🤑 sliderEffect</span>
+                    <span>gameEffect 🥺 parallaxEffect 🤑 sliderEffect 🥺&nbsp;<span>gameEffect 🥺 parallaxEffect 🤑 sliderEffect</span></span>
                 </div>
             </section>
             <section class="studyWork">
@@ -463,16 +457,16 @@
                 gsap.to(sections, {
                     xPercent: -100 * (sections.length - 1),
                     ease: 'none',
-
                     scrollTrigger: {
                         start: 'top 15%',
                         trigger: pam,
                         pin: true,
                         scrub: 1,
-                        end: '+=10000',
+                        end: '+=5000',
                         markers: true,
                     },
                 });
+                gsap.fromTo(`${pam} .card__info`, { opacity: 0 }, { opacity: 1 });
             }
 
             horiz(gsap.utils.toArray('.card1 .card'), '.card1');

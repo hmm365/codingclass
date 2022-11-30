@@ -302,6 +302,7 @@ main {
 }
 .project__card__conts {
     width: 100%;
+    height: 100vh;
     padding: 100px 0;
 }
 
@@ -559,16 +560,18 @@ main {
 /* //footer__info */
 
 .example .example__top > span {
+    display: inline-flex;
     will-change: transform;
-    animation: marquee 25s linear infinite;
+    animation: marquee 15s linear infinite;
 }
 .example .example__midle > span {
     will-change: transform;
-    animation: marquee-r 25s linear infinite;
+    /* transform: translateX(-100%); */
+    animation: marquee-r 15s linear infinite;
 }
 .example .example__bottom > span {
     will-change: transform;
-    animation: marquee 25s linear infinite;
+    animation: marquee-a 15s linear infinite;
 }
 
 @keyframes marquee {
@@ -576,14 +579,22 @@ main {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-105%);
+        transform: translateX(-52%);
+    }
+}
+@keyframes marquee-a {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-51%);
     }
 }
 @keyframes marquee-r {
     from {
-        transform: translateX(-105%);
+        transform: translateX(-51%);
     }
     to {
-        transform: translateX(0%);
+        transform: translateX(0.5%);
     }
 }

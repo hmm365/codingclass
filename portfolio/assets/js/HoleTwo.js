@@ -1,10 +1,11 @@
-class Hole {
+class HoleTwo {
     constructor(opts, testtest, colorTrue) {
-        if (Hole.instance) {
-            return Hole.instance;
-        }
-        Hole.instance = this;
-        this.opts = Object.assign({}, Hole.defaultOpts, opts);
+        // if (HoleTwo.instance) {
+        //     return HoleTwo.instance;
+        // }
+        // HoleTwo.instance = this;
+
+        this.opts = Object.assign({}, HoleTwo.defaultOpts, opts);
         this.world = new World('', testtest);
         this.colorTrue = colorTrue;
         this.init();
@@ -33,7 +34,7 @@ class Hole {
     }
 }
 
-Hole.defaultOpts = {
+HoleTwo.defaultOpts = {
     debug: false,
 };
 
