@@ -1,5 +1,6 @@
 @import url('./reset.css');
 @import url('./fonts.css');
+
 .first__container {
     max-width: 1920px;
     margin: 0 auto;
@@ -62,6 +63,7 @@ main {
     align-items: flex-end;
     padding-top: 100px;
     padding-bottom: 80px;
+    overflow: hidden;
 }
 .headline__wrap {
 }
@@ -80,11 +82,13 @@ main {
 }
 
 .headline__info h2 span {
-    display: block;
+    display: flex;
     font-weight: 100;
     color: #ffffff;
 }
-
+.headline__info h2 strong {
+    display: flex;
+}
 .headline__info p {
     font-family: var(--GmarketSans);
     font-weight: 300;
@@ -279,7 +283,7 @@ main {
     -webkit-text-stroke: 1px #000;
 }
 .example span {
-    display: inline-flex;
+    display: inline-block;
     font-family: var(--Poppins);
     font-weight: 900;
     font-size: 130px;
@@ -572,12 +576,12 @@ main {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-105%);
     }
 }
 @keyframes marquee-r {
     from {
-        transform: translateX(-100%);
+        transform: translateX(-105%);
     }
     to {
         transform: translateX(0%);

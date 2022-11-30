@@ -18,12 +18,22 @@
             <section class="headline">
                 <div class="headline__wrap first__container">
                     <div class="headline__info">
-                        <h2><span>port</span> frontend</h2>
-                        <p>
+                        <h2>
+                            <span>
+                                <em class="headline__one">P</em>
+                                <em class="headline__two">o</em>
+                                <em class="headline__three">r</em>
+                                <em class="headline__four">t</em>
+                            </span>
+                            <strong>
+                                <em class="headline__tit">frontend</em>
+                            </strong>
+                        </h2>
+                        <p class="headline__desc">
                             어떤 일이라도 노력하고 즐기면<br />
                             그 결과는 빛을 바란다고 생각합니다.
                         </p>
-                        <button>SCROLL</button>
+                        <button class="headline__btn">SCROLL</button>
                     </div>
                 </div>
                 <div class="bg-video">
@@ -70,18 +80,21 @@
             </section>
             <section class="example">
                 <div class="example__top">
-                    <span>WEBSITE 😵‍💫 PHPSITE 🫥 REACTSITE 🥺 VUESITE 😵‍💫&nbsp;<span>WEBSITE 😵‍💫 PHPSITE 🫥 REACTSITE 🥺 VUESITE</span></span>
+                    <span>WEBSITE 😵‍💫 PHPSITE 🫥 REACTSITE 🥺 VUESITE 😵‍💫</span>
+                    <span>WEBSITE 😵‍💫 PHPSITE 🫥 REACTSITE 🥺 VUESITE</span>
                 </div>
                 <div class="example__midle">
-                    <span>searchEffect 🥰 quizEffect 😅 mouseEffect 🥰&nbsp;<span>searchEffect 🥰 quizEffect 😅 mouseEffect</span></span>
+                    <span>searchEffect 🥰 quizEffect 😅 mouseEffect 🥰</span>
+                    <span>searchEffect 🥰 quizEffect 😅 mouseEffect</span>
                 </div>
                 <div class="example__bottom">
-                    <span>gameEffect 🥺 parallaxEffect 🤑 sliderEffect 🥺&nbsp;<span>gameEffect 🥺 parallaxEffect 🤑 sliderEffect</span></span>
+                    <span>gameEffect 🥺 parallaxEffect 🤑 sliderEffect 🥺</span>
+                    <span>gameEffect 🥺 parallaxEffect 🤑 sliderEffect</span>
                 </div>
             </section>
             <section class="project">
                 <div class="first__container">
-                    <article class="project__card__conts">
+                    <article class="project__card__conts card1">
                         <div class="project__card__wrap">
                             <div class="project__card__inner">
                                 <div class="card">
@@ -111,7 +124,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="project__card__conts">
+                    <article class="project__card__conts card2">
                         <div class="project__card__inner">
                             <div class="card">
                                 <div class="card__info">
@@ -145,7 +158,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="project__card__conts">
+                    <article class="project__card__conts card3">
                         <div class="project__card__inner">
                             <div class="card">
                                 <div class="card__info">
@@ -180,7 +193,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="project__card__conts">
+                    <article class="project__card__conts card4">
                         <div class="project__card__inner">
                             <div class="card">
                                 <div class="card__info">
@@ -386,6 +399,86 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
-        <script></script>
+        <script>
+            window.onload = function () {
+                var tl = gsap.timeline({ repeat: 0, repeatDelay: 0.5 });
+                tl.fromTo(
+                    '.headline__one',
+                    {
+                        scale: 0,
+                    },
+                    { scale: 1.3, duration: 0.5 }
+                ).to('.headline__one', {
+                    scale: 1,
+                    duration: 1,
+                });
+                tl.fromTo(
+                    '.headline__two',
+                    {
+                        x: 2000,
+                    },
+                    { x: 0, duration: 1 }
+                );
+                tl.fromTo(
+                    '.headline__three',
+                    {
+                        x: 2000,
+                    },
+                    { x: 0, duration: 1 }
+                );
+                tl.fromTo(
+                    '.headline__four',
+                    {
+                        x: 2000,
+                    },
+                    { x: 0, duration: 1 }
+                );
+                tl.fromTo(
+                    '.headline__tit',
+                    {
+                        x: -1000,
+                    },
+                    { x: 0, duration: 2 }
+                );
+                tl.fromTo('.headline__desc', { x: 2000 }, { x: 0, duration: 2 });
+                tl.fromTo('.headline__btn', { opacity: 0 }, { opacity: 1, duration: 2 });
+                tl.fromTo('.header', { opacity: 0 }, { opacity: 1, duration: 2 });
+            };
+
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+
+            requestAnimationFrame(raf);
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            function horiz(sections, pam) {
+                gsap.to(sections, {
+                    xPercent: -100 * (sections.length - 1),
+                    ease: 'none',
+
+                    scrollTrigger: {
+                        start: 'top 15%',
+                        trigger: pam,
+                        pin: true,
+                        scrub: 1,
+                        end: '+=10000',
+                        markers: true,
+                    },
+                });
+            }
+
+            horiz(gsap.utils.toArray('.card1 .card'), '.card1');
+            horiz(gsap.utils.toArray('.card2 .card'), '.card2');
+            horiz(gsap.utils.toArray('.card3 .card'), '.card3');
+            horiz(gsap.utils.toArray('.card4 .card'), '.card4');
+        </script>
     </body>
 </html>
