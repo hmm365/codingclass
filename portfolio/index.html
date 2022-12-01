@@ -680,30 +680,111 @@
             }
             requestAnimationFrame(raf);
 
-            gsap.to('.bulidUp', {
-                scrollTrigger: {
-                    trigger: '.bulidUp',
-                    start: '-50% center',
-                    end: '130% center',
-                    scrub: true,
-                    markers: true,
-                    toggleClass: 'about__active',
-                    ease: 'power2',
-                },
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.set('.bulidUp__info h2', {
+                y: 100,
             });
-            gsap.to('.skillUp', {
+            gsap.to('.bulidUp__info h2', {
                 scrollTrigger: {
-                    trigger: '.skillUp',
-                    start: '-50% center',
-                    end: '150% center',
-                    scrub: true,
+                    trigger: '.bulidUp__info h2',
+                    start: '-150% center',
+                    end: '-150% center',
+                    // scrub: true,
                     markers: true,
-                    toggleClass: 'about__active',
-                    ease: 'power2',
+
+                    toggleActions: 'play play play play',
                 },
+                duration: 2,
+                opacity: 1,
+                y: 0,
+                ease: Elastic.easeOut.config(1, 0.3),
+                stagger: 0.1,
             });
 
-            gsap.registerPlugin(ScrollTrigger);
+            gsap.set('.bulidUp__info p', {
+                y: 100,
+            });
+            gsap.to('.bulidUp__info p', {
+                scrollTrigger: {
+                    trigger: '.bulidUp__info h2',
+                    start: '-150% center',
+                    end: '-150% center',
+                    // scrub: true,
+                    markers: true,
+
+                    toggleActions: 'play play play play',
+                },
+                delay: 0.2,
+                duration: 2,
+                opacity: 1,
+                y: 0,
+                ease: Elastic.easeOut.config(1, 0.3),
+                stagger: 0.1,
+            });
+
+            gsap.to('.holebox1', {
+                scrollTrigger: {
+                    trigger: '.bulidUp__info h2',
+                    start: '-150% center',
+                    end: '-150% center',
+                    // scrub: true,
+                    markers: true,
+
+                    toggleActions: 'play play play play',
+                },
+                delay: 0.4,
+                duration: 2,
+                opacity: 1,
+            });
+            gsap.to('.profile', {
+                scrollTrigger: {
+                    trigger: '.bulidUp__info h2',
+                    start: '-150% center',
+                    end: '-150% center',
+                    // scrub: true,
+                    markers: true,
+
+                    toggleActions: 'play play play play',
+                },
+                delay: 0.6,
+                duration: 2,
+                opacity: 1,
+            });
+
+            gsap.set('.skillUp__info', {
+                x: '-100%',
+            });
+            gsap.to('.skillUp__info', {
+                scrollTrigger: {
+                    trigger: '.skillUp__info',
+                    start: '-100% center',
+                    end: '-100% center',
+                    // scrub: true,
+                    markers: true,
+
+                    toggleActions: 'play play play play',
+                },
+                duration: 2,
+                opacity: 1,
+                x: 0,
+                ease: Elastic.easeOut.config(0.5, 0.3),
+                // stagger: 0.1,
+            });
+            gsap.to('.holebox2', {
+                scrollTrigger: {
+                    trigger: '.skillUp__info',
+                    start: '-100% center',
+                    end: '-100% center',
+                    // scrub: true,
+                    markers: true,
+
+                    toggleActions: 'play play play play',
+                },
+                delay: 0.6,
+                duration: 2,
+                opacity: 1,
+            });
 
             function horiz(sections, pam) {
                 gsap.to(sections, {
