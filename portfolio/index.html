@@ -665,8 +665,8 @@
                 { opacity: 1, y: 0, duration: 0.8 }
             );
             tl.fromTo('.headline__desc', { y: -100, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.8');
-            tl.to('.bg-video__content', { y: 0, opacity: 1, duration: 0.5 });
-            tl.fromTo('.headline__btn', { opacity: 0 }, { opacity: 1, duration: 1 });
+            tl.to('.bg-video__content', { y: 0, opacity: 1, duration: 0.4 }, '-=0.6');
+            tl.fromTo('.headline__btn', { opacity: 0 }, { opacity: 1, duration: 1 }, '-=0.2');
             tl.fromTo('.header', { opacity: 0 }, { opacity: 1, duration: 1 }, '-=1');
 
             const lenis = new Lenis({
@@ -757,8 +757,8 @@
             gsap.to('.skillUp__info', {
                 scrollTrigger: {
                     trigger: '.skillUp__info',
-                    start: '-100% center',
-                    end: '-100% center',
+                    start: '-50% center',
+                    end: '-50% center',
                     // scrub: true,
                     markers: true,
 
@@ -773,8 +773,8 @@
             gsap.to('.holebox2', {
                 scrollTrigger: {
                     trigger: '.skillUp__info',
-                    start: '-100% center',
-                    end: '-100% center',
+                    start: '-50% center',
+                    end: '-50% center',
                     // scrub: true,
                     markers: true,
 
