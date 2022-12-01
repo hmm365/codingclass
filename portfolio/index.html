@@ -484,7 +484,6 @@
                         chars[index] = '&nbsp;';
                     }
                 }
-                console.log(chars);
 
                 const charsContainer = document.createElement('div');
                 const charsArray = [];
@@ -554,7 +553,7 @@
             tl.fromTo(
                 '.loader__col.loader__col--1 .bbobo',
                 {
-                    x: -50,
+                    x: -100,
                     opacity: 0,
                 },
                 {
@@ -569,7 +568,7 @@
             tl.fromTo(
                 '.loader__col.loader__col--2 .bbobo',
                 {
-                    x: -50,
+                    x: -100,
                     opacity: 0,
                 },
                 {
@@ -583,7 +582,7 @@
             tl.fromTo(
                 '.loader__col.loader__col--3 .bbobo',
                 {
-                    x: -50,
+                    x: -100,
                     opacity: 0,
                 },
                 {
@@ -597,7 +596,7 @@
             tl.fromTo(
                 '.loader__col.loader__col--4 .bbobo',
                 {
-                    x: -50,
+                    x: -100,
                     opacity: 0,
                 },
                 {
@@ -611,7 +610,7 @@
             tl.fromTo(
                 '.loader__col.loader__col--5 .bbobo',
                 {
-                    x: -50,
+                    x: -100,
                     opacity: 0,
                 },
                 {
@@ -628,13 +627,15 @@
             });
             tl.to('.loader__item--ec', {
                 scale: 40,
-                duration: 0.8,
+                duration: 1,
+                ease: Sine.easeOut,
             });
+
             tl.to(
                 '.loader__item--ec',
                 {
                     opacity: 0,
-                    duration: 0.8,
+                    duration: 1,
                 },
                 '-=0.3'
             );
@@ -644,6 +645,7 @@
         </script>
         <!-- loader -->
         <script>
+            // var tl = gsap.timeline({ repeat: 0, repeatDelay: 0 });
             gsap.set('.headline__tit', {
                 opacity: 1,
             });
@@ -676,8 +678,30 @@
                 lenis.raf(time);
                 requestAnimationFrame(raf);
             }
-
             requestAnimationFrame(raf);
+
+            gsap.to('.bulidUp', {
+                scrollTrigger: {
+                    trigger: '.bulidUp',
+                    start: '-50% center',
+                    end: '130% center',
+                    scrub: true,
+                    markers: true,
+                    toggleClass: 'about__active',
+                    ease: 'power2',
+                },
+            });
+            gsap.to('.skillUp', {
+                scrollTrigger: {
+                    trigger: '.skillUp',
+                    start: '-50% center',
+                    end: '150% center',
+                    scrub: true,
+                    markers: true,
+                    toggleClass: 'about__active',
+                    ease: 'power2',
+                },
+            });
 
             gsap.registerPlugin(ScrollTrigger);
 
