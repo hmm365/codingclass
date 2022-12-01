@@ -9,9 +9,61 @@
         <meta property="og:image" content="https://raw.githubusercontent.com/hmm365/codingclass/main/portfolio/assets/img/cat.jpg" />
         <title>portfolio</title>
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/loader.css" />
     </head>
     <body>
         <img class="blind" src="./assets/img/cat.jpg" alt="고양이" />
+        <div class="loader">
+            <div class="loader__cols">
+                <div class="loader__col loader__col--1">
+                    <div data-a-p class="loader__item gogori loader__item--ct">Syumay ®</div>
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <div data-a-h class="loader__item gogori loader__item--c">Syumay ®</div>
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <div data-a-p class="loader__item gogori loader__item--ct">Syumay ®</div>
+                </div>
+                <div class="loader__col loader__col--2">
+                    <!--[-->
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <!--]-->
+                </div>
+                <div class="loader__col loader__col--3">
+                    <!--[-->
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <!--]-->
+                    <div data-a-p class="loader__item bbobo loader__item--ec">Syumay ®</div>
+                    <!--[-->
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+
+                    <!--]-->
+                </div>
+                <div class="loader__col loader__col--4">
+                    <!--[-->
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <!--]-->
+                </div>
+                <div class="loader__col loader__col--5">
+                    <!--[-->
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <div data-a-p class="loader__item bbobo gogori">Syumay ®</div>
+                    <!--]-->
+                </div>
+            </div>
+        </div>
+
         <header class="header">
             <div class="header__info first__container">
                 <h1><a href="#">SYUMAY</a></h1>
@@ -422,31 +474,198 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
         <script>
-            window.onload = function () {
-                var tl = gsap.timeline({ repeat: 0, repeatDelay: 0 });
+            const splitText = (selector) => {
+                const elem = document.querySelector(selector);
 
-                gsap.set('.headline__tit', {
-                    opacity: 1,
+                const text = elem.innerText;
+                const chars = text.split('');
+                for (let index = 0; index < chars.length; index++) {
+                    if (chars[index] === ' ') {
+                        chars[index] = '&nbsp;';
+                    }
+                }
+                console.log(chars);
+
+                const charsContainer = document.createElement('div');
+                const charsArray = [];
+
+                charsContainer.style.position = 'relative';
+                charsContainer.style.display = 'inline-block';
+
+                chars.forEach((char) => {
+                    const charContainer = document.createElement('span');
+
+                    charContainer.style.position = 'relative';
+                    charContainer.style.display = 'inline-block';
+                    charContainer.innerHTML = char;
+                    charsContainer.appendChild(charContainer);
+
+                    charsArray.push(charContainer);
                 });
-                tl.fromTo(
-                    '.headline__tit',
-                    {
-                        x: -1000,
-                    },
-                    { x: 0, duration: 1 }
-                );
-                tl.fromTo(
-                    '.headline__one',
-                    {
-                        opacity: 0,
-                        y: 100,
-                    },
-                    { opacity: 1, y: 0, duration: 0.8 }
-                );
-                tl.fromTo('.headline__desc', { y: -100, opacity: 0 }, { y: 0, opacity: 1, duration: 1 });
-                tl.fromTo('.headline__btn', { opacity: 0 }, { opacity: 1, duration: 1 });
-                tl.fromTo('.header', { opacity: 0 }, { opacity: 1, duration: 1 });
+                // remove current text
+                elem.innerHTML = '';
+                // append new structure
+                elem.appendChild(charsContainer);
+
+                return charsArray;
             };
+
+            const chars = splitText('.loader__item--c');
+            var tl = gsap.timeline({ repeat: 0, repeatDelay: 0 });
+
+            tl.to('.loader__item--c', { opacity: 1, duration: 0 });
+            tl.from(
+                chars,
+                {
+                    duration: 1,
+                    y: 50,
+                    opacity: 0,
+                    stagger: 0.1,
+                    delay: 0.5,
+                    ease: Elastic.easeOut.config(1, 0.3),
+                },
+                '-=0.5'
+            );
+            tl.fromTo(
+                '.loader__item--ct',
+                {
+                    opacity: 0,
+                    y: 20,
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    delay: 0.5,
+                },
+                '-=1'
+            );
+            tl.to(
+                '.loader__col .loader__item',
+                {
+                    delay: 0.5,
+                    transform: 'translate(0, 0)',
+                    left: 0,
+                },
+                '-=0.3'
+            );
+            tl.to('.loader__col--1', {
+                className: 'loader__col loader__col--1 done',
+            });
+
+            tl.fromTo(
+                '.loader__col.loader__col--1 .bbobo',
+                {
+                    x: -50,
+                    opacity: 0,
+                },
+                {
+                    x: 0,
+                    duration: 1,
+                    opacity: 1,
+                    // stagger: 0.1,
+                },
+                '-=0.3'
+            );
+
+            tl.fromTo(
+                '.loader__col.loader__col--2 .bbobo',
+                {
+                    x: -50,
+                    opacity: 0,
+                },
+                {
+                    x: 0,
+                    duration: 1,
+                    opacity: 1,
+                    // stagger: 0.1,
+                },
+                '-=0.8'
+            );
+            tl.fromTo(
+                '.loader__col.loader__col--3 .bbobo',
+                {
+                    x: -50,
+                    opacity: 0,
+                },
+                {
+                    x: 0,
+                    duration: 1,
+                    opacity: 1,
+                    // stagger: 0.1,
+                },
+                '-=0.8'
+            );
+            tl.fromTo(
+                '.loader__col.loader__col--4 .bbobo',
+                {
+                    x: -50,
+                    opacity: 0,
+                },
+                {
+                    x: 0,
+                    duration: 1,
+                    opacity: 1,
+                    // stagger: 0.1,
+                },
+                '-=0.8'
+            );
+            tl.fromTo(
+                '.loader__col.loader__col--5 .bbobo',
+                {
+                    x: -50,
+                    opacity: 0,
+                },
+                {
+                    x: 0,
+                    duration: 1,
+                    opacity: 1,
+                    // stagger: 0.1,
+                },
+                '-=0.8'
+            );
+            tl.to('.gogori', {
+                opacity: 0,
+                duration: 0.5,
+            });
+            tl.to('.loader__item--ec', {
+                scale: 80,
+                duration: 0.5,
+            });
+            tl.to(
+                '.loader__item--ec',
+                {
+                    opacity: 0,
+                    duration: 0.5,
+                },
+                '-=0.3'
+            );
+            tl.to('.loader', {
+                className: 'dnone',
+            });
+        </script>
+        <script>
+            gsap.set('.headline__tit', {
+                opacity: 1,
+            });
+            tl.fromTo(
+                '.headline__tit',
+                {
+                    x: -1000,
+                },
+                { x: 0, duration: 0.6 }
+            );
+            tl.fromTo(
+                '.headline__one',
+                {
+                    opacity: 0,
+                    y: 100,
+                },
+                { opacity: 1, y: 0, duration: 0.8 }
+            );
+            tl.fromTo('.headline__desc', { y: -100, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.8');
+            tl.to('.bg-video__content', { y: 0, opacity: 1, duration: 0.5 });
+            tl.fromTo('.headline__btn', { opacity: 0 }, { opacity: 1, duration: 1 });
+            tl.fromTo('.header', { opacity: 0 }, { opacity: 1, duration: 1 }, '-=1');
 
             const lenis = new Lenis({
                 duration: 1.2,

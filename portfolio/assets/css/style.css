@@ -130,6 +130,7 @@ main {
 }
 
 .bg-video__content {
+    opacity: 0;
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -570,7 +571,6 @@ main {
     animation: marquee-r 15s linear infinite;
 }
 .example .example__bottom > span {
-    will-change: transform;
     animation: marquee-a 15s linear infinite;
 }
 
