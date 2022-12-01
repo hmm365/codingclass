@@ -1,0 +1,80 @@
+.text__inner {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+.text__title {
+    width: 30%;
+}
+.text__title span {
+    background: #FF3344;
+    color: #fff;
+    padding: 3px 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.text__title h3 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    word-break: keep-all;
+}
+.text__title p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+.text__text {
+    width: 66%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.text__text .text {
+    width: 46%;
+}
+.text__text .text:nth-child(1){
+    margin-bottom: 60px;
+}
+.text__text .text h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-top: 60px;
+    position: relative;
+}
+.text__text .text h3::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0; top: 0;
+    background-image: url(../img/text_bg01.svg);
+    background-size: 160px;
+}
+.text__text .text:nth-child(1n) h3::before {
+    background-position: 5px 5px;
+    background-color: #D3D8FA;
+}
+.text__text .text:nth-child(2n) h3::before {
+    background-position: -36px 5px;
+    background-color: #CEF6EE;
+}
+.text__text .text:nth-child(3n) h3::before {
+    background-position: -75px 5px;
+    background-color: #F6F4E0;
+}
+.text__text .text:nth-child(4n) h3::before {
+    background-position: -115px 5px;
+    background-color: #F8D1D8;
+}
+.text__text .text p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: justify;
+}

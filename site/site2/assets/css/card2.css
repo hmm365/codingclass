@@ -1,0 +1,39 @@
+.card__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card__inner .card {
+    width: 24%;
+    text-align: left;
+}
+.card__inner .card:nth-child(1){
+    margin-bottom: 50px;
+}
+.card__body {
+    position: relative;
+}
+.card__body h3 {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 20px 0 10px;
+}
+.card__body p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+.card__body a {
+    position: absolute;
+    right: 0; 
+    top: 0;
+    width: 28px; 
+    height: 28px;
+    background: url(../img/card02_arrow.svg);
+    background-size: cover;
+}

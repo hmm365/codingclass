@@ -1,0 +1,53 @@
+.type1 .text__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+}
+.type1 .text__inner .text {
+    width: 32%;
+    background: #fff;
+    padding: 2%;
+    margin-bottom: 2%;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.type1 .text__inner .text h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-top: 60px;
+    position: relative;
+}
+.type1 .text__inner .text h3::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0; top: 0;
+    background-image: url(../img/text_bg01.svg);
+    background-size: 160px;
+}
+.type1 .text__inner .text:nth-child(1n) h3::before {
+    background-position: 5px 5px;
+    background-color: #D3D8FA;
+}
+.type1 .text__inner .text:nth-child(2n) h3::before {
+    background-position: -36px 5px;
+    background-color: #CEF6EE;
+}
+.type1 .text__inner .text:nth-child(3n) h3::before {
+    background-position: -75px 5px;
+    background-color: #F6F4E0;
+}
+.type1 .text__inner .text:nth-child(4n) h3::before {
+    background-position: -115px 5px;
+    background-color: #F8D1D8;
+}
+.type1 .text__inner .text p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: justify;
+}

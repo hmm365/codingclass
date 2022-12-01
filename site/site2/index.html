@@ -4,57 +4,60 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>사이트 만들기2</title>
-        <!-- ICON -->
-        <link rel="icon" href="assets/img/icon.png" />
-        <link rel="shortcut icon" href="assets/img/icon.png" />
-        <!-- SEO -->
-        <meta name="author" content="이중호" />
-        <meta name="Description" content="사이트만들기 튜토리얼" />
-        <meta name="keywords" content="사이트, 만들기, 튜토리얼" />
+        <title>Portfolio</title>
+
+        <!-- SEO(검색엔진최적화) -->
+        <meta name="acthor" content="webstroyboy" />
+        <meta name="description" content="웹 표준을 준수한 사이트입니다." />
+        <meta name="keywords" content="웹표준, 웹접근성, 웹호환성, 사이트제작, 사이트만들기, 포트폴리오" />
         <meta name="robots" content="all" />
-        <!-- CSS -->
-        <link rel="stylesheet" href="assets/css/style.css" />
+
+        <!-- CSS(리셋) -->
+        <link rel="stylesheet" href="assets/css/fonts.css" />
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/common.css" />
+        <link rel="stylesheet" href="assets/css/swiper.css" />
+        <!-- CSS(섹션) -->
+        <link rel="stylesheet" href="assets/css/header2.css" />
+        <!-- 헤더 영역(유형2) -->
+        <link rel="stylesheet" href="assets/css/slider2.css" />
+        <!-- 슬라이드 영역(유형2) -->
+        <link rel="stylesheet" href="assets/css/text2.css" />
+        <!-- 텍스트 영역(유형2) -->
+        <link rel="stylesheet" href="assets/css/image2.css" />
+        <!-- 이미지 영역(유형2) -->
+        <link rel="stylesheet" href="assets/css/card2.css" />
+        <!-- 카드 영역(유형2) -->
+        <link rel="stylesheet" href="assets/css/banner2.css" />
+        <!-- 배너 영역(유형2) -->
+        <link rel="stylesheet" href="assets/css/text3.css" />
+        <!-- 텍스트 영역(유형3) -->
+        <link rel="stylesheet" href="assets/css/footer2.css" />
+        <!-- 푸터 영역(유형2) -->
     </head>
-
     <body>
-        <div id="skip">
-            <a href="#headerType">헤더 영역 바로가기</a>
-            <a href="#sliderType">슬라이드 영역 바로가기</a>
-            <a href="#textType">텍스트 영역 바로가기</a>
-            <a href="#imgType">이미지 영역 바로가기</a>
-            <a href="#cardType">카드 영역 바로가기</a>
-            <a href="#bannerType">배너 영역 바로가기</a>
-            <a href="#textType2">텍스트 영역 바로가기</a>
-            <a href="#footerType">푸터 영역 바로가기</a>
-        </div>
-
-        <header id="headerType" class="header__wrap skyBlue">
+        <header id="headerType" class="header__wrap gmarket gray2">
             <div class="header__inner">
-                <div class="header__logo">
-                    <h1>
-                        <a href="#">Syumay <em>site</em></a>
+                <div class="container">
+                    <h1 class="header__logo blind">
+                        <a href="#">WEB <em>site</em></a>
                     </h1>
-                </div>
-                <nav class="header__menu">
-                    <ul>
-                        <li class="active"><a href="#imgType">이미지 영역</a></li>
-                        <li><a href="#imgTextType">이미지 텍스트 영역</a></li>
-                        <li><a href="#cardType">카드 영역</a></li>
-                        <li><a href="#bannerType">배너 영역</a></li>
-                        <li><a href="#textType">텍스트 영역</a></li>
-                    </ul>
-                </nav>
-                <div class="header__ham">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <!-- <nav class="header__menu">
+                        <h2 class="blind">메인 메뉴</h2>
+                        <ul>
+                            <li><a href="#">레이아웃</a></li>
+                            <li><a href="#">메뉴 영역</a></li>
+                            <li><a href="#">헤더 영역</a></li>
+                            <li><a href="#">컨텐츠 영역</a></li>
+                            <li><a href="#">푸터 영역</a></li>
+                        </ul>
+                    </nav> -->
                 </div>
             </div>
         </header>
         <!-- //headerType -->
 
-        <main id="mainType">
+        <main id="main">
             <section id="sliderType">
                 <h2 class="blind">슬라이드영역</h2>
                 <div class="slider__inner">
@@ -167,47 +170,351 @@
                     </div>
                 </div>
             </section>
-            <!-- //sliderType -->
-            <section id="textType">
-                <div class="container"></div>
+
+            <!-- //슬라이드 유형 -->
+
+            <section id="textType" class="text__wrap section gmarket gray2">
+                <h2 class="blind">텍스트 유형2</h2>
+                <div class="text__inner container type2">
+                    <div class="text__title">
+                        <span>frontent</span>
+                        <h3>프론트앤드 과정</h3>
+                        <p>
+                            프론트앤드 개발자로 취업하기 위한<br />
+                            전문 과정입니다.<br />
+                            여러분들도 도전해보세요!
+                        </p>
+                    </div>
+                    <div class="text__text">
+                        <div class="text">
+                            <h3>웹 디자인</h3>
+                            <p>웹디자이너가 포함된 웹 및 멀티미디어 디자이너는 다른 직업과 비교하여 임금과 복리후생이 낮은 편이다.</p>
+                        </div>
+                        <div class="text">
+                            <h3>웹 퍼블리셔</h3>
+                            <p>퍼블리싱은 웹 사이트를 제작할 때, 웹 디자이너가 디자인한 것을 웹 표준성과 접근성에 부합하도록 재정</p>
+                        </div>
+                        <div class="text">
+                            <h3>프론트앤드 개발자</h3>
+                            <p>사이트와 상호작용하는 모든 부분에 대한 개발, 관리, 유지 보수를 하는 것 솔루션의 프로세스</p>
+                        </div>
+                        <div class="text">
+                            <h3>백앤드 개발자</h3>
+                            <p>용어 자체에서 알 수 있듯이, 백엔드는 웹사이트나 웹 애플리케이션 또는 모바일 솔루션의 프로세스와 관련된입니다.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <!-- //textType -->
-            <section id="imgType"></section>
-            <!-- //imgType -->
-            <section id="cardType"></section>
-            <!-- //cardType -->
-            <section id="bannerType"></section>
-            <!-- //bannerType -->
-            <section id="textType2"></section>
-            <!-- //textType2 -->
-            <section id="footerType"></section>
-            <!-- //footerType -->
+            <!-- //텍스트 영역(유형2) -->
+
+            <section id="imageType" class="image__wrap section gmarket">
+                <h2>고양이 사진</h2>
+                <p>귀여운 고양이들을 소개합니다.</p>
+                <div class="image__inner container">
+                    <ul>
+                        <li>
+                            <img src="assets/img/card_bg01_01.jpg" alt="스터디1" />
+                            <span>
+                                <strong>귀여운 고양이 1세</strong>
+                                <a href="#">자세히 보기</a>
+                            </span>
+                        </li>
+                        <li>
+                            <img src="assets/img/card_bg01_02.jpg" alt="스터디2" />
+                            <span>
+                                <strong>귀여운 고양이 2세</strong>
+                                <a href="#">자세히 보기</a>
+                            </span>
+                        </li>
+                        <li>
+                            <img src="assets/img/card_bg01_03.jpg" alt="스터디3" />
+                            <span>
+                                <strong>귀여운 고양이 3세</strong>
+                                <a href="#">자세히 보기</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- //이미지 영역(유형2) -->
+
+            <section id="cardType" class="card__wrap section gmarket gray2">
+                <h2>강아지 구경하기</h2>
+                <p>여러 종류의 강아지를 볼수있습니다.</p>
+                <div class="card__inner container">
+                    <article class="card">
+                        <div class="card__header">
+                            <img src="assets/img/card_bg02_01.jpg" alt="카드 이미지1" />
+                        </div>
+                        <div class="card__body">
+                            <h3>강아지, 사진</h3>
+                            <p>강아지가 띄어 다니는 사진입니다. 너무 귀여운 강아지를 보며 우리모두......</p>
+                            <a href="#"><span class="blind">더보기</span></a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__header">
+                            <img src="assets/img/card_bg02_02.jpg" alt="카드 이미지2" />
+                        </div>
+                        <div class="card__body">
+                            <h3>강아지, 사진</h3>
+                            <p>강아지가 띄어 다니는 사진입니다. 너무 귀여운 강아지를 보며 우리모두......</p>
+                            <a href="#"><span class="blind">더보기</span></a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__header">
+                            <img src="assets/img/card_bg02_03.jpg" alt="카드 이미지3" />
+                        </div>
+                        <div class="card__body">
+                            <h3>강아지, 사진</h3>
+                            <p>강아지가 띄어 다니는 사진입니다. 너무 귀여운 강아지를 보며 우리모두......</p>
+                            <a href="#"><span class="blind">더보기</span></a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__header">
+                            <img src="assets/img/card_bg02_04.jpg" alt="카드 이미지4" />
+                        </div>
+                        <div class="card__body">
+                            <h3>강아지, 사진</h3>
+                            <p>강아지가 띄어 다니는 사진입니다. 너무 귀여운 강아지를 보며 우리모두......</p>
+                            <a href="#"><span class="blind">더보기</span></a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__header">
+                            <img src="assets/img/card_bg02_05.jpg" alt="카드 이미지5" />
+                        </div>
+                        <div class="card__body">
+                            <h3>강아지, 사진</h3>
+                            <p>강아지가 띄어 다니는 사진입니다. 너무 귀여운 강아지를 보며 우리모두......</p>
+                            <a href="#"><span class="blind">더보기</span></a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__header">
+                            <img src="assets/img/card_bg02_06.jpg" alt="카드 이미지6" />
+                        </div>
+                        <div class="card__body">
+                            <h3>강아지, 사진</h3>
+                            <p>강아지가 띄어 다니는 사진입니다. 너무 귀여운 강아지를 보며 우리모두......</p>
+                            <a href="#"><span class="blind">더보기</span></a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__header">
+                            <img src="assets/img/card_bg02_07.jpg" alt="카드 이미지7" />
+                        </div>
+                        <div class="card__body">
+                            <h3>강아지, 사진</h3>
+                            <p>강아지가 띄어 다니는 사진입니다. 너무 귀여운 강아지를 보며 우리모두......</p>
+                            <a href="#"><span class="blind">더보기</span></a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__header">
+                            <img src="assets/img/card_bg02_08.jpg" alt="카드 이미지8" />
+                        </div>
+                        <div class="card__body">
+                            <h3>강아지, 사진</h3>
+                            <p>강아지가 띄어 다니는 사진입니다. 너무 귀여운 강아지를 보며 우리모두......</p>
+                            <a href="#"><span class="blind">더보기</span></a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- //카드 영역(유형2)-->
+
+            <section id="bannerType" class="banner__wrap section gmarket">
+                <h2 class="blind">배너 영역</h2>
+                <div class="banner__inner container">
+                    <h3>동물 유튜브</h3>
+                    <p>
+                        더 다양한 강의는 유튜브를 통해 제공하고 있습니다.<br />
+                        구독과 좋아요! 부탁드립니다.
+                    </p>
+                    <a href="#">바로가기</a>
+                    <span class="img1"><img src="assets/img/banner02_icon01.png" alt="유튜브" /></span>
+                    <span class="img2"><img src="assets/img/slider_bg07.png" alt="유튜브" /></span>
+                </div>
+                <div class="banner__dot">
+                    <span class="circle1" aria-hidden="true"></span>
+                    <span class="circle2" aria-hidden="true"></span>
+                    <span class="circle3" aria-hidden="true"></span>
+                    <span class="circle4" aria-hidden="true"></span>
+                    <span class="circle5" aria-hidden="true"></span>
+                    <span class="circle6" aria-hidden="true"></span>
+                </div>
+            </section>
+            <!-- //배너 영역(유형2) -->
+
+            <section id="textType" class="review__wrap section gray2 gmarket">
+                <h2>강아지 후기</h2>
+                <p>사진을 봐주셔서 감사해요😍 정성스러운 후기 감사합니다.</p>
+                <div class="review__inner container">
+                    <article class="review">
+                        <p class="review__desc nexon">
+                            “랑이야! 생일 축하해. 진심으로 고맙고 사랑해.” 펫프렌즈는 내 반려동물의 생일날 축하 영상을 보내주고, 편지와 할인 쿠폰까지 보내준다.
+                            더 감동했던 포인트는 이 모든 것이 내가 아니라 철저하게 내 반려동물이 주인공이었던 사실. 이러니 펫프렌즈에 반하나, 안 반하나! 24시간
+                            30초 안에 반려동물 상담을 해주지 않나, 철저한 기준을 통과한 제품만을 모아놓는 똥고집 서비스를 내놓지 않나. 반려동물에 진심이 아니면
+                            절대 만들 수 없는 기발한 서비스로 무장한 반려동물 전문 커머스 펫프렌즈를 소개한다.
+                        </p>
+                        <div class="review__info icon1">
+                            <h3>이태용 <em>웹스 24기</em></h3>
+                            <div class="star">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="review__more"><a href="#">자세히 보기</a></div>
+                    </article>
+                    <article class="review">
+                        <p class="review__desc nexon">
+                            ‘펫프렌즈’는 반려동물과 함께하는 사람의 필수 앱입니다. 반려동물을 키우고 있다면 여기저기 떠돌필요 없이 펫프렌즈 하나에서 모두 해결할
+                            수 있어 모든 멍집사, 냥집사에겐 만능 커머스라고 할 수 있어요. 2015년 반려동물을 걱정하는 마음에 공감해 원하는 시간에 배송하는
+                            ‘심쿵배송 서비스’를 시작한 이후, 새벽배송 서비스를 필두로 다양한 고객 서비스를 제공하고 있어요. 최근 GS리테일과 사모펀드
+                            IMM프라이빗에쿼티(IMM PE)이 함께 펫프렌즈를 공동인수했어요. GS리테일은 2017년 7월을 시작으로 펫프렌즈에 세 차례에 걸쳐 50억원을
+                            투자한 끝에 인수를 결정했다고 해요.
+                        </p>
+                        <div class="review__info icon2">
+                            <h3>이희진 <em>웹스 24기</em></h3>
+                            <div class="star">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span class="not"></span>
+                            </div>
+                        </div>
+                        <div class="review__more"><a href="#">자세히 보기</a></div>
+                    </article>
+                    <article class="review">
+                        <p class="review__desc nexon">
+                            최근 반려동물 관련 서비스와 브랜드가 정말 많아졌어요. 그중에서도 펫프렌즈는 반려동물에 진심이구나를 느낀 포인트가 있습니다. 바로
+                            ‘생일 축하 영상’인데요. 펫프렌즈 회원 가입할 때 반려동물의 생일을 등록하는데, 생일날 축하 영상과 편지를 줘요. 진심으로 고맙고,
+                            사랑한다는 내용과 함께 할인 쿠폰도 증정되죠. 어떻게 보면 많은 서비스에서 일반적으로 주는 생일 축하 쿠폰이지만 그 대상이
+                            반련동물이라는 점, 직원이 축하 영상을 찍었다는 점이 정말 사랑스러운 포인트였답니다. 반려인들이 반려동물을 얼마나 아끼는지 공감하기
+                            때문에 나올 수 있는 서비스라고 생각해요.
+                        </p>
+                        <div class="review__info icon3">
+                            <h3>정승연 <em>웹스 24기</em></h3>
+                            <div class="star">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="review__more"><a href="#">자세히 보기</a></div>
+                    </article>
+                </div>
+            </section>
+            <!-- //텍스트 유형 -->
         </main>
-        <!-- //main -->
 
-        <footer id="footerType">
-            <h2 class="blind">푸터영역</h2>
+        <footer id="footerType" class="footer__wrap section nexon">
+            <h2 class="blind">푸터 영역</h2>
+            <div class="footer__inner container">
+                <div class="footer__logo">
+                    <h3>happyham52</h3>
+                    <p>
+                        안녕하세요!<br />
+                        문의사항은 메일로 부탁드립니다.<br />
+                        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+                    </p>
+                    <div class="sns">
+                        <ul>
+                            <li>
+                                <a href="#"><span class="blind">페이스북</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="blind">인스타</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="blind">유튜브</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="blind">깃헙</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="blind">디스코드</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__menu">
+                    <div>
+                        <h3>레이아웃 영역</h3>
+                        <ul>
+                            <li><a href="#">레이아웃 유형01</a></li>
+                            <li><a href="#">레이아웃 유형02</a></li>
+                            <li><a href="#">레이아웃 유형03</a></li>
+                            <li><a href="#">레이아웃 유형04</a></li>
+                            <li><a href="#">레이아웃 유형05</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>메인 영역</h3>
+                        <ul>
+                            <li><a href="#">이미지 유형01</a></li>
+                            <li><a href="#">동영상 유형02</a></li>
+                            <li><a href="#">슬라이드 유형03</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>컨텐츠 영역</h3>
+                        <ul>
+                            <li><a href="#">텍스트 유형01</a></li>
+                            <li><a href="#">이미지 유형02</a></li>
+                            <li><a href="#">이미지/텍스트03</a></li>
+                            <li><a href="#">카드 유형04</a></li>
+                            <li><a href="#">배너 유형05</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>푸터 영역</h3>
+                        <ul>
+                            <li><a href="#">컨택트 유형01</a></li>
+                            <li><a href="#">푸터 유형02</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>사이트 영역</h3>
+                        <ul>
+                            <li><a href="#">웹표준 사이트</a></li>
+                            <li><a href="#">반응형 사이트</a></li>
+                            <li><a href="#">패럴랙스 사이트</a></li>
+                            <li><a href="#">포트폴리오 사이트</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <address class="footer__right">©2022 webstroyboy. All rights reserved.</address>
+            </div>
         </footer>
-        <!-- //footer -->
-
-        <!-- script -->
+        <!-- //푸터 영역(유형2) -->
         <script src="assets/js/swiper.js"></script>
         <script>
-            var swiper = new Swiper(".mySwiper", {
+            var swiper = new Swiper('.mySwiper', {
                 navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
                 },
                 autoplay: {
                     delay: 2000,
                     disableOnInteraction: true,
                 },
                 pagination: {
-                    el: ".swiper-pagination",
-                    type: "bullets",
-                    clickable: "true",
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                    clickable: 'true',
                 },
             });
         </script>
+        <!-- script -->
     </body>
 </html>

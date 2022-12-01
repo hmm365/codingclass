@@ -1,0 +1,27 @@
+.header__inner {
+    padding: 0 20px;
+    text-align: center;
+}
+.header__logo a {
+    font-size: 30px;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px 0;
+    display: inline-block;
+}
+.header__menu {
+    text-align: center;
+}
+.header__menu li {
+    display: inline;
+}
+.header__menu li a {
+    padding: 10px 5%;
+    display: inline-block;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.header__menu li a:hover {
+    background: #fff;
+}

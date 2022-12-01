@@ -1,0 +1,81 @@
+.review__inner {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+.review__inner .review {
+    width: 32%;
+    background: #fff;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.review__desc {
+    font-size: 18px;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 20px;
+}
+.review__info {
+    padding-left: 60px;
+    position: relative;
+}
+.review__info:before {
+    content: '';
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.review__info.icon1:before {
+    background: url(../img/text03_icon01.png);
+    background-size: cover;
+}
+.review__info.icon2:before {
+    background: url(../img/text03_icon02.png);
+    background-size: cover;
+}
+.review__info.icon3:before {
+    background: url(../img/text03_icon03.png);
+    background-size: cover;
+}
+.review__info h3 {
+    font-size: 26px;
+    font-weight: 500;
+}
+.review__info h3 em {
+    font-size: 16px;
+    font-weight: 300;
+}
+.review__info .star span {
+    display: inline-block;
+    width: 17px;
+    height: 16px;
+    background: url(../img/text03_star.svg);
+    margin-top: 5px;
+}
+.review__info .star span.not {
+    background-position: -19px 0;
+}
+.review__more {
+    margin-top: 20px;
+    text-align: center;
+    border-top: 1px solid #d9d9d9;
+    padding-top: 20px;
+}
+.review__more a {
+    background: #4857ec;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+}

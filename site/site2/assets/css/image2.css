@@ -1,0 +1,51 @@
+.image__inner ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.image__inner ul li {
+    width: 32%;
+    position: relative;
+}
+.image__inner ul li img {
+    height: 100%;
+}
+.image__inner ul li span {
+    position: absolute;
+    left: 0; 
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+}
+.image__inner ul li strong {
+    font-size: 24px;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.image__inner ul li:nth-child(1) span {
+    background: rgba(277, 77, 74, 0.5);
+    color: #6C0506;
+}
+.image__inner ul li:nth-child(1) span a {
+    color: #6C0506;
+}
+.image__inner ul li:nth-child(2) span {
+    background: rgba(255, 208, 89, 0.5);
+    color: #745A00;
+}
+.image__inner ul li:nth-child(2) span a {
+    color: #745A00;
+}
+.image__inner ul li:nth-child(3) span {
+    background: rgba(188, 181, 215, 0.5);
+    color: #D0C8FF;
+}
+.image__inner ul li:nth-child(3) span a {
+    color: #D0C8FF;
+}
+
+
+

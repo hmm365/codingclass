@@ -510,9 +510,8 @@
                 return charsArray;
             };
 
-            const chars = splitText('.loader__item--c');
             var tl = gsap.timeline({ repeat: 0, repeatDelay: 0 });
-
+            const chars = splitText('.loader__item--c');
             tl.to('.loader__item--c', { opacity: 1, duration: 0 });
             tl.from(
                 chars,
@@ -628,14 +627,14 @@
                 duration: 0.5,
             });
             tl.to('.loader__item--ec', {
-                scale: 80,
-                duration: 0.5,
+                scale: 40,
+                duration: 0.8,
             });
             tl.to(
                 '.loader__item--ec',
                 {
                     opacity: 0,
-                    duration: 0.5,
+                    duration: 0.8,
                 },
                 '-=0.3'
             );
@@ -643,6 +642,7 @@
                 className: 'dnone',
             });
         </script>
+        <!-- loader -->
         <script>
             gsap.set('.headline__tit', {
                 opacity: 1,

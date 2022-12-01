@@ -1,0 +1,19 @@
+.image__inner.type3 ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.image__inner.type3 li {
+    width: 32%;
+    background-size: 100%;
+    position: relative;
+    perspective: 800px;
+}
+.image__inner.type3 em {
+    display: block;
+    padding: 20px 20px 10px 20px;
+    font-size: 20px;
+}
+.image__inner.type3 a {
+    font-weight: 300;
+}
