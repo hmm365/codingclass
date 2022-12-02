@@ -89,7 +89,12 @@
                             어떤 일이라도 노력하고 즐기면<br />
                             그 결과는 빛을 바란다고 생각합니다.
                         </p>
-                        <button class="headline__btn">SCROLL</button>
+                        <button type="button" class="headline__btn">SCROLL</button>
+                        <script>
+                            document.querySelector('.headline__btn').addEventListener('click', () => {
+                                document.querySelector('.profile').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+                            });
+                        </script>
                     </div>
                 </div>
                 <div class="bg-video">
@@ -786,6 +791,9 @@
             });
 
             function horiz(sections, pam) {
+                gsap.set(sections, {
+                    scale: 0.5,
+                });
                 gsap.to(sections, {
                     xPercent: -100 * (sections.length - 1),
                     ease: 'none',
@@ -794,9 +802,10 @@
                         trigger: pam,
                         pin: true,
                         scrub: 1,
-                        end: '+=4000',
+                        end: '+=10000',
                         markers: true,
                     },
+                    scale: 1,
                 });
             }
 
