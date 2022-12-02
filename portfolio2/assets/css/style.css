@@ -771,6 +771,7 @@ main {
     }
     .project .desc__info h2 {
         font-size: 11vw;
+        margin-bottom: 1%;
     }
     .project .desc__info p {
         font-size: 3.5vw;
@@ -802,6 +803,9 @@ main {
         font-size: 3.5vw;
     }
 
+    .connect__info h2 {
+        font-size: 120px;
+    }
     .footer__info {
         flex-direction: column;
     }
