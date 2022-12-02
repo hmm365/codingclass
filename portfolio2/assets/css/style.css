@@ -714,11 +714,14 @@ main {
         font-size: 8vw;
     }
     .growing__desc p {
-        margin-top: 10px;
+        margin-top: 30px;
         margin-left: 8px;
         width: 100%;
         font-size: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+    }
+    .growing__desc p:last-child {
+        margin-top: 0;
     }
 }
 @media (max-width: 750px) {
