@@ -153,6 +153,7 @@ table {
 
 body::-webkit-scrollbar {
     width: 8px; /* 스크롤바의 너비 */
+    /* display: none; */
 }
 
 body::-webkit-scrollbar-thumb {
@@ -163,5 +164,5 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0);
+    background: #000;
 }
