@@ -790,10 +790,21 @@
                 opacity: 1,
             });
 
-            function horiz(sections, pam) {
-                gsap.set(sections, {
-                    scale: 0.5,
+            document.querySelectorAll('.card').forEach((el) => {
+                gsap.to(el, {
+                    ease: 'none',
+                    scrollTrigger: {
+                        start: 'top 10%',
+                        trigger: el,
+                        pin: true,
+                        scrub: 1,
+                        end: 'bottom 10%',
+                        markers: true,
+                    },
                 });
+            });
+
+            function horiz(sections, pam) {
                 gsap.to(sections, {
                     xPercent: -100 * (sections.length - 1),
                     ease: 'none',
@@ -805,7 +816,6 @@
                         end: '+=10000',
                         markers: true,
                     },
-                    scale: 1,
                 });
             }
 
