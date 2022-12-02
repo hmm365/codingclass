@@ -678,11 +678,11 @@ main {
         font-size: 16vw;
     }
     .headline__info p {
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
     .headline__info button {
         width: 30vw;
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
     .about {
         padding: 100px 0;
@@ -725,14 +725,15 @@ main {
     .about {
         padding: 50px 0;
     }
-    .connect .bulidUp__info h2 {
+    .bulidUp__info h2 {
         font-size: 14vw;
+        text-align: left;
     }
     .bulidUp__info h2 span {
         font-size: 12vw;
     }
     .bulidUp__info p {
-        font-size: 3vw;
+        font-size: 3.5vw;
         text-align: left;
     }
     .profile {
@@ -748,7 +749,10 @@ main {
     .skillUp__info__subtit,
     .skillUp__info__lang,
     .skillUp__info__desc {
-        font-size: 3vw;
+        font-size: 3.5vw;
+    }
+    .hole {
+        display: none;
     }
     .example {
         padding: 0;
@@ -769,7 +773,7 @@ main {
         font-size: 11vw;
     }
     .project .desc__info p {
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
     .studyWork {
         padding: 50px 0;
@@ -778,24 +782,24 @@ main {
         margin-bottom: 50px;
     }
     .study__title p {
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
 
     .stusys ul li h3 {
         font-size: 5vw;
     }
     .stusys ul li h3 span {
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
     .stusys ul li a {
         padding: 10px 40px;
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
     .growing {
         padding: 50px 0;
     }
     .growing__desc p {
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
 
     .footer__info {
