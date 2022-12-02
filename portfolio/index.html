@@ -790,19 +790,19 @@
                 opacity: 1,
             });
 
-            document.querySelectorAll('.card').forEach((el) => {
-                gsap.to(el, {
-                    ease: 'none',
-                    scrollTrigger: {
-                        start: 'top 10%',
-                        trigger: el,
-                        pin: true,
-                        scrub: 1,
-                        end: 'bottom 10%',
-                        markers: true,
-                    },
-                });
-            });
+            // document.querySelectorAll('.card').forEach((el) => {
+            //     gsap.to(el, {
+            //         ease: 'none',
+            //         scrollTrigger: {
+            //             start: 'top 10%',
+            //             trigger: el,
+            //             pin: true,
+            //             scrub: 1,
+            //             end: 'bottom 10%',
+            //             markers: true,
+            //         },
+            //     });
+            // });
 
             function horiz(sections, pam) {
                 gsap.to(sections, {
