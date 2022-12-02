@@ -163,5 +163,5 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-track {
-    background: #000;
+    background-color: rgba(0, 0, 0, 0);
 }
