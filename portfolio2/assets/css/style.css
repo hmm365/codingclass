@@ -751,6 +751,10 @@ main {
     .skillUp__info__desc {
         font-size: 3.5vw;
     }
+    .skillUp__info a {
+        font-size: 3.5vw;
+        width: 50%;
+    }
     .hole {
         display: none;
     }
@@ -793,8 +797,8 @@ main {
         font-size: 3.5vw;
     }
     .stusys ul li a {
-        padding: 10px 40px;
-        font-size: 3.5vw;
+        padding: 10px 30px;
+        font-size: 3vw;
     }
     .growing {
         padding: 50px 0;
@@ -808,6 +812,7 @@ main {
     }
     .footer__info {
         flex-direction: column;
+        margin-bottom: 50px;
     }
     .footer__info h2 {
         margin-bottom: 20px;
