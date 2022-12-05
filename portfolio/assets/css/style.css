@@ -372,6 +372,7 @@ main {
     vertical-align: top;
     object-fit: cover;
     object-position: center center;
+    opacity: 0.6;
 }
 .siteImg .num {
     font-family: var(--Poppins);
@@ -381,7 +382,8 @@ main {
     line-height: 93%;
     color: #d9d9d9;
     top: -7%;
-    right: 4%;
+    right: 5%;
+    z-index: 20;
 }
 
 .project .desc__info {
@@ -674,8 +676,9 @@ main {
         display: block;
     }
     .project__card__inner {
-        white-space: inherit;
         height: auto;
+        flex-wrap: wrap;
+        gap: 0;
     }
     .project__card__inner .card {
         margin-right: 0;
@@ -684,12 +687,14 @@ main {
     .siteImg {
         width: 100%;
         margin-right: 0;
+        right: 0;
     }
     .siteImg img {
         width: 94%;
     }
     .siteImg .num {
-        right: -1%;
+        right: 0;
+        top: -5%;
     }
 
     .card .desc__info {
