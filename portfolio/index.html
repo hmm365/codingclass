@@ -628,7 +628,7 @@
         </script>
 
         <script>
-            var tl = gsap.timeline({ repeat: 0, repeatDelay: 0 });
+            // var tl = gsap.timeline({ repeat: 0, repeatDelay: 0 });
             gsap.registerPlugin(ScrollTrigger);
             ScrollTrigger.saveStyles('.mobile, .desktop');
             const lenis = new Lenis({
@@ -641,9 +641,6 @@
                 requestAnimationFrame(raf);
             }
             requestAnimationFrame(raf);
-            const cards = document.querySelectorAll('.card1 .card');
-            const card1 = cards[0].querySelector('.desc__info');
-            console.log(cards[0].querySelector('.desc__info'));
 
             ScrollTrigger.matchMedia({
                 '(min-width: 1100px)': function () {
