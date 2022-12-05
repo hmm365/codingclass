@@ -88,11 +88,13 @@ main {
 }
 
 .headline__info h2 span {
+    font-family: var(--Poppins);
     display: flex;
     font-weight: 100;
     color: #ffffff;
 }
 .headline__info h2 strong {
+    font-family: var(--Poppins);
     display: flex;
 }
 .headline__info p {
@@ -151,7 +153,6 @@ main {
 }
 .bulidUp {
     position: relative;
-    padding-bottom: 530px;
 }
 
 .bulidUp__info {
@@ -159,7 +160,13 @@ main {
     z-index: 10;
     width: 100%;
 }
+.bulidUp__info::after {
+    content: '';
 
+    display: block;
+
+    clear: both;
+}
 .bulidUp__info h2 {
     font-weight: 500;
     font-size: 100px;
@@ -183,6 +190,9 @@ main {
     text-align: right;
     color: #ffffff;
     opacity: 0;
+    width: 100%;
+    word-break: keep-all;
+    float: right;
 }
 
 .skillUp {
@@ -250,13 +260,12 @@ main {
     color: #ffffff;
 }
 .profile {
-    position: absolute;
+    position: relative;
+    display: block;
     z-index: 10;
-    top: 45%;
-    left: 50%;
     width: 398px;
-    transform: translate(-50%, -50%);
     opacity: 0;
+    margin: 10% auto;
 }
 .hole {
     position: absolute;
@@ -307,33 +316,85 @@ main {
 }
 
 /* //example */
-
+.desktop {
+    position: relative;
+    box-sizing: content-box;
+}
 .project {
     padding: 150px 0;
-    width: 100%;
-    overflow: hidden;
+    /* width: 100%; */
+    /* overflow: hidden; */
 }
 .project__card__conts {
-    width: 100%;
-
-    padding: 100px 0;
+    /* width: 100%; */
+    margin-bottom: 10vh;
+}
+.project__card__wrap {
 }
 .project__card__inner {
-    white-space: nowrap;
+    /* white-space: nowrap; */
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    gap: 30vw;
+}
+
+.nobox {
+    width: 100vw;
+    height: 20vh;
+    background: #000;
+}
+.project__card__in {
+    width: 100vw;
+    height: 100%;
 }
 .project__card__inner .card {
-    display: inline-block;
-    width: 100vw;
-    padding: 10% 0;
+    width: 95vw;
+    height: 100%;
     position: relative;
-    align-items: center;
+}
+
+.project__inner {
+    white-space: nowrap;
+}
+.siteImg {
+    width: 80%;
+    height: 80vh;
+    /* opacity: 0.4; */
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.siteImg img {
+    width: 90%;
+    height: 90%;
+    vertical-align: top;
+    object-fit: cover;
+    object-position: center center;
+}
+.siteImg .num {
+    font-family: var(--Poppins);
+    position: absolute;
+    font-weight: 100;
+    font-size: 130px;
+    line-height: 93%;
+    color: #d9d9d9;
+    top: -7%;
+    right: 4%;
 }
 
 .project .desc__info {
-    position: relative;
-    padding-top: 15%;
-    z-index: 10;
+    /* margin-top: 30vh; */
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    z-index: 20;
 }
+.mobiles {
+    display: none;
+}
+
 .project .desc__info h2 {
     font-family: var(--Poppins);
     font-weight: 900;
@@ -355,29 +416,6 @@ main {
     opacity: 0.8;
     margin-left: 5px;
 }
-.card .num {
-    position: absolute;
-    font-family: var(--Poppins);
-    top: -6vh;
-    right: 8vw;
-    font-weight: 100;
-    font-size: 130px;
-    line-height: 93%;
-    color: #d9d9d9;
-    z-index: 10;
-}
-.siteImg {
-    width: 80%;
-    position: absolute;
-    top: 0;
-    left: 10vw;
-    z-index: 1;
-    opacity: 0.5;
-}
-.siteImg img {
-    width: 100%;
-    vertical-align: top;
-}
 
 /* //project */
 
@@ -390,12 +428,13 @@ main {
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 150px;
+    justify-content: space-between;
 }
 .study__title h2 {
-    font-weight: 500;
     font-size: 100px;
     line-height: 115%;
     font-weight: 600;
+    width: 40%;
 }
 .study__title h2 span {
     display: block;
@@ -409,6 +448,8 @@ main {
     opacity: 0.8;
     margin-bottom: 10px;
     font-weight: 300;
+    width: 50%;
+    word-break: keep-all;
 }
 
 .stusys ul {
@@ -619,4 +660,215 @@ main {
 .headline__info .headline__btn,
 .header {
     opacity: 0;
+}
+@media (max-width: 1300px) {
+    .connect__info h3 {
+        font-size: 13vw;
+    }
+}
+@media (max-width: 1099px) {
+    .desktop {
+        display: none;
+    }
+    .mobiles {
+        display: block;
+    }
+    .project__card__inner {
+        white-space: inherit;
+        height: auto;
+    }
+    .project__card__inner .card {
+        margin-right: 0;
+        height: 95vh;
+    }
+    .siteImg {
+        width: 100%;
+        margin-right: 0;
+    }
+    .siteImg img {
+        width: 94%;
+    }
+    .siteImg .num {
+        right: -1%;
+    }
+
+    .card .desc__info {
+    }
+
+    .connect__info h2 {
+        font-size: 150px;
+    }
+
+    .footer__info h2 {
+        width: auto;
+    }
+    .footer__info > ul {
+        width: auto;
+    }
+}
+@media (max-width: 970px) {
+    .second__container {
+        width: 90%;
+    }
+    .headline {
+        height: 100vh;
+    }
+    .headline__info h2 {
+        font-size: 16vw;
+    }
+    .headline__info p {
+        font-size: 3.5vw;
+    }
+    .headline__info button {
+        width: 30vw;
+        font-size: 3.5vw;
+    }
+    .about {
+        padding: 100px 0;
+    }
+    .studyWork {
+        padding: 100px 0;
+    }
+    .study__title {
+        flex-wrap: wrap;
+    }
+    .study__title h2 {
+        font-size: 12vw;
+    }
+    .study__title h2 span {
+        font-size: 8vw;
+    }
+    .study__title p {
+        padding-top: 20px;
+        width: 100%;
+        text-align: left;
+    }
+    .growing {
+        padding: 100px 0;
+    }
+    .growing__info h2 {
+        font-size: 12vw;
+    }
+    .growing__info h2 span {
+        font-size: 8vw;
+    }
+    .growing__desc p {
+        margin-top: 30px;
+        margin-left: 8px;
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .growing__desc p:last-child {
+        margin-top: 0;
+    }
+}
+@media (max-width: 750px) {
+    .about {
+        padding: 50px 0;
+    }
+    .bulidUp__info h2 {
+        font-size: 14vw;
+        text-align: left;
+    }
+    .bulidUp__info h2 span {
+        font-size: 12vw;
+    }
+    .bulidUp__info p {
+        font-size: 3.5vw;
+        text-align: left;
+    }
+    .profile {
+        width: 50vw;
+    }
+
+    .skillUp__info h2 {
+        font-size: 14vw;
+    }
+    .skillUp__info h2 span {
+        font-size: 12vw;
+    }
+    .skillUp__info__subtit,
+    .skillUp__info__lang,
+    .skillUp__info__desc {
+        font-size: 3.5vw;
+    }
+    .skillUp__info a {
+        font-size: 3.5vw;
+        width: 50%;
+    }
+    .hole {
+        display: none;
+    }
+    .example {
+        padding: 0;
+    }
+    .example span {
+        font-size: 12vw;
+    }
+    .project {
+        padding: 100px 0;
+    }
+    .project__card__inner .card {
+        padding: 100px 0;
+    }
+    .siteImg .num {
+        font-size: 11vw;
+    }
+    .project .desc__info h2 {
+        font-size: 11vw;
+        margin-bottom: 1%;
+    }
+    .project .desc__info p {
+        font-size: 3.5vw;
+    }
+    .studyWork {
+        padding: 50px 0;
+    }
+    .study__title {
+        margin-bottom: 50px;
+    }
+    .study__title p {
+        font-size: 3.5vw;
+    }
+
+    .stusys ul li h3 {
+        font-size: 5vw;
+    }
+    .stusys ul li h3 span {
+        font-size: 3.5vw;
+    }
+    .stusys ul li a {
+        padding: 10px 30px;
+        font-size: 3vw;
+    }
+    .growing {
+        padding: 50px 0;
+    }
+    .growing__desc p {
+        font-size: 3.5vw;
+    }
+
+    .connect__info h2 {
+        font-size: 120px;
+    }
+    .footer__info {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    .footer__info h2 {
+        margin-bottom: 20px;
+    }
+    .footer__info h2 a {
+        margin-bottom: 20px;
+    }
+    .footer__info > ul > li {
+        margin-bottom: 20px;
+    }
+    .footer_btn a {
+        margin-bottom: 20px;
+    }
+    .footer_btn a:last-child {
+        margin-bottom: 0;
+    }
 }
