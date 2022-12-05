@@ -15,20 +15,27 @@
     z-index: 1000;
     background-color: var(--black);
     color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .loader__cols {
     display: flex;
     justify-content: space-between;
+    /* justify-content: space-around; */
     gap: 1.0416666667vw;
-    height: 100vh;
+
+    width: 97vw;
     height: var(--vh);
+    align-items: center;
 }
 .loader__col {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
-    height: var(--vh);
+    /* justify-content: space-around; */
+    height: 95vh;
+    /* height: var(--vh); */
 }
 /* .loader__col--1 {
     position: absolute;
@@ -50,7 +57,7 @@
     transform: translate(-50%);
 } */
 .loader__item {
-    font-size: 3.6458333333vw;
+    font-size: 2.6458333333vw;
     line-height: 1em;
     white-space: nowrap;
     opacity: 0;
