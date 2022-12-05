@@ -573,6 +573,10 @@ main {
 .footer__info a {
     color: #fff;
 }
+.footer__info button {
+    color: #fff;
+    cursor: pointer;
+}
 .footer__info h2 {
     width: 40%;
 }
@@ -583,9 +587,17 @@ main {
     text-transform: uppercase;
     color: #ffffff;
 }
+.footer__info h2 button {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 112.5%;
+    text-transform: uppercase;
+    color: #ffffff;
+}
 .footer__info > ul {
     width: 20%;
 }
+
 .footer__info > ul > li > span {
     font-weight: 300;
     font-size: 18px;
@@ -598,6 +610,12 @@ main {
     font-weight: 400;
     font-size: 20px;
     line-height: 146%;
+}
+.footer__info > ul > li > ul > li {
+    color: #ffffff;
+}
+.mb-20 {
+    margin-bottom: 20px;
 }
 .footer_btn a {
     display: inline-block;
@@ -612,6 +630,7 @@ main {
     color: #ffffff;
     margin-right: 30px;
 }
+
 /* //footer__info */
 
 .example .example__top > span {

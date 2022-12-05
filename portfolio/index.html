@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="./assets/css/loader.css" />
     </head>
     <body>
-        <div class="loader">
+        <div class="loader dnone">
             <div class="loader__cols">
                 <div class="loader__col loader__col--1">
                     <div class="loader__item dope">Syumay ®</div>
@@ -89,11 +89,6 @@
                             그 결과는 빛을 발한다고 생각합니다.
                         </p>
                         <button type="button" class="headline__btn">SCROLL</button>
-                        <script>
-                            document.querySelector('.headline__btn').addEventListener('click', () => {
-                                document.querySelector('.profile').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
-                            });
-                        </script>
                     </div>
                 </div>
                 <div class="bg-video">
@@ -604,17 +599,17 @@
             <section class="footer">
                 <div class="second__container">
                     <div class="footer__info">
-                        <h2><a href="#">SYUMAY</a></h2>
+                        <h2><button class="scrollUpmain">SYUMAY</button></h2>
                         <ul>
                             <li>
                                 <span>About</span>
-                                <ul>
-                                    <li><a href="#">Protfolio</a></li>
-                                    <li><a href="#">Bulid up</a></li>
-                                    <li><a href="#">Skill Up</a></li>
-                                    <li><a href="#">Project Work</a></li>
-                                    <li><a href="#">Study Work</a></li>
-                                    <li><a href="#">Footer</a></li>
+                                <ul class="scrollUpBtn">
+                                    <li><button>Protfolio</button></li>
+                                    <li><button>Bulid up</button></li>
+                                    <li><button>Skill Up</button></li>
+                                    <li><button>Project Work</button></li>
+                                    <li><button>Study Work</button></li>
+                                    <li><button>Growing</button></li>
                                 </ul>
                             </li>
                         </ul>
@@ -622,11 +617,11 @@
                             <li>
                                 <span>Connect</span>
                                 <ul>
-                                    <li><a href="#">이중호</a></li>
-                                    <li><a href="#">LeeJungHo</a></li>
+                                    <li>이중호</li>
+                                    <li class="mb-20">LeeJungHo</li>
 
-                                    <li><a href="#">happyham52@gmail.com</a></li>
-                                    <li><a href="#">syumay.tistoty.com</a></li>
+                                    <li><a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a></li>
+                                    <li><a href="https://syumay.tistory.com/">syumay.tistoty.com</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -647,7 +642,6 @@
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-
         <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
         <script>
             const splitText = (selector) => {
@@ -834,9 +828,41 @@
                 className: 'dnone',
             });
         </script>
-
         <script>
-            var tl = gsap.timeline({ repeat: 0, repeatDelay: 0 });
+            document.querySelector('.headline__btn').addEventListener('click', () => {
+                document.querySelector('.profile').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+            });
+            document.querySelectorAll('.scrollUpBtn > li > button').forEach((e, inx) => {
+                e.addEventListener('click', () => {
+                    console.log(inx);
+                    switch (inx) {
+                        case 0:
+                            document.querySelector('.headline').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+                            break;
+                        case 1:
+                            document.querySelector('.bulidUp').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+                            break;
+                        case 2:
+                            document.querySelector('.skillUp').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+                            break;
+                        case 3:
+                            document.querySelector('.project').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+                            break;
+                        case 4:
+                            document.querySelector('.studyWork').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+                            break;
+                        case 5:
+                            document.querySelector('.growing').scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+                            break;
+                        default:
+                            break;
+                    }
+                });
+            });
+        </script>
+        <script>
+            // var tl = gsap.timeline({ repeat: 0, repeatDelay: 0 });
+
             gsap.registerPlugin(ScrollTrigger);
             ScrollTrigger.saveStyles('.mobile, .desktop');
             const lenis = new Lenis({
@@ -1254,9 +1280,6 @@
                     });
                 },
             });
-
-            // horiz(gsap.utils.toArray('.card3 .card'), '.card3');
-            // horiz(gsap.utils.toArray('.card4 .card'), '.card4');
         </script>
     </body>
 </html>
