@@ -417,6 +417,7 @@ main {
     color: #ffffff;
     opacity: 0.8;
     margin-left: 5px;
+    word-break: keep-all;
 }
 
 /* //project */
