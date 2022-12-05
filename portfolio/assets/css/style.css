@@ -372,7 +372,7 @@ main {
     vertical-align: top;
     object-fit: cover;
     object-position: center center;
-    opacity: 0.6;
+    opacity: 0.4;
 }
 .siteImg .num {
     font-family: var(--Poppins);
