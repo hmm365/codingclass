@@ -1,293 +1,161 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>연예인 정보</title>
-        <style>
-            * {
-                box-sizing: border-box;
-                padding: 0;
-                margin: 0;
-            }
-            img {
-                width: 100%;
-                vertical-align: top;
-            }
-            body {
-                width: 100%;
-                height: 100vh;
-                overflow: hidden;
-            }
-            #header {
-                width: 100%;
-                padding: 50px 0;
-                margin-left: 10%;
-                text-align: center;
-            }
+<article class="project__card__conts">
+    <div class="project__card__wrap">
+        <div class="project__card__inner">
+            <div class="project__card__in">
+                <div class="card">
+                    <figure class="siteImg">
+                        <span class="num">01</span>
+                        <img src="assets/img/website01.png" alt="website01" />
+                    </figure>
+                    <div class="desc__info">
+                        <a href="https://hmm365.github.io/codingclass/site/site1/index.html" target="_blank">
+                            <h2><span>website</span> coding</h2>
+                            <p>웹표준 을 준수하여 HTML CSS Javascrip 로 만든 사이트입니다.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-            #aside {
-                width: 20%;
-                height: 100%;
-                position: fixed;
-                top: 0;
-                left: 0;
-                border-top-right-radius: 30px;
-                border-bottom-right-radius: 30px;
-                background: #fff;
-                box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
-            }
-            .asideUl {
-                padding: 30px 0;
-                list-style: none;
-            }
-            .asideli {
-                text-align: center;
-                margin-bottom: 30px;
-            }
-            .asideBtn {
-                overflow: hidden;
-                border: 0;
-                width: 40%;
-                min-width: 110px;
-                min-height: 110px;
-                height: 11vh;
-                border-radius: 20px;
-                object-fit: cover;
-                box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
-                cursor: pointer;
-            }
-            #section {
-                width: 70%;
-                margin-left: 26%;
-                height: 100%;
-            }
-            .article {
-                width: 100%;
-                padding: 50px;
-                box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.6);
-                border-radius: 30px;
-            }
-            .articleImg {
-                width: 100%;
-            }
-            .articleImg img {
-                height: 60vh;
-                object-fit: cover;
-                object-position: 50% 30%;
-            }
-            .desc {
-                font-size: 2vw;
-                opacity: 1;
-                transition: all 0.3s;
-            }
-            .imgInfo {
-                opacity: 0;
-                transition: all 0.3s;
-            }
-            .imgInfo span {
-                font-weight: 300;
-            }
-        </style>
-    </head>
-    <body>
-        <header id="header">
-            <h1>연예인 정보</h1>
-            <p>좌측 사진을 클릭하면 연예인 정보가 나와요!</p>
-        </header>
-        <aside id="aside">
-            <nav class="asideNav">
-                <ul class="asideUl">
-                    <li class="asideli">
-                        <button type="button" class="asideBtn">
-                            <img src="assets/img/chenle1.jpg" alt="천러 사진" />
-                        </button>
-                    </li>
-                    <li class="asideli">
-                        <button type="button" class="asideBtn">
-                            <img src="assets/img/haechan1.jpg" alt="해찬 사진" />
-                        </button>
-                    </li>
-                    <li class="asideli">
-                        <button type="button" class="asideBtn">
-                            <img src="assets/img/jaemin1.jpg" alt="재민 사진" />
-                        </button>
-                    </li>
-                    <li class="asideli">
-                        <button type="button" class="asideBtn">
-                            <img src="assets/img/jeno1.jpg" alt="제노 사진" />
-                        </button>
-                    </li>
-                    <li class="asideli">
-                        <button type="button" class="asideBtn">
-                            <img src="assets/img/jisung1.jpg" alt="지성 사진" />
-                        </button>
-                    </li>
-                    <li class="asideli">
-                        <button type="button" class="asideBtn">
-                            <img src="assets/img/mark1.jpg" alt="마크 사진" />
-                        </button>
-                    </li>
-                    <li class="asideli">
-                        <button type="button" class="asideBtn">
-                            <img src="assets/img/renjun1.jpg" alt="런쥔 사진" />
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
-        <main>
-            <section id="section">
-                <article class="article">
-                    <figure class="articleImg">
-                        <img src="assets/img/chenle2.jpg" alt="천러 사진" />
-                        <p class="desc">사진에 마우스를 올리면 설명이 나와요!</p>
-                        <div class="imgInfo">
-                            <h3>
-                                이름 :
-                                <span>천러(종천러)</span>
-                            </h3>
-                            <h3>
-                                나이 :
-                                <span>22살(2001년)</span>
-                            </h3>
-                            <h3>nct127 nct dream</h3>
-                        </div>
+            <div class="project__card__in">
+                <div class="card">
+                    <figure class="siteImg">
+                        <span class="num">02</span>
+                        <img src="assets/img/website02.png" alt="website02" />
                     </figure>
-                </article>
-                <article class="article">
-                    <figure class="articleImg">
-                        <img src="assets/img/haechan1.jpg" alt="해찬 사진" />
-                        <p class="desc">사진에 마우스를 올리면 설명이 나와요!</p>
-                        <div class="imgInfo">
-                            <h3>
-                                이름 :
-                                <span>해찬(이동혁)</span>
-                            </h3>
-                            <h3>
-                                나이 :
-                                <span>23살(2000년)</span>
-                            </h3>
-                            <h3>nct127 nct dream</h3>
-                        </div>
-                    </figure>
-                </article>
-                <article class="article">
-                    <figure class="articleImg">
-                        <img src="assets/img/jaemin1.jpg" alt="재민 사진" />
-                        <p class="desc">사진에 마우스를 올리면 설명이 나와요!</p>
-                        <div class="imgInfo">
-                            <h3>
-                                이름 :
-                                <span>재민(나재민)</span>
-                            </h3>
-                            <h3>
-                                나이 :
-                                <span>23살(2000년) </span>
-                            </h3>
-                            <h3>nct127 nct dream</h3>
-                        </div>
-                    </figure>
-                </article>
-                <article class="article">
-                    <figure class="articleImg">
-                        <img src="assets/img/jeno2.jpg" alt="제노 사진" />
-                        <p class="desc">사진에 마우스를 올리면 설명이 나와요!</p>
-                        <div class="imgInfo">
-                            <h3>
-                                이름 :
-                                <span>제노(이제노)</span>
-                            </h3>
-                            <h3>
-                                나이 :
-                                <span>23살(2000년)</span>
-                            </h3>
-                            <h3>nct127 nct dream</h3>
-                        </div>
-                    </figure>
-                </article>
-                <article class="article">
-                    <figure class="articleImg">
-                        <img src="assets/img/jisung1.jpg" alt="지성 사진" />
-                        <p class="desc">사진에 마우스를 올리면 설명이 나와요!</p>
-                        <div class="imgInfo">
-                            <h3>
-                                이름 :
-                                <span>지성(박지성)</span>
-                            </h3>
-                            <h3>
-                                나이 :
-                                <span>21살(2002년)</span>
-                            </h3>
-                            <h3>nct127 nct dream</h3>
-                        </div>
-                    </figure>
-                </article>
-                <article class="article">
-                    <figure class="articleImg">
-                        <img src="assets/img/mark1.jpg" alt="마크 사진" />
-                        <p class="desc">사진에 마우스를 올리면 설명이 나와요!</p>
-                        <div class="imgInfo">
-                            <h3>
-                                이름 :
-                                <span>마크(이민형)</span>
-                            </h3>
-                            <h3>
-                                나이 :
-                                <span>24살(1999년)</span>
-                            </h3>
-                            <h3>nct127 nct dream</h3>
-                        </div>
-                    </figure>
-                </article>
-                <article class="article">
-                    <figure class="articleImg">
-                        <img src="assets/img/renjun1.jpg" alt="런쥔 사진" />
-                        <p class="desc">사진에 마우스를 올리면 설명이 나와요!</p>
-                        <div class="imgInfo">
-                            <h3>
-                                이름 :
-                                <span>런쥔(황런쥔)</span>
-                            </h3>
-                            <h3>
-                                나이 :
-                                <span>23살(2000년)</span>
-                            </h3>
-                            <h3>nct127 nct dream</h3>
-                        </div>
-                    </figure>
-                </article>
-            </section>
-        </main>
-        <script>
-            const clickImgs = document.querySelectorAll('.asideBtn');
-            const iDolImgs = document.querySelectorAll('.article');
+                    <div class="desc__info">
+                        <a href="https://hmm365.github.io/codingclass/site/site2/index.html" target="_blank">
+                            <h2><span>website</span> coding</h2>
+                            <p>웹표준 을 준수하여 HTML CSS Javascrip 로 만든 사이트입니다.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
 
-            iDolImgs.forEach((idol) => {
-                idol.style.display = 'none';
-            });
-            iDolImgs[0].style.display = 'block';
+<article class="project__card__conts">
+    <div class="project__card__wrap">
+        <div class="project__card__inner">
+            <div class="project__card__in">
+                <div class="card">
+                    <figure class="siteImg">
+                        <span class="num">01</span>
+                        <img src="assets/img/phpsite01.png" alt="phpsite01" />
+                    </figure>
+                    <div class="desc__info">
+                        <a href="http://syumay.dothome.co.kr/phpclass/main/main.php">
+                            <h2><span>PHPSite </span> coding</h2>
+                            <p>
+                                PHP 를 이용하여 간단한 회원가입, 로그인, 게시물을 등록할수있는 사이트입니다.<br />
+                                Html, CSS, Javascript, Jquery, Mysql 을 이용했습니다.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-            clickImgs.forEach((clickImg, inx) => {
-                clickImg.addEventListener('click', () => {
-                    iDolImgs.forEach((idol) => {
-                        idol.style.display = 'none';
-                    });
-                    iDolImgs[inx].style.display = 'block';
-                });
-            });
+            <div class="project__card__in">
+                <div class="card">
+                    <figure class="siteImg">
+                        <span class="num">02</span>
+                        <img src="assets/img/phpsite02.png" alt="phpsite02" />
+                    </figure>
+                    <div class="desc__info">
+                        <a href="http://hmm365.dothome.co.kr/php/main/main.php">
+                            <h2><span>PHPSite </span> coding</h2>
+                            <p>
+                                PHP 를 이용하여 간단한 회원가입, 로그인, 게시물을 등록할수있는 사이트입니다.<br />
+                                Html, CSS, Javascript, Jquery, Mysql 을 이용했습니다.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
 
-            iDolImgs.forEach((idol) => {
-                idol.querySelector('.articleImg img').addEventListener('mouseover', (e) => {
-                    idol.querySelector('.desc').style.opacity = 0;
-                    idol.querySelector('.imgInfo').style.opacity = 1;
-                });
-                idol.querySelector('.articleImg img').addEventListener('mouseleave', (e) => {
-                    idol.querySelector('.imgInfo').style.opacity = 0;
-                    idol.querySelector('.desc').style.opacity = 1;
-                });
-            });
-        </script>
-    </body>
-</html>
+<article class="project__card__conts">
+    <div class="project__card__wrap">
+        <div class="project__card__inner">
+            <div class="project__card__in">
+                <div class="card">
+                    <figure class="siteImg">
+                        <span class="num">01</span>
+                        <img src="assets/img/reactsite01.png" alt="reactsite01" />
+                    </figure>
+                    <div class="desc__info">
+                        <a href="https://reactapi.netlify.app/" target="_blank">
+                            <h2><span>reactsite </span> coding</h2>
+                            <p>
+                                React.js 를 이용하여 만든 사이트입니다.<br />
+                                다양한 Open API와 useEffect,useState 를 이용하여 SPA 구현을 했습니다.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project__card__in">
+                <div class="card">
+                    <figure class="siteImg">
+                        <span class="num">02</span>
+                        <img src="assets/img/reactsite02.png" alt="reactsite02" />
+                    </figure>
+                    <div class="desc__info">
+                        <a href="https://youtubereactapi-site.netlify.app/" target="_blank">
+                            <h2><span>reactsite </span> coding</h2>
+                            <p>
+                                React.js 를 이용하여 만든 사이트입니다.<br />
+                                youtube API를 이용하여 클론사이트를 구현을 했습니다.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project__card__in">
+                <div class="card">
+                    <figure class="siteImg">
+                        <span class="num">03</span>
+                        <img src="assets/img/reactsite03.png" alt="reactsite03" />
+                    </figure>
+                    <div class="desc__info">
+                        <a href="https://bookbookreact.netlify.app/" target="_blank">
+                            <h2><span>reactsite </span> coding</h2>
+                            <p>
+                                React.js 를 이용하여 만든 사이트입니다.<br />
+                                googleBooks API를 이용하여 책정보 검색 기능을 구현을 했습니다.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="project__card__conts">
+    <div class="project__card__wrap">
+        <div class="project__card__inner">
+            <div class="project__card__in">
+                <div class="card">
+                    <figure class="siteImg">
+                        <span class="num">01</span>
+                        <img src="assets/img/vuesite01.png" alt="vuesite01" />
+                    </figure>
+                    <div class="desc__info">
+                        <a href="https://vuemyapi.web.app/" target="_blank">
+                            <h2><span>VUESITE </span> coding</h2>
+                            <p>
+                                Vue.js 를 이용하여 만든 사이트입니다.<br />
+                                다양한 Open API를 이용한 SPA 를 구현했습니다.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
