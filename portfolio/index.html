@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="./assets/css/loader.css" />
     </head>
     <body>
-        <div class="loader dnone">
+        <div class="loader">
             <div class="loader__cols">
                 <div class="loader__col loader__col--1">
                     <div class="loader__item dope">Syumay ®</div>
@@ -434,14 +434,14 @@
         <script src="assets/js/TweenMax.min.js"></script>
         <script src="assets/js/Hole.js"></script>
         <script>
-            // const holeOne = new Hole('', document.querySelector('.holebox1'), 0xfb0692);
-            // const holeTwo = new Hole('', document.querySelector('.holebox2'), 0x07d36e);
+            const holeOne = new Hole('', document.querySelector('.holebox1'), 0xfb0692);
+            const holeTwo = new Hole('', document.querySelector('.holebox2'), 0x07d36e);
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 
         <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
-        <!-- <script>
+        <script>
             const splitText = (selector) => {
                 const elem = document.querySelector(selector);
 
@@ -625,7 +625,7 @@
             tl.to('.loader', {
                 className: 'dnone',
             });
-        </script> -->
+        </script>
 
         <script>
             var tl = gsap.timeline({ repeat: 0, repeatDelay: 0 });
